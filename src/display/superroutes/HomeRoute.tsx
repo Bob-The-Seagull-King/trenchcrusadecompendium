@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 import { useNavigate } from "react-router-dom";
 
-import { AllAbilitiesListPage } from '../../classes/viewmodel/pages/AllAbilitiesListPage'
+import { AllModelsListPage } from  '../../classes/viewmodel/pages/AllModelsListPage'
 
-import logo from '../../resources/images/iconpendium_logo.png'
+import logo from '../../resources/images/trenchcrusade_logo.png'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFistRaised } from '@fortawesome/free-solid-svg-icons'
@@ -17,7 +17,7 @@ const HomeRoute: React.FC = () => {
     const navigate = useNavigate();
 
     // Initialize Controller //
-    const AbilitiesCollectionController = new AllAbilitiesListPage()    
+    const ModelsCollectionController = new AllModelsListPage()    
 
     function NavigateHome(dir: string) {
         navigate('/' + dir);
@@ -37,10 +37,10 @@ const HomeRoute: React.FC = () => {
                     <div className="row">
                         <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                             <div className="col">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/abilities/")}>
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/models/")}>
                                     <FontAwesomeIcon icon={faFistRaised} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
-                                        ABILITIES
+                                        MODELS
                                     </h1>
                                 </div>
                             </div>

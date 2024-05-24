@@ -4,21 +4,21 @@ import React from 'react'
 
 import { getColour } from '../../../../utility/functions';
 import { PlayerAddon } from '../../../../classes/feature/addons/Addon';
-import {IIconpendiumItemTag} from '../../../../classes/IconpendiumItem'
+import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
 import TagDisplay from '../../subcomponents/TagDisplay'
-import AbilityDescriptionItemDisplay from '../../subcomponents/description/AbilityDescriptionItemDisplay';
+import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 
 const AddonDisplay = (props: any) => {
-    const AbilityObject: PlayerAddon = props.data
-    const bannedAbilityTags = ["inflict", "type"]
+    const ModelObject: PlayerAddon = props.data
+    const bannedModelTags = ["inflict", "type"]
 
     function returnDescription() {
         return (
             <div>
-                {AbilityObject.Description.map((item) => (
+                {ModelObject.Description.map((item) => (
                     <div key={"descriptionDisplay"}>
-                        <AbilityDescriptionItemDisplay data={item} parent={AbilityObject}/>
+                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>
@@ -40,26 +40,26 @@ const AddonDisplay = (props: any) => {
     }
 
     function sortTagsForDisplay() {
-        const tagarray: IIconpendiumItemTag[] = []
+        const tagarray: ITrenchCrusadeItemTag[] = []
 
         let i = 0;
-        for (i = 0; i < (AbilityObject.Tags?.length || 0); i++) {
-            if (AbilityObject.Tags != undefined) {
-                const temptag: IIconpendiumItemTag = AbilityObject.Tags[i]
+        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
+            if (ModelObject.Tags != undefined) {
+                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
 
                 if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
                     temptag.tag_name = "blast"; }
 
-                if (!bannedAbilityTags.includes(temptag.tag_name)) {
+                if (!bannedModelTags.includes(temptag.tag_name)) {
                     tagarray.push(temptag);
                 }}}
         return tagarray;
     }
 
     return (
-        <div className={'abilityStructure bordersub'+getColour(AbilityObject.Class)}>
-            <h1 className={'titleShape subtitle'+getColour(AbilityObject.Class)}>{AbilityObject.Name || ""}</h1>
-            <div className='abilityInternalStructure'>
+        <div className={'modelStructure bordersub'+getColour(ModelObject.Class)}>
+            <h1 className={'titleShape subtitle'+getColour(ModelObject.Class)}>{ModelObject.Name || ""}</h1>
+            <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
                 </div>

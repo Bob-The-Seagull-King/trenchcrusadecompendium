@@ -1,18 +1,18 @@
-import {IIconpendiumItemData, IconpendiumItem} from '../../IconpendiumItem'
+import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {AbilityDescription} from './AbilityDescription'
+import {ModelDescription} from './ModelDescription'
 import { PlayerAddon } from '../addons/Addon'
 
-interface IPlayerAbility extends IIconpendiumItemData {
-    chapter: number, // Chapter of the ability
-    class_id: string, // Class of the ability (determined by job)
-    job_id: string, // Job of the ability
-    attachments: [], // List of addons, summons, etc featured in an ability
+interface IPlayerModel extends ITrenchCrusadeItemData {
+    chapter: number, // Chapter of the model
+    class_id: string, // Class of the model (determined by job)
+    job_id: string, // Job of the model
+    attachments: [], // List of addons, summons, etc featured in an model
     blurb: string, // Flavour text
     description: [] // Mechanical description of the item
 }
 
-class PlayerAbility extends IconpendiumItem {
+class PlayerModel extends TrenchCrusadeItem {
     public readonly Chapter;
     public readonly Class;
     public readonly Job;
@@ -24,12 +24,12 @@ class PlayerAbility extends IconpendiumItem {
     /**
      * Assigns parameters and creates a series of description
      * objects with DescriptionFactory
-     * @param data Object data in IPlayerAbility format
+     * @param data Object data in IPlayerModel format
      */
-    public constructor(data: IPlayerAbility)
+    public constructor(data: IPlayerModel)
     {
         super(data)
-        this.ItemType = ItemType.Ability;
+        this.ItemType = ItemType.Model;
         this.Chapter = data.chapter;
         this.Class = data.class_id;
         this.Job = data.job_id;
@@ -40,22 +40,22 @@ class PlayerAbility extends IconpendiumItem {
 
     /**
      * Translates the description JSON objects into a collection
-     * of AbilityDescription objects
+     * of ModelDescription objects
      * @param data The array of description data objects
-     * @returns Array of AbilityDescription objects
+     * @returns Array of ModelDescription objects
      */
     private DescriptionFactory(data: []) {
         let i = 0;
-        const array: AbilityDescription[] = []
+        const array: ModelDescription[] = []
         for (i = 0; i < data.length; i++) {
-            const tempAD = new AbilityDescription(data[i])
+            const tempAD = new ModelDescription(data[i])
             array.push(tempAD)
         }
         return array;
     }
     
     /**
-     * Add an addon to the ability
+     * Add an addon to the model
      * @param list the PlayerAddon being created
      */
     public AddAddons(list: PlayerAddon) {
@@ -78,5 +78,5 @@ class PlayerAbility extends IconpendiumItem {
 
 }
 
-export {IPlayerAbility, PlayerAbility}
+export {IPlayerModel, PlayerModel}
 

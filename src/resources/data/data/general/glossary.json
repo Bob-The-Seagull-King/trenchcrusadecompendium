@@ -93,7 +93,7 @@
         "name": "Dazed",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A triggered effect that activates when the ability causes a target to collide.",
+            "content": "A triggered effect that activates when the model causes a target to collide.",
             "subcontent":   []
         }]
     },
@@ -107,7 +107,7 @@
         "name": "Close Blast",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A blast where at least one space of the area effect is adjacent to the character using the ability.",
+            "content": "A blast where at least one space of the area effect is adjacent to the character using the model.",
             "subcontent":   []
         }]
     },
@@ -163,7 +163,7 @@
         "name": "Interrupt",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Some abilities give you interrupts, which are abilities that trigger under certain circumstances and ‘interrupt’ whatever is going on. Each interrupt can only be used a certain number of times a round, and you can only use one interrupt on any turn (either your own or another characters). You may also use interrupts before, after, or in the middle of any action, even off your turn, if you have them.",
+            "content": "Some models give you interrupts, which are models that trigger under certain circumstances and ‘interrupt’ whatever is going on. Each interrupt can only be used a certain number of times a round, and you can only use one interrupt on any turn (either your own or another characters). You may also use interrupts before, after, or in the middle of any action, even off your turn, if you have them.",
             "subcontent":   []
         }]
     }

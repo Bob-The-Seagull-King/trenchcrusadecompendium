@@ -1,18 +1,18 @@
-import {IIconpendiumItemData, IconpendiumItem} from '../../IconpendiumItem'
+import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {IAbilityDescription, AbilityDescription} from '../abilities/AbilityDescription'
+import {IModelDescription, ModelDescription} from '../models/ModelDescription'
 
-interface IGlossaryRule extends IIconpendiumItemData {
+interface IGlossaryRule extends ITrenchCrusadeItemData {
     description: []
 }
 
-class GlossaryRule extends IconpendiumItem {
+class GlossaryRule extends TrenchCrusadeItem {
     public readonly Description;
     
     /**
      * Assigns parameters and creates a series of description
      * objects with DescriptionFactory
-     * @param data Object data in IPlayerAbility format
+     * @param data Object data in IPlayerModel format
      */
     public constructor(data: IGlossaryRule)
     {
@@ -23,15 +23,15 @@ class GlossaryRule extends IconpendiumItem {
 
     /**
      * Translates the description JSON objects into a collection
-     * of AbilityDescription objects
+     * of ModelDescription objects
      * @param data The array of description data objects
-     * @returns Array of AbilityDescription objects
+     * @returns Array of ModelDescription objects
      */
     private DescriptionFactory(data: []) {
         let i = 0;
-        const array: AbilityDescription[] = []
+        const array: ModelDescription[] = []
         for (i = 0; i < data.length; i++) {
-            const tempAD = new AbilityDescription(data[i])
+            const tempAD = new ModelDescription(data[i])
             array.push(tempAD)
         }
         return array;

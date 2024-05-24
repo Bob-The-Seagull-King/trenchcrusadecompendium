@@ -15,7 +15,7 @@ const ViewTableItemDisplay = (props: any) => {
     /**
      * Updates the current state of the component
      * and triggers an update of the selected list
-     * items and re-renders the ability display.
+     * items and re-renders the model display.
      */
     function UpdateComponent() {
         tableItem.SwitchStates();

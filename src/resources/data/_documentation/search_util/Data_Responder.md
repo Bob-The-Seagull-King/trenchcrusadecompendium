@@ -12,7 +12,7 @@ All search requests have a *type* value which determines what json data file wil
 
 | File Name | Type Value |
 | --------- | ---------- |
-| abilities.json | "abilities" |
+| models.json | "models" |
 | addons.json | "addons" |
 | glossary.json | "glossary" |
 

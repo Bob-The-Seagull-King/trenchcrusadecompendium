@@ -1,6 +1,6 @@
 # Description
 
-Descriptions are a way of flexibly using JSON-formatted data to represent the structure of abilities, rules, etc in the playbook without the use of HTML, CSS, or other forms of styling which may not apply to all tools that would use Icon-Data.
+Descriptions are a way of flexibly using JSON-formatted data to represent the structure of models, rules, etc in the playbook without the use of HTML, CSS, or other forms of styling which may not apply to all tools that would use Icon-Data.
 
 When displaying any data, it is up to the individual tool creators to convert these descriptions into the format appropriate for your specific needs, at *no* point should a description contain elements that only apply to a specific format (such as HTML tags, references to classes used in your tools, etc).
 
@@ -22,7 +22,7 @@ glossary?: []
 
 ### Subcontent
 
-The subcontent of a description object contains any description objects that we would consider to be 'included in' the description object, but would have different display needs. For example, an ability effect has both the name of the effect (eg, "Impact") and the description of the effect (eg, "The colliding foe takes 2 damage.").
+The subcontent of a description object contains any description objects that we would consider to be 'included in' the description object, but would have different display needs. For example, an model effect has both the name of the effect (eg, "Impact") and the description of the effect (eg, "The colliding foe takes 2 damage.").
 
 ### Glossary
 
@@ -46,7 +46,7 @@ id: string
 
 ## Description Example
 
-Below is the description of the ability *Heracule* and it's equivilent description object.
+Below is the description of the model *Heracule* and it's equivilent description object.
 
 **Attack:** *On Hit:* <u>[D]</u> + <u>fray</u> *Miss:* <u>Fray</u>  
 **Effect:** Your target and one (4+) two (6+) all targets in range are <u>shoved</u> 1.  

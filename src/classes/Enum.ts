@@ -3,7 +3,7 @@
  */
 enum ItemType {
     None = '',
-    Ability = 'Ability',
+    Model = 'Model',
     Addon = 'Addon',
     GlossaryRule = 'Glossary'
 }

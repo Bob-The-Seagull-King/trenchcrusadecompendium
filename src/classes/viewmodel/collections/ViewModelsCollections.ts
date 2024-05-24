@@ -1,23 +1,23 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
-import { IPlayerAbility, PlayerAbility } from "../../../classes/feature/abilities/Ability";
-import { AbilityFactory } from "../../../factories/features/AbilityFactory";
+import { IPlayerModel, PlayerModel } from "../../feature/models/Model";
+import { ModelFactory } from "../../../factories/features/ModelFactory";
 import { ViewTableItem } from "./ViewTableItem";
 import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
 
-class ViewAbilitiesCollection extends ViewCollectionsModel {
+class ViewModelsCollection extends ViewCollectionsModel {
 
-     AbilitiesList: PlayerAbility[] = [];
+     ModelsList: PlayerModel[] = [];
     
     /**
      * Empty constructor
      */
     constructor(){ 
         super()
-        this.AbilitiesList = []
+        this.ModelsList = []
     }
 
     /**
-     * After the search has been run, create ability objects
+     * After the search has been run, create model objects
      * and assign them to the collection
      */
     public RunSearch() {
@@ -26,37 +26,37 @@ class ViewAbilitiesCollection extends ViewCollectionsModel {
     }
 
     /**
-     * For each entry in the data results, create an Ability object
+     * For each entry in the data results, create an Model object
      * and add it to the internal list.
      */
     PostSearch() {
-        this.CleanupAbilities();
+        this.CleanupModels();
         this.CleanupCollection();
         let i = 0;
-        this.dataresults.sort(byPropertiesOf<IPlayerAbility>(['class_id', 'job_id', 'name', 'source', 'id']))
+        this.dataresults.sort(byPropertiesOf<IPlayerModel>(['class_id', 'job_id', 'name', 'source', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
-            const abilityNew = AbilityFactory.CreateAbility(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(abilityNew, getColour(abilityNew.Class));
+            const modelNew = ModelFactory.CreateModel(this.dataresults[i]);
+            const ItemNew = new ViewTableItem(modelNew, getColour(modelNew.Class));
             this.itemcollection.push(ItemNew);
         }
     }
 
     /**
-     * When destroyed, delete all ability objects
+     * When destroyed, delete all model objects
      */
     destructor() {
-        this.CleanupAbilities() 
+        this.CleanupModels() 
     }
 
     /**
-     * Delete each ability object stored in the collection
+     * Delete each model object stored in the collection
      */
-    CleanupAbilities() {
+    CleanupModels() {
         let i = 0;
-        for (i = 0; i < this.AbilitiesList.length; i ++) {
-            delete this.AbilitiesList[i]
+        for (i = 0; i < this.ModelsList.length; i ++) {
+            delete this.ModelsList[i]
         }
-        this.AbilitiesList = []
+        this.ModelsList = []
     }
 
     CleanupCollection() {
@@ -70,9 +70,9 @@ class ViewAbilitiesCollection extends ViewCollectionsModel {
     /**
      * Basic get function
      */
-    public ReturnAbilities() {
+    public ReturnModels() {
         this.UpdateList();
-        return this.AbilitiesList;
+        return this.ModelsList;
     }
 
     /**
@@ -83,18 +83,18 @@ class ViewAbilitiesCollection extends ViewCollectionsModel {
     }
     
     /**
-     * Updates the list of abilities to be displayed
+     * Updates the list of models to be displayed
      * on screen.
      */
     UpdateList() {
         let i = 0;
-        this.AbilitiesList = []
+        this.ModelsList = []
         for (i = 0; i < this.itemcollection.length; i++) {
             if (this.itemcollection[i].IsActive) {
-                this.AbilitiesList.push(this.itemcollection[i].HeldItem)
+                this.ModelsList.push(this.itemcollection[i].HeldItem)
             }
         }
     }
 }
 
-export {ViewAbilitiesCollection}
+export {ViewModelsCollection}

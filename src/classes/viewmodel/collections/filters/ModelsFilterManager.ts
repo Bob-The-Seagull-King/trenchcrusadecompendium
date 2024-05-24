@@ -3,7 +3,7 @@ import { IFilterItem, IFilterTag, IFilterText, FilterTag, FilterItem, FilterText
 import { Requester } from "../../../../factories/Requester";
 import { FilterManager } from "./FilterManager";
 
-class AbilitiesFilterManager extends FilterManager {
+class ModelsFilterManager extends FilterManager {
 
     /**
      * Builds the filter manager by gathering a full
@@ -18,12 +18,12 @@ class AbilitiesFilterManager extends FilterManager {
 
     /**
      * Find all tag types, based on tag_name, that
-     * are currently in the abilities json data file.
+     * are currently in the models json data file.
      * @returns Array of FilterTag objects
      */
     FindTags() {
         const tempTags: FilterTag[] = []
-        const foundTags = (Requester.MakeRequest({ searchtype: 'tags', searchparam: { type: 'abilities' } })).sort();
+        const foundTags = (Requester.MakeRequest({ searchtype: 'tags', searchparam: { type: 'models' } })).sort();
 
         let i = 0;
         for (i = 0; i < foundTags.length; i++) {
@@ -39,7 +39,7 @@ class AbilitiesFilterManager extends FilterManager {
 
     /**
      * Gathers all values of a given key type in
-     * the abilities json data file, with the key
+     * the models json data file, with the key
      * types determined by a hardcoded array.
      * @returns Array of FilterItem objects
      */
@@ -50,7 +50,7 @@ class AbilitiesFilterManager extends FilterManager {
 
         let i = 0;
         for (i = 0; i < keytypes.length; i ++) {
-            const foundVals = Requester.MakeRequest({ searchtype: 'keyvalues', searchparam: { type: 'abilities' , id: keytypes[i]} }).sort();
+            const foundVals = Requester.MakeRequest({ searchtype: 'keyvalues', searchparam: { type: 'models' , id: keytypes[i]} }).sort();
             
             let j = 0;
             for (j = 0; j < foundVals.length; j++) {
@@ -65,4 +65,4 @@ class AbilitiesFilterManager extends FilterManager {
     
 }
 
-export {AbilitiesFilterManager}
+export {ModelsFilterManager}

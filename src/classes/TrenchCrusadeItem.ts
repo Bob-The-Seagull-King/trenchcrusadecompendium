@@ -1,11 +1,11 @@
 import {ItemType} from './Enum'
 
 /**
- * Basic data package for any Iconpendium Item
+ * Basic data package for any TrenchCrusade Item
  */
-interface IIconpendiumItemData {
+interface ITrenchCrusadeItemData {
     id: string, // The id of the item
-    type: string, // The type of the item (ability, addon, summon, talent, relic, etc)
+    type: string, // The type of the item (model, addon, summon, talent, relic, etc)
     name: string, // The name of the item
     source: string, // The source of the item (core book, homebrew, etc)
     tags: [] // Tags associated with that item (used for sorting and synergies)
@@ -14,12 +14,12 @@ interface IIconpendiumItemData {
 /**
  * Basic item tag
  */
-interface IIconpendiumItemTag {
+interface ITrenchCrusadeItemTag {
     tag_name: any, // The name of the tag
     val: any // The value of the tag
 }
 
-abstract class IconpendiumItem {
+abstract class TrenchCrusadeItem {
     public ItemType;
     public readonly Source;
     public readonly ID;
@@ -30,7 +30,7 @@ abstract class IconpendiumItem {
      * Assigns data values to the parameters of the item
      * @param data The item data
      */
-    public constructor(data?: IIconpendiumItemData)
+    public constructor(data?: ITrenchCrusadeItemData)
     {
         this.ItemType = ItemType.None
         if (data) {
@@ -44,4 +44,4 @@ abstract class IconpendiumItem {
     }
 }
 
-export {IIconpendiumItemData, IconpendiumItem, IIconpendiumItemTag}
+export {ITrenchCrusadeItemData, TrenchCrusadeItem, ITrenchCrusadeItemTag}

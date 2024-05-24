@@ -1,7 +1,7 @@
 [
     {
         "id": "ab_heracule",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "action", "val": 1},
@@ -61,7 +61,7 @@
     },
     {
         "id": "ab_batteringram",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "action", "val": 1},
@@ -89,7 +89,7 @@
                             "content": "Impact:",
                             "subcontent":   [{
                                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Colliding foes are dazed. If a colliding foe is already dazed, refund the action cost of this ability.",
+                                                "content": "Colliding foes are dazed. If a colliding foe is already dazed, refund the action cost of this model.",
                                                 "glossary": [{"val": "dazed", "id": "gl_dazed"}]
                                             }],
                             "glossary": [{"val": "Impact", "id": "gl_impact"}]
@@ -98,7 +98,7 @@
     },
     {
         "id": "ab_landwaster",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "action", "val": 2},
@@ -170,7 +170,7 @@
     },
     {
         "id": "ab_valiant",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "action", "val": 1}
@@ -204,7 +204,7 @@
     },
     {
         "id": "ab_endlessbattlement",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "action", "val": 1},
@@ -243,7 +243,7 @@
     },
     {
         "id": "ab_catapult",
-        "type": "Ability",
+        "type": "Model",
         "source": "core",
         "tags": [
                 {"tag_name": "type", "val": "interrupt"},

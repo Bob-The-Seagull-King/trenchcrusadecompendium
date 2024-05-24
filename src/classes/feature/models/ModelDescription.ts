@@ -1,40 +1,40 @@
 import {IDescriptionItemData, DescriptionItem} from '../../DescriptionItem'
 
 /**
- * Interface for an ability description item
+ * Interface for an model description item
  */
-interface IAbilityDescription extends IDescriptionItemData {
+interface IModelDescription extends IDescriptionItemData {
     glossary?: [] // The glossary of a given description item
 }
 
-class AbilityDescription extends DescriptionItem {
+class ModelDescription extends DescriptionItem {
     public readonly Glossary;
     public SubContent;
 
     /**
      * Assign parameter values
-     * @param data The data in IAbilityDescription format
+     * @param data The data in IModelDescription format
      */
-    public constructor(data: IAbilityDescription)
+    public constructor(data: IModelDescription)
     {
         super (data)
         this.Glossary = data.glossary;
-        this.SubContent = this.AbilitySubConstructor(data.subcontent)
+        this.SubContent = this.ModelSubConstructor(data.subcontent)
     }
     
 
     /**
      * Deconstructs the description JSON object into an
-     * array of AbilityDescription objects.
+     * array of ModelDescription objects.
      * @param data The description array
      * @returns Array of DescriptionItems
      */
-    AbilitySubConstructor(data?: []) {
-        const sublist: AbilityDescription[] = []
+    ModelSubConstructor(data?: []) {
+        const sublist: ModelDescription[] = []
         if (data) {
             let i = 0;
             for (i = 0; i < data.length; i++) {
-                const tempDI = new AbilityDescription(data[i])
+                const tempDI = new ModelDescription(data[i])
                 sublist.push(tempDI);
             }
             return sublist;
@@ -44,4 +44,4 @@ class AbilityDescription extends DescriptionItem {
     }
 }
 
-export {IAbilityDescription, AbilityDescription}
+export {IModelDescription, ModelDescription}

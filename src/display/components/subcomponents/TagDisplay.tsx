@@ -3,10 +3,10 @@ import '../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import {capitalizeString} from '../../../utility/functions'
-import {IIconpendiumItemTag} from '../../../classes/IconpendiumItem'
+import {ITrenchCrusadeItemTag} from '../../../classes/TrenchCrusadeItem'
 
 const TagDisplay = (props: any) => {
-    const tag: IIconpendiumItemTag = props.data
+    const tag: ITrenchCrusadeItemTag = props.data
 
     return (
         <div className="tagItem tagText">

@@ -5,7 +5,7 @@ export const ROUTES = {
     HOME_ROUTE: '*',
 
     // Page Routes //
-    COMPENDIUM_ABILITY_ROUTE: '/abilities/*',
+    COMPENDIUM_ABILITY_ROUTE: '/models/*',
     TOOLS_CONTENT_UPLOAD_ROUTE: '/content/*'
 
 }

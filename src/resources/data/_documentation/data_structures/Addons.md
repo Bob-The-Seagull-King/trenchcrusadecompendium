@@ -1,6 +1,6 @@
 # Addons
 
-Addons are ability-like, but only exist as a part of another ability, trait, etc. These include (but are not limited to) interrupts provided by abilities, aether infusions, and actions granted by traits.
+Addons are model-like, but only exist as a part of another model, trait, etc. These include (but are not limited to) interrupts provided by models, aether infusions, and actions granted by traits.
 
 ## Structure
 
@@ -18,7 +18,7 @@ name        : string
 description : []
 ```
 
-- **id** - The identifying value of the ability, all addons start their id with "ad_".
+- **id** - The identifying value of the model, all addons start their id with "ad_".
 - **type** - Used for broad categorization, all addons have the type "Addon".
 - **source** - Where the addon comes from. Currently, it's expected all addons will have the source "core".
 - **tags** - A series of tags which identify what kind of addon something is, see [Tags](../Tags.md) for more information.
@@ -43,7 +43,7 @@ description : []
 "class_id": "cl_stalwart",
 "job_id": "jb_bastion",
 "parent_id":{
-            "tag_name": "ability",
+            "tag_name": "model",
             "val": "ab_endlessbattlement"
             },
 "name": "Heroic Intervention",
@@ -58,7 +58,7 @@ description : []
                         "tag_name": "desc_type",
                         "val": "desc"
                         }],
-                    "content": "A foe targets your ally with an ability, and your ally is in range 3."
+                    "content": "A foe targets your ally with an model, and your ally is in range 3."
                     }]
                 },
                 {

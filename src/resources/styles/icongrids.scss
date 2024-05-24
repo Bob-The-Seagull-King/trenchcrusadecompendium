@@ -21,7 +21,7 @@
     padding: 1em;
 }
 
-.abilityContainer { 
+.modelContainer { 
     display: grid;
     justify-content: space-evenly; 
     grid-template-columns: 50% 50%;
@@ -60,7 +60,7 @@
     grid-template-columns: repeat(auto-fit, 33%)
 }
 
-.abilitycontainer {
+.modelcontainer {
     display: grid;
     justify-content: space-evenly; 
     grid-auto-flow: row;
@@ -172,7 +172,7 @@
     justify-self: center;
 }
 
-.abilitygriditem {
+.modelgriditem {
     margin: 0.5em;
     justify-self: center;
 }

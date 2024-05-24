@@ -9,7 +9,7 @@
                 ],
         "class_id": "cl_stalwart",
         "job_id": "jb_bastion",
-        "parent_id": {"tag_name": "ability", "val": "ab_endlessbattlement"},
+        "parent_id": {"tag_name": "model", "val": "ab_endlessbattlement"},
         "name": "Heroic Intervention",
         "description":  [
                         {
@@ -17,7 +17,7 @@
                             "content": "Trigger:",
                             "subcontent":   [{
                                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "A foe targets your ally with an ability, and your ally is in range 3."
+                                                "content": "A foe targets your ally with an model, and your ally is in range 3."
                                             }]
                         },
                         {

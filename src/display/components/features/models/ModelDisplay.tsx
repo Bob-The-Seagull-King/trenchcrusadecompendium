@@ -3,22 +3,22 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { getColour } from '../../../../utility/functions';
-import {PlayerAbility } from "../../../../classes/feature/abilities/Ability";
-import {IIconpendiumItemTag} from '../../../../classes/IconpendiumItem'
+import {PlayerModel } from "../../../../classes/feature/models/Model";
+import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
 import TagDisplay from '../../subcomponents/TagDisplay'
-import AbilityDescriptionItemDisplay from '../../subcomponents/description/AbilityDescriptionItemDisplay';
+import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 
-const AbilityDisplay = (props: any) => {
-    const AbilityObject: PlayerAbility = props.data
-    const bannedAbilityTags = ["inflict", "type"]
+const ModelDisplay = (props: any) => {
+    const ModelObject: PlayerModel = props.data
+    const bannedModelTags = ["inflict", "type"]
 
     function returnDescription() {
         return (
             <div>
-                {AbilityObject.Description.map((item) => (
+                {ModelObject.Description.map((item) => (
                     <div key={"descriptionDisplay"}>
-                        <AbilityDescriptionItemDisplay data={item} parent={AbilityObject}/>
+                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>
@@ -40,32 +40,32 @@ const AbilityDisplay = (props: any) => {
     }
 
     function sortTagsForDisplay() {
-        const tagarray: IIconpendiumItemTag[] = []
+        const tagarray: ITrenchCrusadeItemTag[] = []
 
         let i = 0;
-        for (i = 0; i < (AbilityObject.Tags?.length || 0); i++) {
-            if (AbilityObject.Tags != undefined) {
-                const temptag: IIconpendiumItemTag = AbilityObject.Tags[i]
+        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
+            if (ModelObject.Tags != undefined) {
+                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
 
                 if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
                     temptag.tag_name = "blast"; }
 
-                if (!bannedAbilityTags.includes(temptag.tag_name)) {
+                if (!bannedModelTags.includes(temptag.tag_name)) {
                     tagarray.push(temptag);
                 }}}
         return tagarray;
     }
 
     return (
-        <div className={'abilityStructure bordermain'+getColour(AbilityObject.Class)}>
-            <h1 className={'titleShape title'+getColour(AbilityObject.Class)}>{AbilityObject.Name || ""}</h1>
-            <div className='abilityInternalStructure'>
+        <div className={'modelStructure bordermain'+getColour(ModelObject.Class)}>
+            <h1 className={'titleShape title'+getColour(ModelObject.Class)}>{ModelObject.Name || ""}</h1>
+            <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
                 </div>
                 <div className="verticalspacer"/>
                 <div>
-                    <i>{AbilityObject.Blurb || ""}</i>
+                    <i>{ModelObject.Blurb || ""}</i>
                 </div> 
                 <div className="verticalspacer"/> 
                 <div>
@@ -80,4 +80,4 @@ const AbilityDisplay = (props: any) => {
     )
 }
 
-export default AbilityDisplay;
+export default ModelDisplay;

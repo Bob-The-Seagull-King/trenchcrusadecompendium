@@ -1,20 +1,20 @@
 // Import typescript classes
-import { ViewAbilitiesCollection } from "../collections/ViewAbilitiesCollections";
-import { AbilitiesFilterManager } from "../collections/filters/AbilitiesFilterManager";
+import { ViewModelsCollection } from "../collections/ViewModelsCollections";
+import { ModelsFilterManager } from "../collections/filters/ModelsFilterManager";
 import { ConvertFiltersToRequest } from "../collections/filters/FilterConvert";
 
-class AllAbilitiesListPage {
+class AllModelsListPage {
 
-    Collection: ViewAbilitiesCollection;
-    FilterManager: AbilitiesFilterManager;
+    Collection: ViewModelsCollection;
+    FilterManager: ModelsFilterManager;
 
     /**
      * Creates new collection and filter manager objects then
      * initializes the collection
      */
     constructor() {
-        this.Collection = new ViewAbilitiesCollection();
-        this.FilterManager = new AbilitiesFilterManager();
+        this.Collection = new ViewModelsCollection();
+        this.FilterManager = new ModelsFilterManager();
 
         this.initCollection();
     }
@@ -24,7 +24,7 @@ class AllAbilitiesListPage {
      * then runs that search.
      */
     initCollection() {
-        this.Collection.UpdateSearchParams({searchtype: "file", searchparam: {type: "abilities"}});
+        this.Collection.UpdateSearchParams({searchtype: "file", searchparam: {type: "models"}});
         this.Collection.RunSearch();
     }
 
@@ -34,7 +34,7 @@ class AllAbilitiesListPage {
      * collection manager's search.
      */
     updateSearch() {
-        const newfilter = ConvertFiltersToRequest(this.FilterManager, "abilities", ["chapter", "source", "class_id", "job_id"])
+        const newfilter = ConvertFiltersToRequest(this.FilterManager, "models", ["chapter", "source", "class_id", "job_id"])
         if (!(JSON.stringify(newfilter) == JSON.stringify(this.Collection.searchParam))) {
             this.Collection.UpdateSearchParams(newfilter);
             this.Collection.RunSearch();
@@ -43,4 +43,4 @@ class AllAbilitiesListPage {
     
 }
 
-export {AllAbilitiesListPage}
+export {AllModelsListPage}

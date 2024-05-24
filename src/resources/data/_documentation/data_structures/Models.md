@@ -1,10 +1,10 @@
-# Abilities
+# Models
 
-Ability data covers unlockable abilities used in tactical combat. This does not include traits, talents, or class mechanics, only actions that can be unlocked and used even when multijobbing.
+Model data covers unlockable models used in tactical combat. This does not include traits, talents, or class mechanics, only actions that can be unlocked and used even when multijobbing.
 
 ## Structure
 
-Abilities are found in *abilities.json* and each rule has the following structure.
+Models are found in *models.json* and each rule has the following structure.
 
 ```
 id          : string
@@ -20,23 +20,23 @@ blurb       : string
 description : []
 ```
 
-- **id** - The identifying value of the ability, all abilities start their id with "ab_".
-- **type** - Used for broad categorization, all abilities have the type "Ability".
-- **source** - Where the ability comes from. Currently, it's expected all abilities will have the source "core".
-- **tags** - A series of tags which identify what kind of ability something is, see [Tags](../Tags.md) for more information.
-- **chapter** - The chapter at which an ability can be unlocked.
-- **class_id** - The *id* value of the class that an ability is a part of, based on the ability job.
-- **name** - The name of the ability.
-- **job_id** - The *id* value of the job that an ability belongs to.
-- **attachments** - Array of tags that contain all other data objects that are included in the ability, such as infusions, interrupts, summons, etc.
-- **blurb** - The flavour text of the ability.
-- **description** - Specially formatted array of information included in the ability, see [Description](../Description.md) for more informaiton.
+- **id** - The identifying value of the model, all models start their id with "ab_".
+- **type** - Used for broad categorization, all models have the type "Model".
+- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
+- **tags** - A series of tags which identify what kind of model something is, see [Tags](../Tags.md) for more information.
+- **chapter** - The chapter at which an model can be unlocked.
+- **class_id** - The *id* value of the class that an model is a part of, based on the model job.
+- **name** - The name of the model.
+- **job_id** - The *id* value of the job that an model belongs to.
+- **attachments** - Array of tags that contain all other data objects that are included in the model, such as infusions, interrupts, summons, etc.
+- **blurb** - The flavour text of the model.
+- **description** - Specially formatted array of information included in the model, see [Description](../Description.md) for more informaiton.
 
 ## Example
 
 ```
 "id": "ab_heracule",
-"type": "Ability",
+"type": "Model",
 "source": "core",
 "tags": [
     {

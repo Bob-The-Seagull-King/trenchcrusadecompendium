@@ -4,16 +4,16 @@ import React from 'react'
 
 import { getTagValue} from '../../../../utility/functions'
 import {ConvertContentWithGlossary} from '../../../../utility/util'
-import { AbilityDescription} from '../../../../classes/feature/abilities/AbilityDescription'
-import { PlayerAbility } from '../../../../classes/feature/abilities/Ability'
-import AddonDisplay from '../../../../display/components/features/addons/AddonDisplay'
+import { ModelDescription} from '../../../../classes/feature/models/ModelDescription'
+import { PlayerModel } from '../../../../classes/feature/models/Model'
+import AddonDisplay from '../../features/addons/AddonDisplay'
 
 
-const AbilityDescriptionItemDisplay = (props: any) => {
-    const description: AbilityDescription = props.data
-    const parentItem: PlayerAbility = props.parent
+const ModelDescriptionItemDisplay = (props: any) => {
+    const description: ModelDescription = props.data
+    const parentItem: PlayerModel = props.parent
 
-    function returnFullItem(item: AbilityDescription) {
+    function returnFullItem(item: ModelDescription) {
         switch (getTagValue(item.Tags, "desc_type")) {
             case "effect": {
                 return (
@@ -21,7 +21,7 @@ const AbilityDescriptionItemDisplay = (props: any) => {
                         <span><b>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </b></span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <AbilityDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                     </div>
@@ -33,7 +33,7 @@ const AbilityDescriptionItemDisplay = (props: any) => {
                         <span><i>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </i></span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <AbilityDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -46,7 +46,7 @@ const AbilityDescriptionItemDisplay = (props: any) => {
                         <span>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <AbilityDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -59,7 +59,7 @@ const AbilityDescriptionItemDisplay = (props: any) => {
                         <div className='addonbox'>{findAddon(item.Content?.toString() || "")}</div>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <AbilityDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -72,7 +72,7 @@ const AbilityDescriptionItemDisplay = (props: any) => {
                     <span>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")}</span>
                     <span>
                         {item.SubContent?.map((subitem) => (
-                               <AbilityDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                         ))}
                     </span>
                     </span>
@@ -109,4 +109,4 @@ const AbilityDescriptionItemDisplay = (props: any) => {
     )
 }
 
-export default AbilityDescriptionItemDisplay;
+export default ModelDescriptionItemDisplay;

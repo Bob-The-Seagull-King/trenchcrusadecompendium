@@ -1,6 +1,6 @@
 # Glossary / Rules
 
-Glossary data covers various game rules that are assumed knowledge for reading abilities, traits, etc. These include anything that could be in the combat glossary of the ICON playbook, as well as rules that are important for tactical combat and not specified as a part of any specific trait/class mechanic/etc.
+Glossary data covers various game rules that are assumed knowledge for reading models, traits, etc. These include anything that could be in the combat glossary of the ICON playbook, as well as rules that are important for tactical combat and not specified as a part of any specific trait/class mechanic/etc.
 
 ## Structure
 

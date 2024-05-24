@@ -1,16 +1,16 @@
 // Import typescript classes
-import { IconpendiumItem } from "../../../classes/IconpendiumItem";
+import { TrenchCrusadeItem } from "../../../classes/TrenchCrusadeItem";
 
 class ViewTableItem {
 
-    readonly HeldItem: IconpendiumItem;
+    readonly HeldItem: TrenchCrusadeItem;
     readonly Colour: string;
     IsActive = false;
 
     /**
      * Empty constructor
      */
-    constructor(item: IconpendiumItem, colourName: string){
+    constructor(item: TrenchCrusadeItem, colourName: string){
         this.HeldItem = item;
         this.Colour = colourName;
     }

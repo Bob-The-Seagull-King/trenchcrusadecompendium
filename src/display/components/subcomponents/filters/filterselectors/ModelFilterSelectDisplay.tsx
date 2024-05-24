@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
-import { AllAbilitiesListPage } from '../../../../../classes/viewmodel/pages/AllAbilitiesListPage'
-import { AbilitiesFilterManager } from '../../../../../classes/viewmodel/collections/filters/AbilitiesFilterManager'
+import { AllModelsListPage } from '../../../../../classes/viewmodel/pages/AllModelsListPage'
+import { ModelsFilterManager } from '../../../../../classes/viewmodel/collections/filters/ModelsFilterManager'
 
 import FilterItemItem from '../FilterItemItem'
 import FilterTagItem from '../FilterTagItem'
@@ -12,9 +12,9 @@ import FilterDisplay from '../FilterDisplay'
 
 import Modal from 'react-bootstrap/Modal';
 
-const AbilityFilterSelectDisplay = (prop: any) => {
-    const ViewPageController: AllAbilitiesListPage = prop.controller
-    const FilterManager: AbilitiesFilterManager = ViewPageController.FilterManager;
+const ModelFilterSelectDisplay = (prop: any) => {
+    const ViewPageController: AllModelsListPage = prop.controller
+    const FilterManager: ModelsFilterManager = ViewPageController.FilterManager;
     const updatesearch = prop.runfunction;
 
     const [_activetextfilters, returnactivetext] = useState(FilterManager.ReturnActiveTextFilters());
@@ -143,4 +143,4 @@ const AbilityFilterSelectDisplay = (prop: any) => {
     // -------------------------------------------
 }
 
-export default AbilityFilterSelectDisplay
+export default ModelFilterSelectDisplay

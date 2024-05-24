@@ -107,8 +107,8 @@ export function getTagValue(tag:any, value:string) {
  * @returns A string name for the route endpoint.
  */
 export function getRouteName(_route: string) {
-    if (_route.includes("compendium/abilities")) {
-        return "Abilities"
+    if (_route.includes("compendium/models")) {
+        return "Models"
     }
 
     if (_route.includes("tools/content")) {

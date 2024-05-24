@@ -49,10 +49,10 @@ const ContentPackInformation = (prop: any) => {
                                         Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
                                         but still keeps the file stored on your browser and can be turned on again at any time.
                                     </p>
-                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Incompatability</p></div>
+                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Incompatmodel</p></div>
                                     <p className="bodytext">
                                         If two pieces of data across your uploaded content packs share the same ID value, this can cause issues
-                                        when searching and constructing information. When this incompatability is detected, you will be notified.
+                                        when searching and constructing information. When this incompatmodel is detected, you will be notified.
                                         and are encouraged to remove the offending content pack.
                                     </p>
                                     <div className="separator"><p style={{fontSize:"0.8em"}}>Custom Packs</p></div>

@@ -1,6 +1,6 @@
 
 // Data File Imports -----------------------------------
-import abilitiesdata from '../data/player/abilities.json'
+import modelsdata from '../data/player/models.json'
 import addonsdata from '../data/player/addons.json'
 import glossarydata from '../data/general/glossary.json'
 // -----------------------------------------------------
@@ -60,8 +60,8 @@ class DataResponder {
      */
     private static GetDataType(type: string, data : any[]) {
         switch(type) {
-            case "abilities": {
-                return abilitiesdata.concat(data)
+            case "models": {
+                return modelsdata.concat(data)
             }
             case "addons": {
                 return addonsdata.concat(data)

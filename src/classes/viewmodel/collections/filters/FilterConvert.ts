@@ -6,7 +6,7 @@ import { FilterManager } from "./FilterManager";
  * which lets the Requester search for the given filters
  * of that object.
  * @param manager The manager that filters are being gathered from
- * @param _type The type of search being run (such as abilities, addons, etc)
+ * @param _type The type of search being run (such as models, addons, etc)
  * @param _groups Any groups, which identify misc filters that should be
  *                lumped together in a subparam with 'or' restrictions.
  * @returns JSON object

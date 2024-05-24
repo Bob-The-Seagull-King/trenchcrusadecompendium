@@ -1,6 +1,6 @@
-import {IIconpendiumItemData, IconpendiumItem} from '../../IconpendiumItem'
+import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {IAbilityDescription, AbilityDescription} from '../abilities/AbilityDescription'
+import {IModelDescription, ModelDescription} from '../models/ModelDescription'
 
 /**
  * Data structure for an addon's parent
@@ -13,14 +13,14 @@ interface IAddonParent {
 /**
  * Data structure for the player addon's
  */
-interface IPlayerAddon extends IIconpendiumItemData {
+interface IPlayerAddon extends ITrenchCrusadeItemData {
     class_id: string,
     job_id: string,
     parent: IAddonParent,
     description: []
 }
 
-class PlayerAddon extends IconpendiumItem {
+class PlayerAddon extends TrenchCrusadeItem {
     public readonly Class;
     public readonly Job;
     public readonly Parent;
@@ -43,15 +43,15 @@ class PlayerAddon extends IconpendiumItem {
 
     /**
      * Translates the description JSON objects into a collection
-     * of AbilityDescription objects
+     * of ModelDescription objects
      * @param data The array of description data objects
-     * @returns Array of AbilityDescription objects
+     * @returns Array of ModelDescription objects
      */
     private DescriptionFactory(data: []) {
         let i = 0;
-        const array: AbilityDescription[] = []
+        const array: ModelDescription[] = []
         for (i = 0; i < data.length; i++) {
-            const tempAD = new AbilityDescription(data[i])
+            const tempAD = new ModelDescription(data[i])
             array.push(tempAD)
         }
         return array;

@@ -3,7 +3,7 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { GlossaryRule } from '../../../../classes/feature/glossary/Glossary'
-import AbilityDescriptionItemDisplay from '../description/AbilityDescriptionItemDisplay'
+import ModelDescriptionItemDisplay from '../description/ModelDescriptionItemDisplay'
 
 const GlossaryDisplay = (props: any) => {
     const ruleObject: GlossaryRule = props.data
@@ -13,7 +13,7 @@ const GlossaryDisplay = (props: any) => {
             <div>
                 {ruleObject.Description.map((item) => (
                     <div key={"descriptionDisplay"}>
-                        <AbilityDescriptionItemDisplay data={item} parent={ruleObject}/>
+                        <ModelDescriptionItemDisplay data={item} parent={ruleObject}/>
                     </div>
                 ))}
             </div>
@@ -21,9 +21,9 @@ const GlossaryDisplay = (props: any) => {
     }
 
     return (
-        <div className={'abilityStructure bordermainpurple'}>
+        <div className={'modelStructure bordermainpurple'}>
             <h1 className={'titleShape titlepurple'}>{ruleObject.Name || ""}</h1>
-            <div className='abilityInternalStructure'>
+            <div className='modelInternalStructure'>
                 <div>
                     {returnDescription()}
                 </div>

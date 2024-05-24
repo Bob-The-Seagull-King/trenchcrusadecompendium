@@ -1,5 +1,5 @@
 import { ContentPack } from '../classes/contentpacks/contentpack';
-import {DataResponder} from '../resources/data/child/util/DataResponder'
+import {DataResponder} from '../resources/data/util/DataResponder'
 import { useContentPackStore } from '../store/contentpacks'
 
 /**
