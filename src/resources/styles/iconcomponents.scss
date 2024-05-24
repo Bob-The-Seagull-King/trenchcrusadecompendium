@@ -1,0 +1,385 @@
+@import './_variables';
+
+// Border
+
+.bordermainpurple {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_purple_main;
+}
+
+.bordersubpurple {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: $colour_purple_secondary !important;
+}
+
+.smallbordersubpurple {
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: $colour_purple_secondary !important;
+}
+
+.bordermainblue {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_blue_main;
+}
+
+.bordersubblue {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_blue_secondary;
+}
+
+.bordermaingreen {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_green_main;
+}
+
+.bordersubgreen {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_green_secondary;
+}
+
+.bordermainred {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_red_main;
+}
+
+.bordersubred {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_red_secondary;
+}
+
+.bordermainyellow {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_yellow_main;
+}
+
+.bordersubyellow {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_yellow_secondary;
+}
+
+.bordermaingrey {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_grey_main;
+}
+
+.bordersubgrey {
+    border-style: solid;
+    border-width: 2px;
+    border-color: $colour_grey_secondary;
+}
+
+// Structure
+
+
+.abilityStructure {
+    border-radius: 0em 0em 0.4em 0.4em;
+    box-shadow: 0 0 5px 1px #CCC;
+    width: 100%;
+    text-align: justify;
+    background-color: $colour_background_grey;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #CCC;
+    }
+}
+
+.abilityInternalStructure {
+    padding: 1em;
+    font-size: 0.85em;
+}
+
+.emptyboxStructure {
+    width: 100%;
+    border-radius: 0.25em;
+    padding:20%;
+    padding-top: 35%;
+    padding-bottom: 35%;
+    height: 400%;
+}
+
+.popupBody {
+    max-width: 20em;
+}
+
+.roundBody {
+    border-radius: 0.25em;
+}
+
+.filterboxStructure {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: $colour_purple_main !important;
+    border-radius: 0em 0em 0em 0em !important;
+    box-shadow: 0 0 5px 1px #555;
+    width: 100%;
+    text-align: justify;
+    background-color: $colour_background_grey;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #555;
+    }
+}
+
+.filterobjectdisplay {
+    margin: 0.25em;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    box-shadow: 0 0 3px 0px #CCC;
+    text-align: justify;
+    color: $colour_background_white;
+    font-weight: 600 ;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-color: $colour_purple_secondary !important;
+    background-color: $colour_purple_secondary;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px #CCC;
+    }
+}
+
+.filterobjectdisplaypositive {
+    margin: 0.25em;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    box-shadow: 0 0 3px 0px #CCC;
+    text-align: justify;
+    color: $colour_background_white;
+    font-weight: 600 ;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-color: $colour_green_secondary !important;
+    background-color: $colour_green_secondary;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px #CCC;
+    }
+}
+
+.filterobjectdisplaynegative {
+    margin: 0.25em;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    box-shadow: 0 0 3px 0px #CCC;
+    text-align: justify;
+    color: $colour_background_white;
+    font-weight: 600 ;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-color: $colour_red_secondary !important;
+    background-color: $colour_red_secondary;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px #CCC;
+    }
+}
+
+.filtertextinput {
+    border-radius: 0.4em;
+}
+
+.filterobjectdisplaypositive {
+    margin: 0.25em;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    box-shadow: 0 0 3px 0px #CCC;
+    text-align: justify;
+    color: $colour_background_white;
+    font-weight: 600 ;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-color: $colour_green_secondary !important;
+    background-color: $colour_green_secondary;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px #CCC;
+    }
+}
+
+.filterclosebutton {
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    box-shadow: 0 0 3px 0px #CCC;
+    text-align: justify;
+    color: $colour_background_white;
+    font-weight: 600 ;
+    font-size: 1.25em;
+    width: fit-content;
+    padding: 0.1em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-color: $colour_grey_main !important;
+    background-color: $colour_grey_main;
+
+    &:hover {
+        box-shadow: 0 0 5px 1px #CCC;
+    }
+}
+
+.filterbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagboxtitle {
+    
+	/* Use a flexbox layout */
+	display: flex;
+	
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	
+	/* The important part: vertically center the items */
+	align-items: center;
+}
+
+.inputbox input {
+    height: 50%;
+  }
+
+
+.topbarStructure {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topbarCompendiumBase {
+    width: 100%;
+    background: $colour_purple_main;
+    height: 100%;
+
+    box-shadow: 0 0 5px 1px #AAA;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #AAA;
+    }
+}
+
+.topbarCompendiumStructure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pageaccessbox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px 1px #CCC;
+    padding: 0.5em;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #CCC;
+    }
+}
+
+.generalbuttonbox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px 1px #CCC;
+    height: 100%;
+    width: fit-content;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #CCC;
+    }
+}
+
+.contentpackcontainer {
+    display: flex; /* make element size relative to content */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border-radius: 0em;
+    width: 100%;
+    position: relative;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+.contentpacksmallcontainer {
+    align-items: center;
+    align-content: center;
+    border-radius: 0em;
+    width: 100%;
+    position: relative;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+.smallcontentpackrow {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contentsubnamecontainer {
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    align-content: center;
+    width: fit-content;
+}
+
+.nofrillbox {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+}
+
+.textHolder {
+  text-align: justify;
+}
+
+.flexbody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.packvr {
+    color: $colour_purple_main;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    width: fit-content;
+}
+
+.packvrbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

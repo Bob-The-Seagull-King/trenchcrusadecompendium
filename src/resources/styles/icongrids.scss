@@ -1,0 +1,209 @@
+@import './_variables';
+
+.jobcontainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 50% 50%;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding: 1em;
+}
+
+.bondfullcontainer {
+    width: 90%;
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 40% 60%;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    padding: 1em;
+}
+
+.abilityContainer { 
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 50% 50%;
+    grid-auto-flow: row; 
+}
+
+.classContainer { 
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 50% 50%;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 1em;
+}
+
+.pagecontainer {
+    display: grid;
+    width: 100%;
+    justify-content: space-evenly; 
+    grid-template-columns: 55% 45%;
+    padding: 1em;
+}
+
+.jobfeaturecontainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 50% 50%;
+    padding: 1em;
+}
+
+.reliccontainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, 33%)
+}
+
+.abilitycontainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, 50%)
+}
+
+.searchContainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 20% 40% 40%;
+    padding: 1em;
+}
+
+.searchSubContainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-rows: 100% 100%;
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
+.searchSubSetContainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
+.searchsubsubcontainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.searchitemscontainer {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.narrativesearchContainer {
+    display: grid;
+    justify-content: space-evenly; 
+    grid-template-columns: 25% 20% 45% 10%;
+    padding: 1em;
+}
+
+.gridItem {
+    margin: 0.5em;
+}
+
+.gridItemPower {
+    margin: 0.5em;
+    min-width: 25em;
+}
+
+.gridItemRule {
+    margin: 0.5em;
+    min-width: 25em;
+    max-width: 25em;
+}
+
+.jobitema { 
+    padding:0.5em;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.jobitemb { 
+    padding:0.5em;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.gridjobItem { 
+    width: 100%;
+    display: grid; 
+    place-items: center;
+}
+
+.gridjoblistItem {
+    max-width: 50%;
+    padding: 0.5em;
+}
+
+.pageitema { 
+    padding:0.5em;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.pageitemb { 
+    padding:0.5em;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.relicgriditem {
+    margin: 0.5em;
+    justify-self: center;
+}
+
+.abilitygriditem {
+    margin: 0.5em;
+    justify-self: center;
+}
+
+.searchgriditem {
+    width: 95%;
+    justify-self: center;
+}
+
+.midgriditem {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    width: 100%;
+}
+
+.levelgriditem {
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+.searchgridbutton {
+    margin-left: 0.5em;
+}
+
+.searchgridtacticsbutton {
+    margin-top: 1em;
+    padding-bottom:-1em;
+    margin-left: 0.5em;
+}
+
+.jobgriditem {
+    width: 103%;
+    padding: 0em;
+}

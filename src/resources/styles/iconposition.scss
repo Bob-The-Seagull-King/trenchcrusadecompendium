@@ -1,0 +1,230 @@
+@import './_variables';
+
+.addonbox {
+    padding: 1em;
+}
+
+.no-margin
+{
+  margin: 0px !important;
+}
+
+.no-padding
+{
+    padding: 0px !important;
+}
+
+.verticalspacer {
+    
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+}
+
+.tagBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagItem {
+    padding-right: 1em;
+    margin: 0em;
+}
+
+.abilityAddonPosition {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-left: 1em;
+}
+
+.centerPosition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.topPosition {
+    display: flex;
+    align-items: start;
+}
+
+.jobFeaturePosition {
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+}
+
+.jobFeature {
+    width: 50%;
+    padding:2%;
+}
+
+.classFeature {
+    padding: 1em;
+}
+
+.classjobFeature {
+    margin: 10em;
+}
+
+.listitemsmallgap {
+    margin: -0.75em; 
+    padding: 0em;
+}
+
+.listulsmallgap {
+    margin-top: 0em;
+}
+
+.halfwise {
+    width: 45%;
+}
+
+.classwise {
+    width: 100%;
+}
+
+.widthPT {
+    padding: 1em;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.widthPN {
+    padding: 1em;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.baseCleanStructure {
+    border-radius: 1em;
+    padding-bottom:0.01%;
+    text-align: justify;
+}
+
+.padSmall {
+    margin-bottom: 1em;
+}
+
+.lowpad {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.searchinput {
+    border-radius: 1em;
+    margin: 1em;
+    width: 100%;
+    padding: 0.5em;
+}
+
+.searchbondinput {
+    border-radius: 1em;
+    margin: 1em;
+    width: 10%;
+    padding: 0.5em;
+}
+
+.searchinputrelic {
+    border-radius: 1em;
+    margin: 1em;
+    width: 60%;
+    padding: 0.5em;
+}
+
+.searchinputreliclevel {
+    border-radius: 1em;
+    margin: 1em 0em 1em 0em;
+    width: 20%;
+    padding: 0.5em;
+}
+
+.searchinputabilitymastery {
+    border-radius: 1em;
+    margin: 1em 0em 1em 1em;
+    width: 20%;
+    padding: 0.5em;
+}
+
+.searchinputpower {
+    border-radius: 1em;
+    margin: 1em 0em 1em 1em;
+    padding-left: 1em;
+    width: 80%;
+    padding: 0.5em;
+}
+
+.searchinputbox {
+    margin: 0em 0em 0em 1em;
+}
+
+.paddedSearchTitle {
+    padding-left: 1em;
+    width: 30%;
+}
+
+.paddedSearchNarTitle {
+    padding-left: 1em;
+    margin-right: 0.75em;
+    width: 30%;
+}
+
+.paddedSearchLevel {
+    padding-left: 1em;
+    width: 30%;
+    text-align: center;
+}
+
+.nakedpad {
+    margin: 0.1em;
+}
+
+.navpad {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.toppad {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.tagboxpad {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.webtitlediv {
+    display: flex;
+    padding-right: 1em;
+    align-content: start;
+}
+
+.searchinputnav {
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding: 0.25em;
+    margin-left: 0em;
+}
+
+.searchpad {
+    margin-left: 1em;
+}
+
+.shorten {
+    max-width: 4em;
+}
+
+.tagpad {
+    margin-left: 0.5em;
+}
+
+.modalwide {
+    width: 75vw ;
+    max-width: 75vw;
+    min-width: 75vw;
+}
+

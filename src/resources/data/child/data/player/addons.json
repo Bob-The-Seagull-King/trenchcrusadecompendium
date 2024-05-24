@@ -1,0 +1,33 @@
+[
+    {
+        "id": "ad_heroicintervention",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                {"tag_name": "interrupt", "val": 1},
+                {"tag_name": "type", "val": "interrupt"}
+                ],
+        "class_id": "cl_stalwart",
+        "job_id": "jb_bastion",
+        "parent_id": {"tag_name": "ability", "val": "ab_endlessbattlement"},
+        "name": "Heroic Intervention",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                            "content": "Trigger:",
+                            "subcontent":   [{
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "A foe targets your ally with an ability, and your ally is in range 3."
+                                            }]
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                            "content": "Effect:",
+                            "subcontent":   [{
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "You soar into the air, removing yourself from the battlefield, then return in any space adjacent to that ally."
+                                            }]
+                        }
+                        ]
+    }
+]
