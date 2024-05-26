@@ -84,6 +84,9 @@ const ModelDescriptionItemDisplay = (props: any) => {
     function findAddon(id: string) {
         let AddonFound = null;
 
+        console.log(id);
+        console.log(parentItem.Addons)
+
         let i = 0;
         for (i = 0; i < parentItem.Addons.length; i++) {
             if (parentItem.Addons[i].ID == id) {

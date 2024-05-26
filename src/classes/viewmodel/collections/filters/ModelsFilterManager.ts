@@ -22,15 +22,13 @@ class ModelsFilterManager extends FilterManager {
      * @returns Array of FilterTag objects
      */
     FindTags() {
-        const tempTags: FilterTag[] = []
+        const tempTags: FilterItem[] = []
         const foundTags = (Requester.MakeRequest({ searchtype: 'tags', searchparam: { type: 'models' } })).sort();
 
         let i = 0;
         for (i = 0; i < foundTags.length; i++) {
-            const tempTagText: IFilterText = { group: "tags", val: "", isstrict: false}
             const tempTagObject: IFilterItem = { group: "tags", isactive: false, doinclude: false, name: foundTags[i]}
-            const tempTagInterface: IFilterTag = { group: "tags", tagtype: tempTagObject, tagval: tempTagText }
-            const tempTagConstructed = new FilterTag(tempTagInterface);
+            const tempTagConstructed = new FilterItem(tempTagObject);
             tempTags.push(tempTagConstructed);
         }
 
@@ -45,7 +43,7 @@ class ModelsFilterManager extends FilterManager {
      */
     FindMisc() {
         const tempMisc: FilterItem[] = []
-        const keytypes = ["source", "chapter", "class_id", "job_id"]
+        const keytypes = ["source", "faction_id", "variant_id"]
         keytypes.sort();
 
         let i = 0;

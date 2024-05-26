@@ -1,289 +1,33 @@
 [
     {
-        "id": "ab_heracule",
+        "id": "md_hereticpriest",
         "type": "Model",
         "source": "core",
         "tags": [
-                {"tag_name": "action", "val": 1},
-                {"tag_name": "type", "val": "attack"},
-                {"tag_name": "range", "val": 3},
-                {"tag_name": "inflict", "val": "gl_shove"},
-                {"tag_name": "attack", "val": ""}
+                    {"tag_name": "heretic", "val": ""},
+                    {"tag_name": "elite", "val": ""},
+                    {"tag_name": "tough", "val": ""}
                 ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Heracule",
-        "job_id": "jb_bastion",
-        "attachments": [],
-        "blurb": "Hurl your shield or weapon as a discus with irrepressible force.",
-        "description":  [{
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Attack:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                                "content": "On Hit:",
-                                                "subcontent":   [{
-                                                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                                    "content": "[D] + fray",
-                                                                    "glossary": [{"val": "[D]", "id": "gl_damagedice"}, {"val": "fray", "id": "gl_fray"}]
-                                                                }]
-                                            },
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                                "content": "Miss:",
-                                                "subcontent":   [{
-                                                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                                    "content": "Fray",
-                                                                    "glossary": [{"val": "Fray", "id": "gl_fray"}]
-                                                                }]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Your attack target and one (4+) two (6+) all targets in range are shoved 1.",
-                                                "glossary": [{"val": "shoved", "id": "gl_shove"}]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Overdrive:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Increase shove to 3",
-                                                "glossary": [{"val": "shove", "id": "gl_shove"}]
-                                            }],
-                            "glossary": [{"val": "Overdrive", "id": "gl_overdrive"}]
+        "cost": 1,
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_base",
+        "name": "Heretic Priest",
+        "attachments": [
+                        {"tag_name": "addons", "val": "ab_puppetmaster"},
+                        {"tag_name": "addons", "val": "ab_tough"}
+                    ],
+        "blurb": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets.",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_puppetmaster"
+                        },{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_tough"
                         }]
 
-    },
-    {
-        "id": "ab_batteringram",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                {"tag_name": "action", "val": 1},
-                {"tag_name": "inflict", "val": "gl_shove"},
-                {"tag_name": "inflict", "val": "gl_dazed"}
-                ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Battering Ram",
-        "job_id": "jb_bastion",
-        "attachments": [],
-        "blurb": "Use your shield, weapon, or armored fist and send your target flying",
-        "description":  [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "An adjacent character is shoved 2 spaces",
-                                                "glossary": [{"val": "shoved", "id": "gl_shove"}]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Impact:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Colliding foes are dazed. If a colliding foe is already dazed, refund the action cost of this model.",
-                                                "glossary": [{"val": "dazed", "id": "gl_dazed"}]
-                                            }],
-                            "glossary": [{"val": "Impact", "id": "gl_impact"}]
-                        }
-                        ]
-    },
-    {
-        "id": "ab_landwaster",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                {"tag_name": "action", "val": 2},
-                {"tag_name": "type", "val": "attack"},
-                {"tag_name": "blast_size", "val": "medium"},
-                {"tag_name": "blast_distance", "val": "close"},
-                {"tag_name": "inflict", "val": "gl_shove"},
-                {"tag_name": "attack", "val": ""}
-                ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Land Waster",
-        "job_id": "jb_bastion",
-        "attachments": [],
-        "blurb": "Crash your greatshield or weapon into the earth, sending up devestating shockwaves.",
-        "description":  [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Attack:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                                "content": "On Hit:",
-                                                "subcontent":   [{
-                                                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                                    "content": "2[D] + fray",
-                                                                    "glossary": [{"val": "2[D]", "id": "gl_damagedice"}, {"val": "fray", "id": "gl_fray"}]
-                                                                }]
-                                            },
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                                "content": "Miss:",
-                                                "subcontent":   [{
-                                                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                                    "content": "Fray",
-                                                                    "glossary": [{"val": "Fray", "id": "gl_fray"}]
-                                                                }]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Area Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Foes take fray damage.",
-                                                "glossary": [{"val": "fray", "id": "gl_fray"}]
-                                            }],
-                            "glossary": [{"val": "Area Effect", "id": "gl_areaeffect"}]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Shove all other characters than you in the area 1 space away from your attack target, then shove your target 1.",
-                                                "glossary": [{"val": "Shove", "id": "gl_shove"},{"val": "shove", "id": "gl_shove"}]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Overdrive:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Becomes a close large blast",
-                                                "glossary": [{"val": "close", "id": "gl_closeblast"}, {"val": "large blast", "id": "gl_blast"}]
-                                            }],
-                            "glossary": [{"val": "Overdrive", "id": "gl_overdrive"}]
-                        }
-                        ]
-    },
-    {
-        "id": "ab_valiant",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                {"tag_name": "action", "val": 1}
-                ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Valiant",
-        "job_id": "jb_bastion",
-        "attachments": [],
-        "blurb": "Stride forth, with your shield held before you, battering aside foes.",
-        "description": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Effect:",
-                "subcontent":   [{
-                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                    "content": "Dash 1, then dash 1, then dash 1. Before each dash, shove all adjacent characters 1.",
-                                    "glossary": [{"val": "Dash", "id": "gl_dash"}, {"val": "dash", "id": "gl_dash"},{"val": "shove", "id": "gl_shove"}]
-                                }]
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Overdrive:",
-                "subcontent":   [{
-                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                    "content": "Valiant is a free action"
-                                }],
-                "glossary": [{"val": "Overdrive", "id": "gl_overdrive"}]
-            }
-            ]
-    },
-    {
-        "id": "ab_endlessbattlement",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                {"tag_name": "action", "val": 1},
-                {"tag_name": "range", "val": 3},
-                {"tag_name": "type", "val": "stance"}
-                ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Endless Battlement",
-        "job_id": "jb_bastion",
-        "attachments": [{"tag_name": "addons", "val": "ad_heroicintervention"}],
-        "blurb": "The land itself is your castle, and you will never let its walls be breached. No matter where your allies step, your shield will be there.",
-        "description": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Stance:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "When you enter this stance, or when it refreshes, choose an ally in range. Gain the following interrupt:"
-                                            }],
-                            "glossary": [{"val": "Stance", "id": "gl_stance"}, {"val": "interrupt", "id": "gl_interrupt"}]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                            "content": "ad_heroicintervention"
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Refresh:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Refresh this stance at the start of your turn."
-                                            }]
-                        }
-                        ]
-    },
-    {
-        "id": "ab_catapult",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                {"tag_name": "type", "val": "interrupt"},
-                {"tag_name": "interrupt", "val": 1}
-                ],
-        "chapter": 1,
-        "class_id": "cl_stalwart",
-        "name": "Catapult",
-        "job_id": "jb_bastion",
-        "attachments": [],
-        "blurb": "Use your body as a springboard to set up ally maneuvers or to deflect projectiles.",
-        "description":  [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Trigger:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "An ally ends a movement in an adjacent space."
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Shove that ally 2.",
-                                                "glossary": [{"val": "Shove", "id": "gl_shove"}]
-                                            }]
-                        },
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Impact:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Shove ally 1 again in any direction. If they collided with a foe, that foe takes 2 damage.",
-                                                "glossary": [{"val": "Shove", "id": "gl_shove"}, {"val": "collided", "id": "gl_impact"}]
-                                            }],
-                            "glossary": [{"val": "Impact", "id": "gl_impact"}]
-                        }
-
-                        ]
     }
 ]

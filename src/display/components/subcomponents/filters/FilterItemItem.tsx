@@ -46,7 +46,7 @@ const FilterItemItem = (prop: any) => {
         <div className="col">
             <div className="centerPosition">
                 <div className={"hovermouse " + (_currentstate == "" ? "filterobjectdisplay" : _currentstate == "positive" ? "filterobjectdisplaypositive" : "filterobjectdisplaynegative")} onClick={() => SwitchStates()}>
-                    {makestringpresentable(ItemFilter.Group)}: {makestringpresentable(ItemFilter.Name)}
+                    {makestringpresentable(ItemFilter.Name)}
                 </div>
             </div>
         </div>

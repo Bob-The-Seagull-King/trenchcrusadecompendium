@@ -233,6 +233,7 @@ class DataResponder {
             }
         } else {
             const dynamicKey = term.item as keyof (typeof data);
+
             if (term.tagvalue == "") {
                 let i = 0;
                 for (i = 0; i < data[dynamicKey].length; i++) {

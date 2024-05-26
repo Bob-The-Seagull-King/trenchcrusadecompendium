@@ -18,13 +18,28 @@ export function capitalizeString(stringVal: string) {
  *          individual words capitalized.
  */
 export function makestringpresentable(stringVal: string) {
+    const bannedString = ["fc","fv"];
+    const namedict : { [id: string]: string; } = {
+            'hereticlegion' : 'heretic legion',
+            'blackgrail' : 'black grail',
+            'trenchpilgrim' : 'trench pilgrim',
+            'ironsultanate' : 'iron sultanate',
+            'newantioch' : 'new antioch'
+        };
+
+    Object.keys(namedict).forEach(key => {
+        stringVal = stringVal.toString().replace(key, namedict[key]);
+        });
+
     const pairedString = stringVal.toString().replace(/_/g, ' ').split(" "); 
     let stringreturned = "";
-    
+
     let i = 0 
     for (i = 0; i < pairedString.length; i++) {
         const tempstring = capitalizeString(pairedString[i])
-        stringreturned = stringreturned + ((i == 0)?  "" : " ") + tempstring
+        if (!(bannedString.includes(tempstring.toLowerCase()))){
+            stringreturned = stringreturned + ((i == 0)?  "" : " ") + tempstring
+        }
     }
     return stringreturned;
 }
@@ -35,10 +50,10 @@ export function makestringpresentable(stringVal: string) {
  * @returns The colour associated with that job or class
  */
 export function getColour(name: string){
-    const yellow = ["yellow", "cl_vagabond", "vagabond", "fool", "freelancer", "shade", "warden"];
-    const red = ["red","cl_stalwart", "stalwart", "bastion", "demon slayer", "colossus", "knave"];
-    const green = ["green", "cl_mendicant", "mendicant", "chanter", "harvester", "sealer", "seer"];
-    const blue = ["blue","cl_wright", "wright", "enochian", "geomancer", "spellblade", "stormbender"];
+    const yellow = ["yellow","fc_trenchpilgrims","fc_ironsultanate","fc_newantioch"];
+    const red = ["red","fc_hereticlegion","fc_blackgrail"];
+    const green = ["green"];
+    const blue = ["blue"];
     const purple = ["Purple", "purple"];
 
     if (yellow.includes(name.toLowerCase())) {

@@ -1,32 +1,35 @@
 [
     {
-        "id": "ad_heroicintervention",
+        "id": "ab_puppetmaster",
         "type": "Addon",
         "source": "core",
         "tags": [
-                {"tag_name": "interrupt", "val": 1},
-                {"tag_name": "type", "val": "interrupt"}
                 ],
-        "class_id": "cl_stalwart",
-        "job_id": "jb_bastion",
-        "parent_id": {"tag_name": "model", "val": "ab_endlessbattlement"},
-        "name": "Heroic Intervention",
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticpriest",
+        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
+        "name": "Puppet Master",
         "description":  [
                         {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Trigger:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "A foe targets your ally with an model, and your ally is in range 3."
-                                            }]
-                        },
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Select a target model within 12” of the Priest, friend or foe (including the Priest). As a RISKY ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model, or leave Combat (all the usual rules apply)."
+                        }
+                        ]
+    },
+    {
+        "id": "ab_tough",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticpriest",
+        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
+        "name": "Tough",
+        "description":  [
                         {
-                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                            "content": "Effect:",
-                            "subcontent":   [{
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "You soar into the air, removing yourself from the battlefield, then return in any space adjacent to that ally."
-                                            }]
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Demonic vitality makes the Heretic Priests very difficult to slay. They are subject to the rules for TOUGH creatures."
                         }
                         ]
     }

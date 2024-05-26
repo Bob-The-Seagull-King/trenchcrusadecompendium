@@ -34,7 +34,7 @@ class AllModelsListPage {
      * collection manager's search.
      */
     updateSearch() {
-        const newfilter = ConvertFiltersToRequest(this.FilterManager, "models", ["chapter", "source", "class_id", "job_id"])
+        const newfilter = ConvertFiltersToRequest(this.FilterManager, "models", ["source", "faction_id", "variant_id"])
         if (!(JSON.stringify(newfilter) == JSON.stringify(this.Collection.searchParam))) {
             this.Collection.UpdateSearchParams(newfilter);
             this.Collection.RunSearch();

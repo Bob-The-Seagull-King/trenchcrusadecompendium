@@ -58,7 +58,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                     <FilterDisplay key={"tag"+item.Val+(_keyval.toString())} state={""} title={"Name"} value={item.Val}/>
                                 ))}
                             {_activetagfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.TagType.Name+(_keyval.toString())} state={item.TagType.DoInclude? "positive" : "negative" } title={item.TagType.Name+" Tag"} value={item.TagVal.Val}/>
+                                    <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} state={item.DoInclude? "positive" : "negative" } title={item.Group} value={item.Name}/>
                                 ))}
                             {_activemiscfilters.map((item) => (
                                     <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} title={item.Group} state={item.DoInclude? "positive" : "negative" } value={item.Name}/>
@@ -83,21 +83,10 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                     ))}
                                 </div>
                                 <div className="separator"><h3>TAGS</h3></div>
-                                <div className="subltenotetext">{"You can specify tag's value in the text box. Leave blank to find all of that tag."}
-                                </div>
-                                <div className='toppad'></div>
                                 <div className="row">
                                     <div className="filterbox centerPosition">
                                         {FilterManager.ReturnTagFilters().map((item) => (
-                                            <FilterTagItem key={"tag"+item.TagType.Name} data={item}/>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="separator"><h3>CHAPTERS</h3></div>
-                                <div className="row">
-                                    <div className='filterbox centerPosition'>
-                                        {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "chapter")).map((item) => (
-                                            <FilterItemItem key={"miscchapter"+item.Name} data={item} updatefunction={RunUpdate}/>
+                                            <FilterItemItem key={"tag"+item.Name} data={item}/>
                                         ))}
                                     </div>
                                 </div>
@@ -109,23 +98,22 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>CLASSES</h3></div>
+                                <div className="separator"><h3>FACTIONS</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
-                                        {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "class_id")).map((item) => (
+                                        {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "faction_id")).map((item) => (
                                             <FilterItemItem key={"misclass"+item.Name} data={item} />
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>JOBS</h3></div>
+                                <div className="separator"><h3>VARIANTS</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
-                                        {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "job_id")).map((item) => (
-                                            <FilterItemItem key={"miscjob"+item.Name} data={item} />
+                                        {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "variant_id")).map((item) => (
+                                            <FilterItemItem key={"misclass"+item.Name} data={item} />
                                         ))}
                                     </div>
                                 </div>
-                                
                                 <div className='separator toppad'></div>
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>

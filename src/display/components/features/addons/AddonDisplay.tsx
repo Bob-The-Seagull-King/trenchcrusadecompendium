@@ -57,16 +57,12 @@ const AddonDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordersub'+getColour(ModelObject.Class)}>
-            <h1 className={'titleShape subtitle'+getColour(ModelObject.Class)}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure bordersub'+getColour(ModelObject.Faction)}>
+            <h1 className={'titleShape subtitle'+getColour(ModelObject.Faction)}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
                 </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
                 <div className="verticalspacer"/>
                 <div>
                     {returnDescription()}

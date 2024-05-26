@@ -4,21 +4,24 @@ import {ModelDescription} from './ModelDescription'
 import { PlayerAddon } from '../addons/Addon'
 
 interface IPlayerModel extends ITrenchCrusadeItemData {
-    chapter: number, // Chapter of the model
-    class_id: string, // Class of the model (determined by job)
-    job_id: string, // Job of the model
+    cost: number, // Chapter of the model
+    faction_id: string, // Class of the model (determined by job)
+    variant_id: string,
     attachments: [], // List of addons, summons, etc featured in an model
     blurb: string, // Flavour text
-    description: [] // Mechanical description of the item
+    equipment: [], // Mechanical description of the item
+    abilities: [] // Mechanical description of the item
 }
 
 class PlayerModel extends TrenchCrusadeItem {
-    public readonly Chapter;
-    public readonly Class;
-    public readonly Job;
+    public readonly Cost;
+    public readonly Faction;
+    public readonly Variant;
     public readonly Attachments;
     public readonly Blurb;
-    public readonly Description;
+    public readonly Equipment;
+    public readonly Abilities;
+
     public Addons: PlayerAddon[] = [];
     
     /**
@@ -30,12 +33,13 @@ class PlayerModel extends TrenchCrusadeItem {
     {
         super(data)
         this.ItemType = ItemType.Model;
-        this.Chapter = data.chapter;
-        this.Class = data.class_id;
-        this.Job = data.job_id;
+        this.Variant = data.variant_id;
+        this.Cost = data.cost;
+        this.Faction = data.faction_id;
         this.Attachments = data.attachments;
         this.Blurb = data.blurb;
-        this.Description = this.DescriptionFactory(data.description);
+        this.Equipment = this.DescriptionFactory(data.equipment);
+        this.Abilities = this.DescriptionFactory(data.abilities);
     }
 
     /**
@@ -71,8 +75,11 @@ class PlayerModel extends TrenchCrusadeItem {
         for (i = 0; i < this.Addons.length; i++) {
             delete this.Addons[i];
         }
-        for (i = 0; i < this.Description.length; i++) {
-            delete this.Description[i];
+        for (i = 0; i < this.Equipment.length; i++) {
+            delete this.Equipment[i];
+        }
+        for (i = 0; i < this.Abilities.length; i++) {
+            delete this.Abilities[i];
         }
     }
 

@@ -4,7 +4,7 @@ import {FilterText, FilterTag, FilterItem} from './FilterInterfaces'
 abstract class FilterManager {
     
     TextOptions: FilterText[] = [];
-    TagOptions: FilterTag[] = [];
+    TagOptions: FilterItem[] = [];
     MiscOptions: FilterItem[] = []
 
     constructor() {
@@ -34,7 +34,7 @@ abstract class FilterManager {
     /**
      * @returns Array of all currently active tag-type filters
      */
-    ReturnActiveTagFilters() { return this.TagOptions.filter((value) => value.TagType.IsActive == true); }
+    ReturnActiveTagFilters() { return this.TagOptions.filter((value) => value.IsActive == true); }
 
     /**
      * @returns Array of all currently active misc filters

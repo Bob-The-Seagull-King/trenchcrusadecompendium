@@ -13,11 +13,25 @@ const ModelDisplay = (props: any) => {
     const ModelObject: PlayerModel = props.data
     const bannedModelTags = ["inflict", "type"]
 
-    function returnDescription() {
+    function returnEquipment() {
         return (
             <div>
-                {ModelObject.Description.map((item) => (
-                    <div key={"descriptionDisplay"}>
+                {ModelObject.Equipment.map((item) => (
+                    <div key={"equipmentDisplay"+(item.Content? item.Content : "")}>
+                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                    </div>
+                ))}
+            </div>
+        )
+    }
+
+    console.log(ModelObject.Abilities);
+
+    function returnAbilities() {
+        return (
+            <div>
+                {ModelObject.Abilities.map((item) => (
+                    <div key={"abilitiesDisplay"+(item.Content? item.Content : "")}>
                         <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
@@ -57,8 +71,8 @@ const ModelDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour(ModelObject.Class)}>
-            <h1 className={'titleShape title'+getColour(ModelObject.Class)}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure bordermain'+getColour(ModelObject.Faction)}>
+            <h1 className={'titleShape title'+getColour(ModelObject.Faction)}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
@@ -73,7 +87,15 @@ const ModelDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    {returnDescription()}
+                    {returnEquipment()}
+                </div>
+                <div className="verticalspacer"/>
+                <div>
+                    <div className="separator">&#x27E1;</div>
+                </div> 
+                <div className="verticalspacer"/>
+                <div>
+                    {returnAbilities()}
                 </div>
             </div>
         </div>

@@ -39,13 +39,14 @@ export function ConvertFiltersToRequest(manager: FilterManager, _type: string, _
     
     // Create filters for each tag item
     for (i = 0; i < filtertag.length; i++) {
+        console.log(filtertag[i])
         const jsontemp =    {             
                                 item: "tags",
-                                value: filtertag[i].TagType.Name,
-                                equals: filtertag[i].TagType.DoInclude,
+                                value: filtertag[i].Name,
+                                equals: filtertag[i].DoInclude,
                                 strict: true,
                                 istag: true,
-                                tagvalue: (filtertag[i].TagVal.Val.toString().trim().length > 0)? filtertag[i].TagVal.Val : ""
+                                tagvalue: ""
                             }
         filterSet.push(jsontemp);
     }
