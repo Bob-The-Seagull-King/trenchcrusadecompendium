@@ -1,170 +1,375 @@
 [
     {
-        "id": "gl_areaeffect",
+        "id": "gl_plusdice",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "+Dice",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Modifier for ACTION rolls. For each +DICE, add one dice to the dice pool of the 2D6 roll you are about to make. +1 DICE thus makes the roll a total of 3D6. Then roll all the dice and pick the two highest. If two +DICE are added, roll 4D6 and pick the two highest, and so on.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "ACTION", "id": "gl_action"}
+            ]
+        }]
+    },
+    {
+        "id": "gl_minusdice",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "-Dice",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Modifier for ACTION rolls. For each -DICE, add one dice to the dice pool of the 2D6 roll you are about to make. Thus -1 DICE makes the roll a total of 3D6. Then roll all the dice and pick the two lowest. If two -DICE are added, roll 4D6 and pick the two lowest, and so on.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "ACTION", "id": "gl_action"}
+            ]
+        }]
+    },
+    {
+        "id": "gl_action",
         "type": "Glossary",
         "source": "core",
         "tags": [
             {"tag_name": "category", "val": "general"}
         ],
-        "name": "Area Effect",
+        "name": "Action",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "An effect that is applied in a large, fixed pattern.",
-            "subcontent":   []
+            "content": "Covers attacking with Melee and Ranged Weapons, Dashing and any other activity where the player must roll on the Action Success Chart to make an Action. This roll can be modified by the opposing player by using BLOOD MARKERS. Each marker causes -1 DICE penalty to the roll.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}
+            ]
         }]
     },
     {
-        "id": "gl_damagedice",
+        "id": "gl_assault",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"},
+            {"tag_name": "category", "val": "weapon"}
+        ],
+        "name": "Assault",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Weapons with this Keyword can make a ranged attack and charge during the same Activation. Only one such attack can be done in this instance, regardless of any rules the ranged weapon may have.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_blackgrail",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "Black Grail",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the Black Grail faction.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
+        "id": "gl_blessingmarker",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "Blessing Marker",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Supernatural or chemical temporary enhancement. Each marker can be converted into +1 DICE for any ACTION the model takes, or into -1 DICE when rolling injuries for this model. ",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "+1 DICE", "id": "gl_plusdice"},
+                {"val": "ACTION", "id": "gl_action"},
+                {"val": "-1 DICE", "id": "gl_minusdice"}
+            ]
+        }]
+    },
+    {
+        "id": "gl_bloodmarker",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "Blood Marker",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Damage inflicted by attacks. Each can be converted into -1 DICE for any ACTION the wounded model takes or into +1 DICE when rolling injuries for this model.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "+1 DICE", "id": "gl_plusdice"},
+                {"val": "ACTION", "id": "gl_action"},
+                {"val": "-1 DICE", "id": "gl_minusdice"}
+            ]
+        }]
+    },
+    {
+        "id": "gl_consumable",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Consumable",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "An item with this keyword can only be used once per battle and it is then gone.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_critical",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"},
+            {"tag_name": "category", "val": "weapon"}
+        ],
+        "name": "Critical",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "When attacking with a weapon with this keyword, add +1 DICE to any injury rolls the weapon causes if you roll a Critical (i.e. 12+) on the Action Success Chart.",
+            "subcontent":   [],
+            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+        }]
+    },
+    {
+        "id": "gl_elite",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Elite",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "The most senior and heroic models of the warband. They have different rules for experience and advancement, and often enjoy a different weapon, armour and equipment selection.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_fear",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Fear",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Enemies of models with this Keyword suffer -1 DICE in Melee combat against this model. Some units are immune to this effect. Models that cause FEAR are not affected by FEAR themselves.",
+            "subcontent":   [],
+            "glossary": [
+                    {"val": "-1 DICE", "id": "gl_minusdice"}
+                ]
+        }]
+    },
+    {
+        "id": "gl_fire",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Fire",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Damage by this weapon is due to fire. This weapon causes an extra +1 BLOOD MARKER when it hits enemies, even if the damage is otherwise negated by armour or other circumstances.",
+            "subcontent":   [],
+            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+        }]
+    },
+    {
+        "id": "gl_fireteam",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Fireteam",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without your opponent getting their turn in between. They can take their ACTIONS in any order between them as they wish. Note that if either member of the Fireteam fails in a RISKY ACTION, it ends both Activations.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "ACTIONS", "id": "gl_action"},
+                {"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+        }]
+    },
+    {
+        "id": "gl_gas",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Gas",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "These weapons damage lungs so they cause an extra +1 BLOOD MARKER due to toxic fumes, even if the damage is otherwise negated by armour. Some equipment specifically protects against this type of damage. Troops equipped with Gas Masks will be immune to such weapons and will suffer no damage from them under any circumstances.",
+            "subcontent":   [],
+            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+        }]
+    },
+    {
+        "id": "gl_grenade",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"},
+            {"tag_name": "category", "val": "weapon"}
+        ],
+        "name": "Grenade",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Grenade-type weapons ignore penalties for cover and long range. They do not count towards the number of missile weapons a model can carry and do not have to be held in your hand at all times. A model armed with grenades can use them as many times as they wish.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_heavy",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Heavy",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "If carrying a weapon, armour or equipment with this Keyword, the model cannot move/dash and shoot during its Activation, and the model cannot roll D6 and add it to the Charge move. Only one such item can be carried by a single model.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_heretic",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "Heretic",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the Heretic Legion faction.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
+        "id": "gl_infiltrator",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Infiltrator",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": " Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword.",
+            "subcontent":   [],
+            "glossary": [
+                ]
+        }]
+    },
+    {
+        "id": "gl_newantioch",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "New Antioch",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the New Antioch faction.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
+        "id": "gl_pilgrim",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "Pilgrim",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the Pilgrim faction.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
+        "id": "gl_limit",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Limit (X)",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "You can only purchase as many of this piece of equipment/weapon/armour as indicated by the number in parenthesis for your Warband. If you find more via looting/exploration, you can break this limit.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_riskyaction",
         "type": "Glossary",
         "source": "core",
         "tags": [
             {"tag_name": "category", "val": "general"}
         ],
-        "name": "[D]",
+        "name": "Risky Action",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "The damage die of your character, typically based on your Class. Roll that die when you see this symbol.",
-            "subcontent":   []
+            "content": "Covers attacking with Melee and Ranged Weapons, Dashing and any other activity where the player must roll on the Action Success Chart to make an Action. This roll can be modified by the opposing player by using BLOOD MARKERS. Each marker causes -1 DICE penalty to the roll.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "ACTION", "id": "gl_action"}
+            ]
         }]
     },
     {
-        "id": "gl_fray",
+        "id": "gl_shrapnel",
         "type": "Glossary",
         "source": "core",
         "tags": [
-            {"tag_name": "category", "val": "general"}
+            {"tag_name": "category", "val": "equipment"}
         ],
-        "name": "Fray",
+        "name": "Shrapnel",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Fixed damage, typically based on your Class. Usually added to all attacks on hit or miss.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_shove",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "general"}
-        ],
-        "name": "Shove",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Move a character involuntarily X spaces in a straight line away from you. If they would move into another character’s space, an object, or into a higher elevation space, they collide and stop moving.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_overdrive",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "triggeredeffect"}
-        ],
-        "name": "Overdrive",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A triggered effect that activates at round 3+.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_dazed",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "status"}
-        ],
-        "name": "Dazed",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Gain +1 curse on attacks.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_impact",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "triggeredeffect"}
-        ],
-        "name": "Dazed",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A triggered effect that activates when the model causes a target to collide.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_closeblast",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "areaeffect"}
-        ],
-        "name": "Close Blast",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A blast where at least one space of the area effect is adjacent to the character using the model.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_blast",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "areaeffect"}
-        ],
-        "name": "Blast",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A large area in range. There are three blast templates, small, medium, and large. The origin space and the attack space (if there is one) is the central space.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_dash",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "movement"}
-        ],
-        "name": "Dash",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Special movement that ignores engagement.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_stance",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "ongoing"}
-        ],
-        "name": "Stance",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "An ongoing, positive effect. A character can only have one stance active at a time and can drop a stance by taking a new stance or as a free action at the start of their turn. When a stance refreshes, regain its effects.",
-            "subcontent":   []
-        }]
-    },
-    {
-        "id": "gl_interrupt",
-        "type": "Glossary",
-        "source": "core",
-        "tags": [
-            {"tag_name": "category", "val": "general"}
-        ],
-        "name": "Interrupt",
-        "description":  [{
-            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Some models give you interrupts, which are models that trigger under certain circumstances and ‘interrupt’ whatever is going on. Each interrupt can only be used a certain number of times a round, and you can only use one interrupt on any turn (either your own or another characters). You may also use interrupts before, after, or in the middle of any action, even off your turn, if you have them.",
-            "subcontent":   []
+            "content": "These weapons cause damage via an explosion of shrapnel, so they always cause an extra +1 BLOOD MARKER due to fragments hitting the target, even if the damage is otherwise negated by armour or other means. Wearing a helmet negates this extra marker.",
+            "subcontent":   [],
+            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
         }]
     }
 ]
