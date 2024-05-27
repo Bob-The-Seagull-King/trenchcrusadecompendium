@@ -111,8 +111,8 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>TAGS</h3></div>
-                                <div className="subltenotetext">{"You can specify tag's value in the text box. Leave blank to find all of that tag."}
+                                <div className="separator"><h3>STATISTICS</h3></div>
+                                <div className="subltenotetext">{"You can specify stat's value in the text box. Leave blank to find all of that stat."}
                                 </div>
                                 <div className='toppad'></div>
                                 <div className="row">
