@@ -198,7 +198,7 @@
         "limit": "0-1",
         "faction_id": "fc_hereticlegion",
         "variant_id": "fv_basic",
-        "name": "",
+        "name": "War Wolf Assault Beast",
         "attachments": [
             {"tag_name": "addons", "val": "ab_wolftough"},
             {"tag_name": "addons", "val": "ab_lopingdash"},
