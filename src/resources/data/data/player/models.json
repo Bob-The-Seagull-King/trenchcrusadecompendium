@@ -16,7 +16,7 @@
         "armour": "0",
         "base": "32",
         "faction_id": "fc_hereticlegion",
-        "variant_id": "fv_base",
+        "variant_id": "fv_basic",
         "name": "Heretic Priest",
         "attachments": [
                         {"tag_name": "addons", "val": "ab_puppetmaster"},
@@ -34,6 +34,48 @@
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
                             "content": "ab_tough"
                         }]
+
+    },
+    {
+        "id": "md_hereticdeathcommando",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "infiltrator", "val": ""}
+                ],
+        "cost": 90,
+        "cost_id": "Ducats",
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Heretic Death Commando",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_infiltrator"},
+            {"tag_name": "addons", "val": "ab_stealthgenerator"},
+            {"tag_name": "addons", "val": "ab_hide"}
+                    ],
+        "blurb": "https://trenchcompendium.netlify.app/compendium/models/",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Death Commando can be equipped with any melee weapon, armour or equipment from the Heretic Legion Equipment List. The only ranged weapon they can buy is a silenced pistol."
+                        }],
+        "abilities":  [{
+                        "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                        "content": "ab_infiltrator"
+                    },{
+                        "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                        "content": "ab_stealthgenerator"
+                    },{
+                        "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                        "content": "ab_hide"
+                    }
+                ]
 
     }
 ]

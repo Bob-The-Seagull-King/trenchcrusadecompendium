@@ -12,7 +12,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Select a target model within 12” of the Priest, friend or foe (including the Priest). As a RISKY ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model, or leave Combat (all the usual rules apply)."
+                            "content": "Select a target model within 12” of the Priest, friend or foe (including the Priest). As a RISKY ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model, or leave Combat (all the usual rules apply).",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
     },
@@ -29,7 +30,62 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Demonic vitality makes the Heretic Priests very difficult to slay. They are subject to the rules for TOUGH creatures."
+                            "content": "Demonic vitality makes the Heretic Priests very difficult to slay. They are subject to the rules for TOUGH creatures.",
+                            "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_infiltrator",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticdeathcommando",
+        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "A Death Commando can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_stealthgenerator",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticdeathcommando",
+        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
+        "name": "Stealth Generator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Ranged attacks against a Death Commando suffer -1 DICE to all the attack rolls.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_hide",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticdeathcommando",
+        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
+        "name": "Hide",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "As a RISKY ACTION the Commando can hide if any piece of scenery the model is touching can block line of sight to any direction, even partially. If successful, enemies cannot charge or target the Commando with a ranged attack, though blast radius weapons can still hit them if aimed at a different target and the Commando is within the blast radius. If after hiding the Death Commando moves in any way, charges or shoots, this effect is cancelled and the enemies can target the Commando as standard.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
     }
