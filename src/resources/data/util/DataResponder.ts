@@ -119,7 +119,7 @@ class DataResponder {
         for (i = 0; i < dataSet.length; i++) {
             const data = dataSet[i];
             const dynamicKey = request.id as keyof (typeof data);
-            if (!valueSet.includes(data[dynamicKey])) {
+            if ((data[dynamicKey] != undefined) && (data[dynamicKey] != "") && (!valueSet.includes(data[dynamicKey]))) {
                 valueSet.push(data[dynamicKey])
             }
         }

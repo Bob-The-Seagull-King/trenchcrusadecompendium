@@ -54,7 +54,7 @@ export function getColour(name: string){
     const red = ["red","fc_hereticlegion","fc_blackgrail"];
     const green = ["green"];
     const blue = ["blue"];
-    const purple = ["Purple", "purple"];
+    const purple = ["purple", "Purple"];
 
     if (yellow.includes(name.toLowerCase())) {
         return yellow[0];
@@ -124,6 +124,10 @@ export function getTagValue(tag:any, value:string) {
 export function getRouteName(_route: string) {
     if (_route.includes("compendium/models")) {
         return "Models"
+    }
+
+    if (_route.includes("compendium/equipment")) {
+        return "Equipment"
     }
 
     if (_route.includes("tools/content")) {

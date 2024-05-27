@@ -35,7 +35,6 @@ class ContentPackManager {
     }
 
     private ValidateFileData(_content : string) {
-        console.log("sdhasjkhdkasj")
 
         const TestPack = (JSON.parse(_content) as IContentPack)
 
@@ -67,7 +66,6 @@ class ContentPackManager {
             }
         }
 
-        console.log(IDArray);
         let x = 0;
         for (x = 0; x < this.PackList.length; x++) {
             

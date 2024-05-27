@@ -10,7 +10,8 @@ import { AllModelsListPage } from  '../../classes/viewmodel/pages/AllModelsListP
 import logo from '../../resources/images/trenchcrusade_logo.png'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFistRaised } from '@fortawesome/free-solid-svg-icons'
+import { faShapes } from '@fortawesome/free-solid-svg-icons'
+import { faPersonRifle } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
@@ -34,16 +35,22 @@ const HomeRoute: React.FC = () => {
                     <div className="row">
                         <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Compendium</h3></div>
                     </div>
-                    <div className="row">
-                        <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                             <div className="col">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/models/")}>
-                                    <FontAwesomeIcon icon={faFistRaised} className="pageaccestext"/>
+                                    <FontAwesomeIcon icon={faShapes} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         MODELS
                                     </h1>
                                 </div>
                             </div>
+                            <div className="col">
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/equipment/")}>
+                                    <FontAwesomeIcon icon={faPersonRifle} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        EQUIPMENT
+                                    </h1>
+                                </div>
                         </div>
                     </div>
                     <div className="row">

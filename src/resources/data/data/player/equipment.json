@@ -77,7 +77,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "ASSAULT", "val": ""}
+                {"tag_name": "Assault", "val": ""}
                 ],
         "category": "ranged",
         "name": "Silenced Pistol",
@@ -875,8 +875,8 @@
         "source": "core",
         "tags": [
                 ],
-        "category": "",
-        "name": "",
+        "category": "equipment",
+        "name": "Infernal Brand Mark",
         "equip_type": null,
         "range": null,
         "blurb": "A Heretic who has made a Holy Pilgrimage into Hell itself is branded by their patron devil with an ever-burning mark. Mortal fire no longer has the power to harm them.",
