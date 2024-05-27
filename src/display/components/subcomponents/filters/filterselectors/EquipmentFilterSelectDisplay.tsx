@@ -74,7 +74,7 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                 }
             </div>
 
-            <Modal onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" size="xl" onHide={handleClose} keyboard={true}  centered>
+            <Modal show={show}  contentClassName="filterboxStructure" dialogClassName="" size="xl" onHide={handleClose} keyboard={true}  centered>
                 
                             <h1 className={'titleShape titlepurple'}>Select Filters</h1>
                             <Modal.Body >

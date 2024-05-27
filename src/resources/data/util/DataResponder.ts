@@ -222,13 +222,18 @@ class DataResponder {
      * @returns boolean if the data object matches the search term
      */
     public static ValidateBySearch(term: IDataRequestSearchTerm, data: any) {
+        console.log(term)
         if (!term.istag) {
             const dynamicKey = term.item as keyof (typeof data);
             let isvalid = false;
-            if (term.strict) {
-                isvalid = data[dynamicKey].toString().toLowerCase() == term.value.toString().toLowerCase()
+            if (data[dynamicKey] != null) {
+                if (term.strict) {
+                    isvalid = data[dynamicKey].toString().toLowerCase() == term.value.toString().toLowerCase()
+                } else {
+                    isvalid = data[dynamicKey].toString().toLowerCase().includes(term.value.toString().toLowerCase())
+                }
             } else {
-                isvalid = data[dynamicKey].toString().toLowerCase().includes(term.value.toString().toLowerCase())
+                isvalid = false;
             }
             if (term.equals) {
                 return (isvalid)
