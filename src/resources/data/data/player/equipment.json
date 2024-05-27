@@ -719,6 +719,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Shrapnel", "val": ""}
                 ],
         "category": "equipment",
         "name": "Combat Helmet",
@@ -745,6 +746,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Gas", "val": ""}
                 ],
         "category": "equipment",
         "name": "Gas Mask",
@@ -771,6 +773,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Consumable", "val": ""}
                 ],
         "category": "equipment",
         "name": "Unholy Trinket",
@@ -797,6 +800,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Fear", "val": ""}
                 ],
         "category": "equipment",
         "name": "Unholy Relic",
@@ -823,6 +827,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Fire", "val": ""},
+            {"tag_name": "Consumable", "val": ""}
                 ],
         "category": "equipment",
         "name": "Incendiary Bullets",
@@ -874,6 +880,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Fire", "val": ""}
                 ],
         "category": "equipment",
         "name": "Infernal Brand Mark",
@@ -926,6 +933,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Fire", "val": ""}
                 ],
         "category": "equipment",
         "name": "Hellbound Soul Contract",
