@@ -20,6 +20,7 @@ export function ConvertFiltersToRequest(manager: FilterManager, _type: string, _
     const filtertext = manager.ReturnActiveTextFilters();
     const filtertag = manager.ReturnActiveTagFilters();
     const filtermisc = manager.ReturnActiveMiscFilters();
+    const filterstat = manager.ReturnActiveStatFilters();
     const ungroupedfilters = filtermisc.filter((value) => (!_groups.includes(value.Group)))
 
     let i = 0;
@@ -39,7 +40,6 @@ export function ConvertFiltersToRequest(manager: FilterManager, _type: string, _
     
     // Create filters for each tag item
     for (i = 0; i < filtertag.length; i++) {
-        console.log(filtertag[i])
         const jsontemp =    {             
                                 item: "tags",
                                 value: filtertag[i].Name,
@@ -47,6 +47,18 @@ export function ConvertFiltersToRequest(manager: FilterManager, _type: string, _
                                 strict: true,
                                 istag: true,
                                 tagvalue: ""
+                            }
+        filterSet.push(jsontemp);
+    }
+
+    // Create filters for each stat item
+    for (i = 0; i < filterstat.length; i++) {
+        const jsontemp =    {             
+                                item: filterstat[i].TagType.Name,
+                                value: filterstat[i].TagVal.Val,
+                                equals: filterstat[i].TagType.DoInclude,
+                                strict: filterstat[i].TagVal.IsStrict,
+                                istag: false
                             }
         filterSet.push(jsontemp);
     }

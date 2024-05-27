@@ -20,6 +20,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
     const [_activetextfilters, returnactivetext] = useState(FilterManager.ReturnActiveTextFilters());
     const [_activetagfilters, returnactivetag] = useState(FilterManager.ReturnActiveTagFilters());
     const [_activemiscfilters, returnactivemisc] = useState(FilterManager.ReturnActiveMiscFilters());
+    const [_activestatfilters, returnactivestat] = useState(FilterManager.ReturnActiveStatFilters());
     const [_keyval, updatekey] = useState(1);
 
     const [show, setShow] = useState(false);
@@ -35,6 +36,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
         returnactivetext(FilterManager.ReturnActiveTextFilters())
         returnactivetag(FilterManager.ReturnActiveTagFilters())
         returnactivemisc(FilterManager.ReturnActiveMiscFilters())
+        returnactivestat(FilterManager.ReturnActiveStatFilters())
         updatekey(_keyval+1)
     }
     
@@ -42,12 +44,12 @@ const ModelFilterSelectDisplay = (prop: any) => {
     return (
         <>
             <div onClick={() => handleShow()}className='bordermainpurple roundBody hovermouse'>
-                {((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) ) &&
+                {((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) && (_activestatfilters.length == 0) ) &&
                     <div className="">
                             <h1 className="subtletext">No Filters Selected</h1>
                     </div>
                 }
-                {!((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) ) &&
+                {!((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) && (_activestatfilters.length == 0) ) &&
                     <div className="row">
                         
                         <div style={{paddingLeft: "2em", paddingRight: "2em", paddingTop: "1em", paddingBottom: "0.5em"}}>
@@ -62,6 +64,9 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                 ))}
                             {_activemiscfilters.map((item) => (
                                     <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} title={item.Group} state={item.DoInclude? "positive" : "negative" } value={item.Name}/>
+                                ))}
+                            {_activestatfilters.map((item) => (
+                                    <FilterDisplay key={"tag"+item.TagType.Name+(_keyval.toString())} title={item.TagType.Name} state={item.TagType.DoInclude? "positive" : "negative" } value={item.TagVal.Val}/>
                                 ))}
                         </div>
                         <div className='toppad'></div>
@@ -106,54 +111,15 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sx-2 row-cols-xs-1 row-cols-1">
-                                    <div className="col">
-                                        <div className="separator"><h3>COST</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "cost")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="separator"><h3>BASE</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "base")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="separator"><h3>ARMOUR</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "armour")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="separator"><h3>MOVEMENT</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "movement")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="separator"><h3>RANGED</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "ranged")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="col">
-                                        <div className="separator"><h3>MELEE</h3></div>
-                                        <div className='filterbox centerPosition'>
-                                            {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "melee")).map((item) => (
-                                                <FilterItemItem key={"misclass"+item.Name} data={item} />
-                                            ))}
-                                        </div>
+                                <div className="separator"><h3>TAGS</h3></div>
+                                <div className="subltenotetext">{"You can specify tag's value in the text box. Leave blank to find all of that tag."}
+                                </div>
+                                <div className='toppad'></div>
+                                <div className="row">
+                                    <div className="filterbox centerPosition">
+                                        {FilterManager.ReturnStatFilters().map((item) => (
+                                            <FilterTagItem key={"tag"+item.TagType.Name} data={item}/>
+                                        ))}
                                     </div>
                                 </div>
                                 <div className="separator"><h3>SOURCES</h3></div>

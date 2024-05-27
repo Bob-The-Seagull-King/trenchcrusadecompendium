@@ -14,6 +14,7 @@ class ModelsFilterManager extends FilterManager {
         this.TextOptions = [new FilterText({group: "name", val: "", isstrict: false})]
         this.TagOptions = this.FindTags();
         this.MiscOptions = this.FindMisc();
+        this.StatOptions = this.FindStat();
     }
 
     /**
@@ -35,6 +36,49 @@ class ModelsFilterManager extends FilterManager {
         return tempTags;
     }
 
+    FindStat() {
+        const tempMisc: FilterTag[] = []
+        
+        let tempItemObject: IFilterItem = { group: "stat", isactive: false, doinclude: false, name: "cost"}
+        let tempItemVal: IFilterText = {val: "", isstrict: true, group: "cost"};
+        let tempItemFull: IFilterTag = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        let tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);    
+        
+        tempItemObject = { group: "stat", isactive: false, doinclude: false, name: "movement"}
+        tempItemVal = {val: "", isstrict: true, group: "movement"};
+        tempItemFull = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);   
+        
+        tempItemObject = { group: "stat", isactive: false, doinclude: false, name: "base"}
+        tempItemVal = {val: "", isstrict: true, group: "base"};
+        tempItemFull = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);   
+        
+        tempItemObject = { group: "stat", isactive: false, doinclude: false, name: "armour"}
+        tempItemVal = {val: "", isstrict: true, group: "armour"};
+        tempItemFull = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);   
+        
+        tempItemObject = { group: "stat", isactive: false, doinclude: false, name: "ranged"}
+        tempItemVal = {val: "", isstrict: true, group: "ranged"};
+        tempItemFull = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);   
+        
+        tempItemObject = { group: "stat", isactive: false, doinclude: false, name: "melee"}
+        tempItemVal = {val: "", isstrict: true, group: "melee"};
+        tempItemFull = {tagtype: tempItemObject, tagval: tempItemVal, group: "stat"}
+        tempItemConstructed = new FilterTag(tempItemFull);
+        tempMisc.push(tempItemConstructed);        
+
+        return tempMisc;
+
+    }
+
     /**
      * Gathers all values of a given key type in
      * the models json data file, with the key
@@ -43,7 +87,7 @@ class ModelsFilterManager extends FilterManager {
      */
     FindMisc() {
         const tempMisc: FilterItem[] = []
-        const keytypes = ["source", "faction_id", "variant_id", "cost", "movement","armour","melee","ranged","base","cost_id"]
+        const keytypes = ["source", "faction_id", "variant_id"]
         keytypes.sort();
 
         let i = 0;
