@@ -1,0 +1,617 @@
+[
+    {
+        "id": "eq_boltactionrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Bolt Action Rifle",
+        "equip_type": "2-Handed",
+        "range": "24\"",
+        "blurb": "The workhorse of the Great War. Sturdy, highly reliable and reasonably accurate, it is no surprise that most of the infantry of the Great War carry this battlefield classic.",
+        "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_semiautomaticrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Semi-Automatic Rifle",
+        "equip_type": "2-Handed",
+        "range": "24\"",
+        "blurb": "Semi-automatic rifles are said to be an invention of Marbas, the Devil who holds great wisdom and knowledge in mechanical arts. They are excellent both at long range and in assault, combining accuracy and high rate of fire, though they are prone to jamming",
+        "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_automaticrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Automatic Rifle",
+        "equip_type": "2-Handed",
+        "range": "24\"",
+        "blurb": "A marvel of modern engineering, only a few prototypes of this weapon exist. It has a high rate of fire and can be quickly re-loaded",
+        "modifiers": [],
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                            "content": "Rule:",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                    "content": "A model armed with an Automatic Rifle can make two attack ACTIONS instead of one. Both attacks must be against the same target.",
+                                    "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                                }
+                            ]
+                        }
+                        ]
+    },
+    {
+        "id": "eq_pistol",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Off-Hand", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Pistol",
+        "equip_type": "1-Handed",
+        "range": "12\"/Melee",
+        "blurb": "Pistols come in a staggering variety, ranging from revolvers to semi-automatic pistols. Heretic forges produce their own, often highly elaborate sidearms. They see extensive use in close-quarter combat.",
+        "modifiers": [],
+        "description":  []
+    },
+    {
+        "id": "eq_silencedpistol",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "ASSAULT", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Silenced Pistol",
+        "equip_type": "1-Handed",
+        "range": "12\"/Melee",
+        "blurb": "A sophisticated sidearm made of Orichalcum or other holy metals, or from Infernal iron taken from the very prisons of Hell to muffle the wails of the damned. It is virtually silent and is excellent for ambushes or for shooting from behind cover.",
+        "modifiers": ["+1D to Hit in Cover"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model armed with a silenced pistol can use it in melee as well as ranged combat, including as an off-hand weapon to execute an additional melee attack. Add +1 DICE to hit rolls if shot from behind any terrain obstacles.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_grenades",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""},
+            {"tag_name": "Shrapnel", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Grenades",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "Grenades or hand bombs are a staple of trench warfare. Grenades can kill the enemy underground or behind cover. They can also force the enemy into the open, providing targets for rifle and machine gun fire.",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Grenades have a blast radius of 2” – all models within this blast radius are hit."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_gasgrenades",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""},
+            {"tag_name": "Gas", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Gas Grenades",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "Gas Grenades are insidious weapons, attacking the lungs and other internal organs with noxious fumes. Devil Alchemists of the 5th Circle are especially clever in creating these fiendish and hated weapons.",
+        "modifiers": ["-1D to Injury"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. Gas Grenades hit all enemies within 3” of a target they hit.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_incendiarygrenades",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""},
+            {"tag_name": "Fire", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Incendiary Grenades",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "Incendiary grenades can set their target alight with sulphur, phosphorous or flammable gas captured from the Lake of Fire in the 7th Circle of Hell.",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Incendiary Grenades ignore all penalties for terrain/cover."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_submachinegun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Submachine Gun",
+        "equip_type": "2-Handed",
+        "range": "16\"",
+        "blurb": "The submachine gun (or SMG) is a fully automatic firearm, trading lower penetration power and range for a much higher rate of fire. Ideal for short-range engagements, it is much sought-after by warbands despite its scarcity and high cost.",
+        "modifiers": ["2 Attacks"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Can make two attack ACTIONS instead of one. These can be against a single target or two separate ones.",
+                                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_shotgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Shotgun",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "Short-barrelled pump action shotgun loaded with six rounds containing antimony hardened 00 buckshot, the combat shotgun is ideal for short-range engagements, clearing trenches and taking out lightly-armoured infantry. Often featuring stocks made of walnut or other rare wood, it is a custom of the troops to decorate these arms with carvings and inscriptions",
+        "modifiers": ["+1D to Hit"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_automaticshotgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Automatic Shotgun",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "This shotgun is equipped with an auto-loader, a recent invention by the Prussian engineering corps of Königsberg. It is ideal for close quarter combat thanks to its high rate of power and accuracy. The technology has not been perfected, however, and sometimes leads to misfeeds and jams.",
+        "modifiers": ["+1D to Hit"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_grenadelauncher",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Shrapnel", "val": ""},
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Grenade Launcher",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "Modifications of great siege rifles designed to lob grenades over long distances.",
+        "modifiers": ["Ignore Cover"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Ignores all penalties for cover. This weapon has a blast radius of 3” – all enemies within this range are hit."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_machinegun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Machine Gun",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "Machine Guns are lethal fully-automatic firearms, capable of mowing down entire ranks of infantry from afar. The firing rate depends on the lock assembly used but averages 500 rounds per minute.",
+        "modifiers": ["3 Attacks"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Machine Guns can make three Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have.",
+                                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_flamethrower",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Fire", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Flamethrower",
+        "equip_type": "2-Handed",
+        "range": "8\"",
+        "blurb": "A flamethrower is a terrifying weapon capable of projecting great streams of fire and flammable liquids at a distance. It is ideal for clearing bunkers, trenches and other fortifications, killing in a most horrific way. Consequently, it is greatly favoured by the Heretic forces.",
+        "modifiers": ["-1D Injuries"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A Flamethrower hits one model within range automatically with its attack ACTION, ignoring armour. Injuries caused by a Flamethrower are rolled with an additional -1 DICE. It also has the Keyword FIRE, so it causes an additional +1 BLOOD MARKER on enemies it hits.",
+                                        "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_heavyflamethrower",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Fire", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Heavy Flamethrower",
+        "equip_type": "2-Handed",
+        "range": "10\"",
+        "blurb": "These massive flamethrowers are normally mounted on armoured vehicles, but those possessing uncanny strength may use them as infantry weapons.",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Hits up to two models within range automatically with an Attack Action as long as they are within 6” of each other. Ignores armour. It also has the Keyword FIRE, so it causes an additional +1 BLOOD MARKER on enemies it hits, even if no other damage is caused.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_antimaterialrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Anti-Material Rifle",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "Enormous long rifles designed to take out heavily armoured targets, vehicles and strongpoints. With the powerful armour available to the armies of the Great war, these terrifying weapons are much in demand. A downside is their enormous weight and terrifying recoil, and thus they are most often used by Communicants or Anointed who possess the supernatural strength to wield such weapons.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Ignores armour. Add +1 DICE when rolling on the Injury Chart.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "", "val": ""}
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": "",
+        "range": "X\"",
+        "blurb": "",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "",
+                                        "glossary": [{"val": "", "id": ""}]
+                                    }
+                                ]
+                            }
+                        ]
+    }
+]
