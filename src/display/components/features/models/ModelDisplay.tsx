@@ -94,7 +94,7 @@ const ModelDisplay = (props: any) => {
                 </div>
                 <div className="verticalspacer"/>
                 <div>
-                    <i>{ModelObject.Blurb || ""}</i>
+                    <i><p dangerouslySetInnerHTML={{__html: (ModelObject.Blurb)}}></p></i>
                 </div> 
                 <div className="verticalspacer"/> 
                 <div>

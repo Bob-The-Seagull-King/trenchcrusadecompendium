@@ -88,5 +88,149 @@
                             "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
+    },
+    {
+        "id": "ab_unholyhymns",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticchorister",
+        "parent_id": {"tag_name": "model", "val": "md_hereticchorister"},
+        "name": "Unholy Hymns",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "All enemy models within 8” of the Chorister suffer an additional -1 DICE for all ACTIONS they attempt.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTION", "id": "gl_action"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_unholyhorror",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticchorister",
+        "parent_id": {"tag_name": "model", "val": "md_hereticchorister"},
+        "name": "Unholy Horror",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Chorister causes FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_strong",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_anointedheavyinfantry",
+        "parent_id": {"tag_name": "model", "val": "md_anointedheavyinfantry"},
+        "name": "Strong",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Heretic Heavy Infantry ignores the effect of the Keyword HEAVY on any weapon they wield.",
+                            "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_wolftough",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_warwolfassaultbeast",
+        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
+        "name": "Tough",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "War Wolves are huge creatures with unnatural vitality and are subject to the rules for TOUGH creatures.",
+                            "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_lopingdash",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_warwolfassaultbeast",
+        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
+        "name": "Loping Dash",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "A War Wolf may take its Dash ACTION with +2 DICE. The War Wolf ignores difficult terrain penalties.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_terrifyingwolf",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_warwolfassaultbeast",
+        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
+        "name": "Terrifying",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "A War Wolf is a blasphemous creation of Hell and causes FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_chainmaw",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_warwolfassaultbeast",
+        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
+        "name": "Chainmaw",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The War Wolf can attack any enemy with its Chainsaw Mouth in melee combat - this is a RISKY ACTION with +3 DICE. The attack ignores any armour worn by the target. Roll any injuries with +1 DICE.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_shreddingclaws",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_warwolfassaultbeast",
+        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
+        "name": "Shredding Claws",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": " The War Wolf can take a Melee combat attack as an ACTION with +1 DICE to hit. Roll any injuries with +1 DICE.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
     }
 ]

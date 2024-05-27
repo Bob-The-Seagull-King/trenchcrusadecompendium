@@ -79,5 +79,191 @@
                     }
                 ]
 
+    },
+    {
+        "id": "md_hereticchorister",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "fear", "val": ""}
+                ],
+        "cost": 65,
+        "cost_id": "Ducats",
+        "movement": "6\"",
+        "ranged": "-2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "limit": "0-1",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Heretic Chorister",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_unholyhymns"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": "Suicide is a Mortal Sin, and sacrificing yourself to the glory of Hell is a yet greater affront to God. Some Heretics born with a gift of sonorous voice but little prospects of rising through the ranks but possessing a determination to excel may pursue the dark path of becoming a Chorister.<br/>Such supplicants go to one of the black altars of Heretic abodes at the bottom of the deep inverted pyramid temples dedicated to the greatest of Arch-devils. There they are dressed in the robes of dark devotion, lie on the altar and mutilate themselves to death by carving unholy runes into their flesh. The more wounds they can suffer before perishing, the more pleasing it is said their offering is. The most devout slice their own throats, trying to cut as deep as they can before their miserable life leaves them.<br/>Most such wretches go to their doom in the Lake of Fire, but some are reborn as Choristers after nine days. Their corpses lurch back to their feet, and finish their grisly beheading, and lift their severed heads that begin to sing hymns they have learned in the Inferno. From their self-inflicted wounds spurts cold blood that forms diabolic symbols and changes to match the words of their unholy chorale. They head towards the front lines driven by a call no living can hear and join the Heretic warband of their choosing.<br/>As their severed heads sing their agonising hymns, the minds of their enemies are filledwith visions from the Pits of Hell, weakening both the resolve and strength of thoseunfortunate enough to hear the dire song of a Chorister. Their hymns are often the firstthing a fresh recruit experiences on the battlefield, as their unholy voice rolls across thetrenches, proclaiming a never-ending prophecy of the final victory of Hell over Heaven.",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Chorister uses the Heretic Legion weapons and equipment list."
+                        }],
+        "abilities":  [{
+            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+            "content": "ab_unholyhymns"
+        },{
+            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+            "content": "ab_unholyhorror"
+        }]
+
+    },
+    {
+        "id": "md_heretictrooper",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                    {"tag_name": "heretic", "val": ""}
+                ],
+        "cost": 30,
+        "cost_id": "Ducats",
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "limit": "",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Heretic Trooper",
+        "attachments": [
+                    ],
+        "blurb": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity.",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }],
+        "abilities":  []
+
+    },
+    {
+        "id": "md_anointedheavyinfantry",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "cost": 95,
+        "cost_id": "Ducats",
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "-2",
+        "base": "32",
+        "limit": "0-5",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Anointed Heavy Infantry",
+        "attachments": [
+                        {"tag_name": "addons", "val": "ab_strong"}
+                    ],
+        "blurb": "Heavily armed and armoured assault troops. Their skin is burned and blistering from their ordained pilgrimages to Hell and back",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Anointed are always equipped with a suit of Heavy Armour and Infernal brand mark which are included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_strong"
+                        }]
+
+    },
+    {
+        "id": "md_warwolfassaultbeast",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "cost": 140,
+        "cost_id": "Ducats",
+        "movement": "8\"",
+        "ranged": "",
+        "melee": "+3/+1",
+        "armour": "-3",
+        "base": "50",
+        "limit": "0-1",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_wolftough"},
+            {"tag_name": "addons", "val": "ab_lopingdash"},
+            {"tag_name": "addons", "val": "ab_terrifyingwolf"},
+            {"tag_name": "addons", "val": "ab_chainmaw"},
+            {"tag_name": "addons", "val": "ab_shreddingclaws"}
+                    ],
+        "blurb": "This abomination charges through miles of barbed wire to clear a path for the heretic infantry. Its specially formed head is designed to cut clean through it. War Wolves wear unique armour forged in the factories of hell, as seen by the maker’s marks stamped upon it.",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The War Wolf is encased in nigh-impregnable Tartarus armour reflected in the profile above. In Melee combat the War Wolf can use both the Chainsaw Mouth and Shredding Claws (see below) during the same Activation with no additional penalty for the second attack. You cannot buy any other armour, weapons or equipment for the War Wolf."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_wolftough"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_lopingdash"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_terrifyingwolf"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_chainmaw"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_shreddingclaws"
+                        }]
+
+    },
+    {
+        "id": "",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                    {"tag_name": "", "val": ""}
+                ],
+        "cost": 0,
+        "cost_id": "",
+        "movement": "",
+        "ranged": "",
+        "melee": "",
+        "armour": "",
+        "base": "",
+        "limit": "0-1",
+        "faction_id": "",
+        "variant_id": "",
+        "name": "",
+        "attachments": [
+                        {"tag_name": "addons", "val": ""}
+                    ],
+        "blurb": "",
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": ""
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": ""
+                        }]
+
     }
 ]
