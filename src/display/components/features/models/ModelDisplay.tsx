@@ -29,7 +29,7 @@ const ModelDisplay = (props: any) => {
     function returnStats() {
         return (
             <div>
-                <div className="row row-cols-lg-7 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2">
+                <div className="row row-cols-lg-7 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2 justify-content-center">
                     <ModelStat title={"Cost"} value={ModelObject.Cost.toString() + " " + ModelObject.CostID}/>
                     <ModelStat title={"Base"} value={ModelObject.Base + "mm"}/>
                     <ModelStat title={"Movement"} value={ModelObject.Movement}/>
