@@ -17,6 +17,7 @@ class ModelFactory {
         let i = 0;
         for (i = 0; i < model.Attachments.length; i++) {
             if (model.Attachments[i]["tag_name"] == "addons") {
+                console.log(model.Attachments[i])
                 const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "addons", id: model.Attachments[i]["val"]}}) as IPlayerAddon
                 const addonNew = AddonFactory.CreateAddon(addondata)
                 model.AddAddons(addonNew)

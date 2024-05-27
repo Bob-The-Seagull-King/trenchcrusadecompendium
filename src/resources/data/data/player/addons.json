@@ -232,5 +232,51 @@
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
+    },
+    {
+        "id": "ab_infernalbomb",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_artillerywitch",
+        "parent_id": {"tag_name": "model", "val": "md_artillerywitch"},
+        "name": "Infernal Bomb",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Choose a point on the battlefield that is visible to the Witchand within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, thebomb is off-target and will deviate 1” from your nominated target point for eachdegree of failure of the Ranged Attack ACTION in a direction determined by youropponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). Thedirection is decided by your opponent. Once the landing site of the bomb has beendetermined, it will detonate. Roll once on the Injury Chart for each model that iswithin 3” of where the bomb landed. No to hit roll is needed.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chartand add the dice together! Other models hit by the Bomb roll on the Injury Chartas standard. Any model hit but not taken Out of Action by this attack is blownD3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causesand additional +1 BLOOD MARKER. Cover, range and higher position do notaffect the attacks by the Infernal Bomb. Roll injuries for models in cover/behindintervening terrain with -1 DICE.",
+                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
+                "glossary": []
+            }
+                        ]
+    },
+    {
+        "id": "ab_artificiallife",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_artillerywitch",
+        "parent_id": {"tag_name": "model", "val": "md_artillerywitch"},
+        "name": "Artificial Life",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Artillery Witches are not affected by FEAR and attacks with the Keyword GAS cannot damage them.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"}]
+                        }
+                        ]
     }
 ]

@@ -136,8 +136,7 @@
         "faction_id": "fc_hereticlegion",
         "variant_id": "fv_basic",
         "name": "Heretic Trooper",
-        "attachments": [
-                    ],
+        "attachments": [],
         "blurb": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity.",
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -235,34 +234,39 @@
 
     },
     {
-        "id": "",
+        "id": "md_artillerywitch",
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "", "val": ""}
+                    {"tag_name": "heretic", "val": ""}
                 ],
-        "cost": 0,
-        "cost_id": "",
-        "movement": "",
-        "ranged": "",
-        "melee": "",
-        "armour": "",
-        "base": "",
-        "limit": "0-1",
-        "faction_id": "",
-        "variant_id": "",
-        "name": "",
+        "cost": 90,
+        "cost_id": "Ducats",
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "limit": "0-2",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Artillery Witches",
         "attachments": [
-                        {"tag_name": "addons", "val": ""}
+            {"tag_name": "addons", "val": "ab_infernalbomb"},
+            {"tag_name": "addons", "val": "ab_artificiallife"}
                     ],
-        "blurb": "",
+        "blurb": "Artillery Witches stalk the battlefields, hurling ordnance assembled in the death factories of Hell’s 3rd Circle. They are completely mute and no one has ever seen their faces. Some question if they are even living, and there are tales that they too were manufactured in Hell. They can pull an infinite number of Infernal Bombs from a portal to Hell that they manifest at will. Their infernal explosives appear in their hand from a gate of midnight blackness.",
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": ""
+                            "content": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                            "content": ""
+                            "content": "ab_infernalbomb"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_artificiallife"
                         }]
 
     }
