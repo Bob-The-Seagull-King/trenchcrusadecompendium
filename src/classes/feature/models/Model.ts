@@ -11,7 +11,8 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
     melee: string,
     armour: string,
     base: string,
-    limit: string,
+    limit_min: number,
+    limit_max: number,
     faction_id: string, // Faction of the model
     variant_id: string,
     attachments: [], // List of addons, summons, etc featured in an model
@@ -28,7 +29,8 @@ class PlayerModel extends TrenchCrusadeItem {
     public readonly Melee;
     public readonly Armour;
     public readonly Base;
-    public readonly Limit;
+    public readonly LimitMin;
+    public readonly LimitMax;
     
     public readonly Faction;
     public readonly Variant;
@@ -61,7 +63,8 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Ranged = data.ranged;
         this.Armour = data.armour;
         this.Base = data.base;
-        this.Limit = data.limit;
+        this.LimitMin = data.limit_min;
+        this.LimitMax = data.limit_max;
         //
 
         this.Equipment = this.DescriptionFactory(data.equipment);

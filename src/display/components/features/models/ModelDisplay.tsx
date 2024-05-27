@@ -26,6 +26,21 @@ const ModelDisplay = (props: any) => {
         )
     }
 
+    function calcLimits() {
+        let outputString = "N/A"
+
+        if (ModelObject.LimitMax == null && ModelObject.LimitMin == null) {
+            outputString = ""
+            return outputString;
+        } else if (ModelObject.LimitMax == ModelObject.LimitMin) {
+            outputString = ModelObject.LimitMax.toString()
+            return outputString;
+        } else {
+            outputString = ModelObject.LimitMin.toString() + " - " + ModelObject.LimitMax.toString();
+            return outputString;
+        }
+    }
+
     function returnStats() {
         return (
             <div>
@@ -36,7 +51,7 @@ const ModelDisplay = (props: any) => {
                     <ModelStat title={"Armour"} value={ModelObject.Armour}/>
                     <ModelStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
                     <ModelStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
-                    <ModelStat title={"Limit"} value={(ModelObject.Limit.length > 0)? ModelObject.Limit : "N/A"}/>
+                    <ModelStat title={"Limit"} value={calcLimits()}/>
                 </div>
             </div>
         )
