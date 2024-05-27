@@ -41,23 +41,23 @@ const ContentPackInformation = (prop: any) => {
                                 
                                 <div className="row textHolder">
                                     <p className="bodytext">
-                                        Content packs are structured JSON files that allow people to make their ICON content accessable in
-                                        ICONpendium. Here, you can add or delete content packs to include them in the ICONpendium. You can
+                                        Content packs are structured JSON files that allow people to make their Trench Crusade content accessable in
+                                        Trench Compendium. Here, you can add or delete content packs to include them in the Trench Compendium. You can
                                         hold up to 5MB of content packs at any given time.
                                     </p>
                                     <p className="bodytext">
-                                        Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the ICONpendium,
+                                        Once uploaded you can activate or deactive a content pack. Deactivating it removes it from the Trench Compendium,
                                         but still keeps the file stored on your browser and can be turned on again at any time.
                                     </p>
-                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Incompatmodel</p></div>
+                                    <div className="separator"><p style={{fontSize:"0.8em"}}>Incombatability</p></div>
                                     <p className="bodytext">
                                         If two pieces of data across your uploaded content packs share the same ID value, this can cause issues
-                                        when searching and constructing information. When this incompatmodel is detected, you will be notified.
+                                        when searching and constructing information. When this incompatability is detected, you will be notified.
                                         and are encouraged to remove the offending content pack.
                                     </p>
                                     <div className="separator"><p style={{fontSize:"0.8em"}}>Custom Packs</p></div>
                                     <p className="bodytext">
-                                        Building your own content pack is easy. View the <a className='homelink' href='https://github.com/Bob-The-Seagull-King/icon-react/blob/main/README.md' rel="noreferrer" target='_blank'>README</a> documentation for the ICONconpendium to learn more
+                                        Building your own content pack is easy. View the <a className='homelink' href='https://github.com/Bob-The-Seagull-King/trenchcrusadecompendium/blob/main/README.md' rel="noreferrer" target='_blank'>README</a> documentation for the Trench Compendium to learn more
                                         about how to structure your content pack, then fill out the information as you need it. Once
                                         everything{"'"}s in order, you{"'"}re good to go!
                                     </p>
