@@ -43,7 +43,7 @@ class ModelsFilterManager extends FilterManager {
      */
     FindMisc() {
         const tempMisc: FilterItem[] = []
-        const keytypes = ["source", "faction_id", "variant_id"]
+        const keytypes = ["source", "faction_id", "variant_id", "cost", "movement","armour","melee","ranged","base","cost_id"]
         keytypes.sort();
 
         let i = 0;

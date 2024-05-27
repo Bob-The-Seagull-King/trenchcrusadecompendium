@@ -8,6 +8,7 @@ import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
 import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import ModelStat from '../../subcomponents/description/ModelStat';
 
 const ModelDisplay = (props: any) => {
     const ModelObject: PlayerModel = props.data
@@ -25,7 +26,20 @@ const ModelDisplay = (props: any) => {
         )
     }
 
-    console.log(ModelObject.Abilities);
+    function returnStats() {
+        return (
+            <div>
+                <div className="row row-cols-lg-6 row-cols-md-3 row-cols-sx-3 row-cols-xs-3 row-cols-3">
+                    <ModelStat title={"Cost"} value={ModelObject.Cost.toString() + " " + ModelObject.CostID}/>
+                    <ModelStat title={"Base"} value={ModelObject.Base + "mm"}/>
+                    <ModelStat title={"Movement"} value={ModelObject.Movement}/>
+                    <ModelStat title={"Armour"} value={ModelObject.Armour}/>
+                    <ModelStat title={"Ranged"} value={ModelObject.Ranged + " DICE"}/>
+                    <ModelStat title={"Melee"} value={ModelObject.Melee + " DICE"}/>
+                </div>
+            </div>
+        )
+    }
 
     function returnAbilities() {
         return (
@@ -85,6 +99,16 @@ const ModelDisplay = (props: any) => {
                 <div>
                     <div className="separator">&#x27E1;</div>
                 </div> 
+                
+                <div className="verticalspacer"/>
+                <div>
+                    {returnStats()}
+                </div>
+                <div className="verticalspacer"/>
+                <div>
+                    <div className="separator">&#x27E1;</div>
+                </div> 
+                
                 <div className="verticalspacer"/>
                 <div>
                     {returnEquipment()}

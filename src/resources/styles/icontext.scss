@@ -332,3 +332,16 @@
   .greenIcon {
     color: $colour_green_main;
   }
+
+  .stattitle {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: $colour_grey_main;
+  }
+
+  .statbody {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }

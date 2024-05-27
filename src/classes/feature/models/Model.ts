@@ -5,7 +5,13 @@ import { PlayerAddon } from '../addons/Addon'
 
 interface IPlayerModel extends ITrenchCrusadeItemData {
     cost: number, // Chapter of the model
-    faction_id: string, // Class of the model (determined by job)
+    cost_id: string,
+    movement: string,
+    ranged: string,
+    melee: string,
+    armour: string,
+    base: string,
+    faction_id: string, // Faction of the model
     variant_id: string,
     attachments: [], // List of addons, summons, etc featured in an model
     blurb: string, // Flavour text
@@ -15,6 +21,13 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
 
 class PlayerModel extends TrenchCrusadeItem {
     public readonly Cost;
+    public readonly CostID;
+    public readonly Movement;
+    public readonly Ranged;
+    public readonly Melee;
+    public readonly Armour;
+    public readonly Base;
+    
     public readonly Faction;
     public readonly Variant;
     public readonly Attachments;
@@ -34,10 +47,20 @@ class PlayerModel extends TrenchCrusadeItem {
         super(data)
         this.ItemType = ItemType.Model;
         this.Variant = data.variant_id;
-        this.Cost = data.cost;
         this.Faction = data.faction_id;
         this.Attachments = data.attachments;
         this.Blurb = data.blurb;
+
+        // Stats
+        this.Cost = data.cost;
+        this.CostID = data.cost_id;
+        this.Movement = data.movement;
+        this.Melee = data.melee;
+        this.Ranged = data.ranged;
+        this.Armour = data.armour;
+        this.Base = data.base;
+        //
+
         this.Equipment = this.DescriptionFactory(data.equipment);
         this.Abilities = this.DescriptionFactory(data.abilities);
     }

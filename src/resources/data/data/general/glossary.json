@@ -350,7 +350,7 @@
         "name": "Risky Action",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Covers attacking with Melee and Ranged Weapons, Dashing and any other activity where the player must roll on the Action Success Chart to make an Action. This roll can be modified by the opposing player by using BLOOD MARKERS. Each marker causes -1 DICE penalty to the roll.",
+            "content": "If you fail your roll on the Action Success Chart when taking this ACTION, the Activation of this model ends immediately.",
             "subcontent":   [],
             "glossary": [
                 {"val": "ACTION", "id": "gl_action"}
@@ -370,6 +370,87 @@
             "content": "These weapons cause damage via an explosion of shrapnel, so they always cause an extra +1 BLOOD MARKER due to fragments hitting the target, even if the damage is otherwise negated by armour or other means. Wearing a helmet negates this extra marker.",
             "subcontent":   [],
             "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+        }]
+    },
+    {
+        "id": "gl_skirmisher",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Skirmisher",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
+            "subcontent":   [],
+            "glossary": []
+        }]
+    },
+    {
+        "id": "gl_stealth",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Stealth",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Enemy ranged attacks suffer -1 DICE against this target.",
+            "subcontent":   [],
+            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+        }]
+    },
+    {
+        "id": "gl_strong",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Strong",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "A model with this Keyword ignores the rules for weapons/armour/equipment with the Keyword HEAVY. A model with the Keyword STRONG may wield a two-handed melee weapon in one hand. In addition, STRONG models can carry one HEAVY Melee weapon and one HEAVY ranged weapon.",
+            "subcontent":   [],
+            "glossary": [
+                    {"val": "HEAVY", "id": "gl_heavy"},
+                    {"val": "HEAVY", "id": "gl_heavy"},
+                    {"val": "HEAVY", "id": "gl_heavy"}
+                ]
+        }]
+    },
+    {
+        "id": "gl_sultanate",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "Sultanate",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the Sultanate faction.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
+        "id": "gl_tough",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Tough",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "TOUGH Creatures treat Out of Action results as Down instead. Once a TOUGH Creature is Down it is treated as any other model when rolling on the Injury Chart and can be taken Out of Action. Once a TOUGH creature suffers an Out of Action result and avoids it due to the TOUGH rule, it can be taken out exactly as any other model.",
+            "subcontent":   [],
+            "glossary": [
+                ]
         }]
     }
 ]
