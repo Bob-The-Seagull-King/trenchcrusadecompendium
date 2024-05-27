@@ -399,18 +399,17 @@
                         ]
     },
     {
-        "id": "",
+        "id": "eq_unarmed",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
-        "modifiers": [],
+        "category": "melee",
+        "name": "Unarmed",
+        "equip_type": "Special",
+        "range": "Melee",
+        "blurb": "Fighting unarmed in the Great War is nigh-suicidal, but some troops carry no melee weapons or their weapons have been lost in the heat of the battle. In such cases, a warrior is forced to defend themselves with fists, kicks and their bare teeth",
+        "modifiers": ["-1D to Hit/Injuries"],
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -418,25 +417,39 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "Unarmed models suffer -1 DICE every time you fight unarmed in combat, both to see if the attack hits and when rolling on the Injury Chart. Note that you can never use Unarmed Strike as a second melee attack. These rules simply cover all instances where the model fights unarmed and has no other Melee Actions in their profile.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_trenchknife",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
+        "category": "melee",
+        "name": "Knife/Dagger",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Virtually all soldiers carry a trench knife, dagger or other kind of blade for close quarter engagements. It may lack the devastating power of a great maul or other heavier melee weapons, but this humble weapon has taken countless lives during the Great War.",
+        "modifiers": ["-1D to Hit"],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_bayonet",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Bayonet",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Bayonets are blades in the form of spikes or daggers that can be fixed to the tip of a firearm and used in melee combat.",
         "modifiers": [],
         "description":  [
                             {
@@ -445,26 +458,55 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": " Bayonets can only be attached to a Bolt Action Rifle, Automatic Rifle, Musket, Shotgun, Automatic Shotgun and Submachine Gun, and does not count towards the maximum Melee weapons a model can carry. Requires two hands to use in Melee.”"
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_trenchclub",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
+        "category": "melee",
+        "name": "Trench Club",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Trench Clubs are one of the most common weapons of the Great War, as melee combat is frequent and brutal. Usually made of wood with a metal tip from iron, lead or steel, trench clubs often feature spikes and hobnails. Most designs have some form of cord or leather strap at the end to wrap around the user’s wrist.",
         "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_swordaxe",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Sword/Axe",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Because of the martial traditions of many proud nations and due to the advances in armour technology, swords and axes are extremely popular, especially amongst elite units and officers. They are supremely useful for finishing off downed opponents and causing profusely bleeding wounds.",
+        "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_polearm",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Polearm",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Trench pikes, billhooks, spears and other long polearms are excellent defensive weapons, but are cumbersome and heavy. They are often used to deal with barbed wire.",
+        "modifiers": ["-1D to Hit for Chargers"],
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -472,26 +514,59 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "Polearms take two hands to use and the model armed with it cannot use any shield. Models equipped with a Trench Polearm give any charging opponent -1 DICE in Melee combat when rolling to hit. This only applies when a charging model attacks, not on subsequent rounds of Melee.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_greataxe",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "GreatSword/Axe",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Claymore, Zweihanders and even huge battle axes are used in the trenches when bullets fail to stop quick or well-armoured targets. The strikes from these weapons can easily lop off limbs and heads.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_greatmaul",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Heavy", "val": ""}
                 ],
         "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
-        "modifiers": [],
+        "name": "Two-Handed Hammer",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Mauls, clubs, maces… these are large, cumbersome weapons, often made from sturdy wood with a metal tip of steel, lead or Iron of Tartarus. It takes great strength to fight with it for any length of time. They are especially suited for attacking armoured targets.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_sacrificialblade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Risky", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Sacrificial Knife",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Terrifying blades blessed by the hand of a greater devil, these knives are used in Heretic rituals to sacrifice captives to the dark powers of Hell. They simply need to touch their opponents to cause indescribable pain and even the slightest wound often proves fatal from the agony alone. They are risky even to their wielders, as the merest scratch wounds friend and a foe alike.",
+        "modifiers": ["+2 on Injury Results"],
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -499,25 +574,39 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "The Sacrificial Knife adds +2 to all rolls on the Injury Chart. For example, a roll of 7 on the Injury Chart becomes 9 when using the Sacrificial Knife."
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_hellblade",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
+                {"tag_name": "Fire", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
+        "category": "melee",
+        "name": "Hellblade",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Crafted from iron ore from the mines of Dis in Inferno, this weapon burns with the unquenchable fires of Hell.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_tartarusclaws",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Tartarus Claws",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Made from severed hands of Malebranche, the Tartarus Claws are granted by Arch-Devils only to those whose hearts are  blackened with the sin of Wrath.",
         "modifiers": [],
         "description":  [
                             {
@@ -526,26 +615,42 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "Tartarus Claws always come as a pair and do not allow the use of any other melee weapons. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with the Claws you may immediately move the model up to 3”. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with the claws. You can only do this follow-up move once per Activation.",
+                                        "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTION", "id": "gl_action"}]
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_blasphemousstaff",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
+            {"tag_name": "Fire", "val": ""},
+            {"tag_name": "Critical", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
+        "category": "melee",
+        "name": "Blasphemous Staff",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Made in mockery of the rod carried by the Prophet Aaron, the slightest touch from this evil staff causes unimaginable agony due to the hellfire that it produces.",
         "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
+        "id": "eq_standardarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Standard Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "With the advancements in metallurgy and technology, both Faithful and Heretic armies are well-equipped with suits of alloy armour that can withstand an impact from a bullet or turn aside the sharpest of blades. Standard armour is usually mass-produced, but highly effective even against high-calibre weapons.",
+        "modifiers": null,
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -553,26 +658,24 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "-1 to all Injury Chart rolls against the model. Can be combined with any shield."
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_heavyarmour",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
-        "modifiers": [],
+        "category": "armour",
+        "name": "Heavy Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Heavy armour is a master-crafted suit made individually for the most important and elite troops. Each one is richly decorated and often carries the personal device of the warrior who wears it.",
+        "modifiers": null,
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -580,26 +683,24 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "Grants a -2 modifier to all injury rolls against the model wearing this armour."
                                     }
                                 ]
                             }
                         ]
     },
     {
-        "id": "",
+        "id": "eq_trenchshield",
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "", "val": ""}
                 ],
-        "category": "",
-        "name": "",
-        "equip_type": "",
-        "range": "X\"",
-        "blurb": "",
-        "modifiers": [],
+        "category": "armour",
+        "name": "Trench Shield",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Shields used in trench warfare are made of either steel reinforced with Orichalcum to allow them to withstand even high-calibre bullets, or from metal mined from Infernal bedrock and shaped in the armouries of Pandæmonium, the Capital of Hell.",
+        "modifiers": null,
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -607,8 +708,240 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "",
-                                        "glossary": [{"val": "", "id": ""}]
+                                        "content": "Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_combathelmet",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Combat Helmet",
+        "equip_type": null,
+        "range": null,
+        "blurb": "A combat helmet has proven its value on the battlefield time and again. Since the use of grenades and other explosives became widespread, the humble combat helmet has saved many lives.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Ignores additional BLOOD MARKERS caused by weapons with Keyword SHRAPNEL.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_gasmask",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Gas Mask",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Mustard Gas, phosgene, chlorine as well as noxious fumes from the bolgias of Hell plague the battlefield. The Gas Mask allows soldiers to withstand such attacks.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Models with Gas Masks ignore all damage from weapons and other sources that have the keyword GAS.",
+                                        "glossary": [{"val": "GAS", "id": "gl_gas"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_unholytrinket",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Unholy Trinket",
+        "equip_type": null,
+        "range": null,
+        "blurb": "",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "When a model fails in a RISKY ACTION, this does not end the Activation. Keyword: CONSUMABLE.",
+                                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_unholyrelic",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Unholy Relic",
+        "equip_type": null,
+        "range": null,
+        "blurb": "An artefact bestowed with unholy power. Examples include Nephilim heads, desecrated splinters of the True Cross or mummified body parts of fallen saints and bishops.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model equipped with an Unholy relic radiates a truly malignant aura and causes FEAR.",
+                                        "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_incendiarybullets",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Incendiary Bullets",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Developed by Aym, the Great Duke of Hell, these bullets set any target they hit on fire.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Only usable in rifles and pistols (i.e. weapons which have the Keyword pistol or rifle in their name). Adds the Keyword FIRE to the weapon that uses the Incendiary ammunition. Keywords: FIRE, CONSUMABLE.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "FIRE", "id": "gl_fire"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_shovel",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Shovel",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Battlefield shovel allows troops to dig in and fight from cover in virtually any battlefield.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain. As soon as the model moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_infernalbrandmark",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "",
+        "name": "",
+        "equip_type": null,
+        "range": null,
+        "blurb": "A Heretic who has made a Holy Pilgrimage into Hell itself is branded by their patron devil with an ever-burning mark. Mortal fire no longer has the power to harm them.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "This model suffers no damage from attacks with the Keyword FIRE.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_troopflag",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Troop Flag",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Most warbands and units carry banners, flags, standards, pennants or other symbols to rally the troops. Heretic Legions are infamous for their gruesome battle standards, often made of impaled torsos kept alive by unholy magic.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " Grants +1 DICE for all Morale tests as long as the model with the flag is not Down or Out of Action. Requires one hand to use.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_hellboundsoulcontract",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Hellbound Soul Contract",
+        "equip_type": null,
+        "range": null,
+        "blurb": "An infernal contract signed by a Heretic and the devil who will come to collect the damned soul when death is close. The mortal signatory bursts into infernal flames when seriously wounded.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "When this model is taken Out of Action, any model in melee combat with them immediately suffers +1 BLOOD MARKER unless the model ignores damage from sources with the Keyword FIRE.",
+                                        "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
                                     }
                                 ]
                             }
