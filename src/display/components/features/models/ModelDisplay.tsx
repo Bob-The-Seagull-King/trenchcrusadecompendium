@@ -33,7 +33,11 @@ const ModelDisplay = (props: any) => {
             outputString = ""
             return outputString;
         } else if (ModelObject.LimitMax == ModelObject.LimitMin) {
+            if (ModelObject.LimitMax == 0) {
+                outputString = "Any";
+            } else {
             outputString = ModelObject.LimitMax.toString()
+            }
             return outputString;
         } else {
             outputString = ModelObject.LimitMin.toString() + " - " + ModelObject.LimitMax.toString();
