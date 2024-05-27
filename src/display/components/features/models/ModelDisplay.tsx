@@ -29,13 +29,14 @@ const ModelDisplay = (props: any) => {
     function returnStats() {
         return (
             <div>
-                <div className="row row-cols-lg-6 row-cols-md-3 row-cols-sx-3 row-cols-xs-3 row-cols-3">
+                <div className="row row-cols-lg-7 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2">
                     <ModelStat title={"Cost"} value={ModelObject.Cost.toString() + " " + ModelObject.CostID}/>
                     <ModelStat title={"Base"} value={ModelObject.Base + "mm"}/>
                     <ModelStat title={"Movement"} value={ModelObject.Movement}/>
                     <ModelStat title={"Armour"} value={ModelObject.Armour}/>
-                    <ModelStat title={"Ranged"} value={ModelObject.Ranged + " DICE"}/>
-                    <ModelStat title={"Melee"} value={ModelObject.Melee + " DICE"}/>
+                    <ModelStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
+                    <ModelStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
+                    <ModelStat title={"Limit"} value={(ModelObject.Limit.length > 0)? ModelObject.Limit : "N/A"}/>
                 </div>
             </div>
         )
