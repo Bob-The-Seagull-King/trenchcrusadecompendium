@@ -37,7 +37,7 @@ const HomeRoute: React.FC = () => {
                         <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Compendium</h3></div>
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1 form-group">
-                            <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/models/")}>
                                     <FontAwesomeIcon icon={faShapes} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
@@ -45,7 +45,7 @@ const HomeRoute: React.FC = () => {
                                     </h1>
                                 </div>
                             </div>
-                            <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/equipment/")}>
                                     <FontAwesomeIcon icon={faPersonRifle} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
@@ -53,7 +53,7 @@ const HomeRoute: React.FC = () => {
                                     </h1>
                                 </div>
                             </div>
-                            <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/factions/")}>
                                     <FontAwesomeIcon icon={faPeopleGroup} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
