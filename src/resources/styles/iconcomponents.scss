@@ -110,12 +110,12 @@
 }
 
 .popupBody {
-    max-width: 40%;
+    width: calc(var(--radix-hover-card-content-available-width) * 0.5);
 }
 
-.popupItemBody {
-    max-width: 75%
-}
+.popupItemBody {  
+    width: calc(var(--radix-hover-card-content-available-width) * 0.75);
+} 
 
 .roundBody {
     border-radius: 0.25em;
