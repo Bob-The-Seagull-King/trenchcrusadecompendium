@@ -50,18 +50,18 @@ const FactionEquipDisplay = (props: any) => {
         <div className="row row-cols-3">
 
             <div className="col-5">
-                <div className="statbody">
+                <div className="equipbody">
                     <EquipmentHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
                 </div>
             </div>
             <div className="col-3">
-                <div className="statbody">
-                    <div className="statbody">{ModelEquip.Cost.toString() + " " + ModelEquip.CostID}</div>
+                <div className="equipbody">
+                    <div className="equipbody">{ModelEquip.Cost.toString() + " " + ModelEquip.CostID}</div>
                 </div>
             </div>
             <div className="col-4">
-                <div className="statbody">
-                    <div className="statbody">{getRestrictionList()}</div>
+                <div className="equipbody">
+                    <div className="equipbody">{getRestrictionList()}</div>
                 </div>
             </div>
         </div>

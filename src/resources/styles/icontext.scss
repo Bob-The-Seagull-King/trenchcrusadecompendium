@@ -359,9 +359,16 @@
     width: 100%;
     font-weight: 400;
     color: $colour_grey_main;
+    text-align: center;
   }
 
   .statbody {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .equipbody {
     width: 100%;
     font-weight: 600;
     text-align: left;
