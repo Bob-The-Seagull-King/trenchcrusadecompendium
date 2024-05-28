@@ -3,12 +3,13 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { PlayerModel } from '../../../../classes/feature/models/Model'
+import { FactionModel } from '../../../../classes/feature/factions/FactionModel'
 import ModelHover from '../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
 import { Requester } from '../../../../factories/Requester'
 
 const FactionModelDisplay = (props: any) => {
 
-    const ModelEquip: PlayerModel = props.data;
+    const ModelEquip: FactionModel = props.data;
 
     function getRestrictionList() {
         let rstrctnlst = "";
@@ -33,7 +34,7 @@ const FactionModelDisplay = (props: any) => {
 
             <div className="col-5">
                 <div className="equipbody">
-                    <ModelHover data={ModelEquip} titlename={ModelEquip.Name} />
+                    <ModelHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
                 </div>
             </div>
             <div className="col-3">

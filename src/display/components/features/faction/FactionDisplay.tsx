@@ -21,7 +21,7 @@ const FactionDisplay = (props: any) => {
         return (
             <>
             <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                {(ModelObject.Models.filter(item => (containsTag(item.Tags, "elite"))).length > 0) &&
+                {(ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).length > 0) &&
                 <div className="col">
                     <div className="row">
                         <div className="col">
@@ -41,7 +41,7 @@ const FactionDisplay = (props: any) => {
                                 </div>
                             </div>
                         </div>
-                        {ModelObject.Models.filter(item => (containsTag(item.Tags, "elite"))).map((item) => (
+                        {ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).map((item) => (
                             <div key={"flavourFaction"+(item.ID? item.ID : "")}>
                                 <FactionModelDisplay data={item}/>
                             </div>
@@ -68,7 +68,7 @@ const FactionDisplay = (props: any) => {
                                 </div>
                             </div>
                         </div>
-                        {ModelObject.Models.filter(item => (!containsTag(item.Tags, "elite"))).map((item) => (
+                        {ModelObject.Models.filter(item => (!containsTag(item.Object.Tags, "elite"))).map((item) => (
                             <div key={"flavourFaction"+(item.ID? item.ID : "")}>
                                 <FactionModelDisplay data={item}/>
                             </div>

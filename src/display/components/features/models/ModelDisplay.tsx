@@ -26,36 +26,15 @@ const ModelDisplay = (props: any) => {
         )
     }
 
-    function calcLimits() {
-        let outputString = "N/A"
-
-        if (ModelObject.LimitMax == null && ModelObject.LimitMin == null) {
-            outputString = ""
-            return outputString;
-        } else if (ModelObject.LimitMax == ModelObject.LimitMin) {
-            if (ModelObject.LimitMax == 0) {
-                outputString = "Any";
-            } else {
-            outputString = ModelObject.LimitMax.toString()
-            }
-            return outputString;
-        } else {
-            outputString = ModelObject.LimitMin.toString() + " - " + ModelObject.LimitMax.toString();
-            return outputString;
-        }
-    }
-
     function returnStats() {
         return (
             <div>
-                <div className="row row-cols-lg-7 row-cols-md-4 row-cols-sx-4 row-cols-xs-2 row-cols-2 justify-content-center">
-                    <ModelStat title={"Cost"} value={ModelObject.Cost.toString() + " " + ModelObject.CostID}/>
+                <div className="row row-cols-lg-5 row-cols-md-5 row-cols-sx-5 row-cols-xs-3 row-cols-3 justify-content-center">
                     <ModelStat title={"Base"} value={ModelObject.Base + "mm"}/>
                     <ModelStat title={"Movement"} value={ModelObject.Movement}/>
                     <ModelStat title={"Armour"} value={ModelObject.Armour}/>
                     <ModelStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
                     <ModelStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
-                    <ModelStat title={"Limit"} value={calcLimits()}/>
                 </div>
             </div>
         )

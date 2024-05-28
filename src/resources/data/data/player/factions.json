@@ -94,6 +94,15 @@
             {"id": "eq_infernalbrandmark", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_hellboundsoulcontract", "cost": 5, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "model", "val": "md_heretictrooper"},{"type": "model", "val": "md_anointedheavyinfantry"}]}
+        ],
+        "models": [
+            {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_hereticdeathcommando", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_hereticchorister", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
+            {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2}
         ]
     }
 ]

@@ -6,12 +6,14 @@ import { IFactionRuleset, FactionRule } from './FactionRule'
 import { PlayerModel, IPlayerModel } from '../models/Model'
 import { Requester } from '../../../factories/Requester'
 import { ModelFactory } from '../../../factories/features/ModelFactory'
+import { IModelFactionList, FactionModel } from './FactionModel'
 
 interface IPlayerFaction extends ITrenchCrusadeItemData {
     name: string,
     flavour: [],
     rules: IFactionRuleset[],
-    equipment: IEquipmentFactionList[]
+    equipment: IEquipmentFactionList[],
+    models: IModelFactionList[]
 }
 
 class PlayerFaction extends TrenchCrusadeItem {
@@ -19,7 +21,7 @@ class PlayerFaction extends TrenchCrusadeItem {
     public readonly Flavour;
     public readonly Rules;
     public readonly Equipment;
-    public readonly Models : PlayerModel[];
+    public readonly Models : FactionModel[];
     
     /**
      * Assigns parameters and creates a series of description
@@ -35,45 +37,17 @@ class PlayerFaction extends TrenchCrusadeItem {
         this.Equipment = this.EquipmentFactory(data.equipment)
         this.Rules = this.RulesetFactory(data.rules);
         this.Flavour = this.DescriptionFactory(data.flavour);
-        this.Models = this.ModelsFactory()
+        this.Models = this.ModelsFactory(data.models)
     }
 
-    private ModelsFactory() {
-        const tempArray: PlayerModel[] = []
-        const modelsbyfaction = Requester.MakeRequest(
-                                                        {searchtype: "complex", 
-                                                        searchparam: {
-                                                            type: "models", 
-                                                            request: {
-                                                                operator: "and", 
-                                                                terms: [
-                                                                    {
-                                                                        item: "faction_id",
-                                                                        value: this.ID,
-                                                                        equals: true,
-                                                                        strict: true,
-                                                                        istag: false
-                                                                    },
-                                                                    {
-                                                                        item: "variant_id",
-                                                                        value: "fv_basic",
-                                                                        equals: true,
-                                                                        strict: true,
-                                                                        istag: false
-                                                                    }
-                                                                ], 
-                                                                subparams: []
-                                                            }
-                                                        }
-                                                    });
-        
+    private ModelsFactory(data: IModelFactionList[]) {
+        const ruleslist = [];
         let i = 0;
-        for (i = 0; i < modelsbyfaction.length; i++) {
-            const tempmodel = ModelFactory.CreateModel(modelsbyfaction[i])
-            tempArray.push(tempmodel);
+        for (i = 0; i < data.length; i++) {
+            const tempAD = new FactionModel(data[i]);
+            ruleslist.push(tempAD);
         }
-
-        return tempArray;
+        return ruleslist;
     }
 
     private RulesetFactory(data: IFactionRuleset[]) {

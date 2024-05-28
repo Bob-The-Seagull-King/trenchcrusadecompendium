@@ -1,0 +1,116 @@
+[
+    {
+        "id": "fv_navalraidingparty",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""}
+                ],
+        "faction_id": "fc_hereticlegion",
+        "name": "Naval Raiding Party",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Heretic Fleet operates as a semi-autonomous entity under the command of its High Captain and other admirals. The Heretics have their own marine infantry that often operates in small bands, striking deep behind enemy lines and executing smash and grab missions. They are always on the lookout for captives, loot, information, supplies, rare artefacts and the simple opportunity to express their cruelty and brutality. They are picked from amongst the best soldiers of the Heretic Legions, and have access to equipment and weapons gained from past battles and terrible atrocities they have committed."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Fast As Lightning:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All Models have +1 DICE when taking their Dash ACTIONS",
+                                "glossary":  [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Unseen Advance:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Up to three models without the ELITE Keyword can be upgraded into INFILTRATORS at the cost of 10 ducats per Model.",
+                                "glossary":  [{"val": "ELITE", "id": "gl_elite"},{"val": "INFILTRATORS", "id": "gl_infiltrator"}]
+                            }
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_equip": [],
+        "removed_model": [],
+        "equipment": [
+            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+        ]
+    },
+    {
+        "id": "fv_",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""}
+                ],
+        "faction_id": "fc_hereticlegion",
+        "name": "Heretic Legion",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": ""
+            }
+        ],
+        "rules": [
+            {
+                "title": "",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": ""
+                    }
+                ]
+            } 
+        ],
+        "removed_equip": [],
+        "removed_model": [],
+        "equipment": [
+            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+        ]
+    },
+    {
+        "id": "fv_",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "heretic", "val": ""}
+                ],
+        "faction_id": "fc_hereticlegion",
+        "name": "Heretic Legion",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": ""
+            }
+        ],
+        "rules": [
+            {
+                "title": "",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": ""
+                    }
+                ]
+            } 
+        ],
+        "removed_equip": [],
+        "removed_model": [],
+        "equipment": [
+            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+        ]
+    }
+]
