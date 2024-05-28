@@ -36,7 +36,7 @@ const HomeRoute: React.FC = () => {
                     <div className="row">
                         <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Compendium</h3></div>
                     </div>
-                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1 form-group">
                             <div className="col">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/models/")}>
                                     <FontAwesomeIcon icon={faShapes} className="pageaccestext"/>
