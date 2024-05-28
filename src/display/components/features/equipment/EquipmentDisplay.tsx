@@ -30,7 +30,7 @@ const EquipmentDisplay = (props: any) => {
         return (
             <div>
                 {((ModelObject.EquipType != null) && (ModelObject.Range != null) && (ModelObject.Modifiers != null)) &&
-                <div className="row row-cols-lg-3 row-cols-md-3 row-cols-sx-3 row-cols-xs-1 row-cols-1 justify-content-center">
+                <div className="row row-cols-lg-3 row-cols-md-3 row-cols-sx-3 row-cols-xs-3 row-cols-3 justify-content-center">
                     <ModelStat title={"Type"} value={ModelObject.EquipType}/>
                     <ModelStat title={"Range"} value={ModelObject.Range}/>
                     <ModelStat title={"Modifiers"} value={ModelObject.Modifiers.join(', ')}/>

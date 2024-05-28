@@ -4,9 +4,16 @@
     src: local('CloisterBlack'), url(../../fonts/cloisterblack.ttf) format('opentype');
   }
 
-.tagText {
+  .tagText {
     font-weight: bolder;
     color: $colour_grey_main;
+}
+
+.equipTagText {
+    font-weight: bolder;
+    color: $colour_grey_main;
+    font-size: 0.9em;
+    margin-left: 1em;
 }
 
 .titleShape {
@@ -350,13 +357,17 @@
 
   .stattitle {
     width: 100%;
-    text-align: center;
     font-weight: 400;
     color: $colour_grey_main;
   }
 
   .statbody {
     width: 100%;
-    text-align: center;
     font-weight: 600;
+    text-align: left;
+  }
+
+  .equipgrouptext {
+    font-size: 2em;
+    font-family: CloisterBlack;
   }

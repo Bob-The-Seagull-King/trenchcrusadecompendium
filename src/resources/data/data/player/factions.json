@@ -59,7 +59,7 @@
             {"id": "eq_semiautomaticrifle", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_automaticrifle", "cost": 3, "cost_id": "glory", "limit": 0, "restriction": []},
             {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_silencedpistol", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "tag", "val": "Elite"}]},
+            {"id": "eq_silencedpistol", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_grenades", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_incendiarygrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},

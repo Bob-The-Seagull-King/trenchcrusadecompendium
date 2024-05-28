@@ -5,6 +5,7 @@ import React from 'react'
 import { getColour } from '../../../../utility/functions';
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
 import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
+import { makestringpresentable } from '../../../../utility/functions'
 
 import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
@@ -18,11 +19,17 @@ const FactionDisplay = (props: any) => {
     function returnEquipList() {
         return (
             <>
-            <div className="row row-cols-lg-4 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                {returnEquipTypeList("ranged")}
-                {returnEquipTypeList("melee")}
-                {returnEquipTypeList("armour")}
-                {returnEquipTypeList("equipment")}
+            <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                <div className="col">
+                    {returnEquipTypeList("ranged")}
+                    <div className="verticalspacer"/>
+                    {returnEquipTypeList("armour")}
+                </div>
+                <div className="col">
+                    {returnEquipTypeList("melee")}
+                    <div className="verticalspacer"/>
+                    {returnEquipTypeList("equipment")}
+                </div>
             </div>
             </>
         )
@@ -30,7 +37,24 @@ const FactionDisplay = (props: any) => {
 
     function returnEquipTypeList(type: string) {
         return (
-            <div className="col">
+            <div className="row">
+                <div className="col">
+                    <div className="row">
+                        <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable(type)}</div>
+                    </div>
+                    <div className="row row-cols-3">
+
+                    <div className="col-5">
+                            <div className="stattitle">Name</div>
+                        </div>
+                        <div className="col-3">
+                            <div className="stattitle">Cost</div>
+                        </div>
+                        <div className="col-4">
+                            <div className="stattitle">Restriction</div>
+                        </div>
+                    </div>
+                </div>
                 {ModelObject.Equipment.filter(item => (item.Object.Category == type)).map((item) => (
                     <div key={"flavourFaction"+(item.ID? item.ID : "")}>
                         <FactionEquipDisplay data={item}/>
