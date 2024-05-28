@@ -130,6 +130,10 @@ export function getRouteName(_route: string) {
         return "Equipment"
     }
 
+    if (_route.includes("compendium/factions")) {
+        return "Factions"
+    }
+
     if (_route.includes("tools/content")) {
         return "Content Manager"
     }

@@ -66,6 +66,19 @@ const ModelDescriptionItemDisplay = (props: any) => {
                     </div>
                 )
             }
+            case "gap": {
+                return (
+                    <div>
+                        <div><br/></div>
+                        <span>
+                            {item.SubContent?.map((subitem) => (
+                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                            ))}
+                        </span>
+                        <span>{" "}</span>
+                    </div>
+                )
+            }
             default: {
                 return (
                     <span>

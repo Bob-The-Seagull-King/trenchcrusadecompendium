@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShapes } from '@fortawesome/free-solid-svg-icons'
 import { faPersonRifle } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
+import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
     const navigate = useNavigate();
@@ -51,7 +52,15 @@ const HomeRoute: React.FC = () => {
                                         EQUIPMENT
                                     </h1>
                                 </div>
-                        </div>
+                            </div>
+                            <div className="col">
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/factions/")}>
+                                    <FontAwesomeIcon icon={faPeopleGroup} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        FACTIONS
+                                    </h1>
+                                </div>
+                            </div>
                     </div>
                     <div className="row">
                         <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Tools</h3></div>
