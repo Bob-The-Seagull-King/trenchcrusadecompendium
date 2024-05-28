@@ -53,7 +53,7 @@ const FactionFilterSelectDisplay = (prop: any) => {
                     <div className="row">
                         
                         <div style={{paddingLeft: "2em", paddingRight: "2em", paddingTop: "1em", paddingBottom: "0.5em"}}>
-                            <div className="separator"><h3>FILTERS</h3></div>
+                            <div className="separator"><h3>Filters</h3></div>
                         </div>
                         <div className="filterbox centerPosition">
                             {_activetextfilters.map((item) => (
@@ -74,20 +74,20 @@ const FactionFilterSelectDisplay = (prop: any) => {
                 }
             </div>
 
-            <Modal show={show}  contentClassName="filterboxStructure" dialogClassName="" size="xl" onHide={handleClose} keyboard={true}  centered>
+            <Modal show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 
                             <h1 className={'titleShape titlepurple'}>Select Filters</h1>
                             <Modal.Body >
                             <div className="row p-3 overflow-auto flex-grow-1">
                                 <div style={{"maxHeight": "calc(70vh"}}>
                                     <div className="col-12">
-                                <div className="separator"><h3>NAME</h3></div>
+                                <div className="separator"><h3>Name</h3></div>
                                 <div className="row">
                                     {FilterManager.ReturnTextFilters().map((item) => (
                                         <FilterTextItem data={item} key="name"/>
                                     ))}
                                 </div>
-                                <div className="separator"><h3>TAGS</h3></div>
+                                <div className="separator"><h3>Tags</h3></div>
                                 <div className="row">
                                     <div className="filterbox centerPosition">
                                         {FilterManager.ReturnTagFilters().map((item) => (

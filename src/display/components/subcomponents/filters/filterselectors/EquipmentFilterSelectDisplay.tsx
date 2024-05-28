@@ -53,7 +53,7 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                     <div className="row">
                         
                         <div style={{paddingLeft: "2em", paddingRight: "2em", paddingTop: "1em", paddingBottom: "0.5em"}}>
-                            <div className="separator"><h3>FILTERS</h3></div>
+                            <div className="separator"><h3>Filters</h3></div>
                         </div>
                         <div className="filterbox centerPosition">
                             {_activetextfilters.map((item) => (
@@ -81,13 +81,13 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                             <div className="row p-3 overflow-auto flex-grow-1">
                                 <div style={{"maxHeight": "calc(70vh"}}>
                                     <div className="col-12">
-                                <div className="separator"><h3>NAME</h3></div>
+                                <div className="separator"><h3>Name</h3></div>
                                 <div className="row">
                                     {FilterManager.ReturnTextFilters().map((item) => (
                                         <FilterTextItem data={item} key="name"/>
                                     ))}
                                 </div>
-                                <div className="separator"><h3>TAGS</h3></div>
+                                <div className="separator"><h3>Tags</h3></div>
                                 <div className="row">
                                     <div className="filterbox centerPosition">
                                         {FilterManager.ReturnTagFilters().map((item) => (
@@ -95,7 +95,7 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>CATEGORY</h3></div>
+                                <div className="separator"><h3>Category</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "category")).map((item) => (
@@ -103,7 +103,7 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>TYPE</h3></div>
+                                <div className="separator"><h3>Type</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "equip_type")).map((item) => (
@@ -111,7 +111,7 @@ const EquipmentFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>SOURCES</h3></div>
+                                <div className="separator"><h3>Sources</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "source")).map((item) => (

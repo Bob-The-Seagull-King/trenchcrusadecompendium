@@ -121,7 +121,7 @@ const FactionDisplay = (props: any) => {
                 }   
 
                 <div>
-                    <div className="separator">EQUIPMENT</div>
+                    <div className="separator">Equipment</div>
                 </div>
                 <div>
                     {returnEquipList()}

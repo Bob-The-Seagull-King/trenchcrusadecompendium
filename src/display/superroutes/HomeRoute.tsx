@@ -34,7 +34,7 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className='row'><div className='col'><br/></div></div>
                     <div className="row">
-                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Compendium</h3></div>
+                        <div className="separator"><h3 >Compendium</h3></div>
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1 form-group">
                             <div className="col mb-2">
@@ -63,7 +63,7 @@ const HomeRoute: React.FC = () => {
                             </div>
                     </div>
                     <div className="row">
-                        <div className="separator"><h3 style={{fontFamily:"Libre Baskerville"}}>Tools</h3></div>
+                        <div className="separator"><h3 >Tools</h3></div>
                     </div>
                     <div className="row">
                         <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">

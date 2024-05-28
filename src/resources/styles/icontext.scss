@@ -1,4 +1,8 @@
 @import './_variables';
+@font-face {
+    font-family: 'CloisterBlack';
+    src: local('CloisterBlack'), url(../../fonts/cloisterblack.ttf) format('opentype');
+  }
 
 .tagText {
     font-weight: bolder;
@@ -9,6 +13,7 @@
     padding: 0%;
     margin: 0%;
     text-align: left;
+    font-family: CloisterBlack;
 }
 
 .megatitleShape {
@@ -245,6 +250,7 @@
     color: $colour_grey_secondary;
     font-weight: bolder;
     font-size: 2em;
+    font-family: CloisterBlack;
   }
   
   .separator::before,
@@ -252,6 +258,7 @@
     content: '';
     flex: 1;
     border-bottom: 1px solid $colour_grey_secondary;
+    font-family: CloisterBlack;
   }
   
   .separator:not(:empty)::before {
@@ -282,6 +289,7 @@
     color: $colour_background_white;
     font-weight: 700;
     font-size: 1.5em;
+    font-family: CloisterBlack;
   }
 
   .headersubtext {

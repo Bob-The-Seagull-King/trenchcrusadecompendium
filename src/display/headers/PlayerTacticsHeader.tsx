@@ -20,7 +20,7 @@ const PlayerTacticsHeader = (prop: any) => {
         <>
         <div className='topbarCompendiumBase topbarCompendiumStructure hstack gap-3' style={{justifyContent:"center"}}>
             <span style={{paddingLeft:"0em"}}/>
-            <h1 className='headertext'>TRENCH CRUSADE</h1>
+            <h1 className='headertext'>Trench Crusade</h1>
             <p className='headersubtext'>v1.6.01a</p>
             <div className="vr headertext"></div>
             <Button style={{padding:"0em"}} variant="" onClick={() => NavigateHome()}>
@@ -29,7 +29,7 @@ const PlayerTacticsHeader = (prop: any) => {
             <div className="vr headertext"></div>
             <div className="ms-lg-auto ms-md-auto">
                 <h1 className="headertext">
-                    {getRouteName(useLocation().pathname).toUpperCase()}
+                    {getRouteName(useLocation().pathname)}
                 </h1>
             </div>
             <span style={{paddingLeft:"0em"}}/>

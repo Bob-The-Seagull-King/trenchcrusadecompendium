@@ -53,7 +53,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                     <div className="row">
                         
                         <div style={{paddingLeft: "2em", paddingRight: "2em", paddingTop: "1em", paddingBottom: "0.5em"}}>
-                            <div className="separator"><h3>FILTERS</h3></div>
+                            <div className="separator"><h3>Filters</h3></div>
                         </div>
                         <div className="filterbox centerPosition">
                             {_activetextfilters.map((item) => (
@@ -81,13 +81,13 @@ const ModelFilterSelectDisplay = (prop: any) => {
                             <div className="row p-3 overflow-auto flex-grow-1">
                                 <div style={{"maxHeight": "calc(70vh"}}>
                                     <div className="col-12">
-                                <div className="separator"><h3>NAME</h3></div>
+                                <div className="separator"><h3>Name</h3></div>
                                 <div className="row">
                                     {FilterManager.ReturnTextFilters().map((item) => (
                                         <FilterTextItem data={item} key="name"/>
                                     ))}
                                 </div>
-                                <div className="separator"><h3>TAGS</h3></div>
+                                <div className="separator"><h3>Tags</h3></div>
                                 <div className="row">
                                     <div className="filterbox centerPosition">
                                         {FilterManager.ReturnTagFilters().map((item) => (
@@ -95,7 +95,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>FACTIONS</h3></div>
+                                <div className="separator"><h3>Factions</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "faction_id")).map((item) => (
@@ -103,7 +103,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>VARIANTS</h3></div>
+                                <div className="separator"><h3>Variants</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "variant_id")).map((item) => (
@@ -111,7 +111,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>STATISTICS</h3></div>
+                                <div className="separator"><h3>Statistics</h3></div>
                                 <div className="subltenotetext">{"You can specify stat's value in the text box. Leave blank to find all of that stat."}
                                 </div>
                                 <div className='toppad'></div>
@@ -122,7 +122,7 @@ const ModelFilterSelectDisplay = (prop: any) => {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="separator"><h3>SOURCES</h3></div>
+                                <div className="separator"><h3>Sources</h3></div>
                                 <div className="row">
                                     <div className='filterbox centerPosition'>
                                         {FilterManager.ReturnMiscFilters().filter((value) => (value.Group == "source")).map((item) => (
