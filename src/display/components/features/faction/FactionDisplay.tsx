@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour } from '../../../../utility/functions';
+import { getColour, containsTag } from '../../../../utility/functions';
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
 import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 import { makestringpresentable } from '../../../../utility/functions'
@@ -10,11 +10,75 @@ import { makestringpresentable } from '../../../../utility/functions'
 import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 import FactionEquipDisplay from './FactionEquipDisplay';
+import FactionModelDisplay from './FactionModelDisplay';
 import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePanel';
 
 const FactionDisplay = (props: any) => {
     const ModelObject: PlayerFaction = props.data
     const bannedModelTags = ["inflict", "type"]
+
+    function returnModelList() {
+        return (
+            <>
+            <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                {(ModelObject.Models.filter(item => (containsTag(item.Tags, "elite"))).length > 0) &&
+                <div className="col">
+                    <div className="row">
+                        <div className="col">
+                            <div className="row">
+                                <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("ELITE")}</div>
+                            </div>
+                            <div className="row row-cols-3">
+
+                            <div className="col-5">
+                                    <div className="equiptitle">Name</div>
+                                </div>
+                                <div className="col-3">
+                                    <div className="equiptitle">Cost</div>
+                                </div>
+                                <div className="col-4">
+                                    <div className="equiptitle">Limit</div>
+                                </div>
+                            </div>
+                        </div>
+                        {ModelObject.Models.filter(item => (containsTag(item.Tags, "elite"))).map((item) => (
+                            <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                                <FactionModelDisplay data={item}/>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                }
+                <div className="col">
+                    <div className="row">
+                        <div className="col">
+                            <div className="row">
+                                <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("INFANTRY")}</div>
+                            </div>
+                            <div className="row row-cols-3">
+
+                            <div className="col-5">
+                                    <div className="equiptitle">Name</div>
+                                </div>
+                                <div className="col-3">
+                                    <div className="equiptitle">Cost</div>
+                                </div>
+                                <div className="col-4">
+                                    <div className="equiptitle">Limit</div>
+                                </div>
+                            </div>
+                        </div>
+                        {ModelObject.Models.filter(item => (!containsTag(item.Tags, "elite"))).map((item) => (
+                            <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                                <FactionModelDisplay data={item}/>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+            </>
+        )
+    }
 
     function returnEquipList() {
         return (
@@ -45,13 +109,13 @@ const FactionDisplay = (props: any) => {
                     <div className="row row-cols-3">
 
                     <div className="col-5">
-                            <div className="stattitle">Name</div>
+                            <div className="equiptitle">Name</div>
                         </div>
                         <div className="col-3">
-                            <div className="stattitle">Cost</div>
+                            <div className="equiptitle">Cost</div>
                         </div>
                         <div className="col-4">
-                            <div className="stattitle">Restriction</div>
+                            <div className="equiptitle">Restriction</div>
                         </div>
                     </div>
                 </div>
@@ -149,6 +213,14 @@ const FactionDisplay = (props: any) => {
                 </div>
                 <div>
                     {returnEquipList()}
+                </div>
+                <div className="verticalspacer"/>    
+
+                <div>
+                    <div className="separator">Models</div>
+                </div>
+                <div>
+                    {returnModelList()}
                 </div>
                 <div className="verticalspacer"/>          
             </div>

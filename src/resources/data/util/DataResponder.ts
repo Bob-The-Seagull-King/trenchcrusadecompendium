@@ -89,9 +89,7 @@ class DataResponder {
      * @returns JSON object, either empty or containing the found entry
      */
     public static GetSingleEntry(request: IDataRequestID) {
-        console.log(request)
         const dataSet = DataResponder.GetDataType(request.type, request.data)
-        console.log(dataSet);
         let i = 0;
         for (i = 0; i < dataSet.length; i++) {
             if (dataSet[i].id == request.id) {
@@ -227,7 +225,6 @@ class DataResponder {
      * @returns boolean if the data object matches the search term
      */
     public static ValidateBySearch(term: IDataRequestSearchTerm, data: any) {
-        console.log(term)
         if (!term.istag) {
             const dynamicKey = term.item as keyof (typeof data);
             let isvalid = false;
