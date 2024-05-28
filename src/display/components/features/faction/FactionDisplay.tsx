@@ -9,6 +9,7 @@ import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 import FactionEquipDisplay from './FactionEquipDisplay';
+import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePanel';
 
 const FactionDisplay = (props: any) => {
     const ModelObject: PlayerFaction = props.data
@@ -42,11 +43,7 @@ const FactionDisplay = (props: any) => {
     function returnFlavour() {
         return (
             <div>
-                {ModelObject.Flavour.map((item) => (
-                    <div key={"flavourFaction"+(ModelObject.Flavour.indexOf(item))}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
-                    </div>
-                ))}
+                <FactionLorePanel data={ModelObject}/>
             </div>
         )
     }
@@ -110,13 +107,6 @@ const FactionDisplay = (props: any) => {
         <div className={'modelStructure bordermain'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
             <h1 className={'titleShape title'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
-                <div>
-                    {returnTags()}
-                </div>
-                <div className="verticalspacer"/> 
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
                 <div>
                     {returnFlavour()}
                 </div>
