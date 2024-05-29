@@ -120,7 +120,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Chorister causes FEAR.",
+                            "content": "The grusome visage of the Model causes FEAR.",
                             "glossary": [{"val": "FEAR", "id": "gl_fear"}]
                         }
                         ]
