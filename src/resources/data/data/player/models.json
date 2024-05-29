@@ -340,7 +340,7 @@
             {"tag_name": "addons", "val": "ab_unholyhorror"},
             {"tag_name": "addons", "val": "ab_unholyhorror"}
                     ],
-        "blurb": "",
+        "blurb": "Goetic Warlocks are horrific creations from the death factories of the 3rd Circle of Hell, manufactured from captured priests, prophets, vicars, rectors and monks. Fiendish machines first burn their flesh away with hellfire, encasing the still-living skeletons in an infernal suit of armour and stamping them with goetic runes. The process is so agonising that they consent to a demonic pact to bring end to their pain. Thus a new Goetic Warlock is born, ready to hunt the living they once swore to protect.<br/> The mere gaze of the warlock causes necrosis and in close quarters they embrace unsuspecting enemies with their iron claws, using their goetic magic to gate themselves to a secluded location where they can finish their victim by slowly shredding them apart.<br/>Due to the rarity of victims required to create Goetic Warlocks, they are only assigned to the Heretic commanders with the greatest renown, need and the required connections in the twisted web of Heretic politics.",
         "equipment":  [{
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The Warlock wears Heavy Armour. A Warlock counts as being armed with two swords in Melee combat - its arms are deadly weapons in their own right."
