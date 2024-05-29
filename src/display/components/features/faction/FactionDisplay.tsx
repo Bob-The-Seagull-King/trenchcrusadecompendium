@@ -143,7 +143,7 @@ const FactionDisplay = (props: any) => {
                 <div key={"flavourFaction"+(item.Title? item.Title : "")}>
                     <div className="verticalspacer"/> 
                     <div>
-                        <div className="separator">{item.Title.toLocaleUpperCase()}</div>
+                        <div className="separator">{item.Title}</div>
                     </div> 
                     <div>
                         {item.Description.map((descitem) => (
