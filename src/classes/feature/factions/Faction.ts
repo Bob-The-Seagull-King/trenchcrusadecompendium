@@ -6,6 +6,7 @@ import { IFactionRuleset, FactionRule } from './FactionRule'
 import { PlayerModel, IPlayerModel } from '../models/Model'
 import { Requester } from '../../../factories/Requester'
 import { ModelFactory } from '../../../factories/features/ModelFactory'
+import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
 import { IModelFactionList, FactionModel } from './FactionModel'
 
 interface IPlayerFaction extends ITrenchCrusadeItemData {
@@ -42,6 +43,8 @@ class PlayerFaction extends TrenchCrusadeItem {
 
     private ModelsFactory(data: IModelFactionList[]) {
         const ruleslist = [];
+        
+        data.sort(byPropertiesOf<IModelFactionList>(['id']))
         let i = 0;
         for (i = 0; i < data.length; i++) {
             const tempAD = new FactionModel(data[i]);
@@ -62,6 +65,7 @@ class PlayerFaction extends TrenchCrusadeItem {
 
     private EquipmentFactory(data: IEquipmentFactionList[]) {
         const ruleslist = [];
+        data.sort(byPropertiesOf<IEquipmentFactionList>(['id']))
         let i = 0;
         for (i = 0; i < data.length; i++) {
             const tempAD = new FactionEquip(data[i]);

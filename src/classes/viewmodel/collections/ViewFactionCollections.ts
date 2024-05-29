@@ -1,8 +1,11 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IPlayerFaction, PlayerFaction } from "../../../classes/feature/factions/Faction";
+import { IPlayerFactionVariant } from "../../../classes/feature/factions/FactionVariant";
 import { FactionFactory } from "../../../factories/features/FactionFactory";
+import { FactionVariantFactory } from "../../../factories/features/FactionVariantFactory";
 import { ViewTableItem } from "./ViewTableItem";
 import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { Requester } from "../../../factories/Requester";
 
 class ViewFactionCollection extends ViewCollectionsModel {
 
@@ -37,6 +40,37 @@ class ViewFactionCollection extends ViewCollectionsModel {
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = FactionFactory.CreateFactory(this.dataresults[i]);
             const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            this.itemcollection.push(ItemNew);
+            this.GetVariants(modelNew);
+        }
+    }
+
+    GetVariants(faction : PlayerFaction) {
+        const variants : IPlayerFactionVariant[] = Requester.MakeRequest(
+            {
+                searchtype: "complex",
+                searchparam: {
+                    type: "variants",
+                    request: {
+                        operator: "and",
+                        terms: [
+                            {
+                                item: "faction_id", // The string name of the key being checked
+                                value: faction.ID, // The desired value of the key
+                                equals: true, // true -> check if item == value, false -> check if item != value
+                                strict: true, // true -> exact match of value, false -> item includes value
+                                istag: false
+                            }
+                        ],
+                        subparams: []
+                    }
+                }
+            }); 
+        
+        let i = 0;
+        for (i = 0; i < variants.length ; i++) {
+            const variantfaction = FactionVariantFactory.CreateFactory(variants[i]);
+            const ItemNew = new ViewTableItem(variantfaction, getColour("purple"));
             this.itemcollection.push(ItemNew);
         }
     }

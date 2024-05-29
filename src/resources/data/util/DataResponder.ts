@@ -5,6 +5,7 @@ import addonsdata from '../data/player/addons.json'
 import glossarydata from '../data/general/glossary.json'
 import equipmentdata from '../data/player/equipment.json'
 import factiondata from '../data/player/factions.json'
+import variantdata from '../data/player/variants.json'
 // -----------------------------------------------------
 
 /**
@@ -73,6 +74,9 @@ class DataResponder {
             }
             case "faction": {
                 return factiondata.concat(data)
+            }
+            case "variants": {
+                return variantdata.concat(data)
             }
             case "glossary": {
                 return glossarydata.concat(data)
