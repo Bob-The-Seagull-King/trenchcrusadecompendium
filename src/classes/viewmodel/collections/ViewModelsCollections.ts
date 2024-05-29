@@ -33,7 +33,7 @@ class ViewModelsCollection extends ViewCollectionsModel {
         this.CleanupModels();
         this.CleanupCollection();
         let i = 0;
-        this.dataresults.sort(byPropertiesOf<IPlayerModel>(['faction_id', 'variant_id', 'name', 'source', 'id']))
+        this.dataresults.sort(byPropertiesOf<IPlayerModel>(['faction_id', 'name', 'variant_id','source', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = ModelFactory.CreateModel(this.dataresults[i]);
             const ItemNew = new ViewTableItem(modelNew, getColour(modelNew.Faction));

@@ -50,7 +50,7 @@
         "base": "32",
         "faction_id": "fc_hereticlegion",
         "variant_id": "fv_knightsofavarice",
-        "name": "Heretic Priest",
+        "name": "Heretic Priest (Knights of Avarice)",
         "attachments": [
                         {"tag_name": "addons", "val": "ab_thepriceofgreed"},
                         {"tag_name": "addons", "val": "ab_tough"}
@@ -332,7 +332,7 @@
         "armour": "-2",
         "base": "40",
         "faction_id": "fc_hereticlegion",
-        "variant_id": "fv_knightsofavarice",
+        "variant_id": "fv_basic",
         "name": "Goetic Warlock",
         "attachments": [
             {"tag_name": "addons", "val": "ab_goeticportal"},
