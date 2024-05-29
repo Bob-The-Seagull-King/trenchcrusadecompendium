@@ -954,5 +954,111 @@
                                 ]
                             }
                         ]
+    },
+    {
+        "id": "eq_tarnishedarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "arour",
+        "name": "Tarnished Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This suit of armour gilded with gleaming gold comes with a helmet often with a beautiful, cherub-like face twisted on corrupted in some way, such as with inhuman eyes or with the whole face twisted upside-down. Despite its splendour the armour is always tarnished by blood, offal or other kind of corruption. Merely seeing it fills mortals with incredible greed, and makes the wearer an immediate target of their wrath as they attempt to tear it away from the wearer.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The suit counts as Heavy Armour, helmet and gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in Cover, and within 12” of the wearer and the charging model has a viable path to the wearer. If the wearer of the armour is already in melee combat, this power has no effect.",
+                                        "glossary": []
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_standardofmammon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Standard of Mammon",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Battle Standards of Mammon are opulently decorated works of art, icons and banners done in mockery of the virtues of Charity and Temperance. Always made of the most expensive materials, each is a unique work of dark genius, often depicting saints performing vile sins or famous acts of Greed. It has the power to make anyone to kneel before the Prince of Greed.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Grants +1 DICE for all Morale tests as long as the model with the Flag is not Down or Out of Action. Requires 1 hand to use as if it was a weapon, both in ranged and melee combat. Any enemy entering melee combat against the model carrying this banner must make a successful ACTION or the model goes Down and cannot get up as long as they are in melee combat with the bearer of the standard.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_goldencalfalter",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Golden Calf Altar",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This portable altar of Mammon creates illusions of immense wealth in any form its target covets above all. Overcome by supernatural greed, those affected by the Curse of Mammon are forced to swoop down, feebly trying to pick up the objects of their desire.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The area within 3” of the altar is Difficult Terrain for all models in the opposing Warband. This affects even models that can Fly. The model may drop the altar at any point during their Activation. Once placed down, the Golden Calf Altar cannot be picked up again. It has a 25mm base.",
+                                        "glossary": []
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_coinhammer",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Coin Hammer",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "This double-handed hammer has the rune of mammon on its head. Its strikes leave a permanent, painful scar in the shape of Mammon’s rune which burns through even the thickest armour. Mammon loves marking the innocent with his Rune, as it sows mistrust amongst his enemies.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Roll all injuries with +1 DICE. When you cause a Blood Marker in Melee with this weapon, the model wielding the Hammer gains 1 BLESSINGS MARKER.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "1 BLESSINGS MARKER", "id": "gl_blessingmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
     }
 ]

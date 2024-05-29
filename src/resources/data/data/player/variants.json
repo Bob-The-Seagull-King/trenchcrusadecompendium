@@ -43,74 +43,227 @@
                 ]
             } 
         ],
+        "removed_rules": [],
         "removed_equip": [],
-        "removed_model": [],
+        "removed_model": ["md_warwolfassaultbeast","md_anointedheavyinfantry","md_artillerywitch"],
         "equipment": [
-            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+            {"id": "eq_submachinegun", "cost": 25, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+        ],
+        "models" : [
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
     },
     {
-        "id": "fv_",
+        "id": "fv_trenchghosts",
         "type": "Variant",
         "source": "core",
         "tags": [
             {"tag_name": "heretic", "val": ""}
                 ],
         "faction_id": "fc_hereticlegion",
-        "name": "Heretic Legion",
+        "name": "Trench Ghosts",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                "content": ""
+                "content": "Sometimes when Heretic troopers die upon a hallowed ground or in presence of an uncorrupted holy relic, they become trapped between planes of existence. Claimed by neither Heaven nor Hell, the Trench Ghosts become Undead, doomed to fight a war without an end, attacking both the Faithful and Heretic alike, hating all life, obeying commands that no living can hear."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Their greed for worldly wealth and items of power remains undiminished, and their semi-corporeal bodies are exceedingly difficult to destroy. Their faces covered with gas masks they no longer have any use for. At close combat they whisper of the agony of their existence and the pain of their doom which will never give them rest, their broken bodies and shattered minds forced to endure the horrors of war for all eternity. Few can withstand such terror without breaking."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Tales are told of many Trench Ghost Warbands that haunt No Man’s Land, but the most famous are the Ghosts of Tannenberg, shades of the Heretic force that won the battle of Tannenberg but after sacking the Church of St. Jacob passed into the shadow."
             }
         ],
         "rules": [
             {
-                "title": "",
+                "title": "Variant Rules",
                 "description": [
                     {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": ""
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Horror",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in the Warband cause FEAR",
+                                "glossary":  [{"val": "FEAR", "id": "gl_fear"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Semi-corporeal",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All attacks against all models in the Trench Ghost Warband roll injuries with -1 DICE – the Undead are hard to kill!",
+                                "glossary":  [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Spectral",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in the Warband ignore movement penalties for any terrain, though they cannot move through any objects/terrain.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Undead",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in the Trench Ghost Warband are immune to damage from any source that has the Keyword GAS.",
+                                "glossary":  [{"val": "GAS", "id": "gl_gas"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Slow",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in Trench Ghost Warband have -1 DICE in all their Dash ACTIONS.",
+                                "glossary":  [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+                            }
+
+                        ]
                     }
                 ]
             } 
         ],
+        "removed_rules": [],
         "removed_equip": [],
-        "removed_model": [],
-        "equipment": [
-            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
-        ]
+        "removed_model": ["md_warwolfassaultbeast","md_artillerywitch"],
+        "equipment": [ ],
+        "models" : [ ]
     },
     {
-        "id": "fv_",
+        "id": "fv_knightsofavarice",
         "type": "Variant",
         "source": "core",
         "tags": [
             {"tag_name": "heretic", "val": ""}
                 ],
         "faction_id": "fc_hereticlegion",
-        "name": "Heretic Legion",
+        "name": "Knights Of Avarice",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                "content": ""
+                "content": "'You sold your false redeemer to us for mere thirty pieces of silver. What makes you think your own price will be any higher?'"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "-Bera the Plutocrat-lord of Mammon"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "It is said that no other arch-devil has brought more mortals to workshop at the altars of Hell than the Prince of Greed. Warbands that venerate him are a very embodiment of greed and arrogance. Mammon often works from the shadows, using the power of gold and luxury to corrupt the creation and manipulate the Lords of Hell to his favour in the truly byzantine politics of the Damned. His mortal followers are much the same: arrogant, manipulative and greedy beyond comprehension. Mammon only chooses those who have accumulated vast wealth through foul means, and especially favours those who do war on his behalf to extract wealth from those they have conquered or slain."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The warbands who follow the Prince of Greed call themselves the Knights of Avarice. Such heretics display their wealth extravagantly, and prefer to carry the most expensive and hard-to-acquire weapons, armour and equipment, and suffer none to join them who lacks means to acquire their glittering panoply. They are festooned with chains of gold and finest silk cloaks, and their armour is gilded with gold and decorated with precious stones, and the handles of their great coin hammers are made of the rarest of wood. Yet despite the opulent wealth at display, their finery is tarnished by blood and soot that spews from the Hellgate, and the delicate artistic filigree of their golden masks is both terrible and beautiful in equal measure. In combat they favour hammers and clubs that break the bones but leave the flesh and blood intact, as well as poison gas and highly accurate rifles. They scorn crude and destructive fire or explosive weapons that could damage any objects of value."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "After the Knights of Avarice have claimed a victory in combat, they scour the battlefield or any settlement they’ve conquered like a swarm of locusts: anything and everything of value is taken: metals from brass to bronze and from silver to gold, art objects, precious stones, livestock, trade goods, rare tomes and scrolls… all are meticulously catalogued and carried away by slaves and demonic beasts of burden or great armoured cars that take the stolen loot to the vast underground treasure chambers which act as the temples of Mammon. Even the dead are stripped of their flesh with an impassioned skill of a seasoned butchers, ready to be sold at markets of the Heretic domains, and internal organs taken from their fallen victims are carefully preserved in alchemical liquids to be sold to the scientist of the infernal laboratories."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "For the Heretics of the Path of Mammon hoarding riches is not mere -it is their religious compulsion. Ironically, they gain little pleasure from their vast wealth, as their greed makes them continuously desire ever greater riches. Thus their warbands roam the No Man’s Land, looking for forgotten treasures or foes to dissect and turn into wealth."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "For the greed of Mammon will never be satiated."
             }
         ],
         "rules": [
             {
-                "title": "",
+                "title": "Variant Rules",
                 "description": [
                     {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": ""
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Worship Mammon",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In campaign, the Patron of the Warband will always be Mammon. In place of a standard Heretic Priest your Warband may instead include the Knights of Avarice variant - which replaces the Puppet Master ability with The Price Of Greed.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Mammon's Chosen",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Knights of Avarice allow only the wealthiest and the best-equipped candidates to join their ranks. Your force may have no models that cost less than 80 ducats (including their equipment).",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Corrupt Merchants:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, you can select one Weapon, suit of armour or piece of equipment type from New Antioch and from Sultanate Equipment lists each. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Preserve The Loot",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Knights of Avarice greatly dislike using weapons that could damage the amount of wealth that can be extracted from the fallen. No weapon with the Keyword FIRE or SHRAPNEL can be used by any model in this Warband.",
+                                "glossary":  [{"val": "FIRE", "id": "gl_fire"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                            }
+
+                        ]
                     }
                 ]
             } 
         ],
+        "removed_rules": [],
         "removed_equip": [],
-        "removed_model": [],
+        "removed_model": ["md_artillerywitch"],
         "equipment": [
-            {"id": "", "cost": 0, "cost_id": "", "limit": 0, "restriction": [{"type": "", "val": ""}]}
+            {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_standardofmammon", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_goldencalfalter", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_coinhammer", "cost": 25, "cost_id": "ducats", "limit": 2, "restriction": []}
+        ],
+        "models" : [
+            {"id": "md_hereticpriest_fv_knightsofavarice", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_goeticwarlock", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
     }
 ]

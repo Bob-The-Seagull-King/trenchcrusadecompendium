@@ -102,7 +102,8 @@
             {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
             {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2}
+            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     }
 ]

@@ -238,6 +238,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            
                 ],
         "faction_id": "fc_hereticlegion",
         "model_id": "md_artillerywitch",
@@ -277,6 +278,106 @@
                             "content": "Artillery Witches are not affected by FEAR and attacks with the Keyword GAS cannot damage them.",
                             "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"}]
                         }
+                        ]
+    },
+    {
+        "id": "ab_infernalbomb_fv_knightsofavarice",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_artillerywitch_fv_knightsofavarice",
+        "parent_id": {"tag_name": "model", "val": "md_artillerywitch_fv_knightsofavarice"},
+        "name": "Infernal Bomb",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Choose a point on the battlefield that is visible to the Witchand within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, thebomb is off-target and will deviate 1” from your nominated target point for eachdegree of failure of the Ranged Attack ACTION in a direction determined by youropponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). Thedirection is decided by your opponent. Once the landing site of the bomb has beendetermined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the bomb lands exactly on top of any model, roll with 2D6 on the Injury Chart. Other models hit by the Bomb roll on the Injury Chart with -1 DICE. Injury rolls caused by the bomb ignore armour. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword GAS and therefore causesand additional +1 BLOOD MARKER. Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behindintervening terrain with -1 DICE.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "GAS", "id": "gl_gas"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
+                "glossary": []
+            }
+                        ]
+    },
+    {
+        "id": "ab_thepriceofgreed",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticpriest_fv_knightsofavarice",
+        "parent_id": {"tag_name": "model", "val": "md_hereticpriest_fv_knightsofavarice"},
+        "name": "The Price Of Greed",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Worldly wealth the target of this curse starts crushing them under its weight. Choose any model the Priest sees within 12” and take a RISKY ACTION. If successful, roll immediately on the Injury Chart for that model and add +1 DICE to the Injury roll for each -1 Armour Modifier the model has (for example if the model has a Trench Shield and standard armour, add +2 DICE to the Injury rolls.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+            }
+                        ]
+    },
+    {
+        "id": "ab_goeticportal",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_goeticwarlock",
+        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
+        "name": "Goetic Portal",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a RISKY ACTION with +1 DICE, the Warlock can Teleport up to 6” in any direction into a free space it can see, including into melee with an enemy model. If the Warlock is already in Melee with one or more enemies, it may select one opposing model with a base size of 32mm or smaller and take it with it as it teleports and there is room for both models in the space they materialise. It may not teleport out of the battlefield. It may teleport even if it is currently Down, but remains so after the teleportation.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+                        ]
+    },
+    {
+        "id": "ab_barbedembrace",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_goeticwarlock",
+        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
+        "name": "Barbed Embrace",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Enemies cannot move out of melee combat if they are engaged in battle with the Goetic Warlock.",
+                "glossary": []
+            }
+                        ]
+    },
+    {
+        "id": "ab_goeticgaze",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_goeticwarlock",
+        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
+        "name": "Goetic Gaze",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers 1 BLOOD MARKER. If the success is a Critical Success, the target suffers 2 BLOOD MARKERS. It can be used against enemies in melee as well.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "2 BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
                         ]
     }
 ]
