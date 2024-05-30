@@ -19,22 +19,34 @@ import GlossaryHover from '../display/components/subcomponents/glossary/Glossary
 export function ConvertContentWithGlossary(glossary: any[] | undefined, content: string) {
     if (glossary) {
         let i = 0;
+        let splitSet : string[] = [content];
         for (i = 0; i < (glossary?.length || 0); i ++) {
             const modifiers = "g"
             const matchstring = "("+glossary[i].val.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')+")" //eslint-disable-line
             const patt = new RegExp(matchstring,modifiers);
-            const split = content.split(patt);
+            const tempsplit : string[] = [];
+            let j = 0;
+            for (j = 0; j < splitSet.length; j ++) {
+                const split = splitSet[j].split(patt);
+                let k = 0;
+                for (k = 0; k < split.length; k ++) {
+                    tempsplit.push(split[k])
+                }
+            }
+
+            splitSet = tempsplit;
             
-            return (
-                <span>
-                    {split.map((item) => (
-                        <span key='glossarysplititem'>
-                            {ArrayItemIntoHtml(item, glossary[i])}
-                        </span>
-                    ))}
-                </span>
-            )
         }
+        
+        return (
+            <span>
+                {splitSet.map((item) => (
+                    <span key='glossarysplititem'>
+                        {ArrayItemIntoHtml(item, glossary)}
+                    </span>
+                ))}
+            </span>
+        )
     }
     return content;
 }
@@ -47,14 +59,18 @@ export function ConvertContentWithGlossary(glossary: any[] | undefined, content:
  */
 function ArrayItemIntoHtml(content: string, delim: any) {
     if (content != "") {
-        if (content == delim.val) {
-            const GlossaryData: IGlossaryRule = Requester.MakeRequest( {searchtype: "id", searchparam: {type: "glossary", id: delim.id}} ) as IGlossaryRule
-            const GlossaryObject = new GlossaryRule(GlossaryData)
+        let i = 0;
+        for (i = 0; i < delim.length; i ++) {
+            if (content == delim[i].val) {
+                const GlossaryData: IGlossaryRule = Requester.MakeRequest( {searchtype: "id", searchparam: {type: "glossary", id: delim[i].id}} ) as IGlossaryRule
+                const GlossaryObject = new GlossaryRule(GlossaryData)
 
-            return ( <GlossaryHover data={GlossaryObject} titlename={content}/> )
-        } else {
-            return ( <span>{content}</span> )
+                return ( <GlossaryHover data={GlossaryObject} titlename={content}/> )
+            }
         }
+        
+        return ( <span>{content}</span> )
+        
     }
     return ( <span></span> )
 }
