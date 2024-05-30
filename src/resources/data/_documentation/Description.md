@@ -43,6 +43,7 @@ id: string
 | desc      | Generic text describing an effect, subeffect, etc. |
 | subeffect | Similar to effect, but wants to stay a part of it's parent and not include a new line. |
 | gap       | Deliniates a break in text. |
+| list      | All subcontent are components in an unordered list. |
 | addon     | Indicates that an addon should be displayed here, using the *content* value to get the addon's *id* value. |
 
 ## Description Example

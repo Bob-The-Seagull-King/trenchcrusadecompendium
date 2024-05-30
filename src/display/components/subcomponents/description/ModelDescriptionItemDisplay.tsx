@@ -27,6 +27,22 @@ const ModelDescriptionItemDisplay = (props: any) => {
                     </div>
                 )
             }
+            case "list": {
+                return (
+                    <div>
+                        <span>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </span>
+                        <span>
+                            <ul>
+                                {item.SubContent?.map((subitem) => (
+                                    <li  key="descriptionsubitem">
+                                        <ModelDescriptionItemDisplay data={subitem} parent={parentItem}/>
+                                    </li>
+                                ))}
+                            </ul>
+                        </span>
+                    </div>
+                )
+            }
             case "subeffect": {
                 return (
                     <span>

@@ -8,6 +8,7 @@ export const ROUTES = {
     COMPENDIUM_ABILITY_ROUTE: '/models/*',
     COMPENDIUM_EQUIPMENT_ROUTE: '/equipment/*',
     COMPENDIUM_FACTION_ROUTE: '/factions/*',
+    COMPENDIUM_SCENARIO_ROUTE: '/scenarios/*',
     TOOLS_CONTENT_UPLOAD_ROUTE: '/content/*'
 
 }

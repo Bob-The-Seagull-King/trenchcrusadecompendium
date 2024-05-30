@@ -6,6 +6,7 @@ import glossarydata from '../data/general/glossary.json'
 import equipmentdata from '../data/player/equipment.json'
 import factiondata from '../data/player/factions.json'
 import variantdata from '../data/player/variants.json'
+import scenariodata from '../data/general/scenarios.json'
 // -----------------------------------------------------
 
 /**
@@ -80,6 +81,9 @@ class DataResponder {
             }
             case "glossary": {
                 return glossarydata.concat(data)
+            }
+            case "scenario": {
+                return scenariodata.concat(data)
             }
             default: {
                 return data

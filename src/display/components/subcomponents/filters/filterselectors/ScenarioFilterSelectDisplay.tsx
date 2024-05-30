@@ -2,8 +2,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
-import { AllFactionListPage } from '../../../../../classes/viewmodel/pages/AllFactionListPage'
-import { FactionFilterManager } from '../../../../../classes/viewmodel/collections/filters/FactionFilterManager'
+import { AllScenarioListPage } from '../../../../../classes/viewmodel/pages/AllScenarioListPage'
+import { ScenarioFilterManager } from '../../../../../classes/viewmodel/collections/filters/ScenarioFilterManager'
 
 import FilterItemItem from '../FilterItemItem'
 import FilterTagItem from '../FilterTagItem'
@@ -12,9 +12,9 @@ import FilterDisplay from '../FilterDisplay'
 
 import Modal from 'react-bootstrap/Modal';
 
-const FactionFilterSelectDisplay = (prop: any) => {
-    const ViewPageController: AllFactionListPage = prop.controller
-    const FilterManager: FactionFilterManager = ViewPageController.FilterManager;
+const ScenarioFilterSelectDisplay = (prop: any) => {
+    const ViewPageController: AllScenarioListPage = prop.controller
+    const FilterManager: ScenarioFilterManager = ViewPageController.FilterManager;
     const updatesearch = prop.runfunction;
 
     const [_activetextfilters, returnactivetext] = useState(FilterManager.ReturnActiveTextFilters());
@@ -112,4 +112,4 @@ const FactionFilterSelectDisplay = (prop: any) => {
     // -------------------------------------------
 }
 
-export default FactionFilterSelectDisplay
+export default ScenarioFilterSelectDisplay
