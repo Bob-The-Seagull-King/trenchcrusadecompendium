@@ -6,7 +6,8 @@ import { Requester } from '../../../factories/Requester'
 
 interface IListGroup extends ITrenchCrusadeItemData {
     list_items : IListSet[],
-    type: string
+    listtype: string,
+    description: []
 }
 
 interface IListSet {
@@ -22,6 +23,7 @@ interface IItemPartial extends ITrenchCrusadeItemData {
 class ListGroup extends TrenchCrusadeItem {
     public readonly ListItems;
     public readonly Type;
+    public readonly Description;
     
     /**
      * Assigns parameters and creates a series of description
@@ -33,8 +35,25 @@ class ListGroup extends TrenchCrusadeItem {
         super(data)
         this.ItemType = ItemType.ListGroup;
         
-        this.Type = data.type;
+        this.Type = data.listtype;
         this.ListItems = this.ListFactory(data.list_items);
+        this.Description = this.DescriptionFactory(data.description)
+    }
+
+    /**
+     * Translates the description JSON objects into a collection
+     * of ModelDescription objects
+     * @param data The array of description data objects
+     * @returns Array of ModelDescription objects
+     */
+    private DescriptionFactory(data: []) {
+        let i = 0;
+        const array: ModelDescription[] = []
+        for (i = 0; i < data.length; i++) {
+            const tempAD = new ModelDescription(data[i])
+            array.push(tempAD)
+        }
+        return array;
     }
 
     private ListFactory(data : IListSet[]) {

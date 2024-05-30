@@ -397,10 +397,12 @@
     display: flex;
     font-size: 1.25em;
     color: $colour_grey_main;
+    text-align: left;
   }
 
   .tablename {
     font-size: 1.25em;
     color: $colour_purple_main;
     font-weight: 600;
+    text-align: left;
   }

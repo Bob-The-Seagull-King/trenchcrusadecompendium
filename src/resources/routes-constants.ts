@@ -10,6 +10,7 @@ export const ROUTES = {
     COMPENDIUM_FACTION_ROUTE: '/factions/*',
     COMPENDIUM_SCENARIO_ROUTE: '/scenarios/*',
     COMPENDIUM_INJURY_ROUTE: '/injuries/*',
+    COMPENDIUM_SKILLS_ROUTE: '/skills/*',
     TOOLS_CONTENT_UPLOAD_ROUTE: '/content/*'
 
 }

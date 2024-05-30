@@ -121,6 +121,22 @@
         }]
     },
     {
+        "id": "gl_infectionmarker",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "Infection Marker",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Weakness brought about by plague. Each can be converted as if they were a BLOOD MARKER. If a model has at least one Infection Marker when activated, it gains +1 Infection Marker.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+        }]
+    },
+    {
         "id": "gl_consumable",
         "type": "Glossary",
         "source": "core",

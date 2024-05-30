@@ -9,6 +9,7 @@ import variantdata from '../data/player/variants.json'
 import scenariodata from '../data/general/scenarios.json'
 import injurydata from '../data/general/injuries.json'
 import skilldata from '../data/general/skills.json'
+import skillgroupdata from '../data/general/skillgroup.json'
 // -----------------------------------------------------
 
 /**
@@ -92,6 +93,9 @@ class DataResponder {
             }
             case "skills": {
                 return skilldata.concat(data)
+            }
+            case "skillgroup": {
+                return skillgroupdata.concat(data)
             }
             default: {
                 return data

@@ -1,17 +1,979 @@
 [
     {
-        "id": "",
-        "type": "",
+        "id": "sk_patronskill",
+        "type": "Skill",
         "source": "core",
         "tags": [
-            {"tag_name": "", "val": ""}
+            {"tag_name": "patron", "val": ""}
             ],
-        "name": "",
+        "name": "Patron Skill",
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "",
-                "subcontent": []
+                "content": "Pick one of the Skills offered by your Patron.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_standfirm",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "strength", "val": ""}
+            ],
+        "name": "Stand Firm",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When Model suffers the first Down result of each game it only takes the BLOOD MARKERS of the attack but does not go Down.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_parry",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Parry",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Enemies suffer -1 DICE to hit penalty in melee against this model.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_closequarterscombat",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Close Quarters Combat",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains +1 DICE to Hit and Injury rolls if the model is touching a piece of terrain.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_relentlesscharge",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Relentless Charge",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to Hit rolls in melee if the model charges during this Activation before making the melee attack.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_meleeproficiency",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Melee Proficiency",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to the Melee characteristics of this model.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_strengthofsamson",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""},
+            {"tag_name": "strength", "val": ""}
+            ],
+        "name": "Strength of Samson",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Model gains the Keyword STRONG, and adds +1 DICE to all Injury rolls it causes in Melee.",
+                "glossary": [{"val": "STRONG", "id": "gl_strong"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_toughasnails",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "strength", "val": ""}
+            ],
+        "name": "Tough as Nails",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model ignores the first Down result in each battle.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_champion",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Champion",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Make extra attack ACTION with one Melee Weapon during each Activation with -1 DICE to hit penalty.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_surgicalstrike",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "melee", "val": ""}
+            ],
+        "name": "Surgical Strike",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Melee Attacks of this model ignore all Armour.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_hunter",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Hunter",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model ignores all penalties from Cover when making a ranged attack.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_gunsligner",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Gunslinger",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If armed with 2 pistols, this model may shoot both of them during each Activation without a Penalty as Ranged Attack or in Melee. In addition, the model suffers no penalties in melee using a pistol as an off-hand weapon.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_farshot",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Far Shot",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model adds +6” to any type of pistol, jezzail or rifle they use, including automatic and semi-automatic weapons.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_sharpeyes",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Sharp Eyes",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model ignores penalties for long range when using ranged weapons.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_rangedproficiency",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Ranged Proficiency",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to the Ranged characteristics of this model.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_snipersnest",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Sniper's Nest",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains +2 DICE (instead of +1 DICE) when shooting from an elevated position.",
+                "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_pointblank",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Point Blank",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Instead of using melee weapons, this model may use any one missile weapon ACTION in Melee.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_hipshot",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Hit Shot",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model treats all ranged weapons as having an ASSAULT Keyword.",
+                "glossary": [{"val": "ASSAULT", "id": "gl_assault"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_headshot",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ranged", "val": ""}
+            ],
+        "name": "Headshot",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ranged Attacks of this model ignore armour on a Critical Result on Action Success Chart (12+ result).",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_sixthsense",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "stealth", "val": ""}
+            ],
+        "name": "Sixth Sense",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the model has no BLOOD MARKERS, treat any Down Result as a Minor Hit instead.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_assassinate",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "stealth", "val": ""}
+            ],
+        "name": "Assassinate",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If you attack an enemy model that has not been Activated this turn your attacks against it have +1 DICE on all to hit rolls on the Action Success Chart, for both Melee and Ranged attacks.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_shadowalker",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "stealth", "val": ""}
+            ],
+        "name": "Shadowwalker",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Enemy attacks from long range against this model suffer -2 DICE penalty instead of -1 DICE.",
+                "glossary": [{"val": "-2 DICE", "id": "gl_minusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_athletic",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "speed", "val": ""}
+            ],
+        "name": "Athletic",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to all Climb, Diving Charge ACTIONS this model takes. Injuries from falling damage against this model are rolled with -1 DICE.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_sprinter",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "speed", "val": ""}
+            ],
+        "name": "Sprinter",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to all Dash ACTIONS this model takes.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_disengage",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "speed", "val": ""},
+            {"tag_name": "stealth", "val": ""}
+            ],
+        "name": "Disengage",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When you move away from combat for any reason, enemies do not get to make their free attack ACTIONS against you.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_incoming",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "speed", "val": ""}
+            ],
+        "name": "Incoming",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Roll an additional D6 when charging and pick the highest result. Cumulative with other bonuses to the charge roll.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_nimble",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "speed", "val": ""}
+            ],
+        "name": "Nimble",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model can Move/Dash/Charge at normal speed after getting up from being Down.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_dodge",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "stealth", "val": ""}
+            ],
+        "name": "Dodge",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All Ranged attacks against this Model have an additional -1 DICE to hit.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_warluck",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "War Luck",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 to the Maximum Scars your model can sustain.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_tisbutascratch",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "'Tis But a Scratch",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may re-roll any Injuries on the Injury chart for this model. The second result stands.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_badcompany",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Bad Company",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Your Warband may have 7 ELITE models instead of 6.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_scavenger",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Scavenger",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Roll an additional D6 during Exploration Phase.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_skillandexpertise",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Skill & Expertise",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 BONUS DICE to any ACTION this model has, except a ranged or Melee Attack.",
+                "glossary": [{"val": "+1 BONUS DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_showoff",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Showoff",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add 1 additional dice to the Promotion Dice pool after each battle.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_friendsinhighplaces",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Friends In High Places",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may re-roll up to two dice when rolling for Resupply funds. The second roll stands.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_gloryhound",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "Glory Hound",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Warband gains 1 extra Glory Point after each battle if this model took part and was not taken Out of Action.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_warstories",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "wildcard", "val": ""}
+            ],
+        "name": "War Stories",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the end of the battle, choose any 1 model in the Warband except this one. That model gains +1 EXP.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_blessingsofthewarriorsaint",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Blessings of the Warrior Saint",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model starts each battle with D3 BLESSINGS DICE.",
+                "glossary": [{"val": "BLESSINGS DICE", "id": "gl_blessingmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_endurethesuffering",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Ensure the Suffering",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model has 1 additional SCAR in their profile.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_dragonslayer",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Dragonslayer",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When this model rolls on the Injury Chart in melee against an enemy that is Down, you don't have to roll one of the Injury Dice but can set it as 6 and then roll the rest of the dice pool.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_davidandgoliath",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "David and Goliath",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In melee, when this model is fighting an enemy on a 40mm or bigger base, then they may add 3 highest dice results together instead of 2 when rolling to hit. If they are rolling with any -DICE, this bonus does not apply.",
+                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_onyourknees",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "On Your Knees!",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Any enemy model in Melee Combat that is Down has to make a successful ACTION to stand up during their Activation.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_warriorsprayer",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Warrior's Prayer",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Take a RISKY ACTION: If successful, during this activation the model causes FEAR and if you have any BLOOD MARKERS you may remove one of them.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_blessedmurder",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Blessed Murder",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each time this model takes an enemy Out of Action via any ACTION it takes, the model gains 1 BLESSINGS DICE.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLESSINGS DICE", "id": "gl_blessingmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_sadistic",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Sadistic",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You gain +1 BONUS DICE for all Injury rolls and to Hit Rolls against opponents that are Down.",
+                "glossary": [{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_hellfire",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Hellfire",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model can take a RISKY ACTION with -1 DICE. Select a friendly model within 18” of the caster that the caster can see. Draw a straight line between the models which travels along the ground. Every model in the way spontaneously bursts into flames from Hell. Roll on the Injury Chart for each model including the friendly model at the end. The attack has the Keyword FIRE.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_30piecesofsilver",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "30 Pieces of Silver",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "After each battle the Warband gains D6X5 extra ducats if this model took part in the battle.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_bloodsacrifice",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Blood Sacrifice",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "With a successful ACTION, this model can transfer one of its BLOOD MARKERS to any friendly model within 6”.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_lashofacheron",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Lash of Acheron",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "With a successful RISKY ACTION you can select any model within 6”. Roll on the Injury chart for that model immediately. This attack ignores Armour.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_swordofallah",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Sword of Allah",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Select any skill you want from the Melee & Strength Skills.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_exoticwares",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Exotic Wares",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model may buy at the given cost any 1 Weapon or Armour from the New Antioch Equipment list. No other model in the Warband may use this weapon/armour.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_jannisarytraining",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Jannisary Training",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 DICE to the model’s Melee Attack rolls if the model Charged during the same Activation. In addition, the model suffers no penalty for fighting with an off-hand weapon in Melee.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_gures",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Güreş",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model suffers no penalties for ACTIONS when Down, and when attacking enemies that are down in melee this model adds +1 DICE to Melee Attacks and Injury Rolls.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_rightfullyguided",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Rightfully Guided",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In the beginning of the battle select any one ACTION (aside from a Charge or a standard Melee/Ranged Attacks) by any enemy model. This ACTION cannot affect or damage the Rightfully Guided model in any way.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_sultansfavour",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Sultan's Favour",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can increase the number of models that are normally limited (such as Janissaries) by 1. This does not include ELITE Models.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_cockroachvitatlity",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Cockroach Vitality",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "BLOOD MARKERS cannot be used to penalise the Melee or Ranged Attacks of this model, though otherwise they can be used as normal.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_eyesofthefly",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Eyes of the Fly",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Range or Cover does not affect the Ranged Attacks of this model.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_wingsofthefly",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Wings of the Fly",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model can Fly as described in the core rules.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_grailplague",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Grail Plague",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the start of each battle, select one enemy model without the Keyword BLACK GRAIL. This model starts the game with one INFECTION MARKER.",
+                "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_deceitofbeelzebub",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Deceit of Beelzebub",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a RISKY ACTION this model can change places with another model with 8”.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_knightoftheflies",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Knight of the Flies",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ranged Attacks suffer -1 DICE penalty when targeting this model.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]
     }
