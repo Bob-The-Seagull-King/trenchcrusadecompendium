@@ -1,0 +1,376 @@
+[
+    {
+        "id": "ij_dead",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Dead",
+        "roll_start": 1,
+        "roll_end": 1,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The wound proved to be fatal. The character is permanently lost even if this was not the third Battle Scar it sustans.",
+                "subcontent": []
+            }
+        ]
+    },
+    {
+        "id": "ij_captured",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Captured",
+        "roll_start": 2,
+        "roll_end": 2,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The enemy captures the Character. Players can negotiate a ransom price in Gold for the release of the character. As long as this is not paid, the Character remains in the hands of the opposing player. Otherwise, treat this result as Full Recovery. The Equipment of the Character is gained by the opposing Warband.",
+                "subcontent": []
+            }
+        ]
+    },
+    {
+        "id": "ij_severenervedamage",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Severe Nerve Damage",
+        "roll_start": 3,
+        "roll_end": 3,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All ACTIONS this model takes (including Melee and Missile attacks) are RISKY ACTIONS.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "RISKY ACTIONS", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_handwound",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Hand Wound",
+        "roll_start": 4,
+        "roll_end": 4,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The character suffers -1 DICE for all of its Melee Attack ACTIONS.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_lostaneye",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Lost An Eye",
+        "roll_start": 5,
+        "roll_end": 5,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The character suffers -1 DICE for all of its Range Attack ACTIONS. Suffering 2 such injuries blinds the model and it has to retire from the campaign. Sniper Priest is immune to this Injury and suffers no Scar.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_chestwound",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Check Wound",
+        "roll_start": 6,
+        "roll_end": 6,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All Injury rolls against this character are resolved with +1 DICE.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_insomniac",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Insomniac",
+        "roll_start": 7,
+        "roll_end": 7,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This character must always be deployed as the first model on your side in any battle it takes part in. It cannot use the Keyword INFILTRATOR if it has it.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_headwound",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Head Wound",
+        "roll_start": 8,
+        "roll_end": 8,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model loses the Keyword ELITE. It can regain it in the future as normal via promotion, representing recovery.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_shellshocked",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Shell-shocked",
+        "roll_start": 9,
+        "roll_end": 9,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Roll D6 on any Battle this model is taking part in. On a roll of 1-2, it cannot take part in the Battle.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_darkmemory",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Dark Memory",
+        "roll_start": 10,
+        "roll_end": 10,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mark down the opposing Warband type that caused this Injury. If you play the same scenario again, the model FEARS all enemy models when playing against the same type of Warband, including all Ranged and Melee Attacks.",
+                "glossary": [{"val": "FEARS", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_paranoid",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Paranoid",
+        "roll_start": 11,
+        "roll_end": 11,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This character cannot be deployed within 8” of any friendly models in the beginning of any Scenario.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_lostarm",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Lost Arm",
+        "roll_start": 12,
+        "roll_end": 12,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model has 1 less hand, which limits the types of weapons/equipment it can use.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_legwound",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Leg Wound",
+        "roll_start": 13,
+        "roll_end": 13,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model’s Movement is reduced by 2” and it takes Dash ACTIONS with -1 DICE.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_expensivetreatment",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Expensive Treatment",
+        "roll_start": 14,
+        "roll_end": 14,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Character’s wounds require constant treatment. If you want to use the Character in a Battle you must pay 10 Gold Ducats before deploying the model.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_possessed",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Possessed",
+        "roll_start": 15,
+        "roll_end": 15,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "While unconscious, the model was possessed by a restless spirit of a dead soldier. This warrior always starts its Activation with a Dash RISKY ACTION (unless in Melee combat). If down, it stands up and the Dashes. It must move at least 3” when Dashing if at all possible.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_muscledamage",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Muscle Damage",
+        "roll_start": 16,
+        "roll_end": 16,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model cannot carry HEAVY weapons.",
+                "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_minorwound",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Minor Wound",
+        "roll_start": 17,
+        "roll_end": 17,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model must miss the next game. No Battle Scar is suffered.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_fullrecovery",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Full Recovery",
+        "roll_start": 18,
+        "roll_end": 32,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model has survived the Battle with no ill effects. No Battle Scar is suffered.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_hardened",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Hardened",
+        "roll_start": 33,
+        "roll_end": 33,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model ignores effects of the keyword FEAR. No Battle Scar is suffered.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ij_bitterlessons",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Bitter Lessons",
+        "roll_start": 34,
+        "roll_end": 34,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains D3 Experience Points. No Battle Scar is suffered.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_robbed",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Robbed",
+        "roll_start": 35,
+        "roll_end": 35,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model loses all weapons, armour and equipment it had. No Battle Scar is suffered.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ij_facialscar",
+        "type": "Injury",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Facial Scar",
+        "roll_start": 36,
+        "roll_end": 36,
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains +1 DICE for all Melee attack ACTIONS against all enemies with the same Troop type that took this character Out of Action due a grudge. No Battle Scar is suffered.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    }
+]

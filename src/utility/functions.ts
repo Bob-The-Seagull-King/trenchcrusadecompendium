@@ -138,6 +138,10 @@ export function getRouteName(_route: string) {
         return "Scenarios"
     }
 
+    if (_route.includes("compendium/injuries")) {
+        return "Injuries"
+    }
+
     if (_route.includes("tools/content")) {
         return "Content Manager"
     }

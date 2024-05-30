@@ -7,6 +7,8 @@ import equipmentdata from '../data/player/equipment.json'
 import factiondata from '../data/player/factions.json'
 import variantdata from '../data/player/variants.json'
 import scenariodata from '../data/general/scenarios.json'
+import injurydata from '../data/general/injuries.json'
+import skilldata from '../data/general/skills.json'
 // -----------------------------------------------------
 
 /**
@@ -84,6 +86,12 @@ class DataResponder {
             }
             case "scenario": {
                 return scenariodata.concat(data)
+            }
+            case "injuries": {
+                return injurydata.concat(data)
+            }
+            case "skills": {
+                return skilldata.concat(data)
             }
             default: {
                 return data

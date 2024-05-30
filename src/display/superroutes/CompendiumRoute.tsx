@@ -8,10 +8,12 @@ import PlayerTacticsEquipment from '../../display/pages/PlayerTacticsEquipment'
 import PlayerTacticsModels from '../../display/pages/PlayerTacticsModels'
 import PlayerTacticsFaction from '../../display/pages/PlayerTacticsFaction'
 import GeneralScenarios from '../../display/pages/GeneralScenario'
+import GeneralInjuries from '../../display/pages/GeneralInjuries'
 import { AllModelsListPage } from '../../classes/viewmodel/pages/AllModelsListPage'
 import { AllEquipmentListPage } from '../../classes/viewmodel/pages/AllEquipmentListPage'
 import { AllFactionListPage } from '../../classes/viewmodel/pages/AllFactionListPage'
 import { AllScenarioListPage } from '../../classes/viewmodel/pages/AllScenarioListPage'
+import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesListPage'
 import path from 'path'
 
 const CompendiumRoute: React.FC = () => {
@@ -21,6 +23,7 @@ const CompendiumRoute: React.FC = () => {
     const EquipmentCollectionController = new AllEquipmentListPage()
     const FactionCollectionController = new AllFactionListPage()
     const ScenarioCollectionController = new AllScenarioListPage()
+    const InjuryCollectionController = new AllInjuriesListPage()
 
     // Return result -----------------------------
     return (
@@ -29,6 +32,7 @@ const CompendiumRoute: React.FC = () => {
         <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<PlayerTacticsEquipment controller={EquipmentCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_FACTION_ROUTE} element={<PlayerTacticsFaction controller={FactionCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<GeneralScenarios controller={ScenarioCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={InjuryCollectionController}/>} />
         </Routes>
     )
     // -------------------------------------------

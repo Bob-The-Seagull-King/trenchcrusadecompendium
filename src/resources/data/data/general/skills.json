@@ -1,0 +1,18 @@
+[
+    {
+        "id": "",
+        "type": "",
+        "source": "core",
+        "tags": [
+            {"tag_name": "", "val": ""}
+            ],
+        "name": "",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "",
+                "subcontent": []
+            }
+        ]
+    }
+]

@@ -8,7 +8,10 @@ enum ItemType {
     GlossaryRule = 'Glossary',
     Equipment = 'Equipment',
     Faction = 'Faction',
-    Scenario = 'Scenario'
+    Scenario = 'Scenario',
+    Injury = 'Injury',
+    Skill = 'Skill',
+    ListGroup = 'Group'
 }
 
 export {ItemType}
