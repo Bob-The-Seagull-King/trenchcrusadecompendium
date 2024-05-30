@@ -385,3 +385,22 @@
     font-size: 2em;
     font-family: CloisterBlack;
   }
+
+  .tabletitle {
+    font-size: 2em;
+    color: $colour_purple_main;
+    font-weight: 700;
+    font-family: CloisterBlack;
+  }
+
+  .tableresult {
+    display: flex;
+    font-size: 1.25em;
+    color: $colour_grey_main;
+  }
+
+  .tablename {
+    font-size: 1.25em;
+    color: $colour_purple_main;
+    font-weight: 600;
+  }

@@ -9,6 +9,8 @@ import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 import ModelStat from '../../subcomponents/description/ModelStat';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDice } from '@fortawesome/free-solid-svg-icons'
 
 const ListItemDisplay = (props: any) => {
     const ModelObject: ListItem = props.data
@@ -45,22 +47,20 @@ const ListItemDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour("purple")}>
-            <h1 className={'titleShape title'+getColour("purple")}>{ModelObject.Name || ""}</h1>
-            <div className='modelInternalStructure'>
-                <div className="row row-cols-3">
-                    <div className='col'>
+            <div className="row row-cols-3">
+                <div className='col-lg-2 col-md-2 col-sm-2 col-xs-3'>
+                    <div className="tableresult">
+                        <FontAwesomeIcon icon={faDice} style={{paddingTop:"0.25em",paddingRight:"0.25em"}}/>
                         {returnRoll()}
                     </div>
-                    <div className='col'>
-                        {ModelObject.Name}
-                    </div>
-                    <div className='col'>
-                        {returnDescription()}
-                    </div>
+                </div>
+                <div className='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                    <div className="tablename">{ModelObject.Name}</div>
+                </div>
+                <div className='col-lg-7 col-md-7 col-sm-7 col-xs-6'>
+                    {returnDescription()}
                 </div>
             </div>
-        </div>
     )
 }
 
