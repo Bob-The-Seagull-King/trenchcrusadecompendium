@@ -1123,54 +1123,6 @@
         ]
     },
     {
-        "id": "md_lionsofjabir",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
-                ],
-        "movement": "8\"",
-        "ranged": "N/A",
-        "melee": "+1",
-        "armour": "0",
-        "base": "30x60",
-        "faction_id": "fc_ironsultanate",
-        "variant_id": "fv_basic",
-        "name": "Lions of Jabir",
-        "attachments": [
-            {"tag_name": "addons", "val": "ab_artficialbody"},
-            {"tag_name": "addons", "val": "ab_mauling"},
-            {"tag_name": "addons", "val": "ab_lionsgrace"}
-                    ],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Named after the deadly hunters of the plains, the Lions of Jabir can take many forms, not all of them leonine. Each one is a unique masterwork, and they are grown according to the skills and artistry of the Jabirean scientist that created them. The speed and ferocity of the Lions is nearly unmatched, and some even have strange powers granted by their alchemical birth."
-            }
-        ],
-        "equipment":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Lions never carry any type of weapons but can wear armour (though no shields!) and can be equipped with Wind Amulets. They do not suffer penalties for fighting unarmed.",
-                "glossary": []
-            }
-            ],
-        "abilities":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_artificialbody"
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_mauling"
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_lionsgrace"
-            }
-        ]
-    },
-    {
         "id": "md_janissaries",
         "type": "Model",
         "source": "core",
@@ -1211,6 +1163,54 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_countercharge"
+            }
+        ]
+    },
+    {
+        "id": "md_lionsofjabir",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "8\"",
+        "ranged": "N/A",
+        "melee": "+1",
+        "armour": "0",
+        "base": "30x60",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Lions of Jabir",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_artificialbody"},
+            {"tag_name": "addons", "val": "ab_mauling"},
+            {"tag_name": "addons", "val": "ab_lionsgrace"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Named after the deadly hunters of the plains, the Lions of Jabir can take many forms, not all of them leonine. Each one is a unique masterwork, and they are grown according to the skills and artistry of the Jabirean scientist that created them. The speed and ferocity of the Lions is nearly unmatched, and some even have strange powers granted by their alchemical birth"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Lions never carry any type of weapons but can wear armour (though no shields!) and can be equipped with Wind Amulets. They do not suffer penalties for fighting unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_artificialbody"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mauling"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_lionsgrace"
             }
         ]
     },
