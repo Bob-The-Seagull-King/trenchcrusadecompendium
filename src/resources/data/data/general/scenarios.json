@@ -1049,5 +1049,277 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "sc_huntforheroes",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "mid_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/M6YmhpL.png",
+        "name": "Hunt for Heroes",
+        "rules": [
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Both warbands can use up to 20 models from their warband. Each player must deploy all their ELITE models if they are able.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Place three markers representing Objectives on the table as indicated on the map above, numbered one to three.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Building (a tower, house etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Hill",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6” Section of a Trench",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In addition, both the defender should take twelve smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover, the attacker should place three of these items.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off. The loser of the roll-off chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts for 4 turns unless a failed Morale test ends it sooner.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this Scenario.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Special Objectives",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "After the deployment, in secret, both players nominate three enemy ELITE models as targets to be eliminated (unless the opponent has a smaller number of ELITES in which case nominate all of them). Each player also nominates one of their own ELITE models that must be kept alive until the end of the game. These score additional Victory Points at the end of the game as follows",
+                        "glossary": [{"val": "ELITE", "id": "gl_elite"},{"val": "ELITES", "id": "gl_elite"}]
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of each Turn, a player scores one VP if they have models within 1” of any of the Objective buildings or two VPs if they control the Objective at the end of the Turn.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player controls an Objective if the total number of models from their kill team that are wholly within that building is higher than the total number of enemy models within 1” of the Objective building. A model is considered wholly within a building if it is wholly within the edges of the  building as agreed by the players",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "When the game ends, both players reveal the hidden target models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "For each enemy ELITE on their list that was taken Out of Action, the player scores 2 VPs.",
+                                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the ELITE model they indicated as the friendly model to be kept alive has not been taken Out of Action at the end of the game, the controlling player scores 3 VPs.",
+                                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Calculate VPs for both players and the end of the game and add them together. The player with the higher number of VPs wins, otherwise the game is a draw.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Kill Their Leaders:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out all the ELITES you nominated as targets.",
+                                        "glossary": [{"val": "ELITES", "id": "gl_elite"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Bodyguard:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The model you nominated as the one to be kept alive is not taken out.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "King Of The Hill:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Control all three Objectives at the same time.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Hold Your Ground:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Pass a Morale Test.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "High risk, High Reward:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Your nominated model to be kept alive takes out one of the target enemy ELITES.",
+                                        "glossary": [{"val": "ELITES", "id": "gl_elite"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
