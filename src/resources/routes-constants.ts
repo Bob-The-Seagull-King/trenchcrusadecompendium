@@ -12,6 +12,7 @@ export const ROUTES = {
     COMPENDIUM_INJURY_ROUTE: '/injuries/*',
     COMPENDIUM_TABLEREF_ROUTE: '/tables/*',
     COMPENDIUM_SKILLS_ROUTE: '/skills/*',
+    COMPENDIUM_RULES_ROUTE: '/rules/*',
     TOOLS_CONTENT_UPLOAD_ROUTE: '/content/*'
 
 }

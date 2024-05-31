@@ -11,6 +11,7 @@ import GeneralScenarios from '../../display/pages/GeneralScenario'
 import GeneralInjuries from '../../display/pages/GeneralInjuries'
 import GeneralSkills from '../../display/pages/GeneralSkills'
 import GeneralTableReferences from '../../display/pages/GeneralTableReferences'
+import GeneralQuickRules from '../../display/pages/GeneralQuickRules'
 
 import { AllModelsListPage } from '../../classes/viewmodel/pages/AllModelsListPage'
 import { AllEquipmentListPage } from '../../classes/viewmodel/pages/AllEquipmentListPage'
@@ -19,6 +20,7 @@ import { AllScenarioListPage } from '../../classes/viewmodel/pages/AllScenarioLi
 import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesListPage'
 import { AllTableReferenceListPage } from '../../classes/viewmodel/pages/AllTableReferenceListPage'
 import { AllSkillsListPage } from '../../classes/viewmodel/pages/AllSkillsListPage'
+import { AllQuickRulesPage } from '../../classes/viewmodel/pages/AllQuickRulesListPage'
 import path from 'path'
 
 const CompendiumRoute: React.FC = () => {
@@ -31,6 +33,7 @@ const CompendiumRoute: React.FC = () => {
     const InjuryCollectionController = new AllInjuriesListPage()
     const SkillCollectionController = new AllSkillsListPage()
     const TableReferenceCollectionController = new AllTableReferenceListPage()
+    const QuickRulesCollectionController = new AllQuickRulesPage()
 
     // Return result -----------------------------
     return (
@@ -42,6 +45,7 @@ const CompendiumRoute: React.FC = () => {
         <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={InjuryCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={SkillCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={TableReferenceCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<GeneralQuickRules controller={QuickRulesCollectionController}/>} />
         </Routes>
     )
     // -------------------------------------------

@@ -150,6 +150,10 @@ export function getRouteName(_route: string) {
         return "Tables"
     }
 
+    if (_route.includes("compendium/rules")) {
+        return "Rules"
+    }
+
     if (_route.includes("tools/content")) {
         return "Content Manager"
     }

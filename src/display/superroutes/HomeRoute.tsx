@@ -18,6 +18,7 @@ import { faCrosshairs } from '@fortawesome/free-solid-svg-icons'
 import { faUserInjured } from '@fortawesome/free-solid-svg-icons'
 import { faHandFist } from '@fortawesome/free-solid-svg-icons'
 import { faTable } from '@fortawesome/free-solid-svg-icons'
+import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
     const navigate = useNavigate();
@@ -94,6 +95,14 @@ const HomeRoute: React.FC = () => {
                                     <FontAwesomeIcon icon={faTable} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         RESULT TABLES
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/rules/")}>
+                                    <FontAwesomeIcon icon={faScaleBalanced} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        RULES GUIDE
                                     </h1>
                                 </div>
                             </div>
