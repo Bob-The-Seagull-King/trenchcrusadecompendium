@@ -1645,7 +1645,7 @@
         "tags": [
                 ],
         "category": "equipment",
-        "name": "ALchemical Ammunition",
+        "name": "Alchemical Ammunition",
         "equip_type": null,
         "range": null,
         "blurb": "Jabirean Alchemists craft these Jezzail bullets from the slivers of the Iron Wall. Each such shot is carved the Seal of Solomon, guiding them during their path through the air.",
@@ -1818,6 +1818,60 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Gives the model consuming the potion Keyword STRONG for the duration of a single battle. CONSUMABLE.",
                             "glossary": [{"val": "STRONG", "id": "gl_strong"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_satchelcharge",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""},
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Satchel Charge",
+        "equip_type": "Grenade",
+        "range": "6\"",
+        "blurb": "Battlefield explosives designed to break apart enemy fortifications and to crack even the toughest of armour.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "You can aim the Satchel Charge at any point on the ground as well as against an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the satchel charge lands 2” away, as 7-5=2). The direction is decided by your opponent. The Satchel Charge adds +1 DICE to injury rolls and has a blast radius of 3” hitting all models within this range.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_machinearmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Machine Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Combining the rarest of divine metal alloys and the latest technology of New Antioch, Machine Armour makes its wearer a virtual mobile tank.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer cannot DASH. Machine armour cannot be combined with any shield.",
+                            "glossary": []
                         }
                     ]
                 }

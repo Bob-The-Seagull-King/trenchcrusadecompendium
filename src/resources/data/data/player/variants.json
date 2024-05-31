@@ -517,7 +517,478 @@
         "models" : [
             {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3}
+            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
+            {"id": "md_dervish", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4}
+        ]
+    }  ,
+    {
+        "id": "fv_papalstatesinterventionforce",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Papal States Intervention Force",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Papal states who all operate under the command of the Supreme Pontiff of Rome rather than the Duke of New Antioch are sometimes dispatched to the front lines to perform a specific duty such as hunting down and eliminating dangerous Heretic leaders or recovering artefacts of great spiritual importance."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "These Warbands are typically quite small but have access to extremely elite soldiers and specialist equipment. They are led by utterly devoted warrior-monks and priests hand-picked by the Pope."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Specialist Force:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Papal States Warband is recruited with 500 Ducats and 11 Glory Points.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Swiss Guard",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Up to 4 non-Elite troopers can be upgraded into Swiss Guards at the cost of 5 Ducats each. They are immune to FEAR.",
+                                "glossary":  [{"val": "FEAR", "id": "gl_fear"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Supreme Blessing:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": " One model in the Warband may carry the crucifix given by the Supreme Pontiff. This model can take further ACTIONS if it fails in an attempted RISKY ACTION. Note that the action fails, but you are allowed to try any other Actions on your profile without losing the Activation.",
+                                "glossary":  [{"val": "ACTION", "id": "gl_action"},{"val": "ACTIONS", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Far From Home:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Papal Intervention Force may have no Trench Moles.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": [],
+        "removed_model": ["md_trenchcleric","md_lieutenant"],
+        "equipment": [
+            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
+        ],
+        "models" : [
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
+    }  ,
+    {
+        "id": "fv_firerangers",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Fire Rangers",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Eire is a stronghold of the Church and an ancient centre of learning. Due to the constant and devastating raids of the Heretic Navy, they are bitter enemies of the Infernal forces. The Emerald Isle has endured hunger and ravaged by the Black Grail, as well as a full-fledged invasion aimed at destroying the famed House of Manuscripts where many of the holiest of texts are kept. After this century of ruthless battles and brutal guerrilla warfare against the invaders, the warriors of Eire are now masters of skirmish fighting, hit-and-run tactics and ambushes."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Elite Fianna warrior-hunters are especially adept at these guerrilla tactics: they uphold the ancient tradition of a band of roving warriors living off the land. While seen as trouble-makers and godless hellraisers, they are nevertheless expert skirmishers, and easily find employment in the warbands who take the Cross and travel to New Antioch to strike back at the enemy. These warriors adorn themselves with grisly trophies in the manner of their pagan ancestors, carrying skulls of the vanquished – much to the irritation of the Church."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Due to the ravages of the wars, the island nation has few resources for heavy armour or most intricate automatic weapons, but they more than make up for this with their skilled light infantry and knowledge of the lay of the land. So when the Poet-King Tadhg O’Connor dispatches his famed Rangers to aid the Principality of New Antioch instead of paying the yearly tithe of Vienna, the Duke is more than happy to accept these fierce warriors instead."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "A rare latent Berserker trait runs in a few warrior bloodlines of Eire. It can be made to manifest with the Chemical Communion of the blood of the Meta-Christ. Such fighters enter a state of battle-rage, where no bullet or blade seems to cause them any harm."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Fireteam",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can form a single Fire Team from models in the warband (not Allies or Mercenaries). Each Fireteam consists of two models. These models gain the Keyword FIRETEAM.",
+                        "glossary": [
+                            {"val": "FIRETEAM", "id": "gl_fireteam"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Fianna:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any Shocktroopers in an Eire Warband can be made a member of Fianna, the famed warrior-hunters. They cost 60 Ducats each and have the Keywords SKIRMISHER and INFILTRATOR.",
+                                "glossary":  [{"val": "SKIRIMSHER", "id": "gl_skirmisher"}, {"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Carnyx:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One model in the warband (including ELITEs) can be made into a musician by buying Carnyx at the cost of +15 Ducats. In addition to the normal Musical Instrument rules, the musician causes FEAR.",
+                                "glossary":  [{"val": "ELITEs", "id": "gl_elite"}, {"val": "FEAR", "id": "gl_fear"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Hit and Run Tactics:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If a model of this Warband moves away from Combat, enemies have a -1 DICE penalty to hit rolls with their free attack instead of +1 DICE bonus.",
+                                "glossary":  [{"val": "-1 DICE", "id": "gl_minusdice"}, {"val": "+1 DICE", "id": "gl_plusdice"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Berserker:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A single model in the Warband can be made a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model.",
+                                "glossary":  [{"val": "FEAR", "id": "gl_fear"}, {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Strong in Faith:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Eire is a bastion of the Church, with many famed warrior-priests who travel to war. The Warband may have up to 2 Trench Clerics, and they can choose either of the following abilities instead of their standard Ability “Onward, Christian Soldiers!”.",
+                                "subcontent":  [                                    
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                        "content": "",
+                                        "subcontent":  [                                 
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                                "content": "Away, Serpents!: ",
+                                                "subcontent":  [                              
+                                                    {
+                                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                                        "content": "Select any enemy within 12” of the Priest and take a RISKY ACTION (Targeting models on 40mm or larger bases incur -1 DICE penalty to this roll). If successful, the enemy model goes Down immediately, slithering on its belly like a snake.",
+                                                        "glossary":  [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                                                    }
+                                                ]
+                                            },                                
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                                "content": "Arise and be Healed!:",
+                                                "subcontent":  [                              
+                                                    {
+                                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                                        "content": "Select one friendly model within 3” of the Priest and take a RISKY ACTION. If successful, the warrior immediately stands up if Down, and loses up to D3 BLOOD MARKERS or INFECTION MARKERS (or any combination) of your choice.",
+                                                        "glossary":  [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "D3 BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"}]
+                                                    }
+                                                ]
+                                            }
+
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Light Infantry:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Warband is allowed to field only one Mechanised Heavy Infantry. No model (save for the single Mechanised Heavy Infantry) may carry a HEAVY weapon or wear Heavy or Machine Armour. This does not apply to allies, or Combat Engineers’ Satchel Charges.",
+                                "glossary":  [{"val": "HEAVY", "id": "gl_heavy"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Followers of St. Patrick:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If playing a Campaign, the patron of the Warband is automatically Saint Patrick.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": ["Fireteam"],
+        "removed_equip": [],
+        "removed_model": ["md_trenchcleric","md_lieutenant","md_mechanisedheavyinfantry"],
+        "equipment": [
+            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
+        ],
+        "models" : [
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_lieutenant_fv_firerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
+    }  ,
+    {
+        "id": "fv_stostruppenofthefreestateofprussia",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Stoßtruppen of the Free State of Prussia",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "When the need to take out an enemy strongpoint or assault an especially powerful defensive line of trenches or redoubts arises, the Duke of Antioch often calls upon the famed Stoßtruppen forces of the Free State of Prussia. These elite units often operate in deep forward positions, and quite often they carry secret orders or specific missions from the Princes of the Church or the New Antioch High Command."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Free State Shocktroopers are selected and trained specifically to perform lightning assaults, master the firearms of close assault, and operate in Fireteams that are perfectly synchronised in their combined arms tactics."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Admittance to this elite group is strictly by merit. All members must be decorated athletes, under 25 years of age, unmarried and must have demonstrated a high level of aggression on the battlefield. Of all the soldiers serving Prussia, Stoßtruppen have by far the highest casualty rate."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "When inducted into the ranks, all swear an oath at the Köningsber Cathedral: “To each, his own, to me, death”."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Fireteam",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can form up to three Fire Teams from models in the warband (not Allies or Mercenaries). Each Fireteam consists of two models. These models gain the Keyword FIRETEAM.",
+                        "glossary": [
+                            {"val": "FIRETEAM", "id": "gl_fireteam"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Masters of the Grenade:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Models of the Stoßtruppen Warband add 4” range to all of their GRENADE weapons.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Forward Positions:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Up to two Shocktroops can have the Keyword INFILTRATOR at the cost of +10 ducats.",
+                                "glossary":  [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Rapid Assault:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the cost of +5 ducats per model, any Shocktroopers and Lieutenants of this Warband may add +1 DICE to all their Dash ACTIONs.",
+                                "glossary":  [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Troop Selection:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Warband must have at least two Shocktroops, and can have up to eight. The warband can have only one Mechanised Heavy Infantry, one Sniper Priest and no Trench Moles.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Lightly Armoured:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Apart from Mechanised Heavy Infantry, no model in the Warband can be equipped with Heavy or Machine Armour. This does not apply to Allies & Mercenaries.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": ["Fireteam"],
+        "removed_equip": ["eq_submachinegun","eq_automaticpistol","eq_automaticshotgun","eq_machinegun","eq_grenadelauncher"],
+        "removed_model": ["md_sniperpriest","md_shocktroopers","md_mechanisedheavyinfantry"],
+        "equipment": [
+            {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 4, "restriction": []},
+            {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []}
+        ],
+        "models" : [
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 2, "limit_max": 8},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
+    }  ,
+    {
+        "id": "fv_kingdomofalbaassaultdetachment",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Kingdom of Alba Assault Detachment",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Hailing from the Scottish Highlands where the Church is strong, these men (and a few fierce women!) come to New Antioch in search of both glory, forgiveness of their sins, as well as dreams of acquiring valuable loot to send back to their island home, but above all to get their hands on some Devil-worshippers up-close and personal combat!"
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Heretic submarine fleet harries the shores of the Kingdom constantly, carrying off their young in chains to be sacrificed in the dark altars of the Arch-devils, and their hatred towards the Hell’s forces runs deep. The fleet of Britain and their famed moving fortress are reserved in guarding their own shores, causing friction and resentment among their northern neighbours whose coastal defences are far less comprehensive."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "As is the tradition in Alba, these warbands favour close quarters combat and fierce charges over defence and long-range attacks."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Rampant Charge:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in the Warband ignore the penalty for Defended Obstacles.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Bagpipes:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One non-ELITE trooper can be made into a musician by buying a bagpipe at the cost of +15 Ducats. In addition to the normal Musical Instrument rules, any member of the Warband within 8” of the Musician is not affected by the rules of FEAR.",
+                                "glossary":  [{"val": "ELITE", "id": "gl_elite"},{"val": "FEAR", "id": "gl_fear"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Brave:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The warband adds +1 DICE to all Morale Tests.",
+                                "glossary":  [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Lightly Armoured:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Apart from Mechanised Heavy Infantry, no model in the Warband can be equipped with Heavy or Machine Armour. This does not apply to Allies & Mercenaries.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_grenadelauncher","eq_submachinegun","eq_automaticshotgun","eq_machinegun","eq_sniperrifle"],
+        "removed_model": ["md_mechanisedheavyinfantry"],
+        "equipment": [
+            {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+        ],
+        "models" : [
+            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3}
         ]
     }    
 ]

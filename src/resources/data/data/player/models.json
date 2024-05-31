@@ -1215,7 +1215,7 @@
         ]
     },
     {
-        "id": "md_devish",
+        "id": "md_dervish",
         "type": "Model",
         "source": "core",
         "tags": [
@@ -1315,6 +1315,524 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_trample"
+            }
+        ]
+    },
+    {
+        "id": "md_lieutenant",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Lietenant",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_onmycommand"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Lieutenants are leaders of small squads or platoons of New Antioch’s soldiers, playing a fundamental role on the distant frontlines of the Trench Crusade, displaying unwavering resolve in preserving the unity and morale of their troops. Lieutenants might be the favoured son or daughter of a noble family or gained their rank by impressing their superiors with their exceptional strategic acumen and audacious bravery."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In addition to their command role, they are also responsible for acquiring new weapons, arms, equipment and food for their troops. All too often this requires looting the battlefields of No Man’s Land or even raiding settlements, since resupply can be sporadic at best."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Having rightfully earned their position, Lieutenants enjoy the privilege of selecting their preferred arms and armour, often with the pick of the rarest battlefield finds. It is not uncommon for a Lieutenant to wield a distinctive weapon, perhaps a family heirloom, an idiosyncratic affectation or an ostentatious piece providing some much-needed swagger"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_onmycommand"
+            }
+        ]
+    },
+    {
+        "id": "md_lieutenant_fv_firerangers",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "skirmisher", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_firerangers",
+        "name": "Lietenant",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_skirmisher"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Lieutenants are leaders of small squads or platoons of New Antioch’s soldiers, playing a fundamental role on the distant frontlines of the Trench Crusade, displaying unwavering resolve in preserving the unity and morale of their troops. Lieutenants might be the favoured son or daughter of a noble family or gained their rank by impressing their superiors with their exceptional strategic acumen and audacious bravery."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In addition to their command role, they are also responsible for acquiring new weapons, arms, equipment and food for their troops. All too often this requires looting the battlefields of No Man’s Land or even raiding settlements, since resupply can be sporadic at best."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Having rightfully earned their position, Lieutenants enjoy the privilege of selecting their preferred arms and armour, often with the pick of the rarest battlefield finds. It is not uncommon for a Lieutenant to wield a distinctive weapon, perhaps a family heirloom, an idiosyncratic affectation or an ostentatious piece providing some much-needed swagger"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_skirmisher"
+            }
+        ]
+    },
+    {
+        "id": "md_trenchcleric",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Trench Cleric",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_onwardchristiansoldiers"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A holy warrior who looks after the souls of the soldiers in the company. The cleric chants inspiring battle prayers, can perform various miracles such as healing or even smiting the enemy. Cleric often carries a portable shrine on his back to denote his faith in the company’s Patron, be that one of the Saints of their homeland, a mighty Arch-Angel or the Lord himself."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_onwardchristiansoldiers"
+            }
+        ]
+    },
+    {
+        "id": "md_sniperpriest",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Sniper Priest",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_aim"},
+            {"tag_name": "addons", "val": "ab_absolutefaith"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These devotees of the Church blind themselves ritually as a devotion to God and use only their faith to strike the enemies of the Church. During the Siege of St. Lux stories were told of a sniper priest killing a target 3 miles away."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Sniper Priest can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_aim"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_absolutefaith"
+            }
+        ]
+    },
+    {
+        "id": "md_yeoman",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Yeoman",
+        "attachments": [
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A basic trooper of New Antioch. Brave men and women who have received standard training and sworn an oath to the Duke of New Antioch. What they lack in combat skills compared to more elite troops they more than make up with their numbers and wide selection of weapons available to them."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap the Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Yeomen can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles, scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ],
+        "abilities":  [
+        ]
+    },
+    {
+        "id": "md_shocktroopers",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Shocktrooper",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_shockcharge"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Assault Troops that specialise in attacking enemy defensive positions. They are masters of rapid assault and melee combat. Experts at combined arms and Fireteam tactics."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_shockcharge"
+            }
+        ]
+    },
+    {
+        "id": "md_fianna",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "skirmisher", "val": ""},
+            {"tag_name": "infiltrator", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_firerangers",
+        "name": "Fianna",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_shockcharge"},
+            {"tag_name": "addons", "val": "ab_skirmisher"},
+            {"tag_name": "addons", "val": "ab_infiltrator"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Assault Troops that specialise in attacking enemy defensive positions. They are masters of rapid assault and melee combat. Experts at combined arms and Fireteam tactics."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_shockcharge"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_skirmisher"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_infiltrator"
+            }
+        ]
+    },
+    {
+        "id": "md_combatengineer",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "0",
+        "armour": "-2",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Combat Engineer",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_engineerbodyarmour"},
+            {"tag_name": "addons", "val": "ab_battlefielddemolition"},
+            {"tag_name": "addons", "val": "ab_digin"},
+            {"tag_name": "addons", "val": "db_demine"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The combat engineers specialise in destroying bunkers, discovering minefields, and building battlefield emplacements. Equipped with close combat weaponry, and steel body armour. Casualties are extremely high in the combat engineer units, but they consider it an honour to fight and die for New Antioch and the Church."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Shovel and Engineer Body Armour (Reflected in cost and profile above). Combat Engineer can be equipped with any weapon or equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_engineerbodyarmour"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_battlefielddemolition"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_digin"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "db_demine"
+            }
+        ]
+    },
+    {
+        "id": "md_mechanisedheavyinfantry",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "0",
+        "armour": "-2",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Mechanised Heavy Infantry",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_strong"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Well-armoured, large soldiers who wield the heavy weaponry of the company. They are selected from amongst the best and given heavy chemical enhancements."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Heavy Armour. This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +15 Gold Ducats.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mechanised Heavy Infantry can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            }
+        ]
+    },
+    {
+        "id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "-2",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_kingdomofalbaassaultdetachment",
+        "name": "Mechanised Heavy Infantry (Kingdo of Alba Assault Detachment)",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_strong"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Well-armoured, large soldiers who wield the heavy weaponry of the company. They are selected from amongst the best and given heavy chemical enhancements."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Heavy Armour. This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +15 Gold Ducats.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mechanised Heavy Infantry can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            }
+        ]
+    },
+    {
+        "id": "md_combatmedic",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "-1",
+        "base": "25",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Combat Medic",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_finishthefallen"},
+            {"tag_name": "addons", "val": "ab_expertmedic"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Sisters of St. Cosmas are a highly trained elite medical corps, specialising in battlefield first aid and surgeries on the front lines of the Great War."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Sisters take a modified Hippocratic Oath that compels them to help any wounded soldiers of the Faith, no matter how dire the circumstance, as well as dispatching heretics and other enemies they find on the battlefield without pity or mercy."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Armed with a combat surgical knife that doubles as a Misericordia, they are as equally adept at saving lives as taking them from those they find lying wounded in No Man’s Land. They carry medical kits with a plethora of battlefield drugs that are especially useful for nullifying the pain of even the ghastliest wounds, and getting soldiers back on their feet and back into the fray, even if just for a few moments so they can accomplish their mission or die trying."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Medic carries a Misericordia and a Medi-kit. They wear a gas mask and suit of standard armour (reflected on the profile above).",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You cannot modify the equipment, armour and weapons of the Medic in any way.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_finishthefallen"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_expertmedic"
             }
         ]
     }

@@ -927,14 +927,230 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_devish",
-        "parent_id": {"tag_name": "model", "val": "md_devish"},
+        "model_id": "md_dervish",
+        "parent_id": {"tag_name": "model", "val": "md_dervish"},
         "name": "Whirling Dervishes",
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The ritual Dance of the Dervishes is hypnotic to witness, and it is as graceful as it is deadly. All Ranged attacks against Dervishes suffer -1 DICE penalty. Dervishes do not suffer the normal -1 DICE to hit for fighting with a second melee weapon in off-hand.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_onmycommand",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_lieutenant",
+        "parent_id": {"tag_name": "model", "val": "md_lieutenant"},
+        "name": "On My Command!",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " Once per Turn immediately after they are Activated, as an ACTION the Lieutenant can instead force the opponent to activate one of their models that the Lieutenant can select from amongst the models they can see. The Lieutenant can then be Activated later in the same Turn as normal.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_onwardchristiansoldiers",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_trenchcleric",
+        "parent_id": {"tag_name": "model", "val": "md_trenchcleric"},
+        "name": "Onward, Christian Soldiers!",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " If the Cleric makes a successful ACTION roll, all friendly models that are within 8” of the Trench Cleric are not affected by FEAR.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_aim",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_sniperpriest",
+        "parent_id": {"tag_name": "model", "val": "md_sniperpriest"},
+        "name": "Aim",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Sniper Priest may take a RISKY ACTION to aim. If successful then the Priest may add +2 DICE to any Ranged attack rolls during this same Activation",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_absolutefaith",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_sniperpriest",
+        "parent_id": {"tag_name": "model", "val": "md_sniperpriest"},
+        "name": "Absolute Faith",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Sniper Priests do not use their eyesight to aim at their enemies. The opponent cannot apply any BLOOD MARKERs when they use a Ranged weapon. They still suffer penalties for Range and Cover as standard.",
+                "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_shockcharge",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_shocktroopers",
+        "parent_id": {"tag_name": "model", "val": "md_shocktroopers"},
+        "name": "Shock Charge",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When a Shocktrooper charges, roll 2D6 instead of 1D6 and then add the highest of the two dice to their charge move.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_engineerbodyarmour",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatengineer",
+        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
+        "name": "Engineer Body Armour",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All weapons with keyword SHRAPNEL suffer -1 DICE on all Injury rolls against the Combat Engineer, and the SHRAPNEL attacks do not cause the extra BLOOD MARKERS on a model wearing this suit. These effects work even against attacks that ignore armour.",
+                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_battlefielddemolition",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatengineer",
+        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
+        "name": "Battlefield Demolition",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Engineer ignores the HEAVY rules for a Satchel Charges.",
+                "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_digin",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatengineer",
+        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
+        "name": "Dig-In",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "During their Activation, an Engineer can take a RISKY ACTION with +1 DICE. If successful, the engineer is considered to be in Cover until the model moves. This ACTION cannot be used if the model is in Melee combat",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "db_demine",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatengineer",
+        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
+        "name": "De-Mine",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a RISKY ACTION the Engineer can disable any mine or trapped terrain they move in contact with. If they fail, the mine blows up as described in each Scenario.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_finishthefallen",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatmedic",
+        "parent_id": {"tag_name": "model", "val": "md_combatmedic"},
+        "name": "Finish the Fallen",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Due their knowledge of anatomy and physiology, medics are experts at inflicting debilitating injuries and excruciating pain. Unless the target has the Keyword DEMONIC or BLACK GRAIL, add +1 BONUS DICE to any injury rolls the medic makes in melee against opponents who are Down.",
+                "glossary": [{"val": "DEMONIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_expertmedic",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_combatmedic",
+        "parent_id": {"tag_name": "model", "val": "md_combatmedic"},
+        "name": "Expert Medic",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Medic adds +1 BONUS DICE whenever they use their Medi- Kit to aid friendly models.",
+                "glossary": [{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_skirmisher",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "model_id": "md_fianna",
+        "parent_id": {"tag_name": "model", "val": "md_fianna"},
+        "name": "Skirmisher",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
+                "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
             }
         ]
     }

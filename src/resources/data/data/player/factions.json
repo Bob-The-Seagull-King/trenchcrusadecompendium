@@ -290,5 +290,117 @@
             {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6},
             {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
+    },
+    {
+        "id": "fc_newantioch",
+        "type": "Faction",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "name": "The Principality of New Antioch",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "For three hundred years the Principality of New Antioch has stood defiantly as the focal point of the Church and the Faithful at the very edge of the shadow cast by the Gate of Hell. It is the Home of All Our Hopes, the bulwark against Heretic forces and the first line of defence against the devil’s might. Should New Antioch fall, the Levant will be lost and the path to heartlands of the Church will be wide open."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "War has never left this corner of the world. The ancient city of Antioch was destroyed by a mysterious demonic weapon in the year 1545, but the Faithful never gave up their positions in the ruins. Despite the lethal demonic essence emanating from the crater that was left behind, the garrison held on, even as mighty Constantinople fell to the legions of Kimaris, Marquis of Hell."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Before it was destroyed, the ancient city of Antioch was always the first line of defence to be put to test. Thus it is no wonder that in the year 1559 the Sword Congress of Vienna agreed to rebuild and fortify the city, and that a yearly tithe is to be sent to New Antioch by all the Faithful nations, though this levy is rarely in form of coin. Instead, endless supply trains of foodstuffs, tools, ammunition, weaponry, machinery and skilled workers and engineers come from across Europa and the Mediterranean Sea, as well as the African dominions."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Since those days New Antioch has grown to be the most important fortress-city in the world, the Sword and the Shield of Europa and Africa. All the princes of the Church and heads of the various states and domains who oppose Hell understand that it is better to fight their battles against the Heretics as far away from their heartlands as possible. To this day New Antioch has withstood eight great sieges and its famed walls, with their seventy-seven mighty towers, have never been breached. This is partly due to hundreds of anchorites, metallic battle shrines with devotees entombed within them, that are embedded into the walls, keeping a vigilant watch over the walls day and night."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "More than anything else, it is the volunteers who come to serve under the Banner of Christ that ensure the continuous existence of the Principality. Thus in the streets of the city one can hear hundreds of languages and dialects. One might observe hussars of the Polish- Lithuanian commonwealth brushing shoulders with the last remnants of the Varangian Guard, or hear the sermons of a street preacher from Eire extolling the soldiery of Ethiopia to lay down their lives for the holy cause. Perhaps they might even witness the Church Engineers procession taking their latest invention to be tested in the front lines."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "As the nominal supreme commander of all the Faithful armed forces, the Duke of New Antioch is a title of unrivalled prestige and honour. But despite swearing fealty to the Duke, in reality most of the troops from across all of Christendom who come to do battle against Hell operate in units of their own, taking commands from their leaders and making their own strategic decisions."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Still, some soldiers do indeed renounce their citizenship and take up the cross, and come to serve under Duke Constantine alone. Thus the standing army of the Principality is the greatest single fighting force the Faithful can muster, and those who serve on the walls of the Home of Hopes are rightfully proud of their livery."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In recent years the Duke has despatched small forces into No Man’s Land to gather intelligence, look for artefacts of power, conduct raids on Heretic forces, secure strategic strongpoints and loot the battlefields for the wealth of coin and weaponry scattered across the tortured landscape that stretches between New Antioch and the Heretic domains over the centuries. These warbands are simply given commission by the Duke, and have to raise their own coin and muster their own forces. However, holy relics, great wealth and fame across all the Christendom ensures that there is a steady supply of ambitious leaders who are willing to risk all in the crucible of war. Competition for loot, supplies, artefacts and information is fierce, and these warbands often come to blows, not just with Heretical forces, but with competing rivals and crazed Trench Pilgrims."
+            } 
+            
+        ],
+        "rules": [
+            {
+                "title": "Fireteam",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can form up to two Fire Teams from models in the warband (not Allies or Mercenaries). Each Fireteam consists of two models. These models gain the Keyword FIRETEAM.",
+                        "glossary": [
+                            {"val": "FIRETEAM", "id": "gl_fireteam"}
+                        ]
+                    }
+                ]
+            }
+         ],
+        "equipment": [
+            {"id": "eq_boltactionrifle", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_semiautomaticrifle", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_automaticrifle", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_shotgun", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_grenades", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_incendiarygrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_flamethrower", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_heavyflamethrower", "cost": 55, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_satchelcharge", "cost": 15, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "", "val": "One per Model"}]},
+            {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greatmaul", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greataxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_heavyarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_mechanisedheavyinfantry  "}]},
+            {"id": "eq_machinearmour", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_trenchshield", "cost":  15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_gasmask", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_medikit", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
+            {"id": "eq_martyrdompills", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
+        ],
+        "models": [
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_trenchcleric", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
+            {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
     }
 ]
