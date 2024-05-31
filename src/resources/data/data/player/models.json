@@ -20,7 +20,12 @@
                         {"tag_name": "addons", "val": "ab_puppetmaster"},
                         {"tag_name": "addons", "val": "ab_tough"}
                     ],
-        "blurb": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
@@ -55,7 +60,12 @@
                         {"tag_name": "addons", "val": "ab_thepriceofgreed"},
                         {"tag_name": "addons", "val": "ab_tough"}
                     ],
-        "blurb": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
@@ -91,7 +101,12 @@
             {"tag_name": "addons", "val": "ab_stealthgenerator"},
             {"tag_name": "addons", "val": "ab_hide"}
                     ],
-        "blurb": "Silent Killers equipped with stealth generators that hide them from the eyes of God. These terrifying infiltrators have been known to kill entire enemy squads alone.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Silent Killers equipped with stealth generators that hide them from the eyes of God. These terrifying infiltrators have been known to kill entire enemy squads alone."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The Death Commando can be equipped with any melee weapon, armour or equipment from the Heretic Legion Equipment List. The only ranged weapon they can buy is a silenced pistol."
@@ -130,7 +145,24 @@
             {"tag_name": "addons", "val": "ab_unholyhymns"},
             {"tag_name": "addons", "val": "ab_unholyhorror"}
                     ],
-        "blurb": "Suicide is a Mortal Sin, and sacrificing yourself to the glory of Hell is a yet greater affront to God. Some Heretics born with a gift of sonorous voice but little prospects of rising through the ranks but possessing a determination to excel may pursue the dark path of becoming a Chorister.<br/>Such supplicants go to one of the black altars of Heretic abodes at the bottom of the deep inverted pyramid temples dedicated to the greatest of Arch-devils. There they are dressed in the robes of dark devotion, lie on the altar and mutilate themselves to death by carving unholy runes into their flesh. The more wounds they can suffer before perishing, the more pleasing it is said their offering is. The most devout slice their own throats, trying to cut as deep as they can before their miserable life leaves them.<br/>Most such wretches go to their doom in the Lake of Fire, but some are reborn as Choristers after nine days. Their corpses lurch back to their feet, and finish their grisly beheading, and lift their severed heads that begin to sing hymns they have learned in the Inferno. From their self-inflicted wounds spurts cold blood that forms diabolic symbols and changes to match the words of their unholy chorale. They head towards the front lines driven by a call no living can hear and join the Heretic warband of their choosing.<br/>As their severed heads sing their agonising hymns, the minds of their enemies are filledwith visions from the Pits of Hell, weakening both the resolve and strength of thoseunfortunate enough to hear the dire song of a Chorister. Their hymns are often the firstthing a fresh recruit experiences on the battlefield, as their unholy voice rolls across thetrenches, proclaiming a never-ending prophecy of the final victory of Hell over Heaven.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Suicide is a Mortal Sin, and sacrificing yourself to the glory of Hell is a yet greater affront to God. Some Heretics born with a gift of sonorous voice but little prospects of rising through the ranks but possessing a determination to excel may pursue the dark path of becoming a Chorister."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Such supplicants go to one of the black altars of Heretic abodes at the bottom of the deep inverted pyramid temples dedicated to the greatest of Arch-devils. There they are dressed in the robes of dark devotion, lie on the altar and mutilate themselves to death by carving unholy runes into their flesh. The more wounds they can suffer before perishing, the more pleasing it is said their offering is. The most devout slice their own throats, trying to cut as deep as they can before their miserable life leaves them."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Most such wretches go to their doom in the Lake of Fire, but some are reborn as Choristers after nine days. Their corpses lurch back to their feet, and finish their grisly beheading, and lift their severed heads that begin to sing hymns they have learned in the Inferno. From their self-inflicted wounds spurts cold blood that forms diabolic symbols and changes to match the words of their unholy chorale. They head towards the front lines driven by a call no living can hear and join the Heretic warband of their choosing."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As their severed heads sing their agonising hymns, the minds of their enemies are filledwith visions from the Pits of Hell, weakening both the resolve and strength of thoseunfortunate enough to hear the dire song of a Chorister. Their hymns are often the firstthing a fresh recruit experiences on the battlefield, as their unholy voice rolls across thetrenches, proclaiming a never-ending prophecy of the final victory of Hell over Heaven."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The Chorister uses the Heretic Legion weapons and equipment list."
@@ -160,7 +192,12 @@
         "variant_id": "fv_basic",
         "name": "Heretic Trooper",
         "attachments": [],
-        "blurb": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
@@ -188,7 +225,12 @@
         "attachments": [
                         {"tag_name": "addons", "val": "ab_strong"}
                     ],
-        "blurb": "Heavily armed and armoured assault troops. Their skin is burned and blistering from their ordained pilgrimages to Hell and back",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Heavily armed and armoured assault troops. Their skin is burned and blistering from their ordained pilgrimages to Hell and back"
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Anointed are always equipped with a suit of Heavy Armour and Infernal brand mark which are included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list."
@@ -223,7 +265,12 @@
             {"tag_name": "addons", "val": "ab_chainmaw"},
             {"tag_name": "addons", "val": "ab_shreddingclaws"}
                     ],
-        "blurb": "This abomination charges through miles of barbed wire to clear a path for the heretic infantry. Its specially formed head is designed to cut clean through it. War Wolves wear unique armour forged in the factories of hell, as seen by the maker’s marks stamped upon it.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This abomination charges through miles of barbed wire to clear a path for the heretic infantry. Its specially formed head is designed to cut clean through it. War Wolves wear unique armour forged in the factories of hell, as seen by the maker’s marks stamped upon it."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The War Wolf is encased in nigh-impregnable Tartarus armour reflected in the profile above. In Melee combat the War Wolf can use both the Chainsaw Mouth and Shredding Claws (see below) during the same Activation with no additional penalty for the second attack. You cannot buy any other armour, weapons or equipment for the War Wolf."
@@ -269,7 +316,12 @@
             {"tag_name": "addons", "val": "ab_infernalbomb"},
             {"tag_name": "addons", "val": "ab_artificiallife"}
                     ],
-        "blurb": "Artillery Witches stalk the battlefields, hurling ordnance assembled in the death factories of Hell’s 3rd Circle. They are completely mute and no one has ever seen their faces. Some question if they are even living, and there are tales that they too were manufactured in Hell. They can pull an infinite number of Infernal Bombs from a portal to Hell that they manifest at will. Their infernal explosives appear in their hand from a gate of midnight blackness.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Artillery Witches stalk the battlefields, hurling ordnance assembled in the death factories of Hell’s 3rd Circle. They are completely mute and no one has ever seen their faces. Some question if they are even living, and there are tales that they too were manufactured in Hell. They can pull an infinite number of Infernal Bombs from a portal to Hell that they manifest at will. Their infernal explosives appear in their hand from a gate of midnight blackness."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
@@ -303,7 +355,12 @@
             {"tag_name": "addons", "val": "ab_infernalbomb_fv_knightsofavarice"},
             {"tag_name": "addons", "val": "ab_artificiallife"}
                     ],
-        "blurb": "Artillery Witches stalk the battlefields, hurling ordnance assembled in the death factories of Hell’s 3rd Circle. They are completely mute and no one has ever seen their faces. Some question if they are even living, and there are tales that they too were manufactured in Hell. They can pull an infinite number of Infernal Bombs from a portal to Hell that they manifest at will. Their infernal explosives appear in their hand from a gate of midnight blackness.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Artillery Witches stalk the battlefields, hurling ordnance assembled in the death factories of Hell’s 3rd Circle. They are completely mute and no one has ever seen their faces. Some question if they are even living, and there are tales that they too were manufactured in Hell. They can pull an infinite number of Infernal Bombs from a portal to Hell that they manifest at will. Their infernal explosives appear in their hand from a gate of midnight blackness."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
@@ -340,7 +397,12 @@
             {"tag_name": "addons", "val": "ab_unholyhorror"},
             {"tag_name": "addons", "val": "ab_goeticgaze"}
                     ],
-        "blurb": "Goetic Warlocks are horrific creations from the death factories of the 3rd Circle of Hell, manufactured from captured priests, prophets, vicars, rectors and monks. Fiendish machines first burn their flesh away with hellfire, encasing the still-living skeletons in an infernal suit of armour and stamping them with goetic runes. The process is so agonising that they consent to a demonic pact to bring end to their pain. Thus a new Goetic Warlock is born, ready to hunt the living they once swore to protect.<br/> The mere gaze of the warlock causes necrosis and in close quarters they embrace unsuspecting enemies with their iron claws, using their goetic magic to gate themselves to a secluded location where they can finish their victim by slowly shredding them apart.<br/>Due to the rarity of victims required to create Goetic Warlocks, they are only assigned to the Heretic commanders with the greatest renown, need and the required connections in the twisted web of Heretic politics.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Goetic Warlocks are horrific creations from the death factories of the 3rd Circle of Hell, manufactured from captured priests, prophets, vicars, rectors and monks. Fiendish machines first burn their flesh away with hellfire, encasing the still-living skeletons in an infernal suit of armour and stamping them with goetic runes. The process is so agonising that they consent to a demonic pact to bring end to their pain. Thus a new Goetic Warlock is born, ready to hunt the living they once swore to protect.<br/> The mere gaze of the warlock causes necrosis and in close quarters they embrace unsuspecting enemies with their iron claws, using their goetic magic to gate themselves to a secluded location where they can finish their victim by slowly shredding them apart.<br/>Due to the rarity of victims required to create Goetic Warlocks, they are only assigned to the Heretic commanders with the greatest renown, need and the required connections in the twisted web of Heretic politics."
+            }
+        ],
         "equipment":  [{
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The Warlock wears Heavy Armour. A Warlock counts as being armed with two swords in Melee combat - its arms are deadly weapons in their own right."

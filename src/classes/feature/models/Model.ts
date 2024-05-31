@@ -12,7 +12,7 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
     faction_id: string, // Faction of the model
     variant_id: string,
     attachments: [], // List of addons, summons, etc featured in an model
-    blurb: string, // Flavour text
+    blurb: [], // Flavour text
     equipment: [], // Mechanical description of the item
     abilities: [] // Mechanical description of the item
 }
@@ -45,7 +45,6 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Variant = data.variant_id;
         this.Faction = data.faction_id;
         this.Attachments = data.attachments;
-        this.Blurb = data.blurb;
 
         // Stats
         this.Movement = data.movement;
@@ -55,6 +54,7 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Base = data.base;
         //
 
+        this.Blurb = this.DescriptionFactory(data.blurb);
         this.Equipment = this.DescriptionFactory(data.equipment);
         this.Abilities = this.DescriptionFactory(data.abilities);
     }

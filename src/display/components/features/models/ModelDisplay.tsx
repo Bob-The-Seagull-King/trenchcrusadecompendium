@@ -52,6 +52,18 @@ const ModelDisplay = (props: any) => {
         )
     }
 
+    function returnBlurb() {
+        return (
+            <div>
+                {ModelObject.Blurb.map((item) => (
+                    <div key={"blurbdisplay"+(item.Content? item.Content : "")}>
+                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                    </div>
+                ))}
+            </div>
+        )
+    }
+
     function returnTags() {
         const displaytags = sortTagsForDisplay()
 
@@ -92,7 +104,7 @@ const ModelDisplay = (props: any) => {
                 </div>
                 <div className="verticalspacer"/>
                 <div>
-                    <i><p dangerouslySetInnerHTML={{__html: (ModelObject.Blurb)}}></p></i>
+                    {returnBlurb()}
                 </div> 
                 <div className="verticalspacer"/> 
                 <div>
