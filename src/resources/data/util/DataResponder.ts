@@ -2,7 +2,7 @@
 // Data File Imports -----------------------------------
 import modelsdata from '../data/player/models.json'
 import addonsdata from '../data/player/addons.json'
-import glossarydata from '../data/general/glossary.json'
+import glossarydata from '../data/references/glossary.json'
 import equipmentdata from '../data/player/equipment.json'
 import factiondata from '../data/player/factions.json'
 import variantdata from '../data/player/variants.json'
@@ -10,6 +10,8 @@ import scenariodata from '../data/general/scenarios.json'
 import injurydata from '../data/general/injuries.json'
 import skilldata from '../data/general/skills.json'
 import skillgroupdata from '../data/general/skillgroup.json'
+import tablechartdata from '../data/references/tablecharts.json'
+import tableresultdata from '../data/references/tableresults.json'
 // -----------------------------------------------------
 
 /**
@@ -96,6 +98,12 @@ class DataResponder {
             }
             case "skillgroup": {
                 return skillgroupdata.concat(data)
+            }
+            case "tablechart": {
+                return tablechartdata.concat(data)
+            }
+            case "tableresult": {
+                return tableresultdata.concat(data)
             }
             default: {
                 return data

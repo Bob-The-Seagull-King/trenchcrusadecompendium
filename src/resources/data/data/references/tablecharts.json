@@ -1,0 +1,118 @@
+[
+    {
+        "id": "tc_actionsuccess",
+        "type": "TableChart",
+        "source": "core",
+        "tags": [
+            {"tag_name": "action", "val": ""}
+            ],
+        "name": "Action Success Chart",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When you take an ACTION (including Melee and Ranged Attacks), roll 2D6 and add any +DICE or -DICE from Character Stats, injuries or other sources, pick the two highest (or lowest if any -DICE were applied) and consult the chart below to see if the ACTION succeeded:",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}, {"val": "+DICE", "id": "gl_plusdice"},{"val": "-DICE", "id": "gl_minusdice"}]
+            }
+        ],
+        "listtype": "tableresult",
+        "list_items": [
+            { "id": "tr_failure", "roll_start": 2, "roll_end": 6},
+            { "id": "tr_success", "roll_start": 7, "roll_end": 11},
+            { "id": "tr_criticalsuccess", "roll_start": "12+", "roll_end": "12+"}
+        ]
+    },
+    {
+        "id": "tc_injurytable",
+        "type": "TableChart",
+        "source": "core",
+        "tags": [
+            {"tag_name": "injury", "val": ""}
+            ],
+        "name": "Injury Table",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If your attack hits the enemy, roll 2D6 adding any +DICE or -DICE from Character Stats or other sources. Pick the two highest or lowest if any -DICE were applied and consult the following table.",
+                "glossary": [{"val": "+DICE", "id": "gl_plusdice"},{"val": "-DICE", "id": "gl_minusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": "",
+                "subcontent": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Modifiers to Injury Table Rolls:",
+                "subcontent": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Trench Shield:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "-1 to Injury Rolls (+ Armor Type)",
+                                "subcontent": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Standard Armour:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": " -1 to Injury Rolls",
+                                "subcontent": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Heavy Armour:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": " -2 to Injury Rolls",
+                                "subcontent": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "TOUGH",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Creatures treats the first Out of Action result as Down instead. Once a TOUGH Creature is Down it is treated as any other model when rolling on the Injury Chart and can be taken Out of Action.",
+                                "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Target is Down:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Add +1 DICE to the dice pool when  determining injuries for a model that is Down.",
+                                "glossary": [{"val": "+DICE", "id": "gl_plusdice"}]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "listtype": "tableresult",
+        "list_items": [
+            { "id": "tr_noeffect", "roll_start": "1 (or below)", "roll_end": "1 (or below)"},
+            { "id": "tr_minorhit", "roll_start": 2, "roll_end": 6},
+            { "id": "tr_down", "roll_start": 7, "roll_end": 8},
+            { "id": "tr_outofaction", "roll_start": 9, "roll_end": 12}
+        ]
+    }
+]

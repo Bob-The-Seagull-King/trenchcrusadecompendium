@@ -11,7 +11,9 @@ enum ItemType {
     Scenario = 'Scenario',
     Injury = 'Injury',
     Skill = 'Skill',
-    ListGroup = 'Group'
+    ListGroup = 'Group',
+    TableChart = 'TableChart',
+    TableResult = 'TableResult'
 }
 
 export {ItemType}

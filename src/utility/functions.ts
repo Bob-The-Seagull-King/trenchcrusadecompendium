@@ -146,6 +146,10 @@ export function getRouteName(_route: string) {
         return "Skills"
     }
 
+    if (_route.includes("compendium/tables")) {
+        return "Tables"
+    }
+
     if (_route.includes("tools/content")) {
         return "Content Manager"
     }

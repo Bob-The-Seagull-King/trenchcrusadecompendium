@@ -10,11 +10,14 @@ import PlayerTacticsFaction from '../../display/pages/PlayerTacticsFaction'
 import GeneralScenarios from '../../display/pages/GeneralScenario'
 import GeneralInjuries from '../../display/pages/GeneralInjuries'
 import GeneralSkills from '../../display/pages/GeneralSkills'
+import GeneralTableReferences from '../../display/pages/GeneralTableReferences'
+
 import { AllModelsListPage } from '../../classes/viewmodel/pages/AllModelsListPage'
 import { AllEquipmentListPage } from '../../classes/viewmodel/pages/AllEquipmentListPage'
 import { AllFactionListPage } from '../../classes/viewmodel/pages/AllFactionListPage'
 import { AllScenarioListPage } from '../../classes/viewmodel/pages/AllScenarioListPage'
 import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesListPage'
+import { AllTableReferenceListPage } from '../../classes/viewmodel/pages/AllTableReferenceListPage'
 import { AllSkillsListPage } from '../../classes/viewmodel/pages/AllSkillsListPage'
 import path from 'path'
 
@@ -27,6 +30,7 @@ const CompendiumRoute: React.FC = () => {
     const ScenarioCollectionController = new AllScenarioListPage()
     const InjuryCollectionController = new AllInjuriesListPage()
     const SkillCollectionController = new AllSkillsListPage()
+    const TableReferenceCollectionController = new AllTableReferenceListPage()
 
     // Return result -----------------------------
     return (
@@ -37,6 +41,7 @@ const CompendiumRoute: React.FC = () => {
         <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<GeneralScenarios controller={ScenarioCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={InjuryCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={SkillCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={TableReferenceCollectionController}/>} />
         </Routes>
     )
     // -------------------------------------------

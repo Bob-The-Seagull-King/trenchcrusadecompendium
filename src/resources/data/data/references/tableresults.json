@@ -1,0 +1,129 @@
+[
+    {
+        "id": "tr_failure",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "action", "val": ""}
+            ],
+        "name": "Failure",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the ACTION is classed as a RISKY ACTION, the activation of the model is over and your opponent can now activate one of their models.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "tr_success",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "action", "val": ""}
+            ],
+        "name": "Success",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If you succeed, you take the ACTION as described in the rules.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "tr_criticalsuccess",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "action", "val": ""}
+            ],
+        "name": "Critical Success",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Some Ranged and Melee Attacks have additional effects if you roll a Critical Success when determining if they hit.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "tr_noeffect",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "injury", "val": ""}
+            ],
+        "name": "No Effect",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The armour of the target withstands the hit. There is no effect.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "tr_minorhit",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "injury", "val": ""}
+            ],
+        "name": "Minor Hit",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 BLOOD MARKER next to the model to represent a wound. Use dice pips to count the hits inflicted (maximum six per model).",
+                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "tr_down",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "injury", "val": ""}
+            ],
+        "name": "Warrior Down!",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Add +1 BLOOD MARKER next to the model and place the model face down on the battlefield to indicate its status. If the model is already Down, it still suffers the +1 BLOOD MARK",
+                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Any injury rolls against a Down model in Melee are made with an additional +1 DICE by the attacker.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Downed warrior adds -1 DICE to any of its ACTIONS until they stand up.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "During its next Activation a Downed warrior can stand up, but all types of movement it takes is at half distance, rounding down.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "tr_outofaction",
+        "type": "TableResult",
+        "source": "core",
+        "tags": [
+            {"tag_name": "injury", "val": ""}
+            ],
+        "name": "Out of Action",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Warrior suffers a major wound and is out of the game for the rest of the battle. Remove the model from the table.",
+                "glossary": []
+            }
+        ]
+    }
+]
