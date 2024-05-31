@@ -780,5 +780,274 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "sc_claimnomansland",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "mid_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/bD7BOuL.png",
+        "name": "Claim No Man's Land",
+        "rules": [
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Use your full Campaign Warband in this battle.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Table must contain five buildings such as ruined houses, bunkers, chapels etc. At least part of each building must be in the location indicated on the map with a Red Marker. These buildings are the Objectives of the scenario and score Victory Points (VPs).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Building (a tower, house etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Hill",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6” Section of a Trench",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In addition, both the defender should take twelve smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover, the attacker should place three of these items.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off. The loser of the roll-off chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts for 4 turns.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators cannot be used in this Scenario.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of each Turn, a player scores one victory point if they have models within 1” of any of the Objective buildings or two VPs if they control the Objective at the end of the Turn.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player controls an Objective if the total number of models from their kill team that are wholly within that building is higher than the total number of enemy models within 1” of the Objective building. A model is considered wholly within a building if it is wholly within the edges of the building’s footprint, as agreed by the players.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Calculate VPs for both players and the end of the round and add them together. The player with the higher number of VPs wins, otherwise the game is a draw.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Sniper:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy Elite with a shooting Attack.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Lord of War:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take 2+ enemy models Out of Action in a single turn with Melee attacks with one of your own models.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Cast Them Down:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Make an enemy fall from a height of 3”+ thanks to your action (shooting, melee, Supernatural Power etc.).",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Lead The Charge:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Charge an enemy model with two or more models this Turn and take that model Out of Action at the same Turn.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Hold Your Ground:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Pass a Morale Test",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Suicidal Bravery:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " Charge two enemy models with one of yours during a single Activation.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Sharpshooter:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy in Cover while shooting from Long Range.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
