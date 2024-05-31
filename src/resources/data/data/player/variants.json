@@ -384,7 +384,7 @@
             {"id": "eq_sacrificiallamb", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []}
         ],
         "models" : [
-            {"id": "md_communicant", "cost": 12, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_communicant", "cost": 120, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
         ]
