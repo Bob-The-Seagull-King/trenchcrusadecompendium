@@ -235,5 +235,277 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "sc_trenchwarfare",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "end_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/jnuYPxU.png",
+        "name": "Trench Warfare",
+        "rules": [
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The larger warband is the Attacker, and they use their entire Warband. The smaller warband is the defender, and they can have up to half of the number of models the Attacker has.If both warbands have the same number of models, roll a dice to see who is the attacker and who is the defender.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Building (a tower, house etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Hill",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6” Section of a Trench",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In addition, both players should add six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Trenches",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Defender places three 8”-long Trench sections in their Deployment Zone. They can be placed as the Defender wishes, and can be continuous, but each section always counts separately for Victory Points (see below).",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Mines",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Defender then places 12 mine markers on the battlefield, 4 which will be duds -the defender marks the duds on the side of the marker that is hidden from the view. The Defender can place the mines as shown on the Map, though not inside their own deployment zone. When any model comes within 2” of the center of a mine counter (players can measure this distance beforehand), flip the counter over to see if it is a dud or not. If the mine is a dud, discard it immediately. If the mine is not a dud, every model within 3” must immediately roll on the Injury Chart to see what happens to near-by models as a result of an exploding mine. The mines have the Keyword SHRAPNEL, so the models hit by the mine blast suffer an additional BLOOD MARKER unless they have protection against this. Afterwards, remove the mine marker. It is possible to trigger more than 1 mine at the time.",
+                        "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Some models, such as New Antioch Combat Engineers can remove a mine counter by moving in base contact with it and passing a RISKY ACTION as indicated in their Warband Entry. Note that when a model attempts this, the mine does not explode until the result of the roll is determined.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take turns to deploy one model at a time, starting with the attacker.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts for five turns unless a failed Morale test ends it sooner.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this Scenario.However, the Attacker cannot place their Infiltrators closer than 12” away from their own deployment zone.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If one Warband is wiped out completely or one Warband loses their Morale test, the game ends and the opposing Warband Wins.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Otherwise, keep a running tally of Victory Points for both sides. The players accumulate Victory Points as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of each Turn, the defender scores 1 Victory Point for each Trench section that has one of the defender’s models and no enemies in it. The defender scores 1 victory point for each Trench section that has one of their models, but also has 1 or more enemy models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of each Turn the Attacker scores 1 victory points for each Trench section that has one or more of their models, but also has 1 or more enemy models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of each Turn the Attacker scores 2 victory points for each Trench section that has one or more of their models, and has no enemy models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Calculate Victory Points at the end each Turn for both players and the end of the game and add them together. The player with the higher number of Victory Points wins, otherwise the game is a draw.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Survive to tell the tale:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model is hit by 2mines the game mines and is not taken Out of Action.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Into the trenches!:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Charge an enemy model in a Trench and take that model Out of Action at the same Turn.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Good Hunting:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy in a Trench with a ranged attack at Long Range.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Throw them Back:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "As a Defender, take an enemy in a Trench Out of Action when there were no defenders in the Trench before you activated the model that takes the enemy out.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Hold the Line:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " Pass a Morale Test.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
