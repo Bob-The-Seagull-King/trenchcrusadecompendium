@@ -265,5 +265,128 @@
             {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
             {"id": "md_goeticwarlock", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
-    }
+    },
+    {
+        "id": "fv_processionofthesacredaffliction",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "name": "Procession of the Sacred Affliction",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Trench Pilgrims of the Procession of the Sacred Affliction are known for their zeal in close quarter combat, their armour decorated with icons and shields adorned with the depictions of the Saints, which despite appearances can withstand machine gun bullets. The millstones they carry upon their backs are used to tie about the necks of sinners before drowning them in the mud and blood of No Man’s Land."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "They spurn the use of the Iron Capirotes, believing firmly that faith alone is enough to withstand the horrors of Hell."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Face thy Fears:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "No model in the Procession of the Sacred Affliction can wear Iron Capirotes. Those troops with Capirotes in their base profile will not have them, though their cost remains the same.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Punishing Millstones:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All models in the Procession of the Sacred Affliction add extra +1 DICE to Injury rolls with melee attacks against enemies who are Down.",
+                                "glossary":  [{"val" : "+1 DICE", "id" : "gl_plusdice"}]
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_machinegun"],
+        "removed_model": [],
+        "equipment": [
+            {"id": "eq_holyiconshield", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_holyiconarmour", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
+        ],
+        "models" : [
+        ]
+    },
+    {
+        "id": "fv_cavalcadeofthetenthplague",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "name": "Cavalcade of the Tenth Plague",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "This Trench Pilgrim Procession traditionally sacrifices lambs before battle, anointing themselves in its blood to ward off the wrath of God. The Pilgrims then draw holy symbols with the blood of the sacrifice upon their bodies, clothing and armour, and then march to battle singing hymns, in certain belief that the blood of the Lamb shields them from any harm."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Firm believers in traditional reading of the Holy Texts, they reject the new doctrines of the Meta-Christ by the Church. They steal Communicants from other Processions and force them to fight for them in penance for being born from Sin."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Blood Sacrifice:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any model (except Ecclesiastic Prisoners who are not worthy) in the Warband can purchase a Sacrificial Lamb (see below).",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Heaven Awaits:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": [],
+        "removed_model": ["md_communicant","md_ecclesiasticprisoner","md_warprophet"],
+        "equipment": [
+            {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_sacrificiallamb", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []}
+        ],
+        "models" : [
+            {"id": "md_communicant", "cost": 12, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
+        ]
+    }   
 ]

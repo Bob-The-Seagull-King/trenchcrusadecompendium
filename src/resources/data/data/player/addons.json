@@ -685,5 +685,23 @@
                 "glossary": [{"val": "ACTIONs", "id": "gl_action"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
             }
         ]
+    },
+    {
+        "id": "ab_dayofhiswrath",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_warprophet_fv_cavalcadeofthetenthplague",
+        "parent_id": {"tag_name": "model", "val": "md_warprophet_fv_cavalcadeofthetenthplague"},
+        "name": "Day of His Wrath",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This is a RISKY ACTION. If successful, Roll on an Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
     }
 ]

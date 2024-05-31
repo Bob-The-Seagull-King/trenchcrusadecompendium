@@ -1371,5 +1371,58 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_holyiconarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Holy Icon Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This suit of Armour is made of blessed icons and scripture scrolls written with the blood of saints.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The armour confers a -1 modifier to any Injury Rolls. This modifier applies even against attacks that ignore Armour. Can be combined with a shield, including Holy Icon Shield.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_sacrificiallamb",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Sacrificial Lamb",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Before the battle, this lamb is sacrificed to God’s glory, and the pilgrim then anoints themselves with its blood, averting the wrath of Yahweh while fighting for His cause.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model ignores the first BLOOD MARKER or INFECTION MARKER it suffers in combat.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]

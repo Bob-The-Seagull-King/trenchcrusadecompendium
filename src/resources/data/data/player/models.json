@@ -474,6 +474,54 @@
         ]
     },
     {
+        "id": "md_warprophet_fv_cavalcadeofthetenthplague",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "War Prophet (Cavalcade of the Tenth Plague)",
+        "attachments": [
+                {"tag_name": "addons", "val": "ab_loudspeakers"},
+                {"tag_name": "addons", "val": "ab_mementomori"},
+                {"tag_name": "addons", "val": "ab_dayofhiswrath"}
+            ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A charismatic leader and powerful fighter of the Pilgrim group. They are driven by visions of Armageddon, and their preaching and prophecies drive the pilgrimage from one battlefield to the next, as they seek to thwart the forces of Satan and find martyrdom in combat."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Loudspeakers (see below). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_loudspeakers"
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mementomori"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_dayofhiswrath"
+            }
+        ]
+    },
+    {
         "id": "md_castigator",
         "type": "Model",
         "source": "core",
