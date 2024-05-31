@@ -1,17 +1,24 @@
-# Name
+# Variants
 
-XX
+Variants are modifications of a faction that change how a warband plays.
 
 ## Structure
 
-XX are found in *xx.json* and each one has the following structure.
+Variants are found in *variants.json* and each one has the following structure.
 
 ```
-id          : string
-type        : string
-source      : string
-tags        : []
-name        : string
+id              : string
+type            : string
+source          : string
+tags            : []
+name            : string
+flavour         : []
+rules           : []
+removed_rules   : string[]
+removed_equip   : string[]
+removed_model   : string[]
+equipment       : equipment[]
+models          : models[]
 ```
 
 - **id** - The identifying value of the model, all models start their id with "ab_".
@@ -19,7 +26,13 @@ name        : string
 - **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
 - **tags** - A series of tags which identify what kind of model something is, see [Tags](../Tags.md) for more information.
 - **name** - The name of the model.
-- **description** - Specially formatted array of information included in the model, see [Description](../Description.md) for more informaiton.
+- **flavour** - Specially formatted array of information included in the model, see [Description](../../Description.md) for more informaiton.
+- **rules** - Specially formatted array of information included in the faction, see [Rules](../../Rules.md.md) for more informaiton.
+- **removed_rules** - Array of titles of rules to remove from the base faction
+- **removed_equip** - Array of ids of equipment to remove from the base faction
+- **removed_model** - Array of ids of models to remove from the base faction
+- **equipment** - List of equipment items and how that faction can purchase them, see below.
+- **models** - List of models and how that faction can add them to a warband, see below.
 
 ## Example
 

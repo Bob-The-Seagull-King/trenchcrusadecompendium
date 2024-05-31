@@ -1,10 +1,10 @@
-# Name
+# Glossary
 
-XX
+Keywords and simple rules that are shown on hover.
 
 ## Structure
 
-XX are found in *xx.json* and each one has the following structure.
+Glossary items are found in *glossary.json* and each one has the following structure.
 
 ```
 id          : string
@@ -12,6 +12,7 @@ type        : string
 source      : string
 tags        : []
 name        : string
+description : []
 ```
 
 - **id** - The identifying value of the model, all models start their id with "ab_".
@@ -24,4 +25,21 @@ name        : string
 ## Example
 
 ```
+    {
+        "id": "gl_plusdice",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "dice"}
+        ],
+        "name": "+Dice",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Modifier for ACTION rolls. For each +DICE, add one dice to the dice pool of the 2D6 roll you are about to make. +1 DICE thus makes the roll a total of 3D6. Then roll all the dice and pick the two highest. If two +DICE are added, roll 4D6 and pick the two highest, and so on.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "ACTION", "id": "gl_action"}
+            ]
+        }]
+    }
 ```

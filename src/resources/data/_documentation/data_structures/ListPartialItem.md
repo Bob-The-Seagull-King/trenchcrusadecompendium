@@ -1,10 +1,10 @@
-# Name
+# ListPartialItems
 
-XX
+ListPartialItems are used to hold information on items contained in a list group.
 
 ## Structure
 
-XX are found in *xx.json* and each one has the following structure.
+ListPartialItems are found in multiple files and each one has the following structure.
 
 ```
 id          : string
@@ -12,6 +12,7 @@ type        : string
 source      : string
 tags        : []
 name        : string
+description : []
 ```
 
 - **id** - The identifying value of the model, all models start their id with "ab_".
@@ -24,4 +25,20 @@ name        : string
 ## Example
 
 ```
+    {
+        "id": "sk_patronskill",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Patron Skill",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Pick one of the Skills offered by your Patron.",
+                "glossary": []
+            }
+        ]
+    }
 ```

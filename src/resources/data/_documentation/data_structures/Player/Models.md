@@ -1,10 +1,10 @@
-# Name
+# Models
 
-XX
+Models are the warband units.
 
 ## Structure
 
-XX are found in *xx.json* and each one has the following structure.
+Models are found in *models.json* and each one has the following structure.
 
 ```
 id          : string
@@ -29,6 +29,13 @@ abilities   : []
 - **type** - Used for broad categorization, all models have the type "Model".
 - **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
 - **tags** - A series of tags which identify what kind of model something is, see [Tags](../../Tags.md) for more information.
+- **movement** - Movement speed of a model.
+- **ranged** - Ranged attack modifier.
+- **melee** - Melee attack modifier.
+- **armour** - Injury roll modifier.
+- **base** - Size of the model base.
+- **faction_id** - The ID of the faction it belongs to.
+- **variant_id** - The ID of the faction variant it belongs to.
 - **name** - The name of the model.
 - **blurb** - Specially formatted array of information included in the model, see [Description](../../Description.md) for more informaiton.
 - **equipment** - Specially formatted array of information included in the model, see [Description](../../Description.md) for more informaiton.
@@ -58,7 +65,12 @@ abilities   : []
                         {"tag_name": "addons", "val": "ab_puppetmaster"},
                         {"tag_name": "addons", "val": "ab_tough"}
                     ],
-        "blurb": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets.",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets."
+            }
+        ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
