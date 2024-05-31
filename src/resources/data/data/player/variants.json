@@ -388,5 +388,136 @@
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
         ]
-    }   
+    }  ,
+    {
+        "id": "fv_fidaiofalamutthecabalofassassins",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "faction_id": "fc_ironsultanate",
+        "name": "Fida’i of Alamut – The Cabal of Assassins",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The pact between the Iron Sultanate and the Assassin fortress of Alamut ensures that the Sultan is served by the exquisitely skilled killers of the Old Man of the Mountain in exchange for independence of the Assassin’s domain."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "But though most outsiders know the Assassins through their service to the forces of the Iron Wall, sometimes during the dark of night small, deadly bands move silently into the hellscape of No Man’s Land. In deepest secrecy Rashid al-Din Sinan, the undisputed ruler of Alamut dispatches his hand-picked disciples on Missions of his own, communicating their orders with no spoken words, signs nor written messages, but talking directly to them in their dreams. What the purpose of such operations is no-one knows, and not even the most sadistic Heretic torturer-priest has been able to make them divulge the secrets of Alamut from captured Assassins. These warbands are known as Fida’i (which means ‘Sacrifice’), dedicated to completing their mission and returning to Alamut to receive rewards said to be able to match those of Paradise itself. They are led by a Master Assassin: one of the deadly Hands of Alamut, with two fully-trained members of the Order. A number of trainee acolytes will serve them during the mission, eager to prove their mettle and be initiated into the Order of Assassins."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Alamut is also a home to a renegade sect of Ismaili Dervishes, warrior monks sworn to poverty and a lethal way of fighting. They accompany the Assassins on their secret missions as an act of piety and payment for their shelter, and their whirling dance of death has been the end of many a disbeliever."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Fireteam",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can form up to two Fire Teams from models in the warband (not Allies or Mercenaries). Each Fireteam consists of two models. These models gain the Keyword FIRETEAM.",
+                        "glossary": [
+                            {"val": "FIRETEAM", "id": "gl_fireteam"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Blood Sacrifice:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any model (except Ecclesiastic Prisoners who are not worthy) in the Warband can purchase a Sacrificial Lamb (see below).",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Heaven Awaits:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Art of Assassination:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each Assassin included in the Warband may purchase any of the following abilities. You may purchase the same ability for more than one Assassin if you wish, but you cannot purchase the same ability more than once for the same Assassin.",
+                                "subcontent":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Hallucinogen Disguise (15 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability.",
+                                                "glossary": [{"val": "INFILTRATOR", "id" : "gl_infiltrator"}]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Thunderbolt of Alumat (20 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs.",
+                                                "glossary": [{"val": "+1 DICE", "id" : "gl_plusdice"},{"val": "ACTIONs", "id" : "gl_action"}]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Mirage of Time (20 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "oth Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit.",
+                                                "glossary": [{"val": "-1 DICE", "id" : "gl_minusdice"}]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": [],
+        "removed_model": ["md_yuzbasicaptain","md_jabireanalchemist","md_lionsofjabir","md_janissaries","md_brazenbull","md_sultanateassassin"],
+        "equipment": [
+            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
+            {"id": "eq_bowofalumat", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
+            {"id": "eq_hashashinleaf", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []}
+        ],
+        "models" : [
+            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3}
+        ]
+    }    
 ]

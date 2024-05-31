@@ -122,6 +122,7 @@ const HomeRoute: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                    <br/>
                     <div className="row">
                         <div className="separator"></div>
                     </div>

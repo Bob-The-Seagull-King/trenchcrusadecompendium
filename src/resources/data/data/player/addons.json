@@ -703,5 +703,239 @@
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
+    },
+    {
+        "id": "ab_mubarizun",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_yuzbasicaptain",
+        "parent_id": {"tag_name": "model", "val": "md_yuzbasicaptain"},
+        "name": "Mubarizun",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Yüzbaşı is expected to face the mightiest of their enemies in personal combat, inspiring the troops to victory with their personal prowess. Yüzbaşı are immune to the effects of the Keyword FEAR and add +1 DICE to injury rolls against TOUGH opponents.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "TOUGH", "id": "gl_tough"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_masteryoftheelements",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_jabireanalchemist",
+        "parent_id": {"tag_name": "model", "val": "md_jabireanalchemist"},
+        "name": "Mastery of the Elements",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the beginning of a battle, all ranged and melee weapons that an Alchemist has been equipped with may be assigned one of the following Keywords: SHRAPNEL, FIRE or GAS. All the weapons the Alchemist has will share the same Keyword. With a RISKY ACTION with +1 DICE, the Alchemist can change this Keyword into one of the others.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_timeslip",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanateassassin",
+        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
+        "name": "Time Slip",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If any type of attack (melee, ranged, mine etc.) misses an Assassin, the Assassin may slip into a moment in the future. The Assassin can move into any unoccupied space within 6”, though the Assassin cannot be moved within 1” of any enemy model or leave the battlefield. If moving out of Melee, enemies do not get free attacks.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_temporalassassin",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanateassassin",
+        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
+        "name": "Temporal Assassin",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When the Assassin charges an enemy and you’ve rolled to see if their charge reaches them, check if there are any other enemies within Assassin’s charge distance. If there is more than one eligible target, you may move the Assassin in base contact with up to two enemy models one after the other, and resolve the Assassin attacking both of the models separately, including any injuries. You can attack each model with only one of the Melee Attacks available to the Assassin. After resolving both attacks, you can decide which of the two positions the Assassin ends up in after making the melee attacks.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_minesetting",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanatesapper",
+        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
+        "name": "Mine-setting",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As an ACTION with +2 DICE, the Sapper can mine a piece of terrain they alone are touching, no bigger than 8” x 8” (an 8” section of trench, a wall, a tree, a building etc). If successful, the terrain piece is now mined. Any model (except the Sapper who set the mine) who moves into contact with the terrain piece will trigger the mine. Roll on the Injury Chart to see what happens to the model. The mine has the Keyword SHRAPNEL. After this, the terrain piece is no longer mined.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+2 DICE", "id": "gl_plusdice"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_demine",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanatesapper",
+        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
+        "name": "De-mine",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a RISKY ACTION the Sapper can disable any mine they move in contact with. If they fail, the mine blows and causes damage as specified in the rules.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_digin",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanatesapper",
+        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
+        "name": "Dig In",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "During their Activation, an Sapper can take a RISKY ACTION with +1 DICE. If successful, the Sapper is considered to be in Cover until the model moves. This can only be done on the ground.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_artificialbody",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_lionsofjabir",
+        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
+        "name": "Artificial Body",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Created through the Jabirean alchemy, the Lions have no vital organs and they must be dismembered in order to kill them. All injury rolls against the Lion are made with -1 DICE.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_mauling",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_lionsofjabir",
+        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
+        "name": "Mauling",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Downed opponent cannot stand up if it is in melee combat with a Lion of Jabir, unless it is on a 40mm or larger base.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_lionsgrace",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_lionsofjabir",
+        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
+        "name": "Lion's Grace",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Lions of Jabir may take any Dash ACTION or jump/climb/ Diving Charge ACTION with bonus +1 DICE.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_countercharge",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_janissaries",
+        "parent_id": {"tag_name": "model", "val": "md_janissaries"},
+        "name": "Counter-Charge",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the first ACTION a Janissary makes during their Activation is a Charge, they can add +1 DICE to their subsequent Melee Attack ACTIONS during this Activation.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTIONS", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_trample",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_brazenbull",
+        "parent_id": {"tag_name": "model", "val": "md_brazenbull"},
+        "name": "Trample",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Whenever the Brazen Bull is fighting any enemy model on a 32mm or smaller base in melee that is Down, it can make a single additional Melee Attack ACTION any time during its Activation against one Downed opponent. Resolve the attack as if the Brazen Bull was armed with a Trench Club. This attack Ignores armour as the Brazen Bull stomps their enemies into pulp.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_whirlingdervishes",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_devish",
+        "parent_id": {"tag_name": "model", "val": "md_devish"},
+        "name": "Whirling Dervishes",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The ritual Dance of the Dervishes is hypnotic to witness, and it is as graceful as it is deadly. All Ranged attacks against Dervishes suffer -1 DICE penalty. Dervishes do not suffer the normal -1 DICE to hit for fighting with a second melee weapon in off-hand.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
     }
 ]

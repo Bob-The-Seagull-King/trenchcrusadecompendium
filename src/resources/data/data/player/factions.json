@@ -111,7 +111,7 @@
         "type": "Faction",
         "source": "core",
         "tags": [
-            {"tag_name": "pilfrim", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": ""}
                 ],
         "name": "Trench Pilgrim",
         "flavour":  [
@@ -205,6 +205,90 @@
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
             {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
+    },
+    {
+        "id": "fc_ironsultanate",
+        "type": "Faction",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "name": "Iron Sultanate",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "When the Infidels opened the thrice- cursed Gate to Jahannam, releasing Gog and Magog upon those who believe, it seemed that all was lost and Shaytan would emerge victorious over Dunya. But the Creator of the Universe came to the aid of the Faithful, and as had been written, the great Iron Wall of Dhu al-Qarnayn manifested itself in the lands ruled by the Sultan of Rûm. A call was sent to those who believe righteously and, over the coming decades, the migration of the Faithful took place across Europa, Asia and Africa. Millions perished on the road and at sea, for the Heretics and their Shaytan lords swarmed them as locusts swarm fields of ripe sesame, devouring them and building vile monuments from their limbs and heads, so they could not be buried as is decreed in the Holy texts. But once all those who survived the journey had come, the mighty Gates of al-Qarnayn were closed and the Great Sultanate of the Invincible Iron Wall of the Two Horns That Pierce the Sky was formed"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The assaults of the slaves of Jahannam against the Sultanate have never ceased since that day, and each day new martyrs are mourned as they defend the Wall and confront the heretics who have overcome its defences. But within the walls, the lost knowledge flourishes and from mosques of white marble and gold the muezzin call the faithful to pray for the success of the Sultan’s army as it struggles to protect their lands and defend the caravan trails that provide the Sultanate with vital trade goods."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Iron Wall is the greatest defensive work in the world, a mighty bulwark festooned with the famed artillery of the Sultan. Azeb sharpshooters stand at ready, ever watchful for surprise attacks, and the elite Janissary regiments have barracks at set intervals near the wall so they can react to any attack at speed. During a more serious incursion a full muster of Azebs is called, the House of Wisdom unleashes its terrifying takwin creations upon the foe, and if the need is desperate, the Sultan himself comes forth and his Janissaries march with him to do battle, carrying their green flag before them."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Thus the protection of the Iron Wall has had an extensive influence on the Sultanate Way of war. The conscripted Azebs are experts at feigned flight and skirmish, while the loping Lions of Jabir harass the enemy’s flanks. All the while the superb artillery of the Sultan bombards the enemy as they make their tortuous journey across the battlefield littered with traps set by skilled Sappers. When they reach the ranks of the faithful, the Janissaries, Sultan’s elite household troops, close in and finish the enemy with their devastating counter-charge led by their iron- willed officers. Dreaded Assassins from Alamut prowl in the winds of time, striking the enemy elites and leaders, while the Alchemists of the House of Wisdom unleash devastating weapons made deadly by their elemental mastery, capable of overcoming the defences of virtually any foe."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Beyond the Iron Wall forces of the Sultan operate in small, mobile companies, each with a particular mission to accomplish. They hunt down apostates that have gone to serve Shaytans, look for the relics from the time of the Prophets, or seek to recover lost treasures and books of knowledge from the ruins of the fallen Caliphates. Though an understanding between the Church and the Sultanate on being co- belligerents against Jahannam exists, the commanders of these expeditions will tolerate no interference and do not hesitate to crush those who would hinder their mission. Resentment against the infidels who unleashed Gog and Magog runs deep in the Sultanate, and matters of honour are swiftly resolved with duels to the death. Woe to those who dare to hinder the mission of Those Who Believe."
+            }
+        ],
+        "rules": [ ],
+        "equipment": [
+            {"id": "eq_jezzail", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_seigejezzail", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_musket", "cost": 6, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_shotgun", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_janissaries"}]},
+            {"id": "eq_grenades", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_flamethrower", "cost": 40, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_muradbombard", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
+            {"id": "eq_flamecannon", "cost": 65, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
+            {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_halberdgun", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_greatmaul", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greataxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_titanzulfiqar", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
+            {"id": "eq_assassinsdagger", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sultanateassassin"}]},
+            {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_heavyarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_janissaries"}]},
+            {"id": "eq_alchemistarmour", "cost": 50, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_trenchshield", "cost":  15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_gasmask", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_medikit", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_alchemicalammunition", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "", "val": "Must have a Jezail or Seige Jezail"}]},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
+            {"id": "eq_cloakofalamut", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_windamulet", "cost": 10, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_holyrelic", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
+        ],
+        "models": [
+            {"id": "md_yuzbasicaptain", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_azebs", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_sultanatesapper", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6},
+            {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
     }
 ]

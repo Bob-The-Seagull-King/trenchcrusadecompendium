@@ -1424,5 +1424,403 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_jezzail",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Jezzail",
+        "equip_type": "2-Handed",
+        "range": "10\"",
+        "blurb": "These long arms are by far the most common weapons carried by the soldiers of the Sultanate of the Great Iron Wall. Their barrels are smoothbore which limits their accurate range, but this is more than made up by the fact that this allows them to be loaded with different types of Alchemical ammunition made by the Jabirean Alchemists.",
+        "modifiers": [],
+        "description":  [
+                
+            ]
+    },
+    {
+        "id": "eq_seigejezzail",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Seige Jezzail",
+        "equip_type": "2-Handed",
+        "range": "30\"",
+        "blurb": "Heavier version of the standard Jezzail. It is a large, cumbersome weapon with a shot of lead or iron weighing as much as four pounds, designed to take out even the most powerful enemies with a single shot. Azebs armed with these weapons use tripod stakes when firing them, but the mighty Janissaries often use them as their standard service gun.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                
+            ]
+    },
+    {
+        "id": "eq_sniperrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Risky", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Sniper Rifle",
+        "equip_type": "2-Handed",
+        "range": "48\"",
+        "blurb": "A sniper rifle is a high-precision, long-range rifle, widely used in the trenches to pick off high value targets such as officers, sappers and artillery crews. Expensive and rare, they are commonly given to the best marksmen and sharpshooters of the warband.",
+        "modifiers": ["+1D to Hit"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_muradbombard",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "MURAD Bombard",
+        "equip_type": "1-Handed",
+        "range": "36\"",
+        "blurb": "Named after the great Sultan who commissioned the first of these weapons to defend the Iron Wall, this mighty bombard is used to disrupt advancing enemy formations. The echo of its blast recites the 99 names of Allah, throwing even the greatest of warriors to ground like chaff.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bomb suffer a Down result due the booming shockwave, but do not take any BLOOD MARKERS or other effects from this attack.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_flamecannon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Fire", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Flame Cannon",
+        "equip_type": "1-Handed",
+        "range": "12\"",
+        "blurb": "A great cannon that shoots a stream of alchemical fire with tremendous force. It has a tendency to overheat and ignite the skin of its artillery crew, but the mighty Brazen Bulls use them as mere handguns. The secret formula used for the fuel of the Flame Cannons was gleaned from the lost Byzantine ruins, and is commonly known as Greek Fire.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "When this weapon is fired, draw an imaginary straight line 1mm wide and 12” long from the Brazen Bull. Every model along the path of the line is hit automatically by this attack – roll for their injuries intermediately. Armour does not protect against the Flame Cannon. Due to the Keyword FIRE, its hits cause an additional +1 BLOOD MARKER. This is applied after rolling for injuries.",
+                            "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_halberdgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Halberd-Gun",
+        "equip_type": "2-Handed",
+        "range": "Melle/24\"",
+        "blurb": "Invention of the House of Wisdom, this weapon acts both as a symbol of high rank and an excellent weapon in combat.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Enemies charging a model equipped with a Halberd-gun add -1 DICE in Melee combat when rolling to hit. This only applies when a model attacks after a charge, not on subsequent rounds of Melee.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_titanzulfiqar",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Titan Zulfiqar",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "This twin-tongued greatsword can weigh up to 300 pounds – only the mighty Brazen Bulls can even lift this monstrous blade, let alone wield it in combat. It sheer weight and mono-molecule sharpness cuts through even the thickest armour when swung by the superhuman strength of the takwin monstrosity.",
+        "modifiers": ["+2 on Injury Results"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +2 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 9).",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_assassinsdagger",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Assassin's Dagger",
+        "equip_type": "1-Handed",
+        "range": "Melle",
+        "blurb": "The blades of the Assassins are imbued with the Supreme Poison. In chambers deep below the surface, generations of young assassins are raised in the dark; fed a diet of scorpions, frogs, deadly mushrooms and even stranger, more noxious things, and generation by generation their tolerance grows. The poisonous blood of these willing vessels is drawn and smelted into a poisonous iron. The iron is forged into blades and deadly spells of slaying layered into each fold of the envenomed metal. Thus the blood of the first generation of Assassins lives to this day, growing more potent with each generation.",
+        "modifiers": ["+1 on Injury Results"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Adds +1 to injury rolls (i.e. a roll of 7 on the Injury Chart becomes 8). If the Assassin hits an enemy and causes at least one BLOOD MARKER, the Assassin can move away from combat with the model the Assassin wounded during this Activation without giving the opponent a chance to attack them, as the poison paralyses their enemy momentarily. Assassins can use both normal and Dash moves to do this, though this may not be used for charging.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_alchemistarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Alchemist Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Suit of armour which protects against almost all harm. This is an essential tool of Alchemists’ craft, festooned with the     Seals of Solomon which enables them to bend the elements of Creation to their will and shields them even from the devices of Hell",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Counts as Heavy Armour and therefore grants a -2 modifier to all injury rolls made against the model wearing it. In addition it makes the Alchemist immune to all damage with the Keywords FIRE and/or GAS",
+                            "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_alchemicalammunition",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "ALchemical Ammunition",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Jabirean Alchemists craft these Jezzail bullets from the slivers of the Iron Wall. Each such shot is carved the Seal of Solomon, guiding them during their path through the air.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails and Siege Jezzails.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_cloakofalamut",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Cloak of Alamut",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Created by the secret arts of the Assassin’s sect aeons ago, this cloak bends the light so that its wearer looks almost indistinguishable against any surface when they are still. It is this masterwork of Alamut that has led to the tales of the fabled Cloak of Invisibility in the legends of the Sultanate.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "All ranged attacks against a model that is in cover suffer -2 DICE penalty instead of -1 DICE. All the normal rules for cover apply otherwise.",
+                            "glossary": [{"val": "-2 DICE", "id": "gl_minusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_windamulet",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Wind Amulet",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Amulet created by the Jabirean Alchemists, capturing the essence of the Element of Wind within it.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "After the deployment, a model with the Wind Amulet may move up to 3” in any direction, though this move may not take them into melee combat or from the battlefield.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_binoculars",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Binoculars",
+        "equip_type": null,
+        "range": null,
+        "blurb": "It is quite common for officers to carry finely-crafted battlefield binoculars with them on the battlefield to survey the land ahead, spot hidden enemy troops and observe any sign of movement.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any enemy Infiltrator cannot be placed closer than 16” of this model.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_goldenkhanjar",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            
+                ],
+        "category": "melee",
+        "name": "Golden Khanjar",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Placed on a hand of an especially favoured killer by the Old Man of the Mountain himself, these wickedly curved daggers gleam as if they were made of gold, but instead they are crystallised poison, and allow their wielder to attack twice in the same instance of time. Only the Master of Alamut himself knows the secret of making these blades.",
+        "modifiers": ["+1 on Injury Results"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 8). A model armed with a Golden Khanjar can make two Attacks instead of one in melee per Melee Attack ACTION. This effect also applies to a Golden Khanjar wielded off-hand. Thus a model armed with Khanjar and additional 1-handed melee weapon can make a total of three Melee attacks during a single Activation.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_bowofalumat",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Critical", "val" : ""}
+                ],
+        "category": "ranged",
+        "name": "Bow of Alumat",
+        "equip_type": "2-Handed",
+        "range": "60\"",
+        "blurb": "This terrifying double-stringed bow shoots its deadly barbs through both time and space. Its arrows can reach impossible  distances and pass through armour by flickering through time. It leaves behind a temporal slipstream that the Assassin can travel through in an eyeblink. Made from wood taken from trees planted in the skulls of ancient assassins in the Garden of Alamut so that they might  absorb mystic powers of their former owners, these bows are some of the greatest treasures of the Old Man of the Mountain for it is said that only six now remain in his secret armouries.",
+        "modifiers": ["Ignore Armour"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Ignores Armour. If the Assassin hits a model and causes at least one BLOOD MARKER, the Assassin can instantly move into Melee range with the target as if the Assassin just charged the model, and can therefore use Melee ACTIONS as if they charged the enemy. Note that if the bow takes the target Out of Action, no BLOOD MARKERS are caused and the move cannot be made. Temporal Assassin ability cannot be used with the Bow of Alamut.",
+                            "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_hashashinleaf",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Hashashin Leaf",
+        "equip_type": null,
+        "range": null,
+        "blurb": "These leaves from the secret Garden of Alamut enhance the strength of anyone who eats them threefold. Once the effect wears off the subject will suffer from agonising muscle tears and ripping of ligaments, but many of the Order of Assassins feel that this is a small price to pay for being able to use deadlier weapons.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Gives the model consuming the potion Keyword STRONG for the duration of a single battle. CONSUMABLE.",
+                            "glossary": [{"val": "STRONG", "id": "gl_strong"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]

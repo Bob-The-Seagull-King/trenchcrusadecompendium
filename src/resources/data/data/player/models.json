@@ -811,5 +811,511 @@
                 "content": "ab_brokenonthewheel"
             }
         ]
+    },
+    {
+        "id": "md_yuzbasicaptain",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Yüzbaşı Captain ",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_mubarizun"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Your Warband must contain a Yüzbaşı Captain. Military expeditions over the Great Iron Wall into No Man’s Land carry many risks, and their commanders are field officers known as Yüzbaşı. They are expected to lead from the front and their selection is solely on merit, with no consideration given to family pedigree or wealth."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Yüzbaşı can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mubarizun"
+            }
+        ]
+    },
+    {
+        "id": "md_jabireanalchemist",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Jabirean Alchemist",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_masteryoftheelements"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Jabirean Alchemist is a master of esoteric powers, able to control fire and ice, metal and liquid; capable of creating intricate mechanical devices and artificial life as well as weapons of calamitous potency. In exchange for the freedom to practise their arts, the Alchemists supply the Sultanate with the peerless Jabirean battle lions, and serve on the front lines where their devastating alchemical compounds melt the flesh from the bones of the Unbelievers, or dissolve through even the toughest enemy armour."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Alchemist can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_masteryoftheelements"
+            }
+        ]
+    },
+    {
+        "id": "md_sultanateassassin",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "infiltrator", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Sultanate Assassin",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_timeslip"},
+            {"tag_name": "addons", "val": "ab_temporalassassin"},
+            {"tag_name": "addons", "val": "ab_infiltrator"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Assassins are a legendary order of mystic warriors, whispered about the world over for their secrecy and ruthlessness. Assassins are able to bend space and time using the sacred rituals and powerful hallucinogens discovered by magi of the order. With this esoteric power they prowl behind enemy lines, hunting their targets with merciless efficiency. They can seemingly appear in two places simultaneously, strike a foe with startling speed and then travel back into time to a moment a few heartbeats before, safe from any retaliation."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Assassin can be equipped with any weapon, armour or equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_timeslip"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_temporalassassin"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_infiltrator"
+            }
+        ]
+    },
+    {
+        "id": "md_sultanatemasterassassin",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "infiltrator", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_fidaiofalamutthecabalofassassins",
+        "name": "Master Assassin",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_timeslip"},
+            {"tag_name": "addons", "val": "ab_temporalassassin"},
+            {"tag_name": "addons", "val": "ab_infiltrator"},
+            {"tag_name": "addons", "val": "ab_tough"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Assassins are a legendary order of mystic warriors, whispered about the world over for their secrecy and ruthlessness. Assassins are able to bend space and time using the sacred rituals and powerful hallucinogens discovered by magi of the order. With this esoteric power they prowl behind enemy lines, hunting their targets with merciless efficiency. They can seemingly appear in two places simultaneously, strike a foe with startling speed and then travel back into time to a moment a few heartbeats before, safe from any retaliation."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Assassin can be equipped with any weapon, armour or equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_timeslip"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_temporalassassin"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_infiltrator"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            }
+        ]
+    },
+    {
+        "id": "md_azebs",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Azebs",
+        "attachments": [
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Azebs are soldiers recruited from the multitude of provinces of the sultanate, where every house in twenty is required to equip and provide a warrior to serve the Prince of Those Who Believe. They are often used by their superiors as light skirmishers to harass and tie down the enemies while the heavier troops close in for the kill."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
+                "glossary": [{"val": "SKIRMISHERS", "id": "gl_skirmisher"}]
+            }
+            ],
+        "abilities":  [
+        ]
+    },
+    {
+        "id": "md_assassinacolyte",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "infiltrator", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_fidaiofalamutthecabalofassassins",
+        "name": "Assassin Acolyte",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_infiltrator"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Azebs are soldiers recruited from the multitude of provinces of the sultanate, where every house in twenty is required to equip and provide a warrior to serve the Prince of Those Who Believe. They are often used by their superiors as light skirmishers to harass and tie down the enemies while the heavier troops close in for the kill."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
+                "glossary": [{"val": "SKIRMISHERS", "id": "gl_skirmisher"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_infiltrator"
+            }
+        ]
+    },
+    {
+        "id": "md_sultanatesapper",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Sultanate Sapper",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_minesetting"},
+            {"tag_name": "addons", "val": "ab_demine"},
+            {"tag_name": "addons", "val": "ab_digin"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Sultan’s Sappers are highly respected and valued specialists in the Sultan’s army. They are expected to man the great cannons of the Iron Wall no matter what the enemies throw at them, and since their mighty artillery is prone to overheating, they are easily identified by the terrible burns all over their bodies. Many has lost their lives firing their guns until the heat and smoke overcomes them."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "hovel and Tufenjieff anti-personnel mines. Sapper can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_minesetting"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_demine"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_digin"
+            }
+        ]
+    },
+    {
+        "id": "md_lionsofjabir",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "8\"",
+        "ranged": "N/A",
+        "melee": "+1",
+        "armour": "0",
+        "base": "30x60",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Lions of Jabir",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_artficialbody"},
+            {"tag_name": "addons", "val": "ab_mauling"},
+            {"tag_name": "addons", "val": "ab_lionsgrace"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Named after the deadly hunters of the plains, the Lions of Jabir can take many forms, not all of them leonine. Each one is a unique masterwork, and they are grown according to the skills and artistry of the Jabirean scientist that created them. The speed and ferocity of the Lions is nearly unmatched, and some even have strange powers granted by their alchemical birth."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Lions never carry any type of weapons but can wear armour (though no shields!) and can be equipped with Wind Amulets. They do not suffer penalties for fighting unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_artificialbody"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mauling"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_lionsgrace"
+            }
+        ]
+    },
+    {
+        "id": "md_janissaries",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Janissaries",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_countercharge"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The janissaries are the Sultanate’s elite warriors, raised from childhood in the arts of war. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Janissaries excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_countercharge"
+            }
+        ]
+    },
+    {
+        "id": "md_devish",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_fidaiofalamutthecabalofassassins",
+        "name": "Dervish",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_whirlingdervishes"},
+            {"tag_name": "addons", "val": "ab_countercharge"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The janissaries are the Sultanate’s elite warriors, raised from childhood in the arts of war. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Janissaries excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_whirlingdervishes"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_countercharge"
+            }
+        ]
+    },
+    {
+        "id": "md_brazenbull",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+2",
+        "armour": "0",
+        "base": "60",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Brazen Bull",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_pilgrimfear"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_artificialbody"},
+            {"tag_name": "addons", "val": "ab_trample"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Brazen Bull is a monstrous being of immense power and vitality, capable of tearing even the bastard child of a devil clean in half. The Sultan’s armourers equip the Bulls with heavy artillery that even the superhuman Janissaries cannot lift, let alone use in battle: flame cannons, volley guns and holy blades blessed by the Word of the Great Protector."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Brazen Bull can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Due to its vast strength and size it can only use Weapons with the Keyword HEAVY – it will simply crush weapons of normal size by accident.",
+                "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_pilgrimfear"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_artificialbody"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_trample"
+            }
+        ]
     }
 ]
