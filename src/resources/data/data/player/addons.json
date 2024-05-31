@@ -30,7 +30,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Demonic vitality makes the Heretic Priests very difficult to slay. They are subject to the rules for TOUGH creatures.",
+                            "content": "Supernatural vitality makes the model very difficult to slay. They are subject to the rules for TOUGH creatures.",
                             "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
                         }
                         ]
@@ -138,7 +138,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Heretic Heavy Infantry ignores the effect of the Keyword HEAVY on any weapon they wield.",
+                            "content": "The model ignores the effect of the Keyword HEAVY on any weapon they wield.",
                             "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
                         }
                         ]
@@ -379,5 +379,311 @@
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "2 BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
                         ]
+    },
+    {
+        "id": "ab_loudspeakers",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_warprophet",
+        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
+        "name": "Loudspeakers",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2 DICE once during each Activation. If the action is successful, all friendly models (Including the Prophet) within 8” of the Prophet can immediately move up to 3” towards the closest enemy model they can see. This move allows them to enter combat as if they charged the enemy.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_mementomori",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_warprophet",
+        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
+        "name": "Memento Mori",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The War Prophet is touched by Heaven and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_layingonhands",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_warprophet",
+        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
+        "name": "Laying On Hands",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "With a successful ACTION, you may remove D3 BLOOD MARKERs from any friendly model within 6” (including the Prophet).",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_enforcedorthodoxy",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_castigator",
+        "parent_id": {"tag_name": "model", "val": "md_castigator"},
+        "name": "Enforced Orthodoxy",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " During its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_whipofgod",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_castigator",
+        "parent_id": {"tag_name": "model", "val": "md_castigator"},
+        "name": "Whip Of God",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Unlike other models, Castigator is allowed to attack friendly models within 1”, and can do this without declaring a charge. If the Castigator takes out a friendly model with such an attack, add +1 DICE per model taken Out of Action by the Castigator to the next Morale check your Warband takes, as such an act of Piety inspires the troops.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_communicantcross",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_communicant",
+        "parent_id": {"tag_name": "model", "val": "md_communicant"},
+        "name": "Communicant Cross",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A sacred cross is nailed on the face of the Communicant. This counts as an Iron Capirote, Combat Helmet and a Gas Mask.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_miracleofregeneration",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_communicant",
+        "parent_id": {"tag_name": "model", "val": "md_communicant"},
+        "name": "Miracle of Regeneration",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the start of each of their Activations, the Communicant may remove 1 BLOOD MARKER from themselves, if they have any.",
+                "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_pilgrimbodyguard",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_communicant",
+        "parent_id": {"tag_name": "model", "val": "md_communicant"},
+        "name": "Bodyguard",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " If any model with the PILGRIM Keyword within 1” of the Communicant is hit, you can choose to redirect the hit against the Communicant instead. Determine the effects of the Attack or Ranged Attack as if it had targeted this model.",
+                "glossary": [{"val": "PILGRIM", "id": "gl_pilgrim"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_ressurection",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_trenchpilgrim",
+        "parent_id": {"tag_name": "model", "val": "md_trenchpilgrim"},
+        "name": "Ressurection",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Gold Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE (reflected on the profile above).",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_martyrdomdevice",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_ecclesiasticprisoner",
+        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
+        "name": "Martyrdom Device",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_maddash",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_ecclesiasticprisoner",
+        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
+        "name": "Mad Dash",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ecclesiastic Prisoner can add +1 DICE to their Dash ACTION.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_blessedstigmata",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_stigmaticnun",
+        "parent_id": {"tag_name": "model", "val": "md_stigmaticnun"},
+        "name": "Blessed Stigmata",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When a Stigmatic Nun suffers any BLOOD MARKERS from any source (except attacks with the Keyword GAS or FIRE which damage the nuns normally), you may immediately convert any such BLOOD MARKERS into BLESSING MARKERS. Note: This must be done when the BLOOD MARKERS are received and may not be done at a later point in the turn.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "BLESSING MARKERS", "id": "gl_blessingmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_agile",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_stigmaticnun",
+        "parent_id": {"tag_name": "model", "val": "md_stigmaticnun"},
+        "name": "Agile",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Stigmatic Nuns may take any Dash ACTION or jump/climb/Diving Charge ACTION with +1 DICE.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_catherinewheel",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_anchoriteshrine",
+        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
+        "name": "Catherine Wheel",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Anchorite can take a RISKY ACTION with +3 DICE with its Catherine Wheel in Melee combat as an attack. Due to the enormous weight and the skill of the Shrine Anchorite in inflicting maximum pain, the Catherine Wheel rolls on the Injury table with 3D6 (instead of usual 2D6), adding the all three dice together!",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_bonebreakermace",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_anchoriteshrine",
+        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
+        "name": "Bonebreaker Mace",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Anchorite may use the Bonebreaker Mace in Melee. This attack is a RISKY ACTION and has +1 DICE for rolling to hit, as well as for any Injury rolls it causes.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_pilgrimfear",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_anchoriteshrine",
+        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
+        "name": "Fear",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Model causes FEAR",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_brokenonthewheel",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_anchoriteshrine",
+        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
+        "name": "Broken on the Wheel",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Before the start of the battle, one Trench Pilgrim or Ecclesiastic Prisoner may voluntarily be broken on the wheel to show their piety and devotion (Remove all weapons, armour and equipment from the victim and use/store them as you wish). The Shrine Anchorite will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. Any attacks against the Anchorite are then taken by the volunteer instead of the Anchorite (using the Armour of the volunteer) until the volunteer has been taken Out of Action. Down result against the volunteer does not affect the Anchorite movement. Note that they are otherwise treated as a single model and share any BLOOD MARKERs from any source. A volunteer cannot make any ACTIONs or gain move -for obvious reasons. At the end of the battle, even if the Volunteer would have survived, the model dies and is removed from your Warband.",
+                "glossary": [{"val": "ACTIONs", "id": "gl_action"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
+            }
+        ]
     }
 ]

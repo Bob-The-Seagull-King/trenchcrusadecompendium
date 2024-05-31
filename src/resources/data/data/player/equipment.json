@@ -1060,5 +1060,316 @@
                                 ]
                             }
                         ]
+    },
+    {
+        "id": "eq_automaticpistol",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Off-Hand", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Automatic Pistol",
+        "equip_type": "1-Handed",
+        "range": "12\"/Melee",
+        "blurb": "Automatic pistols are symbols of prestige owing to their rarity and cost. They are excellent weapons when storming trenches or fighting in hand-to-hand combat. They boast a high rate of fire, though they can be hard to control even for the best sharpshooters since they usually lack a stock.",
+        "modifiers": ["-1D to Injury"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_molotovcocktail",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Fire", "val": ""},
+            {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Molotov Cocktail",
+        "equip_type": "Grenade",
+        "range": "6\"",
+        "blurb": "Developed on the desperate Finnish battle frontier against Ice Demons, this improvised weapon consists of a glass bottle containing a flammable substance such as gasoline, alcohol or a napalm-like mixture plus a source of ignition.",
+        "modifiers": ["-1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "-1 DICE on injury rolls. Molotov Cocktails ignore all penalties for terrain/cover, as well as ignoring all armour on a Critical Attack roll.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_musket",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Risky", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Musket",
+        "equip_type": "2-Handed",
+        "range": "18\"",
+        "blurb": "A primitive weapon from a bygone age, the musket is a smooth bore long rifle that shoots lead balls. It still sees widespread use due to its simple construction and low price.",
+        "modifiers": ["-1D to Injury"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_flail",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Flail/Scourge",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "The metal whips of the Church are supremely good at both instilling discipline in the ranks of the faithful and tormenting the heretics. Many devils also enjoy using these weapons due to the excruciating pain they inflict. These weapons are extremely difficult to dodge.",
+        "modifiers": ["+1D to Hit"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_antitankhammer",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Risky", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Anti-Tank Hammer",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "A polearm with a directional explosive mounted on its head. It is exceedingly good at taking out armoured targets but puts its user in grave danger.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Ignores armour modifiers and rolls injuries with +1 DICE. If it hits the enemy, the wielder suffers +1 BLOOD MARKER as well.",
+                            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_misericordia",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Misericordia",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "The misericordia dagger is designed to put enemies out of their misery by finding chinks in the armour: eye slits, neck joints and so forth.",
+        "modifiers": ["Ignore Armour"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Ignores the armour of opponents that are Down.",
+                            "glossary": [{"val": "", "id": ""}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_holyiconshield",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Holy Icon Shield",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Only a few of these suits of armour exist in all of Christendom. Covered with miraculous icons this suit of armour is protected by the very hand of Heaven and its wearer can withstand even direct hits from artillery.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Grants -1 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour.",
+                            "glossary": [{"val": "", "id": ""}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_ironcapirote",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Iron Capirote",
+        "equip_type": null,
+        "range": null,
+        "blurb": "A conical helmet reminiscent of the headgear of the penitents. Blessed by the Church and often containing a fragment of a relic. Iron Capirotes shield their wearers from the psychological horror of war and allow them to face creatures from the pits of Hell unflinchingly",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Negates the additional BLOOD MARKERS from weapons with SHRAPNEL Keyword. Makes the model immune to the effects of FEAR.",
+                            "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_blessedicon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Blessed Icon",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Small icons of saints, great angels and holy warriors are a common sight amongst the Trench Pilgrims. They are hung on rosaries, belts, or attached to portable shrines carried on the Pilgrims’ backs.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "When a model equipped with the Blessed Icon fails in a RISKY ACTION, this does not end the Activation. Keyword - CONSUMABLE.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_holyrelic",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Holy Relic",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Due to the threat to all Creation, the churches, cathedrals and basilicas have emptied their reliquaries and distributed their relics to the frontline troops to aid them in their battle against the damned.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "This model starts each game with +1 BLESSING MARKER.",
+                            "glossary": [{"val": "+1 BLESSING MARKER", "id": "gl_blessingmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_medikit",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Medi-Kit",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Battlefield first aid has brought many soldiers back from the brink of death. Blessed ointments can seal fatal wounds completely, while the black blood of demons used by twisted heretic medics allows troops with huge gaping wounds to ignore the pain and return to the fray.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Models with a Medi-kit can take a RISKY ACTION to remove one BLOOD MARKER from any one friendly model (including themselves) within 1” or allow one friendly model (including themselves) who is Down to regain their footing. The model who recovered from Down this way can move at full speed during its next Activation.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_musicalinstrument",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Musical Instrument",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_martyrdompills",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Martyrdom Pills",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Martyrdom pills are a potent mixture of mind-altering drugs and chemicals that inure a soldier against all pain and injury. However, it takes a tremendous toll on the body.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]

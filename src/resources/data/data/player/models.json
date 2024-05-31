@@ -424,5 +424,344 @@
             "content": "ab_goeticgaze"
         }]
 
+    },
+    {
+        "id": "md_warprophet",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "War Prophet",
+        "attachments": [
+                {"tag_name": "addons", "val": "ab_loudspeakers"},
+                {"tag_name": "addons", "val": "ab_mementomori"},
+                {"tag_name": "addons", "val": "ab_layingonhands"}
+            ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A charismatic leader and powerful fighter of the Pilgrim group. They are driven by visions of Armageddon, and their preaching and prophecies drive the pilgrimage from one battlefield to the next, as they seek to thwart the forces of Satan and find martyrdom in combat."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Loudspeakers (see below). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_loudspeakers"
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mementomori"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_layingonhands"
+            }
+        ]
+    },
+    {
+        "id": "md_castigator",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Castigator",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_enforcedorthodoxy"},
+            {"tag_name": "addons", "val": "ab_whipofgod"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Tasked with instilling the Fear of God in the troops, this orthodoxy officer keeps the soldiers on the path of righteousness and punishes those who transgress. They are protected by their unwavering faith as well as by the saints they revere."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Castigator can be equipped with any weapon, armour and equipment from the Trench Pilgrims Equipment List."
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_enforcedorthodoxy"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_whipofgod"
+            }
+        ]
+    },
+    {
+        "id": "md_communicant",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "strong", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "-3",
+        "melee": "+2",
+        "armour": "0",
+        "base": "40",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Communicant",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_communicantcross"},
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_miracleofregeneration"},
+            {"tag_name": "addons", "val": "ab_pilgrimbodyguard"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Communicants are devotees who consumed the flesh and blood of a Meta-Christ. Strengthened by the divine essence, they grow to enormous size and wounds they suffer close themselves miraculously. They see clearer blind, so blessed crosses are nailed through their eyes."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "On the battlefield they act as line-breakers and bodyguards for Prophets and Castigators, heedlessly walking through enemy fire and mauling their enemies with enormous weapons that a normal man can barely even lift."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Communicant can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List. They always carry a Communicant Cross (see below)."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_communicantcross"
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_miracleofregeneration"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_pilgrimbodyguard"
+            }
+        ]
+    },
+    {
+        "id": "md_trenchpilgrim",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Trench Pilgrim",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_ressurection"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A holy warrior of the trenches. Considers it his religious duty to make pilgrimage to the sacred battlefields to fight the heretic legions. Pilgrims wear the iron capirote to insulate their minds from the horrors of war."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Trench Pilgrim can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List."
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_ressurection"
+            }
+        ]
+    },
+    {
+        "id": "md_ecclesiasticprisoner",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "N/A",
+        "melee": "-1 DICE",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Ecclesiastic Prisoner",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_martyrdomdevice"},
+            {"tag_name": "addons", "val": "ab_maddash"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Bound in chains, their minds consumed by a desperate resolve, Prisoners surge forward, driven by the hope that their sacrificial charge will somehow cleanse their tarnished souls."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Iron Capirote. You cannot buy any additional equipment, weapons or armour for Ecclesiastic Prisoners with the exception that up to four may be equipped with a Martyrdom Device (see below) for 35 ducats each. Prisoners fight unarmed in Melee, flailing feebly with their manacled arms. The -1D penalty to Melee combat is included in the profile above."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_martyrdomdevice"
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_maddash"
+            }
+        ]
+    },
+    {
+        "id": "md_stigmaticnun",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "movement": "8\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Stigmatic Nun",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_blessedstigmata"},
+            {"tag_name": "addons", "val": "ab_agile"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Blessed with stigmata and unshakeable faith, these swordmaster nuns are the vanguard of     any assault by the holy armies."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "“From henceforth let no man trouble me: for I bear in my body the marks of our Lord and Saviour.” - Galatians 6:17"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Stigmatic Nuns can be equipped with any melee weapons, armour or equipment from the Trench Pilgrim Equipment List. Nuns may only use pistols and semi-automatic pistols as Ranged Weapons."
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_blessedstigmata"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_agile"
+            }
+        ]
+    },
+    {
+        "id": "md_anchoriteshrine",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "N/A",
+        "melee": "+3/+1",
+        "armour": "-3",
+        "base": "50",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Anchorite Shrine",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_catherinewheel"},
+            {"tag_name": "addons", "val": "ab_bonebreakermace"},
+            {"tag_name": "addons", "val": "ab_pilgrimfear"},
+            {"tag_name": "addons", "val": "ab_brokenonthewheel"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A colossal suit of machine armour fuelled by diesel and faith, the Shrine Anchorite stands as a grim symbol of humanity’s despair. Within its spiked, blood-stained interior, the pilot- monk endures a terrible form of penance, his anguished prayers and chants echoing across the battlefield. This grotesque amalgamation of suffering and devotion instils fear in the heart of the heretic, as the anchorite, a malevolent weapon draped in holy iconography and weeping gore, emerges to unleash a symphony of slaughter, where the wretched union of man and machine heralds the demise of all who oppose the Almighty."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Heavy Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace (see below). The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_catherinewheel"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_bonebreakermace"
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_pilgrimfear"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_brokenonthewheel"
+            }
+        ]
     }
 ]

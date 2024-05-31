@@ -105,5 +105,106 @@
             {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
+    },
+    {
+        "id": "fc_trenchpilgrim",
+        "type": "Faction",
+        "source": "core",
+        "tags": [
+            {"tag_name": "pilfrim", "val": ""}
+                ],
+        "name": "Trench Pilgrim",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "As the war rages against the minions of Hell, strange visions torment the faithful across the globe. Men and women touched by Heaven are granted visions and Revelations are made by the messengers of God. Sisters of the Holy Orders are marked by Stigmata and take up the sword and the cross as instructed by angels. Those who have transgressed seek to atone for their sins by taking as many followers of the Devil with them to the afterlife."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "So they come, the mad and the maimed, the God- touched and the guilt-ridden – all gathering around Prophets and Prophetesses, forming Trench Pilgrim Processions. These disorganised groups arm themselves and follow the prophets of the Lord unto the front lines. They fight with unrivalled zeal, hurling themselves against the Heretics, arming themselves with anything they can get their hands on from the oldest muskets to scourges and Molotov Cocktails"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Pilgrims are not officially sanctioned by the Holy See of New Antioch, but the Church still blesses the crusades of the faithful. Thus the Pilgrim Processions are a common sight on the battlefields, often crossing No Man’s Land in suicidal assaults upon the Heretics, directed by the visions of their Prophets and Prophetesses who lead them, urged on by the whips of Castigators who are charged with instilling the Fear of God in their troops."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The bulk of the Pilgrims are men and women with little military training, but when they don the Iron Capirote of a Trench Pilgrim, they can face even a demon from the deepest Bolgias of Hell unflinchingly. Nor is death necessarily an end to their mission: sometimes the Seventh Meta-Christ will deem a fallen pilgrim worthy and bring them back as Martyr-Penitents: warriors half-way between Heaven and Earth, able to fight once more and feel no pain from bullet or bayonet thrust."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Rarer and more dangerous are the Stigmatic Nuns, Holy Sisters who manifest wounds to match those of the Third Meta-Christ whom they venerate. They excel in close quarter combat, for each bleeding wound that they suffer makes them stronger, not weaker, as their devotion to suffering as their Lord once did gives them strength and endurance not found in common mortals. Armed with swords and pistols, they cross No Man’s Land heedless of any danger, praying to sustain wounds for the Redeemer which in turn will transform them into the very Vengeance of the Lord."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In front of the Trench Pilgrims are driven the Ecclesiastic Prisoners – either captured enemies of the True Faith or volunteer sinners. Each is strapped with a high explosive which is detonated once they reach enemy lines. They dash across the killing grounds, hoping to somehow survive the blast and escape, or take as many followers of Lucifer with them as they can, depending on their convictions."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The most puissant of Pilgrim Processions will be accompanied by a Shrine Anchorite, a metal behemoth some twelve feet tall, a living altar of war almost completely immune to any damage. The interior of the Anchorite is covered in spikes and barbed hooks so that the monk pilot is in a constant state of torment, rejoicing in their pain so they can suffer as their Lord once did. In combat they wield Adamantine Catherine Wheels of massive proportions which they use to crush sinners and heretics into a pulp, stringing them upon the wheel as a warning to others."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "There are a bewildering number and variety of Trench Pilgrim Processions: The Path of Pious Revenge swears in the name of St. Olga and uses flamethrowers, burning grenades and incendiary ammunition to assail the Heretics. The Pilgrims of the Iron Path follow St. Rita of Cascia and go to battle with hammers, mauls, maces and cudgels, and hammer nails into their heads in the memory of the saint they venerate. The Theban Legion of Rome carries the heads of the heretics upon their standards in the memory of their patron, St. Marice. They fight with swords and other blades, competing with each other for the number of heretic heads they amass."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Trench Pilgrims of the Procession of the Sacred Affliction are known for their zeal in close quarter combat, their armour decorated with icons and shields adorned with the depictions of the Saints, which despite appearances can withstand machine gun bullets. The millstones they carry upon their backs are used to tie about the necks of sinners before drowning them in the mud and blood of No Man’s Land."
+            }
+        ],
+        "rules": [ ],
+        "equipment": [
+            {"id": "eq_boltactionrifle", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_semiautomaticrifle", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_molotovcocktail", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_incendiarygrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_submachinegun", "cost": 2, "cost_id": "glory", "limit": 4, "restriction": []},
+            {"id": "eq_musket", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_shotgun", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_flamethrower", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_machinegun", "cost": 3, "cost_id": "glory", "limit": 0, "restriction": []},
+            {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_flail", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greatmaul", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_antitankhammer", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_misericordia", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_heavyarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_trenchshield", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_holyiconshield", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_ironcapirote", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_gasmask", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_blessedicon", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_holyrelic", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_medikit", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
+            {"id": "eq_incendiarybullets", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_martyrdompills", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []}
+        ],
+        "models": [
+            {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_castigator", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_communicant", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
+            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
     }
 ]
