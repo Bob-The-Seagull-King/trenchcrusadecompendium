@@ -13,7 +13,8 @@ enum ItemType {
     Skill = 'Skill',
     ListGroup = 'Group',
     TableChart = 'TableChart',
-    TableResult = 'TableResult'
+    TableResult = 'TableResult',
+    QuickRule = 'QuickRule'
 }
 
 export {ItemType}

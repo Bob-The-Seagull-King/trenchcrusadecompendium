@@ -1,0 +1,473 @@
+[
+    {
+        "id": "qr_turnsequence",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Turn Sequence",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "1. Initiative",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The player with the lowest number of models in their force will be the first to start their Activation at the beginning of each Turn. If both players have the same number of models, roll a D6 and whoever rolls highest goes first.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "2. Activate a Model",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "As the first player, choose any model in your force that you have not yet Activated during this turn. You can then have your model perform ACTIONS.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"} ]
+                    }
+                ]
+            },
+            {
+                "title": "3. End Activation",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Once you have taken any and all ACTIONS you wish, or have failed with any of your RISKY ACTIONS, the Activation of the model ends. Your opponent can now Activate one of their models. Keep Activating models in this fashion as long as either player has any models that have yet to be Activated. Once you and your opponent have Activated each of your models once, go to the Morale Phase.",
+                        "glossary": [ {"val": "ACTIONS", "id": "gl_action"},{"val": "RISKY ACTIONS", "id": "gl_riskyaction"}]
+                    }
+                ]
+            },
+            {
+                "title": "4. Morale",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "At the end of any turn, if at least half of your Warband is Down or Out of Action, roll on the Action Success Chart. If you fail, your Warband flees the battlefield and loses the battle immediately. If both Warbands are required to take this test at the same time, the smaller Warband tests first.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "5. End of Turn",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The turn ends and a new one begins.",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "qr_actions",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Actions",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Once Activated a model can take as many or as few ACTIONS during each Activation as you wish, in any order you choose. However, each ACTION can only be taken once per Activation unless otherwise stated in the rules. Thus you could fire your weapon, then Move and then Dash during the same Activation, or Dash and then Charge and so on.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Move",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": " The model may move its full Movement Speed. Normal Movement requires no roll on the Action Success Chart. You cannot Move if you Charge (see below).",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model may move away from Melee combat during their normal Move. However, every enemy that is in Melee combat with the retreating model may immediately use one of their Melee ACTIONS against the retreating model. Resolve the effects of this attack before moving the retreating model",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"} ]
+                    }
+                ]
+            },
+            {
+                "title": "Charge",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A player can choose to Charge instead of Move a model during its Activation. Choose a specific enemy model within your model’s line of sight and declare it to be the Target. A distance check should be made to see if the Target is within 12” inches of your attacking model. If they are within 12”, roll a D6 and add the result to your model’s movement speed. Use this modified movement value to Move towards the target by the most direct route possible. If you get within 1”, the model is now in Melee Combat with the target. You may Charge more than one model if you can get within 1” of them. Charging requires no roll on the Action Success Chart. If you cannot reach your opponent, simply move the distance indicated towards the target.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Dash",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "All models, unless otherwise noted, can move a second time up to their full Movement speed if they succeed in a RISKY ACTION. All normal rules for movement apply. This can be done in addition to a normal Move or Charging, at any  point of the Activation.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ]
+                    }
+                ]
+            },
+            {
+                "title": "Climb",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model may climb a sheer surface as part of their normal Move (not Dash) if it succeeds in a RISKY ACTION. It must clear the entire sheer surface with its Movement Speed.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ]
+                    }
+                ]
+            },
+            {
+                "title": "Ranged Attack",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the model has a ranged weapon and it is not engaged in Melee combat, it may attack with the weapon as detailed in its profile in the rules. Note that you cannot make a Ranged Attack and Charge afterwards, unless the Ranged Weapon has the ASSAULT Keyword.",
+                        "glossary": [{"val": "ASSAULT", "id": "gl_assault"} ]
+                    }
+                ]
+            },
+            {
+                "title": "Melee Attack",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": " If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Other Actions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Many models have other possible ACTIONS they can take during their Activations. Refer to the Warband Lists for details.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"} ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "qr_combat",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Combat",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Combat is divided into Ranged and Melee Combat. A model may fight in Melee Combat or with any ranged weapons it has.",
+                "glossary": []
+            }
+        ],
+        "rules": [
+            {
+                "title": "Ranged Attacks",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "To shoot at an enemy, a model must have a ranged weapon and be able to see the target. If the model has multiple ranged weapons, you can shoot one of them per Activation. The only way to check what your model can see is to stoop over the tabletop for a model’s eye view for actual line of sight.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models in Melee combat cannot shoot unless the rules of the weapon indicate otherwise. Some indirect fire weapons have rules that allow you to target models even out of sight – these are clearly explained in the profile for such weapons. Models can see all around themselves (i.e. 360°) and they may be turned freely to face any direction before firing.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "When making a ranged attacks follow these steps:",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Choose one Ranged Weapon ACTION, declare a target and check line of sight.",
+                                "glossary": [{"val": "ACTION", "id": "gl_action"} ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Check if the target is in range of the weapon.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Roll on the Action Success Chart as standard.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If you hit the enemy, roll on the Injury Chart.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the weapon can shoot multiple times per Activation, resolve the shots one at a time.",
+                                "subcontent": [ ]
+                            }
+                        ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "A ranged attack could be modified under the following conditions:",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Enemy Behind Cover:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Add -1 DICE to the roll. A model is considered to be cover if it is touching a piece of scenery. If the shooter can see the model in its entirety (including the base), despite it touching a scenery piece, then this penalty does not apply.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"} ]
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Long Range:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " If the enemy is more than half the weapon’s maximum range, add -1 DICE to the roll to determine if the attack hits.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"} ]
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Elevated Position:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " Add +1 DICE to hit rolls if the model is taking the shot from a position more than 3” above the target.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"} ]
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Melee Attacks",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "An activated model can use any of its Melee ACTIONS if it is in contact (i.e. within 1”) with one or more enemies. Select any melee weapon or attack action available to the model – these are clearly indicated in the characteristics of each weapon entry.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"} ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "1. Declare which melee action you are taking and what opposing model you are targeting.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "2. Roll on the Action Success Chart using any melee attacks available to the model. Add any +DICE or -DICE from any source such as BLOOD MARKERS, profile of the warrior making the attack etc.",
+                                "glossary": [{"val": "+DICE", "id": "gl_plusdice"},{"val": "-DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"} ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "3. If the result is successful, roll on the Injury Chart to determine what happens to the target (unless some Equipment or Special Ability of the model indicates otherwise).",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Generally, each model can only attack once in melee, but some can execute multiple attacks due to their natural abilities or special weapons.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Two Melee Weapons:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A model armed with two melee weapons can execute an additional attack with its second weapon. For example, a model armed with a pistol (first weapon) and knife (second weapon) can make one attack with the pistol and a second attack using the knife’s attack profile. One of the attacks (chosen by the player) suffers -1 DICE to the dice pool when determining if the attack hits. Resolve these attacks one at a time.",
+                                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+                            }
+                         ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Defended Obstacle:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the target of a melee attack is defending a stone wall, earthen rampart, fighting from a trench and so on (a simple hedge, bush or low fence is not enough), the attacker suffers -1 DICE to all rolls to see if their melee attacks hit. A model that is Down cannot benefit from a defended obstacle.",
+                                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+                            }
+                         ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Diving Into Combat:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "You may charge any enemy troops that are below a balcony or overhang, beneath a window etc that your model is on. If an enemy model is within 2” of where your warrior lands, you may make a diving charge against it. This is a RISKY ACTION, so roll on the Action Success Chart to see if the charge succeeds. The maximum height you can do this from is 6” from the landing spot.",
+                                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                            },
+                            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If you fail, your model has fallen and you must roll on the Injury Chart to see what damage it has suffered. A fallen model may not move any more during the movement phase and cannot charge the enemy – place it within 1” of the intended target. If the diving attack succeeds, the model may add +1 DICE to both Attack rolls and Injury rolls during this activation against the target of the Diving Charge. Diving Charge also negates the Defended Obstacle bonus of the target, if any.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Moving In Combat:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If a model is in Melee combat at the start of their Activation, they may move while staying  within 1” of the enemies they are engaged in combat with. This is most often used to negate the Defended Obstacle bonus. No roll is needed to do this.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "qr_movement",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Movement",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All models in the game can Move when Activated unless otherwise indicated in the rules. Each model can move up to the number of inches indicated in their profile when Activated, though they can move less and not at all if you wish.",
+                "glossary": []
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You cannot move within 1” of opposing models unless you charge them (see Charging).",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can move through friendly models as long as your movement allows you to move past them completely.",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can never move off the battlefield unless rules specifically state so.",
+                        "glossary": []
+                    }
+                ]
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Movement (including charging) is usually the only action a model can take that does not require you to roll 2D6 to determine whether you are successful or not, unless otherwise noted in the rules.",
+                "glossary": []
+            }
+        ],
+        "rules": [
+            {
+                "title": "Terrain",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "There are four types of terrain in Trench Crusade: Open, Difficult, Dangerous and Impassable. Most terrain is considered Open (including going up the side of trenches and crossing obstacles up to the base height of the moving model) and the models may move freely through it without penalty. Difficult terrain (such as rock beds, swamps, barbed wire etc.) costs 2” of movement for every 1” the character moves through it. Models may not travel through Impassable terrain.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Dangerous Terrain",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Dangerous terrain includes barbed wire, minefields, raging fires, areas covered in poisonous gas and so on. Whenever a model moves into or starts its Activation in Dangerous Terrain, it must take a RISKY ACTION or it sustains an injury. Roll on the Injury Chart as standard. Some terrain is both Difficult and Dangerous, such as barbed wire on a minefield.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Jumping Over Gaps:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model can jump across gaps of up to half of their Movement characteristic. This is a RISKY ACTION and you roll on the Action Success Chart as normal. If you fail, you Fall (see below).",
+                                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Jumping Down:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " You may jump down from heights of up to 3” voluntarily, with no ill effect or reduction to your Movement. If you do this as part of your charge move, you must succeed in a RISKY ACTION. If you succeed, you gain +1 BONUS DICE to your hit rolls. If you fail, place the model as close to the edge it jumped from as possible, but 1” away from the enemy. The model did not make the charge in this case.",
+                                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ,{"val": "+1 BONUS DICE", "id": "gl_plusdice"} ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Falling From Height",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If a model in an elevated position, within 1” of any ledge (for example on a rooftop), goes Down due to any reason (such as an enemy action) it must immediately make a roll on the Action Success Chart. On a successful roll, the model goes Down where it stood. On a failure, the model falls from the elevated position and lands on the ground directly below the point it was standing before. When a model falls it must roll on the Injury Chart if the height was more than 2”. For each full 3” you fall add +1 DICE to the injury roll.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"} ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model will also fall if they fail when taking a Jump RISKY ACTION and suffer damage as explained above.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"} ]
+                    }
+                ]
+            },
+            {
+                "title": "Flying",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Flying models ignore penalties for difficult terrain, can cross/land on dangerous terrain safely, and can move vertically without the need to take Climbing or Jumping tests.",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    }
+]

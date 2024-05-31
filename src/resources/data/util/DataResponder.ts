@@ -12,6 +12,7 @@ import skilldata from '../data/general/skills.json'
 import skillgroupdata from '../data/general/skillgroup.json'
 import tablechartdata from '../data/references/tablecharts.json'
 import tableresultdata from '../data/references/tableresults.json'
+import quickrulesdata from '../data/references/quickrules.json'
 // -----------------------------------------------------
 
 /**
@@ -104,6 +105,9 @@ class DataResponder {
             }
             case "tableresult": {
                 return tableresultdata.concat(data)
+            }
+            case "quickrules": {
+                return quickrulesdata.concat(data)
             }
             default: {
                 return data
