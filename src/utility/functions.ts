@@ -50,7 +50,7 @@ export function makestringpresentable(stringVal: string) {
  * @returns The colour associated with that job or class
  */
 export function getColour(name: string){
-    const yellow = ["yellow","fc_trenchpilgrims","fc_ironsultanate","fc_newantioch"];
+    const yellow = ["yellow","fc_trenchpilgrim","fc_ironsultanate","fc_newantioch"];
     const red = ["red","fc_hereticlegion","fc_blackgrail"];
     const green = ["green"];
     const blue = ["blue"];
