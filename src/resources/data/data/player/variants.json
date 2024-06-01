@@ -262,7 +262,7 @@
         ],
         "models" : [
             {"id": "md_hereticpriest_fv_knightsofavarice", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_goeticwarlock", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
     },
