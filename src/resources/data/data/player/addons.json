@@ -525,6 +525,24 @@
         ]
     },
     {
+        "id": "ab_blackgrailbodyguard",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_corpseguard",
+        "parent_id": {"tag_name": "model", "val": "md_corpseguard"},
+        "name": "Bodyguard",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " If any model with the BLACK GRAIL Keyword within 1” of the Guard is hit, you can choose to redirect the hit against the Guard instead. Determine the effects of the Attack or Ranged Attack as if it had targeted this model.",
+                "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+            }
+        ]
+    },
+    {
         "id": "ab_ressurection",
         "type": "Addon",
         "source": "core",
@@ -1151,6 +1169,204 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
                 "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_beelzebubstouch",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_lordoftumours",
+        "parent_id": {"tag_name": "model", "val": "md_lordoftumours"},
+        "name": "Beelzebub's Touch",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As long as the Lord of Tumours has one free hand (which carries no weapons or a shield), it can make a RISKY ACTION against any non-BLACK GRAIL model it is fighting in melee combat. If successful, the target model gains +D3 INFECTION MARKERS. It can still fight with the other hand as normal.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+D3 INFECTION MARKERS", "id": "gl_infectionmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_undeadfortitude",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_lordoftumours",
+        "parent_id": {"tag_name": "model", "val": "md_lordoftumours"},
+        "name": "Undead Fortitude",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All injury rolls against the Model are made with -1 DICE, unless the attack has the Keyword FIRE, in which case it works normally. Attacks with the Keyword GAS have no effect on it.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_parasitictick",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_corpseguard",
+        "parent_id": {"tag_name": "model", "val": "md_corpseguard"},
+        "name": "Parasitic Tick",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If a Corpse Guard attack causes a BLOOD MARKER on a creature without the Keyword BLACK GRAIL in melee combat, the Corpse Guard can remove one of their own BLOOD MARKERS.",
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_frighteningspeed",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_houndoftheblackgrail",
+        "parent_id": {"tag_name": "model", "val": "md_houndoftheblackgrail"},
+        "name": "Frightening Speed",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model take Dash actions with +1 DICE. In addition, they can get up from being Down without any movement penalty.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_overwhelminghorde",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_grailthrall",
+        "parent_id": {"tag_name": "model", "val": "md_grailthrall"},
+        "name": "Overwhelming Horde",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "For each BLACK GRAIL model within 3” of the Thrall, it gains +1 DICE to its Melee attack rolls, up to maximum +4 DICE.",
+                "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+4 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_infectedproboscis",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_heraldofbeelzebub",
+        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
+        "name": "Infected Proboscis",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In melee, the Heralds attack with their proboscis and suffer no penalties for being unarmed. If this attack causes a BLOOD MARKER on any enemy without the Keyword BLACK GRAIL, the Herald can remove one of their own BLOOD MARKERS.",
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_maddeningbuzz",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_heraldofbeelzebub",
+        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
+        "name": "Maddening Buzz",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " Every ACTION taken by an enemy within 8” of a Herald is  considered a RISKY ACTION.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_toxic",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_heraldofbeelzebub",
+        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
+        "name": "Toxic",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Attacks with Keyword GAS have no effect on the model.",
+                "glossary": [{"val": "GAS", "id": "gl_gas"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_corpulent",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_amalgam",
+        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
+        "name": "Corpulent",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "An Amalgam is a vast bulk of diseased flesh and is extraordinarily difficult to kill. All Injury rolls from any source against an Amalgam suffer a -3 DICE penalty.",
+                "glossary": [{"val": "-3 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_trample",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_amalgam",
+        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
+        "name": "Trample",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Whenever the Amalgam is fighting any enemy model on a 32mm or smaller base in melee that is Down, it can make a single additional Melee Attack ACTION any time during its Activation against one Downed opponent. Resolve the attack as if the Amalgam was armed with a Trench Club. This attack Ignores armour as the Amalgam stomps their enemies into pulp.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_unstoppable",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_amalgam",
+        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
+        "name": "Unstoppable",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "An Amalgam can always move out of melee combat with any enemy without the enemy having a chance to attack it. It can use Dash, Move or Charge to do so.",
+                "glossary": []
             }
         ]
     }

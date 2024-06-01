@@ -1835,5 +1835,399 @@
                 "content": "ab_expertmedic"
             }
         ]
+    },
+    {
+        "id": "md_lordoftumours",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "strong", "val": ""},
+            {"tag_name": "fear", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+4",
+        "armour": "0",
+        "base": "40",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Lord of Tumours",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_beelzebubstouch"},
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_strong"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A high-ranking noble officiant in the Cult of the Black Grail, the Lord of Tumours spreads filth and corruption amongst friend and foe alike. They commune with the Lord of the Flies through a trance-like ecstasy and can channel the very power of the seventh circle of Hell which Beelzebub rules."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Lord of Tumours can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_beelzebubstouch"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            }
+        ]
+    },
+    {
+        "id": "md_plagueknight",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Plague Knight",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"},
+            {"tag_name": "addons", "val": "ab_strong"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ranking lowliest in the nobility of the Black Grail, these armoured great warriors were once truly depraved worshippers Beelzebub. When the Black Grail came for them, they willingly submitted themselves to the authority of the Lord of Flies. As a result they retain a semblance of sentience and the ability to wield weapons as they did in life. They aspire to win favour in the eyes of Beelzebub and one day be promoted in the hierarchy of the Order of the Fly."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            }
+        ]
+    },
+    {
+        "id": "md_corpseguard",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "fear", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Corpse Guard",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_parasitictick"},
+            {"tag_name": "addons", "val": "ab_blackgrailbodyguard"},
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Only the strongest human devotees can survive the compounding blessings of the Black Grail. The ones that do are inducted into the ranks of the Corpse Guard, bodyguards to the nobility of the Black Grail. If they serve with distinction, they may one day join the ranks of the Infernal Nobility."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Corpse Guard can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_parasitictick"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_blackgrailbodyguard"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
+        "id": "md_houndoftheblackgrail",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""}
+                ],
+        "movement": "8\"",
+        "ranged": "N/A",
+        "melee": "+1",
+        "armour": "0",
+        "base": "30x60",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Hound of the Black Grail",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_frighteningspeed"},
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Parasitic carcasses of canines infested with maggots and flies spawned from the body of Beelzebub himself. Their unholy mission is to prowl No Man’s Land and spread diseases and pestilence in the name of their dark master."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Hounds never carry any type of weapons, armour or equipment. They do not suffer penalties for fighting unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_frighteningspeed"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
+        "id": "md_grailthrall",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "glackgrail", "val": "fear"}
+                ],
+        "movement": "4\"",
+        "ranged": "N/A",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Grail Thrall",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_overwhelminghorde"},
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The boons of the Black Grail lead slowly but surely down the path of utter corruption. Only very few of the chosen can withstand the blessings of the Lord of the Flies. Most are turned into Grail Thralls, and join the endless legions of empty, hollowed-out and diseased husks who must obey the whims of the Black Grail nobles for all eternity, while suffering the torment of their countless supernatural infections."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Thrall never carries any type of weapons, armour or equipment. They suffer no penalties to their combat ability for being unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_overwhelminghorde"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
+        "id": "md_heraldofbeelzebub",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "skirmisher", "val": ""}
+                ],
+        "movement": "10\"/Fly",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "40",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Herald of Beelzebub",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_infectedproboscis"},
+            {"tag_name": "addons", "val": "ab_maddeningbuzz"},
+            {"tag_name": "addons", "val": "ab_toxic"},
+            {"tag_name": "addons", "val": "ab_skirmisher"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Some victims of the Black Grail suffer a far worse fate than becoming a Thrall. They are bestowed with the black honour by being melded with hell-flies, growing into a grotesque winged insect made of bloated flesh. After this torturous metamorphosis they take to air as Heralds of Beelzebub, the winged squires and scouts of the Order of the Fly. Their vestigial human bodies are still conscious as they are slowly eaten from within to be used as fuel by the Herald, all the while their warped bodies fight for the glory of Hell against their will."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Heralds are the vanguard in any assault of the Black Grail, and the ear-numbing otherworldly drone of their wings strikes terror in any defender, breaking their focus and sapping their willpower. Heralds wield discarded weapons, contaminated with horrible worms that churn through them, which in turn infect their victims. Each diseased bullet has sentience of its own, finding even the smallest chink in any armour, burrowing into the nervous system and liquefying the internal organs from within."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each Herald may purchase ranged weapons from the Black Grail list but may not wear armour or carry any equipment. They can only attack in melee combat with its proboscis as detailed below.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_infectedproboscis"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_maddeningbuzz"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_toxic"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_skirmisher"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
+        "id": "md_amalgam",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "60",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Amalgam",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_corpulent"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_toxic"},
+            {"tag_name": "addons", "val": "ab_trample"},
+            {"tag_name": "addons", "val": "ab_unstoppable"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "An Amalgam is a huge, shambling mass of dozens of bodies of infected fallen enemy warriors, insects, mammals and any other living creatures that had the misfortune of succumbing to the agonising blessings of the Black Grail together. These shoggoths shamble across the battlefield like walking mountains of corpulent, diseased flesh, its flailing arms still wielding weapons its victims used in life. Anyone or anything unfortunate enough to be in its path is crushed into a disgusting pulp beneath its elephantine feet."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_corpulent"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_toxic"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_trample"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unstoppable"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
     }
 ]

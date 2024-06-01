@@ -402,5 +402,116 @@
             {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
             {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
+    },
+    {
+        "id": "fc_blackgrail",
+        "type": "Faction",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": ""}
+                ],
+        "name": "The Cult of the Black Grail",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Epidemics of typhus, malaria, typhoid, smallpox, yellow-fever, pneumonia, trench fever, Markisian disease and countless others ravage the trenches and battlefields of the Great War, but they all pale in comparison to the most dreaded of them all: the Black Grail"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Beelzebub, Lord of the Flies, stands apart from the other lords of Hell, who act mainly through their mortal followers. Instead, when he periodically gains supremacy in the bitter power struggles of the archfiends, he sends forth his deadliest curse.  "
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Infused with demonic essence from the bowels of the seventh layer of Hell, where the putrid fortress of Beelzebub stands, spews forth a torrent of demonic hell-flies, scorpions, locusts and other infernal insects. The Hellgate opens and a veritable tidal wave of foulness emerges, flowing across the land at startling speed, consuming everything and leaving indescribable horror in its wake. After nine days the insect swarm exhausts itself, devouring its own in its insatiable hunger."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Black Grail is indiscriminate in its hatred of all living things: its infections can spread to virtually any living biological matter, which bursts forth with tumours, boils and weeping pustules. Puddles and ponds of melted flesh are left in its wake, endless mouths left screaming in their agony, for the Black Grail destroys the body but leaves the mind intact to suffer. The Scientist-Priests of the Church and the Alchemists of the Sultanate fervently look for a way to inoculate their people against this foulest of diseases, but thus far they are without success. The only answer is to burn the infected settlements with specially-constructed flamethrower tanks that use holy anointing oil as the fuel for their weapons."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "But if this is not done, or the countermeasures are too late, what happens next is even worse: bodies of men, horses, dogs, insects and other animals of every kind that are infected by the Black Grail lurch to their feet, driven by a demonic will. Not living, not dead, they become vessels to spread the corruption of their master ever further, forming warbands that strive to find and infect life of any kind. They also gather things that mortals value and bring this loot as well as grisly trophies to the feet of the idols of Beelzebub they erect. Thus the Cult of the Black Grail mocks the devotions of the Faithful and their prayers."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "At the head of such warbands stand the knights of the Order of the Fly: those most depraved men and women who willingly embrace the Black Grail and whose devotion Beelzebub finds sufficient. They are granted weapons, armour and equipment corrupted by the hand of the Archfiend in exchange for sacrifices brought to the altars of Beelzebub, which these warbands build wherever they go, objects of grisly horror constructed from the remains of their victims shaped into the form of monstrous flies."
+            }            
+        ],
+        "rules": [
+            {
+                "title": "Infection Markers",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Some attacks by the weaponry of the Black Grail causes their opponents to suffer INFECTION MARKERS. These work exactly like  BLOOD MARKERS, except if a model has one or more INFECTION MARKERS when activated, it gains +1 INFECTION MARKER.",
+                        "glossary": [
+                            {"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "INFECTION MARKERS can be used to modify dice rolls exactly like BLOOD MARKERS. Use a different coloured dice (the more disgusting the better!) to indicate these markers and place them next to the infected model. A model may have up to six INFECTION MARKERS and six BLOOD MARKERS at the same time. If a model had any INFECTION MARKERS before, but has none when it is Activated, no new ones are added to the model - though it can still be re-infected by further attacks!",
+                        "glossary": [
+                            {"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Morale",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Fighting against the Black Grail is a terrifying prospect. All Morale Tests taken when fighting against any Black Grail Warband are done with -1 DICE, unless the opposing warband is Black Grail or a Demonic Warband.",
+                        "glossary": [
+                            {"val": "-1 DICE", "id": "gl_minusdice"}
+                        ]
+                    }
+                ]
+            }
+         ],
+        "equipment": [
+            {"id": "eq_boltactionrifle", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_musket", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_infestedrifle", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_corruptionbelcher", "cost": 40, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_putridshotgun", "cost": 35, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_parasitegrenade", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_visceracannon", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_plagueknight"}]},
+            {"id": "eq_greatmaul", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greataxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_plagueblade", "cost": 25, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_beelzebubsaxe", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_heavyarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchshield", "cost":  15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_blackgrailshield", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_unholytrinket", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_troopflag", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []}
+        ],
+        "models": [
+            {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_plagueknight", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_corpseguard", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
+            {"id": "md_grailthrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
+            {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
     }
 ]

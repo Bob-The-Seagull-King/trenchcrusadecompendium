@@ -1876,5 +1876,244 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_fieldshrine",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Field Shrine",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Holy reliquaries, blessed artefacts and sacred crosses are often carried to the battlefield to encourage the troops, while the Heretics bring idols of the Golden Calf, tortured captives or other wicked totems to bear.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Can be placed on the battlefield in your deployment zone. Can be destroyed if any type of attack hits it. Acts as three models for Morale Tests. It has a base size of 40mm.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_blackgrailshield",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Black Grail Shield",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Device of the Black Grail carries the blessing of the Lord of Flies. It has a will of its own, moving to intercept any bullets or other projectiles that might impede the work of Beelzebub",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Works exactly as a standard shield. In addition, if a model carrying a Black Grail Shield is targeted by a ranged attack, before rolling to hit it can immediately take an ACTION without an Activation. If successful, the missile attack suffers -2 DICE to the roll determining whether the attack hits, as the power of the Black Grail disturbs the flow of reality. If the roll is a Critical, the attack misses automatically.",
+                            "glossary": [{"val": "-2 DICE", "id": "gl_minusdice"},{"val": "ACTION", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_plagueblade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Plague Blade",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Carrying the viral strain of Beelzebub himself, these weapons are the terror of all mortals. Even the tiniest nick or scratch usually leads to an agonising death and eternal servitude to the Lord of Flies as a ghastly walking corpse",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from a Plague Blade, they will gain an INFECTION MARKER instead.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_beelzebubsaxe",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Beelzebub's Axe",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Carrying the viral strain of Beelzebub himself, these weapons are the terror of all mortals. Even the tiniest nick or scratch usually leads to an agonising death and eternal servitude to the Lord of Flies as a ghastly walking corpse.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from Beelzebub’s Axe, they will gain an INFECTION MARKER instead.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_infestedrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Infested Rifle",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "Armour offers little protection against the horrid, tainted bullets of this rifle, polluted by the power of Beelzebub himself. The bullets are semi-sentient, flying through the tiniest of chink in any armour.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "When resolving hits from an Infested Rifle, the modifier to injury rolls offered by a model’s armour is reduced by 1. Thus Heavy armour would only offer a -1 modifier to injury rolls, Standard Armour would offer no modifier and so on.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_corruptionbelcher",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Gas", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Corruption Belcher",
+        "equip_type": "2-Handed",
+        "range": "8\"",
+        "blurb": "Corruption Belchers spew forth noxious gas and corrosive fumes captured from the Bolgias of the putrid swamps of the seventh layer of Hell.",
+        "modifiers": ["-1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "A Corruption Belcher hits one model within range automatically with its ranged attack ACTION. It ignores Armour. Injuries caused by a Corruption Belcher are rolled with an additional -1 DICE. It also has the Keyword GAS, so it inflicts an additional +1 BLOOD MARKER on enemies it hits.",
+                            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_putridshotgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Putrid Shotgun",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "Loaded with corroded demon-possessed winged shot filled with infected parasite larvae, the rounds of the Putrid Shotguns are almost impossible to avoid. This repulsive weapon is nicknamed ‘blunderpus’ by the New Antioch troops.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from a Putrid Shotgun, they will gain an INFECTION MARKER instead. The Putrid Shotgun adds +1 DICE to hit on Ranged Attacks. However, injuries are rolled with -1 DICE due the low penetration power at long range.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_parasitegrenade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Parasite Grenade",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "Gift from the Lord of the Flies, these grenades are filled with parasitic mind worms whose bites cause fever dreams and terrifying hallucinations. They are used to force the mortals away from the safety of defended bunkers and trenches.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "If a Parasite Grenade hits a model, the Black Grail player can move this model up 3” into any direction they wish. This can be used to move the model out of cover, to fall from a high position, or even into Melee with their enemies. This additional effect does not work on models with the Keyword FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_visceracannon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Viscera Cannon",
+        "equip_type": "2-Handed",
+        "range": "18\"",
+        "blurb": "This heavy firearm is the most loathsome and repulsive of all the weapons in the arsenal of the Black Grail - and that is saying something, considering the stiff competition it has. A warrior armed with this pride of Beelzebub inserts its tubes into their own abdomen and then shoots the corrosive contents of their own innards at the enemy. It is operated by a hand crank that first builds pressure inside the user until they are at the point of bursting, and then releases the spray of viscera at their foe. The greater the amount of their own flesh the user releases, the more horrific the damage.",
+        "modifiers": ["+2D to Hit"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Viscera Cannon has additional +2 DICE on Ranged Attack rolls as even the slightest splash can kill. If it hits the enemy, roll to injure as normal. After rolling for injuries, you can boost the damage by up to three additional BLOOD MARKERS per hit by taking the same number of BLOOD MARKERS on the shooter itself.",
+                            "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]
