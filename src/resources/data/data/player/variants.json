@@ -1041,23 +1041,6 @@
             }
         ],
         "rules": [
-            {
-                "title": "Variant Rules",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                        "content": "Highland Machine Armour:",
-                        "subcontent": [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "",
-                                "glossary":  [{"val": "", "id": ""}]
-                            }
-
-                        ]
-                    }
-                ]
-            } 
         ],
         "removed_rules": [],
         "removed_equip": ["eq_blackgrailshield","eq_beelzebubsaxe","eq_plagueblade","eq_putridshotgun"],
@@ -1072,7 +1055,6 @@
         "models" : [
             {"id": "md_executor", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
             {"id": "md_plagueknight_fv_dirgeofthegreathegemon", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_corpseguard", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_thebereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
