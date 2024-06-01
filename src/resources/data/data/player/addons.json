@@ -972,6 +972,7 @@
                 "content": "You may apply any of these Alchemical Formulas to your Homunculi, either during its creation or later during any Post-Battle Sequence as long as you pay the price of each Formula. You can never have more than one Alchemic Formula of the same type unless otherwise specified.",
                 "glossary": []
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Wings (3 Glory Points):",
@@ -983,6 +984,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Elemental Resistance (2 Glory Points):",
@@ -994,6 +996,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Massive size (5 Glory Points):",
@@ -1005,6 +1008,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Enslaved Mind (2 Glory Points):",
@@ -1016,6 +1020,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Human hands (2 Glory Points):",
@@ -1027,6 +1032,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Inhuman Strength (2 Glory Points): ",
@@ -1038,6 +1044,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Terrifying Appearance (1 Glory Point):",
@@ -1049,6 +1056,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Additional Arm (2 Glory Points):",
@@ -1060,6 +1068,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Two heads (1 Glory Point):",
@@ -1071,6 +1080,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Hypnotic Eyes (2 Glory Points):",
@@ -1082,6 +1092,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Hawk Eyes (1 Glory Points):",
@@ -1093,6 +1104,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Startling Speed (2 Glory Points):",
@@ -1104,6 +1116,7 @@
                     }
                 ]
             },
+            {"tags": [{"tag_name": "desc_type", "val": "gap"}],  "content": ""},
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
                 "content": "Seal of Solomon (2 Glory Points):",
