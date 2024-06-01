@@ -2115,5 +2115,128 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_damascusarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Damascus Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "No armour more splendid exists within the Sultanate than this magnificent chain mail made from the very Iron Wall that protects those who believe by the smiths of New Damascus. They are given as a reward to the greatest warriors for their service on the battlefield by the Sultan’s hand alone. Each ring of this armour is inscribed with a verse from the Holy Quran and is thus utterly unbreakable.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "This Armour confers a -2 modifier to any Injury Rolls. This modifier applies even against attacks that ignore Armour. It adds +1 to the Scars of the model. Only one model can ever wear this armour. Even if this armour is captured by the enemy, it cannot be worn by a model that does not have the Keyword SULTANATE.",
+                            "glossary": [{"val": "SULTANATE", "id": "gl_sultanate"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_sultanategrandcannon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Sultanate Grand Cannon",
+        "equip_type": "1-Handed",
+        "range": "48\"",
+        "blurb": "Mounted on the Great Iron Wall, these are the main artillery that the Sultanate produces in vast numbers. Normally fixed in place, a variant suited for the massive hands of the Brazen Bulls has been designed so the living field artillery of the Padishah can take on truly heavily armoured enemies and vehicles.",
+        "modifiers": ["+2D to Injury","Ignore Armour"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "If the Great Cannon hits a target but does not take it out of action, the target is pushed back by 1D6” directly away from the shooter. If they hit another model or a solid object, they stop.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_kilij",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Kilij",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "These are swords of warriors sworn to follow the martial ideals of furūsīyah. Curved swords of unsurpassed sharpness, their blades are treated by the Alchemists of the House of Wisdom to cut through even the infernal Tartarus Armour.",
+        "modifiers": ["+1 on Injury Results"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_masterworkjezzail",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Masterwork Jezzail",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "It takes a year of combined efforts from a Jabirean Alchemist and one of the Sultan’s own gunsmiths to produce this magnificent longarm. Its bullets are enhanced to seek new Unbelievers if they penetrate their target.",
+        "modifiers": ["+1D to Hit"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "You can shoot at opponents in melee without having to randomise between friendly and enemy models. Masterwork Jezzail is loaded with Alchemical Ammunition, so it has +1 DICE on all to hit rolls. If you roll greater than required 7 on Action Success Chart to hit, you can also hit another enemy model with it in distance equal to the number you beat the 7 by. Roll Injuries separately for both models.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_rocketpropelledgrenade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Rocket Propelled Grenade",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "These shoulder-fired weapons launch a rocket with an explosive warhead. They are a recent invention, and thus expensive and difficult to manufacture. Consequently, they are only available in limited numbers and even then only the most famous warbands will be equipped with these deadly armour-piercing weapons.",
+        "modifiers": ["+1D to Injury", "Ignore Armour"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to all Injury rolls to hit and ignore armour. If an RPG hits a target but does not take it out of action, the target is pushed back by 1D3” directly away from the shooter. If they hit another model or a solid object, they stop. A model may carry a single RPG and any one other Ranged Weapon with them.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]

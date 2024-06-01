@@ -93,7 +93,8 @@
             {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_infernalbrandmark", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_hellboundsoulcontract", "cost": 5, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "model", "val": "md_heretictrooper"},{"type": "model", "val": "md_anointedheavyinfantry"}]}
+            {"id": "eq_hellboundsoulcontract", "cost": 5, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "model", "val": "md_heretictrooper"},{"type": "model", "val": "md_anointedheavyinfantry"}]},
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -195,7 +196,8 @@
             {"id": "eq_medikit", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
             {"id": "eq_incendiarybullets", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_martyrdompills", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []}
+            {"id": "eq_martyrdompills", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -278,7 +280,12 @@
             {"id": "eq_windamulet", "cost": 10, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_holyrelic", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_holyrelic", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_damascusarmour", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_sultanategrandcannon", "cost": 12, "cost_id": "glory", "limit": 0, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
+            {"id": "eq_kilij", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_masterworkjezzail", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []}
         ],
         "models": [
             {"id": "md_yuzbasicaptain", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -390,7 +397,8 @@
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
             {"id": "eq_martyrdompills", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []}
         ],
         "models": [
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
