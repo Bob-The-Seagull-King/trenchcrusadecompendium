@@ -204,7 +204,8 @@
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_holygrenade", "cost": 2, "cost_id": "glory", "limit": 3, "restriction": []},
             {"id": "eq_donkeysjawbone", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_hornofjoshua", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []}
+            {"id": "eq_hornofjoshua", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]}
         ],
         "models": [
             {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -217,7 +218,8 @@
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
+            {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     },
     {
@@ -413,7 +415,8 @@
             {"id": "eq_martyrdompills", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []}
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]}
         ],
         "models": [
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -426,7 +429,8 @@
             {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     },
     {

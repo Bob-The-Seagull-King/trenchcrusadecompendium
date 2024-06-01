@@ -2573,5 +2573,163 @@
                 "content": "ab_hellhound"
             }
         ]
+    },
+    {
+        "id": "md_witchburnergeneral",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "-2",
+        "base": "32",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Witchburner General",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_divinejudgement"},
+            {"tag_name": "addons", "val": "ab_ceremonialduty"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Witchburners are the field officers of the Inquisition. They are tasked with hunting down and punishing witches, warlocks and heretics that they cannot be brought to face justice by conventional means."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "On the battlefield they have the power to channel divine retribution on those deemed to have transgressed against God, causing sinners to burst into flames with mere words of condemnation."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Witchburner is equipped with Heavy Armour, wears a Helmet and carries a War Gavel.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_divinejudgement"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_ceremonialduty"
+            }
+        ]
+    },
+    {
+        "id": "md_",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "",
+        "attachments": [
+            {"tag_name": "addons", "val": ""}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": ""
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "",
+                "glossary": [{"val": "", "id": ""}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": ""
+            }
+        ]
+    },
+    {
+        "id": "md_",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "",
+        "attachments": [
+            {"tag_name": "addons", "val": ""}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": ""
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "",
+                "glossary": [{"val": "", "id": ""}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": ""
+            }
+        ]
+    },
+    {
+        "id": "md_",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "",
+        "attachments": [
+            {"tag_name": "addons", "val": ""}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": ""
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "",
+                "glossary": [{"val": "", "id": ""}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": ""
+            }
+        ]
     }
 ]

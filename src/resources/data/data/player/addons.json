@@ -1651,5 +1651,41 @@
                 "glossary": [{"val": "FIRE", "id": "gl_fire"}]
             }
         ]
+    },
+    {
+        "id": "ab_divinejudgement",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_witchburnergeneral",
+        "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
+        "name": "Divine Judgement",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Witchburner can select any model with the Keyword HERETIC, BLACK GRAIL or DEMON within 36” (even if hidden or out of sight) and bring the Judgement of Heaven upon them with a Litany of Condemnation. This is a RISKY ACTION. If successful, roll D3 and add this number of BLOOD MARKERS to the target as it bursts into agonising flames. This holy fire even affects units that are immune to FIRE weapons.",
+                "glossary": [{"val": "HERETIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMON", "id": "gl_heretic"},{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_ceremonialduty",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_witchburnergeneral",
+        "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
+        "name": "Ceremonial Duty",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " The Witchburner has taken vows to persecute heretics with extreme prejudice. Nothing will stop this holy task. The Witchburner is immune to FEAR. Due to the dignity of their status, a Witchburner will never Dash when moving.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
     }
 ]
