@@ -29,7 +29,7 @@ class FactionVariantFactory {
                 tags: _addon.tags, // Tags associated with that item (used for sorting and synergies)
                 flavour: _addon.flavour,
                 rules: ruleSet,
-                name: _addon.name,
+                name: "Variant: " + _addon.name,
                 equipment: equipSet,
                 models: modelSet
             }
