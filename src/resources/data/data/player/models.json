@@ -2725,39 +2725,66 @@
         ]
     },
     {
-        "id": "md_",
+        "id": "md_observer",
         "type": "Model",
         "source": "core",
         "tags": [
                 ],
         "movement": "8\"",
-        "ranged": "0",
-        "melee": "+1",
-        "armour": "0",
+        "ranged": "N/A",
+        "melee": "+2",
+        "armour": "-1",
         "base": "25",
         "faction_id": "fc_none",
         "variant_id": "fv_basic",
-        "name": "",
+        "name": "Observer",
         "attachments": [
-            {"tag_name": "addons", "val": ""}
+            {"tag_name": "addons", "val": "ab_lightningspeed"},
+            {"tag_name": "addons", "val": "ab_temporalfugue"},
+            {"tag_name": "addons", "val": "ab_eyeofgod"},
+            {"tag_name": "addons", "val": "ab_voiceofgod"}
                     ],
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": ""
+                "content": "When the need is great, the Synod of Strategic Prophecy sends Observers to support the war effort. This order of warrior monks lives a life of absolute solitude, sharpening their minds and bodies, making of themselves living weapons in the Hands of God."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Once a soldier joins the order, they never leave the Temple of The Word. The slightest disturbance to their prayers and training interrupts their ability to commune with the Lord of all Creation. Thus the days of the Observers are spent in secluded, cloistered cells, when not practicing their martial or mental disciplines."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The rare exception is when they are summoned to the battlefield. Here, amidst the chaos and carnage, their unique abilities can decisively shift the balance in favour of the faithful. Observers wear a specially crafted helmet enabling them to attune to the Voice of God. This remarkable connection grants them the capacity to simultaneously perceive the immediate past, present and future, to a degree. This allows them to perform unrivalled martial feats, but a living human is not meant to hear the Holy Words, so it comes at a cost. Since the Voice of God never decays, they must concentrate with superhuman focus to extricate the righteous guidance amidst the narrative spanning from creation’s inception to the present moment. The ceaseless resonance of the Divine Echo ringing in their ears renders sleep impossible. Therefore they must resort to potent sedatives and mind-altering drugs for them to endure the heavy burden of their battlefield role for any length of time."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Observers diligently practice the recitation of the Words of God, granting them the power to issue commands to anyone they address, friend or foe. The special metal of their helmet allows them to replicate the Holy Word as closely as it is possible, compelling any creature in creation to obey them momentarily."
             }
         ],
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "",
-                "glossary": [{"val": "", "id": ""}]
+                "content": "Standard Armour, Oculus Helm (counts as Combat Helmet and Gas Mask), Trench Polearm, in-built First Aid Kit.",
+                "glossary": []
             }
             ],
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": ""
+                "content": "ab_lightningspeed"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_temporalfugue"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_eyeofgod"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_voiceofgod"
             }
         ]
     }

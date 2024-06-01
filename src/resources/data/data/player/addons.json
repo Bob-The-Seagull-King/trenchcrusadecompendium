@@ -1763,5 +1763,77 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "ab_lightningspeed",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_observer",
+        "parent_id": {"tag_name": "model", "val": "md_observer"},
+        "name": "Lightning Speed",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In Melee, the Observer may attack twice with its Trench Polearm instead of only once.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_temporalfugue",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_observer",
+        "parent_id": {"tag_name": "model", "val": "md_observer"},
+        "name": "Temporal Fugue",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " Add -1 DICE to all enemy Ranged and Melee Attacks that target the Observer.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_eyeofgod",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_observer",
+        "parent_id": {"tag_name": "model", "val": "md_observer"},
+        "name": "Eye of God",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the Observer fails any ACTION you take, you may re-roll the dice if you wish. However, if any of the dice roll a 1, there is psychic backlash and the Observer is knocked Down as per Injury Table result, and their Activation immediately ends.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_voiceofgod",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_observer",
+        "parent_id": {"tag_name": "model", "val": "md_observer"},
+        "name": "Voice of God",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a RISKY ACTION, the Observer may command any model on the board, friend or foe, that has not been Activated this Turn. If you succeed on the roll, that model is compelled by the Divine Words and will be activated immediately, and the Observer’s Activation ends.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
     }
 ]
