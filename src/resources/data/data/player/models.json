@@ -2013,7 +2013,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "elite", "val": ""},
             {"tag_name": "tough", "val": ""},
             {"tag_name": "strong", "val": ""},
@@ -2075,7 +2075,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "fear", "val": ""},
             {"tag_name": "elite", "val": ""}
                 ],
@@ -2125,7 +2125,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "elite", "val": ""},
             {"tag_name": "fear", "val": ""}
                 ],
@@ -2180,7 +2180,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "fear", "val": ""}
                 ],
         "movement": "8\"",
@@ -2229,8 +2229,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
-            {"tag_name": "glackgrail", "val": "fear"}
+            {"tag_name": "blackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""}
                 ],
         "movement": "4\"",
         "ranged": "N/A",
@@ -2278,7 +2278,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "fear", "val": ""},
             {"tag_name": "skirmisher", "val": ""}
                 ],
@@ -2342,7 +2342,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "glackgrail", "val": ""},
+            {"tag_name": "blackgrail", "val": ""},
             {"tag_name": "fear", "val": ""},
             {"tag_name": "tough", "val": ""}
                 ],
