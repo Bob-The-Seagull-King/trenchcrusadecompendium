@@ -1319,6 +1319,66 @@
         ]
     },
     {
+        "id": "md_homunculus",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Homunculus",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_recreation"},
+            {"tag_name": "addons", "val": "ab_artificialbody"},
+            {"tag_name": "addons", "val": "ab_alchemicalformula"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Jabirean takwin servants, from diminutive homunculi to the mighty Brazen Bulls are the crowning achievement of the alchemists of the Jabirean House of Wisdom. Within the Sultanate they serve the great and the powerful in various roles from alchemical assistant and manual labour that can operate in the extremes of heat or in polluted and noxious spaces, all the way to the living war machines that accompany the warriors of Sultan on the battlefield"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As the Alchemist’s abilities grow, they can work on shaping their takwin creation into new and more potent forms, for unlike naturally born creatures the alchemist can mould their flesh and organs as a potter moulds fresh clay."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each Homunculus is a handcrafted masterpiece of its creation, and reflects the personality and artistic flair of its creator. They are often richly decorated with amulets, jewellery or precious metals or painted with henna dye that never fades."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As the Iron Sultanate is a closed nation where only carefully selected traders and merchants are allowed to visit, mercenaries and allies are a rare sight in the army of the Sultan. Instead, the takwin creations of the Alchemists allows the soldiers of the Prophet to create specialist artificial warriors to fill in gaps in their arsenal. The faith of these creatures is often miserable. The intelligence that they require to operate on the battlefield also makes them aware of their horrific existence outside of the natural order, forced by the power of the Seal of Solomon to fight and fall in battle in thousands of agonising ways, only to be raised again, and shaped into ever more unnatural form to suit the needs of their masters."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The homunculus cannot be equipped with any weapons, armour or equipment. It can fight in melee without any penalty.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_recreation"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_artificialbody"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_alchemicalformula"
+            }
+        ]
+    },
+    {
         "id": "md_lieutenant",
         "type": "Model",
         "source": "core",

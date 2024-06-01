@@ -298,7 +298,8 @@
             {"id": "md_sultanatesapper", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6},
-            {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+            {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_homunculus", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": "1 per Alchemist"}
         ]
     },
     {

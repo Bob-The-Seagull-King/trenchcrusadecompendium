@@ -939,6 +939,185 @@
         ]
     },
     {
+        "id": "ab_recreation",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_homunculus",
+        "parent_id": {"tag_name": "model", "val": "md_homunculus"},
+        "name": "Re-Creation",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If the Homunculi goes Out of Action during battle and is deemed to have been killed in the post-battle sequence, do not remove it from your roster. Instead, you can use 1 Glory Point at any time between battles to bring it back to life.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_alchemicalformula",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_homunculus",
+        "parent_id": {"tag_name": "model", "val": "md_homunculus"},
+        "name": "Alchemical Formula",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may apply any of these Alchemical Formulas to your Homunculi, either during its creation or later during any Post-Battle Sequence as long as you pay the price of each Formula. You can never have more than one Alchemic Formula of the same type unless otherwise specified.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Wings (3 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculi can Fly as explained in the rules and gains a movement speed of 8”.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Elemental Resistance (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculi does not suffer additional BLOOD MARKERs with any damage with keyword GAS or FIRE",
+                        "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Massive size (5 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculus’ size is increased into vast proportions. It now has a base size of 40mm and it gains the Keyword TOUGH. This formula cannot be combined with the Alchemical Formula Wings.",
+                        "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Enslaved Mind (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculi gains the Keyword FIRETEAM along with 1 model of your choice in the Warband.",
+                        "glossary": [{"val": "FIRETEAM", "id": "gl_fireteam"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Human hands (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculi can buy and wield any weapon allowed in the Iron Sultanate warband list for any non-ELITE warrior or limited to a specific Troop type. They can also carry a Trench Shield. This Formula cannot be combined with the Alchemical Formula Wings. This will apply to human hands Alchemic Formula as well.",
+                        "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Inhuman Strength (2 Glory Points): ",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 40mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "STRONG", "id": "gl_strong"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Terrifying Appearance (1 Glory Point):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Be it through alluringly beauty or horrifying visage of terror, this Homunculus gains the Keyword FEAR.",
+                        "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Additional Arm (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Homunculi can perform an additional attack ACTION in combat without any penalty. This Formula combines with Human Hands).",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Two heads (1 Glory Point):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "This Homunculi has two heads, and therefore can have two sets of eyes via Alchemical Formula.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Hypnotic Eyes (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Enemies suffer -1 DICE to their Melee attacks. Does not affect enemies with the keyword BLACK GRAIL or isn’t a Sniper Priest.",
+                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Hawk Eyes (1 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The eyesight of the Homunculus is based that of a predatory Bird. It can add +1 DICE to its Ranged Attack characteristic.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Startling Speed (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Homunculus adds +1 DICE to its Dash ACTIONs.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+                    }
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Seal of Solomon (2 Glory Points):",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "This Formula greatly enhances the intelligence of the Homunculus. It can now buy and use Equipment from the Sultanate Warband Equipment list as long as it is not limited to ELITE models.",
+                        "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id": "ab_whirlingdervishes",
         "type": "Addon",
         "source": "core",
