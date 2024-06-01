@@ -607,14 +607,14 @@
         ]
     }  ,
     {
-        "id": "fv_firerangers",
+        "id": "fv_eirerangers",
         "type": "Variant",
         "source": "core",
         "tags": [
             {"tag_name": "newantioch", "val": ""}
                 ],
         "faction_id": "fc_newantioch",
-        "name": "Fire Rangers",
+        "name": "Eire Rangers",
         "flavour":  [ 
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
@@ -774,7 +774,7 @@
         ],
         "models" : [
             {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_lieutenant_fv_firerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_lieutenant_fv_eirerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
             {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
         ]
     }  ,

@@ -1544,7 +1544,7 @@
         ]
     },
     {
-        "id": "md_lieutenant_fv_firerangers",
+        "id": "md_lieutenant_fv_eirerangers",
         "type": "Model",
         "source": "core",
         "tags": [
@@ -1559,8 +1559,8 @@
         "armour": "0",
         "base": "32",
         "faction_id": "fc_newantioch",
-        "variant_id": "fv_firerangers",
-        "name": "Lieutenant (Fire Rangers)",
+        "variant_id": "fv_eirerangers",
+        "name": "Lieutenant (Eire Rangers)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_skirmisher"}
@@ -1776,7 +1776,7 @@
         "armour": "0",
         "base": "25",
         "faction_id": "fc_newantioch",
-        "variant_id": "fv_firerangers",
+        "variant_id": "fv_eirerangers",
         "name": "Fianna",
         "attachments": [
             {"tag_name": "addons", "val": "ab_shockcharge"},
