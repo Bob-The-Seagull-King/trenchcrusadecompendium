@@ -642,7 +642,7 @@
         "melee": "+1",
         "armour": "-1",
         "base": "40",
-        "faction_id": "fc_trenchpilgrim",
+        "faction_id": "fc_none",
         "variant_id": "fv_basic",
         "name": "Communicant Anti-Tank Hunter",
         "attachments": [
