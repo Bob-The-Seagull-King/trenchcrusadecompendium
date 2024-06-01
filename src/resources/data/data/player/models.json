@@ -2348,5 +2348,230 @@
                 "content": "ab_unholyhorror"
             }
         ]
+    },
+    {
+        "id": "md_wardog",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "War Dog",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_fourpaws"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Great many animals serve in the trenches alongside the soldiers. Wardogs are by far the most common, but tame ocelots, barbary apes, small bears, and other exotic pets abound, while the forces of Hell keep Hellhounds and other infernal creatures as pets."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These loyal canines can be trained to serve in multiple roles: as mercy dogs focused on rescuing wounded soldiers, fierce guard dogs or as messengers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            }
+        ]
+    },
+    {
+        "id": "md_guarddog",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Guard Dog",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_fourpaws"},
+            {"tag_name": "addons", "val": "ab_guarddog"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Great many animals serve in the trenches alongside the soldiers. Wardogs are by far the most common, but tame ocelots, barbary apes, small bears, and other exotic pets abound, while the forces of Hell keep Hellhounds and other infernal creatures as pets."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These loyal canines can be trained to serve in multiple roles: as mercy dogs focused on rescuing wounded soldiers, fierce guard dogs or as messengers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_guarddog"
+            }
+        ]
+    },
+    {
+        "id": "md_mercydog",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Mercy Dog",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_fourpaws"},
+            {"tag_name": "addons", "val": "ab_mercydog"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Great many animals serve in the trenches alongside the soldiers. Wardogs are by far the most common, but tame ocelots, barbary apes, small bears, and other exotic pets abound, while the forces of Hell keep Hellhounds and other infernal creatures as pets."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These loyal canines can be trained to serve in multiple roles: as mercy dogs focused on rescuing wounded soldiers, fierce guard dogs or as messengers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_mercydog"
+            }
+        ]
+    },
+    {
+        "id": "md_martyrdomdog",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "0",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Martyrdom Dog",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_fourpaws"},
+            {"tag_name": "addons", "val": "ab_martyrdomdog"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Great many animals serve in the trenches alongside the soldiers. Wardogs are by far the most common, but tame ocelots, barbary apes, small bears, and other exotic pets abound, while the forces of Hell keep Hellhounds and other infernal creatures as pets."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These loyal canines can be trained to serve in multiple roles: as mercy dogs focused on rescuing wounded soldiers, fierce guard dogs or as messengers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_martyrdomdog"
+            }
+        ]
+    },
+    {
+        "id": "md_hellhound",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "8\"",
+        "ranged": "0",
+        "melee": "+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Hellhound",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_fourpaws"},
+            {"tag_name": "addons", "val": "ab_hellhound"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Great many animals serve in the trenches alongside the soldiers. Wardogs are by far the most common, but tame ocelots, barbary apes, small bears, and other exotic pets abound, while the forces of Hell keep Hellhounds and other infernal creatures as pets."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These loyal canines can be trained to serve in multiple roles: as mercy dogs focused on rescuing wounded soldiers, fierce guard dogs or as messengers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_hellhound"
+            }
+        ]
     }
 ]

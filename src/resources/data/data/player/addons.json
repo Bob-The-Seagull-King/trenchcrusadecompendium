@@ -1561,5 +1561,95 @@
                 "glossary": []
             }
         ]
+    },
+    {
+        "id": "ab_fourpaws",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_wardog",
+        "parent_id": {"tag_name": "model", "val": "md_wardog"},
+        "name": "Four Paws",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs may take any Dash ACTION or jump/Diving Charge ACTION with bonus +1 DICE. They cannot climb sheer surfaces.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_guarddog",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_guarddog",
+        "parent_id": {"tag_name": "model", "val": "md_guarddog"},
+        "name": "Guard Dog",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These dogs both warn their masters of impending danger and fight fiercely for their company. No infiltrator can be placed within 12” of a Guard Dog, and you can charge any enemy within 4” of this dog even if it is out of sight.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_mercydog",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_mercydog",
+        "parent_id": {"tag_name": "model", "val": "md_mercydog"},
+        "name": "Mercy Dog",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mercy dogs carry a Medi-Kit which can be used by any friendly model on themselves within 1” of the dog. Mercy dogs can also drag any model within 1” that is Down at ½ speed with them, both with normal movement or when dashing. The medi-kit is replenished after each battle if the Dog survives.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_martyrdomdog",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_martyrdomdog",
+        "parent_id": {"tag_name": "model", "val": "md_martyrdomdog"},
+        "name": "Martyrdom Dog",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each dog is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the dog. Everyone, including the dog, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The dog rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the dog survives the battle, they return to the next battle with another explosive.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_hellhound",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_hellhound",
+        "parent_id": {"tag_name": "model", "val": "md_hellhound"},
+        "name": "Hellhound",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This horrifying infernal canine is the size of a small pony, and within its tortured belly rage flames of Hell itself. It howls in constant agony and rage in combat. This dog is immune to any attack with the Keyword FIRE, and its own attack has the Keyword FIRE.",
+                "glossary": [{"val": "FIRE", "id": "gl_fire"}]
+            }
+        ]
     }
 ]

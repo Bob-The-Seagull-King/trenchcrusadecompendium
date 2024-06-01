@@ -104,7 +104,11 @@
             {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
             {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
             {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
         ]
     },
     {
@@ -209,7 +213,11 @@
             {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
-            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
         ]
     },
     {
@@ -299,7 +307,10 @@
             {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6},
             {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_homunculus", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": "1 per Alchemist"}
+            {"id": "md_homunculus", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": "1 per Alchemist"},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
         ]
     },
     {
@@ -412,7 +423,10 @@
             {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
             {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
             {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
-            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
         ]
     },
     {
