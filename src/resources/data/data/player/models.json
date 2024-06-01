@@ -1394,7 +1394,7 @@
         "base": "32",
         "faction_id": "fc_newantioch",
         "variant_id": "fv_basic",
-        "name": "Lietenant",
+        "name": "Lieutenant",
         "attachments": [
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_onmycommand"}
@@ -1448,7 +1448,7 @@
         "base": "32",
         "faction_id": "fc_newantioch",
         "variant_id": "fv_basic",
-        "name": "Lietenant (Kingdom of Alba Assault Detachment)",
+        "name": "Lieutenant (Kingdom of Alba Assault Detachment)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_strong"},
@@ -1507,7 +1507,7 @@
         "base": "32",
         "faction_id": "fc_newantioch",
         "variant_id": "fv_firerangers",
-        "name": "Lietenant",
+        "name": "Lieutenant (Fire Rangers)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_skirmisher"}
