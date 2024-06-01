@@ -1004,5 +1004,78 @@
             {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
             {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
         ]
+    }  ,
+    {
+        "id": "fv_dirgeofthegreathegemon",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": ""}
+                ],
+        "faction_id": "fc_blackgrail",
+        "name": "Dirge of the Great Hegemon",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In the annals of the Great War two mighty Hegemons of the Black Grail have risen: Yersinia Rex- Emperor of Pestilence, and Febris, the rotting Bride of Beelzebub. Each of them was destroyed, but at an unimaginable cost to the forces of the Great Tyrant YHWH whom the Lord of the Flies seeks to overthrow. Even the great Paladin Engelier, the Sword of Heaven, died confronting the might of a Hegemon."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "With the ascension of a Hegemon, the hideous power of the Black Grail is exalted. Beelzebubgrows sleek and fat, and like a magnanimous king, bestows blessings and gifts upon his mostfavoured children. Beelzebub's insidious grip over his Grail Thralls greatly increases. They movewith more grace, and the exalted blessings of the Grail opens their ruined minds, allowing themto truly witness the rotting glory of the Lord of the Flies, and enabling them to understand morecomplex weaponry. In turn, the nobles that make up the ranks of the Order of the Fly are givenkingly gifts from their mighty liege."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Full of the ascendant power of the Black Grail, how miserable they become when theirHegemon lord falls in battle. Each Hegemon is unique, and when slain, it can never bere-created. The ecstasy of the Plague Knights in the service of their dread ruler sinks into thedeepest despair from which there is no escape. Their strain of the Black Grail is shunned byothers of their kind, and they are no longer welcome at Ekron, the City of Beelzebul. They arecast out from the Order of the Fly for their failure. The Hegemon’s strain of disease continuesspreading and creating thralls, but they are born into a world bereft of their sires, leaving themhopeless and desolated."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The eyes of the Plague Knights continuously weep cold black blood as they cry for their lost Dark Paradise that will never be again. The tantalising dream of a great flood of pestilence thatcleanses the earth is lost forever. Their mournful wails echo and reverberate through No Man’s Land, a cry of sorrow deeper than any mortal can feel, and agonising rage of black hatred that no mortal comprehends. They compose mournful paeans to their lost Hegemon -beautiful yet disturbing songs that promise nothing but neverending death."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Such shattered remains of the once-mighty legions of the Hegemon take their vengeance on any opponent regardless of their allegiance, even throwing themselves at other Black Grail warbands in futile acts of regret, trying to feel pain that would at least momentarily dull their aching feeling of loss. But no such hope exists in their eternal damnation."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "These bands made up of the strains of fallen Hegemons’ once-mighty legions form everlasting funeral processions for their dead masters. The echo of their cries and dirges accompanies their solemn steps taking them from nowhere to nowhere. Their eyes are forever stained by the foul tears of the Black Grail, and their skin turns black and sloughs off, hanging in tatters like funereal garb. They seek lost artefacts and broken shards of armour and weapons of their lost liege, and fashion disturbing and rusted jewellery from these remains where the Hegemon’s power still lingers beyond the grave. Few things that haunt the No Man’s Land are more dangerous -or more ghastly than these corruption-ridden echoes of the dark past, the funeral processions that last until time itself is no more."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Highland Machine Armour:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "",
+                                "glossary":  [{"val": "", "id": ""}]
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_blackgrailshield","eq_beelzebubsaxe","eq_plagueblade","eq_putridshotgun"],
+        "removed_model": ["md_lordoftumours","md_amalgam","md_plagueknight","md_houndoftheblackgrail","md_heraldofbeelzebub","md_grailthrall"],
+        "equipment": [
+            {"id": "eq_plagueblade", "cost": 25, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_putridshotgun", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_blunderbuss", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_brokencrown", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_urnofbitterashes", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+        ],
+        "models" : [
+            {"id": "md_executor", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
+            {"id": "md_plagueknight_fv_dirgeofthegreathegemon", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_corpseguard", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
+            {"id": "md_thebereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
+            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+        ]
     }    
 ]

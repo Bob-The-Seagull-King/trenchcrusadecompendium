@@ -72,6 +72,75 @@
                         ]
     },
     {
+        "id": "ab_hegemonswill",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_blackgrail",
+        "model_id": "md_plagueknight_fv_dirgeofthegreathegemon",
+        "parent_id": {"tag_name": "model", "val": "md_plagueknight_fv_dirgeofthegreathegemon"},
+        "name": "Hegemon's Will",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18\" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls during a single Activation if all the conditions are met.",
+                            "glossary": [{"val": "", "id": ""}]
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "list"}],
+                            "content": "",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                    "content": "Move:",
+                                    "subcontent": [
+                                        {
+                                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                            "content": "The Thrall makes the standard Move ACTION.",
+                                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                    "content": "Ranged Attack:",
+                                    "subcontent": [
+                                        {
+                                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                            "content": "The Thrall performs a Ranged Attack ACTION with any Ranged weapon it has.",
+                                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                    "content": "Charge:",
+                                    "subcontent": [
+                                        {
+                                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                            "content": "The Thrall makes a standard Charge ACTION.",
+                                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                    "content": "Melee Attack:",
+                                    "subcontent": [
+                                        {
+                                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                            "content": "The Thrall performs a Melee Attack ACTION.",
+                                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                        }
+                                    ]
+                                }
+
+                            ]
+                        }
+                        ]
+    },
+    {
         "id": "ab_hide",
         "type": "Addon",
         "source": "core",

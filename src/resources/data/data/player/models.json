@@ -2121,6 +2121,122 @@
         ]
     },
     {
+        "id": "md_plagueknight_fv_dirgeofthegreathegemon",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_dirgeofthegreathegemon",
+        "name": "Plague Knight (Dirge of the Great Hegemon)",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"},
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_hegemonswill"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ranking lowliest in the nobility of the Black Grail, these armoured great warriors were once truly depraved worshippers Beelzebub. When the Black Grail came for them, they willingly submitted themselves to the authority of the Lord of Flies. As a result they retain a semblance of sentience and the ability to wield weapons as they did in life. They aspire to win favour in the eyes of Beelzebub and one day be promoted in the hierarchy of the Order of the Fly."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_hegemonswill"
+            }
+        ]
+    },
+    {
+        "id": "md_executor",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_dirgeofthegreathegemon",
+        "name": "Executor (Dirge of the Great Hegemon)",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"},
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_hegemonswill"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Ranking lowliest in the nobility of the Black Grail, these armoured great warriors were once truly depraved worshippers Beelzebub. When the Black Grail came for them, they willingly submitted themselves to the authority of the Lord of Flies. As a result they retain a semblance of sentience and the ability to wield weapons as they did in life. They aspire to win favour in the eyes of Beelzebub and one day be promoted in the hierarchy of the Order of the Fly."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_hegemonswill"
+            }
+        ]
+    },
+    {
         "id": "md_corpseguard",
         "type": "Model",
         "source": "core",
@@ -2255,6 +2371,55 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The Thrall never carries any type of weapons, armour or equipment. They suffer no penalties to their combat ability for being unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_overwhelminghorde"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_undeadfortitude"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
+        "id": "md_thebereaved",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": ""},
+            {"tag_name": "fear", "val": ""}
+                ],
+        "movement": "4\"",
+        "ranged": "0",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_blackgrail",
+        "variant_id": "fv_basic",
+        "name": "Bereaved (Dirge of the Great Hegemon)",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_overwhelminghorde"},
+            {"tag_name": "addons", "val": "ab_undeadfortitude"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The boons of the Black Grail lead slowly but surely down the path of utter corruption. Only very few of the chosen can withstand the blessings of the Lord of the Flies. Most are turned into Grail Thralls, and join the endless legions of empty, hollowed-out and diseased husks who must obey the whims of the Black Grail nobles for all eternity, while suffering the torment of their countless supernatural infections."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Thrall can use ranged weapons from the Black Grail List (though not any other weapons armour and equipment except Standards and Musical Instruments). They suffer no penalties to their combat ability for being unarmed.",
                 "glossary": []
             }
             ],

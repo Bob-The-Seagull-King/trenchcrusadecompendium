@@ -1122,6 +1122,22 @@
             ]
     },
     {
+        "id": "eq_blunderbuss",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Shrapnel", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Blunderbuss",
+        "equip_type": "2-Handed",
+        "range": "10\"",
+        "blurb": "A relic firearm of a bygone era, this weapon is loaded with rusty nails, lead shot, grenade shrapnel and grenade shell pieces, some Mourners carry this weapon and form a honour guard of sorts for the Procession.",
+        "modifiers": [],
+        "description":  [
+            ]
+    },
+    {
         "id": "eq_flail",
         "type": "Equipment",
         "source": "core",
@@ -2434,6 +2450,58 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "If the Witchburner hits an enemy with the Gavel of Justice, the target of the attack automatically sustains Divine Judgement as explained in the Witchburner’s Abilities, even if the attack did no damage otherwise. Thus the Witchburner can potentially cause two Divine Judgements in a single Activation, targeting either the same model or two separate ones.",
                             "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_brokencrown",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Broken Crown",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Made from the twisted and torn remains of their Hegemon’s shattered armour, this crown of barbs and thorns is a constant reminder to the Mourners of their failure.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "In the beginning of the Activation of the model wearing the Crown, it causes 1 INFECTION MARKER on any enemy model in melee combat with it.",
+                            "glossary": [{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_urnofbitterashes",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Urn of Bitter Ashes",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This black urn contains ashes left from the burned body of the fallen Hegemon, which still retain a faint echo of its hateful will. It swirls and churns in the air all while sinister whispers emanate from within.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "All ranged attacks against a model carrying the Urn and any other models fully with 3” acquire -1 DICE penalty against any Ranged Attack ACTIONS targeting them which stacks with any other ranged modifiers such as Long Range. This applies even to weapons that ignore Cover such as Grenade Launchers.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
                         }
                     ]
                 }
