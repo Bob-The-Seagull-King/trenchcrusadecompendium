@@ -1751,7 +1751,7 @@
         "base": "32",
         "faction_id": "fc_newantioch",
         "variant_id": "fv_kingdomofalbaassaultdetachment",
-        "name": "Mechanised Heavy Infantry (Kingdo of Alba Assault Detachment)",
+        "name": "Mechanised Heavy Infantry (Kingdom of Alba Assault Detachment)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_strong"}
                     ],
