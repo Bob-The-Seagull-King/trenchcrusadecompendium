@@ -513,7 +513,11 @@
             {"id": "eq_unholytrinket", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_troopflag", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []}
+            {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []},
+            {"id": "eq_cupoffilth", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_locustspitter", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_armourofthefly", "cost": 11, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models": [
             {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},

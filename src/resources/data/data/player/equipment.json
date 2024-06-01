@@ -2307,5 +2307,110 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_cupoffilth",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Cup of Filth",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Taken from the river of nauseating corruption vomited by the Lord of the Flies himself before these was time, this liquid is collected from his unholy river that is the source of every illness and plague the Creation has ever known or will know.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Up to 4 Thralls can drink from a single Cup, and it grants them +1 DICE to Dash ACTIONS for the duration of a single battle. Alternatively, a single ELITE model can drink it to gain the same effect.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "ELITE", "id": "gl_elite"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_locustspitter",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Locust Spitter",
+        "equip_type": "2-Handed",
+        "range": "24\"",
+        "blurb": "A nest of infected Hell-locusts acts as a fuel tank for this horrific gun which vaguely resembles a flamethrower. The voracious razor-sharp iron locusts which dwell within can find any chink in armour no matter how small, and guided by the hateful will of the Lord of the Flies they consume the flesh and swarm to their next nearby target in matter of seconds.",
+        "modifiers": ["-1D to Injury","Ignore Armour"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "If you successfully hit a target with the Locust Spitter, the mindless hunger of the Lord of Flies compels the swarm to continue devouring. Subtract the distance of the target from your maximum range, and then target the closest non-BLACK GRAIL model, friend or foe, that is wholly within the remaining distance. That target is also hit, and you may repeat this process until there are no targets still in range. Each model may only be  hit by the Locust Spitter once.",
+                            "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_armourofthefly",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Armour of the Fly",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This suit of armour made from black metal is the very visage of Beelzebub himself. It includes wings that take its wearer to the skies at startling speed, and once latched on the opponent its filth-ridden mouth-part will suck the target dry.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model gains movement type of FLYING and Movement characteristic of 8”. This suit of Heavy Armour includes a helmet. which allows one additional Melee Attack ACTION with +1 DICE per Activation. If this attack hits, do not roll on the Injury chart but instead the target suffers and automatic BLOOD MARKER.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_beelzebubsambrace",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Beelzebub's Embrace",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The final metamorphosis of those most favoured by the Prince of Plague is to take the many-legged shape of their warped master.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model loses its existing arms and gains 4 Melee Attack ACTIONS resolved exactly as if it was armed with 4 trench clubs without off-hand penalty. If all of them hit, and the target is on a 32mm or smaller base, it is immediately ripped apart by Beelzebub’s hateful embrace and removed from the game.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
     }
 ]
