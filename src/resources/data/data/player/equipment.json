@@ -545,7 +545,7 @@
         "tags": [
                 {"tag_name": "Heavy", "val": ""}
                 ],
-        "category": "",
+        "category": "melee",
         "name": "Two-Handed Hammer",
         "equip_type": "2-Handed",
         "range": "Melee",
