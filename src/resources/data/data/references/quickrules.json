@@ -469,5 +469,95 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "qr_equipment",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Equipping Models",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Unless otherwise stated in the rules, each warrior may carry the following:",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One firearm and one pistol OR",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Two pistols.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "In addition, they may carry:",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One two-handed melee weapon OR",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One single-handed melee weapon and a trench shield OR",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Two single-handed melee weapons.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "All weapon entries clearly indicate if you need one or two hands to effectively use the given weapon. Unless clearly stated in the Range characteristic, a ranged weapon cannot be used in Melee combat. As such they do not use either hand in melee (leaving both hands free for melee weapons).",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each model can wear a single suit of armour and wear one type of headgear/helmet.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each model can carry one type of grenade.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A model can have any number of Equipment items, but only one of each type per model.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    }
+                ]
+            }
+        ]
     }
 ]
