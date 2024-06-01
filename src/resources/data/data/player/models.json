@@ -2186,7 +2186,7 @@
             {"tag_name": "addons", "val": "ab_corpulent"},
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_toxic"},
-            {"tag_name": "addons", "val": "ab_trample"},
+            {"tag_name": "addons", "val": "ab_trampleamalgam"},
             {"tag_name": "addons", "val": "ab_unstoppable"},
             {"tag_name": "addons", "val": "ab_unholyhorror"}
                     ],
@@ -2218,7 +2218,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_trample"
+                "content": "ab_trampleamalgam"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
