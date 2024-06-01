@@ -1388,7 +1388,7 @@
         "base": "32",
         "faction_id": "fc_newantioch",
         "variant_id": "fv_basic",
-        "name": "Lietenant",
+        "name": "Lietenant (Kingdom of Alba Assault Detachment)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_strong"},
