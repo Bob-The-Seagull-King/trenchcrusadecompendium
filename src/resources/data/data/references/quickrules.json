@@ -559,5 +559,64 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "qr_fortifications",
+        "type": "QuickRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Optional Rule: Fortifications",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The following rules will allow you to field various defensive works on your own special scenarios, campaigns and games. They are not part of the core rules since they could easily unbalance almost any scenario, the rules are quite complex, and not all of the forces in the Trench Crusade canonically build or use them. However, they play a role in the history of the Great War and therefore are included here so you can incorporate them in your games if you wish.",
+                "subcontent": [ ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Gun Emplacement",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Gun Emplacements are fortifications where heavy weapons are entrenched in cover and often fixed in a palace or set up on a tripod. During the Great War the machine gun emplacements are by far the most common but Grenade Launchers, Heavy Jezails, and Anti-Materiel Rifles are quite common, too.",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Rules:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each Gun Emplacement has one HEAVY Ranged Weapon. This weapon cannot be moved, but any single model that comes in contact with the weapon can use it with their own Ranged statistic. The Gun Emplacement always incorporates a cover of some kind, and therefore Ranged Attacks against any model in base contact with it suffer standard -1 DICE penalty. The weapon has a 180 degree arc of attack directly forward, determined from the direction the weapon points at when placed on the Battlefield at the start of the battle. It cannot be removed from its Emplacement. If a model operating a gun is killed, another one can take its place.",
+                                "glossary": [ {"val": "HEAVY", "id": "gl_heavy"},{"val": "-1 DICE", "id": "gl_minusdice"} ]
+                            }
+                         ]
+                    }
+                ]
+            },
+            {
+                "title": "Pillbox",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Pillbox is a concrete dug-in guard-post, often camouflaged, normally equipped with loopholes through which defenders can fire weapons. It is in effect a trench firing step, hardened to protect against small-arms fire and grenades. Pillboxes are hard to defeat and require either artillery, flamethrowers or grenades to overcome.",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Rules:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": " Models inside a pillbox are in a superior cover and ranged attacks against any model inside suffer -2 DICE penalty instead of the usual -1 DICE. Blast Radius Weapons (such as the bombs of the Artillery Witches) can hit models in pillboxes if they score a direct hit, but the damage is calculated as it the model was just within the blast radius. Grenades work as normal but suffer -1 DICE penalty when determining whether they hit. Flamethrowers work as normal. Models inside the Pillbox are always considered to be behind a defended obstacle in melee, and any Injuries in melee against them are rolled with -1 DICE. Models inside the Pillbox can shoot if standing next to a loophole, but they have only 90-degree visibility from any of the loopholes in the Pillbox.",
+                                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "-2 DICE", "id": "gl_minusdice"}]
+                            }
+                         ]
+                    }
+                ]
+            }
+        ]
     }
 ]
