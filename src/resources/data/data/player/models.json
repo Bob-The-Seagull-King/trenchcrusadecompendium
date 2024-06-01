@@ -1372,6 +1372,65 @@
         ]
     },
     {
+        "id": "md_lieutenant_fv_kingdomofalbaassaultdetachment",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "tough", "val": ""},
+            {"tag_name": "elite", "val": ""},
+            {"tag_name": "strong", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+2",
+        "melee": "+2",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_basic",
+        "name": "Lietenant",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_onmycommand"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Lieutenants are leaders of small squads or platoons of New Antioch’s soldiers, playing a fundamental role on the distant frontlines of the Trench Crusade, displaying unwavering resolve in preserving the unity and morale of their troops. Lieutenants might be the favoured son or daughter of a noble family or gained their rank by impressing their superiors with their exceptional strategic acumen and audacious bravery."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In addition to their command role, they are also responsible for acquiring new weapons, arms, equipment and food for their troops. All too often this requires looting the battlefields of No Man’s Land or even raiding settlements, since resupply can be sporadic at best."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Having rightfully earned their position, Lieutenants enjoy the privilege of selecting their preferred arms and armour, often with the pick of the rarest battlefield finds. It is not uncommon for a Lieutenant to wield a distinctive weapon, perhaps a family heirloom, an idiosyncratic affectation or an ostentatious piece providing some much-needed swagger"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_onmycommand"
+            }
+        ]
+    },
+    {
         "id": "md_lieutenant_fv_firerangers",
         "type": "Model",
         "source": "core",

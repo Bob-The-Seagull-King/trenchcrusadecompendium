@@ -940,6 +940,18 @@
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Highland Machine Armour:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Machine Armour of the Warband can take Dash ACTIONs as normal.",
+                                "glossary":  [{"val": "ACTIONs", "id": "gl_action"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
                         "content": "Bagpipes:",
                         "subcontent": [
                             {
@@ -968,7 +980,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Apart from Mechanised Heavy Infantry, no model in the Warband can be equipped with Heavy or Machine Armour. This does not apply to Allies & Mercenaries.",
+                                "content": "Apart from Mechanised Heavy Infantry and Lieutenant, no model in the Warband can be equipped with Heavy or Machine Armour. This does not apply to Allies & Mercenaries.",
                                 "glossary":  []
                             }
 
@@ -978,17 +990,19 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_grenadelauncher","eq_submachinegun","eq_automaticshotgun","eq_machinegun","eq_sniperrifle"],
-        "removed_model": ["md_mechanisedheavyinfantry"],
+        "removed_equip": ["eq_greataxe","eq_grenadelauncher","eq_submachinegun","eq_automaticshotgun","eq_machinegun","eq_sniperrifle"],
+        "removed_model": ["md_mechanisedheavyinfantry","md_lieutenantv"],
         "equipment": [
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_greataxe", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models" : [
-            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3}
+            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
+            {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
         ]
     }    
 ]
