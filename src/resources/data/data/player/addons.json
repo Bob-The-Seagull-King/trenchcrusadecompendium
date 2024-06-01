@@ -1622,7 +1622,7 @@
         "source": "core",
         "tags": [
                 ],
-        "faction_id": "fc_trenchpilgrim",
+        "faction_id": "fc_none",
         "model_id": "md_martyrdomdog",
         "parent_id": {"tag_name": "model", "val": "md_martyrdomdog"},
         "name": "Martyrdom Dog",
@@ -1640,7 +1640,7 @@
         "source": "core",
         "tags": [
                 ],
-        "faction_id": "fc_trenchpilgrim",
+        "faction_id": "fc_none",
         "model_id": "md_hellhound",
         "parent_id": {"tag_name": "model", "val": "md_hellhound"},
         "name": "Hellhound",
@@ -1658,7 +1658,7 @@
         "source": "core",
         "tags": [
                 ],
-        "faction_id": "fc_trenchpilgrim",
+        "faction_id": "fc_none",
         "model_id": "md_witchburnergeneral",
         "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
         "name": "Divine Judgement",
@@ -1676,7 +1676,7 @@
         "source": "core",
         "tags": [
                 ],
-        "faction_id": "fc_trenchpilgrim",
+        "faction_id": "fc_none",
         "model_id": "md_witchburnergeneral",
         "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
         "name": "Ceremonial Duty",
@@ -1685,6 +1685,82 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": " The Witchburner has taken vows to persecute heretics with extreme prejudice. Nothing will stop this holy task. The Witchburner is immune to FEAR. Due to the dignity of their status, a Witchburner will never Dash when moving.",
                 "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_faithfulfollowers",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_mendelistammomonk",
+        "parent_id": {"tag_name": "model", "val": "md_mendelistammomonk"},
+        "name": "Faithful Followers",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When a friendly model within 1” of the Monk is activated, you can declare that the Monk is activated at the same time. You may then use the Monk before taking any action or movement with the model you originally activated.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "ab_theammunicationsacrament",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_mendelistammomonk",
+        "parent_id": {"tag_name": "model", "val": "md_mendelistammomonk"},
+        "name": "The Ammunition Sacrament",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Ammo monk can take a RISKY ACTION to provide one friendly model within 1” with one of the following benefits, which lasts for the duration of the target model’s Activation during this Turn:",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Bullet of the Guided Path:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All ranged attacks ignore penalties for range.",
+                                "glossary": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Cartridge of His Wrath:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All ranged attacks add +1 to the result of the injury roll.",
+                                "glossary": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Echo of the Word:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the ranged attack hits, the enemy model suffers an additional +1 BLOOD MARKER when rolling for injury.",
+                                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                            }
+                        ]
+                    }
+
+                ]
             }
         ]
     }

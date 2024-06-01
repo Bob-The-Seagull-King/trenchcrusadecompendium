@@ -2675,76 +2675,52 @@
         ]
     },
     {
-        "id": "md_",
+        "id": "md_mendelistammomonk",
         "type": "Model",
         "source": "core",
         "tags": [
                 ],
-        "movement": "8\"",
-        "ranged": "0",
-        "melee": "+1",
+        "movement": "6\"",
+        "ranged": "-1",
+        "melee": "-1",
         "armour": "0",
         "base": "25",
         "faction_id": "fc_none",
         "variant_id": "fv_basic",
-        "name": "",
+        "name": "Mendelist Ammo Monk",
         "attachments": [
-            {"tag_name": "addons", "val": ""}
+            {"tag_name": "addons", "val": "ab_faithfulfollowers"},
+            {"tag_name": "addons", "val": "ab_theammunicationsacrament"}
                     ],
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": ""
+                "content": "The Order of Mendelist Monks is tasked with forming items infused with divine enhancements as well as the creation of Communicants – devotees who undergo Chemical Communion through an infusion of synthesised blood from a Meta-Christ."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Brotherhood of Blessed Munitions is one of the sub-sects of the Mendelist Order, whose duty is to provide the faithful with various types of ammunition treated with the chemically altered blood of a Meta-Christ. Such solutions are highly unstable and difficult to handle, and the secrets of their various formulae are jealously guarded."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "On the battlefield, the monks brave enemy fire and infernal terrors, committed to their holy task of bringing the Wrath of the Lord upon the heretics. Their patron, St Barbara, is said to lift those who die on the battlefield to Everlasting Glory."
             }
         ],
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "",
-                "glossary": [{"val": "", "id": ""}]
+                "content": "The Monk has no weapons. They wear a gas mask and carry the Ammunition Sacrament (see below).",
+                "glossary": []
             }
             ],
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": ""
-            }
-        ]
-    },
-    {
-        "id": "md_",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                ],
-        "movement": "8\"",
-        "ranged": "0",
-        "melee": "+1",
-        "armour": "0",
-        "base": "25",
-        "faction_id": "fc_none",
-        "variant_id": "fv_basic",
-        "name": "",
-        "attachments": [
-            {"tag_name": "addons", "val": ""}
-                    ],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": ""
-            }
-        ],
-        "equipment":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "",
-                "glossary": [{"val": "", "id": ""}]
-            }
-            ],
-        "abilities":  [
+                "content": "ab_faithfulfollowers"
+            },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": ""
+                "content": "ab_theammunicationsacrament"
             }
         ]
     },
