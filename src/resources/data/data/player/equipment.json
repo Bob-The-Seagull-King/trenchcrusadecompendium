@@ -2238,5 +2238,74 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_holygrenade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Shrapnel", "val": ""},
+            {"tag_name": "Assault", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Holy Grenade",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "The shells of these grenades are made from the Church Bells of the original city of Antioch.They hold the spirit of vengeance of the LORD against all evil.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Holy Grenades have a blast radius of 2” -all model within 2” the target are hit but other models than the original target roll Injuries with -1 DICE. Adds +1 DICE to Injury rolls against targets with the Keyword BLACK GRAIL or DEMONIC.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_heretic"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_donkeysjawbone",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Donkey's Jawbone",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Blessed by YHWH, this bone club grants its wielder the strength of Samson himself.",
+        "modifiers": ["+2D to Injury"],
+        "description":  [
+            ]
+    },
+    {
+        "id": "eq_hornofjoshua",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Horn of Joshua",
+        "equip_type": null,
+        "range": null,
+        "blurb": "One of the horns that Joshua used to bring down the walls of Jericho. Its blast can still shake the very foundations of the strongest fortifications.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "A model with the Horn of Joshua may take a RISKY ACTION with +1D. If successful, select any piece of terrain of up to 8”x8” size within 12” the model can see (a house, 8” woods, a wall etc. This terrain piece is destroyed and it is removed from the table. Any models inside/touching/on top of this terrain must roll immediately on the Injury Chart. If they are not taken Out of Action they are placed on the ground in their previous spots. If the target is not a trench it is not removed from the table, but the models touching it/inside the Trench all roll on the Injury chart on an 8” length of a Trench. This Trench segment is selected by the player.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1D", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
     }
 ]

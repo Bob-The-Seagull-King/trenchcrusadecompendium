@@ -197,7 +197,10 @@
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
             {"id": "eq_incendiarybullets", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_martyrdompills", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []}
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_holygrenade", "cost": 2, "cost_id": "glory", "limit": 3, "restriction": []},
+            {"id": "eq_donkeysjawbone", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_hornofjoshua", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
