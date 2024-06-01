@@ -219,7 +219,8 @@
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
+            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     },
     {
@@ -430,7 +431,8 @@
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
+            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     },
     {

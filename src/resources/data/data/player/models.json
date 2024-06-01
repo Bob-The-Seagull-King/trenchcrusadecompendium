@@ -629,6 +629,59 @@
         ]
     },
     {
+        "id": "md_communicantantitankhunter",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "strong", "val": ""},
+            {"tag_name": "tough", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "-1",
+        "base": "40",
+        "faction_id": "fc_trenchpilgrim",
+        "variant_id": "fv_basic",
+        "name": "Communicant Anti-Tank Hunter",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_miracleofregeneration"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Communicants are partakers of the experimental Chemical Communion – the blood and flesh harvested from a Meta-Christ by the Mendelist monks and applied to the genome of volunteers. The most holy and pious of the church are chosen to partake of the experimental communion, going through many biological changes to become more effective on the battlefield. Their divinely enhanced strength allows them to carry and shoot massive anti-materiel guns as easily as a normal soldier would wield a simple rifle."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Because the Church consistently needs funds to sustain its military operations, Communicants are frequently allocated to the highest bidders among the armies affiliated with New Antioch. Their services are in constant demand as they are able to take out enemy fighting vehicles and strongpoints with a single shot"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Communicant is armed with an anti-materiel rifle and a helmet. They count as being armed with two Trench clubs in Melee combat - its arms are deadly weapons in their own right. Their flesh is hard as iron, so Communicants are considered to be wearing Standard Armour as noted in their profile."
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_miracleofregeneration"
+            }
+        ]
+    },
+    {
         "id": "md_trenchpilgrim",
         "type": "Model",
         "source": "core",
