@@ -10,6 +10,11 @@ interface IDescriptionItemData {
     subcontent?: []
 }
 
+interface ITextBlock {
+    title: [],
+    content: IDescriptionItemData[]
+}
+
 class DescriptionItem {
     public readonly Content;
     public readonly Tags;
@@ -49,4 +54,4 @@ class DescriptionItem {
     }
 }
 
-export {IDescriptionItemData, DescriptionItem}
+export {IDescriptionItemData, DescriptionItem, ITextBlock}
