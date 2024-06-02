@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
 import ToolsContentManager from '../../display/pages/ToolsContentManager'
+import ToolsWarbandBuilder from '../../display/pages/ToolsWarbandBuilder'
 import path from 'path'
 
 import { ContentPackManager } from '../../classes/contentpacks/contentmanager'
@@ -18,6 +19,7 @@ const ToolsRoute: React.FC = () => {
     return (
         <Routes>
             <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={ContentManager}/>} />
+            <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder/>} />
         </Routes>
     )
     // -------------------------------------------
