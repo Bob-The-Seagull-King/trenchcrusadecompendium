@@ -12,7 +12,27 @@ interface IDescriptionItemData {
 
 interface ITextBlock {
     title: [],
-    content: IDescriptionItemData[]
+    content: []
+}
+
+class TextBlock {
+    public Title;
+    public Content;
+
+    public constructor(data: ITextBlock) {
+        this.Title = data.title;
+        this.Content = this.DescriptionFactory(data.content);
+    }
+
+    private DescriptionFactory(data: []) {
+        let i = 0;
+        const array: DescriptionItem[] = []
+        for (i = 0; i < data.length; i++) {
+            const tempAD = new DescriptionItem(data[i])
+            array.push(tempAD)
+        }
+        return array;
+    }
 }
 
 class DescriptionItem {
@@ -54,4 +74,4 @@ class DescriptionItem {
     }
 }
 
-export {IDescriptionItemData, DescriptionItem, ITextBlock}
+export {IDescriptionItemData, DescriptionItem, ITextBlock, TextBlock}
