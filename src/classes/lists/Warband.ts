@@ -4,6 +4,7 @@ import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
 
 interface IWarband {
+    id: string;
     ducat_total : number,
     glory_total : number,
     members : IWarbandMember[],
@@ -26,8 +27,10 @@ class Warband {
     public Flavour;
     public Notes;
     public Deeds;
+    public ID;
 
     public constructor(data: IWarband) {
+        this.ID = data.id;
         this.DucatTotal = data.ducat_total;
         this.GloryTotal = data.glory_total;
 
