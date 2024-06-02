@@ -113,7 +113,7 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className="row">
                         <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                        <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/content/")}>
                                     <FontAwesomeIcon icon={faFileLines} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
@@ -121,7 +121,7 @@ const HomeRoute: React.FC = () => {
                                     </h1>
                                 </div>
                             </div>
-                            <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/warband/")}>
                                     <FontAwesomeIcon icon={faScrewdriverWrench} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
