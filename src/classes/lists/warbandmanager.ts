@@ -66,6 +66,16 @@ class WarbandManager {
         return this.WarbandList;
     }
 
+    public GetWarbandByName(_name : string) {
+        let i = 0;
+        for (i=0; i < this.WarbandList.length ; i++) {
+            if (this.WarbandList[i].Name.trim() == _name) {
+                return this.WarbandList[i]
+            }
+        }
+        return null;
+    }
+
     public DeletePack(_pack : Warband) {
         let i = 0;
         for (i = 0; i < this.WarbandList.length; i++) {

@@ -17,6 +17,7 @@ const WarbandDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const parentView = props.parent;
     const updateHost = props.statefunction;
+    const UpdateFunction = props.updater;
     
     const [stateWidth, setWidth] = useState(window.innerWidth);
     const ref = useRef<HTMLDivElement>(null);
@@ -39,7 +40,7 @@ const WarbandDisplay = (props: any) => {
 
     return (
         <>
-            <div className='' ref={ref}>
+            <div className='' ref={ref} onClick={() => UpdateFunction(WarbandItem)}>
                 {stateWidth > 700 &&
                     <div className="contentpackcontainer smallbordersubpurple" >
                         <span className="contentsubnamecontainer">
