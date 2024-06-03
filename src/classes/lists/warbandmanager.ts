@@ -21,6 +21,12 @@ class WarbandManager {
             if (_name.trim().length == 0) {
                 ReturnMsg = "Warband name must not be blank."
             }
+            let i = 0;
+            for (i = 0; i < this.WarbandList.length ; i++ ) {
+                if (this.WarbandList[i].Name.trim() == _name.trim()) {
+                    ReturnMsg = "Two Warbands cant share the same name.";
+                }
+            }
             if (ReturnMsg == "") {
                 const _content : IWarband = {
                     id: this.CalcID(_name),
