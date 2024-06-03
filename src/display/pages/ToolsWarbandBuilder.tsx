@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react'
 
 import { WarbandManager } from '../../classes/lists/warbandmanager';
 import WarbandListDisplay from '../../display/components/features/warband/WarbandListDisplay';
+import WarbandEditDisplay from '../../display/components/features/warband/WarbandEditDisplay';
 import { Warband } from '../../classes/lists/Warband';
 
 const ToolsWarbandBuilder = (prop: any) => {
@@ -41,7 +42,7 @@ const ToolsWarbandBuilder = (prop: any) => {
         <div className="container" style={{width:"100%"}}>
             {_currentWarband != null &&
                 <div>
-                    {_currentWarband.Name}
+                    <WarbandEditDisplay data={_currentWarband} updater={UpdateWarband}/>
                 </div>
             }
             {_currentWarband == null &&

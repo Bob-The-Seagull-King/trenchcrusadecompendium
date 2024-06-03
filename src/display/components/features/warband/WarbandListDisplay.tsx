@@ -46,11 +46,14 @@ const WarbandListDisplay = (prop: any) => {
         const Result = Manager.NewWarband(NewBandName);
         if (Result != "") {
             runToast(Result);
+        } else {
+            UpdaterMethod(Manager.GetWarbandByName(NewBandName))
         }
         ItemRecall();
         if (inputRef.current != null) {
             inputRef.current.value = "";
         }
+        
     }
 
     function ItemRecall() {

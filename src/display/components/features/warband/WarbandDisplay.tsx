@@ -8,7 +8,7 @@ import { Warband } from '../../../../classes/lists/Warband';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 import { faUnlock } from '@fortawesome/free-solid-svg-icons'
 import { makestringpresentable } from '../../../../utility/functions'
@@ -40,7 +40,7 @@ const WarbandDisplay = (props: any) => {
 
     return (
         <>
-            <div className='' ref={ref} onClick={() => UpdateFunction(WarbandItem)}>
+            <div className='' ref={ref} >
                 {stateWidth > 700 &&
                     <div className="contentpackcontainer smallbordersubpurple" >
                         <span className="contentsubnamecontainer">
@@ -49,6 +49,12 @@ const WarbandDisplay = (props: any) => {
                                 {WarbandItem.Name}
                             </h1>
                             <span/>
+                            <span className="packvrbox">
+                            <div className="vr packvr"></div>
+                            <Button style={{padding:"0em"}} variant="" onClick={() => UpdateFunction(WarbandItem)}>
+                                <FontAwesomeIcon icon={faPenToSquare} className="" style={{fontSize:"2em",margin:"0em"}}/>
+                            </Button>
+                            </span>
                         </span>
                         <span className="packvrbox">
                             <div className="vr packvr"></div>
