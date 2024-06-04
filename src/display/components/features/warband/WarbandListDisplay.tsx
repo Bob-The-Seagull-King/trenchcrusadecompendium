@@ -18,7 +18,9 @@ const WarbandListDisplay = (prop: any) => {
     const UpdaterMethod = prop.updater;
 
     let NewBandName = "";
+    let NewBandFaction = "";
     const inputRef = useRef<HTMLInputElement>(null);
+    let factionRef : any = null;
 
     const [_allwarbands, returnstate] = useState(Manager.GetWarbands());
     const [_key, updateKey] = useState(0);
@@ -43,7 +45,7 @@ const WarbandListDisplay = (prop: any) => {
     }
 
     function NewWarband() {
-        const Result = Manager.NewWarband(NewBandName);
+        const Result = Manager.NewWarband(NewBandName, NewBandFaction);
         if (Result != "") {
             runToast(Result);
         } else {
@@ -52,6 +54,9 @@ const WarbandListDisplay = (prop: any) => {
         ItemRecall();
         if (inputRef.current != null) {
             inputRef.current.value = "";
+        }
+        if (factionRef != null) {
+            factionRef.value = "[No Faction Selected]";
         }
         
     }
@@ -63,6 +68,10 @@ const WarbandListDisplay = (prop: any) => {
 
     function updateName(value: string) {
         NewBandName = value;
+    }
+
+    function updateFaction(value: string) {
+        NewBandFaction = value;
     }
 
     // Return result -----------------------------
@@ -84,18 +93,39 @@ const WarbandListDisplay = (prop: any) => {
             <div className="row justify-content-center">
                 <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-12">
 
-                    <div className="row">
-                        <div className="col-12 justify-content-center" style={{display:"flex"}}>
-                            <label htmlFor="pack-upload" className="generalbuttonbox bordersubpurple">
-                                <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext"/>
-                                <h1 className="pageaccestext" style={{whiteSpace:"nowrap"}}>
-                                    New Warband
-                                </h1>
-                                <InputGroup className="tagboxpad" >
-                                    <Form.Control size="lg" className="no-margins" ref={inputRef} style={{fontSize:"1em", height:"0.5em", margin:"1em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={NewBandName} placeholder=""/>
-                                </InputGroup>
-                                <FontAwesomeIcon icon={faCirclePlus} onClick={() => NewWarband()} className="pageaccestext hovermouse" style={{fontSize:"3em"}}/>
-                            </label>
+                    <div className="row justify-content-center">
+                        <div className="col">
+                            <div className="bordersubpurple" style={{padding:"1em"}}>
+                                <div className="row justify-content-center" style={{display:"flex"}}>
+                                    <div className="col-md-4 col-12">
+                                        <InputGroup className="tagboxpad" style={{height:"3em"}}>
+                                            <Form.Control ref={inputRef} style={{ height:"100%",textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={NewBandName} placeholder="Warband Name"/>
+                                        </InputGroup>
+                                    </div>
+                                    <div className="col-md-4 col-12">
+                                        <InputGroup className="tagboxpad" style={{height:"3em"}}>
+                                            <Form.Select style={{height:"100%",textAlign:"center"}} aria-label="Default select example" onChange={e => { updateFaction(e.target.value) 
+                                                factionRef = e.target;
+                                             } } >
+                                                    <option key="factionoption">[No Faction Selected]</option>
+                                                {Manager.Factions.map((item) => (
+                                                    <option key="factionoption">{item.Name}</option>
+                                                ))}
+                                            </Form.Select>
+                                        </InputGroup>
+                                    </div>
+                                    <div className="col-md-4 col-12">
+                                        <div className="generalbuttonbox">
+                                            <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewWarband()} className="hovermouse ">
+                                                <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext"/>
+                                                <h1 className="pageaccestext" style={{whiteSpace:"nowrap"}}>
+                                                    Create Warband
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

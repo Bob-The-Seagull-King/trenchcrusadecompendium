@@ -51,12 +51,12 @@ const WarbandNameEditDisplay = (props: any) => {
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">
-                        <InputGroup className="tagboxpad" >
-                            <Form.Control size="lg" className="no-margins" ref={inputRefNameEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={Warband_Name} placeholder=""/>
-                        </InputGroup>
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control size="lg" className="no-margins" ref={inputRefNameEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={Warband_Name} placeholder=""/>
+                            </InputGroup>
                         </div>
                         <div className="col-2">
-                        <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>

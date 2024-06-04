@@ -16,6 +16,7 @@ import { faUnlock } from '@fortawesome/free-solid-svg-icons'
 import { makestringpresentable } from '../../../../utility/functions'
 
 import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
+import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -55,6 +56,9 @@ const WarbandEditDisplay = (props: any) => {
     function ReturnFaction() {
         return (
             <>
+                { WarbandItem != null &&
+                    <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
             </>
         )
     }
@@ -97,6 +101,12 @@ const WarbandEditDisplay = (props: any) => {
 
                     <div className="row">
                         {ReturnName()}
+                    </div>
+
+                    <div className="verticalspacerbig"/>
+
+                    <div className="row">
+                        {ReturnFaction()}
                     </div>
 
                 </div>
