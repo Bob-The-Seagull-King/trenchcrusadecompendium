@@ -17,6 +17,7 @@ import { makestringpresentable } from '../../../../utility/functions'
 
 import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
+import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -63,28 +64,24 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
     
-    function ReturnImage() {
-        return (
-            <>
-            </>
-        )
-    }
-    
-    function ReturnBank() {
-        return (
-            <>
-            </>
-        )
-    }
-    
     function ReturnBankDucat() {
         return (
             <>
+                { WarbandItem != null &&
+                    <WarbandEditBankDucatDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
             </>
         )
     }
     
     function ReturnBankGlory() {
+        return (
+            <>
+            </>
+        )
+    }
+    
+    function ReturnImage() {
         return (
             <>
             </>
@@ -107,6 +104,19 @@ const WarbandEditDisplay = (props: any) => {
 
                     <div className="row">
                         {ReturnFaction()}
+                    </div>
+
+                    <div className="verticalspacerbig"/>
+
+                    <div className="row">
+                        <div className="col-lg-8 col-md-8 col-12">
+                            <div className="row">
+                                {ReturnBankDucat()}
+                            </div>
+                            <div className="row">
+                                {ReturnBankGlory()}
+                            </div>
+                        </div>
                     </div>
 
                 </div>
