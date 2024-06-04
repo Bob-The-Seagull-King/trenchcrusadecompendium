@@ -21,6 +21,13 @@
     padding: 1em;
 }
 
+.iconandtextbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
 .modelContainer { 
     display: grid;
     justify-content: space-evenly; 

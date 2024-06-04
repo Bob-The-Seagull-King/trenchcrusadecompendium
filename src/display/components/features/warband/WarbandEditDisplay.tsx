@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 import { Warband } from '../../../../classes/lists/Warband';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
@@ -16,13 +16,87 @@ import { makestringpresentable } from '../../../../utility/functions'
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
+
+    const Warband_Name = WarbandItem? WarbandItem.Name : "";
+
+    console.log(Warband_Name);
     
-    return (
-        <>
-            <div>
-                {WarbandItem.Name}
+    function ReturnReturner() {
+        return (
+            <>
+            <div className="col-12" >
+                <div className="hovermouse iconandtextbox" onClick={() => UpdateFunction(null)} style={{width:"fit-content"}}>
+                    <FontAwesomeIcon icon={faAngleLeft} className="pageaccestextsmall" style={{paddingTop:"0.25em"}}/>
+                    <h1 className="pageaccestextsmall">
+                        Return
+                    </h1>
+                </div>
             </div>
-        </>
+            </>
+        )
+    }
+    
+    function ReturnName() {
+        return (
+            <>
+            { WarbandItem != null &&
+            <div className="largefonttext">
+                {Warband_Name}
+            </div>
+            }
+            </>
+        )
+    }
+    
+    function ReturnFaction() {
+        return (
+            <>
+            </>
+        )
+    }
+    
+    function ReturnImage() {
+        return (
+            <>
+            </>
+        )
+    }
+    
+    function ReturnBank() {
+        return (
+            <>
+            </>
+        )
+    }
+    
+    function ReturnBankDucat() {
+        return (
+            <>
+            </>
+        )
+    }
+    
+    function ReturnBankGlory() {
+        return (
+            <>
+            </>
+        )
+    }
+
+    return (
+            <div className="row">
+                <div className="col-12">
+
+                    <div className="row">
+                        {ReturnReturner()}
+                    </div>
+
+                    <div className="row">
+                        {ReturnName()}
+                    </div>
+
+                </div>
+            </div>
     )
 }
 

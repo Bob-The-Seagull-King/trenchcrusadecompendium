@@ -10,8 +10,10 @@ interface IListEquipment {
 
 class ListEquipment {
     public readonly ID;
+
     public readonly Cost;
     public readonly CostType;
+    
     public readonly Object : PlayerEquipment;
 
     public constructor(data: IListEquipment) {

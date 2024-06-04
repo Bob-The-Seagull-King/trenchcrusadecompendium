@@ -13,32 +13,45 @@ interface IWarband {
     faction: string,
     flavour: ITextBlock[],
     notes: ITextBlock[],
-    deeds: string[]
+    deeds: string[],
+    image : string,
+    ducat_lost: number,
+    glory_lost: number
 }
 
 
 class Warband {
-    public DucatTotal;
-    public GloryTotal;
-    public Members;
-    public Armoury;
+    public ID;
+
     public Name;
     public Faction;
+    public Image;
+
+    public DucatTotal;
+    public GloryTotal;
+    public DucatLost;
+    public GloryLost;
+
+    public Members;
+    public Armoury;
+    public Deeds;
+
     public Flavour;
     public Notes;
-    public Deeds;
-    public ID;
 
     public constructor(data: IWarband) {
         this.ID = data.id;
         this.DucatTotal = data.ducat_total;
         this.GloryTotal = data.glory_total;
+        this.DucatLost = data.ducat_lost;
+        this.GloryLost = data.glory_lost;
 
         this.Members = this.WarbandMemberMaker(data.members);
         this.Armoury = this.EquipmentMaker(data.armoury);
 
         this.Name = data.name;
         this.Faction = data.faction;
+        this.Image = data.image;
 
         this.Flavour = this.TextMaker(data.flavour);
         this.Notes = this.TextMaker(data.notes);

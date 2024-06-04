@@ -68,20 +68,22 @@ const WarbandDisplay = (props: any) => {
                     <div className="contentpacksmallcontainer smallbordersubpurple" >
                         
                         <div className="row" style={{width:"100%"}}>
-                            <div className="col-12 smallcontentpackrow" style={{display: "flex", justifyContent:"space-between"}}>
-                                <span/>
-                                <h1 className="packtitle" style={{width:"fit-content"}}>
+                                <h1 className="packtitle" style={{textAlign:"center",width:"100%"}}>
                                     {WarbandItem.Name}
                                 </h1>
-                                <span/>
-                            </div>
                         </div>
                         <div className="row">
                             <div className="col-12 smallcontentpackrow" style={{display: "flex", justifyContent:"space-between"}}>
                                 <span/>
-                                <Button style={{padding:"0em"}} variant="" onClick={() => removeContentPack()}>
-                                    <FontAwesomeIcon icon={faTrash} className="redIcon" style={{fontSize:"2em",margin:"0em"}}/>
-                                </Button>
+                                    <Button style={{padding:"0em"}} variant="" onClick={() => UpdateFunction(WarbandItem)}>
+                                        <FontAwesomeIcon icon={faPenToSquare} className="" style={{fontSize:"2em",margin:"0em"}}/>
+                                    </Button>
+                                    <span className="packvrbox">
+                                        <div className="vr packvr"/>
+                                    </span>
+                                    <Button style={{padding:"0em"}} variant="" onClick={() => removeContentPack()}>
+                                        <FontAwesomeIcon icon={faTrash} className="redIcon" style={{fontSize:"2em",margin:"0em"}}/>
+                                    </Button>
                                 <span/>
                             </div>
                         </div>

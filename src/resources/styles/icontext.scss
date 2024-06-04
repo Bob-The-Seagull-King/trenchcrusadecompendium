@@ -49,6 +49,13 @@
     font-weight: bolder;
 }
 
+.largefonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 5em;
+  font-weight: 500;
+}
+
 .subtitlepurple {
     padding-left: 0.25em;
     padding-right: 0.25em;
@@ -320,6 +327,13 @@
   .pageaccestext {
       font-size: 1.75em;
       font-weight: 700;
+      color: $colour_purple_main;
+      margin: 0.1em;
+  }
+
+  .pageaccestextsmall {
+      font-size: 1.25em;
+      font-weight: 600;
       color: $colour_purple_main;
       margin: 0.1em;
   }

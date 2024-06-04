@@ -38,7 +38,10 @@ class WarbandManager {
                     faction: "",
                     flavour: [],
                     notes: [],
-                    deeds: []
+                    deeds: [],
+                    image: "",
+                    ducat_lost : 0,
+                    glory_lost : 0
                 }
                 const ContentNew: Warband = new Warband((_content));
                 this.WarbandList.push(ContentNew);
