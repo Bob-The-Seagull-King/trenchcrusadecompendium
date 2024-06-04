@@ -147,7 +147,7 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": [],
+        "removed_equip": ["eq_hellboundsoulcontract","eq_infernalbrandmark"],
         "removed_model": ["md_warwolfassaultbeast","md_artillerywitch"],
         "equipment": [ ],
         "models" : [ ]

@@ -889,6 +889,58 @@
                         ]
     },
     {
+        "id": "eq_maridshovel",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Marid Shovel",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Battlefield shovel allows troops to dig in and fight from cover in virtually any battlefield.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain and on a surface that you can dig in. As soon as the model  moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use"
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_alaybozan",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Shrapnel", "val": ""}
+                ],
+        "category": "ranged",
+        "name": "Alaybozan",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "The design of this blunderbuss is based on the traditional design of tribal warriors and thoroughly modernised by the foundries of the Sultanate. It has proven it’s worth as the preferred weapon of the Sapper corps who often have to fight in close quarters. It shoots a hail of lead bullets and iron shrapnel.",
+        "modifiers": [],
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "You can buy Alchemical Ammunition for Alaybozan."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
         "id": "eq_infernalbrandmark",
         "type": "Equipment",
         "source": "core",
@@ -1545,7 +1597,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bomb suffer a Down result due the booming shockwave, but do not take any BLOOD MARKERS or other effects from this attack.",
+                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Once the landing site of the bomb has been determined, it will detonate. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models in 3\" hit by the Bomb suffer a Down result due the booming shockwave and take BLOOD MARKERS, but do not suffer any other effects from this attack.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]

@@ -98,7 +98,8 @@
             {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]},
             {"id": "eq_sniperscope", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
             {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_promotion", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_promotion", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_musicalinstrument", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -309,6 +310,8 @@
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
             {"id": "eq_sniperscope", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
             {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_maridshovel", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
+            {"id": "eq_alaybozan", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sultanatesapper"}]},
             {"id": "eq_fieldhospital", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
