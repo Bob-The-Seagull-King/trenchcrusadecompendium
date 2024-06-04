@@ -2101,7 +2101,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
                 "glossary": []
             }
             ],
@@ -2152,7 +2152,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
                 "glossary": []
             }
             ],
@@ -2209,7 +2209,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
                 "glossary": []
             }
             ],

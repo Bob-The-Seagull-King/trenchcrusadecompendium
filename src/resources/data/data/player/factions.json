@@ -535,10 +535,10 @@
             {"id": "eq_musket", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_infestedrifle", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_corruptionbelcher", "cost": 40, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_putridshotgun", "cost": 35, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_putridshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 3, "restriction": []},
             {"id": "eq_parasitegrenade", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_visceracannon", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_visceracannon", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
@@ -562,7 +562,8 @@
             {"id": "eq_armourofthefly", "cost": 11, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]},
-            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},

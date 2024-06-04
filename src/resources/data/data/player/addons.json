@@ -1554,7 +1554,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " Every ACTION taken by an enemy within 8” of a Herald is  considered a RISKY ACTION.",
+                "content": " Every ACTION taken by an enemy within 8” of a Herald is considered a RISKY ACTION.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
@@ -1590,8 +1590,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "An Amalgam is a vast bulk of diseased flesh and is extraordinarily difficult to kill. All Injury rolls from any source against an Amalgam suffer a -3 DICE penalty.",
-                "glossary": [{"val": "-3 DICE", "id": "gl_minusdice"}]
+                "content": "An Amalgam is a vast bulk of diseased flesh and is extraordinarily difficult to kill. All Injury rolls from any source against an Amalgam suffer a -2 DICE penalty.",
+                "glossary": [{"val": "-2 DICE", "id": "gl_minusdice"}]
             }
         ]
     },
