@@ -1904,5 +1904,31 @@
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
+    },
+    {
+        "id": "ab_devour",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "model_id": "md_sineater",
+        "parent_id": {"tag_name": "model", "val": "md_sineater"},
+        "name": "Devour",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The sin eater attempts to consume any model, friend or a foe, on a 40mm or smaller base. This is a RISKY ACTION. If successful, the model is removed from the table and set aside with any BLESSING/BLOOD MARKERS it may have, and they can do nothing while being digested. Each subsequent time the Sin Eater is activated, the poor creature it has consumed gains 1 BLOOD MARKER. Once the victim inside its belly gains 7th BLOOD MARKERS it automatically goes out of action even if it is TOUGH. If Sin Eater is taken Out of Action the model it was digesting will be placed where the Sin Eater was at a time. Sin Eater may also decide to vomit the victim. This is an ACTION with +4 DICE, and the model is placed in melee range with the Sin Eater by the player of the model and it will be Down. Only one model may be devoured at any given time.",
+                "glossary": [
+                    {"val": "RISKY ACTION", "id": "gl_riskyaction"},
+                    {"val": "BLESSING", "id": "gl_blessingmarker"},
+                    {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},
+                    {"val": "BLOOD MARKER", "id": "gl_bloodmarker"},
+                    {"val": "TOUGH", "id": "gl_tough"},
+                    {"val": "ACTION", "id": "gl_action"},
+                    {"val": "+4 DICE", "id": "gl_plusdice"}
+                ]
+            }
+        ]
     }
 ]

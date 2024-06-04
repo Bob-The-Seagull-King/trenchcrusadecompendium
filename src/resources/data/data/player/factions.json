@@ -94,7 +94,8 @@
             {"id": "eq_infernalbrandmark", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_hellboundsoulcontract", "cost": 5, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "model", "val": "md_heretictrooper"},{"type": "model", "val": "md_anointedheavyinfantry"}]},
-            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []}
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]}
         ],
         "models": [
             {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -108,7 +109,8 @@
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
+            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     },
     {
@@ -542,7 +544,8 @@
             {"id": "eq_cupoffilth", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
             {"id": "eq_locustspitter", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_armourofthefly", "cost": 11, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]}
         ],
         "models": [
             {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -551,7 +554,8 @@
             {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
             {"id": "md_grailthrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
             {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
-            {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+            {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
         ]
     }
 ]

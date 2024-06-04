@@ -2506,5 +2506,32 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_tenderizermaul",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Heavy", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Tenderizer Maul",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Mauls, clubs, maces… these are large, cumbersome weapons, often made from sturdy wood with a metal tip of steel, lead or Iron of Tartarus. It takes great strength to fight with it for any length of time. They are especially suited for attacking armoured targets.",
+        "modifiers": ["+1D to Injury"],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Its huge reach means that the Sin Eater may make one Melee Attack ACTION against each enemy model it is fighting in Melee.",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    }
+                ]
+            }
+        ]
     }
 ]

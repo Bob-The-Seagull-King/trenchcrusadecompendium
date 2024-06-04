@@ -2952,5 +2952,51 @@
                 "content": "ab_voiceofgod"
             }
         ]
+    },
+    {
+        "id": "md_sineater",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "movement": "6\"",
+        "ranged": "N/A",
+        "melee": "+2",
+        "armour": "-2",
+        "base": "50",
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "name": "Sin Eater",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_tough"},
+            {"tag_name": "addons", "val": "ab_devour"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Sin Eaters are horrific creatures: once they were mortal men and women, but their overwhelming greed and hunger for human flesh tainted with Sin, combined with the corrupting influence of the Hellgate has turned them into a form that matches their inner foulness. They're swollen into monstrous proportions and are always at a point nearly bursting, yet forever ravenous for more flesh and human sins to devour."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Sin Eater It is one of the very few creatures that Beelzebub approves of outside its own realm."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Heavy Armour and 2-handed Tenderizer Maul. You cannot alter Sin Eater’s weapons and equipment in any way.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_devour"
+            }
+        ]
     }
 ]
