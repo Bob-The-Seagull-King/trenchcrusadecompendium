@@ -44,7 +44,10 @@ const WarbandNameEditDisplay = (props: any) => {
     return (
         <>
             <div className="largefonttext" style={{display:"flex",alignItems:"center"}}>
-                <div style={{marginRight:"0.5em"}}>{Warband_Name}</div>
+                <span style={{width:"fit-content"}}>
+                    <div style={{marginRight:"0.5em",textAlign:"center"}} className="d-none d-md-block">{Warband_Name}</div>
+                    <div style={{marginRight:"0.5em",fontSize:"0.7em",lineHeight:"0.75em",textAlign:"center"}} className="d-block d-md-none">{Warband_Name}</div>
+                </span>
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
             <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
