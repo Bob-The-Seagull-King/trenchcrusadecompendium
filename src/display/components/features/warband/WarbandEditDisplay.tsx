@@ -10,8 +10,11 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faUnlock } from '@fortawesome/free-solid-svg-icons'
 import { makestringpresentable } from '../../../../utility/functions'
+
+import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -36,14 +39,13 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
     
+
     function ReturnName() {
         return (
             <>
-            { WarbandItem != null &&
-            <div className="largefonttext">
-                {Warband_Name}
-            </div>
-            }
+                { WarbandItem != null &&
+                    <WarbandNameEditDisplay data={WarbandItem} updater={UpdateFunction} />
+                }
             </>
         )
     }
