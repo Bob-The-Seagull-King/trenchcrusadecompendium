@@ -59,7 +59,7 @@ class WarbandManager {
         
         let i = 0;
         for (i = 0; i < variants.length ; i++) {
-            const variantfaction = FactionVariantFactory.CreateFactory(variants[i]);
+            const variantfaction = FactionVariantFactory.CreateFactory(variants[i],faction.Name);
             this.Factions.push(variantfaction)
         }
     }

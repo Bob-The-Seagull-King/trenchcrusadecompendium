@@ -17,6 +17,8 @@ const WarbandFactionEditDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
+    let factionRef : any = null;
+
     let Warband_Faction = WarbandItem? WarbandItem.Faction : "";
     if (Warband_Faction == "") {
         Warband_Faction = "[No Faction Selected]";
@@ -27,14 +29,16 @@ const WarbandFactionEditDisplay = (props: any) => {
     const handleCloseNameEdit = () => setShowNameEdit(false); 
     const handleShowNameEdit = () => setShowNameEdit(true);
 
-    const inputRefNameEdit = useRef<HTMLInputElement>(null);
 
     function updateFaction(value: string) {
         NewFactionName = value;
+        if (factionRef != null) {
+            factionRef.value = NewFactionName;
+        }
     }
 
-    function EditWarbandName() {
-        if (WarbandItem != null) {
+    function EditWarbandFaction() {
+        if (WarbandItem != null && NewFactionName != "") {
             WarbandItem.Faction = NewFactionName;
         }
         UpdateFunction(WarbandItem)
@@ -51,9 +55,20 @@ const WarbandFactionEditDisplay = (props: any) => {
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">
+                            <InputGroup className="tagboxpad" style={{height:"3em"}}>
+                                <Form.Select style={{height:"100%",textAlign:"center"}} aria-label="Default select example" onChange={e => {
+                                    factionRef = e.target;
+                                     updateFaction(e.target.value)     
+                                    } } >
+                                    <option></option>
+                                    {Manager.Factions.map((item) => (
+                                        <option key="factionoption">{item.Name}</option>
+                                    ))}
+                                </Form.Select>
+                            </InputGroup>
                         </div>
                         <div className="col-2">
-                        <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandFaction()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>

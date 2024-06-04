@@ -95,15 +95,15 @@ const WarbandListDisplay = (prop: any) => {
 
                     <div className="row justify-content-center">
                         <div className="col">
-                            <div className="bordersubpurple" style={{padding:"1em"}}>
+                            <div className="" style={{paddingTop:"1em"}}>
                                 <div className="row justify-content-center" style={{display:"flex"}}>
                                     <div className="col-md-4 col-12">
-                                        <InputGroup className="tagboxpad" style={{height:"3em"}}>
+                                        <InputGroup className="tagboxpad" style={{height:"4em"}}>
                                             <Form.Control ref={inputRef} style={{ height:"100%",textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={NewBandName} placeholder="Warband Name"/>
                                         </InputGroup>
                                     </div>
                                     <div className="col-md-4 col-12">
-                                        <InputGroup className="tagboxpad" style={{height:"3em"}}>
+                                        <InputGroup className="tagboxpad" style={{height:"4em"}}>
                                             <Form.Select style={{height:"100%",textAlign:"center"}} aria-label="Default select example" onChange={e => { updateFaction(e.target.value) 
                                                 factionRef = e.target;
                                              } } >
@@ -115,7 +115,7 @@ const WarbandListDisplay = (prop: any) => {
                                         </InputGroup>
                                     </div>
                                     <div className="col-md-4 col-12">
-                                        <div className="generalbuttonbox">
+                                        <div className="generalbuttonbox" style={{width:"100%",alignItems:"center",height:"4em"}}>
                                             <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewWarband()} className="hovermouse ">
                                                 <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext"/>
                                                 <h1 className="pageaccestext" style={{whiteSpace:"nowrap"}}>
