@@ -136,8 +136,8 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": " If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules. Each melee weapon attack is considered a separate ACTION.",
-                        "subcontent": [ {"val": "ACTION", "id": "gl_action"}]
+                        "content": "If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules. Each melee weapon attack is considered a separate ACTION.",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
                     }
                 ]
             },

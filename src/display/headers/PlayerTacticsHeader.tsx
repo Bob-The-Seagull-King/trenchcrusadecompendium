@@ -21,7 +21,7 @@ const PlayerTacticsHeader = (prop: any) => {
         <div className='topbarCompendiumBase topbarCompendiumStructure hstack gap-3' style={{justifyContent:"center"}}>
             <span style={{paddingLeft:"0em"}}/>
             <h1 className='headertext'>Trench Crusade</h1>
-            <p className='headersubtext'>v1.6.01a</p>
+            <p className='headersubtext'>v1.4.01a</p>
             <div className="vr headertext"></div>
             <Button style={{padding:"0em"}} variant="" onClick={() => NavigateHome()}>
                 <FontAwesomeIcon icon={faHouse} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
