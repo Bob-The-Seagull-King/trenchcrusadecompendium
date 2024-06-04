@@ -42,7 +42,7 @@ const ToolsWarbandBuilder = (prop: any) => {
         <div className="container" style={{width:"100%"}}>
             {_currentWarband != null &&
                 <div>
-                    <WarbandEditDisplay data={_currentWarband} updater={UpdateWarband}/>
+                    <WarbandEditDisplay data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
                 </div>
             }
             {_currentWarband == null &&

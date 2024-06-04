@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 import { Warband } from '../../../../classes/lists/Warband';
+import { WarbandManager } from '../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -19,6 +20,7 @@ import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
+    const Manager : WarbandManager = props.manager;
 
     const Warband_Name = WarbandItem? WarbandItem.Name : "";
 
@@ -44,7 +46,7 @@ const WarbandEditDisplay = (props: any) => {
         return (
             <>
                 { WarbandItem != null &&
-                    <WarbandNameEditDisplay data={WarbandItem} updater={UpdateFunction} />
+                    <WarbandNameEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
                 }
             </>
         )
