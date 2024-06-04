@@ -400,7 +400,7 @@
             {"id": "eq_shotgun", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_grenades", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_incendiarygrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 2, "restriction": []},

@@ -691,7 +691,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "A single model in the Warband can be made a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model.",
+                                "content": "A single Fianna or Lieutenant in the Warband can be made a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model.",
                                 "glossary":  [{"val": "FEAR", "id": "gl_fear"}, {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                             }
 
@@ -991,7 +991,7 @@
         ],
         "removed_rules": [],
         "removed_equip": ["eq_greataxe","eq_grenadelauncher","eq_submachinegun","eq_automaticshotgun","eq_machinegun","eq_sniperrifle"],
-        "removed_model": ["md_mechanisedheavyinfantry","md_lieutenant"],
+        "removed_model": ["md_mechanisedheavyinfantry","md_lieutenant","md_sniperpriest"],
         "equipment": [
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_greataxe", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
@@ -1002,6 +1002,7 @@
         ],
         "models" : [
             {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
             {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1}
         ]
     }  ,
