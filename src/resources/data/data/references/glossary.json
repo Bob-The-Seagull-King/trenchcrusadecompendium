@@ -61,7 +61,7 @@
         "name": "Assault",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Weapons with this Keyword can make a ranged attack and charge during the same Activation. Only one such attack can be done in this instance, regardless of any rules the ranged weapon may have.",
+            "content": "Ranged attacks made with weapons that have this Keyword do not prevent a model from charging during the same activation. A charge may only be made if a single ranged attack is made with a weapon with this Keyword, regardless of any other rules that the weapon might have.",
             "subcontent":   [],
             "glossary": []
         }]
@@ -303,7 +303,7 @@
         "name": "Infiltrator",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": " Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword.",
+            "content": " Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword. If Infiltrator cannot be deployed using their special rules, then those models can always be deployed in your deployment zone as standard.",
             "subcontent":   [],
             "glossary": [
                 ]
@@ -428,7 +428,7 @@
         "name": "Strong",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A model with this Keyword ignores the rules for weapons/armour/equipment with the Keyword HEAVY. A model with the Keyword STRONG may wield a two-handed melee weapon in one hand. In addition, STRONG models can carry one HEAVY Melee weapon and one HEAVY ranged weapon.",
+            "content": "A model with this Keyword ignores the rules for weapons/armour/equipment with the Keyword HEAVY. A model with the Keyword STRONG may wield a two-handed melee weapon in one hand, but your off-hand must always be a 1-handed weapon. In addition, STRONG models can carry one HEAVY Melee weapon and one HEAVY ranged weapon.",
             "subcontent":   [],
             "glossary": [
                     {"val": "HEAVY", "id": "gl_heavy"},
@@ -463,7 +463,7 @@
         "name": "Tough",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "TOUGH Creatures treat Out of Action results as Down instead. Once a TOUGH Creature is Down it is treated as any other model when rolling on the Injury Chart and can be taken Out of Action. Once a TOUGH creature suffers an Out of Action result and avoids it due to the TOUGH rule, it can be taken out exactly as any other model.",
+            "content": "If a TOUGH model would be taken Out Of Action, it is taken Down instead. After a TOUGH model is taken Down in this way, it can be taken Out of Action as normal.",
             "subcontent":   [],
             "glossary": [
                 ]

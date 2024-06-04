@@ -100,7 +100,18 @@
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "Add +1 DICE to the dice pool when  determining injuries for a model that is Down.",
-                                "glossary": [{"val": "+DICE", "id": "gl_plusdice"}]
+                                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Blood Markers:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "An opponent can expend 1 BLOOD MARKER to add -1 DICE to the dice pool when determining injuries for a model that is. The opponent always selects when a BLOOD MARKER is used, even if the Injury your model suffered was caused by you",
+                                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
                             }
                         ]
                     }

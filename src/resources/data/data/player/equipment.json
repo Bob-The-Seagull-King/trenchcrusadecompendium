@@ -70,7 +70,20 @@
         "range": "12\"/Melee",
         "blurb": "Pistols come in a staggering variety, ranging from revolvers to semi-automatic pistols. Heretic forges produce their own, often highly elaborate sidearms. They see extensive use in close-quarter combat.",
         "modifiers": [],
-        "description":  []
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The pistol can use Ranged or Melee characteristic in Melee combat (choose highest).",
+                        "glossary": []
+                    }
+                ]
+            }
+
+        ]
     },
     {
         "id": "eq_silencedpistol",
@@ -147,7 +160,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": " Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. Gas Grenades hit all enemies within 3” of a target they hit.",
+                                        "content": " Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. Gas Grenades hit all models within 3” of a target they hit.",
                                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -227,7 +240,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.",
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power. Counts as a 1-Handed weapon when wielded with a shield.",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -282,7 +295,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Ignores all penalties for cover. This weapon has a blast radius of 3” – all enemies within this range are hit."
+                                        "content": "Ignores all penalties for cover. This weapon has a blast radius of 3” – all models within this range are hit."
                                     }
                                 ]
                             }
@@ -708,7 +721,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated."
+                                        "content": "Takes one hand to use in both melee and in ranged combat, and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated."
                                     }
                                 ]
                             }
@@ -761,8 +774,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Models with Gas Masks ignore all damage from weapons and other sources that have the keyword GAS.",
-                                        "glossary": [{"val": "GAS", "id": "gl_gas"}]
+                                        "content": "Models with Gas Masks ignore the extra BLOOD MARKER from weapons with the keyword GAS, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
+                                        "glossary": [{"val": "GAS", "id": "gl_gas"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
@@ -869,7 +882,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain. As soon as the model moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use."
+                                        "content": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain and on a surface that you can dig in. As soon as the model  moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use"
                                     }
                                 ]
                             }
@@ -895,8 +908,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "This model suffers no damage from attacks with the Keyword FIRE.",
-                                        "glossary": [{"val": "FIRE", "id": "gl_fire"}]
+                                        "content": "This model negates the extra BLOOD MARKER from weapons with the keyword FIRE, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
@@ -1110,7 +1123,6 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Risky", "val": ""}
                 ],
         "category": "ranged",
         "name": "Musket",
@@ -1135,6 +1147,17 @@
         "blurb": "A relic firearm of a bygone era, this weapon is loaded with rusty nails, lead shot, grenade shrapnel and grenade shell pieces, some Mourners carry this weapon and form a honour guard of sorts for the Procession.",
         "modifiers": [],
         "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Counts as a 1-Handed weapon when used alongside a shield.",
+                        "glossary": []
+                    }
+                ]
+            }
             ]
     },
     {
@@ -1150,6 +1173,17 @@
         "blurb": "The metal whips of the Church are supremely good at both instilling discipline in the ranks of the faithful and tormenting the heretics. Many devils also enjoy using these weapons due to the excruciating pain they inflict. These weapons are extremely difficult to dodge.",
         "modifiers": ["+1D to Hit"],
         "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If a model is fighting in melee with a Whip, any off-hand weapon the model has will suffer -2D instead of -1D penalty to hit.",
+                        "glossary": []
+                    }
+                ]
+            }
             ]
     },
     {

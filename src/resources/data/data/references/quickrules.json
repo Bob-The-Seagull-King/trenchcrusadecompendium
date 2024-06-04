@@ -96,7 +96,7 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "A player can choose to Charge instead of Move a model during its Activation. Choose a specific enemy model within your model’s line of sight and declare it to be the Target. A distance check should be made to see if the Target is within 12” inches of your attacking model. If they are within 12”, roll a D6 and add the result to your model’s movement speed. Use this modified movement value to Move towards the target by the most direct route possible. If you get within 1”, the model is now in Melee Combat with the target. You may Charge more than one model if you can get within 1” of them. Charging requires no roll on the Action Success Chart. If you cannot reach your opponent, simply move the distance indicated towards the target.",
+                        "content": "A player can choose to Charge instead of Move a model during its Activation. Choose a specific enemy model within your model’s line of sight and declare it to be the Target. A distance check should be made to see if the Target is within 12” inches of your attacking model. If they are within 12”, roll a D6 and add the result to your model’s movement speed. Use this modified movement value to Move towards the target by the most direct route possible. If you get within 1”, the model is now in Melee Combat with the target. You may Charge more than one model if you can get within 1” of them. Charging requires no roll on the Action Success Chart. If you cannot reach your opponent, simply move the distance indicated towards the target. Interposing unengaged models on the way will have to be Charged first as you cannot come within 1” of an enemy otherwise.",
                         "subcontent": [ ]
                     }
                 ]
@@ -126,8 +126,8 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If the model has a ranged weapon and it is not engaged in Melee combat, it may attack with the weapon as detailed in its profile in the rules. Note that you cannot make a Ranged Attack and Charge afterwards, unless the Ranged Weapon has the ASSAULT Keyword.",
-                        "glossary": [{"val": "ASSAULT", "id": "gl_assault"} ]
+                        "content": "If the model has a ranged weapon and it is not engaged in Melee combat, it may attack with the weapon as detailed in its profile in the rules. Note that you cannot make a Ranged Attack and Charge afterwards, unless the Ranged Weapon has the ASSAULT Keyword. Each ranged attack is considered a separate ACTIONs.",
+                        "glossary": [{"val": "ASSAULT", "id": "gl_assault"} ,{"val": "ACTIONs", "id": "gl_action"} ]
                     }
                 ]
             },
@@ -136,8 +136,8 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": " If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules.",
-                        "subcontent": [ ]
+                        "content": " If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules. Each melee weapon attack is considered a separate ACTION.",
+                        "subcontent": [ {"val": "ACTION", "id": "gl_action"}]
                     }
                 ]
             },
@@ -311,7 +311,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "If the target of a melee attack is defending a stone wall, earthen rampart, fighting from a trench and so on (a simple hedge, bush or low fence is not enough), the attacker suffers -1 DICE to all rolls to see if their melee attacks hit. A model that is Down cannot benefit from a defended obstacle.",
+                                "content": "If the target of a melee attack is defending a stone wall, earthen rampart, fighting from a trench and so on (a simple hedge, bush or low fence is not enough), the attacker suffers -1 DICE to all rolls to see if their melee attacks hit. A model that is Down cannot benefit from a defended obstacle. To count as a defended obstacle the piece of scenery must be 1” or taller, but not blocking LOS between the models completely. Defender must be touching the terrain piece when charged, and the defended obstacle must be between the defender and the charger in the most direct charge route possible.",
                                 "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
                             }
                          ]
@@ -463,7 +463,7 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Flying models ignore penalties for difficult terrain, can cross/land on dangerous terrain safely, and can move vertically without the need to take Climbing or Jumping tests.",
+                        "content": "Flying models ignore penalties for difficult terrain, can cross/land on dangerous terrain safely, can move vertically without the need to take Climbing or Jumping tests, do not trigger mines unless they land within trigger range at the end of their movement.",
                         "subcontent": [ ]
                     }
                 ]
@@ -542,6 +542,11 @@
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "Each model can wear a single suit of armour and wear one type of headgear/helmet.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Armour and equipment that takes up one hand in both ranged and melee cannot be switch out.",
                                 "subcontent": [ ]
                             },
                             {

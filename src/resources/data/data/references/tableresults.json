@@ -90,8 +90,8 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Add +1 BLOOD MARKER next to the model and place the model face down on the battlefield to indicate its status. If the model is already Down, it still suffers the +1 BLOOD MARK",
-                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                "content": "Add +1 BLOOD MARKER next to the model and place the model face down on the battlefield to indicate its status. If the model is already Down, it instead suffers +2 BLOOD MARKERS.",
+                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+2 BLOOD MARKERS", "id": "gl_bloodmarker"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
