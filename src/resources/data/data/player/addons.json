@@ -624,8 +624,13 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Gold Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE (reflected on the profile above).",
+                "content": " When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Gold Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Pilgrims resurrected as Martyr-Penitents retain all their possessions they had when they died.",
+                "glossary": []
             }
         ]
     },
@@ -662,6 +667,24 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Ecclesiastic Prisoner can add +1 DICE to their Dash ACTION.",
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_prisoner",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "model_id": "md_ecclesiasticprisoner",
+        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
+        "name": "Prisoner",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Ecclesiastic Prisoners do not count as a part of your warband for any rules related to morale.",
+                "glossary": []
             }
         ]
     },

@@ -735,7 +735,8 @@
         "name": "Ecclesiastic Prisoner",
         "attachments": [
             {"tag_name": "addons", "val": "ab_martyrdomdevice"},
-            {"tag_name": "addons", "val": "ab_maddash"}
+            {"tag_name": "addons", "val": "ab_maddash"},
+            {"tag_name": "addons", "val": "ab_prisoner"}
                     ],
         "blurb": [
             {
@@ -757,6 +758,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_maddash"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_prisoner"
             }
         ]
     },
