@@ -95,7 +95,10 @@
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_hellboundsoulcontract", "cost": 5, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "model", "val": "md_heretictrooper"},{"type": "model", "val": "md_anointedheavyinfantry"}]},
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]}
+            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]},
+            {"id": "eq_sniperscope", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_promotion", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models": [
             {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -303,7 +306,10 @@
             {"id": "eq_sultanategrandcannon", "cost": 12, "cost_id": "glory", "limit": 0, "restriction": [{"type": "model", "val": "md_brazenbull"}]},
             {"id": "eq_kilij", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_masterworkjezzail", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []}
+            {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_sniperscope", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_fieldhospital", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_yuzbasicaptain", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -421,7 +427,17 @@
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
-            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]}
+            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]},
+            {"id": "eq_sniperscope", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_salvagegolem", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_smokescreen", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_bookofbattleprayers", "cost": 7, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_promotion", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_fieldhospital", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_resurrectionengine", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_ducalwingedarmour", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_greatbannerofnewantioch", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
@@ -545,7 +561,8 @@
             {"id": "eq_locustspitter", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_armourofthefly", "cost": 11, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]}
+            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]},
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models": [
             {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},

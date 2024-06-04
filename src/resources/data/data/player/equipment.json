@@ -2533,5 +2533,267 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "eq_sniperscope",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Snipe Scope",
+        "equip_type": null,
+        "range": null,
+        "blurb": "A sniper scope is a kind of telescope that is attached to a rifle or a similar weapon. Some feature night-vision enhancements and superb, adjustable mountain crystal lenses, while the Sniper Scopes made by the foundry-monastery of St. Sebastian for Sniper Priest have an in-built reliquary instead.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The weapon ignores penalties from Long Range. Only usable with Bolt Action Rifles, Automatic Rifles, Semi-automatic rifles, Anti-Materiel Rifles and Sniper Rifles.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_salvagegolem",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Salvage Golem",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Golem servitors created by the Rabbis of the Cabbalistic School of Prague are equipped with sophisticated senses and metal detectors. Slow, hard to maintain and methodical, they are not much use in combat, but are invaluable during the lull in battle to uncover hidden caches of Loot.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You may roll extra D6X5 ducats for Income after each Battle.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_knighthood",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Knighthood",
+        "equip_type": null,
+        "range": null,
+        "blurb": "War is the crucible which bestows honorifics more rapidly than any other activity. Those who have won great fame can be given a rank of a Baron, Marquis, Bishop or other prestigious title. Within the Taifas of the Iron Sultanate there are many titles to be had, from Chelebi Knight to a mighty Sheik. Such titles command huge respect and attention by the upper echelons of the society. Hell has its own twisted ranks of nobility, where those performing the vilest deeds and committing the greatest acts of deprivation are given a rank amongst the Infernal Principalities.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You will always gain an additional 1 Glory Point after each battle.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_smokescreen",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Smoke Screen",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Engineering Corps of New Antioch are experts at the use of Smokescreens to shield their Shock Troops from enemy fire.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Select a Quarter of the tabletop you are playing. All Ranged ATTACKs within this area, and into it and out of if suffer -1 DICE penalty when rolling to hit.",
+                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ATTACKs", "id": "gl_action"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_bookofbattleprayers",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Book of Battle Prayers",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Written by the famous Patriarch of New Antioch Alexios Cerularius, the remaining 137 copies of this blessed book are only entrusted to Warband leaders of extraordinary ability (or excellent political connections!)",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": " The Model gains an ACTION which can be used to bestow 1 BLESS MARKER (if successful) to any model within 12”. A model with the book of Battle Prayers must always reserve one hand to carry the book, and may not Dash, as they must maintain their continuous litany of Prayers.",
+                        "glossary": [{"val": "1 BLESS MARKER", "id": "gl_blessingmarker"},{"val": "ACTION", "id": "gl_action"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_promotion",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Promotion",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Glorious deeds on the battlefield may earn the most determined, ruthless and deadly officers a rank amongst the Holy Orders of the Church, Knighthood of the Teutonic Orders, or a title of Hellknight from one of the Dukes or Princes of Hell. Such a warrior will be allowed to carry the heraldic device of their house upon their wargear, and they have many privileges when it comes to allocating the most precious weapons and armour.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can increase the LIMIT of any Weapon or Armour by 1. This benefit remains even if the Promoted model is lost.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_fieldhospital",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Field Hospital",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Field Hospitals have saved many warriors in the immediate aftermath of a bloody battle. Though simple compared to the mighty hospices of New Antioch, Athens or New Damascus, they are still extremely sought-after by successful Warband leaders.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "In a post-battle sequence, you can try to negate a Scar from a model that was taken Out of Action and rolled a result on The Serious Injury Chart that caused a Scar. Roll on the Action Success Chart. If you roll double 1, it means that the model now gains additional Scar, on success (7+) you can remove 1 Scar from the model. Only one model per Battle can be treated by the Field Hospital. The Warband must include a Combat Medic or an Alchemist in order to use the Field Hospital.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_resurrectionengine",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Resurrection Engine",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This magnificent holy clockwork machine that allows you to bring the dead back to life thanks to the grace of God and the research of the Holy Science Academies of New Antioch.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "It can be used to completely negate any result from the Injury Chart that causes a model to die (gaining 3rd Scar, Death etc.)",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_ducalwingedarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Ducal Winged Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Based on the prototype battlefield armour worn by Duke Constantine himself and his personal guard Myrmidons, these extremely rare and powerful suits are granted to only the most decorated soldiers. It features MKIII Myrmidon Diesel engine and wings that are painted and decorated to celebrate the deeds of the warrior who has “earned their wings'.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Counts as a suit of Machine Armour. The model gains speed of 10” and movement type of FLYING. A model must also have Knighthood or Promotion Glory Item in order to wear it.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_greatbannerofnewantioch",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Great Banner of New Antioch",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This item represents a famed standard, army battle banner or regimental colours. It may also represent one of the many Free Companies or forces in the service of the Church. Warband leaders often have their own battle banner decorated with the awards and ribbons the unit has won, and carried proudly by a trusted warrior",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Warband never fails a Morale test while the Great Banner is in Play, but can voluntarily leave the battle if 50% of its models are Out of Action. Takes the use of one hand at all times.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
     }
 ]
