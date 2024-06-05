@@ -18,7 +18,7 @@ const WarbandImageEditDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    const [Warband_Image, setWarbandImage] = useState((WarbandItem? WarbandItem.Image : ""));
+    const Warband_Image = ((WarbandItem? WarbandItem.Image : ""));
     let NewBandImage = Warband_Image;
 
     const [showImageEdit, setShowImageEdit] = useState(false);
