@@ -46,7 +46,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
 
     return (
         <>            
-            <div className="col-lg-6 col-md-6 col-12 align-content-center" style={{   textAlign:"center"}}>
+            <div className="col-lg-5 col-md-5 col-12 align-content-center" style={{   textAlign:"center"}}>
                 <div className="row justify-content-right" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
                         Ducats Spent/Total
@@ -56,7 +56,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
             <div className="col d-block d-md-none">
                 <div className="verticalspacerbig"/>
             </div>
-            <div className="col-lg-6 col-md-6 col-12">
+            <div className="col-lg-7 col-md-7 col-12">
                     <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
