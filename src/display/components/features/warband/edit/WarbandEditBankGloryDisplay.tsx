@@ -12,36 +12,32 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-const WarbandEditBankDucatDisplay = (props: any) => {
+const WarbandEditBankGloryDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    const Warband_MaxCount = WarbandItem? WarbandItem.DucatTotal : 0;
+    const Warband_MaxCount = WarbandItem? WarbandItem.GloryTotal : 0;
     let NewMaxCount = Warband_MaxCount;
 
-    const CurrentCost = WarbandItem? Manager.TotalCostDucats(WarbandItem): 0;
+    const CurrentCost = WarbandItem? Manager.TotalCostGlory(WarbandItem): 0;
 
-    const [showDucatsEdit, setShowDucatsEdit] = useState(false);
-    const handleCloseDucatsEdit = () => setShowDucatsEdit(false); 
-    const handleShowDucatsEdit = () => setShowDucatsEdit(true);
+    const [showGlorysEdit, setShowGlorysEdit] = useState(false);
+    const handleCloseGlorysEdit = () => setShowGlorysEdit(false); 
+    const handleShowGlorysEdit = () => setShowGlorysEdit(true);
 
-    const inputRefDucatsEdit = useRef<HTMLInputElement>(null);
+    const inputRefGlorysEdit = useRef<HTMLInputElement>(null);
 
-    function updateDucats(value: number) {
+    function updateGlorys(value: number) {
         NewMaxCount = value;
-        console.log(value);
-        console.log(NewMaxCount);
     }
 
-    function EditWarbandDucats() {
+    function EditWarbandGlorys() {
         if (WarbandItem != null) {
-            WarbandItem.DucatTotal = NewMaxCount;
-            console.log(NewMaxCount);
+            WarbandItem.GloryTotal = NewMaxCount;
         }
         UpdateFunction(WarbandItem)
-        console.log(WarbandItem);
-        handleCloseDucatsEdit();
+        handleCloseGlorysEdit();
     }
 
     return (
@@ -49,7 +45,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
             <div className="col-lg-6 col-md-6 col-12 align-content-center" style={{   textAlign:"center"}}>
                 <div className="row justify-content-center" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
-                        Ducats Spent/Total
+                        Glory Spent/Total
                     </div>
                 </div>
             </div>
@@ -57,27 +53,27 @@ const WarbandEditBankDucatDisplay = (props: any) => {
                 <div className="verticalspacerbig"/>
             </div>
             <div className="col-lg-6 col-md-6 col-12">
-                    <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowGlorysEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
                         </div>
                     </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseDucatsEdit()} show={showDucatsEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsEdit} keyboard={true}  centered>
+            <Modal onEnterKeyDown={() => handleCloseGlorysEdit()} show={showGlorysEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysEdit} keyboard={true}  centered>
                 
                 <h1 className={'titleShape titlepurple'}>
-                    {"Update Total Ducats"}
+                    {"Update Total Glory"}
                 </h1>
                 
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">
                             <InputGroup className="tagboxpad" >
-                                <Form.Control type="number" size="lg" className="no-margins" ref={inputRefDucatsEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateDucats(parseInt( e.target.value))} aria-label="Text input" defaultValue={Warband_MaxCount} placeholder=""/>
+                                <Form.Control type="number" size="lg" className="no-margins" ref={inputRefGlorysEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateGlorys(parseInt( e.target.value))} aria-label="Text input" defaultValue={Warband_MaxCount} placeholder=""/>
                             </InputGroup>
                         </div>
                         <div className="col-2">
-                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandDucats()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandGlorys()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>
@@ -87,4 +83,4 @@ const WarbandEditBankDucatDisplay = (props: any) => {
     )
 }
 
-export default WarbandEditBankDucatDisplay;
+export default WarbandEditBankGloryDisplay;

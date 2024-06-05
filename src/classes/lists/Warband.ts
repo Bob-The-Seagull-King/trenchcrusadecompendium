@@ -16,11 +16,13 @@ interface IWarband {
     deeds: string[],
     image : string,
     ducat_lost: number,
-    glory_lost: number
+    glory_lost: number,
+    ducat_cost: number,
+    glory_cost: number
 }
 
 
-class Warband {
+export class Warband {
     public ID;
 
     public Name;
@@ -31,6 +33,8 @@ class Warband {
     public GloryTotal;
     public DucatLost;
     public GloryLost;
+    public DucatCost;
+    public GloryCost;
 
     public Members;
     public Armoury;
@@ -57,6 +61,9 @@ class Warband {
         this.Notes = this.TextMaker(data.notes);
 
         this.Deeds = data.deeds;
+
+        this.DucatCost = this.TotalCostDucats();
+        this.GloryCost = this.TotalCostGlory();
     }
 
     private EquipmentMaker(data : IListEquipment[]) {
@@ -95,6 +102,46 @@ class Warband {
         return tempList;
     }
 
+    public TotalCostDucats() {
+        let totalducats = 0;
+
+        let i = 0;
+        
+        for (i = 0; i < this.Armoury.length ; i++) {
+            if (this.Armoury[i].CostType == "ducats") {
+                totalducats += this.Armoury[i].Cost;
+            }
+        }
+
+        for (i = 0; i < this.Members.length ; i++) {
+            if (this.Members[i].Model.CostType == "ducats") {
+                totalducats += this.Members[i].Model.Cost;
+            }
+        }
+
+        return totalducats;
+    }
+
+    public TotalCostGlory() {
+        let totalglory = 0;
+
+        let i = 0;
+        
+        for (i = 0; i < this.Armoury.length ; i++) {
+            if (this.Armoury[i].CostType == "glory") {
+                totalglory += this.Armoury[i].Cost;
+            }
+        }
+
+        for (i = 0; i < this.Members.length ; i++) {
+            if (this.Members[i].Model.CostType == "glory") {
+                totalglory += this.Members[i].Model.Cost;
+            }
+        }
+
+        return totalglory;
+    }
+
 }
 
-export {IWarband, Warband}
+export {IWarband}

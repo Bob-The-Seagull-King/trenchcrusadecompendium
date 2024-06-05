@@ -57,6 +57,22 @@
   line-height: 1em;
 }
 
+.mediumfonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.mediumsubfonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1em;
+}
+
 .subfonttext {
   color: $colour_purple_main;
   font-size: 2em;

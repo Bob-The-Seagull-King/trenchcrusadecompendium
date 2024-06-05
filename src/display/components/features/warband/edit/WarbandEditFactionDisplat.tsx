@@ -48,10 +48,14 @@ const WarbandFactionEditDisplay = (props: any) => {
     return (
         <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="d-none d-md-block">{Warband_Faction}</div>
+                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">{Warband_Faction}</div>
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
             <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Update Warband Faction"}
+                </h1>
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">

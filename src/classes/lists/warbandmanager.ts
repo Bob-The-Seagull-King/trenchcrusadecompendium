@@ -97,7 +97,9 @@ class WarbandManager {
                     deeds: [],
                     image: "",
                     ducat_lost : 0,
-                    glory_lost : 0
+                    glory_lost : 0,
+                    ducat_cost: 0,
+                    glory_cost: 0
                 }
                 const ContentNew: Warband = new Warband((_content));
                 this.WarbandList.push(ContentNew);
@@ -144,6 +146,47 @@ class WarbandManager {
             }
         }
         this.SetStorage();
+    }
+
+    
+    public TotalCostDucats(_band : Warband) {
+        let totalducats = 0;
+
+        let i = 0;
+        
+        for (i = 0; i < _band.Armoury.length ; i++) {
+            if (_band.Armoury[i].CostType == "ducats") {
+                totalducats += _band.Armoury[i].Cost;
+            }
+        }
+
+        for (i = 0; i < _band.Members.length ; i++) {
+            if (_band.Members[i].Model.CostType == "ducats") {
+                totalducats += _band.Members[i].Model.Cost;
+            }
+        }
+
+        return totalducats;
+    }
+
+    public TotalCostGlory(_band : Warband) {
+        let totalglory = 0;
+
+        let i = 0;
+        
+        for (i = 0; i < _band.Armoury.length ; i++) {
+            if (_band.Armoury[i].CostType == "glory") {
+                totalglory += _band.Armoury[i].Cost;
+            }
+        }
+
+        for (i = 0; i < _band.Members.length ; i++) {
+            if (_band.Members[i].Model.CostType == "glory") {
+                totalglory += _band.Members[i].Model.Cost;
+            }
+        }
+
+        return totalglory;
     }
 }
 

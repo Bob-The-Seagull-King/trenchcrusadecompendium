@@ -21,6 +21,7 @@ const ToolsWarbandBuilder = (prop: any) => {
     }
 
     function UpdateWarband(_warband : Warband) {
+        Manager.SetStorage();
         returnWarband(_warband);
     }
 

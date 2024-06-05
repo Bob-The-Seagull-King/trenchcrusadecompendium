@@ -48,6 +48,10 @@ const WarbandNameEditDisplay = (props: any) => {
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
             <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Update Warband Name"}
+                </h1>
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">

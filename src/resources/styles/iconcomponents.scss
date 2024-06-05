@@ -317,6 +317,37 @@
     }
 }
 
+.generalbackgroundbuttonbox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.1em;
+    color: $colour_purple_main;
+    box-shadow: 0 0 5px 1px #CCC;
+    height: 100%;
+    width: fit-content;
+    padding: 0.25em;
+    font-size: 1.15em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #CCC;
+    }
+}
+
+.generalprimitivebox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px 1px #CCC;
+    height: 100%;
+    width: fit-content;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 .contentpackcontainer {
     display: flex; /* make element size relative to content */
     justify-content: space-between;
