@@ -249,8 +249,8 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "While unconscious, the model was possessed by a restless spirit of a dead soldier. This warrior always starts its Activation with a Dash RISKY ACTION (unless in Melee combat). If down, it stands up and the Dashes. It must move at least 3” when Dashing if at all possible.",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                "content": "While unconscious, the model was possessed by a restless spirit of a dead soldier. This warrior always starts its Activation with a Dash ACTION (unless in Melee combat). If down, it stands up and the Dashes. It must move at least 3” when Dashing.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
     },
@@ -300,7 +300,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The model has survived the Battle with no ill effects. No Battle Scar is suffered.",
+                "content": "The Character has survived the Battle with no ill effects. No Battle Scar Recovery is suffered.",
                 "glossary": []
             }
         ]
@@ -351,7 +351,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This model loses all weapons, armour and equipment it had. No Battle Scar is suffered.",
+                "content": "This Character loses all weapons, armour and equipment it had. No Battle Scar is suffered.",
                 "glossary": []
             }
         ]
