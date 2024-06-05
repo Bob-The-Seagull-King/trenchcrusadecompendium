@@ -23,6 +23,7 @@ class PlayerFaction extends TrenchCrusadeItem {
     public readonly Rules;
     public readonly Equipment;
     public readonly Models : FactionModel[];
+    public readonly InterfaceVal;
     
     /**
      * Assigns parameters and creates a series of description
@@ -33,6 +34,8 @@ class PlayerFaction extends TrenchCrusadeItem {
     {
         super(data)
         this.ItemType = ItemType.Faction;
+
+        this.InterfaceVal = data
 
         this.Name = data.name;
         this.Equipment = this.EquipmentFactory(data.equipment)

@@ -85,6 +85,12 @@ class WarbandManager {
                 }
             }
             if (ReturnMsg == "") {
+                let factionVal : any = null;
+                for (i = 0; i < this.Factions.length ; i++ ) {
+                    if (this.Factions[i].Name == _faction) {
+                        factionVal = this.Factions[i];
+                    }
+                }
                 const _content : IWarband = {
                     id: this.CalcID(_name),
                     ducat_total : 0,
@@ -92,7 +98,7 @@ class WarbandManager {
                     members : [],
                     armoury : [],
                     name: _name,
-                    faction: _faction,
+                    faction: factionVal.InterfaceVal,
                     flavour: [],
                     notes: [],
                     deeds: [],

@@ -1,7 +1,9 @@
 import { IWarbandMember, WarbandMember } from "./WarbandMember"
 import { IListModel, ListModel } from "./ListModel"
+import { IPlayerFaction, PlayerFaction } from "../../classes/feature/factions/Faction"
 import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
+import { FactionFactory } from "../../factories/features/FactionFactory"
 
 interface IWarband {
     id: string;
@@ -10,7 +12,7 @@ interface IWarband {
     members : IWarbandMember[],
     armoury : IListEquipment[],
     name: string,
-    faction: string,
+    faction: IPlayerFaction,
     flavour: ITextBlock[],
     notes: ITextBlock[],
     deeds: string[],
@@ -54,7 +56,7 @@ export class Warband {
         this.Armoury = this.EquipmentMaker(data.armoury);
 
         this.Name = data.name;
-        this.Faction = data.faction;
+        this.Faction = FactionFactory.CreateFactory( data.faction);
         this.Image = data.image;
 
         this.Flavour = this.TextMaker(data.flavour);

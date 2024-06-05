@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { PlayerFaction } from '../../../../../classes/feature/factions/Faction';
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
@@ -19,7 +20,7 @@ const WarbandFactionEditDisplay = (props: any) => {
 
     let factionRef : any = null;
 
-    let Warband_Faction = WarbandItem? WarbandItem.Faction : "";
+    let Warband_Faction = WarbandItem? WarbandItem.Faction.Name : "";
     if (Warband_Faction == "") {
         Warband_Faction = "[No Faction Selected]";
     } 
@@ -39,7 +40,13 @@ const WarbandFactionEditDisplay = (props: any) => {
 
     function EditWarbandFaction() {
         if (WarbandItem != null && NewFactionName != "") {
-            WarbandItem.Faction = NewFactionName;
+            let i = 0;
+
+            for (i = 0; i < Manager.Factions.length ; i++ ) {
+                if (Manager.Factions[i].Name == NewFactionName) {
+                    WarbandItem.Faction = Manager.Factions[i];
+                }
+            }
         }
         UpdateFunction(WarbandItem)
         handleCloseNameEdit();
