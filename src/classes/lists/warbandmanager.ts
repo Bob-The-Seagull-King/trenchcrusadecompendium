@@ -151,7 +151,7 @@ class WarbandManager {
 
     
     public TotalCostDucats(_band : Warband) {
-        let totalducats = 0;
+        let totalducats = _band.DucatLost;
 
         let i = 0;
         
@@ -171,7 +171,7 @@ class WarbandManager {
     }
 
     public TotalCostGlory(_band : Warband) {
-        let totalglory = 0;
+        let totalglory = _band.GloryLost;
 
         let i = 0;
         

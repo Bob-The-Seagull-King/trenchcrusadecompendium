@@ -38,8 +38,8 @@ export class Warband {
 
     public Members;
     public Armoury;
-    public Deeds;
 
+    public Deeds;
     public Flavour;
     public Notes;
 
@@ -103,7 +103,7 @@ export class Warband {
     }
 
     public TotalCostDucats() {
-        let totalducats = 0;
+        let totalducats = this.DucatLost;
 
         let i = 0;
         
@@ -123,7 +123,7 @@ export class Warband {
     }
 
     public TotalCostGlory() {
-        let totalglory = 0;
+        let totalglory = this.GloryLost;
 
         let i = 0;
         
