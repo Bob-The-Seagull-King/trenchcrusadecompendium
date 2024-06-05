@@ -55,31 +55,35 @@ const WarbandEditDisplay = (props: any) => {
     
     function ReturnFaction() {
         return (
-            <>
-                { WarbandItem != null &&
-                    <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                }
-            </>
+            <div className="row">
+                <div className="col-12">
+                    { WarbandItem != null &&
+                        <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                    }
+                </div>
+            </div>
         )
     }
     
     function ReturnBank() {
         return (
-            <div className="col-lg-8 col-md-8 col-12">
-                <div className="row justify-content-center">
+            <div className="row">
+                <div className="col-12">
+                    <div className="row justify-content-center">
 
-                    <div className="mediumfonttext" style={{width:"fit-content"}}>
-                        Warband Vault
+                        <div className="mediumfonttext" style={{width:"fit-content"}}>
+                            Warband Vault
+                        </div>
+                        <div className="verticalspacerbig"/>
                     </div>
-                    <div className="verticalspacerbig"/>
-                </div>
-                <div className="row">
-                    <div className="verticalspacer"/>
-                    {ReturnBankDucat()}
-                </div>
-                <div className="row">
-                    <div className="verticalspacerbig"/>
-                    {ReturnBankGlory()}
+                    <div className="row">
+                        <div className="verticalspacer"/>
+                        {ReturnBankDucat()}
+                    </div>
+                    <div className="row">
+                        <div className="verticalspacerbig"/>
+                        {ReturnBankGlory()}
+                    </div>
                 </div>
             </div>
         )
@@ -108,8 +112,6 @@ const WarbandEditDisplay = (props: any) => {
     function ReturnImage() {
         return (
             <>
-            <div className="col-lg-4 col-md-4 col-12">
-            </div>
             </>
         )
     }
@@ -128,18 +130,20 @@ const WarbandEditDisplay = (props: any) => {
 
                     <div className="verticalspacerbig"/>
 
-                    <div className="row">
-                        {ReturnFaction()}
-                    </div>
-
-                    <div className="verticalspacerbig"/>
-                    <div>
-                        <div className="separator">&#x27E1;</div>
-                    </div> 
-
                     <div className="row justify-content-center">
-                        {ReturnBank()}
-                        {ReturnImage()}
+                        <div className="col-lg-9 col-md-9 col-12">
+                            {ReturnFaction()}
+
+                            <div>
+                                <div className="verticalspacerbig"/>
+                                <div className="separator">&#x27E1;</div>
+                            </div> 
+
+                            {ReturnBank()}
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-12">
+                            {ReturnImage()}
+                        </div>
                     </div>
 
                 </div>
