@@ -19,6 +19,7 @@ import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
 import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
 import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
+import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -112,6 +113,9 @@ const WarbandEditDisplay = (props: any) => {
     function ReturnImage() {
         return (
             <>
+                { WarbandItem != null &&
+                    <WarbandImageEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
             </>
         )
     }

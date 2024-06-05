@@ -317,6 +317,32 @@
     }
 }
 
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .image-wrapper img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+.image-wrapperwide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .image-wrapperwide img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 .generalbackgroundbuttonbox {
     justify-content: center;
     display: flex; /* make element size relative to content */
