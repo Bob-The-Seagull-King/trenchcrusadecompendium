@@ -47,7 +47,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
     return (
         <>            
             <div className="col-lg-6 col-md-6 col-12 align-content-center" style={{   textAlign:"center"}}>
-                <div className="row justify-content-center" style={{height:"fit-content"}}>
+                <div className="row justify-content-right" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
                         Ducats Spent/Total
                     </div>
