@@ -18,7 +18,7 @@ const WarbandImageEditDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    const Warband_Image = WarbandItem? WarbandItem.Image : "";
+    const [Warband_Image, setWarbandImage] = useState((WarbandItem? WarbandItem.Image : ""));
     let NewBandImage = Warband_Image;
 
     const [showImageEdit, setShowImageEdit] = useState(false);
@@ -41,7 +41,7 @@ const WarbandImageEditDisplay = (props: any) => {
     }
     
     const [showsize, setSize] = useState(false);
-    const [heightimg, setHeight] = useState("300px");
+    const [heightimg, setHeight] = useState(defaultContentWidth());
 
     const img = new (window as any).Image();    
     img.src = Warband_Image;
@@ -53,12 +53,18 @@ const WarbandImageEditDisplay = (props: any) => {
         }
     }
 
+    function defaultContentWidth() {
+        if(imageDisplay.current) {
+            return ((imageDisplay.current.clientWidth).toString())+"px"
+        } else {
+            return "300px";
+        }
+    }
     
     useEffect(() => {
         const setContentPackWidth = () => {
             if(imageDisplay.current) {
-                setHeight(((imageDisplay.current.clientWidth).toString)+"px");
-                console.log(heightimg);
+                setHeight(((imageDisplay.current.clientWidth).toString())+"px");
             }
         }
         window.addEventListener("load", setContentPackWidth, false);
@@ -70,7 +76,7 @@ const WarbandImageEditDisplay = (props: any) => {
         <>
             <div className="row">
                 <div className="col" style={{width:"100%"}}>
-                    <div ref={imageDisplay} className={(showsize? "image-wrapperwide" : "image-wrapper") + " hovermouse"} onClick={() => handleShowImageEdit()} style={{paddingTop:heightimg}}>
+                    <div ref={imageDisplay} className={(showsize? "image-wrapperwide" : "image-wrapper") + " hovermouse bordermainpurple"} onClick={() => handleShowImageEdit()} style={{paddingTop:heightimg}}>
                         <Image src={Warband_Image} />
                     </div>
                 </div>

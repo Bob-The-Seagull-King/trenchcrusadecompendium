@@ -137,19 +137,23 @@ const WarbandEditDisplay = (props: any) => {
                     <div className="row justify-content-center">
                         <div className="col-lg-9 col-md-9 col-12">
                             {ReturnFaction()}
-
                             <div>
                                 <div className="verticalspacerbig"/>
                                 <div className="separator">&#x27E1;</div>
-                            </div> 
-
+                            </div>
                             {ReturnBank()}
+                            <div className="verticalspacerbig"/>
                         </div>
                         <div className="col-lg-3 col-md-3 col-12">
                             {ReturnImage()}
                         </div>
                     </div>
-
+                    <div className="row justify-content-center">
+                        <div>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator">&#x27E1;</div>
+                        </div>
+                    </div>
                 </div>
             </div>
     )

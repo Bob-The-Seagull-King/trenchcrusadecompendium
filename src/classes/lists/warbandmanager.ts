@@ -8,6 +8,7 @@ import { FactionFactory } from "../../factories/features/FactionFactory";
 import { FactionVariantFactory } from "../../factories/features/FactionVariantFactory";
 import { byPropertiesOf, getColour, sort } from "../../utility/functions";
 import { Requester } from "../../factories/Requester";
+import noimage from '../../resources/images/no_image.jpg'
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -95,7 +96,7 @@ class WarbandManager {
                     flavour: [],
                     notes: [],
                     deeds: [],
-                    image: "",
+                    image: noimage,
                     ducat_lost : 0,
                     glory_lost : 0,
                     ducat_cost: 0,
