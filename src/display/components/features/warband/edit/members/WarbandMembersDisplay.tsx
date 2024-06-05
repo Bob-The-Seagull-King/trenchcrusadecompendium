@@ -17,54 +17,44 @@ const WarbandMembersDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    const Warband_Name = WarbandItem? WarbandItem.Name : "";
-    let NewBandName = Warband_Name;
+    // Creation of New warband member ---------------------------
 
-    const [showNameEdit, setShowNameEdit] = useState(false);
-    const handleCloseNameEdit = () => setShowNameEdit(false); 
-    const handleShowNameEdit = () => setShowNameEdit(true);
 
-    const inputRefNameEdit = useRef<HTMLInputElement>(null);
+    // ----------------------------------------------------------
 
-    function updateName(value: string) {
-        NewBandName = value;
-    }
+    // List of Warband Members ----------------------------------
 
-    function EditWarbandName() {
-        if (WarbandItem != null) {
-            WarbandItem.Name = NewBandName;
-        }
-        UpdateFunction(WarbandItem)
-        handleCloseNameEdit();
-    }
+
+    // ----------------------------------------------------------
 
     return (
         <>
-            <div className="largefonttext" style={{display:"flex",alignItems:"center"}}>
-                <div style={{width:"fit-content"}}>
-                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="d-none d-md-block">{Warband_Name}</div>
-                    <div style={{marginRight:"0.1em",fontSize:"0.7em",lineHeight:"0.75em",textAlign:"center",width:"fit-content"}} className="d-block d-md-none">{Warband_Name}</div>
+            <div className="row"> {/* New Member Adder */}
+
+                <div className="col-md-6 col-lg-6 col-12"> {/* Model Select */}
+
                 </div>
-                <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
+                <div className="col-md-6 col-lg-6 col-12"> {/* Member Name */}
+
+                </div>
+                <div className="col-md-9 col-lg-9 col-12"> {/* Edit Cost */}
+
+                </div>
+                <div className="col-md-3 col-lg-3 col-12"> {/* Add Member */}
+
+                </div>
+
             </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
-                
-                <h1 className={'titleShape titlepurple'}>
-                    {"Update Warband Name"}
-                </h1>
-                <Modal.Body >
-                    <div className="row">
-                        <div className="col-10">
-                            <InputGroup className="tagboxpad" >
-                                <Form.Control size="lg" className="no-margins" ref={inputRefNameEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={Warband_Name} placeholder=""/>
-                            </InputGroup>
-                        </div>
-                        <div className="col-2">
-                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
+            <div className="row"> {/* Elite Members */}
+                {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
+                    <p>{item.Name}</p>
+                ))}
+            </div>
+            <div className="row"> {/* Non-Elite Members */}
+                {WarbandItem.Members.filter((item) => item.Elite == false).map((item) => (
+                    <p>{item.Name}</p>
+                ))}
+            </div>
         </>
     )
 }
