@@ -31,19 +31,12 @@ const WarbandImageEditDisplay = (props: any) => {
     function updateImage(value: string) {
         NewBandImage = value;
     }
-
-    function EditWarbandImage() {
-        if (WarbandItem != null) {
-            WarbandItem.Image = NewBandImage;
-        }
-        UpdateFunction(WarbandItem)
-        handleCloseImageEdit();
-    }
     
     const [showsize, setSize] = useState(false);
     const [heightimg, setHeight] = useState(defaultContentWidth());
 
-    const img = new (window as any).Image();    
+    const img = new (window as any).Image();  
+
     img.src = Warband_Image;
     img.onload = () => {
         if (img.width > img.height) {
@@ -51,6 +44,16 @@ const WarbandImageEditDisplay = (props: any) => {
         } else {
             setSize(false);
         }
+    }
+
+
+    function EditWarbandImage() {
+        if (WarbandItem != null) {
+            WarbandItem.Image = NewBandImage;
+        }
+        UpdateFunction(WarbandItem)
+        handleCloseImageEdit();
+        img.src = NewBandImage;
     }
 
     function defaultContentWidth() {
