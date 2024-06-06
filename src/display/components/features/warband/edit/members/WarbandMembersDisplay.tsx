@@ -175,58 +175,67 @@ const WarbandMembersDisplay = (props: any) => {
         theme="light" 
         />
             <div className="row"> {/* New Member Adder */}
-
-                <div className="col-md-6 col-lg-6 col-12"> {/* Model Select */}
-                    <InputGroup className="tagboxpad" style={{height:"4em"}}>
-                        <Form.Control as="select" style={{height:"100%",textAlign:"center"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
-                                <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
-                            {_limitfaction &&
-                            <>{WarbandItem.Faction.Models.map((item) => (
-                                <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
-                            ))}</>
-                            }
-                            {!_limitfaction &&
-                            <>{Manager.Models.map((item) => (
-                                <option key="modeloption" value={item.ID}>{item.Name}</option>
-                            ))}</>
-                            }
-                        </Form.Control>
-                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Limit to Faction" defaultChecked={true}/>
-                                
-                    </InputGroup>
-                </div>
-                <div className="col-md-6 col-lg-6 col-12"> {/* Member Name */}
-                    <InputGroup className="tagboxpad" style={{height:"4em"}}>
-                        <Form.Control ref={nameRef} style={{ height:"100%",textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" placeholder="Member Name"/>
-                    </InputGroup>
-                </div>
-                <div className="col-md-9 col-lg-9 col-12"> {/* Edit Cost */}
-                    <div className="row justify-content-center" style={{display:"flex"}}>
-                        <div className="col-md-6 col-12">
-                            <InputGroup className="tagboxpad" style={{height:"4em"}}>
+                <div className="col-12">
+                    <div className="row">
+                        <div className="col-md-9 col-6">
+                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
+                                    <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
+                                    {_limitfaction &&
+                                    <>{WarbandItem.Faction.Models.map((item) => (
+                                        <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
+                                    ))}</>
+                                    }
+                                    {!_limitfaction &&
+                                    <>{Manager.Models.map((item) => (
+                                        <option key="modeloption" value={item.ID}>{item.Name}</option>
+                                    ))}</>
+                                    }
+                                </Form.Control>
+                            </InputGroup>
+                        </div>
+                        <div className="col-md-3 col-6">
+                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Limit to Faction" defaultChecked={true}/>
+                            </InputGroup>
+                        </div>
+                    </div>
+                    
+                    <div className="row">
+                        <div className="col-6">
+                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                 <Form.Control ref={costRef} style={{ height:"100%",textAlign:"center"}} type="number" onChange={e => updateCost(e.target.value)} aria-label="Text input" defaultValue={"0"} placeholder="Member Cost"/>
                             </InputGroup>
                         </div>
-                        <div className="col-md-6 col-12">
-                            <InputGroup className="tagboxpad" style={{height:"4em"}}>
+                        <div className="col-6">
+                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                 <Form.Check type="radio" ref={costTypeDucatRef} onClick={e => {updateDucatCostType("ducats")}} name="costtype" label="Ducats" defaultChecked={true}/>
                                 <Form.Check type="radio" ref={costTypeGloryRef} onClick={e => {updateGloryCostType("glory")}} name="costtype" label="Glory"  defaultChecked={false}/>
                             </InputGroup>
+                        </div>                        
+                    </div>
+                    
+                    <div className="row">
+                        <div className="col-md-8 col-lg-8 col-6"> {/* Member Name */}
+                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                <Form.Control ref={nameRef} style={{ height:"100%",textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" placeholder="Member Name"/>
+                            </InputGroup>
+                        </div>
+                        <div className="col-md-4 col-lg-4 col-6"> {/* Add Member */}
+                            <div className="generalbuttonbox" style={{width:"100%",alignItems:"center",height:"2em"}}>
+                                <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewMember()} className="hovermouse ">
+                                    <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext" style={{fontSize:"1.25em"}}/>
+                                    <h1 className="pageaccestext" style={{whiteSpace:"nowrap",fontSize:"1.25em"}}>
+                                        Add
+                                    </h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-3 col-lg-3 col-12"> {/* Add Member */}
-                    <div className="generalbuttonbox" style={{width:"100%",alignItems:"center",height:"4em"}}>
-                        <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewMember()} className="hovermouse ">
-                            <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext"/>
-                            <h1 className="pageaccestext" style={{whiteSpace:"nowrap"}}>
-                                Add
-                            </h1>
-                        </div>
-                    </div>
-                </div>
 
+                </div>
             </div>
+
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
                     <p  key="elite">{item.Name}</p>
