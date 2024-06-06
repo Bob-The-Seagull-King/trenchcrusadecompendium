@@ -10,6 +10,7 @@ import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import WarbandEliteMemberDisplay from './WarbandEliteMemberDisplay';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
@@ -210,20 +211,17 @@ const WarbandMembersDisplay = (props: any) => {
                     
                     <div className="row"> {/* New Member Adder */}
                         <div className="col-12" >
+
                             <div className="row">
                                 <div className="col-md-8 col-6">
                                     <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                         <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
                                             <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
                                             {_limitfaction &&
-                                            <>{WarbandItem.Faction.Models.map((item) => (
-                                                <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
-                                            ))}</>
+                                            <>{WarbandItem.Faction.Models.map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
                                             }
                                             {!_limitfaction &&
-                                            <>{Manager.Models.map((item) => (
-                                                <option key="modeloption" value={item.ID}>{item.Name}</option>
-                                            ))}</>
+                                            <>{Manager.Models.map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
                                             }
                                         </Form.Control>
                                     </InputGroup>
@@ -288,7 +286,7 @@ const WarbandMembersDisplay = (props: any) => {
 
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
-                    <p  key="elite">{item.Name}</p>
+                    <WarbandEliteMemberDisplay key={item.Model.ID + item.Name} warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
                 ))}
             </div>
 
