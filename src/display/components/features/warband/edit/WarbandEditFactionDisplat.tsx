@@ -12,6 +12,7 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import FactionHover from '../../../../../display/components/subcomponents/informationpanel/hovermisc/FactionHover';
 
 const WarbandFactionEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -55,7 +56,7 @@ const WarbandFactionEditDisplay = (props: any) => {
     return (
         <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">{Warband_Faction}</div>
+                <FactionHover titlename={Warband_Faction} data={WarbandItem.Faction}/>
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
             <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
