@@ -444,3 +444,37 @@
     align-items: center;
     height: 100%;
 }
+/* .squaredThree */
+.squaredThree {
+    position: relative;
+    float:left;
+  }
+  
+  .squaredThree label {
+    color: $colour_purple_main;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25em;
+  }
+  
+  .squaredThree label:after {
+    border: 3px solid #fcfff4;
+  }
+  
+  .squaredThree input[type=checkbox] {
+    border: 2px solid $colour_purple_main;
+    border-radius: 0em;
+  }
+  
+  .squaredThree input[type=checkbox]:checked + label:after {
+    color: $colour_purple_main;
+  }
+
+  .squaredThree input[type=radio] {
+    border: 2px solid $colour_purple_main;
+    border-radius: 0em;
+  }
+  
+  .squaredThree input[type=radio]:checked + label:after {
+    color: $colour_purple_main;
+  }

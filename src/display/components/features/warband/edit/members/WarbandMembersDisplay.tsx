@@ -9,7 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
 import { PlayerModel } from '../../../../../../classes/feature/models/Model';
@@ -125,6 +126,7 @@ const WarbandMembersDisplay = (props: any) => {
         if (factionlimitcheck.current != null) {
             factionlimitcheck.current.checked = true;
         }
+        handleCloseNewModel()
     }
 
     /**
@@ -145,6 +147,10 @@ const WarbandMembersDisplay = (props: any) => {
         theme: "light",
         });
     }
+
+    const [showNewModel, setShowNewModel] = useState(false);
+    const handleCloseNewModel = () => setShowNewModel(false); 
+    const handleShowNewModel = () => setShowNewModel(true);
 
     // ----------------------------------------------------------
 
@@ -173,74 +179,121 @@ const WarbandMembersDisplay = (props: any) => {
         draggable
         pauseOnHover
         theme="light" 
-        />
-            <div className="row"> {/* New Member Adder */}
-                <div className="col-12">
-                    <div className="row">
-                        <div className="col-md-9 col-6">
-                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
-                                    <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
-                                    {_limitfaction &&
-                                    <>{WarbandItem.Faction.Models.map((item) => (
-                                        <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
-                                    ))}</>
-                                    }
-                                    {!_limitfaction &&
-                                    <>{Manager.Models.map((item) => (
-                                        <option key="modeloption" value={item.ID}>{item.Name}</option>
-                                    ))}</>
-                                    }
-                                </Form.Control>
-                            </InputGroup>
-                        </div>
-                        <div className="col-md-3 col-6">
-                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Limit to Faction" defaultChecked={true}/>
-                            </InputGroup>
+        />         
+            <div className="row justify-content-center">
+                <div className="mediumfonttext" style={{width:"fit-content"}}>
+                    Squadron Members
+                </div>
+                <div className="verticalspacerbig"/>
+            </div>
+            
+            <div className="row justify-content-center">
+                    <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1.75em",width:"fit-content",padding:"0.5em"}}   onClick={() => handleShowNewModel()}>
+                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Warband Member</div>
+                        <FontAwesomeIcon icon={faUserPlus} className="" style={{fontSize:"0.75em"}}/>
+                    </div>
+            </div>
+            
+            <Modal onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Add New Member"}
+                    <div className="row float-end">
+                        <div className='col-12 float-end'>
+                            <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseNewModel()}>
+                                <FontAwesomeIcon icon={faCircleXmark} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
+                            </Button>
                         </div>
                     </div>
+                </h1>
+                <Modal.Body >
                     
-                    <div className="row">
-                        <div className="col-6">
-                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                <Form.Control ref={costRef} style={{ height:"100%",textAlign:"center"}} type="number" onChange={e => updateCost(e.target.value)} aria-label="Text input" defaultValue={"0"} placeholder="Member Cost"/>
-                            </InputGroup>
-                        </div>
-                        <div className="col-6">
-                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                <Form.Check type="radio" ref={costTypeDucatRef} onClick={e => {updateDucatCostType("ducats")}} name="costtype" label="Ducats" defaultChecked={true}/>
-                                <Form.Check type="radio" ref={costTypeGloryRef} onClick={e => {updateGloryCostType("glory")}} name="costtype" label="Glory"  defaultChecked={false}/>
-                            </InputGroup>
-                        </div>                        
-                    </div>
-                    
-                    <div className="row">
-                        <div className="col-md-8 col-lg-8 col-6"> {/* Member Name */}
-                            <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                <Form.Control ref={nameRef} style={{ height:"100%",textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" placeholder="Member Name"/>
-                            </InputGroup>
-                        </div>
-                        <div className="col-md-4 col-lg-4 col-6"> {/* Add Member */}
-                            <div className="generalbuttonbox" style={{width:"100%",alignItems:"center",height:"2em"}}>
-                                <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewMember()} className="hovermouse ">
-                                    <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext" style={{fontSize:"1.25em"}}/>
-                                    <h1 className="pageaccestext" style={{whiteSpace:"nowrap",fontSize:"1.25em"}}>
-                                        Add
-                                    </h1>
+                    <div className="row"> {/* New Member Adder */}
+                        <div className="col-12" >
+                            <div className="row">
+                                <div className="col-md-8 col-6">
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
+                                            <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
+                                            {_limitfaction &&
+                                            <>{WarbandItem.Faction.Models.map((item) => (
+                                                <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
+                                            ))}</>
+                                            }
+                                            {!_limitfaction &&
+                                            <>{Manager.Models.map((item) => (
+                                                <option key="modeloption" value={item.ID}>{item.Name}</option>
+                                            ))}</>
+                                            }
+                                        </Form.Control>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Faction Only" defaultChecked={true}/>
+                                    </InputGroup>
                                 </div>
                             </div>
+
+                            <div className="verticalspacer"/>
+
+                            <div className="row">
+                                <div className="col-6">
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control ref={costRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} type="number" onChange={e => updateCost(e.target.value)} aria-label="Text input" defaultValue={"0"} placeholder="Member Cost"/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-6">
+                                    <div className="row  justify-content-center">
+                                        <div className="col-6 justify-content-center">
+                                            <InputGroup className="tagboxpad squaredThree" style={{height:"2em",width:"fit-content"}}>
+                                                <Form.Check type="radio" ref={costTypeDucatRef} onClick={e => {updateDucatCostType("ducats")}} name="costtype" label="Ducats" style={{width:"fit-content"}} defaultChecked={true}/>
+                                            </InputGroup>
+                                        </div>
+                                        <div className="col-6 justify-content-center">
+                                            <InputGroup className="tagboxpad squaredThree" style={{height:"2em",width:"fit-content"}}>
+                                                <Form.Check type="radio" ref={costTypeGloryRef} onClick={e => {updateGloryCostType("glory")}} name="costtype" label="Glory" style={{width:"fit-content"}} defaultChecked={false}/>
+                                            </InputGroup>
+                                        </div>
+                                    </div>
+                                </div>                        
+                            </div>
+                            
+                            <div className="verticalspacer"/>
+
+                            <div className="row">
+                                <div className="col-md-8 col-lg-8 col-6"> {/* Member Name */}
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control ref={nameRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} onChange={e => updateName(e.target.value)} aria-label="Text input" placeholder="Member Name"/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-lg-4 col-6"> {/* Add Member */}
+                                    <div className="generalbuttonbox hovermouse" onClick={() => NewMember()} style={{width:"100%",alignItems:"center",height:"2em",borderRadius:"0em"}}>
+                                        <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}}  className=" ">
+                                            <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext" style={{fontSize:"1.25em"}}/>
+                                            <h1 className="pageaccestext" style={{whiteSpace:"nowrap",fontSize:"1.25em"}}>
+                                                Add
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
-                </div>
-            </div>
+                </Modal.Body>
+            </Modal>
+            
+            <div className="verticalspacerbig"/>
 
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
                     <p  key="elite">{item.Name}</p>
                 ))}
             </div>
+
+            <div className="verticalspacerbig"/>
+
             <div className="row"> {/* Non-Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == false).map((item) => (
                     <p key="infantry">{item.Name}</p>
