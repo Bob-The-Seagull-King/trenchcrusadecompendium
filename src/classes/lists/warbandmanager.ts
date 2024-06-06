@@ -133,7 +133,7 @@ class WarbandManager {
                     injuries: [],
                     skills: [],
                     experience: 0,
-                    notes : []
+                    notes : ""
                 }
                 const ContentNew: WarbandMember = new WarbandMember((_content));
                 _warband.Members.push(ContentNew);
@@ -288,6 +288,39 @@ class WarbandManager {
         }
 
         return totalglory;
+    }
+    public GetDucatCost(_member : WarbandMember) {
+        let totalCost = 0;
+
+        if (_member.Model.CostType == "ducats") {
+            totalCost += _member.Model.Cost;
+        }
+
+        let i = 0;
+        for (i = 0; i < _member.Equipment.length; i++) {
+            if (_member.Equipment[i].CostType == "ducats") {
+                totalCost += _member.Equipment[i].Cost;
+            }
+        }
+
+        return totalCost.toString()
+    }
+
+    public GetGloryCost(_member : WarbandMember) {
+        let totalCost = 0;
+
+        if (_member.Model.CostType == "glory") {
+            totalCost += _member.Model.Cost;
+        }
+
+        let i = 0;
+        for (i = 0; i < _member.Equipment.length; i++) {
+            if (_member.Equipment[i].CostType == "glory") {
+                totalCost += _member.Equipment[i].Cost;
+            }
+        }
+
+        return totalCost.toString()
     }
 }
 

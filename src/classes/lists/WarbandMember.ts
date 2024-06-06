@@ -12,7 +12,7 @@ interface IWarbandMember {
     injuries: IListItem[],
     skills: IItemPartial[],
     experience: number,
-    notes : ITextBlock[]
+    notes : string
 }
 
 class WarbandMember {
@@ -38,7 +38,41 @@ class WarbandMember {
         this.Equipment = this.EquipmentMaker(data.equipment);
         this.Injuries = data.injuries;
         this.Skills = data.skills;
-        this.Notes = this.TextMaker(data.notes);
+        this.Notes = data.notes
+    }
+
+    public GetDucatCost() {
+        let totalCost = 0;
+
+        if (this.Model.CostType == "ducats") {
+            totalCost += this.Model.Cost;
+        }
+
+        let i = 0;
+        for (i = 0; i < this.Equipment.length; i++) {
+            if (this.Equipment[i].CostType == "ducats") {
+                totalCost += this.Equipment[i].Cost;
+            }
+        }
+
+        return totalCost.toString()
+    }
+
+    public GetGloryCost() {
+        let totalCost = 0;
+
+        if (this.Model.CostType == "glory") {
+            totalCost += this.Model.Cost;
+        }
+
+        let i = 0;
+        for (i = 0; i < this.Equipment.length; i++) {
+            if (this.Equipment[i].CostType == "glory") {
+                totalCost += this.Equipment[i].Cost;
+            }
+        }
+
+        return totalCost.toString()
     }
 
     private ModelMaker(data : IListModel) {

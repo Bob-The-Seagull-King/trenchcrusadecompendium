@@ -34,6 +34,11 @@ const WarbandEliteMemberDisplay = (props: any) => {
     const Manager : WarbandManager = props.manager;
     const bannedModelTags = ["inflict", "type"]
 
+    const ducatcost = Manager.GetDucatCost(WarbandMember);
+    const glorycost = Manager.GetGloryCost(WarbandMember)
+
+    let modelNotes = WarbandMember.Notes;
+
     function returnTags() {
         const displaytags = sortTagsForDisplay()
 
@@ -65,15 +70,37 @@ const WarbandEliteMemberDisplay = (props: any) => {
         return tagarray;
     }
 
+    function returnNotes() {
+        return (
+            <>
+                <InputGroup>
+                    <Form.Control as="textarea" aria-label="With textarea" defaultValue={modelNotes} placeholder={"Notes & Information on " + WarbandMember.Name} onChange={e => updateNotes(e.target.value)}/>
+                </InputGroup>
+            </>
+        )
+    }
+
+    function updateNotes(_value : string) {
+        modelNotes = _value;
+        WarbandMember.Notes = modelNotes;
+    }
+
     function returnStats() {
         return (
             <div>
-                <div className="row row-cols-lg-5 row-cols-md-5 row-cols-sx-5 row-cols-xs-3 row-cols-3 justify-content-center">
-                    <ModelStat title={"Base"} value={WarbandMember.Model.Object.Base + "mm"}/>
-                    <ModelStat title={"Movement"} value={WarbandMember.Model.Object.Movement}/>
-                    <ModelStat title={"Armour"} value={WarbandMember.Model.Object.Armour}/>
-                    <ModelStat title={"Ranged"} value={(WarbandMember.Model.Object.Ranged.length > 0)? WarbandMember.Model.Object.Ranged + " DICE" : "N/A"}/>
-                    <ModelStat title={"Melee"} value={(WarbandMember.Model.Object.Melee.length > 0)? WarbandMember.Model.Object.Melee + " DICE" : "N/A"}/>
+                <div className="row justify-content-center">
+                    
+                    <div className="col-md-6 col-12">
+                        <div className="stattitle">{"Model Type"}</div>
+                        <div className="statbody"><ModelHover data={WarbandMember.Model.Object} titlename={WarbandMember.Model.Object.Name} /></div>
+                        <div className="verticalspacer"/>
+                    </div>
+                    <div className="col-md-3 col-6">
+                    <ModelStat title={"Ducat Cost"} value={ducatcost}/>
+                    </div>
+                    <div className="col-md-3 col-6">
+                    <ModelStat title={"Glory Cost"} value={glorycost}/>
+                    </div>
                 </div>
             </div>
         )
@@ -87,16 +114,15 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 <div>
                     {returnTags()}
                 </div>
+                <div className="verticalspacerbig"/>
+                <div>
+                    {returnNotes()}
+                </div>
                 <div className="verticalspacer"/>
                 <div>
                     <div className="separator">&#x27E1;</div>
-                </div>             
-                <div className="equipbody" style={{display:"flex",fontSize:"1.25em"}}>
-                    <p className="glossaryGrey" style={{paddingRight:"0.5em"}}>{"Model Type: "}</p><ModelHover data={WarbandMember.Model.Object} titlename={WarbandMember.Model.Object.Name} />
-                </div>
-                <div>
-                    <div className="separator">&#x27E1;</div>
                 </div> 
+                <div className="verticalspacer"/>
                 <div>
                     {returnStats()}
                 </div>
