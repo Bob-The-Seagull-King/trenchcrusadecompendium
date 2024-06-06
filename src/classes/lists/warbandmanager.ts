@@ -3,36 +3,58 @@ import Cookies from 'js-cookie'
 import { useWarbandStore } from '../../store/warbands';
 import { GrabWarband } from '../../store/warbands';
 import { IPlayerFaction, PlayerFaction } from "../../classes/feature/factions/Faction";
+import { IPlayerModel, PlayerModel } from '../../classes/feature/models/Model';
+import { ModelFactory } from '../../factories/features/ModelFactory';
 import { IPlayerFactionVariant } from "../../classes/feature/factions/FactionVariant";
 import { FactionFactory } from "../../factories/features/FactionFactory";
 import { FactionVariantFactory } from "../../factories/features/FactionVariantFactory";
 import { byPropertiesOf, getColour, sort } from "../../utility/functions";
 import { Requester } from "../../factories/Requester";
 import noimage from '../../resources/images/no_image.jpg'
+import { IWarbandMember, WarbandMember } from './WarbandMember';
+import { containsTag } from '../../utility/functions';
+import { IListModel } from './ListModel';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
     Factions: PlayerFaction[] = [];
+    Models: PlayerModel[] = [];
 
     constructor() {
         const ReturnData = GrabWarband();
         this.WarbandList = ReturnData;
         this.FindFactions();
+        this.FindModels();
     }
 
-     /**
+    /**
+    * For each entry in the data results, create an Model object
+    * and add it to the internal list.
+    */
+    FindFactions() {
+       this.Factions = [];
+       const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "faction"}});
+       let i = 0;
+       dataresults.sort(byPropertiesOf<PlayerFaction>(['Name']))
+       for (i = 0; i < dataresults.length; i++) {
+           const modelNew = FactionFactory.CreateFactory(dataresults[i]);
+           this.Factions.push(modelNew);
+           this.GetVariants(modelNew);
+       }
+   }
+
+    /**
      * For each entry in the data results, create an Model object
      * and add it to the internal list.
      */
-     FindFactions() {
-        this.Factions = [];
-        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "faction"}});
+    FindModels() {
+        this.Models = [];
+        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "models"}});
         let i = 0;
-        dataresults.sort(byPropertiesOf<PlayerFaction>(['Name']))
+        dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
         for (i = 0; i < dataresults.length; i++) {
-            const modelNew = FactionFactory.CreateFactory(dataresults[i]);
-            this.Factions.push(modelNew);
-            this.GetVariants(modelNew);
+            const modelNew = ModelFactory.CreateModel(dataresults[i]);
+            this.Models.push(modelNew);
         }
     }
 
@@ -67,6 +89,67 @@ class WarbandManager {
 
     public SetStorage() {
         localStorage.setItem('warbandstorage', JSON.stringify(this.WarbandList));
+    }
+
+    public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
+        let ReturnMsg = "";
+        try {
+            console.log("A");
+            if (_model == "" || _model == "[No Model Selected]") {
+                ReturnMsg = "Your Member must be a model."
+            }
+            console.log("A");
+            if (_cost == "" || parseInt(_cost) < 0) {
+                ReturnMsg = "Your Member must cost at least 0."
+            }
+            console.log("A");
+            let i = 0;
+            if (ReturnMsg == "") {
+                let modelVal : any = null;
+                let memberName = "";
+                for (i = 0; i < this.Models.length ; i++ ) {
+                    if (this.Models[i].ID == _model) {
+                        modelVal = this.Models[i];
+                    }
+                }
+                if (_name.trim() == "") {
+                    memberName = modelVal? modelVal.Name : "Unamed Soldier";
+                } else {
+                    memberName = _name;
+                }
+                const modelList : IListModel = {
+                    id: modelVal? modelVal.ID : "",
+                    cost: parseInt(_cost),
+                    cost_type: _costtype                    
+                }
+
+                const isElite = containsTag(modelVal? modelVal.Tags : [], "elite")
+
+                const _content : IWarbandMember = {
+                    name: memberName,
+                    model: modelList,
+                    equipment: [],
+                    elite: isElite,
+                    injuries: [],
+                    skills: [],
+                    experience: 0,
+                    notes : []
+                }
+                const ContentNew: WarbandMember = new WarbandMember((_content));
+                _warband.Members.push(ContentNew);
+            } else {
+                return ReturnMsg;
+            }
+        } catch (e) {
+            ReturnMsg = "Something went wrong.";
+        }
+
+        if (ReturnMsg == "") {
+            _warband.DucatCost = this.TotalCostDucats(_warband)
+            _warband.GloryCost = this.TotalCostGlory(_warband)
+            this.SetStorage();
+        }
+        return ReturnMsg;
     }
 
     public NewWarband(_name : string, _faction : string) {
@@ -118,6 +201,7 @@ class WarbandManager {
         }
 
         if (ReturnMsg == "") {
+
             this.SetStorage();
         }
         return ReturnMsg;
@@ -139,6 +223,16 @@ class WarbandManager {
         for (i=0; i < this.WarbandList.length ; i++) {
             if (this.WarbandList[i].Name.trim() == _name) {
                 return this.WarbandList[i]
+            }
+        }
+        return null;
+    }
+
+    public GetModelByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Models.length ; i++) {
+            if (this.Models[i].ID == _name) {
+                return this.Models[i]
             }
         }
         return null;
