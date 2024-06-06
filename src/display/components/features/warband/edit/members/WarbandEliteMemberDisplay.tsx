@@ -24,6 +24,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { getColour } from '../../../../../../utility/functions';
 import ModelStat from '../../../../subcomponents/description/ModelStat';
+import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
 
 
 const WarbandEliteMemberDisplay = (props: any) => {
@@ -89,8 +90,13 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 <div className="verticalspacer"/>
                 <div>
                     <div className="separator">&#x27E1;</div>
-                </div>                 
-                <div className="verticalspacer"/>
+                </div>             
+                <div className="equipbody" style={{display:"flex",fontSize:"1.25em"}}>
+                    <p className="glossaryGrey" style={{paddingRight:"0.5em"}}>{"Model Type: "}</p><ModelHover data={WarbandMember.Model.Object} titlename={WarbandMember.Model.Object.Name} />
+                </div>
+                <div>
+                    <div className="separator">&#x27E1;</div>
+                </div> 
                 <div>
                     {returnStats()}
                 </div>
