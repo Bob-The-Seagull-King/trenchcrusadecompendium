@@ -286,7 +286,10 @@ const WarbandMembersDisplay = (props: any) => {
 
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
-                    <WarbandEliteMemberDisplay key={item.Model.ID + item.Name} warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
+                    <div key={item.Model.ID + item.Name} >
+                        <WarbandEliteMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
+                        <br></br>
+                    </div>
                 ))}
             </div>
 
