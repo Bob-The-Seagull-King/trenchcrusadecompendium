@@ -38,6 +38,7 @@ const WarbandMembersDisplay = (props: any) => {
     const costRef = useRef<HTMLInputElement>(null);
     const costTypeDucatRef = useRef<HTMLInputElement>(null);
     const costTypeGloryRef = useRef<HTMLInputElement>(null);
+    const factionlimitcheck = useRef<HTMLInputElement>(null);
 
     function updateName(value: string) {
         NewMemberName = value;
@@ -92,6 +93,10 @@ const WarbandMembersDisplay = (props: any) => {
         isDucats = (true);
     }
 
+    function updateFactionLimit() {
+        returnLimitFaction(!_limitfaction)
+    }
+
     function NewMember() {
         console.log(isDucats);
         const NewMemberCostType = isDucats? "ducats" : "glory";
@@ -116,6 +121,9 @@ const WarbandMembersDisplay = (props: any) => {
         }
         if (costTypeGloryRef.current != null) {
             costTypeGloryRef.current.value = "off";
+        }
+        if (factionlimitcheck.current != null) {
+            factionlimitcheck.current.checked = true;
         }
     }
 
@@ -172,10 +180,19 @@ const WarbandMembersDisplay = (props: any) => {
                     <InputGroup className="tagboxpad" style={{height:"4em"}}>
                         <Form.Control as="select" style={{height:"100%",textAlign:"center"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
                                 <option key="modeloption" value="[No Model Selected]">[No Model Selected]</option>
-                            {WarbandItem.Faction.Models.map((item) => (
+                            {_limitfaction &&
+                            <>{WarbandItem.Faction.Models.map((item) => (
                                 <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option>
-                            ))}
+                            ))}</>
+                            }
+                            {!_limitfaction &&
+                            <>{Manager.Models.map((item) => (
+                                <option key="modeloption" value={item.ID}>{item.Name}</option>
+                            ))}</>
+                            }
                         </Form.Control>
+                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Limit to Faction" defaultChecked={true}/>
+                                
                     </InputGroup>
                 </div>
                 <div className="col-md-6 col-lg-6 col-12"> {/* Member Name */}
@@ -192,8 +209,8 @@ const WarbandMembersDisplay = (props: any) => {
                         </div>
                         <div className="col-md-6 col-12">
                             <InputGroup className="tagboxpad" style={{height:"4em"}}>
-                                <Form.Check type="radio" ref={costTypeDucatRef} onClick={e => {updateDucatCostType("ducats")}} name="costtype" label="Ducats"/>
-                                <Form.Check type="radio" ref={costTypeGloryRef} onClick={e => {updateGloryCostType("glory")}} name="costtype" label="Glory"/>
+                                <Form.Check type="radio" ref={costTypeDucatRef} onClick={e => {updateDucatCostType("ducats")}} name="costtype" label="Ducats" defaultChecked={true}/>
+                                <Form.Check type="radio" ref={costTypeGloryRef} onClick={e => {updateGloryCostType("glory")}} name="costtype" label="Glory"  defaultChecked={false}/>
                             </InputGroup>
                         </div>
                     </div>

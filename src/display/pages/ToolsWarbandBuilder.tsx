@@ -12,6 +12,8 @@ const ToolsWarbandBuilder = (prop: any) => {
     
     const [_currentWarband, returnWarband] = useState(grabWarbandFromURL);
 
+    const [_keyval, returnkey] = useState(1);
+
     function grabWarbandFromURL() {
         const param = grabURL();
 
@@ -23,6 +25,7 @@ const ToolsWarbandBuilder = (prop: any) => {
     function UpdateWarband(_warband : Warband) {
         Manager.SetStorage();
         returnWarband(_warband);
+        returnkey(_keyval + 1);
     }
 
     function grabURL() {
@@ -43,7 +46,7 @@ const ToolsWarbandBuilder = (prop: any) => {
         <div className="container" style={{width:"100%"}}>
             {_currentWarband != null &&
                 <div>
-                    <WarbandEditDisplay data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
+                    <WarbandEditDisplay key={_keyval} data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
                 </div>
             }
             {_currentWarband == null &&
