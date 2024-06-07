@@ -100,7 +100,7 @@ const MemberEditScarsDisplay = (props: any) => {
 
             <div className="col-9 align-content-center">
                 <div className="equipbody">
-                    <InjuryHover data={item} titlename={item.name} />
+                    <InjuryHover data={item} titlename={item.Name} />
                 </div>
             </div>
             <div className="col-3 align-content-center">
