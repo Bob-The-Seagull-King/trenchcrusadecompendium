@@ -31,7 +31,7 @@ import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
 import MemberEditScarsDisplay from './MemberEditScarsDisplay';
 
-const WarbandEliteMemberDisplay = (props: any) => {
+const WarbandInfantryMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
@@ -180,7 +180,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     }
 
     function demoteModel() {
-        WarbandMember.Elite = false;
+        WarbandMember.Elite = true;
         UpdateFunction(WarbandItem);
     }
 
@@ -207,7 +207,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
             <div className="col">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
                         </div>
                     </div>
                 </div>
@@ -264,6 +264,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 <div className="verticalspacer"/>
                 <div>
                     <div className="row row-cols-md-2 row-cols-1">
+                        {WarbandMember.Skills.length > 0 &&
                         <div className="col">
                             <div>
                                 <div className="separator">Skills</div>
@@ -271,6 +272,8 @@ const WarbandEliteMemberDisplay = (props: any) => {
                             {returnSkills()}
                             <div className="verticalspacer"/>
                         </div>
+                        }
+                        {WarbandMember.Injuries.length > 0 &&
                         <div className="col">
                             <div>
                                 <div className="separator">Scars</div>
@@ -278,6 +281,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
                             {returnScars()}
                             <div className="verticalspacer"/>
                         </div>
+                        }
                     </div>
                 </div>
                 <div>
@@ -295,4 +299,4 @@ const WarbandEliteMemberDisplay = (props: any) => {
     )
 }
 
-export default WarbandEliteMemberDisplay;
+export default WarbandInfantryMemberDisplay;

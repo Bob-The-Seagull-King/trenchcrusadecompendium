@@ -187,10 +187,11 @@ const MemberEditSkillsDisplay = (props: any) => {
     return (
         <>
             <div>
-                
+                {WarbandMember.Elite == true &&
                 <div className="row">
                     {experienceCount()}
                 </div>
+                }
                 <div className="verticalspacer"/>
                 <div className="row">
                     {
@@ -200,9 +201,11 @@ const MemberEditSkillsDisplay = (props: any) => {
                     }
                 </div>
                 <div className="verticalspacer"/>
+                {WarbandMember.Elite == true &&
                 <div className="row">
                     {addSkill()}
                 </div>
+                }
             </div>
         </>
     )

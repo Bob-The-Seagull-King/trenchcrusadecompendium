@@ -141,9 +141,11 @@ const MemberEditScarsDisplay = (props: any) => {
                     }
                 </div>
                 <div className="verticalspacer"/>
+                {WarbandMember.Elite == true &&
                 <div className="row">
                     {addSkill()}
                 </div>
+                }
             </div>
         </>
     )

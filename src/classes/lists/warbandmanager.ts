@@ -363,6 +363,16 @@ class WarbandManager {
         return null;
     }
 
+    public DeleteModelFromWarband( _model : WarbandMember, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _warband.Members.length; i++) {
+            if (_warband.Members[i] == _model) {
+                _warband.Members.splice(i, 1);
+                break;
+            }
+        }
+    }
+
     public DeleteEquipmentFromModel(_equipment : ListEquipment, _model : WarbandMember, _warband : Warband) {
         let i = 0;
         for (i = 0; i < _model.Equipment.length; i++) {

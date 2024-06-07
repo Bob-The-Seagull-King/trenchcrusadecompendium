@@ -11,6 +11,7 @@ import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import WarbandEliteMemberDisplay from './WarbandEliteMemberDisplay';
+import WarbandInfantryMemberDisplay from './WarbandInfantryMemberDisplay';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
@@ -282,6 +283,9 @@ const WarbandMembersDisplay = (props: any) => {
             </Modal>
             
             <div className="verticalspacerbig"/>
+            <div>
+                <div className="separator">Elites</div>
+            </div>
 
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
@@ -292,11 +296,18 @@ const WarbandMembersDisplay = (props: any) => {
                 ))}
             </div>
 
+            
             <div className="verticalspacerbig"/>
+            <div>
+                <div className="separator">Infantry</div>
+            </div>
 
             <div className="row"> {/* Non-Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == false).map((item) => (
-                    <p key="infantry">{item.Name}</p>
+                    <div key={item.Model.ID + item.Name} >
+                        <WarbandInfantryMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
+                        <br></br>
+                    </div>
                 ))}
             </div>
         </>
