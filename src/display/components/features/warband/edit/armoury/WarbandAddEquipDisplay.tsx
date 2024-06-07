@@ -233,9 +233,9 @@ const WarbandAddEquipDisplay = (props: any) => {
             
             <div className="justify-content-center">
                 <div className="col-12">
-                    <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowNewModel()}>
-                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Equipment</div>
-                        <FontAwesomeIcon icon={faUserPlus} className="" style={{fontSize:"0.75em"}}/>
+                    <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1.75em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowNewModel()}>
+                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add Equipment</div>
+                       
                     </div>
                 </div>
             </div>

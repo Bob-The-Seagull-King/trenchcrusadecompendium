@@ -32,7 +32,10 @@ const WarbandArmouryDisplay = (props: any) => {
     
     function returnEquipment() {
         return (
-            <>
+            <div className="row">
+                <WarbandAddEquipDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+            </div>
+            <><div className="verticalspacerbig"/>
                 <div className="row" style={{width:"100%"}}>
                     <div className="col-12">
                         <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
@@ -42,10 +45,7 @@ const WarbandArmouryDisplay = (props: any) => {
                         </ResponsiveMasonry>
                     </div>
                 </div>
-                <div className="verticalspacerbig"/>
-                <div className="row">
-                    <WarbandAddEquipDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                </div>
+                
             </>
         )
     }
