@@ -11,7 +11,6 @@ class ModelFactory {
      * @returns A newly created model
      */
     static CreateModel(_model: IPlayerModel) {
-        console.log(_model);
         const model = new PlayerModel(_model)
 
         // Create a number of addon objects for each addon associated with an model

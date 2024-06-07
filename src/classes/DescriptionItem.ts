@@ -10,6 +10,31 @@ interface IDescriptionItemData {
     subcontent?: []
 }
 
+interface ITextBlock {
+    title: [],
+    content: []
+}
+
+class TextBlock {
+    public Title;
+    public Content;
+
+    public constructor(data: ITextBlock) {
+        this.Title = data.title;
+        this.Content = this.DescriptionFactory(data.content);
+    }
+
+    private DescriptionFactory(data: []) {
+        let i = 0;
+        const array: DescriptionItem[] = []
+        for (i = 0; i < data.length; i++) {
+            const tempAD = new DescriptionItem(data[i])
+            array.push(tempAD)
+        }
+        return array;
+    }
+}
+
 class DescriptionItem {
     public readonly Content;
     public readonly Tags;
@@ -49,4 +74,4 @@ class DescriptionItem {
     }
 }
 
-export {IDescriptionItemData, DescriptionItem}
+export {IDescriptionItemData, DescriptionItem, ITextBlock, TextBlock}

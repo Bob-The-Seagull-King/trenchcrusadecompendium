@@ -49,6 +49,37 @@
     font-weight: bolder;
 }
 
+.largefonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 5em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.mediumfonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.mediumsubfonttext {
+  color: $colour_purple_main;
+  font-family: CloisterBlack;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.subfonttext {
+  color: $colour_purple_main;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1em;
+}
+
 .subtitlepurple {
     padding-left: 0.25em;
     padding-right: 0.25em;
@@ -66,6 +97,13 @@
 .glossaryPurple {
     color: $colour_purple_main;
     font-weight: bold;
+}
+
+.glossaryGrey {
+    color: $colour_grey_main;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top:0.1em;
 }
 
 .boldtextPurple {   
@@ -320,6 +358,13 @@
   .pageaccestext {
       font-size: 1.75em;
       font-weight: 700;
+      color: $colour_purple_main;
+      margin: 0.1em;
+  }
+
+  .pageaccestextsmall {
+      font-size: 1.25em;
+      font-weight: 600;
       color: $colour_purple_main;
       margin: 0.1em;
   }

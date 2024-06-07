@@ -5,19 +5,23 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
 import ToolsContentManager from '../../display/pages/ToolsContentManager'
+import ToolsWarbandBuilder from '../../display/pages/ToolsWarbandBuilder'
 import path from 'path'
 
 import { ContentPackManager } from '../../classes/contentpacks/contentmanager'
+import { WarbandManager } from '../../classes/lists/warbandmanager'
 
 const ToolsRoute: React.FC = () => {
 
     // Initialize Controller //
     const ContentManager = new ContentPackManager;
+    const ListManager = new WarbandManager;
 
     // Return result -----------------------------
     return (
         <Routes>
             <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={ContentManager}/>} />
+            <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder manager={ListManager}/>} />
         </Routes>
     )
     // -------------------------------------------

@@ -19,6 +19,7 @@ import { faUserInjured } from '@fortawesome/free-solid-svg-icons'
 import { faHandFist } from '@fortawesome/free-solid-svg-icons'
 import { faTable } from '@fortawesome/free-solid-svg-icons'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
+import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 
 const HomeRoute: React.FC = () => {
     const navigate = useNavigate();
@@ -112,11 +113,19 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className="row">
                         <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                            <div className="col">
+                            <div className="col mb-2">
                                 <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/content/")}>
                                     <FontAwesomeIcon icon={faFileLines} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         CONTENT MANAGER
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/warband/")}>
+                                    <FontAwesomeIcon icon={faScrewdriverWrench} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        WARBAND BUILDER
                                     </h1>
                                 </div>
                             </div>

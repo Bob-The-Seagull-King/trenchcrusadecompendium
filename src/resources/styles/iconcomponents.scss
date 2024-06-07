@@ -317,6 +317,63 @@
     }
 }
 
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .image-wrapper img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+.image-wrapperwide {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .image-wrapperwide img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+.generalbackgroundbuttonbox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.1em;
+    color: $colour_purple_main;
+    box-shadow: 0 0 5px 1px #CCC;
+    height: 100%;
+    width: fit-content;
+    padding: 0.25em;
+    font-size: 1.15em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px #CCC;
+    }
+}
+
+.generalprimitivebox {
+    justify-content: center;
+    display: flex; /* make element size relative to content */
+    align-items: center;
+    border-radius: 0.2em;
+    box-shadow: 0 0 5px 1px #CCC;
+    height: 100%;
+    width: fit-content;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 .contentpackcontainer {
     display: flex; /* make element size relative to content */
     justify-content: space-between;
@@ -387,3 +444,37 @@
     align-items: center;
     height: 100%;
 }
+/* .squaredThree */
+.squaredThree {
+    position: relative;
+    float:left;
+  }
+  
+  .squaredThree label {
+    color: $colour_purple_main;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25em;
+  }
+  
+  .squaredThree label:after {
+    border: 3px solid #fcfff4;
+  }
+  
+  .squaredThree input[type=checkbox] {
+    border: 2px solid $colour_purple_main;
+    border-radius: 0em;
+  }
+  
+  .squaredThree input[type=checkbox]:checked + label:after {
+    color: $colour_purple_main;
+  }
+
+  .squaredThree input[type=radio] {
+    border: 2px solid $colour_purple_main;
+    border-radius: 0em;
+  }
+  
+  .squaredThree input[type=radio]:checked + label:after {
+    color: $colour_purple_main;
+  }

@@ -15,7 +15,7 @@ class FactionVariantFactory {
      * @param _addon Data on the addon to be sent to the constructor
      * @returns The addon that was created
      */
-    static CreateFactory(_addon: IPlayerFactionVariant) {
+    static CreateFactory(_addon: IPlayerFactionVariant,_faction : string) {
         const baseFaction : IPlayerFaction = FactionVariantFactory.GetBaseFaction(_addon.faction_id)
         
         const ruleSet : IFactionRuleset[] = FactionVariantFactory.ModifyRules(_addon, baseFaction);
@@ -29,7 +29,7 @@ class FactionVariantFactory {
                 tags: _addon.tags, // Tags associated with that item (used for sorting and synergies)
                 flavour: _addon.flavour,
                 rules: ruleSet,
-                name: "Variant: " + _addon.name,
+                name:  "(" + _faction + " Variant) " + _addon.name,
                 equipment: equipSet,
                 models: modelSet
             }

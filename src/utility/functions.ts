@@ -158,6 +158,10 @@ export function getRouteName(_route: string) {
         return "Content Manager"
     }
 
+    if (_route.includes("tools/warband")) {
+        return "Warband Builder"
+    }
+
     return ""
 }
 

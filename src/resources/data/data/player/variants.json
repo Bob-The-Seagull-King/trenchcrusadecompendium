@@ -253,7 +253,7 @@
         ],
         "removed_rules": [],
         "removed_equip": [],
-        "removed_model": ["md_artillerywitch"],
+        "removed_model": ["md_artillerywitch","md_hereticdeathcommando"],
         "equipment": [
             {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_standardofmammon", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": []},

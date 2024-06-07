@@ -82,5 +82,5 @@ class ListGroup extends TrenchCrusadeItem {
 
 }
 
-export {IListSet, IListGroup, ListGroup}
+export {IListSet, IListGroup, ListGroup, IItemPartial}
 
