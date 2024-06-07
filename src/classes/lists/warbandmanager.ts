@@ -17,6 +17,7 @@ import { IWarbandMember, WarbandMember } from './WarbandMember';
 import { containsTag } from '../../utility/functions';
 import { IListModel } from './ListModel';
 import { IListEquipment, ListEquipment } from './ListEquipment';
+import { IItemPartial } from '../../classes/feature/list/ListGroup';
 
 
 class WarbandManager {
@@ -24,6 +25,7 @@ class WarbandManager {
     Factions: PlayerFaction[] = [];
     Models: PlayerModel[] = [];
     Equipment: PlayerEquipment[] = [];
+    Skills: IItemPartial[] = [];
 
     constructor() {
         const ReturnData = GrabWarband();
@@ -31,6 +33,7 @@ class WarbandManager {
         this.FindFactions();
         this.FindModels();
         this.FindEquipment();
+        this.FindSkills();
     }
 
     /**
@@ -61,6 +64,21 @@ class WarbandManager {
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = ModelFactory.CreateModel(dataresults[i]);
            this.Models.push(modelNew);
+       }
+   }
+
+   /**
+    * For each entry in the data results, create an Model object
+    * and add it to the internal list.
+    */
+   FindSkills() {
+       this.Skills = [];
+       const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "skills"}});
+       let i = 0;
+       dataresults.sort(byPropertiesOf<IItemPartial>(['name',"id"]))
+       for (i = 0; i < dataresults.length; i++) {
+           const modelNew = (dataresults[i]);
+           this.Skills.push(modelNew);
        }
    }
 
@@ -303,6 +321,16 @@ class WarbandManager {
         for (i=0; i < this.Equipment.length ; i++) {
             if (this.Equipment[i].ID == _name) {
                 return this.Equipment[i]
+            }
+        }
+        return null;
+    }
+
+    public GetSkillByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Skills.length ; i++) {
+            if (this.Skills[i].id == _name) {
+                return this.Skills[i]
             }
         }
         return null;

@@ -28,6 +28,7 @@ import ModelStat from '../../../../subcomponents/description/ModelStat';
 import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
 import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
+import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
 
 const WarbandEliteMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -160,6 +161,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     function returnSkills() {
         return (
             <>
+                <MemberEditSkillsDisplay member={WarbandMember} warband={WarbandItem} updater={UpdateFunction} manager={Manager} />    
             </>
         )
     }
@@ -221,9 +223,6 @@ const WarbandEliteMemberDisplay = (props: any) => {
 
                 {
                     /*
-
-                    xp/skills    scars/injuries
-
                     demote model          remove model           resell movel
                     */
                 }
