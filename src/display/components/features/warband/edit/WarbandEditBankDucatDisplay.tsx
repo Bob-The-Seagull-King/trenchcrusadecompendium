@@ -30,17 +30,13 @@ const WarbandEditBankDucatDisplay = (props: any) => {
 
     function updateDucats(value: number) {
         NewMaxCount = value;
-        console.log(value);
-        console.log(NewMaxCount);
     }
 
     function EditWarbandDucats() {
         if (WarbandItem != null) {
             WarbandItem.DucatTotal = NewMaxCount;
-            console.log(NewMaxCount);
         }
         UpdateFunction(WarbandItem)
-        console.log(WarbandItem);
         handleCloseDucatsEdit();
     }
 

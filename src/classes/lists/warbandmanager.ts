@@ -4,7 +4,9 @@ import { useWarbandStore } from '../../store/warbands';
 import { GrabWarband } from '../../store/warbands';
 import { IPlayerFaction, PlayerFaction } from "../../classes/feature/factions/Faction";
 import { IPlayerModel, PlayerModel } from '../../classes/feature/models/Model';
+import { IPlayerEquipment, PlayerEquipment } from '../../classes/feature/equipment/Equipment';
 import { ModelFactory } from '../../factories/features/ModelFactory';
+import { EquipmentFactory } from '../../factories/features/EquipmentFactory';
 import { IPlayerFactionVariant } from "../../classes/feature/factions/FactionVariant";
 import { FactionFactory } from "../../factories/features/FactionFactory";
 import { FactionVariantFactory } from "../../factories/features/FactionVariantFactory";
@@ -14,17 +16,21 @@ import noimage from '../../resources/images/no_image.jpg'
 import { IWarbandMember, WarbandMember } from './WarbandMember';
 import { containsTag } from '../../utility/functions';
 import { IListModel } from './ListModel';
+import { IListEquipment, ListEquipment } from './ListEquipment';
+
 
 class WarbandManager {
     WarbandList: Warband[] = [];
     Factions: PlayerFaction[] = [];
     Models: PlayerModel[] = [];
+    Equipment: PlayerEquipment[] = [];
 
     constructor() {
         const ReturnData = GrabWarband();
         this.WarbandList = ReturnData;
         this.FindFactions();
         this.FindModels();
+        this.FindEquipment();
     }
 
     /**
@@ -43,18 +49,33 @@ class WarbandManager {
        }
    }
 
+   /**
+    * For each entry in the data results, create an Model object
+    * and add it to the internal list.
+    */
+   FindModels() {
+       this.Models = [];
+       const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "models"}});
+       let i = 0;
+       dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
+       for (i = 0; i < dataresults.length; i++) {
+           const modelNew = ModelFactory.CreateModel(dataresults[i]);
+           this.Models.push(modelNew);
+       }
+   }
+
     /**
      * For each entry in the data results, create an Model object
      * and add it to the internal list.
      */
-    FindModels() {
-        this.Models = [];
-        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "models"}});
+    FindEquipment() {
+        this.Equipment = [];
+        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "equipment"}});
         let i = 0;
         dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
         for (i = 0; i < dataresults.length; i++) {
-            const modelNew = ModelFactory.CreateModel(dataresults[i]);
-            this.Models.push(modelNew);
+            const modelNew = EquipmentFactory.CreateFactory(dataresults[i]);
+            this.Equipment.push(modelNew);
         }
     }
 
@@ -94,15 +115,12 @@ class WarbandManager {
     public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
         let ReturnMsg = "";
         try {
-            console.log("A");
             if (_model == "" || _model == "[No Model Selected]") {
                 ReturnMsg = "Your Member must be a model."
             }
-            console.log("A");
             if (_cost == "" || parseInt(_cost) < 0) {
                 ReturnMsg = "Your Member must cost at least 0."
             }
-            console.log("A");
             let i = 0;
             if (ReturnMsg == "") {
                 let modelVal : any = null;
@@ -135,6 +153,7 @@ class WarbandManager {
                     experience: 0,
                     notes : ""
                 }
+
                 const ContentNew: WarbandMember = new WarbandMember((_content));
                 _warband.Members.push(ContentNew);
             } else {
@@ -147,6 +166,47 @@ class WarbandManager {
         if (ReturnMsg == "") {
             _warband.DucatCost = this.TotalCostDucats(_warband)
             _warband.GloryCost = this.TotalCostGlory(_warband)
+            this.SetStorage();
+        }
+        return ReturnMsg;
+    }
+
+
+    public NewEquipmentForMember(_warband : WarbandMember, _model : string, _cost : string, _costtype : string){
+        let ReturnMsg = "";
+        try {
+            if (_model == "" || _model == "[No Model Selected]") {
+                ReturnMsg = "Your Item must be one of the available options."
+            }
+            if (_cost == "" || parseInt(_cost) < 0) {
+                ReturnMsg = "Your Item must cost at least 0."
+            }
+            let i = 0;
+            if (ReturnMsg == "") {
+                let modelVal : any = null;
+                
+                for (i = 0; i < this.Equipment.length ; i++ ) {
+                    if (this.Equipment[i].ID == _model) {
+                        modelVal = this.Equipment[i];
+                    }
+                }
+
+                const modelList : IListEquipment = {
+                    id: modelVal? modelVal.ID : "",
+                    cost: parseInt(_cost),
+                    cost_type: _costtype                    
+                }
+
+                const ContentNew: ListEquipment = new ListEquipment((modelList));
+                _warband.Equipment.push(ContentNew);
+            } else {
+                return ReturnMsg;
+            }
+        } catch (e) {
+            ReturnMsg = "Something went wrong.";
+        }
+
+        if (ReturnMsg == "") {
             this.SetStorage();
         }
         return ReturnMsg;
@@ -238,6 +298,28 @@ class WarbandManager {
         return null;
     }
 
+    public GetEquipmentByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Equipment.length ; i++) {
+            if (this.Equipment[i].ID == _name) {
+                return this.Equipment[i]
+            }
+        }
+        return null;
+    }
+
+    public DeleteEquipmentFromModel(_equipment : ListEquipment, _model : WarbandMember, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _model.Equipment.length; i++) {
+            if (_model.Equipment[i] == _equipment) {
+                _warband.DucatCost = this.TotalCostDucats(_warband);
+                _warband.GloryCost = this.TotalCostGlory(_warband);
+                _model.Equipment.splice(i, 1);
+                break;
+            }
+        }
+    }
+
     public DeletePack(_pack : Warband) {
         let i = 0;
         for (i = 0; i < this.WarbandList.length; i++) {
@@ -265,6 +347,12 @@ class WarbandManager {
             if (_band.Members[i].Model.CostType == "ducats") {
                 totalducats += _band.Members[i].Model.Cost;
             }
+            let j = 0;
+            for (j = 0; j < _band.Members[i].Equipment.length; j++ ) {
+                if (_band.Members[i].Equipment[j].CostType == "ducats") {
+                    totalducats += _band.Members[i].Equipment[j].Cost;
+                }
+            }
         }
 
         return totalducats;
@@ -285,10 +373,17 @@ class WarbandManager {
             if (_band.Members[i].Model.CostType == "glory") {
                 totalglory += _band.Members[i].Model.Cost;
             }
+            let j = 0;
+            for (j = 0; j < _band.Members[i].Equipment.length; j++ ) {
+                if (_band.Members[i].Equipment[j].CostType == "glory") {
+                    totalglory += _band.Members[i].Equipment[j].Cost;
+                }
+            }
         }
 
         return totalglory;
     }
+
     public GetDucatCost(_member : WarbandMember) {
         let totalCost = 0;
 

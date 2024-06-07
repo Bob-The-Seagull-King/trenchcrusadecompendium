@@ -119,6 +119,12 @@ export class Warband {
             if (this.Members[i].Model.CostType == "ducats") {
                 totalducats += this.Members[i].Model.Cost;
             }
+            let j = 0;
+            for (j = 0; j < this.Members[i].Equipment.length; j++ ) {
+                if (this.Members[i].Equipment[j].CostType == "ducats") {
+                    totalducats += this.Members[i].Equipment[j].Cost;
+                }
+            }
         }
 
         return totalducats;
@@ -138,6 +144,12 @@ export class Warband {
         for (i = 0; i < this.Members.length ; i++) {
             if (this.Members[i].Model.CostType == "glory") {
                 totalglory += this.Members[i].Model.Cost;
+            }
+            let j = 0;
+            for (j = 0; j < this.Members[i].Equipment.length; j++ ) {
+                if (this.Members[i].Equipment[j].CostType == "glory") {
+                    totalglory += this.Members[i].Equipment[j].Cost;
+                }
             }
         }
 
