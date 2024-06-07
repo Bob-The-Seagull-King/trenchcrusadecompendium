@@ -11,7 +11,7 @@ import { Warband } from '../../../../classes/lists/Warband';
 import WarbandDisplay from '../../../../display/components/features/warband/WarbandDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlus, faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
+import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandListDisplay = (prop: any) => {
     const Manager : WarbandManager = prop.manager;

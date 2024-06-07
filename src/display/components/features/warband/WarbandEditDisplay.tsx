@@ -8,12 +8,6 @@ import { Warband } from '../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import { faUnlock } from '@fortawesome/free-solid-svg-icons'
-import { makestringpresentable } from '../../../../utility/functions'
 
 import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';

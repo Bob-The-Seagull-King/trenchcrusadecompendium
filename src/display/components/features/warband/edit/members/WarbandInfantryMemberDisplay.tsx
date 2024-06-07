@@ -9,13 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
-import { ListModel } from '../../../../../../classes/lists/ListModel'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
-import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
-import { PlayerModel } from '../../../../../../classes/feature/models/Model';
 import {ITrenchCrusadeItemTag} from '../../../../../../classes/TrenchCrusadeItem'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 

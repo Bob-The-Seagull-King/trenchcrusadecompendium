@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { PlayerFaction } from '../../../../../classes/feature/factions/Faction';
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';

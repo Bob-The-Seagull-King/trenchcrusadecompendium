@@ -6,12 +6,8 @@ import Button from 'react-bootstrap/Button';
 
 import { Warband } from '../../../../classes/lists/Warband';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import { faLock } from '@fortawesome/free-solid-svg-icons'
-import { faUnlock } from '@fortawesome/free-solid-svg-icons'
-import { makestringpresentable } from '../../../../utility/functions'
 
 const WarbandDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;

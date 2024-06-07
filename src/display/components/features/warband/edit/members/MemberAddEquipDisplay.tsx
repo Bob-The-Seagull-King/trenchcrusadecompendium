@@ -11,11 +11,8 @@ import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import WarbandEliteMemberDisplay from './WarbandEliteMemberDisplay';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
-import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
-import { PlayerModel } from '../../../../../../classes/feature/models/Model';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { ListEquipment } from '../../../../../../classes/lists/ListEquipment';

@@ -14,8 +14,6 @@ import WarbandEliteMemberDisplay from './WarbandEliteMemberDisplay';
 import WarbandInfantryMemberDisplay from './WarbandInfantryMemberDisplay';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
-import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
-import { PlayerModel } from '../../../../../../classes/feature/models/Model';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 

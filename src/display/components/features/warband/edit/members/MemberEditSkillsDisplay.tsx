@@ -9,27 +9,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
-import { ListModel } from '../../../../../../classes/lists/ListModel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
-import { FactionModel } from '../../../../../../classes/feature/factions/FactionModel';
-import { PlayerModel } from '../../../../../../classes/feature/models/Model';
-import {ITrenchCrusadeItemTag} from '../../../../../../classes/TrenchCrusadeItem'
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
-import TagDisplay from '../../../../subcomponents/TagDisplay'
-import ModelDescriptionItemDisplay from '../../../../subcomponents/description/ModelDescriptionItemDisplay';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { getColour, makestringpresentable } from '../../../../../../utility/functions';
-import ModelStat from '../../../../subcomponents/description/ModelStat';
-import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
-import ModelEquipDisplay from './MemberEquipDisplay';
-import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import SkillHover from '../../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
 
 const MemberEditSkillsDisplay = (props: any) => {
