@@ -19,6 +19,9 @@ const WarbandEditBankGloryDisplay = (props: any) => {
     const Warband_MaxCount = WarbandItem? WarbandItem.GloryTotal : 0;
     let NewMaxCount = Warband_MaxCount;
 
+    const Warband_LostCount = WarbandItem? WarbandItem.GloryLost : 0;
+    let NewLostCount = Warband_LostCount;
+
     const CurrentCost = WarbandItem? Manager.TotalCostGlory(WarbandItem): 0;
 
     const [showGlorysEdit, setShowGlorysEdit] = useState(false);
@@ -26,6 +29,12 @@ const WarbandEditBankGloryDisplay = (props: any) => {
     const handleShowGlorysEdit = () => setShowGlorysEdit(true);
 
     const inputRefGlorysEdit = useRef<HTMLInputElement>(null);
+
+    const [showGlorysLostEdit, setShowGlorysLostEdit] = useState(false);
+    const handleCloseGlorysLostEdit = () => setShowGlorysLostEdit(false); 
+    const handleShowGlorysLostEdit = () => setShowGlorysLostEdit(true);
+
+    const inputRefGlorysLostEdit = useRef<HTMLInputElement>(null);
 
     function updateGlorys(value: number) {
         NewMaxCount = value;
@@ -39,22 +48,41 @@ const WarbandEditBankGloryDisplay = (props: any) => {
         handleCloseGlorysEdit();
     }
 
+    function updateGlorysLost(value: number) {
+        NewLostCount = value;
+    }
+
+    function EditWarbandGlorysLost() {
+        if (WarbandItem != null) {
+            WarbandItem.GloryLost = NewLostCount;
+        }
+        UpdateFunction(WarbandItem)
+        handleCloseGlorysEdit();
+    }
+
     return (
         <>            
-            <div className="col-lg-5 col-md-5 col-12 align-content-center" style={{   textAlign:"center"}}>
+            <div className="col-lg-2 col-md-2 col-12 align-content-center" style={{   textAlign:"center"}}>
                 <div className="row justify-content-right" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
-                        Glory Spent/Total
+                        Glory
                     </div>
                 </div>
             </div>
             <div className="col d-block d-md-none">
                 <div className="verticalspacerbig"/>
             </div>
-            <div className="col-lg-7 col-md-7 col-12">
+            <div className="col-lg-5 col-md-5 col-12">
                     <div onClick={() => handleShowGlorysEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
+                        </div>
+                    </div>
+            </div>
+            <div className="col-lg-5 col-md-5 col-12">
+                    <div onClick={() => handleShowGlorysLostEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                        <div style={{textAlign:"center"}}>
+                            { Warband_LostCount + " Lost to War"}
                         </div>
                     </div>
             </div>
@@ -73,6 +101,25 @@ const WarbandEditBankGloryDisplay = (props: any) => {
                         </div>
                         <div className="col-2">
                             <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandGlorys()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+            <Modal onEnterKeyDown={() => handleCloseGlorysLostEdit()} show={showGlorysLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysLostEdit} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Update Lost Glory"}
+                </h1>
+                
+                <Modal.Body >
+                    <div className="row">
+                        <div className="col-10">
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control type="number" size="lg" className="no-margins" ref={inputRefGlorysLostEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateGlorysLost(parseInt( e.target.value))} aria-label="Text input" defaultValue={Warband_LostCount} placeholder=""/>
+                            </InputGroup>
+                        </div>
+                        <div className="col-2">
+                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandGlorysLost()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>

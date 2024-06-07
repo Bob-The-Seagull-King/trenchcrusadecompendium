@@ -18,6 +18,8 @@ const WarbandEditBankDucatDisplay = (props: any) => {
 
     const Warband_MaxCount = WarbandItem? WarbandItem.DucatTotal : 0;
     let NewMaxCount = Warband_MaxCount;
+    const Warband_LostCount = WarbandItem? WarbandItem.DucatLost : 0;
+    let NewLostCount = Warband_LostCount;
 
     const CurrentCost = WarbandItem? Manager.TotalCostDucats(WarbandItem): 0;
 
@@ -26,6 +28,12 @@ const WarbandEditBankDucatDisplay = (props: any) => {
     const handleShowDucatsEdit = () => setShowDucatsEdit(true);
 
     const inputRefDucatsEdit = useRef<HTMLInputElement>(null);
+
+    const [showDucatsLostEdit, setShowDucatsLostEdit] = useState(false);
+    const handleCloseDucatsLostEdit = () => setShowDucatsLostEdit(false); 
+    const handleShowDucatsLostEdit = () => setShowDucatsLostEdit(true);
+
+    const inputRefDucatsLostEdit = useRef<HTMLInputElement>(null);
 
     function updateDucats(value: number) {
         NewMaxCount = value;
@@ -39,22 +47,41 @@ const WarbandEditBankDucatDisplay = (props: any) => {
         handleCloseDucatsEdit();
     }
 
+    function updateDucatsLost(value: number) {
+        NewLostCount = value;
+    }
+
+    function EditWarbandDucatsLost() {
+        if (WarbandItem != null) {
+            WarbandItem.DucatLost = NewLostCount;
+        }
+        UpdateFunction(WarbandItem)
+        handleCloseDucatsEdit();
+    }
+
     return (
         <>            
-            <div className="col-lg-5 col-md-5 col-12 align-content-center" style={{   textAlign:"center"}}>
+            <div className="col-lg-2 col-md-2 col-12 align-content-center" style={{   textAlign:"center"}}>
                 <div className="row justify-content-right" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
-                        Ducats Spent/Total
+                        Ducats
                     </div>
                 </div>
             </div>
             <div className="col d-block d-md-none">
                 <div className="verticalspacerbig"/>
             </div>
-            <div className="col-lg-7 col-md-7 col-12">
+            <div className="col-lg-5 col-md-5 col-12">
                     <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
+                        </div>
+                    </div>
+            </div>
+            <div className="col-lg-5 col-md-5 col-12">
+                    <div onClick={() => handleShowDucatsLostEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                        <div style={{textAlign:"center"}}>
+                            {Warband_LostCount + " Lost to War"}
                         </div>
                     </div>
             </div>
@@ -73,6 +100,25 @@ const WarbandEditBankDucatDisplay = (props: any) => {
                         </div>
                         <div className="col-2">
                             <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandDucats()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+            <Modal onEnterKeyDown={() => handleCloseDucatsLostEdit()} show={showDucatsLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsLostEdit} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Update Lost Ducats"}
+                </h1>
+                
+                <Modal.Body >
+                    <div className="row">
+                        <div className="col-10">
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control type="number" size="lg" className="no-margins" ref={inputRefDucatsLostEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateDucatsLost(parseInt( e.target.value))} aria-label="Text input" defaultValue={Warband_LostCount} placeholder=""/>
+                            </InputGroup>
+                        </div>
+                        <div className="col-2">
+                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandDucatsLost()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>
