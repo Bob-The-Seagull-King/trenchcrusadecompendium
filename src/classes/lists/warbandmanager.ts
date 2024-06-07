@@ -18,7 +18,7 @@ import { containsTag } from '../../utility/functions';
 import { IListModel } from './ListModel';
 import { IListEquipment, ListEquipment } from './ListEquipment';
 import { IItemPartial } from '../../classes/feature/list/ListGroup';
-
+import { IListItem, ListItem } from '../../classes/feature/list/ListItem';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -26,6 +26,7 @@ class WarbandManager {
     Models: PlayerModel[] = [];
     Equipment: PlayerEquipment[] = [];
     Skills: IItemPartial[] = [];
+    Injuries: ListItem[] = [];
 
     constructor() {
         const ReturnData = GrabWarband();
@@ -34,6 +35,7 @@ class WarbandManager {
         this.FindModels();
         this.FindEquipment();
         this.FindSkills();
+        this.FindInjuries();
     }
 
     /**
@@ -79,6 +81,21 @@ class WarbandManager {
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = (dataresults[i]);
            this.Skills.push(modelNew);
+       }
+   }
+
+   /**
+    * For each entry in the data results, create an Model object
+    * and add it to the internal list.
+    */
+   FindInjuries() {
+       this.Injuries = [];
+       const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "injuries"}});
+       let i = 0;
+       dataresults.sort(byPropertiesOf<ListItem>(['Name']))
+       for (i = 0; i < dataresults.length; i++) {
+           const modelNew = new ListItem(dataresults[i]);
+           this.Injuries.push(modelNew);
        }
    }
 
@@ -336,6 +353,16 @@ class WarbandManager {
         return null;
     }
 
+    public GetScarByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Injuries.length ; i++) {
+            if (this.Injuries[i].ID == _name) {
+                return this.Injuries[i]
+            }
+        }
+        return null;
+    }
+
     public DeleteEquipmentFromModel(_equipment : ListEquipment, _model : WarbandMember, _warband : Warband) {
         let i = 0;
         for (i = 0; i < _model.Equipment.length; i++) {
@@ -343,6 +370,26 @@ class WarbandManager {
                 _warband.DucatCost = this.TotalCostDucats(_warband);
                 _warband.GloryCost = this.TotalCostGlory(_warband);
                 _model.Equipment.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    public DeleteSkillFromModel(_skill : IItemPartial, _model : WarbandMember, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _model.Skills.length; i++) {
+            if (_model.Skills[i] == _skill) {
+                _model.Skills.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    public DeleteScarFromModel(_scar : IItemPartial, _model : WarbandMember, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _model.Injuries.length; i++) {
+            if (_model.Injuries[i] == _scar) {
+                _model.Injuries.splice(i, 1);
                 break;
             }
         }

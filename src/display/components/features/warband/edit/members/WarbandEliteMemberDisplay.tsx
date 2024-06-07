@@ -29,6 +29,7 @@ import ModelHover from '../../../../../components/subcomponents/informationpanel
 import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
+import MemberEditScarsDisplay from './MemberEditScarsDisplay';
 
 const WarbandEliteMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -96,6 +97,8 @@ const WarbandEliteMemberDisplay = (props: any) => {
     function returnEquipTypeList(type: string) {
         return (
             <div className="col-12" style={{width:"100%"}}>
+                {WarbandMember.Equipment.length > 0 &&
+                <>
             <div className="row" style={{width:"100%"}}>
 
                         <div className="col-5">
@@ -118,6 +121,8 @@ const WarbandEliteMemberDisplay = (props: any) => {
                     </div>
                 ))}
             </div>
+            </>
+            }
             </div>
         )
     }
@@ -142,15 +147,15 @@ const WarbandEliteMemberDisplay = (props: any) => {
             <div>
                 <div className="row justify-content-center">
                     
-                    <div className="col-md-6 col-12">
+                    <div className="col-md-4 col-12">
                         <div className="stattitle">{"Model Type"}</div>
                         <div className="statbody"><ModelHover data={WarbandMember.Model.Object} titlename={WarbandMember.Model.Object.Name} /></div>
                         <div className="verticalspacer"/>
                     </div>
-                    <div className="col-md-3 col-6">
+                    <div className="col-md-4 col-6">
                     <ModelStat title={"Ducat Cost"} value={ducatcost}/>
                     </div>
-                    <div className="col-md-3 col-6">
+                    <div className="col-md-4 col-6">
                     <ModelStat title={"Glory Cost"} value={glorycost}/>
                     </div>
                 </div>
@@ -169,6 +174,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     function returnScars() {
         return (
             <>
+                <MemberEditScarsDisplay member={WarbandMember} warband={WarbandItem} updater={UpdateFunction} manager={Manager} />    
             </>
         )
     }
