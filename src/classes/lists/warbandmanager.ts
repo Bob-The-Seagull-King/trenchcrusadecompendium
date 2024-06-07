@@ -317,7 +317,7 @@ class WarbandManager {
                     name: _name,
                     faction: factionVal.InterfaceVal,
                     flavour: [],
-                    notes: [],
+                    notes: "",
                     deeds: [],
                     image: noimage,
                     ducat_lost : 0,

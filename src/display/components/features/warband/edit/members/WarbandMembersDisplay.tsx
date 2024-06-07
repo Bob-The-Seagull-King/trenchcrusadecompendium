@@ -283,6 +283,8 @@ const WarbandMembersDisplay = (props: any) => {
             </Modal>
             
             <div className="verticalspacerbig"/>
+            {WarbandItem.Members.filter((item) => item.Elite == true).length > 0 &&
+                <>
             <div>
                 <div className="separator">Elites</div>
             </div>
@@ -295,9 +297,13 @@ const WarbandMembersDisplay = (props: any) => {
                     </div>
                 ))}
             </div>
-
+            </>
+            }
             
             <div className="verticalspacerbig"/>
+
+            {WarbandItem.Members.filter((item) => item.Elite == false).length > 0 &&
+                <>
             <div>
                 <div className="separator">Infantry</div>
             </div>
@@ -309,7 +315,8 @@ const WarbandMembersDisplay = (props: any) => {
                         <br></br>
                     </div>
                 ))}
-            </div>
+            </div></>
+            }
         </>
     )
 }

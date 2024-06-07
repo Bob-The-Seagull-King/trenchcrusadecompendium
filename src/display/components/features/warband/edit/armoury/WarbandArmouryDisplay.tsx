@@ -38,13 +38,11 @@ const WarbandArmouryDisplay = (props: any) => {
             </div>
             <div className="verticalspacerbig"/>
                 <div className="row" style={{width:"100%"}}>
-                    <div className="col-12">
-                        <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
-                            <Masonry gutter="20px">
-                                {returnEquipTypeList("ranged")}
-                            </Masonry>
-                        </ResponsiveMasonry>
-                    </div>
+                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
+                        <Masonry gutter="20px">
+                            {returnEquipTypeList("ranged")}
+                        </Masonry>
+                    </ResponsiveMasonry>
                 </div>
                 
             </>
@@ -56,7 +54,7 @@ const WarbandArmouryDisplay = (props: any) => {
             <div className="col-12" style={{width:"100%"}}>
                 {WarbandItem.Armoury.length > 0 &&
                 <>
-            <div className="row" style={{width:"100%"}}>
+                    <div className="row" style={{width:"100%"}}>
 
                         <div className="col-5">
                             <div className="equiptitle">Name</div>

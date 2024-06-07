@@ -20,6 +20,8 @@ import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
 import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
 import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 
@@ -28,7 +30,25 @@ const WarbandEditDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
+    let warbandNotes = WarbandItem.Notes;
+
     const Warband_Name = WarbandItem? WarbandItem.Name : "";
+
+    
+    function returnNotes() {
+        return (
+            <>
+                <InputGroup>
+                    <Form.Control as="textarea" style={{height:"10em"}} aria-label="With textarea" defaultValue={warbandNotes} placeholder={"Notes & Information on " + WarbandItem.Name} onChange={e => updateNotes(e.target.value)}/>
+                </InputGroup>
+            </>
+        )
+    }
+
+    function updateNotes(_value : string) {
+        warbandNotes = _value;
+        WarbandItem.Notes = warbandNotes;
+    }
     
     function ReturnReturner() {
         return (
@@ -184,6 +204,25 @@ const WarbandEditDisplay = (props: any) => {
                         <div className="col-lg-4 col-md-4 col-12">
                             {ReturnArmoury()}                            
                         </div>
+                    </div>
+                    <div className="verticalspacerbig"/>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    <div>
+                        <div className="verticalspacerbig"/>
+                    </div>
+                    <div>
+                        {returnNotes()}
+                    </div>
+                    <div>
+                        <div className="verticalspacerbig"/>
+                    </div>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    <div>
+                        <div className="verticalspacerbig" style={{paddingTop:"2em"}}/>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ interface IWarband {
     name: string,
     faction: IPlayerFaction,
     flavour: ITextBlock[],
-    notes: ITextBlock[],
+    notes: string,
     deeds: string[],
     image : string,
     ducat_lost: number,
@@ -60,7 +60,7 @@ export class Warband {
         this.Image = data.image;
 
         this.Flavour = this.TextMaker(data.flavour);
-        this.Notes = this.TextMaker(data.notes);
+        this.Notes = (data.notes);
 
         this.Deeds = data.deeds;
 
