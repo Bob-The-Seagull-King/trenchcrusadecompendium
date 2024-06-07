@@ -23,6 +23,9 @@ import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
 import MemberEditScarsDisplay from './MemberEditScarsDisplay';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandInfantryMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -33,6 +36,27 @@ const WarbandInfantryMemberDisplay = (props: any) => {
 
     const ducatcost = Manager.GetDucatCost(WarbandMember);
     const glorycost = Manager.GetGloryCost(WarbandMember)
+
+    const Warband_Name = WarbandMember? WarbandMember.Name : "";
+    let NewBandName = Warband_Name;
+
+    const [showNameEdit, setShowNameEdit] = useState(false);
+    const handleCloseNameEdit = () => setShowNameEdit(false); 
+    const handleShowNameEdit = () => setShowNameEdit(true);
+
+    const inputRefNameEdit = useRef<HTMLInputElement>(null);
+
+    function updateName(value: string) {
+        NewBandName = value;
+    }
+
+    function EditWarbandName() {
+        if (WarbandMember != null) {
+            WarbandMember.Name = NewBandName;
+        }
+        UpdateFunction(WarbandItem)
+        handleCloseNameEdit();
+    }
 
     let modelNotes = WarbandMember.Notes;
 
@@ -229,7 +253,10 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     return (
         <>
         <div className={'modelStructure bordermain'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
-            <h1 className={'titleShape title'+getColour(WarbandMember.Model.Object.Faction)}>{WarbandMember.Name || ""}</h1>
+            <h1 className={'titleShape title'+getColour(WarbandMember.Model.Object.Faction)}>
+                {WarbandMember.Name || ""}
+                <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
+            </h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
@@ -288,6 +315,25 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                 
             </div>
         </div>
+        
+        <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {"Update Name"}
+                </h1>
+                <Modal.Body >
+                    <div className="row">
+                        <div className="col-10">
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control size="lg" className="no-margins" ref={inputRefNameEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={Warband_Name} placeholder=""/>
+                            </InputGroup>
+                        </div>
+                        <div className="col-2">
+                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
         </>
     )
 }
