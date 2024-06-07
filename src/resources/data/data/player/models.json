@@ -97,7 +97,7 @@
         "variant_id": "fv_basic",
         "name": "Heretic Death Commando",
         "attachments": [
-            {"tag_name": "addons", "val": "ab_infiltrator"},
+            {"tag_name": "addons", "val": "ab_infiltratordeathcommando"},
             {"tag_name": "addons", "val": "ab_stealthgenerator"},
             {"tag_name": "addons", "val": "ab_hide"}
                     ],
@@ -113,7 +113,7 @@
                         }],
         "abilities":  [{
                         "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                        "content": "ab_infiltrator"
+                        "content": "ab_infiltratordeathcommando"
                     },{
                         "tags": [{"tag_name": "desc_type", "val": "addon"}],
                         "content": "ab_stealthgenerator"
@@ -974,7 +974,7 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_timeslip"},
             {"tag_name": "addons", "val": "ab_temporalassassin"},
-            {"tag_name": "addons", "val": "ab_infiltrator"}
+            {"tag_name": "addons", "val": "ab_infiltratorassassin"}
                     ],
         "blurb": [
             {
@@ -1000,7 +1000,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_infiltrator"
+                "content": "ab_infiltratorassassin"
             }
         ]
     },
@@ -1025,7 +1025,7 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_timeslip"},
             {"tag_name": "addons", "val": "ab_temporalassassin"},
-            {"tag_name": "addons", "val": "ab_infiltrator"},
+            {"tag_name": "addons", "val": "ab_infiltratorassassin"},
             {"tag_name": "addons", "val": "ab_tough"}
                     ],
         "blurb": [
@@ -1052,7 +1052,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_infiltrator"
+                "content": "ab_infiltratorassassin"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -1110,7 +1110,7 @@
         "variant_id": "fv_fidaiofalamutthecabalofassassins",
         "name": "Assassin Acolyte",
         "attachments": [
-            {"tag_name": "addons", "val": "ab_infiltrator"}
+            {"tag_name": "addons", "val": "ab_infiltratorassassin"}
                     ],
         "blurb": [
             {
@@ -1128,7 +1128,7 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_infiltrator"
+                "content": "ab_infiltratorassassin"
             }
         ]
     },
@@ -1786,7 +1786,7 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_shockcharge"},
             {"tag_name": "addons", "val": "ab_skirmisher"},
-            {"tag_name": "addons", "val": "ab_infiltrator"}
+            {"tag_name": "addons", "val": "ab_infiltratorassassin"}
                     ],
         "blurb": [
             {
@@ -1812,7 +1812,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_infiltrator"
+                "content": "ab_infiltratorassassin"
             }
         ]
     },

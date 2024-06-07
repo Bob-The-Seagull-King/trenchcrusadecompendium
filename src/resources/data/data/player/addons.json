@@ -36,7 +36,7 @@
                         ]
     },
     {
-        "id": "ab_infiltrator",
+        "id": "ab_infiltratordeathcommando",
         "type": "Addon",
         "source": "core",
         "tags": [
@@ -49,6 +49,24 @@
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "A Death Commando can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_infiltratorassassin",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "model_id": "md_sultanateassassin",
+        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "An infiltrator can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
                             "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
                         }
                         ]
