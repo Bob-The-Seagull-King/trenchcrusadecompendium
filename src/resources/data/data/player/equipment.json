@@ -2219,6 +2219,84 @@
             ]
     },
     {
+        "id": "eq_artofassassinationhallucinogendisguise",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Hallucinogen Disguise",
+        "equip_type": null,
+        "range": null,
+        "blurb": "",
+        "modifiers": [""],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability. ",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_artofassassinationthunderboltofalumat",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Thunderbolt of Alumat",
+        "equip_type": null,
+        "range": null,
+        "blurb": "",
+        "modifiers": [""],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs. ",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_artofassassinationmirageoftime",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Mirage of Time",
+        "equip_type": null,
+        "range": null,
+        "blurb": "",
+        "modifiers": [""],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit. ",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
         "id": "eq_damascusarmour",
         "type": "Equipment",
         "source": "core",
