@@ -207,6 +207,36 @@
 
     },
     {
+        "id": "md_heretictrooperlegionnare",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                    {"tag_name": "heretic", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "0\\+1",
+        "melee": "0\\+1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "name": "Heretic Trooper (Legionnare)",
+        "attachments": [],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity."
+            }
+        ],
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }],
+        "abilities":  []
+
+    },
+    {
         "id": "md_anointedheavyinfantry",
         "type": "Model",
         "source": "core",
