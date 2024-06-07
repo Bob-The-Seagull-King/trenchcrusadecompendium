@@ -246,6 +246,45 @@ class WarbandManager {
         }
         return ReturnMsg;
     }
+    public NewEquipmentForWarband(_warband : Warband, _model : string, _cost : string, _costtype : string){
+        let ReturnMsg = "";
+        try {
+            if (_model == "" || _model == "[No Model Selected]") {
+                ReturnMsg = "Your Item must be one of the available options."
+            }
+            if (_cost == "" || parseInt(_cost) < 0) {
+                ReturnMsg = "Your Item must cost at least 0."
+            }
+            let i = 0;
+            if (ReturnMsg == "") {
+                let modelVal : any = null;
+                
+                for (i = 0; i < this.Equipment.length ; i++ ) {
+                    if (this.Equipment[i].ID == _model) {
+                        modelVal = this.Equipment[i];
+                    }
+                }
+
+                const modelList : IListEquipment = {
+                    id: modelVal? modelVal.ID : "",
+                    cost: parseInt(_cost),
+                    cost_type: _costtype                    
+                }
+
+                const ContentNew: ListEquipment = new ListEquipment((modelList));
+                _warband.Armoury.push(ContentNew);
+            } else {
+                return ReturnMsg;
+            }
+        } catch (e) {
+            ReturnMsg = "Something went wrong.";
+        }
+
+        if (ReturnMsg == "") {
+            this.SetStorage();
+        }
+        return ReturnMsg;
+    }
 
     public NewWarband(_name : string, _faction : string) {
         let ReturnMsg = "";
@@ -380,6 +419,18 @@ class WarbandManager {
                 _warband.DucatCost = this.TotalCostDucats(_warband);
                 _warband.GloryCost = this.TotalCostGlory(_warband);
                 _model.Equipment.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    public DeleteEquipmentFromWarband(_equipment : ListEquipment,_warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _warband.Armoury.length; i++) {
+            if (_warband.Armoury[i] == _equipment) {
+                _warband.DucatCost = this.TotalCostDucats(_warband);
+                _warband.GloryCost = this.TotalCostGlory(_warband);
+                _warband.Armoury.splice(i, 1);
                 break;
             }
         }

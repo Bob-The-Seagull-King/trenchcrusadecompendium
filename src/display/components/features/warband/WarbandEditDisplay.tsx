@@ -21,6 +21,7 @@ import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
 import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
+import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -130,6 +131,16 @@ const WarbandEditDisplay = (props: any) => {
             </>
         )
     }
+    
+    function ReturnArmoury() {
+        return (
+            <>
+                { WarbandItem != null &&
+                    <WarbandArmouryDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
+            </>
+        )
+    }
 
     return (
             <div className="row">
@@ -171,7 +182,7 @@ const WarbandEditDisplay = (props: any) => {
                             {ReturnMembers()}
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">
-                            
+                            {ReturnArmoury()}                            
                         </div>
                     </div>
                 </div>
