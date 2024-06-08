@@ -363,32 +363,35 @@ class WarbandManager {
     }
 
     public ExportWarband(_warband : Warband , _notes : boolean) {
-        console.log("Welcome to the Warband");
+        console.log(this.ExportDisplayText(_warband, _notes));
     }
 
     public ExportDisplayText(_warband : Warband, _notes : boolean) {
         const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
-        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(100-StartingRow.length));
+
+        const startrowlength = StartingRow.length;
+
+        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(100-((startrowlength < 100)? startrowlength : 0)));
 
         if (_notes) {
             returnRow += "\n" + "[ NOTES ]" + "\n" + _warband.Notes + "\n"
         }
 
         const ducatTotal = "Total : " + _warband.DucatTotal.toString();
-        const ducatCost = "Spent : " + _warband.DucatCost.toString() + " (" + _warband.DucatLost.toString() + " Lost)";
+        const ducatCost = "Spent : " + this.TotalCostDucats( _warband).toString() + " (" + _warband.DucatLost.toString() + " Lost)";
         const gloryTotal = "Total : " + _warband.GloryTotal.toString();
-        const gloryCost = "Spent : " + _warband.GloryCost.toString() + " (" + _warband.GloryCost.toString() + " Lost)";
+        const gloryCost = "Spent : " + this.TotalCostGlory(_warband).toString() + " (" + _warband.GloryCost.toString() + " Lost)";
 
         const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
         const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
 
-        const DucatRow = ducatTotal + (" ".repeat(totalRow - ducatTotal.length)) + " | " + ducatCost + (" ".repeat(costRow - ducatCost.length)) + " | Available : " + (_warband.DucatTotal - _warband.DucatCost).toString()
-        const GloryRow = gloryTotal + (" ".repeat(totalRow - gloryTotal.length)) + " | " + gloryCost + (" ".repeat(costRow - gloryCost.length)) + " | Available : " + (_warband.GloryTotal - _warband.GloryCost).toString()
+        const DucatRow = ducatTotal + (" ".repeat(((totalRow - ducatTotal.length) > 0)? totalRow - ducatTotal.length : 0)) + " | " + ducatCost + (" ".repeat(((costRow - ducatCost.length) > 0)? costRow - ducatCost.length : 0)) + " | Available : " + (_warband.DucatTotal - this.TotalCostDucats(_warband)).toString()
+        const GloryRow = gloryTotal + (" ".repeat(((totalRow - gloryTotal.length) > 0)? totalRow - gloryTotal.length : 0)) + " | " + gloryCost + (" ".repeat(((costRow - gloryCost.length) > 0)? costRow - gloryCost.length : 0)) + " | Available : " + (_warband.GloryTotal - this.TotalCostGlory(_warband)).toString()
 
         returnRow += "\n" + "[ DUCATS ]" + "\n" + DucatRow + "\n" + "[ GLORY ]" + "\n" + GloryRow + "\n"
 
         if (_warband.Armoury.length > 0) {
-            returnRow += "\n" + "ARMOURY"
+            returnRow += "\n" + "[ ARMOURY ]"
         }
         let lengthMarker = 0;
 
@@ -405,42 +408,45 @@ class WarbandManager {
         const ArmourSet = [];
         const MiscSet = [];
 
+        let lengthCheckEquip = 0;
+
         for (i = 0 ; i < _warband.Armoury.length ; i ++) {
-            if (_warband.Armoury[i].Object.ItemType == "ranged") {
-                RangedSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            lengthCheckEquip = lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length)
+            if (_warband.Armoury[i].Object.Category == "ranged") {
+                RangedSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat((lengthCheckEquip > 0)? lengthCheckEquip : 0)) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
             }
-            if (_warband.Armoury[i].Object.ItemType == "melee") {
-                MeleeSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            if (_warband.Armoury[i].Object.Category == "melee") {
+                MeleeSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat((lengthCheckEquip > 0)? lengthCheckEquip : 0)) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
             }
-            if (_warband.Armoury[i].Object.ItemType == "armour") {
-                ArmourSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            if (_warband.Armoury[i].Object.Category == "armour") {
+                ArmourSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat((lengthCheckEquip > 0)? lengthCheckEquip : 0)) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
             }
-            if (_warband.Armoury[i].Object.ItemType == "equipment") {
-                MiscSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            if (_warband.Armoury[i].Object.Category == "equipment") {
+                MiscSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat((lengthCheckEquip > 0)? lengthCheckEquip : 0)) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
             }
         }
         if (RangedSet.length > 0) {
             returnRow += "\n" + "- RANGED"
-            for (i = 0; RangedSet.length; i++) {
-                returnRow += "\n" + RangedSet[i]
+            for (i = 0; i < RangedSet.length; i++) {
+                returnRow += "\n" + "  " + RangedSet[i]
             }
         }
         if (MeleeSet.length > 0) {
             returnRow += "\n" + "- MELEE"
-            for (i = 0; MeleeSet.length; i++) {
-                returnRow += "\n" + MeleeSet[i]
+            for (i = 0; i < MeleeSet.length; i++) {
+                returnRow += "\n" + "  " + MeleeSet[i]
             }
         }
         if (ArmourSet.length > 0) {
             returnRow += "\n" + "- ARMOUR"
-            for (i = 0; ArmourSet.length; i++) {
-                returnRow += "\n" + ArmourSet[i]
+            for (i = 0; i < ArmourSet.length; i++) {
+                returnRow += "\n" + "  " + ArmourSet[i]
             }
         }
         if (MiscSet.length > 0) {
             returnRow += "\n" + "- MISC"
-            for (i = 0; MiscSet.length; i++) {
-                returnRow += "\n" + MiscSet[i]
+            for (i = 0; i < MiscSet.length; i++) {
+                returnRow += "\n" + "  " + MiscSet[i]
             }
         }
 
@@ -448,7 +454,7 @@ class WarbandManager {
 
         for (i = 0; i < _warband.Members.length; i ++) {
             if (_warband.Members[i].Elite) {
-                returnRow = "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
             }
         }
 
@@ -456,11 +462,11 @@ class WarbandManager {
 
         for (i = 0; i < _warband.Members.length; i ++) {
             if (!(_warband.Members[i].Elite)) {
-                returnRow = "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
             }
         }
 
-        returnRow += "\n" + "\n" + ("-".repeat(100))
+        returnRow += "\n" + "\n" + ("-".repeat(110))
 
         return returnRow;
     }
@@ -468,7 +474,7 @@ class WarbandManager {
     public ExportModelDisplayText(_model : WarbandMember, _notes : boolean) {
         const StartingRow = _model.Name + " | " + (this.GetDucatCost(_model) + " ducats") + " | " + (this.GetGloryCost(_model) + " glory")
         let lengthMarker = _model.Model.Object.Name? _model.Model.Object.Name?.length : 0;
-        let rowMarker = StartingRow.length + 6;
+        let rowMarker = StartingRow.length + 8;
 
         let i = 0;
         for (i = 0 ; i < _model.Equipment.length ; i ++) {
@@ -477,10 +483,11 @@ class WarbandManager {
             }
         }
 
-        const ModelRow = (_model.Model.Object.Name? _model.Model.Object.Name : "") + (" ".repeat(lengthMarker-((_model.Model.Object.Name? _model.Model.Object.Name : "").length))) + " | " + _model.Model.Cost.toString() + " " + _model.Model.CostType;
+        const modelLengthCheck = lengthMarker-((_model.Model.Object.Name? _model.Model.Object.Name : "").length)
+        const ModelRow = (_model.Model.Object.Name? _model.Model.Object.Name : "") + (" ".repeat((modelLengthCheck > 0)? modelLengthCheck : 0)) + " | " + _model.Model.Cost.toString() + " " + _model.Model.CostType;
 
         if (ModelRow.length > rowMarker) {
-            rowMarker = ModelRow.length;
+            rowMarker = ModelRow.length + 1;
         }
 
         const RangedSet = [];
@@ -488,18 +495,20 @@ class WarbandManager {
         const ArmourSet = [];
         const MiscSet = [];
         
+        let equiplengthcheck = 0
         for (i = 0 ; i < _model.Equipment.length ; i ++) {
-            if (_model.Equipment[i].Object.ItemType == "ranged") {
-                RangedSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            equiplengthcheck = lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length)
+            if (_model.Equipment[i].Object.Category == "ranged") {
+                RangedSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat((equiplengthcheck > 0)? equiplengthcheck : 0)) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
             }
-            if (_model.Equipment[i].Object.ItemType == "melee") {
-                MeleeSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            if (_model.Equipment[i].Object.Category == "melee") {
+                MeleeSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat((equiplengthcheck > 0)? equiplengthcheck : 0)) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
             }
-            if (_model.Equipment[i].Object.ItemType == "armour") {
-                ArmourSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            if (_model.Equipment[i].Object.Category == "armour") {
+                ArmourSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat((equiplengthcheck > 0)? equiplengthcheck : 0)) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
             }
-            if (_model.Equipment[i].Object.ItemType == "equipment") {
-                MiscSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            if (_model.Equipment[i].Object.Category == "equipment") {
+                MiscSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat((equiplengthcheck > 0)? equiplengthcheck : 0)) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
             }
         }
 
@@ -528,7 +537,8 @@ class WarbandManager {
             rowMarker += 1;
         }
 
-        const FirstRow = ("-".repeat((rowMarker - ModelRow.length - 2)/2)) + " " + ModelRow + " " + ("-".repeat((rowMarker - ModelRow.length - 2)/2))
+        const rowMarkerDiv = (rowMarker - StartingRow.length - 2)/2
+        const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
         const LastRow = ("-".repeat(rowMarker))
 
         let returnString = (
@@ -544,26 +554,26 @@ class WarbandManager {
 
         if (RangedSet.length > 0) {
             returnString += "\n" + "- RANGED"
-            for (i = 0; RangedSet.length; i++) {
-                returnString += "\n" + RangedSet[i]
+            for (i = 0; i < RangedSet.length; i++) {
+                returnString += "\n" + "  " + RangedSet[i]
             }
         }
         if (MeleeSet.length > 0) {
             returnString += "\n" + "- MELEE"
-            for (i = 0; MeleeSet.length; i++) {
-                returnString += "\n" + MeleeSet[i]
+            for (i = 0; i < MeleeSet.length; i++) {
+                returnString += "\n" + "  " + MeleeSet[i]
             }
         }
         if (ArmourSet.length > 0) {
             returnString += "\n" + "- ARMOUR"
-            for (i = 0; ArmourSet.length; i++) {
-                returnString += "\n" + ArmourSet[i]
+            for (i = 0; i < ArmourSet.length; i++) {
+                returnString += "\n" + "  " + ArmourSet[i]
             }
         }
         if (MiscSet.length > 0) {
             returnString += "\n" + "- MISC"
-            for (i = 0; MiscSet.length; i++) {
-                returnString += "\n" + MiscSet[i]
+            for (i = 0; i < MiscSet.length; i++) {
+                returnString += "\n" + "  " + MiscSet[i]
             }
         }
 
