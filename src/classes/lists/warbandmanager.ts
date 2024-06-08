@@ -362,6 +362,231 @@ class WarbandManager {
         return null;
     }
 
+    public ExportWarband(_warband : Warband , _notes : boolean) {
+        console.log(this.ExportDisplayText(_warband, true));
+    }
+
+    public ExportDisplayText(_warband : Warband, _notes : boolean) {
+        const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
+        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(100-StartingRow.length));
+
+        if (_notes) {
+            returnRow += "\n" + "[ NOTES ]" + "\n" + _warband.Notes + "\n"
+        }
+
+        const ducatTotal = "Total : " + _warband.DucatTotal.toString();
+        const ducatCost = "Spent : " + _warband.DucatCost.toString() + " (" + _warband.DucatLost.toString() + " Lost)";
+        const gloryTotal = "Total : " + _warband.GloryTotal.toString();
+        const gloryCost = "Spent : " + _warband.GloryCost.toString() + " (" + _warband.GloryCost.toString() + " Lost)";
+
+        const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
+        const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
+
+        const DucatRow = ducatTotal + (" ".repeat(totalRow - ducatTotal.length)) + " | " + ducatCost + (" ".repeat(costRow - ducatCost.length)) + " | Available : " + (_warband.DucatTotal - _warband.DucatCost).toString()
+        const GloryRow = gloryTotal + (" ".repeat(totalRow - gloryTotal.length)) + " | " + gloryCost + (" ".repeat(costRow - gloryCost.length)) + " | Available : " + (_warband.GloryTotal - _warband.GloryCost).toString()
+
+        returnRow += "\n" + "[ DUCATS ]" + "\n" + DucatRow + "\n" + "[ GLORY ]" + "\n" + GloryRow + "\n"
+
+        if (_warband.Armoury.length > 0) {
+            returnRow += "\n" + "ARMOURY"
+        }
+        let lengthMarker = 0;
+
+        let i = 0;
+        for (i = 0 ; i < _warband.Armoury.length ; i ++) {
+            if (_warband.Armoury[i].Object.Name.length > lengthMarker) {
+                lengthMarker = _warband.Armoury[i].Object.Name.length;
+            }
+        }
+
+
+        const RangedSet = [];
+        const MeleeSet = [];
+        const ArmourSet = [];
+        const MiscSet = [];
+
+        for (i = 0 ; i < _warband.Armoury.length ; i ++) {
+            if (_warband.Armoury[i].Object.ItemType == "ranged") {
+                RangedSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            }
+            if (_warband.Armoury[i].Object.ItemType == "melee") {
+                MeleeSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            }
+            if (_warband.Armoury[i].Object.ItemType == "armour") {
+                ArmourSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            }
+            if (_warband.Armoury[i].Object.ItemType == "equipment") {
+                MiscSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat(lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length))) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
+            }
+        }
+        if (RangedSet.length > 0) {
+            returnRow += "\n" + "- RANGED"
+            for (i = 0; RangedSet.length; i++) {
+                returnRow += "\n" + RangedSet[i]
+            }
+        }
+        if (MeleeSet.length > 0) {
+            returnRow += "\n" + "- MELEE"
+            for (i = 0; MeleeSet.length; i++) {
+                returnRow += "\n" + MeleeSet[i]
+            }
+        }
+        if (ArmourSet.length > 0) {
+            returnRow += "\n" + "- ARMOUR"
+            for (i = 0; ArmourSet.length; i++) {
+                returnRow += "\n" + ArmourSet[i]
+            }
+        }
+        if (MiscSet.length > 0) {
+            returnRow += "\n" + "- MISC"
+            for (i = 0; MiscSet.length; i++) {
+                returnRow += "\n" + MiscSet[i]
+            }
+        }
+
+        returnRow += "\n" + "\n" + "[ ELITE MEMBERS ]"
+
+        for (i = 0; i < _warband.Members.length; i ++) {
+            if (_warband.Members[i].Elite) {
+                returnRow = "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+            }
+        }
+
+        returnRow += "\n" + "\n" + "[ INFANTRY ]"
+
+        for (i = 0; i < _warband.Members.length; i ++) {
+            if (!(_warband.Members[i].Elite)) {
+                returnRow = "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+            }
+        }
+
+        returnRow += "\n" + "\n" + ("-".repeat(100))
+
+        return returnRow;
+    }
+
+    public ExportModelDisplayText(_model : WarbandMember, _notes : boolean) {
+        const StartingRow = _model.Name + " | " + (this.GetDucatCost(_model) + " ducats") + " | " + (this.GetGloryCost(_model) + " glory")
+        let lengthMarker = _model.Model.Object.Name? _model.Model.Object.Name?.length : 0;
+        let rowMarker = StartingRow.length + 6;
+
+        let i = 0;
+        for (i = 0 ; i < _model.Equipment.length ; i ++) {
+            if (_model.Equipment[i].Object.Name.length > lengthMarker) {
+                lengthMarker = _model.Equipment[i].Object.Name.length;
+            }
+        }
+
+        const ModelRow = (_model.Model.Object.Name? _model.Model.Object.Name : "") + (" ".repeat(lengthMarker-((_model.Model.Object.Name? _model.Model.Object.Name : "").length))) + " | " + _model.Model.Cost.toString() + " " + _model.Model.CostType;
+
+        if (ModelRow.length > rowMarker) {
+            rowMarker = ModelRow.length;
+        }
+
+        const RangedSet = [];
+        const MeleeSet = [];
+        const ArmourSet = [];
+        const MiscSet = [];
+        
+        for (i = 0 ; i < _model.Equipment.length ; i ++) {
+            if (_model.Equipment[i].Object.ItemType == "ranged") {
+                RangedSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            }
+            if (_model.Equipment[i].Object.ItemType == "melee") {
+                MeleeSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            }
+            if (_model.Equipment[i].Object.ItemType == "armour") {
+                ArmourSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            }
+            if (_model.Equipment[i].Object.ItemType == "equipment") {
+                MiscSet.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + (" ".repeat(lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length))) + " | " + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType);
+            }
+        }
+
+        for (i = 0; i < RangedSet.length; i ++) {
+            if (RangedSet[i].length > rowMarker) {
+                rowMarker = RangedSet[i].length;
+            }
+        }
+        for (i = 0; i < MeleeSet.length; i ++) {
+            if (MeleeSet[i].length > rowMarker) {
+                rowMarker = MeleeSet[i].length;
+            }
+        }
+        for (i = 0; i < ArmourSet.length; i ++) {
+            if (ArmourSet[i].length > rowMarker) {
+                rowMarker = ArmourSet[i].length;
+            }
+        }
+        for (i = 0; i < MiscSet.length; i ++) {
+            if (MiscSet[i].length > rowMarker) {
+                rowMarker = MiscSet[i].length;
+            }
+        }
+
+        if (rowMarker % 2 == 1) {
+            rowMarker += 1;
+        }
+
+        const FirstRow = ("-".repeat((rowMarker - ModelRow.length - 2)/2)) + " " + ModelRow + " " + ("-".repeat((rowMarker - ModelRow.length - 2)/2))
+        const LastRow = ("-".repeat(rowMarker))
+
+        let returnString = (
+            FirstRow + "\n" + 
+            "[ MODEL ]" + "\n" + "  " + ModelRow
+        )
+        
+        if (_notes) {
+            returnString += "\n" + "[ NOTES ]" + _model.Notes
+        }
+
+        returnString += "\n" + "[ GEAR ]"
+
+        if (RangedSet.length > 0) {
+            returnString += "\n" + "- RANGED"
+            for (i = 0; RangedSet.length; i++) {
+                returnString += "\n" + RangedSet[i]
+            }
+        }
+        if (MeleeSet.length > 0) {
+            returnString += "\n" + "- MELEE"
+            for (i = 0; MeleeSet.length; i++) {
+                returnString += "\n" + MeleeSet[i]
+            }
+        }
+        if (ArmourSet.length > 0) {
+            returnString += "\n" + "- ARMOUR"
+            for (i = 0; ArmourSet.length; i++) {
+                returnString += "\n" + ArmourSet[i]
+            }
+        }
+        if (MiscSet.length > 0) {
+            returnString += "\n" + "- MISC"
+            for (i = 0; MiscSet.length; i++) {
+                returnString += "\n" + MiscSet[i]
+            }
+        }
+
+        if (_model.Skills.length > 0) {
+            returnString += "\n" + "[ SKILLS ]" + "\n" + "Experience : " + _model.Experience;
+            for (i = 0; _model.Skills.length; i++) {
+                returnString += "\n" + _model.Skills[i].name;
+            }
+        }
+
+        if (_model.Injuries.length > 0) {
+            returnString += "\n" + "[ INJURIES ]" + "\n" + "Scars : " + _model.Injuries.length;
+            for (i = 0; _model.Injuries.length; i++) {
+                returnString += "\n" + _model.Injuries[i].name;
+            }
+        }
+
+        returnString += "\n" + LastRow
+
+        return returnString
+    }
+
+
     public GetModelByID(_name : string) {
         let i = 0;
         for (i=0; i < this.Models.length ; i++) {

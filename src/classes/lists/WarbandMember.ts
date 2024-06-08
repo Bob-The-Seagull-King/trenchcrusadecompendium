@@ -103,6 +103,7 @@ class WarbandMember {
         return tempList;
     }
 
+
 }
 
 export {IWarbandMember, WarbandMember}

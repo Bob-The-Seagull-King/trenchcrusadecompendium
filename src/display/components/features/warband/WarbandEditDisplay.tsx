@@ -59,6 +59,13 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
     
+    function ReturnPrinter() {
+        return (
+            <>
+            </>
+        )
+    }
+    
 
     function ReturnName() {
         return (
@@ -156,12 +163,14 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
 
+    Manager.ExportWarband(WarbandItem, true);
+
     return (
             <div className="row">
                 <div className="col-12">
 
                     <div className="row">
-                        {ReturnReturner()}
+                            {ReturnReturner()}
                     </div>
 
                     <div className="row">

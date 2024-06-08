@@ -156,6 +156,7 @@ export class Warband {
         return totalglory;
     }
 
+    
 }
 
 export {IWarband}
