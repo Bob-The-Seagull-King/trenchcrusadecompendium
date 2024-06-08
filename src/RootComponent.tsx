@@ -15,7 +15,7 @@ import ToolsRoute from './display/superroutes/ToolsRoute'
 
 const RootComponent: React.FC = () => {
     return (
-        <div>
+        <div className="backgroundBaseColour">
             <Router>
                 <SuperHeader/>
                 <Routes>

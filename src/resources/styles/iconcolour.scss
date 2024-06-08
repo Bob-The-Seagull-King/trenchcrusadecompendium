@@ -12,8 +12,8 @@ $colour_green_secondary: #88FA4E;
 $colour_blue_secondary: #4CDDFE;
 $colour_grey_secondary: #D5D5D5;
 
-$colour_background_grey: #FFFFFF;
-$colour_background_white: #FFFFFF;
+$colour_background_grey: #fafafa;
+$colour_background_white: #ffffff;
 
 .colourOverlay {
     width: 100%;
@@ -21,3 +21,8 @@ $colour_background_white: #FFFFFF;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.1); /* Change the color and opacity as needed */
   }
+
+.backgroundBaseColour {
+  background-color: $colour_background_grey;
+  height: 100vh;
+}
