@@ -363,7 +363,7 @@ class WarbandManager {
     }
 
     public ExportWarband(_warband : Warband , _notes : boolean) {
-        console.log(this.ExportDisplayText(_warband, _notes));
+        console.log("welcome");
     }
 
     public ExportDisplayText(_warband : Warband, _notes : boolean) {
