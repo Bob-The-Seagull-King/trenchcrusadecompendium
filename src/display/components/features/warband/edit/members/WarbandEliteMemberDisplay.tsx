@@ -53,7 +53,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     const inputRefNameEdit = useRef<HTMLInputElement>(null);
     const inputRefExport = useRef<HTMLInputElement>(null);
 
-    const modelExport = Manager.ExportModelDisplayText(WarbandMember, true)
+    const modelExport = Manager.ExportModelDisplayText(WarbandMember, true, false)
 
     function updateName(value: string) {
         NewBandName = value;

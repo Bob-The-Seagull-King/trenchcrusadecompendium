@@ -452,7 +452,7 @@ class WarbandManager {
 
         for (i = 0; i < _warband.Members.length; i ++) {
             if (_warband.Members[i].Elite) {
-                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes, true);
             }
         }
 
@@ -460,7 +460,7 @@ class WarbandManager {
 
         for (i = 0; i < _warband.Members.length; i ++) {
             if (!(_warband.Members[i].Elite)) {
-                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes);
+                returnRow += "\n" + "\n" + this.ExportModelDisplayText(_warband.Members[i], _notes, true);
             }
         }
 
@@ -469,7 +469,7 @@ class WarbandManager {
         return returnRow;
     }
 
-    public ExportModelDisplayText(_model : WarbandMember, _notes : boolean) {
+    public ExportModelDisplayText(_model : WarbandMember, _notes : boolean, _inside : boolean) {
         const StartingRow = _model.Name + " | " + (this.GetDucatCost(_model) + " ducats") + " | " + (this.GetGloryCost(_model) + " glory")
         let lengthMarker = _model.Model.Object.Name? _model.Model.Object.Name?.length : 0;
         let rowMarker = StartingRow.length + 8;
@@ -539,10 +539,10 @@ class WarbandManager {
         const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
         const LastRow = ("-".repeat(rowMarker))
 
-        let returnString = ( ("```" + ("\n")) +
-            FirstRow + "\n" + 
-            "[ MODEL ]" + "\n" + "  " + ModelRow
-        )
+        let returnString = (_inside? "" : ("```" + ("\n"))  )
+
+        returnString += (FirstRow + "\n" + 
+        "[ MODEL ]" + "\n" + "  " + ModelRow )
         
         if (_notes) {
             if (_model.Notes.trim().length > 0) {
@@ -592,7 +592,7 @@ class WarbandManager {
             }
         }
 
-        returnString += "\n" + LastRow + ("\n" + "```")
+        returnString += "\n" + LastRow + (_inside? "" : ("\n" + "```"))
 
         return returnString
     }
