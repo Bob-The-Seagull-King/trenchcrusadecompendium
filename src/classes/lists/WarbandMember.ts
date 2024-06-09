@@ -1,6 +1,6 @@
 import { IListModel, ListModel } from "./ListModel"
 import { IListEquipment, ListEquipment } from "./ListEquipment"
-import { IListItem } from "../feature/list/ListItem"
+import { IListItem, ListItem } from "../feature/list/ListItem"
 import { IItemPartial } from "../feature/list/ListGroup"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
 
@@ -36,9 +36,21 @@ class WarbandMember {
 
         this.Model = this.ModelMaker(data.model);
         this.Equipment = this.EquipmentMaker(data.equipment);
-        this.Injuries = data.injuries;
+        this.Injuries = this.InjuryMaker(data.injuries);
         this.Skills = data.skills;
         this.Notes = data.notes
+    }
+
+    private InjuryMaker(_data : IListItem[]) {
+        const InjuryList : ListItem[] = [];
+        let i = 0
+
+        for (i = 0; i < _data.length ; i ++) {
+            const injurytemp = new ListItem(_data[i])
+            InjuryList.push(injurytemp)
+        }
+
+        return InjuryList;
     }
 
     public GetDucatCost() {

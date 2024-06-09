@@ -363,7 +363,7 @@ class WarbandManager {
     }
 
     public ExportWarband(_warband : Warband , _notes : boolean) {
-        console.log("welcome");
+        console.log(this.ExportDisplayText(_warband, _notes));
     }
 
     public ExportDisplayText(_warband : Warband, _notes : boolean) {
@@ -579,15 +579,16 @@ class WarbandManager {
 
         if (_model.Skills.length > 0) {
             returnString += "\n" + "[ SKILLS ]" + "\n" + "Experience : " + _model.Experience;
-            for (i = 0; _model.Skills.length; i++) {
-                returnString += "\n" + _model.Skills[i].name;
+            for (i = 0; i < _model.Skills.length; i++) {
+                returnString += "\n" + "  " +  _model.Skills[i].name;
             }
         }
 
         if (_model.Injuries.length > 0) {
             returnString += "\n" + "[ INJURIES ]" + "\n" + "Scars : " + _model.Injuries.length;
-            for (i = 0; _model.Injuries.length; i++) {
-                returnString += "\n" + _model.Injuries[i].name;
+            
+            for (i = 0; i < _model.Injuries.length; i++) {
+                returnString += "\n" + "  " + _model.Injuries[i].Name;
             }
         }
 
@@ -681,7 +682,7 @@ class WarbandManager {
         }
     }
 
-    public DeleteScarFromModel(_scar : IItemPartial, _model : WarbandMember, _warband : Warband) {
+    public DeleteScarFromModel(_scar : ListItem, _model : WarbandMember, _warband : Warband) {
         let i = 0;
         for (i = 0; i < _model.Injuries.length; i++) {
             if (_model.Injuries[i] == _scar) {
