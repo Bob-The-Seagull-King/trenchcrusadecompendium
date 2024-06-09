@@ -24,5 +24,6 @@ $colour_background_white: #ffffff;
 
 .backgroundBaseColour {
   background-color: $colour_background_grey;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
