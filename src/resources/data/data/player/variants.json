@@ -430,30 +430,6 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                        "content": "Blood Sacrifice:",
-                        "subcontent": [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Any model (except Ecclesiastic Prisoners who are not worthy) in the Warband can purchase a Sacrificial Lamb (see below).",
-                                "glossary":  []
-                            }
-
-                        ]
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                        "content": "Heaven Awaits:",
-                        "subcontent": [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "The Cavalcade rejects the doctrine of the Meta-Christ. Their dead Pilgrims cannot be resurrected as Martyr-Penitents.",
-                                "glossary":  []
-                            }
-
-                        ]
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
                         "content": "Art of Assassination:",
                         "subcontent": [
                             {
