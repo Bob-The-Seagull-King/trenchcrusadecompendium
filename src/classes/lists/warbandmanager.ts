@@ -367,7 +367,7 @@ class WarbandManager {
 
         const startrowlength = StartingRow.length;
 
-        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
+        let returnRow = ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
 
         if (_notes) {
             if (_warband.Notes.trim().length > 0){
@@ -464,7 +464,7 @@ class WarbandManager {
             }
         }
 
-        returnRow += "\n" + "\n" + ("-".repeat(100))
+        returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
 
         return returnRow;
     }
@@ -539,7 +539,7 @@ class WarbandManager {
         const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
         const LastRow = ("-".repeat(rowMarker))
 
-        let returnString = (
+        let returnString = ( ("```" + ("\n")) +
             FirstRow + "\n" + 
             "[ MODEL ]" + "\n" + "  " + ModelRow
         )
@@ -592,7 +592,7 @@ class WarbandManager {
             }
         }
 
-        returnString += "\n" + LastRow
+        returnString += "\n" + LastRow + ("\n" + "```")
 
         return returnString
     }
