@@ -362,19 +362,17 @@ class WarbandManager {
         return null;
     }
 
-    public ExportWarband(_warband : Warband , _notes : boolean) {
-        console.log(this.ExportDisplayText(_warband, _notes));
-    }
-
     public ExportDisplayText(_warband : Warband, _notes : boolean) {
         const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
 
         const startrowlength = StartingRow.length;
 
-        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(100-((startrowlength < 100)? startrowlength : 0)));
+        let returnRow = ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
 
         if (_notes) {
+            if (_warband.Notes.trim().length > 0){
             returnRow += "\n" + "[ NOTES ]" + "\n" + _warband.Notes + "\n"
+            }
         }
 
         const ducatTotal = "Total : " + _warband.DucatTotal.toString();
@@ -466,7 +464,7 @@ class WarbandManager {
             }
         }
 
-        returnRow += "\n" + "\n" + ("-".repeat(110))
+        returnRow += "\n" + "\n" + ("-".repeat(100))
 
         return returnRow;
     }
@@ -547,7 +545,9 @@ class WarbandManager {
         )
         
         if (_notes) {
-            returnString += "\n" + "[ NOTES ]" + _model.Notes
+            if (_model.Notes.trim().length > 0) {
+            returnString += "\n" + "[ NOTES ]" + "\n" + _model.Notes
+            }
         }
 
         returnString += "\n" + "[ GEAR ]"

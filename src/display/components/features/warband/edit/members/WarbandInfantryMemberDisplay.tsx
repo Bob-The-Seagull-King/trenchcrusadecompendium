@@ -26,6 +26,8 @@ import MemberEditScarsDisplay from './MemberEditScarsDisplay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import { faFileLines } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandInfantryMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -44,7 +46,12 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     const handleCloseNameEdit = () => setShowNameEdit(false); 
     const handleShowNameEdit = () => setShowNameEdit(true);
 
+    const [showExport, setShowExport] = useState(false);
+    const handleCloseExport = () => setShowExport(false); 
+    const handleShowExport = () => setShowExport(true);
+
     const inputRefNameEdit = useRef<HTMLInputElement>(null);
+    const modelExport = Manager.ExportModelDisplayText(WarbandMember, true)
 
     function updateName(value: string) {
         NewBandName = value;
@@ -256,6 +263,13 @@ const WarbandInfantryMemberDisplay = (props: any) => {
             <h1 className={'titleShape title'+getColour(WarbandMember.Model.Object.Faction)}>
                 {WarbandMember.Name || ""}
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
+                <div className="row float-end">
+                                    <div className='col-12 float-end'>
+                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
+                                            <FontAwesomeIcon icon={faFileLines} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
+                                        </Button>
+                                    </div>
+                                </div>
             </h1>
             <div className='modelInternalStructure'>
                 <div>
@@ -330,6 +344,29 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                         </div>
                         <div className="col-2">
                             <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+
+            <Modal onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {WarbandMember.Name + " Export"}
+                                <div className="row float-end">
+                                    <div className='col-12 float-end'>
+                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExport()}>
+                                            <FontAwesomeIcon icon={faCircleXmark} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
+                                        </Button>
+                                    </div>
+                                </div>
+                </h1>
+                <Modal.Body >
+                    <div className="row">
+                        <div className="col-12">
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                            </InputGroup>
                         </div>
                     </div>
                 </Modal.Body>

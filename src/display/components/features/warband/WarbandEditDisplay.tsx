@@ -18,6 +18,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -162,8 +163,59 @@ const WarbandEditDisplay = (props: any) => {
             </>
         )
     }
+    
 
-    Manager.ExportWarband(WarbandItem, true);
+    const [showExport, setShowExport] = useState(false);
+    const handleCloseExport = () => setShowExport(false); 
+    const handleShowExport = () => setShowExport(true);
+
+    const modelExport = Manager.ExportDisplayText(WarbandItem, true)
+
+    function ReturnExport() {
+        return (
+            <>
+                { WarbandItem != null &&
+                <>
+                    <div className="row row-cols-lg-1 row-cols-1">
+                
+                        <div className="col">
+                            <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                                <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowExport()}>
+                                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Export Warband Information</div>
+                                </div>
+                            </div>
+                        </div>
+        
+        
+                    </div>
+
+                    <Modal onEnterKeyDown={() => handleCloseExport()} size="xl" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+                        
+                        <h1 className={'titleShape titlepurple'}>
+                            {("Warband") + " Export"}
+                                <div className="row float-end">
+                                    <div className='col-12 float-end'>
+                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExport()}>
+                                            <FontAwesomeIcon icon={faCircleXmark} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
+                                        </Button>
+                                    </div>
+                                </div>
+                        </h1>
+                        <Modal.Body >
+                            <div className="row">
+                                <div className="col-12">
+                                    <InputGroup className="tagboxpad" >
+                                        <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                                    </InputGroup>
+                                </div>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+                    </>
+                }
+            </>
+        )
+    }
 
     return (
             <div className="row">
@@ -218,6 +270,18 @@ const WarbandEditDisplay = (props: any) => {
                     <div>
                         {returnNotes()}
                     </div>
+                    <div>
+                        <div className="verticalspacerbig"/>
+                    </div>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    <div>
+                        <div className="verticalspacerbig"/>
+                    </div>
+                    <div>
+                        {ReturnExport()}
+                    </div>                        
                     <div>
                         <div className="verticalspacerbig"/>
                     </div>
