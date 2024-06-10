@@ -191,8 +191,8 @@
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_flail", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greataxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_greatmaul", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_swordaxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_antitankhammer", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_misericordia", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
@@ -212,7 +212,8 @@
             {"id": "eq_holygrenade", "cost": 2, "cost_id": "glory", "limit": 3, "restriction": []},
             {"id": "eq_donkeysjawbone", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_hornofjoshua", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]}
+            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]},
+            {"id": "eq_martyrdomdevice", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_ecclesiasticprisoner"},{"type": "model", "val": "md_martyrdomdog"}]}
         ],
         "models": [
             {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},

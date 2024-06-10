@@ -750,7 +750,7 @@
         "removed_equip": [],
         "removed_model": ["md_trenchcleric","md_lieutenant","md_mechanisedheavyinfantry"],
         "equipment": [
-            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
+            {"id": "eq_fianna", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_shocktroopers"}]}
         ],
         "models" : [
             {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
