@@ -1,0 +1,263 @@
+[
+    {
+        "id": "gdp_chanceencounter",
+        "image_url": "https://i.imgur.com/DcDF3g3.png",
+        "name": "Chance Encounter",
+        "restricted_deeds": [],
+        "removed_rules": ["Battle Length"],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off and the winner chooses which long table side belongs to him (or any edge if you are playing on a square area). The opponent gets the opposite table edge (see diagram).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models are not set up on the table at the start of the game. Instead on the first turn of the game, half of the Warband (selected by each player) enters the battlefield – when one of the models is activated, it starts its move onto the table from any point along the player’s table edge, though it cannot be deployed directly into Melee combat. In Turn 2, the rest of the Warband is deployed exactly the same way.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts until the end of the sixth turn.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gdp_standarddeployment",
+        "image_url": "https://i.imgur.com/Mg5oEpE.png",
+        "name": "Standard Deployment",
+        "restricted_deeds": [],
+        "removed_rules": [],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off and the winner chooses which table side belongs to them. The opponent gets the opposite table edge.",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take turns to deploy one model at a time, starting with the winner of the roll off.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gdp_flankattack",
+        "image_url": "https://i.imgur.com/umrbcTw.png",
+        "name": "Flank Attack",
+        "restricted_deeds": [],
+        "removed_rules": [],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take turns to deploy one model at a time, starting with the winner of a roll off.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gdp_longdistancebattle",
+        "image_url": "https://i.imgur.com/kDUcXVa.png",
+        "name": "Long Distance Battle",
+        "restricted_deeds": [],
+        "removed_rules": ["Battle Length"],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off and the winner chooses which corner of the table belongs to them. The opponent gets the opposite corner. The winner of the roll- off then places one model anywhere within a 12” of their table corner (see diagram).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The opponent does the same. Then the first player places another model, and the two keep alternating until all models have been set up.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts until the end of the sixth turn.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gdp_tunnels",
+        "image_url": "https://i.imgur.com/YGGcpEu.png",
+        "name": "Tunnels",
+        "restricted_deeds": [],
+        "removed_rules": [],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off and the winner places a 1” Tunnel marker anywhere more than one 6” from the table’s middle line (see diagram), though not on impassable terrain. The opponent does the same on the opposite side of the table’s middle line (see diagram below).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Not all models are set up on the table at the start of the game. Players must leave half of their models in reserve (rounding down). On the first turn of the game, the remaining models enter the battle through tunnels – when one of these models is Activated, it is placed anywhere within one 6” of its Tunnel Marker, though not in Melee combat. Models that enter the battlefield this way cannot Dash in the first Turn of the game.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators must be deployed as normal troops.",
+                        "subcontent": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "gdp_fogofwar",
+        "image_url": "https://i.imgur.com/SPpR57V.png",
+        "name": "Fog Of War",
+        "restricted_deeds": [],
+        "removed_rules": [],
+        "rules": [
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off and the winner chooses which table side belongs to them, the opponent gets the opposite table edge.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Not all models are set up on the table at the start of the game. Players must leave half of their models (rounding down) in reserve.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "On the first Turn of the game, the remaining models enter the battle at random locations – when one of these models is Activated, the player rolls a D6 and consults the For of War Chart below. Models entering the battle cannot be placed directly into Melee combat",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Fog Of War Chart",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "1:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The opponent chooses one of the results below.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "2:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Enter from the center of the North edge.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "3:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Enter from the center of the East egde.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "4:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Enter from the center of the South edge.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "5:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Enter from the center of the West edge.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "6:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "You choose one of the result above.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            }                            
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

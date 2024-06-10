@@ -6,13 +6,16 @@ import glossarydata from '../data/references/glossary.json'
 import equipmentdata from '../data/player/equipment.json'
 import factiondata from '../data/player/factions.json'
 import variantdata from '../data/player/variants.json'
-import scenariodata from '../data/general/scenarios.json'
+import scenariodata from '../data/scenarios/scenarios.json'
 import injurydata from '../data/general/injuries.json'
 import skilldata from '../data/general/skills.json'
 import skillgroupdata from '../data/general/skillgroup.json'
 import tablechartdata from '../data/references/tablecharts.json'
 import tableresultdata from '../data/references/tableresults.json'
 import quickrulesdata from '../data/references/quickrules.json'
+import genDeeds from '../data/scenarios/gen_deeds.json'
+import genDeployment from '../data/scenarios/gen_deployment.json'
+import genScenario from '../data/scenarios/gen_scenario.json'
 // -----------------------------------------------------
 
 /**
@@ -108,6 +111,15 @@ class DataResponder {
             }
             case "quickrules": {
                 return quickrulesdata.concat(data)
+            }
+            case "genDeed": {
+                return genDeeds.concat(data)
+            }
+            case "genDeployment": {
+                return genDeployment.concat(data)
+            }
+            case "genScenario": {
+                return genScenario.concat(data)
             }
             default: {
                 return data

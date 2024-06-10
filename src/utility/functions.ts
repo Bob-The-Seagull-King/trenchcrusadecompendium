@@ -162,6 +162,10 @@ export function getRouteName(_route: string) {
         return "Warband Builder"
     }
 
+    if (_route.includes("tools/randomscenario")) {
+        return "Scenario Generator"
+    }
+
     return ""
 }
 

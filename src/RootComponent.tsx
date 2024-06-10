@@ -23,7 +23,6 @@ const RootComponent: React.FC = () => {
     const [theme, setTheme] = useState(InitTheme());
 
     function ChangeTheme() {
-        console.log(theme);
         if (theme == 'light') {
             
             localStorage.setItem('theme', 'dark');
@@ -38,7 +37,6 @@ const RootComponent: React.FC = () => {
 
     function InitTheme() {
         const theme = localStorage.getItem('theme');
-        console.log(theme)
         if (theme != null) {
             return theme
         } else {

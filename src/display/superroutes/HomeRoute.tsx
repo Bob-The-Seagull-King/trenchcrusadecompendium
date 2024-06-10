@@ -18,6 +18,7 @@ import { faCrosshairs } from '@fortawesome/free-solid-svg-icons'
 import { faUserInjured } from '@fortawesome/free-solid-svg-icons'
 import { faHandFist } from '@fortawesome/free-solid-svg-icons'
 import { faTable } from '@fortawesome/free-solid-svg-icons'
+import { faDice } from '@fortawesome/free-solid-svg-icons'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 
@@ -126,6 +127,14 @@ const HomeRoute: React.FC = () => {
                                     <FontAwesomeIcon icon={faScrewdriverWrench} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         WARBAND BUILDER
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/randomscenario/")}>
+                                    <FontAwesomeIcon icon={faDice} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        SCENARIO GENERATOR
                                     </h1>
                                 </div>
                             </div>

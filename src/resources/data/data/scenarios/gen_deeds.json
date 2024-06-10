@@ -1,0 +1,210 @@
+[
+    {
+        "id": "gdd_victor",
+        "playerNum": 0,
+        "title": "Victor",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Victor:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This glorious deed goes to whoever wins the match.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_reaper",
+        "playerNum": 1,
+        "title": "Reaper",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Reaper:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Take at least 3 enemies Out of Action with one of your models during the Battle using any ACTIONS the model has.",
+            "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_sharpshooter",
+        "playerNum": 1,
+        "title": "Sharpshooter",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Sharpshooter:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Take out an enemy in Cover while shooting from Long Range.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_bloodletting",
+        "playerNum": 1,
+        "title": "Bloodletting",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Bloodletting",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Make one of your enemies suffer the 6th BLOOD MARKER with an attack from one of your models.",
+            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_feignedretreat",
+        "playerNum": 1,
+        "title": "Feigned Retreat",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Feigned Retreat:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Retreat from Melee Combat and then shoot and hit the enemy you escaped from during the same Activation.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_fickleluck",
+        "playerNum": 1,
+        "title": "Fickle Luck",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Fickle Luck:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Use 2+ BLOOD MARKERs on a single enemy to give one of their ACTIONS -2 DICE (or more).",
+            "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "ACTIONS", "id": "gl_action"},{"val": "-2 DICE", "id": "gl_minusdice"}]
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_headhunter",
+        "playerNum": 1,
+        "title": "Headhunter",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Headhunter:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Take 2 enemies Out of Action with Ranged attacks with a single model.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_riskitall",
+        "playerNum": 2,
+        "title": "Risk It All",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Risk It All:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Succeed in 2+ Risky Actions with one model during a single Activation.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_livedangerously",
+        "playerNum": 2,
+        "title": "Live Dangerously",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Live Dangerously:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Retreat from Melee Combat twice with one model during the game.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_killerinstinct",
+        "playerNum": 2,
+        "title": "Killer Instinct",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Killer Instinct:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Take 2 enemies out of Action with 1 model in melee during the battle.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_noescape",
+        "playerNum": 2,
+        "title": "No Escape",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "No Escape:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Successfully charge an enemy you cannot see.",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_castthemdown",
+        "playerNum": 2,
+        "title": "Cast Them Down",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Cast Them Down:",
+                "subcontent":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Make an enemy fall from a height of 3”+ thanks to your action (shooting, melee, Supernatural Power etc.)",
+            "glossary": []
+            }]
+        }
+    ]
+    },
+    {
+        "id": "gdd_showofmercy",
+        "playerNum": 2,
+        "title": "Show Of Mercy",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Show Of Mercy:",
+                "subcontent":  [{
+                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                    "content": "Retreat from Melee Combat with an enemy that is Down.",
+                    "glossary": []
+                }]
+            }
+        ]
+    }
+]

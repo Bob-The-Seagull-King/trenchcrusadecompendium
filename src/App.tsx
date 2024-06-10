@@ -29,7 +29,6 @@ const App: React.FC = () => {
 
     function InitTheme() {
         const theme = localStorage.getItem('theme');
-        console.log(theme)
         if (theme != null) {
             return theme
         } else {
