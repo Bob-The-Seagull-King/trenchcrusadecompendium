@@ -23,12 +23,12 @@ const RootComponent: React.FC = () => {
     const [theme, setTheme] = useState(InitTheme());
 
     function ChangeTheme() {
-        
+        console.log(theme);
         if (theme == 'light') {
             
             localStorage.setItem('theme', 'dark');
             setTheme('dark')
-        } else {
+        } else if (theme == 'dark') {
             
             localStorage.setItem('theme', 'light');
             setTheme('light')
