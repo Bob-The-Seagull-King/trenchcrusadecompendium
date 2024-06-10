@@ -24,7 +24,7 @@ const PlayerTacticsHeader = (prop: any) => {
             <p className='headersubtext'>v1.4.01a</p>
             <div className="vr headertext"></div>
             <Button style={{padding:"0em"}} variant="" onClick={() => NavigateHome()}>
-                <FontAwesomeIcon icon={faHouse} style={{fontSize:"2em",color:"white",margin:"0em"}}/>
+                <FontAwesomeIcon icon={faHouse} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
             </Button>
             <div className="vr headertext"></div>
             <div className="ms-lg-auto ms-md-auto">

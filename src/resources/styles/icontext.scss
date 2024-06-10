@@ -6,12 +6,12 @@
 
   .tagText {
     font-weight: bolder;
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
 }
 
 .equipTagText {
     font-weight: bolder;
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
     font-size: 0.9em;
     margin-left: 1em;
 }
@@ -43,14 +43,14 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_purple_main;
-    color: $colour_background_white;
+    background-color: var(--colour_purple_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
 
 .largefonttext {
-  color: $colour_purple_main;
+  color: var(--colour_purple_main);
   font-family: CloisterBlack;
   font-size: 5em;
   font-weight: 500;
@@ -58,7 +58,7 @@
 }
 
 .mediumfonttext {
-  color: $colour_purple_main;
+  color: var(--colour_purple_main);
   font-family: CloisterBlack;
   font-size: 3em;
   font-weight: 500;
@@ -66,7 +66,7 @@
 }
 
 .mediumsubfonttext {
-  color: $colour_purple_main;
+  color: var(--colour_purple_main);
   font-family: CloisterBlack;
   font-size: 2em;
   font-weight: 600;
@@ -74,7 +74,7 @@
 }
 
 .subfonttext {
-  color: $colour_purple_main;
+  color: var(--colour_purple_main);
   font-size: 2em;
   font-weight: 700;
   line-height: 1em;
@@ -88,19 +88,19 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_purple_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_purple_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
 
 .glossaryPurple {
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-weight: bold;
 }
 
 .glossaryGrey {
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
     font-weight: 400;
     font-family: 'Courier New', Courier, monospace;
     padding-top:0.1em;
@@ -119,8 +119,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_blue_main;
-    color: $colour_background_white;
+    background-color: var(--colour_blue_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -133,8 +133,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_blue_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_blue_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -147,8 +147,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_green_main;
-    color: $colour_background_white;
+    background-color: var(--colour_green_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -161,8 +161,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_green_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_green_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -175,8 +175,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_red_main;
-    color: $colour_background_white;
+    background-color: var(--colour_red_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -189,8 +189,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_red_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_red_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -203,8 +203,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_yellow_main;
-    color: $colour_background_white;
+    background-color: var(--colour_yellow_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -217,8 +217,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_yellow_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_yellow_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -231,8 +231,8 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_grey_main;
-    color: $colour_background_white;
+    background-color: var(--colour_grey_main);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
@@ -245,27 +245,27 @@
     border-radius: 0em;
     width: 100%;
     text-align: center;
-    background-color: $colour_grey_secondary;
-    color: $colour_background_white;
+    background-color: var(--colour_grey_secondary);
+    color: var(--colour_background_white);
     font-size: 200%;
     font-weight: bolder;
 }
 
 .subtletext {
     text-align: center;
-    color: $colour_grey_secondary;
+    color: var(--colour_grey_secondary);
     font-size: 200%;
     font-weight: bolder;
 }
 
 .hometitle {
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-size: 5em;
     font-weight: 1500;
 }
 
 .homesubtitle {
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-size: 2em;
     font-weight: 1500;
 }
@@ -273,7 +273,7 @@
 .homelink {
     font-weight: 1000;
     text-decoration: none;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
 }
 .navitemh2 {
     margin-top: 0.4em;
@@ -283,7 +283,7 @@
 .webtitle {
     margin-top: 0em;
     margin-bottom: 0em;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-size: 3em;
 
 }
@@ -292,7 +292,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: $colour_grey_secondary;
+    color: var(--colour_grey_secondary);
     font-weight: bolder;
     font-size: 2em;
     font-family: CloisterBlack;
@@ -302,7 +302,7 @@
   .separator::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid $colour_grey_secondary;
+    border-bottom: 1px solid var(--colour_grey_secondary);
     font-family: CloisterBlack;
   }
   
@@ -326,19 +326,19 @@
 
   .subltenotetext {
     text-align: center;
-    color: $colour_grey_secondary;
+    color: var(--colour_grey_secondary);
     font-size: 0.9em;
   }
 
   .headertext {
-    color: $colour_background_white;
+    color: var(--colour_background_white);
     font-weight: 700;
     font-size: 1.5em;
     font-family: CloisterBlack;
   }
 
   .headersubtext {
-    color: $colour_background_white;
+    color: var(--colour_background_white);
     font-size: 1em;
     font-weight: 400;
   }
@@ -350,7 +350,7 @@
   .pagetitletext {
     font-size: 3em;
     font-weight: 600;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     justify-self: center;
     text-align: center;
   }
@@ -358,59 +358,59 @@
   .pageaccestext {
       font-size: 1.75em;
       font-weight: 700;
-      color: $colour_purple_main;
+      color: var(--colour_purple_main);
       margin: 0.1em;
   }
 
   .pageaccestextsmall {
       font-size: 1.25em;
       font-weight: 600;
-      color: $colour_purple_main;
+      color: var(--colour_purple_main);
       margin: 0.1em;
   }
 
   .loreaccesstext {
       font-size: 1.2em;
       font-weight: 600;
-      color: $colour_grey_main;
+      color: var(--colour_grey_main);
       margin: 0em;
   }
 
   .packtitle {
     font-size: 1.75em;
     font-weight: 700;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     margin: 0.25em;
   }
 
   .packsubtitle {
     font-size: 1.25em;
     font-weight: 400;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     margin: 0.25em;
   }
 
   .purpleIcon {
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
   }
   .redIcon {
-    color: $colour_red_main;
+    color: var(--colour_red_main);
   }
   .greenIcon {
-    color: $colour_green_main;
+    color: var(--colour_green_main);
   }
 
   .stattitle {
     width: 100%;
     font-weight: 400;
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
     text-align: center;
   }
 
   .equiptitle {
     width: 100%;
     font-weight: 400;
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
     text-align: left;
   }
 
@@ -433,7 +433,7 @@
 
   .tabletitle {
     font-size: 2em;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-weight: 700;
     font-family: CloisterBlack;
   }
@@ -441,13 +441,13 @@
   .tableresult {
     display: flex;
     font-size: 1.25em;
-    color: $colour_grey_main;
+    color: var(--colour_grey_main);
     text-align: left;
   }
 
   .tablename {
     font-size: 1.25em;
-    color: $colour_purple_main;
+    color: var(--colour_purple_main);
     font-weight: 600;
     text-align: left;
   }

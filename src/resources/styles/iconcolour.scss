@@ -1,19 +1,41 @@
-$colour_purple_main: #b80909;
-$colour_red_main: #EE220C;
-$colour_green_main: #61D836;
-$colour_yellow_main: #FEAE00;
-$colour_blue_main: #00A2FF;
-$colour_grey_main: #929292;
 
-$colour_purple_secondary: #db3939;
-$colour_red_secondary: #FF968D;
-$colour_yellow_secondary: #FFD932;
-$colour_green_secondary: #88FA4E;
-$colour_blue_secondary: #4CDDFE;
-$colour_grey_secondary: #D5D5D5;
+:root {
+  --colour_purple_main: #b80909;
+  --colour_red_main: #EE220C;
+  --colour_green_main: #61D836;
+  --colour_yellow_main: #FEAE00;
+  --colour_blue_main: #00A2FF;
+  --colour_grey_main: #929292;
 
-$colour_background_grey: #fafafa;
-$colour_background_white: #ffffff;
+  --colour_purple_secondary: #db3939;
+  --colour_red_secondary: #FF968D;
+  --colour_yellow_secondary: #FFD932;
+  --colour_green_secondary: #88FA4E;
+  --colour_blue_secondary: #4CDDFE;
+  --colour_grey_secondary: #D5D5D5;
+
+  --colour_background_grey: #fafafa;
+  --colour_background_white: #ffffff;
+}
+
+[data-theme='dark'] {
+  --colour_purple_main: #b80909;
+  --colour_red_main: #EE220C;
+  --colour_green_main: #61D836;
+  --colour_yellow_main: #FEAE00;
+  --colour_blue_main: #00A2FF;
+  --colour_grey_main: #252525;
+
+  --colour_purple_secondary: #db3939;
+  --colour_red_secondary: #FF968D;
+  --colour_yellow_secondary: #FFD932;
+  --colour_green_secondary: #88FA4E;
+  --colour_blue_secondary: #4CDDFE;
+  --colour_grey_secondary: #3b3b3b;
+
+  --colour_background_grey: #0f0f0f;
+  --colour_background_white: #ffffff;
+}
 
 .colourOverlay {
     width: 100%;
@@ -22,8 +44,12 @@ $colour_background_white: #ffffff;
     background-color: rgba(255, 255, 255, 0.1); /* Change the color and opacity as needed */
   }
 
+.setWhite {
+  color: var(--colour_background_white);
+}
+
 .backgroundBaseColour {
-  background-color: $colour_background_grey;
+  background-color: var(--colour_background_grey);
   min-height: 100vh;
   height: 100%;
 }
