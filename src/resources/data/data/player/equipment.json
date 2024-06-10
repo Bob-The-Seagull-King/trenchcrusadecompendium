@@ -267,7 +267,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.",
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.  Counts as a 1-Handed weapon when wielded with a shield.",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -2183,7 +2183,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. Due to its high accuracy,  add +1 DICE to all rolls to hit and ignores penalties for long range. However, Injuries are rolled with -1 DICE at long range due the low penetration power.",
+                            "content": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. Due to its high accuracy,  add +1 DICE to all rolls to hit and ignores penalties for long range. However, Injuries are rolled with -1 DICE at long range due the low penetration power.  Counts as a 1-Handed weapon when wielded with a shield.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                         }
                     ]
