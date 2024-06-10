@@ -478,3 +478,21 @@
   .squaredThree input[type=radio]:checked + label:after {
     color: var(--colour_purple_main);
   }
+
+  .formparagraphtext {
+    color: var(--colour_basic_text);
+    background-color: var(--colour_background_white);
+  }
+
+  .fabbutton {
+    box-shadow: 0 0 5px 1px var(--colour_grey_main) !important;
+    width: 100%;
+    text-align: justify;
+    background-color: var(--colour_background_grey) !important;
+    color: var(--colour_basic_text) !important;
+    font-weight: 600 !important;
+
+    &:hover {
+        box-shadow: 0 0 10px 2px var(--colour_grey_main) !important;
+    }
+  }

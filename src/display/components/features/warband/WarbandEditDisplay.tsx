@@ -205,7 +205,7 @@ const WarbandEditDisplay = (props: any) => {
                             <div className="row">
                                 <div className="col-12">
                                     <InputGroup className="tagboxpad" >
-                                        <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                                        <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} className="formparagraphtext" style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
                                     </InputGroup>
                                 </div>
                             </div>

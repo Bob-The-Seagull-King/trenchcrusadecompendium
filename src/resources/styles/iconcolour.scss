@@ -16,6 +16,8 @@
 
   --colour_background_grey: #fafafa;
   --colour_background_white: #ffffff;
+
+  --colour_basic_text: #000000;
 }
 
 [data-theme='dark'] {
@@ -24,17 +26,19 @@
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
-  --colour_grey_main: #252525;
+  --colour_grey_main: #5e5e5e;
 
-  --colour_purple_secondary: #db3939;
-  --colour_red_secondary: #FF968D;
-  --colour_yellow_secondary: #FFD932;
-  --colour_green_secondary: #88FA4E;
-  --colour_blue_secondary: #4CDDFE;
-  --colour_grey_secondary: #3b3b3b;
+  --colour_purple_secondary: #911a1a;
+  --colour_red_secondary: #c03121;
+  --colour_yellow_secondary: #c28e1f;
+  --colour_green_secondary: #5dac40;
+  --colour_blue_secondary: #238ac5;
+  --colour_grey_secondary: #383838;
 
   --colour_background_grey: #0f0f0f;
   --colour_background_white: #ffffff;
+
+  --colour_basic_text: #ffffff;
 }
 
 .colourOverlay {
@@ -52,4 +56,5 @@
   background-color: var(--colour_background_grey);
   min-height: 100vh;
   height: 100%;
+  color: var(--colour_basic_text);
 }

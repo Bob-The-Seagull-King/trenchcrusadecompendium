@@ -363,7 +363,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
                     <div className="row">
                         <div className="col-12">
                             <InputGroup className="tagboxpad" >
-                                <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                                <Form.Control as="textarea" aria-label="With textarea" className="formparagraphtext" readOnly defaultValue={modelExport} placeholder={""} style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
                             </InputGroup>
                         </div>
                     </div>
