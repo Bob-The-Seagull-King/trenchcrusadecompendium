@@ -597,6 +597,128 @@ class WarbandManager {
         return returnString
     }
 
+    public ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
+        const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
+
+        const startrowlength = StartingRow.length;
+
+        let returnRow = ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
+
+        const ducatTotal = "Total : " + _warband.DucatTotal.toString();
+        const ducatCost = "Spent : " + this.TotalCostDucats( _warband).toString() + " (" + _warband.DucatLost.toString() + " Lost)";
+        const gloryTotal = "Total : " + _warband.GloryTotal.toString();
+        const gloryCost = "Spent : " + this.TotalCostGlory(_warband).toString() + " (" + _warband.GloryCost.toString() + " Lost)";
+
+        const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
+        const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
+
+        const DucatRow = ducatTotal + (" ".repeat(((totalRow - ducatTotal.length) > 0)? totalRow - ducatTotal.length : 0)) + " | " + ducatCost + (" ".repeat(((costRow - ducatCost.length) > 0)? costRow - ducatCost.length : 0)) + " | Available : " + (_warband.DucatTotal - this.TotalCostDucats(_warband)).toString()
+        const GloryRow = gloryTotal + (" ".repeat(((totalRow - gloryTotal.length) > 0)? totalRow - gloryTotal.length : 0)) + " | " + gloryCost + (" ".repeat(((costRow - gloryCost.length) > 0)? costRow - gloryCost.length : 0)) + " | Available : " + (_warband.GloryTotal - this.TotalCostGlory(_warband)).toString()
+
+        returnRow += "\n" + "[ DUCATS ] " + DucatRow + "\n" + "[ GLORY ] " + GloryRow;
+
+        if (_warband.Armoury.length > 0) {
+            returnRow += "\n" + "\n" + "[ ARMOURY ]"
+        }
+
+        let i = 0;
+
+
+        const Equipment = [];
+
+        for (i = 0 ; i < _warband.Armoury.length ; i ++) {
+            Equipment.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + " ( " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType + " )");
+        }
+
+        if (Equipment.length > 0) {
+            for (i = 0; i < Equipment.length; i++) {
+                returnRow += "\n" + "  " + Equipment[i]
+            }
+        }
+
+        returnRow += "\n";
+
+        if (_warband.Members.filter((value) => (value.Elite == true)).length > 0) {
+            returnRow += "\n" + "[ ELITE MEMBERS ]"
+        }
+
+        for (i = 0; i < _warband.Members.length; i ++) {
+            if (_warband.Members[i].Elite) {
+                returnRow +=  "\n" + this.ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
+            }
+        }
+
+        if (_warband.Members.filter((value) => (value.Elite != true)).length > 0) {
+            returnRow += "\n" + "[ INFANTRY ]"
+        }
+
+        for (i = 0; i < _warband.Members.length; i ++) {
+            if (!(_warband.Members[i].Elite)) {
+                returnRow +=  "\n" + this.ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
+            }
+        }
+
+        returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
+
+        return returnRow;
+    }
+
+    public ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boolean, _inside : boolean) {
+        const StartingRow = _model.Name + " | " + _model.Model.Object.Name + " | " + (this.GetDucatCost(_model) + " ducats") + " " + (this.GetGloryCost(_model) + " glory")
+        let rowMarker = StartingRow.length + 8;
+
+        let i = 0;
+
+        const Equipment = [];
+        
+        for (i = 0 ; i < _model.Equipment.length ; i ++) {
+            Equipment.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + " (" + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType + ")");
+        }
+
+        for (i = 0; i < Equipment.length; i ++) {
+            if (Equipment[i].length > rowMarker) {
+                rowMarker = Equipment[i].length;
+            }
+        }
+
+        if (rowMarker % 2 == 1) {
+            rowMarker += 1;
+        }
+
+        const rowMarkerDiv = (rowMarker - StartingRow.length - 2)/2
+        const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
+        const LastRow = ("-".repeat(rowMarker))
+
+        let returnString = (_inside? "" : ("```" + ("\n"))  )
+
+        returnString += (FirstRow)
+
+        if (Equipment.length > 0) {
+            for (i = 0; i < Equipment.length; i++) {
+                returnString += "\n" + "-" + Equipment[i]
+            }
+        }
+
+        if (_model.Skills.length > 0) {
+            returnString += "\n" + "[ SKILLS ]" + " (" + _model.Experience + " Experience)";
+            for (i = 0; i < _model.Skills.length; i++) {
+                returnString += "\n" + "-" +  _model.Skills[i].name;
+            }
+        }
+
+        if (_model.Injuries.length > 0) {
+            returnString += "\n" + "[ INJURIES ]" + " (" +  _model.Injuries.length + " Scars)";
+            
+            for (i = 0; i < _model.Injuries.length; i++) {
+                returnString += "\n" + "-" + _model.Injuries[i].Name;
+            }
+        }
+
+        returnString += "\n" + LastRow + (_inside? "" : ("\n" + "```"))
+
+        return returnString
+    }
+
 
     public GetModelByID(_name : string) {
         let i = 0;

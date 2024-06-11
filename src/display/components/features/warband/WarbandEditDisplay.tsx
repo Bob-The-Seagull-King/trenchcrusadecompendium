@@ -171,17 +171,30 @@ const WarbandEditDisplay = (props: any) => {
 
     const modelExport = Manager.ExportDisplayText(WarbandItem, true)
 
+    const [showExportBasic, setShowExportBasic] = useState(false);
+    const handleCloseExportBasic = () => setShowExportBasic(false); 
+    const handleShowExportBasic = () => setShowExportBasic(true);
+
+    const modelExportBasic = Manager.ExportDisplayTextBasic(WarbandItem, true)
+
     function ReturnExport() {
         return (
             <>
                 { WarbandItem != null &&
                 <>
-                    <div className="row row-cols-lg-1 row-cols-1">
+                    <div className="row row-cols-md-2 row-cols-1">
                 
-                        <div className="col">
+                    <div className="col">
                             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowExport()}>
                                     <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Export Warband Information</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                                <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowExportBasic()}>
+                                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Export Warband Basics</div>
                                 </div>
                             </div>
                         </div>
@@ -206,6 +219,29 @@ const WarbandEditDisplay = (props: any) => {
                                 <div className="col-12">
                                     <InputGroup className="tagboxpad" >
                                         <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} className="formparagraphtext" style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                                    </InputGroup>
+                                </div>
+                            </div>
+                        </Modal.Body>
+                    </Modal>
+
+                    <Modal onEnterKeyDown={() => handleCloseExportBasic()} size="xl" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+                        
+                        <h1 className={'titleShape titlepurple'}>
+                            {("Warband") + " Export"}
+                                <div className="row float-end">
+                                    <div className='col-12 float-end'>
+                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExportBasic()}>
+                                            <FontAwesomeIcon className="setWhite" icon={faCircleXmark} style={{fontSize:"2em",margin:"0em"}}/>
+                                        </Button>
+                                    </div>
+                                </div>
+                        </h1>
+                        <Modal.Body >
+                            <div className="row">
+                                <div className="col-12">
+                                    <InputGroup className="tagboxpad" >
+                                        <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExportBasic} placeholder={""} className="formparagraphtext" style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
                                     </InputGroup>
                                 </div>
                             </div>

@@ -28,6 +28,7 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandInfantryMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -50,8 +51,13 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     const handleCloseExport = () => setShowExport(false); 
     const handleShowExport = () => setShowExport(true);
 
+    const [showExportBasic, setShowExportBasic] = useState(false);
+    const handleCloseExportBasic = () => setShowExportBasic(false); 
+    const handleShowExportBasic = () => setShowExportBasic(true);
+
     const inputRefNameEdit = useRef<HTMLInputElement>(null);
     const modelExport = Manager.ExportModelDisplayText(WarbandMember, true, false)
+    const modelExportBasic = Manager.ExportModelDisplayTextBasic(WarbandMember, true, false)
 
     function updateName(value: string) {
         NewBandName = value;
@@ -268,6 +274,9 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                                         <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
                                             <FontAwesomeIcon icon={faFileLines} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
                                         </Button>
+                                        <Button style={{padding:"0em",paddingLeft:"0.5em"}} variant="" onClick={() => handleShowExportBasic()}>
+                                            <FontAwesomeIcon icon={faQuoteLeft} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                                        </Button>
                                     </div>
                                 </div>
             </h1>
@@ -366,6 +375,28 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                         <div className="col-12">
                             <InputGroup className="tagboxpad" >
                                 <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} className="formparagraphtext" style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                            </InputGroup>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>
+            <Modal onEnterKeyDown={() => handleCloseExportBasic()} size="lg" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExportBasic} keyboard={true}  centered>
+                
+                <h1 className={'titleShape titlepurple'}>
+                    {WarbandMember.Name + " Basic Export"}
+                                <div className="row float-end">
+                                    <div className='col-12 float-end'>
+                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExportBasic()}>
+                                            <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                                        </Button>
+                                    </div>
+                                </div>
+                </h1>
+                <Modal.Body >
+                    <div className="row">
+                        <div className="col-12">
+                            <InputGroup className="tagboxpad" >
+                                <Form.Control as="textarea" aria-label="With textarea" className="formparagraphtext" readOnly defaultValue={modelExportBasic} placeholder={""} style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
                             </InputGroup>
                         </div>
                     </div>
