@@ -31,6 +31,7 @@ class ModelDescription extends DescriptionItem {
      */
     ModelSubConstructor(data?: []) {
         const sublist: ModelDescription[] = []
+        try {
         if (data) {
             let i = 0;
             for (i = 0; i < data.length; i++) {
@@ -41,6 +42,10 @@ class ModelDescription extends DescriptionItem {
         } else {
             return sublist;
         }
+    } catch (e) {
+        const emergencylist: ModelDescription[] = []
+        return emergencylist;
+    }
     }
 }
 

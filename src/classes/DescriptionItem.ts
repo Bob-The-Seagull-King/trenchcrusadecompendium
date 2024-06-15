@@ -26,12 +26,17 @@ class TextBlock {
 
     private DescriptionFactory(data: []) {
         let i = 0;
+        try {
         const array: DescriptionItem[] = []
         for (i = 0; i < data.length; i++) {
             const tempAD = new DescriptionItem(data[i])
             array.push(tempAD)
         }
         return array;
+        } catch (e) {
+            const emergencyarray: DescriptionItem[] = []
+            return emergencyarray;
+        }
     }
 }
 

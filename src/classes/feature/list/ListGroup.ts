@@ -49,11 +49,17 @@ class ListGroup extends TrenchCrusadeItem {
     private DescriptionFactory(data: []) {
         let i = 0;
         const array: ModelDescription[] = []
+        try {
         for (i = 0; i < data.length; i++) {
             const tempAD = new ModelDescription(data[i])
             array.push(tempAD)
         }
         return array;
+        } catch (e) {
+            
+            const emergencyarray: ModelDescription[] = []
+            return emergencyarray;
+        }
     }
 
     private ListFactory(data : IListSet[]) {
