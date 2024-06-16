@@ -190,5 +190,161 @@
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
             }
             ]
+    },
+    {
+        "id": "up_homunculuswings",
+        "type": "Upgrade",
+        "name": "Wings",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can Fly as explained in the rules and gains a movement speed of 8”.",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_homunculuselementalresistance",
+        "type": "Upgrade",
+        "name": "Elemental Resistance",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi does not suffer additional BLOOD MARKERs with any damage with keyword GAS or FIRE",
+                "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusmassivesize",
+        "type": "Upgrade",
+        "name": "Massive Size",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculus’ size is increased into vast proportions. It now has a base size of 40mm and it gains the Keyword TOUGH. This formula cannot be combined with the Alchemical Formula Wings.",
+                "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusenslavedmind",
+        "type": "Upgrade",
+        "name": "Enslaved Mind",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi gains the Keyword FIRETEAM along with 1 model of your choice in the Warband.",
+                "glossary": [{"val": "FIRETEAM", "id": "gl_fireteam"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushumanhands",
+        "type": "Upgrade",
+        "name": "Human Hands",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can buy and wield any weapon allowed in the Iron Sultanate warband list for any non-ELITE warrior or limited to a specific Troop type. They can also carry a Trench Shield. This Formula cannot be combined with the Alchemical Formula Wings. This will apply to human hands Alchemic Formula as well.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusinhumanstrength",
+        "type": "Upgrade",
+        "name": "Inuman Strength",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 40mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "STRONG", "id": "gl_strong"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusterrifyingappearance",
+        "type": "Upgrade",
+        "name": "Terrifying Appearance",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Be it through alluringly beauty or horrifying visage of terror, this Homunculus gains the Keyword FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusadditionalarm",
+        "type": "Upgrade",
+        "name": "Additional Arm",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can perform an additional attack ACTION in combat without any penalty. This Formula combines with Human Hands).",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculustwoheads",
+        "type": "Upgrade",
+        "name": "Two Heads",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This Homunculi has two heads, and therefore can have two sets of eyes via Alchemical Formula.",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushypnoticeyes",
+        "type": "Upgrade",
+        "name": "Hypnotic Eyes",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Enemies suffer -1 DICE to their Melee attacks. Does not affect enemies with the keyword BLACK GRAIL or isn’t a Sniper Priest.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushawkeyes",
+        "type": "Upgrade",
+        "name": "Hawk Eyes",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The eyesight of the Homunculus is based that of a predatory Bird. It can add +1 DICE to its Ranged Attack characteristic.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusstartlingspeed",
+        "type": "Upgrade",
+        "name": "Startling Speed",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Homunculus adds +1 DICE to its Dash ACTIONs.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculussealofsolomon",
+        "type": "Upgrade",
+        "name": "Seal Of Solomon",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This Formula greatly enhances the intelligence of the Homunculus. It can now buy and use Equipment from the Sultanate Warband Equipment list as long as it is not limited to ELITE models.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ]
     }
 ]
