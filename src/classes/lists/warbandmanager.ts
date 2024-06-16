@@ -190,6 +190,16 @@ class WarbandManager {
                 }
 
                 const ContentNew: WarbandMember = new WarbandMember((_content));
+
+                for (i = 0; i < _warband.Faction.Models.length; i++) {
+                    if (ContentNew.Model.ID == _warband.Faction.Models[i].ID) {
+                        let j = 0
+                        for (j = 0; j < _warband.Faction.Models[i].Equipment.length; j++) {
+                            const msg = this.NewEquipmentForMember(ContentNew, _warband.Faction.Models[i].Equipment[j], "0", "ducats")
+                        }
+                    }
+                }
+
                 _warband.Members.push(ContentNew);
             } else {
                 return ReturnMsg;
@@ -219,7 +229,7 @@ class WarbandManager {
             let i = 0;
             if (ReturnMsg == "") {
                 let modelVal : any = null;
-                
+                console.log()
                 for (i = 0; i < this.Equipment.length ; i++ ) {
                     if (this.Equipment[i].ID == _model) {
                         modelVal = this.Equipment[i];

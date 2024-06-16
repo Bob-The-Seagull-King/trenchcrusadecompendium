@@ -102,20 +102,20 @@
             {"id": "eq_musicalinstrument", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
-            {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_hereticdeathcommando", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_hereticchorister", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_heretictrooperlegionnare", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
-            {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_hereticpriest", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
+            {"id": "md_hereticdeathcommando", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_hereticchorister", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_heretictrooperlegionnare", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": ["eq_heavyarmour","eq_infernalbrandmark"]},
+            {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
+            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"]},
+            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_tenderizermaul"]}
         ]
     },
     {
@@ -216,22 +216,22 @@
             {"id": "eq_martyrdomdevice", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_ecclesiasticprisoner"},{"type": "model", "val": "md_martyrdomdog"}]}
         ],
         "models": [
-            {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_castigator", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_communicant", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_trenchpilgrimmartyr", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
-            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_warprophet", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
+            {"id": "md_castigator", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_communicant", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_trenchpilgrimmartyr", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": []},
+            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_combathelmet"]},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"]},
+            {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_combathelmet","eq_wargavel"]},
+            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"]},
+            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"]},
+            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"]}
         ]
     },
     {
@@ -318,19 +318,19 @@
             {"id": "eq_fieldhospital", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
-            {"id": "md_yuzbasicaptain", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_azebs", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_azebsskirmisher", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_sultanatesapper", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6},
-            {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_homunculus", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": "1 per Alchemist"},
-            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0}
+            {"id": "md_yuzbasicaptain", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
+            {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_azebs", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_azebsskirmisher", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_sultanatesapper", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel"]},
+            {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
+            {"id": "md_janissaries", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6, "equipment": []},
+            {"id": "md_brazenbull", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_homunculus", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": []},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"]}
         ]
     },
     {
@@ -447,22 +447,22 @@
             {"id": "eq_greatbannerofnewantioch", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
-            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_trenchcleric", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_yeomantrenchmole", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5},
-            {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
-            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0},
-            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1},
-            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
+            {"id": "md_trenchcleric", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
+            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"]},
+            {"id": "md_yeomantrenchmole", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_boltactionrifle"]},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": []},
+            {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel"]},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"]},
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"]},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"]},
+            {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_combathelmet","eq_wargavel"]},
+            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"]},
+            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"]},
+            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"]}
         ]
     },
     {
@@ -574,14 +574,14 @@
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models": [
-            {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_plagueknight", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_corpseguard", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2},
-            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 3},
-            {"id": "md_grailthrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0},
-            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4},
-            {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1},
-            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1}
+            {"id": "md_lordoftumours", "cost": 130, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
+            {"id": "md_plagueknight", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_corpseguard", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
+            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": []},
+            {"id": "md_grailthrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
+            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": []},
+            {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_tenderizermaul"]}
         ]
     }
 ]

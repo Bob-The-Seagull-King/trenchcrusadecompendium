@@ -212,6 +212,31 @@ const MemberAddEquipDisplay = (props: any) => {
         updateKey(_key+1)
     }
 
+    function FilterByModelType(value : string) {
+        let i = 0;
+        let HasModel = false;
+        let ModelMatch = false;
+        for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
+            if (value == WarbandItem.Faction.Equipment[i].ID) {  
+                let j = 0;
+                for (j = 0; j < WarbandItem.Faction.Equipment[i].Restrictions.length ; j++) {
+                    if (WarbandItem.Faction.Equipment[i].Restrictions[j].type == "model") {
+                        console.log(value);
+                        HasModel = true;
+                        if (WarbandItem.Faction.Equipment[i].Restrictions[j].val == Member.Model.ID) {
+                            ModelMatch = true;
+                        }
+                    }
+                }
+            }
+        }
+        console.log(HasModel)
+        if (HasModel) {
+            return ModelMatch;
+        }
+        return true;
+    }
+
     // ----------------------------------------------------------
 
     return (
@@ -261,7 +286,7 @@ const MemberAddEquipDisplay = (props: any) => {
                                         <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
                                             <option key="modeloption" value="[No Model Selected]">[No Item Selected]</option>
                                             {_limitfaction &&
-                                            <>{WarbandItem.Faction.Equipment.map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
+                                            <>{WarbandItem.Faction.Equipment.filter(value => FilterByModelType(value.ID)).map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
                                             }
                                             {!_limitfaction &&
                                             <>{Manager.Equipment.map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>

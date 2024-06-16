@@ -7,7 +7,8 @@ interface IModelFactionList {
     cost: number,
     cost_id: string,
     limit_min: number,
-    limit_max: number
+    limit_max: number,
+    equipment: string[]
 }
 
 class FactionModel {
@@ -17,6 +18,7 @@ class FactionModel {
     public readonly LimitMin;
     public readonly LimitMax;
     public readonly Object : PlayerModel;
+    public readonly Equipment;
 
     public constructor(data: IModelFactionList) {
         this.ID = data.id;
@@ -24,7 +26,7 @@ class FactionModel {
         this.CostID = data.cost_id;
         this.LimitMin = data.limit_min;
         this.LimitMax = data.limit_max;
-
+        this.Equipment = data.equipment;
         this.Object = ModelFactory.CreateModel((Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: this.ID}})));
     }
 
