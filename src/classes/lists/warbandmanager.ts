@@ -558,6 +558,19 @@ class WarbandManager {
             rowMarker = ModelRow.length + 1;
         }
 
+        const UpgradeSet = [];
+        let upgradelengthcheck = 0
+        for (i = 0 ; i < _model.Upgrades.length ; i ++) {
+            upgradelengthcheck = lengthMarker-((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "").length)
+            UpgradeSet.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + (" ".repeat((upgradelengthcheck > 0)? upgradelengthcheck : 0)) + " | " + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID);
+        }
+
+        for (i = 0; i < UpgradeSet.length; i ++) {
+            if (UpgradeSet[i].length > rowMarker) {
+                rowMarker = UpgradeSet[i].length;
+            }
+        }
+
         const RangedSet = [];
         const MeleeSet = [];
         const ArmourSet = [];
@@ -617,6 +630,14 @@ class WarbandManager {
         if (_notes) {
             if (_model.Notes.trim().length > 0) {
             returnString += "\n" + "[ NOTES ]" + "\n" + _model.Notes
+            }
+        }
+
+        returnString += "\n" + "[ UPGRADES ]"
+
+        if (UpgradeSet.length > 0) {
+            for (i = 0; i < UpgradeSet.length; i++) {
+                returnString += "\n" + "  " + UpgradeSet[i]
             }
         }
 
@@ -740,14 +761,24 @@ class WarbandManager {
         let i = 0;
 
         const Equipment = [];
+        const Upgrades = [];
         
         for (i = 0 ; i < _model.Equipment.length ; i ++) {
             Equipment.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + " (" + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType + ")");
+        }
+        
+        for (i = 0 ; i < _model.Upgrades.length ; i ++) {
+            Upgrades.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + " (" + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID + ")");
         }
 
         for (i = 0; i < Equipment.length; i ++) {
             if (Equipment[i].length > rowMarker) {
                 rowMarker = Equipment[i].length;
+            }
+        }
+        for (i = 0; i < Upgrades.length; i ++) {
+            if (Upgrades[i].length > rowMarker) {
+                rowMarker = Upgrades[i].length;
             }
         }
 
@@ -762,6 +793,12 @@ class WarbandManager {
         let returnString = (_inside? "" : ("```" + ("\n"))  )
 
         returnString += (FirstRow)
+
+        if (Upgrades.length > 0) {
+            for (i = 0; i < Equipment.length; i++) {
+                returnString += "\n" + "-" + Equipment[i]
+            }
+        }
 
         if (Equipment.length > 0) {
             for (i = 0; i < Equipment.length; i++) {
