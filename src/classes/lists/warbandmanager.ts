@@ -193,9 +193,12 @@ class WarbandManager {
 
                 for (i = 0; i < _warband.Faction.Models.length; i++) {
                     if (ContentNew.Model.ID == _warband.Faction.Models[i].ID) {
-                        let j = 0
-                        for (j = 0; j < _warband.Faction.Models[i].Equipment.length; j++) {
-                            const msg = this.NewEquipmentForMember(ContentNew, _warband.Faction.Models[i].Equipment[j], "0", "ducats")
+                        if (_warband.Faction.Models[i].Equipment != undefined) {
+                            // Temp
+                            let j = 0
+                            for (j = 0; j < _warband.Faction.Models[i].Equipment.length; j++) {
+                                const msg = this.NewEquipmentForMember(ContentNew, _warband.Faction.Models[i].Equipment[j], "0", "ducats")
+                            }
                         }
                     }
                 }
