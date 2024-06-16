@@ -16,6 +16,7 @@ import quickrulesdata from '../data/references/quickrules.json'
 import genDeeds from '../data/scenarios/gen_deeds.json'
 import genDeployment from '../data/scenarios/gen_deployment.json'
 import genScenario from '../data/scenarios/gen_scenario.json'
+import upgradedata from '../data/player/upgrades.json'
 // -----------------------------------------------------
 
 /**
@@ -111,6 +112,9 @@ class DataResponder {
             }
             case "quickrules": {
                 return quickrulesdata.concat(data)
+            }
+            case "upgrade": {
+                return upgradedata.concat(data)
             }
             case "genDeed": {
                 return genDeeds.concat(data)

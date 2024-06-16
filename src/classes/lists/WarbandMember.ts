@@ -3,6 +3,7 @@ import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { IListItem, ListItem } from "../feature/list/ListItem"
 import { IItemPartial } from "../feature/list/ListGroup"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
+import { IFactionUpgrade, FactionUpgrade } from "../feature/factions/FactionUpgrade"
 
 interface IWarbandMember {
     name: string,
@@ -12,7 +13,8 @@ interface IWarbandMember {
     injuries: IListItem[],
     skills: IItemPartial[],
     experience: number,
-    notes : string
+    notes : string,
+    upgrades : IFactionUpgrade[]
 }
 
 class WarbandMember {
@@ -24,6 +26,7 @@ class WarbandMember {
     public Equipment;
     public Injuries;
     public Skills;
+    public Upgrades;
 
     public Experience;
     
@@ -37,6 +40,7 @@ class WarbandMember {
         this.Model = this.ModelMaker(data.model);
         this.Equipment = this.EquipmentMaker(data.equipment);
         this.Injuries = this.InjuryMaker(data.injuries);
+        this.Upgrades = this.UpgradeMaker(data.upgrades);
         this.Skills = data.skills;
         this.Notes = data.notes
     }
@@ -53,6 +57,18 @@ class WarbandMember {
         return InjuryList;
     }
 
+    private UpgradeMaker(_data : IFactionUpgrade[]) {
+        const upgradelist : FactionUpgrade[] = [];
+        let i = 0
+
+        for (i = 0; i < _data.length ; i ++) {
+            const upgradetemp = new FactionUpgrade(_data[i])
+            upgradelist.push(upgradetemp)
+        }
+
+        return upgradelist;
+    }
+
     public GetDucatCost() {
         let totalCost = 0;
 
@@ -64,6 +80,11 @@ class WarbandMember {
         for (i = 0; i < this.Equipment.length; i++) {
             if (this.Equipment[i].CostType == "ducats") {
                 totalCost += this.Equipment[i].Cost;
+            }
+        }
+        for (i = 0; i < this.Upgrades.length; i++) {
+            if (this.Upgrades[i].CostID == "ducats") {
+                totalCost += this.Upgrades[i].Cost;
             }
         }
 
@@ -81,6 +102,11 @@ class WarbandMember {
         for (i = 0; i < this.Equipment.length; i++) {
             if (this.Equipment[i].CostType == "glory") {
                 totalCost += this.Equipment[i].Cost;
+            }
+        }
+        for (i = 0; i < this.Upgrades.length; i++) {
+            if (this.Upgrades[i].CostID == "glory") {
+                totalCost += this.Upgrades[i].Cost;
             }
         }
 

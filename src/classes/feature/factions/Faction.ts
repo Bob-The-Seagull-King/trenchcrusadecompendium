@@ -50,7 +50,7 @@ class PlayerFaction extends TrenchCrusadeItem {
         data.sort(byPropertiesOf<IModelFactionList>(['id']))
         let i = 0;
         for (i = 0; i < data.length; i++) {
-            console.log(data[i])
+            
             const tempAD = new FactionModel(data[i]);
             ruleslist.push(tempAD);
         }

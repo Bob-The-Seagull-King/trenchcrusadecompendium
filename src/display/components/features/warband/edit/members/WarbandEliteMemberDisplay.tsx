@@ -23,6 +23,8 @@ import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
 import MemberEditScarsDisplay from './MemberEditScarsDisplay';
+import MemberAddUpgradeDisplay from './MemberAddUpgradeDisplay.';
+import ModelUpgradeDisplay from './MemberUpgradeDisplay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
@@ -231,6 +233,60 @@ const WarbandEliteMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    function returnUpgrades() {
+        return (
+            <>
+                <div className="row" style={{width:"100%"}}>
+                    <div className="col-12">
+                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
+                        <Masonry gutter="20px">
+                            {returnUpgradeTypeList("ranged")}
+                        </Masonry>
+                    </ResponsiveMasonry>
+                    </div>
+                </div>
+                <div className="verticalspacerbig"/>
+                <div className="row">
+                    <MemberAddUpgradeDisplay member={WarbandMember} data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                </div>
+            </>
+        )
+    }
+    
+    function returnUpgradeTypeList(type: string) {
+        return (
+            <div className="col-12" style={{width:"100%"}}>
+                {WarbandMember.Upgrades.length > 0 &&
+                <>
+            <div className="row" style={{width:"100%"}}>
+
+                        <div className="col-5">
+                            <div className="equiptitle">Name</div>
+                        </div>
+                        <div className="col-3">
+                            <div className="equiptitle">Cost</div>
+                        </div>
+                        <div className="col-2">
+                            <div className="equiptitle">Toss</div>
+                        </div>
+                        <div className="col-2">
+                            <div className="equiptitle">Resell</div>
+                        </div>
+            </div>
+            <div className="row" style={{width:"100%"}}>
+                {WarbandMember.Upgrades.map((item) => (
+                    <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                        <ModelUpgradeDisplay data={item} warband={WarbandItem} member={WarbandMember} updater={UpdateFunction} manager={Manager} />
+                    </div>
+                ))}
+            </div>
+            </>
+            }
+            </div>
+        )
+    }
+    
+
     function returnButtons() {
         return (
             <>
@@ -298,6 +354,14 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 <div className="verticalspacer"/>
                 <div>
                     {returnStats()}
+                </div>
+                <div className="verticalspacer"/>
+                <div>
+                    <div className="separator">Upgrades</div>
+                </div> 
+                <div className="verticalspacer"/>
+                <div>
+                    {returnUpgrades()}
                 </div>
                 <div className="verticalspacer"/>
                 <div>

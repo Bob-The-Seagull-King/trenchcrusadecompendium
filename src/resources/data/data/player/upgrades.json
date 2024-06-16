@@ -1,19 +1,13 @@
 [
     {
-        "id": "up_",
+        "id": "up_heretictroopertolegionnare",
         "type": "Upgrade",
-        "source": "core",
-        "tags": [
-                ],
-        "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticpriest",
-        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
-        "name": "",
+        "name": "Heretic Legionnare",
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "",
-                            "glossary": [{"val": "", "id": ""}]
+                            "content": "Add +1 DICE to either the ranged or melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
     }
