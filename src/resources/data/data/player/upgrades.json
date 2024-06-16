@@ -1,12 +1,24 @@
 [
     {
-        "id": "up_heretictroopertolegionnare",
+        "id": "up_heretictroopertolegionnareranged",
         "type": "Upgrade",
         "name": "Heretic Legionnare",
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add +1 DICE to either the ranged or melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "content": "Add +1 DICE to either the ranged characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_heretictroopertolegionnaremelee",
+        "type": "Upgrade",
+        "name": "Heretic Legionnare",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to either the melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
