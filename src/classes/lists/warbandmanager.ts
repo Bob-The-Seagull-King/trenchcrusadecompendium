@@ -32,13 +32,65 @@ class WarbandManager {
 
     constructor() {
         const ReturnData = GrabWarband();
-        this.WarbandList = ReturnData;
         this.FindFactions();
         this.FindModels();
         this.FindEquipment();
         this.FindSkills();
         this.FindInjuries();
         this.FindUpgrades();
+        this.WarbandList = this.UpdateWarbands(ReturnData);
+    }
+
+    UpdateWarbands(data: Warband[]) {
+        const listofbands: Warband[] = [];
+
+        let i = 0;
+        for (i = 0; i < data.length; i ++) {
+            const factionid = data[i].Faction.ID;
+            let j = 0;
+            for (j = 0; j < this.Factions.length; j ++) {
+                if (this.Factions[j].ID == factionid) {
+                    data[i].Faction = this.Factions[j];
+                    break;
+                }
+            }
+            for (j = 0; j < data[i].Members.length; j++) {
+                const modelid = data[i].Members[j].Model.ID;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Models.length; k++) {
+                    if (this.Models[k].ID == modelid) {
+                        modelval = this.Models[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Members[j].Model.Object = modelval;
+                } else {
+                    this.DeleteModelFromWarband(data[i].Members[j], data[i]);
+                }
+            }
+            for (j = 0; j < data[i].Armoury.length; j++) {
+                const modelid = data[i].Armoury[j].Object.ID;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Equipment.length; k++) {
+                    if (this.Equipment[k].ID == modelid) {
+                        modelval = this.Equipment[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Armoury[j].Object = modelval;
+                } else {
+                    this.DeleteEquipmentFromWarband(data[i].Armoury[j], data[i]);
+                }
+            }
+            listofbands.push(data[i]);
+        }
+
+
+        return listofbands;
     }
 
     /**

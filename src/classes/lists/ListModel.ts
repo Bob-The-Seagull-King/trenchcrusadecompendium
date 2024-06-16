@@ -12,7 +12,7 @@ class ListModel {
     public readonly ID;
     public readonly Cost;
     public readonly CostType;
-    public readonly Object : PlayerModel;
+    public Object : PlayerModel;
 
     public constructor(data: IListModel) {
         this.ID = data.id;

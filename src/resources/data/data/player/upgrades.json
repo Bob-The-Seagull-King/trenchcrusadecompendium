@@ -2,7 +2,7 @@
     {
         "id": "up_heretictroopertolegionnareranged",
         "type": "Upgrade",
-        "name": "Heretic Legionnare",
+        "name": "Heretic Legionnare Ranged",
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -14,7 +14,7 @@
     {
         "id": "up_heretictroopertolegionnaremelee",
         "type": "Upgrade",
-        "name": "Heretic Legionnare",
+        "name": "Heretic Legionnare Melee",
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
