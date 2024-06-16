@@ -1,5 +1,20 @@
 [
     {
+        "id": "eq_miscitem",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Misc Item",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Use this item to represent any cost given to a model that does not directly correlate to an existing piece of equipment.",
+        "modifiers": [],
+        "description":  [
+                        ]
+    },
+    {
         "id": "eq_boltactionrifle",
         "type": "Equipment",
         "source": "core",

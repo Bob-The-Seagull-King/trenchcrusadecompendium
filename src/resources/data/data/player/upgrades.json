@@ -1,0 +1,20 @@
+[
+    {
+        "id": "up_",
+        "type": "Upgrade",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "model_id": "md_hereticpriest",
+        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
+        "name": "",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "",
+                            "glossary": [{"val": "", "id": ""}]
+                        }
+                        ]
+    }
+]
