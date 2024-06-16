@@ -2948,5 +2948,58 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "eq_elixerofalkhidr",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Elixer Of Al-Khidr",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This extraordinary creation of the House of Wisdom. It is said that within its Gardens is the hidden Fountain of Life that is used as an ingredient of this powerful Alchemical formula.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Gives the model consuming the Elixir Keyword TOUGH for the duration of a single battle.",
+                        "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_fireshield",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Fire Shield",
+        "equip_type": null,
+        "range": null,
+        "blurb": "An Invention of the al-Jazari School of engineering school within the House of Wisdom, this shield is treated with an Alchemical formula, making it highly resistant to fire weapons. It has proven its value in many desperate battles against the flame-wielding Heretics.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Always takes one hand to use in both melee and in ranged combat. Grants -1 to all Injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on Injury Rolls and will not cause an additional BLOOD MARKER.",
+                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    }
+                ]
+            }
+        ]
     }
 ]
