@@ -868,6 +868,7 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_catherinewheel"},
             {"tag_name": "addons", "val": "ab_bonebreakermace"},
+            {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_pilgrimfear"},
             {"tag_name": "addons", "val": "ab_brokenonthewheel"}
                     ],
