@@ -795,8 +795,8 @@ class WarbandManager {
         returnString += (FirstRow)
 
         if (Upgrades.length > 0) {
-            for (i = 0; i < Equipment.length; i++) {
-                returnString += "\n" + "-" + Equipment[i]
+            for (i = 0; i < Upgrades.length; i++) {
+                returnString += "\n" + "-" + Upgrades[i]
             }
         }
 
