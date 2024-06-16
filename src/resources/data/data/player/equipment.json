@@ -1464,6 +1464,58 @@
             ]
     },
     {
+        "id": "eq_carnyx",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Carnyx",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Carnyx causes FEAR.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_bagpipes",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Bagpipes",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Bagpipes renders allies within 8\" immune to FEAR.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
         "id": "eq_martyrdompills",
         "type": "Equipment",
         "source": "core",
@@ -1484,32 +1536,6 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result.",
                             "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FEAR", "id": "gl_fear"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_martyrdomdevice",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Martyrdom Device",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
-                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
                 }
@@ -2260,84 +2286,6 @@
             ]
     },
     {
-        "id": "eq_artofassassinationhallucinogendisguise",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Hallucinogen Disguise",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability. ",
-                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_artofassassinationthunderboltofalumat",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Thunderbolt of Alumat",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs. ",
-                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_artofassassinationmirageoftime",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Mirage of Time",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit. ",
-                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
         "id": "eq_damascusarmour",
         "type": "Equipment",
         "source": "core",
@@ -2865,32 +2813,6 @@
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                         "content": " The Model gains an ACTION which can be used to bestow 1 BLESS MARKER (if successful) to any model within 12”. A model with the book of Battle Prayers must always reserve one hand to carry the book, and may not Dash, as they must maintain their continuous litany of Prayers.",
                         "glossary": [{"val": "1 BLESS MARKER", "id": "gl_blessingmarker"},{"val": "ACTION", "id": "gl_action"}]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "id": "eq_fianna",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Fianna Upgrade",
-        "equip_type": null,
-        "range": null,
-        "blurb": "Any Shocktroopers in an Eire Warband can be made a member of Fianna, the famed warrior-hunters.",
-        "modifiers": [],
-        "description":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Rule:",
-                "subcontent": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The Model gains the SKIRMISHER and INFILTRATOR keywords",
-                        "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"},{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
                     }
                 ]
             }

@@ -653,24 +653,6 @@
         ]
     },
     {
-        "id": "ab_martyrdomdevice",
-        "type": "Addon",
-        "source": "core",
-        "tags": [
-                ],
-        "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_ecclesiasticprisoner",
-        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
-        "name": "Martyrdom Device",
-        "description":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
-                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
-            }
-        ]
-    },
-    {
         "id": "ab_maddash",
         "type": "Addon",
         "source": "core",

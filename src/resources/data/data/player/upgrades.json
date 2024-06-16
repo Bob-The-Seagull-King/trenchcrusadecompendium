@@ -6,7 +6,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add +1 DICE to either the ranged characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "content": "Add +1 DICE to the ranged characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
@@ -18,9 +18,177 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add +1 DICE to either the melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "content": "Add +1 DICE to the melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
+    },
+    {
+        "id": "up_martyrdomdevice",
+        "type": "Upgrade",
+        "name": "Martyrdom Device",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "up_trenchpilgrimressurection",
+        "type": "Upgrade",
+        "name": "Ressurection",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to the melee characteristic of the model. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_azebskirmisher",
+        "type": "Upgrade",
+        "name": "Skirmisher",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
+                "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
+            }
+        ]
+    },
+    {
+        "id": "up_machinearmour",
+        "type": "Upgrade",
+        "name": "Machine Armour",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Replace your existing armour with Heavy Armour, which provides a -3 to injury rolls. While wearing this armour the wearer cannot take any DASH ACTIONS.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "up_trenchmole",
+        "type": "Upgrade",
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model gains the INFILTRATOR keyword. A maximum of two Yeomen can be upgraded into Trench Moles. An infiltrator can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_infiltratornaval",
+        "type": "Upgrade",
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model gains the INFILTRATOR keyword. A maximum of three models can be upgraded into Trench Moles. An infiltrator can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_artofassassinationhallucinogendisguise",
+        "type": "Upgrade",
+        "name": "Hallucinogen Disguise",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability. ",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_artofassassinationthunderboltofalumat",
+        "type": "Upgrade",
+        "name": "Thunderbolt of Alumat",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs. ",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_artofassassinationmirageoftime",
+        "type": "Upgrade",
+        "name": "Mirage of Time",
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                    "content": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit. ",
+                    "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                }
+            ]
+    },
+    {
+        "id": "up_swissguard",
+        "type": "Upgrade",
+        "name": "Swiss Guard",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model is immune to the effects of FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+            ]
+    },
+    {
+        "id": "up_fianna",
+        "type": "Upgrade",
+        "name": "Fianna",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains the keywords SKIRMISHER and INFILTRATOR.",
+                "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"},{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_berserker",
+        "type": "Upgrade",
+        "name": "Berserker",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+            ]
+    },
+    {
+        "id": "up_forwardposition",
+        "type": "Upgrade",
+        "name": "Forward Position",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model gains the INFILTRATOR keyword. Up to two shocktroopers can have this upgrade.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_rapidassault",
+        "type": "Upgrade",
+        "name": "Rapid Assault",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model adds +1 DICE to any of their DASH ACTIONs.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
     }
 ]
