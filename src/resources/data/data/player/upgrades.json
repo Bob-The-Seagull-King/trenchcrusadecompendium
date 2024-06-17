@@ -422,7 +422,7 @@
     {
         "id": "up_alchemistsecretsphilosiphypoetryandtheology",
         "type": "Upgrade",
-        "name": "Chemistry and Alchemy",
+        "name": "Philosophy Poetry and Theology",
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

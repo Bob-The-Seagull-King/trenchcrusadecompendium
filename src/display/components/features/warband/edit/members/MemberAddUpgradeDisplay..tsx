@@ -99,12 +99,13 @@ const MemberAddUpgradeDisplay = (props: any) => {
                 if (WarbandItem.Faction.Models[i].ID == Member.Model.ID) {
                     let j = 0;
                     for (j = 0; j < WarbandItem.Faction.Models[i].Upgrades.length; j++) {
-                        temp = (WarbandItem.Faction.Models[i].Upgrades[j])
-                        break;
+                        if (WarbandItem.Faction.Models[i].Upgrades[j].ID == (NewMemberModel)) {
+                            temp = (WarbandItem.Faction.Models[i].Upgrades[j])
+                            break;
+                        }
                     }
                 }
             }
-                
             if (temp != null) {
                 if (costRef.current != null) {
                     costRef.current.value = temp.Cost.toString();
