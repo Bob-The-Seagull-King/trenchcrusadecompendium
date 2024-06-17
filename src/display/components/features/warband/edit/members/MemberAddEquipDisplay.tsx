@@ -227,6 +227,19 @@ const MemberAddEquipDisplay = (props: any) => {
                             ModelMatch = true;
                         }
                     }
+                    if (WarbandItem.Faction.Equipment[i].Restrictions[j].type == "keyword") {
+                        HasModel = true;
+                        let k = 0;
+                        if ((Member.Model.Object.Tags != undefined) && (Member.Model.Object.Tags != null)){
+                            for (k = 0; k < (Member.Model.Object.Tags? Member.Model.Object.Tags.length : 0); k++) {
+                                const tag: any = Member.Model.Object.Tags[k]
+                                console.log(tag);
+                                if ((tag.tag_name.toUpperCase()) == WarbandItem.Faction.Equipment[i].Restrictions[j].val.toString().toUpperCase()) {
+                                    ModelMatch = true;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
