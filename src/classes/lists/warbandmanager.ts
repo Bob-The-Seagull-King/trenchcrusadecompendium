@@ -19,7 +19,7 @@ import { IListModel } from './ListModel';
 import { IListEquipment, ListEquipment } from './ListEquipment';
 import { IItemPartial } from '../../classes/feature/list/ListGroup';
 import { IListItem, ListItem } from '../../classes/feature/list/ListItem';
-import { FactionUpgrade, IFactionUpgrade } from '../../classes/feature/factions/FactionUpgrade';
+import { FactionUpgrade, IFactionUpgrade, IUpgradeData } from '../../classes/feature/factions/FactionUpgrade';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -101,7 +101,7 @@ class WarbandManager {
        this.Factions = [];
        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "faction"}});
        let i = 0;
-       dataresults.sort(byPropertiesOf<PlayerFaction>(['Name']))
+       dataresults.sort(byPropertiesOf<IPlayerFaction>(['name']))
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = FactionFactory.CreateFactory(dataresults[i]);
            this.Factions.push(modelNew);
@@ -117,7 +117,7 @@ class WarbandManager {
        this.Models = [];
        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "models"}});
        let i = 0;
-       dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
+       dataresults.sort(byPropertiesOf<IPlayerModel>(['name']))
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = ModelFactory.CreateModel(dataresults[i]);
            this.Models.push(modelNew);
@@ -132,7 +132,7 @@ class WarbandManager {
        this.Upgrades = [];
        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "upgrade"}});
        let i = 0;
-       dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
+       dataresults.sort(byPropertiesOf<IUpgradeData>(['name']))
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = new FactionUpgrade(dataresults[i]);
            this.Upgrades.push(modelNew);
@@ -162,7 +162,7 @@ class WarbandManager {
        this.Injuries = [];
        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "injuries"}});
        let i = 0;
-       dataresults.sort(byPropertiesOf<ListItem>(['Name']))
+       dataresults.sort(byPropertiesOf<IListItem>(['name']))
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = new ListItem(dataresults[i]);
            this.Injuries.push(modelNew);
@@ -177,7 +177,7 @@ class WarbandManager {
         this.Equipment = [];
         const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "equipment"}});
         let i = 0;
-        dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
+        dataresults.sort(byPropertiesOf<IPlayerEquipment>(['name']))
         for (i = 0; i < dataresults.length; i++) {
             const modelNew = EquipmentFactory.CreateFactory(dataresults[i]);
             this.Equipment.push(modelNew);

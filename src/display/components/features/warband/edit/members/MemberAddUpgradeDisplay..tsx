@@ -35,60 +35,12 @@ const MemberAddUpgradeDisplay = (props: any) => {
     let isDucats = true;
     let isGlory = false;
     
-    const restrictionRef = useRef<HTMLInputElement>(null);
     const modelRef = useRef<HTMLSelectElement>(null);
     const costRef = useRef<HTMLInputElement>(null);
     const costTypeDucatRef = useRef<HTMLInputElement>(null);
     const costTypeGloryRef = useRef<HTMLInputElement>(null);
+    const factionlimitcheck = useRef<HTMLInputElement>(null);
 
-    
-    function getRestrictionList(model : ListEquipment) {
-        let rstrctnlst = "";
-
-        let i = 0;
-
-        let ModelEquip : any = null;
-        
-        for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
-            if (WarbandItem.Faction.Equipment[i].ID == model.ID) {
-                ModelEquip = WarbandItem.Faction.Equipment[i]
-            }
-        }
-
-        if (ModelEquip != null) {
-        if (ModelEquip.Limit > 0) {
-            rstrctnlst += "LIMIT: " + ModelEquip.Limit;
-            if (ModelEquip.Restrictions.length > 0) {
-                rstrctnlst += ", "
-            }
-        }
-
-        let i = 0;
-        for (i = 0; i < ModelEquip.Restrictions.length; i++) {
-            if ( i > 0) {
-                rstrctnlst += ", "
-            }
-            if (ModelEquip.Restrictions[i].type == "keyword") {
-                rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
-            } else if (ModelEquip.Restrictions[i].type == "model") {
-                rstrctnlst += getModelName(ModelEquip.Restrictions[i].val.toString());
-            } else {
-                rstrctnlst += ModelEquip.Restrictions[i].val.toString()
-            }
-        }
-    }
-
-        if (rstrctnlst == "") {
-            rstrctnlst = "-"
-        }
-
-        return rstrctnlst;
-    }
-    
-    function getModelName(md : string) {
-        const modelFound = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: md}}));
-        return modelFound.name;
-    }
 
     function updateModel(value: string) {
         NewMemberModel = value;
@@ -124,9 +76,6 @@ const MemberAddUpgradeDisplay = (props: any) => {
                     isGlory = (true);
                     isDucats = (false);
                 }
-                if (restrictionRef.current != null) {
-                    restrictionRef.current.value = "Restrictions : " + getRestrictionList(temp);
-                }
 
             }
         }
@@ -155,9 +104,6 @@ const MemberAddUpgradeDisplay = (props: any) => {
             UpdateFunction(Manager.GetWarbandByName(WarbandItem.Name))
         }
         ItemRecall();
-        if (restrictionRef.current != null) {
-            restrictionRef.current.value = "";
-        }
         if (costRef.current != null) {
             costRef.current.value = "0";
         }
@@ -169,6 +115,9 @@ const MemberAddUpgradeDisplay = (props: any) => {
         }
         if (costTypeGloryRef.current != null) {
             costTypeGloryRef.current.value = "off";
+        }
+        if (factionlimitcheck.current != null) {
+            factionlimitcheck.current.checked = true;
         }
         handleCloseNewModel()
         UpdateFunction(Manager.GetWarbandByName(WarbandItem.Name))
@@ -224,6 +173,10 @@ const MemberAddUpgradeDisplay = (props: any) => {
         return upgradeList;
     }
 
+    function updateFactionLimit() {
+        returnLimitFaction(!_limitfaction)
+    }
+
     // ----------------------------------------------------------
 
     return (
@@ -268,14 +221,22 @@ const MemberAddUpgradeDisplay = (props: any) => {
                         <div className="col-12" >
 
                             <div className="row">
-                                <div className="col-md-12 col-12">
+                                <div className="col-md-8 col-6">
                                     <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                         <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
                                             <option key="modeloption" value="[No Model Selected]">[No Item Selected]</option>
-                                            
+                                            {_limitfaction &&
                                             <>{ReturnUpgradeList().map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
-                                            
+                                            }
+                                            {!_limitfaction &&
+                                            <>{Manager.Upgrades.map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
+                                            }
                                         </Form.Control>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Model Only" defaultChecked={true}/>
                                     </InputGroup>
                                 </div>
                             </div>
@@ -307,13 +268,7 @@ const MemberAddUpgradeDisplay = (props: any) => {
                             <div className="verticalspacer"/>
 
                             <div className="row">
-                                <div className="col-md-8 col-lg-8 col-6"> {/* Add Member */}
-                                    
-                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                        <Form.Control ref={restrictionRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Restrictions : -"}/>
-                                    </InputGroup>
-                                </div>
-                                <div className="col-md-4 col-lg-4 col-6"> {/* Add Member */}
+                                <div className="col-md-12 col-lg-12 col-12"> {/* Add Member */}
                                     <div className="generalbuttonbox hovermouse" onClick={() => NewMember()} style={{width:"100%",alignItems:"center",height:"2em",borderRadius:"0em"}}>
                                         <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}}  className=" ">
                                             <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext" style={{fontSize:"1.25em"}}/>

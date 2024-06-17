@@ -55,4 +55,4 @@ class FactionUpgrade {
     }
 
 }
-export {IFactionUpgrade, FactionUpgrade}
+export {IFactionUpgrade, FactionUpgrade, IUpgradeData}
