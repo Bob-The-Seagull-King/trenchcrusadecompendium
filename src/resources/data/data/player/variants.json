@@ -45,13 +45,20 @@
         ],
         "removed_rules": [],
         "removed_equip": [],
-        "removed_model": ["md_warwolfassaultbeast","md_anointedheavyinfantry","md_artillerywitch"],
+        "removed_model": ["md_warwolfassaultbeast","md_anointedheavyinfantry","md_artillerywitch","md_heretictrooper","md_goeticwarlock","md_wardog","md_guarddog","md_mercydog","md_hellhound","md_sineater"],
         "equipment": [
             {"id": "eq_submachinegun", "cost": 25, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "", "val": ""}]}
         ],
         "models" : [
-            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
-            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []}
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_swordaxe","eq_swordaxe  "], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_tenderizermaul"], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_heretictroopertolegionnareranged", "cost": 10, "cost_id": "ducats"},{"id": "up_heretictroopertolegionnaremelee", "cost": 10, "cost_id": "ducats"},{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]}
         ]
     },
     {
@@ -261,9 +268,9 @@
             {"id": "eq_coinhammer", "cost": 25, "cost_id": "ducats", "limit": 2, "restriction": []}
         ],
         "models" : [
-            {"id": "md_hereticpriest_fv_knightsofavarice", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
-            {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_goeticwarlock", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []}
+            {"id": "md_hereticpriest_fv_knightsofavarice", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_artillerywitch_fv_knightsofavarice", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_goeticwarlock", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_swordaxe","eq_swordaxe"], "upgrades": []}
         ]
     },
     {
@@ -378,15 +385,16 @@
         ],
         "removed_rules": [],
         "removed_equip": [],
-        "removed_model": ["md_communicant","md_ecclesiasticprisoner","md_warprophet"],
+        "removed_model": ["md_communicant","md_ecclesiasticprisoner","md_warprophet","md_trenchpilgrim"],
         "equipment": [
             {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_sacrificiallamb", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []}
         ],
         "models" : [
-            {"id": "md_communicant", "cost": 120, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
-            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []}
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
+            {"id": "md_communicant", "cost": 120, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_martyrdomdevice", "cost": 35, "cost_id": "ducats"}]},
+            {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
     }  ,
     {
@@ -488,19 +496,167 @@
         "equipment": [
             {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
             {"id": "eq_bowofalumat", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
-            {"id": "eq_hashashinleaf", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_artofassassinationmirageoftime", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []}
+            {"id": "eq_hashashinleaf", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []}
         ],
         "models" : [
-            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
-            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": []},
-            {"id": "md_assassinacolyteskirmisher", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": []},
-            {"id": "md_dervish", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": []}
+            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": [{"id": "up_azebskirmisher", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_dervish", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": []}
         ]
-    }  ,
+    },
+    {
+        "id": "fv_houseofwisdom",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""}
+                ],
+        "faction_id": "fc_ironsultanate",
+        "name": "The House Of Wisdom",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "'Read in the name of thy Lord and Cherisher, Who Created man, out of a clot of congealed blood: Proclaim! And thy Lord is Most Bountiful, He Who taught the pen, Taught man that which he knew not'"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "-Surah 96"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The House of Wisdom is the pre-eminent centre of learning within the Iron Sultanate. Its ibraries, workshops, forges, gardens of exotic and wondrous plants, hospitals, observatories are unmatched. Within its halls are mechanical marvels and weapons of far-off lands, as well as trophies captured by Sultan’s forces and brought to be examined by the learned scholars of the House of Wisdom. Philosophers and theologists debate in its chambers. Ghanzal and qaṣīda poets compose verses describing the beauty and pain of life. Thus it is no wonder that the House attracts the greatest minds of the age to study in its hallowed halls, from within the Sultanate and far beyond the Iron Wall."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In its laboratories guarded by the faithful Kavass, the Jabirean Alchemists dissect and study the War Beasts of Shaitans so their weaknesses can be laid bare and exploited by the Believers. At such times, their roars of rage and pain echo through the porphyry corridors of the House."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "To maintain a degree of independence regardless of the royal funding,The House of Wisdom performs many services for the Sultan's armies. Their best alchemists work with the Sultanate foundries where the Great Cannons of the Iron Wall are cast. Takwin creations are provided to bolster the army of Those Who Believe as are suits of armour and alchemical ammuntion. The House of Wisdom also maintains the Sultanate fleet of airships, which both guard the lands of Those Who Believe against enemy air forces and maintain vigil over lands under darkness. They make regular excursions deep into the enemy territory to witness whether the Great Sandstorm still covers the Two Holy Places, and then report the news back to the Sultan."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In exchange, the masters of the House of Wisdom have freedom despatch their own excursions and expeditions into the lands beyond the wall to seek tomes of knowledge lost in the dark and terrible days when forces of Jahannam overran much of the Levant and great cities fell like blossoms of a Jasmine flower in fiery heat. Sometimes they are journeys to capture an especially ferocious beast of the enemy. At other times they seek to capture or kill Heretic Alchemists which they see as an offence to their craft and threat to the entire world."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "These journeys are exceedingly dangerous and they are not undertaken lightly. Each Alchemist dispatched on such a journey is an irreplaceable loss, and since they operate under their own authority, they cannot expect direct support from the Sultan’s forces. Many noble Fāris Cavaliers have taken oaths to protect these scholars in their journeys, as well as their own Kavass bodyguards sworn to fight and die in defence of their Masters."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Weapons Collections:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Each Alchemist in your Warband can opt to buy one weapon from the Armoury of either New Antioch or Trench Pilgrims. You can acquire these weapons exactly as the warband they come from. Any of these items in question must not be already available to the Iron Sultanate Warband. All the same limitations of the original lists apply. They can be given to any model in your warband. If lost, they must be bought again.",
+                            "glossary":  []
+                        }
+
+                    ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Secrets Of The House Of Wisdom:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any Alchemist of the Warband may buy any one of the Secrets upgrades. You cannot have duplicates of these abilities in the Warband, as the House of Wisdom does not want to risk depleting the number of their scholars in a single discipline.",
+                                "subcontent":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Medicine (15 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to 2 BLOOD MARKERs or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
+                                                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectinomarker"}]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Cartography and Geometry (20 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "The Alchemist has studied long and hard the sciences of cartography and Geometry. In the beginning of each battle up to 2 models (besides any Alchemists) In the Warband gain the Keyword INFILTRATOR as long as they are on 32mm or a smaller base. In addition, the Warband may re-roll one Exploration dice in the Exploration phase if you wish. The second result stands.",
+                                                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Secrets of Tawkin (20 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If the Alchemist is hit while within 1” of their own Homunculi, you can choose to redirect the hit against the Homunculi instead. Determine the injuries exactly as if the weapon just hit the Homunculi",
+                                                "glossary": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Chemsitry and Alchemy (25 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "Before the battle starts but after all models (including INFILTRATORs) are deployed, you may place a rectangular elemental obstacle 2” wide and 6” long. It counts both as Difficult Terrain and Dangerous Terrain, and damage it causes has the Keyword FIRE, GAS or SHRAPNEL (chosen by the player at the start of the Battle). It cannot be placed within 6” of any model or on top of any other terrain.",
+                                                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Philosophy, Poetry, and Theology (20 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "The Alchemist is well-versed in the hidden truths of the universe and of the Divine and has a calm and clear mind. The Warband gains +1 DICE to all Morale Rolls, cannot become Shaken, and the Alchemist is immune to the effects of the Keyword FEAR.",
+                                                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "FEAR", "id": "gl_fear"}]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_alchemistarmour"],
+        "removed_model": ["md_jabireanalchemist","md_lionsofjabir","md_yuzbasicaptain","md_sultanateassassin","md_janissaries","md_homunculus"],
+        "equipment": [
+           {"id": "eq_alchemistarmour", "cost": 50, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+           {"id": "eq_elixerofalkhidr", "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": []} ,
+           {"id": "eq_fireshield", "cost": 10, "cost_id": "ducats", "limit": 3, "restriction": []}    
+        ],
+        "models" : [
+            {"id": "md_kavass", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_kavassmelee", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_faris", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6, "equipment": [], "upgrades": []},
+            {"id": "md_homunculus", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": [], "upgrades": [{"id": "up_homunculuswings", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculuselementalresistance", "cost": 40, "cost_id": "ducats"},{"id": "up_homunculusmassivesize", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculusenslavedmind", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculushumanhands", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusinhumanstrength", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusterrifyingappearance", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusadditionalarm", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculustwoheads", "cost": 5, "cost_id": "ducats"},{"id": "up_homunculushypnoticeyes", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculushawkeyes", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusstartlingspeed", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculussealofsolomon", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusgargantuansize", "cost": 20, "cost_id": "ducats"}]},
+            {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 1, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_alchemistsecretsmedicine", "cost": 15, "cost_id": "ducats"},{"id": "up_alchemistsecretscartographyandgeometry", "cost":20, "cost_id": "ducats"},{"id": "up_alchemistsecretssecretsoftawkin", "cost": 20, "cost_id": "ducats"},{"id": "up_alchemistsecretschemistryandalchemy", "cost": 25, "cost_id": "ducats"},{"id": "up_alchemistsecretsphilosiphypoetryandtheology", "cost": 20, "cost_id": "ducats"}]},
+            {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": []}
+        ]
+    },
     {
         "id": "fv_papalstatesinterventionforce",
         "type": "Variant",
@@ -577,13 +733,24 @@
         ],
         "removed_rules": [],
         "removed_equip": [],
-        "removed_model": ["md_trenchcleric","md_lieutenant"],
+        "removed_model": ["md_trenchcleric","md_lieutenant","md_yeoman","md_shocktroopers","md_combatengineer","md_mechanisedheavyinfantry","md_combatmedic","md_wardog","md_guarddog","md_mercydog","md_communicantantitankhunter","md_mendelistammomonk","md_observer"],
         "equipment": [
             {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
         ],
         "models" : [
-            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 1, "limit_max": 1},
-            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1}
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"},{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]}
         ]
     }  ,
     {
@@ -748,14 +915,15 @@
         ],
         "removed_rules": ["Fireteam"],
         "removed_equip": [],
-        "removed_model": ["md_trenchcleric","md_lieutenant","md_mechanisedheavyinfantry"],
+        "removed_model": ["md_trenchcleric","md_lieutenant","md_mechanisedheavyinfantry","md_shocktroopers"],
         "equipment": [
-            {"id": "eq_fianna", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_shocktroopers"}]}
+            {"id": "eq_carnyx", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models" : [
-            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_lieutenant_fv_eirerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"]}
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [{"id": "up_fianna", "cost": 15, "cost_id": "ducats"},{"id": "up_berserker", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_lieutenant_fv_eirerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_berserker", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
         ]
     }  ,
     {
@@ -866,7 +1034,7 @@
         ],
         "removed_rules": ["Fireteam"],
         "removed_equip": ["eq_submachinegun","eq_automaticpistol","eq_automaticshotgun","eq_machinegun","eq_grenadelauncher"],
-        "removed_model": ["md_sniperpriest","md_shocktroopers","md_mechanisedheavyinfantry"],
+        "removed_model": ["md_sniperpriest","md_shocktroopers","md_mechanisedheavyinfantry","md_yeoman","md_lieutenant"],
         "equipment": [
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 4, "restriction": []},
             {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []},
@@ -874,9 +1042,11 @@
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models" : [
-            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
-            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 2, "limit_max": 8, "equipment": []},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"]}
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_rapidassault", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "upgrades": []},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 2, "limit_max": 8, "equipment": [], "upgrades": [{"id": "up_forwardposition", "cost": 10, "cost_id": "ducats"},{"id": "up_rapidassault", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
         ]
     }  ,
     {
@@ -978,12 +1148,13 @@
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},
-            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
+            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_bagpipes", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Not ELITE"}]}
         ],
         "models" : [
-            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"]},
-            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []},
-            {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []}
+            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
     }  ,
     {
@@ -1034,11 +1205,11 @@
             {"id": "eq_urnofbitterashes", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models" : [
-            {"id": "md_executor", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": []},
-            {"id": "md_plagueknight_fv_dirgeofthegreathegemon", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": []},
-            {"id": "md_thebereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": []},
-            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": []}
+            {"id": "md_executor", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_plagueknight_fv_dirgeofthegreathegemon", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_thebereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
+            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
     }    
 ]

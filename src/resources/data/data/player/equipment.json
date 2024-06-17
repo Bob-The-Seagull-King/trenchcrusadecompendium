@@ -1464,6 +1464,58 @@
             ]
     },
     {
+        "id": "eq_carnyx",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Carnyx",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Carnyx causes FEAR.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_bagpipes",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Bagpipes",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Bagpipes renders allies within 8\" immune to FEAR.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
         "id": "eq_martyrdompills",
         "type": "Equipment",
         "source": "core",
@@ -1484,32 +1536,6 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result.",
                             "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FEAR", "id": "gl_fear"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_martyrdomdevice",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Martyrdom Device",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
-                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
                 }
@@ -2260,84 +2286,6 @@
             ]
     },
     {
-        "id": "eq_artofassassinationhallucinogendisguise",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Hallucinogen Disguise",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability. ",
-                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_artofassassinationthunderboltofalumat",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Thunderbolt of Alumat",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs. ",
-                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
-        "id": "eq_artofassassinationmirageoftime",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Mirage of Time",
-        "equip_type": null,
-        "range": null,
-        "blurb": "",
-        "modifiers": [""],
-        "description":  [
-                {
-                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                    "content": "Rule:",
-                    "subcontent": [
-                        {
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit. ",
-                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
-                        }
-                    ]
-                }
-            ]
-    },
-    {
         "id": "eq_damascusarmour",
         "type": "Equipment",
         "source": "core",
@@ -2871,32 +2819,6 @@
         ]
     },
     {
-        "id": "eq_fianna",
-        "type": "Equipment",
-        "source": "core",
-        "tags": [
-                ],
-        "category": "equipment",
-        "name": "Fianna Upgrade",
-        "equip_type": null,
-        "range": null,
-        "blurb": "Any Shocktroopers in an Eire Warband can be made a member of Fianna, the famed warrior-hunters.",
-        "modifiers": [],
-        "description":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Rule:",
-                "subcontent": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The Model gains the SKIRMISHER and INFILTRATOR keywords",
-                        "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"},{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "id": "eq_promotion",
         "type": "Equipment",
         "source": "core",
@@ -3022,6 +2944,59 @@
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                         "content": "The Warband never fails a Morale test while the Great Banner is in Play, but can voluntarily leave the battle if 50% of its models are Out of Action. Takes the use of one hand at all times.",
                         "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_elixerofalkhidr",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": ""}
+                ],
+        "category": "equipment",
+        "name": "Elixer Of Al-Khidr",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This extraordinary creation of the House of Wisdom. It is said that within its Gardens is the hidden Fountain of Life that is used as an ingredient of this powerful Alchemical formula.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Gives the model consuming the Elixir Keyword TOUGH for the duration of a single battle.",
+                        "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_fireshield",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Fire Shield",
+        "equip_type": null,
+        "range": null,
+        "blurb": "An Invention of the al-Jazari School of engineering school within the House of Wisdom, this shield is treated with an Alchemical formula, making it highly resistant to fire weapons. It has proven its value in many desperate battles against the flame-wielding Heretics.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Always takes one hand to use in both melee and in ranged combat. Grants -1 to all Injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on Injury Rolls and will not cause an additional BLOOD MARKER.",
+                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
                     }
                 ]
             }

@@ -14,7 +14,7 @@ class ListEquipment {
     public readonly Cost;
     public readonly CostType;
     
-    public readonly Object : PlayerEquipment;
+    public Object : PlayerEquipment;
 
     public constructor(data: IListEquipment) {
         this.ID = data.id;

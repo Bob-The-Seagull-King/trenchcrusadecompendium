@@ -207,36 +207,6 @@
 
     },
     {
-        "id": "md_heretictrooperlegionnare",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-                    {"tag_name": "heretic", "val": ""}
-                ],
-        "movement": "6\"",
-        "ranged": "0\\+1",
-        "melee": "0\\+1",
-        "armour": "0",
-        "base": "25",
-        "faction_id": "fc_hereticlegion",
-        "variant_id": "fv_basic",
-        "name": "Heretic Trooper (Legionnare)",
-        "attachments": [],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "These soldiers make up the bulk of the Heretic forces. They have witnessed the Gate of Hell and survived, damning them for all eternity."
-            }
-        ],
-        "equipment":  [{
-                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
-                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
-                        }],
-        "abilities":  []
-
-    },
-    {
         "id": "md_anointedheavyinfantry",
         "type": "Model",
         "source": "core",
@@ -749,43 +719,6 @@
         ]
     },
     {
-        "id": "md_trenchpilgrimmartyr",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""}
-                ],
-        "movement": "6\"",
-        "ranged": "0",
-        "melee": "+1",
-        "armour": "0",
-        "base": "25",
-        "faction_id": "fc_trenchpilgrim",
-        "variant_id": "fv_basic",
-        "name": "Martyr Penitent",
-        "attachments": [
-            {"tag_name": "addons", "val": "ab_ressurection"}
-                    ],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A holy warrior of the trenches. Considers it his religious duty to make pilgrimage to the sacred battlefields to fight the heretic legions. Pilgrims wear the iron capirote to insulate their minds from the horrors of war."
-            }
-        ],
-        "equipment":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Trench Pilgrim can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List."
-            }
-            ],
-        "abilities":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_ressurection"
-            }
-        ]
-    },
-    {
         "id": "md_ecclesiasticprisoner",
         "type": "Model",
         "source": "core",
@@ -801,7 +734,6 @@
         "variant_id": "fv_basic",
         "name": "Ecclesiastic Prisoner",
         "attachments": [
-            {"tag_name": "addons", "val": "ab_martyrdomdevice"},
             {"tag_name": "addons", "val": "ab_maddash"},
             {"tag_name": "addons", "val": "ab_prisoner"}
                     ],
@@ -815,10 +747,6 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Iron Capirote. You cannot buy any additional equipment, weapons or armour for Ecclesiastic Prisoners with the exception that up to four may be equipped with a Martyrdom Device (see below) for 35 ducats each. Prisoners fight unarmed in Melee, flailing feebly with their manacled arms. The -1D penalty to Melee combat is included in the profile above."
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_martyrdomdevice"
             }
             ],
         "abilities":  [
@@ -898,6 +826,7 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_catherinewheel"},
             {"tag_name": "addons", "val": "ab_bonebreakermace"},
+            {"tag_name": "addons", "val": "ab_tough"},
             {"tag_name": "addons", "val": "ab_pilgrimfear"},
             {"tag_name": "addons", "val": "ab_brokenonthewheel"}
                     ],
@@ -1161,12 +1090,11 @@
         ]
     },
     {
-        "id": "md_azebsskirmisher",
+        "id": "md_kavass",
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "skirmisher", "val": ""}
+            {"tag_name": "ironsultanate", "val": ""}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1175,20 +1103,20 @@
         "base": "25",
         "faction_id": "fc_ironsultanate",
         "variant_id": "fv_basic",
-        "name": "Azebs (Skirmisher)",
+        "name": "Kavass",
         "attachments": [
                     ],
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Azebs are soldiers recruited from the multitude of provinces of the sultanate, where every house in twenty is required to equip and provide a warrior to serve the Prince of Those Who Believe. They are often used by their superiors as light skirmishers to harass and tie down the enemies while the heavier troops close in for the kill."
+                "content": "Kavass are sworn guardians of the House Of Wisdom. They are often used by their superiors as light skirmishers to harass and tie down the enemies while the heavier troops close in for the kill."
             }
         ],
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
-                "glossary": [{"val": "SKIRMISHERS", "id": "gl_skirmisher"}]
+                "content": "Kavass can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
             }
             ],
         "abilities":  [
@@ -1210,46 +1138,6 @@
         "faction_id": "fc_ironsultanate",
         "variant_id": "fv_fidaiofalamutthecabalofassassins",
         "name": "Assassin Acolyte",
-        "attachments": [
-            {"tag_name": "addons", "val": "ab_infiltratorassassin"}
-                    ],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Azebs are soldiers recruited from the multitude of provinces of the sultanate, where every house in twenty is required to equip and provide a warrior to serve the Prince of Those Who Believe. They are often used by their superiors as light skirmishers to harass and tie down the enemies while the heavier troops close in for the kill."
-            }
-        ],
-        "equipment":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
-                "glossary": [{"val": "SKIRMISHERS", "id": "gl_skirmisher"}]
-            }
-            ],
-        "abilities":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_infiltratorassassin"
-            }
-        ]
-    },
-    {
-        "id": "md_assassinacolyteskirmisher",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "infiltrator", "val": ""},
-            {"tag_name": "skirmisher", "val": ""}
-                ],
-        "movement": "6\"",
-        "ranged": "0",
-        "melee": "-1",
-        "armour": "0",
-        "base": "25",
-        "faction_id": "fc_ironsultanate",
-        "variant_id": "fv_fidaiofalamutthecabalofassassins",
-        "name": "Assassin Acolyte (Skirmisher)",
         "attachments": [
             {"tag_name": "addons", "val": "ab_infiltratorassassin"}
                     ],
@@ -1345,6 +1233,51 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The janissaries are the Sultanate’s elite warriors, raised from childhood in the arts of war. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Janissaries excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_countercharge"
+            }
+        ]
+    },
+    {
+        "id": "md_faris",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "ironsultanate", "val": ""},
+            {"tag_name": "strong", "val": ""},
+            {"tag_name": "elite", "val": ""}
+                ],
+        "movement": "6\"",
+        "ranged": "+1",
+        "melee": "+1",
+        "armour": "0",
+        "base": "32",
+        "faction_id": "fc_ironsultanate",
+        "variant_id": "fv_basic",
+        "name": "Faris",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_strong"},
+            {"tag_name": "addons", "val": "ab_countercharge"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Faris are the noble warriors sworn to protect the house of wisdo. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Janissaries excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
             }
         ],
         "equipment":  [
@@ -1841,50 +1774,6 @@
         "faction_id": "fc_newantioch",
         "variant_id": "fv_basic",
         "name": "Yeoman",
-        "attachments": [
-                    ],
-        "blurb": [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A basic trooper of New Antioch. Brave men and women who have received standard training and sworn an oath to the Duke of New Antioch. What they lack in combat skills compared to more elite troops they more than make up with their numbers and wide selection of weapons available to them."
-            }
-        ],
-        "equipment":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap the Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.",
-                "glossary": []
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Yeomen can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
-                "glossary": []
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "At the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles, scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR.",
-                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
-            }
-            ],
-        "abilities":  [
-        ]
-    },
-    {
-        "id": "md_yeomantrenchmole",
-        "type": "Model",
-        "source": "core",
-        "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "infiltrator", "val": ""}
-                ],
-        "movement": "6\"",
-        "ranged": "0",
-        "melee": "0",
-        "armour": "0",
-        "base": "25",
-        "faction_id": "fc_newantioch",
-        "variant_id": "fv_basic",
-        "name": "Trench Mole",
         "attachments": [
                     ],
         "blurb": [

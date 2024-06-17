@@ -19,6 +19,7 @@ import { IListModel } from './ListModel';
 import { IListEquipment, ListEquipment } from './ListEquipment';
 import { IItemPartial } from '../../classes/feature/list/ListGroup';
 import { IListItem, ListItem } from '../../classes/feature/list/ListItem';
+import { FactionUpgrade, IFactionUpgrade } from '../../classes/feature/factions/FactionUpgrade';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -27,15 +28,69 @@ class WarbandManager {
     Equipment: PlayerEquipment[] = [];
     Skills: IItemPartial[] = [];
     Injuries: ListItem[] = [];
+    Upgrades : FactionUpgrade[] = [];
 
     constructor() {
         const ReturnData = GrabWarband();
-        this.WarbandList = ReturnData;
         this.FindFactions();
         this.FindModels();
         this.FindEquipment();
         this.FindSkills();
         this.FindInjuries();
+        this.FindUpgrades();
+        this.WarbandList = this.UpdateWarbands(ReturnData);
+    }
+
+    UpdateWarbands(data: Warband[]) {
+        const listofbands: Warband[] = [];
+
+        let i = 0;
+        for (i = 0; i < data.length; i ++) {
+            const factionid = data[i].Faction.ID;
+            let j = 0;
+            for (j = 0; j < this.Factions.length; j ++) {
+                if (this.Factions[j].ID == factionid) {
+                    data[i].Faction = this.Factions[j];
+                    break;
+                }
+            }
+            for (j = 0; j < data[i].Members.length; j++) {
+                const modelid = data[i].Members[j].Model.ID;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Models.length; k++) {
+                    if (this.Models[k].ID == modelid) {
+                        modelval = this.Models[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Members[j].Model.Object = modelval;
+                } else {
+                    this.DeleteModelFromWarband(data[i].Members[j], data[i]);
+                }
+            }
+            for (j = 0; j < data[i].Armoury.length; j++) {
+                const modelid = data[i].Armoury[j].Object.ID;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Equipment.length; k++) {
+                    if (this.Equipment[k].ID == modelid) {
+                        modelval = this.Equipment[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Armoury[j].Object = modelval;
+                } else {
+                    this.DeleteEquipmentFromWarband(data[i].Armoury[j], data[i]);
+                }
+            }
+            listofbands.push(data[i]);
+        }
+
+
+        return listofbands;
     }
 
     /**
@@ -66,6 +121,21 @@ class WarbandManager {
        for (i = 0; i < dataresults.length; i++) {
            const modelNew = ModelFactory.CreateModel(dataresults[i]);
            this.Models.push(modelNew);
+       }
+   }
+
+   /**
+    * For each entry in the data results, create an Model object
+    * and add it to the internal list.
+    */
+   FindUpgrades() {
+       this.Upgrades = [];
+       const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "upgrade"}});
+       let i = 0;
+       dataresults.sort(byPropertiesOf<PlayerModel>(['Name']))
+       for (i = 0; i < dataresults.length; i++) {
+           const modelNew = new FactionUpgrade(dataresults[i]);
+           this.Upgrades.push(modelNew);
        }
    }
 
@@ -186,7 +256,8 @@ class WarbandManager {
                     injuries: [],
                     skills: [],
                     experience: 0,
-                    notes : ""
+                    notes : "",
+                    upgrades : []
                 }
 
                 const ContentNew: WarbandMember = new WarbandMember((_content));
@@ -232,7 +303,7 @@ class WarbandManager {
             let i = 0;
             if (ReturnMsg == "") {
                 let modelVal : any = null;
-                console.log()
+                
                 for (i = 0; i < this.Equipment.length ; i++ ) {
                     if (this.Equipment[i].ID == _model) {
                         modelVal = this.Equipment[i];
@@ -259,6 +330,47 @@ class WarbandManager {
         }
         return ReturnMsg;
     }
+
+    public NewUpgradeForMember(_warband : WarbandMember, _model : string, _cost : string, _costtype : string){
+        let ReturnMsg = "";
+        try {
+            if (_model == "" || _model == "[No Model Selected]") {
+                ReturnMsg = "Your Item must be one of the available options."
+            }
+            if (_cost == "" || parseInt(_cost) < 0) {
+                ReturnMsg = "Your Item must cost at least 0."
+            }
+            let i = 0;
+            if (ReturnMsg == "") {
+                let modelVal : any = null;
+                
+                for (i = 0; i < this.Upgrades.length ; i++ ) {
+                    if (this.Upgrades[i].ID == _model) {
+                        modelVal = this.Upgrades[i];
+                    }
+                }
+
+                const modelList : IFactionUpgrade = {
+                    id: modelVal? modelVal.ID : "",
+                    cost: parseInt(_cost),
+                    cost_id: _costtype                    
+                }
+
+                const ContentNew: FactionUpgrade = new FactionUpgrade((modelList));
+                _warband.Upgrades.push(ContentNew);
+            } else {
+                return ReturnMsg;
+            }
+        } catch (e) {
+            ReturnMsg = "Something went wrong.";
+        }
+
+        if (ReturnMsg == "") {
+            this.SetStorage();
+        }
+        return ReturnMsg;
+    }
+
     public NewEquipmentForWarband(_warband : Warband, _model : string, _cost : string, _costtype : string){
         let ReturnMsg = "";
         try {
@@ -501,6 +613,19 @@ class WarbandManager {
             rowMarker = ModelRow.length + 1;
         }
 
+        const UpgradeSet = [];
+        let upgradelengthcheck = 0
+        for (i = 0 ; i < _model.Upgrades.length ; i ++) {
+            upgradelengthcheck = lengthMarker-((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "").length)
+            UpgradeSet.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + (" ".repeat((upgradelengthcheck > 0)? upgradelengthcheck : 0)) + " | " + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID);
+        }
+
+        for (i = 0; i < UpgradeSet.length; i ++) {
+            if (UpgradeSet[i].length > rowMarker) {
+                rowMarker = UpgradeSet[i].length;
+            }
+        }
+
         const RangedSet = [];
         const MeleeSet = [];
         const ArmourSet = [];
@@ -560,6 +685,14 @@ class WarbandManager {
         if (_notes) {
             if (_model.Notes.trim().length > 0) {
             returnString += "\n" + "[ NOTES ]" + "\n" + _model.Notes
+            }
+        }
+
+        returnString += "\n" + "[ UPGRADES ]"
+
+        if (UpgradeSet.length > 0) {
+            for (i = 0; i < UpgradeSet.length; i++) {
+                returnString += "\n" + "  " + UpgradeSet[i]
             }
         }
 
@@ -683,14 +816,24 @@ class WarbandManager {
         let i = 0;
 
         const Equipment = [];
+        const Upgrades = [];
         
         for (i = 0 ; i < _model.Equipment.length ; i ++) {
             Equipment.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + " (" + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType + ")");
+        }
+        
+        for (i = 0 ; i < _model.Upgrades.length ; i ++) {
+            Upgrades.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + " (" + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID + ")");
         }
 
         for (i = 0; i < Equipment.length; i ++) {
             if (Equipment[i].length > rowMarker) {
                 rowMarker = Equipment[i].length;
+            }
+        }
+        for (i = 0; i < Upgrades.length; i ++) {
+            if (Upgrades[i].length > rowMarker) {
+                rowMarker = Upgrades[i].length;
             }
         }
 
@@ -705,6 +848,12 @@ class WarbandManager {
         let returnString = (_inside? "" : ("```" + ("\n"))  )
 
         returnString += (FirstRow)
+
+        if (Upgrades.length > 0) {
+            for (i = 0; i < Upgrades.length; i++) {
+                returnString += "\n" + "-" + Upgrades[i]
+            }
+        }
 
         if (Equipment.length > 0) {
             for (i = 0; i < Equipment.length; i++) {
@@ -795,6 +944,18 @@ class WarbandManager {
         }
     }
 
+    public DeleteUpgradeFromModel(_equipment : FactionUpgrade, _model : WarbandMember, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _model.Upgrades.length; i++) {
+            if (_model.Upgrades[i] == _equipment) {
+                _warband.DucatCost = this.TotalCostDucats(_warband);
+                _warband.GloryCost = this.TotalCostGlory(_warband);
+                _model.Upgrades.splice(i, 1);
+                break;
+            }
+        }
+    }
+
     public DeleteEquipmentFromWarband(_equipment : ListEquipment,_warband : Warband) {
         let i = 0;
         for (i = 0; i < _warband.Armoury.length; i++) {
@@ -860,6 +1021,11 @@ class WarbandManager {
                     totalducats += _band.Members[i].Equipment[j].Cost;
                 }
             }
+            for (j = 0; j < _band.Members[i].Upgrades.length; j++ ) {
+                if (_band.Members[i].Upgrades[j].CostID == "ducats") {
+                    totalducats += _band.Members[i].Upgrades[j].Cost;
+                }
+            }
         }
 
         return totalducats;
@@ -886,6 +1052,11 @@ class WarbandManager {
                     totalglory += _band.Members[i].Equipment[j].Cost;
                 }
             }
+            for (j = 0; j < _band.Members[i].Upgrades.length; j++ ) {
+                if (_band.Members[i].Upgrades[j].CostID == "glory") {
+                    totalglory += _band.Members[i].Upgrades[j].Cost;
+                }
+            }
         }
 
         return totalglory;
@@ -904,6 +1075,12 @@ class WarbandManager {
                 totalCost += _member.Equipment[i].Cost;
             }
         }
+        
+        for (i = 0; i < _member.Upgrades.length; i++) {
+            if (_member.Upgrades[i].CostID == "ducats") {
+                totalCost += _member.Upgrades[i].Cost;
+            }
+        }
 
         return totalCost.toString()
     }
@@ -919,6 +1096,11 @@ class WarbandManager {
         for (i = 0; i < _member.Equipment.length; i++) {
             if (_member.Equipment[i].CostType == "glory") {
                 totalCost += _member.Equipment[i].Cost;
+            }
+        }
+        for (i = 0; i < _member.Upgrades.length; i++) {
+            if (_member.Upgrades[i].CostID == "glory") {
+                totalCost += _member.Upgrades[i].Cost;
             }
         }
 

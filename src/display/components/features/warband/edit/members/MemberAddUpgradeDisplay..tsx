@@ -17,8 +17,9 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { ListEquipment } from '../../../../../../classes/lists/ListEquipment';
 import { Requester } from '../../../../../../factories/Requester';
+import { FactionUpgrade } from '../../../../../../classes/feature/factions/FactionUpgrade';
 
-const MemberAddEquipDisplay = (props: any) => {
+const MemberAddUpgradeDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const Member : WarbandMember = props.member;
     const UpdateFunction = props.updater;
@@ -39,7 +40,6 @@ const MemberAddEquipDisplay = (props: any) => {
     const costRef = useRef<HTMLInputElement>(null);
     const costTypeDucatRef = useRef<HTMLInputElement>(null);
     const costTypeGloryRef = useRef<HTMLInputElement>(null);
-    const factionlimitcheck = useRef<HTMLInputElement>(null);
 
     
     function getRestrictionList(model : ListEquipment) {
@@ -93,13 +93,17 @@ const MemberAddEquipDisplay = (props: any) => {
     function updateModel(value: string) {
         NewMemberModel = value;
         if (_limitfaction) {
-            const tempModel = Manager.GetEquipmentByID(value)
             let temp : any = null;
             let i = 0;
-            for (i = 0 ; i < WarbandItem.Faction.Equipment.length ; i++) {
-                if (WarbandItem.Faction.Equipment[i].ID == (tempModel? tempModel.ID : "")) {
-                    temp = WarbandItem.Faction.Equipment[i]
-                    break;
+            for (i = 0; i < WarbandItem.Faction.Models.length; i++) {
+                if (WarbandItem.Faction.Models[i].ID == Member.Model.ID) {
+                    let j = 0;
+                    for (j = 0; j < WarbandItem.Faction.Models[i].Upgrades.length; j++) {
+                        if (WarbandItem.Faction.Models[i].Upgrades[j].ID == (NewMemberModel)) {
+                            temp = (WarbandItem.Faction.Models[i].Upgrades[j])
+                            break;
+                        }
+                    }
                 }
             }
             if (temp != null) {
@@ -142,13 +146,9 @@ const MemberAddEquipDisplay = (props: any) => {
         isDucats = (true);
     }
 
-    function updateFactionLimit() {
-        returnLimitFaction(!_limitfaction)
-    }
-
     function NewMember() {
         const NewMemberCostType = isDucats? "ducats" : "glory";
-        const Result = Manager.NewEquipmentForMember(Member, NewMemberModel, NewMemberCost, NewMemberCostType);
+        const Result = Manager.NewUpgradeForMember(Member, NewMemberModel, NewMemberCost, NewMemberCostType);
         if (Result != "") {
             runToast(Result);
         } else {
@@ -169,9 +169,6 @@ const MemberAddEquipDisplay = (props: any) => {
         }
         if (costTypeGloryRef.current != null) {
             costTypeGloryRef.current.value = "off";
-        }
-        if (factionlimitcheck.current != null) {
-            factionlimitcheck.current.checked = true;
         }
         handleCloseNewModel()
         UpdateFunction(Manager.GetWarbandByName(WarbandItem.Name))
@@ -212,42 +209,19 @@ const MemberAddEquipDisplay = (props: any) => {
         updateKey(_key+1)
     }
 
-    function FilterByModelType(value : string) {
+    function ReturnUpgradeList() {
+        const upgradeList: FactionUpgrade[] = [];
         let i = 0;
-        let HasModel = false;
-        let ModelMatch = false;
-        for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
-            if (value == WarbandItem.Faction.Equipment[i].ID) {  
+        for (i = 0; i < WarbandItem.Faction.Models.length; i++) {
+            if (WarbandItem.Faction.Models[i].ID == Member.Model.ID) {
                 let j = 0;
-                for (j = 0; j < WarbandItem.Faction.Equipment[i].Restrictions.length ; j++) {
-                    if (WarbandItem.Faction.Equipment[i].Restrictions[j].type == "model") {
-                        
-                        HasModel = true;
-                        if (WarbandItem.Faction.Equipment[i].Restrictions[j].val == Member.Model.ID) {
-                            ModelMatch = true;
-                        }
-                    }
-                    if (WarbandItem.Faction.Equipment[i].Restrictions[j].type == "keyword") {
-                        HasModel = true;
-                        let k = 0;
-                        if ((Member.Model.Object.Tags != undefined) && (Member.Model.Object.Tags != null)){
-                            for (k = 0; k < (Member.Model.Object.Tags? Member.Model.Object.Tags.length : 0); k++) {
-                                const tag: any = Member.Model.Object.Tags[k]
-                                console.log(tag);
-                                if ((tag.tag_name.toUpperCase()) == WarbandItem.Faction.Equipment[i].Restrictions[j].val.toString().toUpperCase()) {
-                                    ModelMatch = true;
-                                }
-                            }
-                        }
-                    }
+                for (j = 0; j < WarbandItem.Faction.Models[i].Upgrades.length; j++) {
+                    upgradeList.push(WarbandItem.Faction.Models[i].Upgrades[j])
                 }
             }
         }
-        
-        if (HasModel) {
-            return ModelMatch;
-        }
-        return true;
+
+        return upgradeList;
     }
 
     // ----------------------------------------------------------
@@ -270,7 +244,7 @@ const MemberAddEquipDisplay = (props: any) => {
             <div className="justify-content-center">
                 <div className="col-12">
                     <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowNewModel()}>
-                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Equipment</div>
+                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Upgrade</div>
                         <FontAwesomeIcon icon={faUserPlus} className="" style={{fontSize:"0.75em"}}/>
                     </div>
                 </div>
@@ -279,7 +253,7 @@ const MemberAddEquipDisplay = (props: any) => {
             <Modal onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
                 
                 <h1 className={'titleShape titlepurple'}>
-                    {"Equip New Item"}
+                    {"Add New Upgrade"}
                     <div className="row float-end">
                         <div className='col-12 float-end'>
                             <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseNewModel()}>
@@ -294,22 +268,14 @@ const MemberAddEquipDisplay = (props: any) => {
                         <div className="col-12" >
 
                             <div className="row">
-                                <div className="col-md-8 col-6">
+                                <div className="col-md-12 col-12">
                                     <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                         <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
                                             <option key="modeloption" value="[No Model Selected]">[No Item Selected]</option>
-                                            {_limitfaction &&
-                                            <>{WarbandItem.Faction.Equipment.filter(value => FilterByModelType(value.ID)).map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
-                                            }
-                                            {!_limitfaction &&
-                                            <>{Manager.Equipment.map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
-                                            }
+                                            
+                                            <>{ReturnUpgradeList().map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
+                                            
                                         </Form.Control>
-                                    </InputGroup>
-                                </div>
-                                <div className="col-md-4 col-6">
-                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
-                                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Faction Only" defaultChecked={true}/>
                                     </InputGroup>
                                 </div>
                             </div>
@@ -367,4 +333,4 @@ const MemberAddEquipDisplay = (props: any) => {
     )
 }
 
-export default MemberAddEquipDisplay;
+export default MemberAddUpgradeDisplay;

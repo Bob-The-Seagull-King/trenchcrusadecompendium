@@ -1,20 +1,434 @@
 [
     {
-        "id": "up_",
+        "id": "up_heretictroopertolegionnareranged",
         "type": "Upgrade",
-        "source": "core",
-        "tags": [
-                ],
-        "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticpriest",
-        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
-        "name": "",
+        "name": "Heretic Legionnare Ranged",
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "",
-                            "glossary": [{"val": "", "id": ""}]
+                            "content": "Add +1 DICE to the ranged characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
+    },
+    {
+        "id": "up_heretictroopertolegionnaremelee",
+        "type": "Upgrade",
+        "name": "Heretic Legionnare Melee",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to the melee characteristic of the model. All legionnares in a warband must upgrade the same characteristic.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_kavassmelee",
+        "type": "Upgrade",
+        "name": "Kavass Strength",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to the melee characteristic of the model.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_martyrdomdevice",
+        "type": "Upgrade",
+        "name": "Martyrdom Device",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each prisoner is strapped with an explosive which can be triggered one time at any point during their Activation. This counts as a ranged attack against every model (friend or foe) within 3” of the Prisoner. Everyone, including the Prisoner, is automatically hit and rolls on the Injury Chart to see what happens. Any model within 1” rolls +1 DICE on the Injury chart. Other models within 3” roll 2D6 as normal. The Prisoner rolls 4D6 and adds the results together to determine their Injury roll! If the explosive goes off and the Prisoner survives the battle, you can buy them a new Martyrdom Device for 35 ducats as normal, or field them without an Explosive.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "up_trenchpilgrimressurection",
+        "type": "Upgrade",
+        "name": "Ressurection",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE to the melee characteristic of the model. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_azebskirmisher",
+        "type": "Upgrade",
+        "name": "Skirmisher",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
+                "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
+            }
+        ]
+    },
+    {
+        "id": "up_machinearmour",
+        "type": "Upgrade",
+        "name": "Machine Armour",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Replace your existing armour with Heavy Armour, which provides a -3 to injury rolls. While wearing this armour the wearer cannot take any DASH ACTIONS.",
+                "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "up_trenchmole",
+        "type": "Upgrade",
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model gains the INFILTRATOR keyword. A maximum of two Yeomen can be upgraded into Trench Moles. An infiltrator can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_infiltratornaval",
+        "type": "Upgrade",
+        "name": "Infiltrator",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model gains the INFILTRATOR keyword. A maximum of three models can be upgraded into Trench Moles. An infiltrator can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_artofassassinationhallucinogendisguise",
+        "type": "Upgrade",
+        "name": "Hallucinogen Disguise",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "An INFILTRATOR with this ability can be deployed anywhere on the battlefield including the enemy deployment Zone as long as the model is at least 8” away from any enemy models. The model does not have to be out of Line of Sight. Binoculars or Guard Dogs have no effect on this ability. ",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_artofassassinationthunderboltofalumat",
+        "type": "Upgrade",
+        "name": "Thunderbolt of Alumat",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model has +2” movement and +1 DICE on its Dash ACTIONs. ",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_artofassassinationmirageoftime",
+        "type": "Upgrade",
+        "name": "Mirage of Time",
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                    "content": "Both Ranged and Melee attacks against the Assassin suffer -1 DICE penalty when determining if they hit. ",
+                    "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                }
+            ]
+    },
+    {
+        "id": "up_swissguard",
+        "type": "Upgrade",
+        "name": "Swiss Guard",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model is immune to the effects of FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+            ]
+    },
+    {
+        "id": "up_fianna",
+        "type": "Upgrade",
+        "name": "Fianna",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model gains the keywords SKIRMISHER and INFILTRATOR.",
+                "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"},{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_berserker",
+        "type": "Upgrade",
+        "name": "Berserker",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+            ]
+    },
+    {
+        "id": "up_forwardposition",
+        "type": "Upgrade",
+        "name": "Forward Position",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model gains the INFILTRATOR keyword. Up to two shocktroopers can have this upgrade.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_rapidassault",
+        "type": "Upgrade",
+        "name": "Rapid Assault",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The model adds +1 DICE to any of their DASH ACTIONs.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculuswings",
+        "type": "Upgrade",
+        "name": "Wings",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can Fly as explained in the rules and gains a movement speed of 8”.",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_homunculuselementalresistance",
+        "type": "Upgrade",
+        "name": "Elemental Resistance",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi does not suffer additional BLOOD MARKERs with any damage with keyword GAS or FIRE",
+                "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusmassivesize",
+        "type": "Upgrade",
+        "name": "Massive Size",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculus’ size is increased into vast proportions. It now has a base size of 50mm and it gains the Keyword TOUGH. This formula cannot be combined with the Alchemical Formula Wings.",
+                "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusenslavedmind",
+        "type": "Upgrade",
+        "name": "Enslaved Mind",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi gains the Keyword FIRETEAM along with 1 model of your choice in the Warband.",
+                "glossary": [{"val": "FIRETEAM", "id": "gl_fireteam"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushumanhands",
+        "type": "Upgrade",
+        "name": "Human Hands",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can buy and wield any weapon allowed in the Iron Sultanate warband list for any non-ELITE warrior or limited to a specific Troop type. They can also carry a Trench Shield. This Formula cannot be combined with the Alchemical Formula Wings. This will apply to human hands Alchemic Formula as well.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusinhumanstrength",
+        "type": "Upgrade",
+        "name": "Inuman Strength",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The musculature of the Homunculus is reinforced, replaced and strengthened. It now has a base size of 32mm (or 50mm if it also has Massive size). The Homunculus gains +1 DICE to its Melee characteristic and the Keyword STRONG",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "STRONG", "id": "gl_strong"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusterrifyingappearance",
+        "type": "Upgrade",
+        "name": "Terrifying Appearance",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Be it through alluringly beauty or horrifying visage of terror, this Homunculus gains the Keyword FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusadditionalarm",
+        "type": "Upgrade",
+        "name": "Additional Arm",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculi can perform an additional attack ACTION in Melee or Ranged combat without any penalty. It has 3 hands to carry weapons if combined with Human Hands. In this case the Homunculi can make up to 2 Ranged Attack ACTIONs (if it has sufficient weapons and number of hands to carry them), and up 3 Melee Attack ACTIONs (if armed with 3 1-handed weapons), or 1 Melee Attack ACTION with 2-handed weapon and 1 Melee Attack ACTION with 1-handed weapon.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculustwoheads",
+        "type": "Upgrade",
+        "name": "Two Heads",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This Homunculi has two heads, and therefore can have two sets of eyes via Alchemical Formula.",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushypnoticeyes",
+        "type": "Upgrade",
+        "name": "Hypnotic Eyes",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Enemies suffer -1 DICE to their Melee attacks. Does not affect enemies with the keyword BLACK GRAIL or isn’t a Sniper Priest.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculushawkeyes",
+        "type": "Upgrade",
+        "name": "Hawk Eyes",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The eyesight of the Homunculus is based that of a predatory Bird. It can add +1 DICE to its Ranged Attack characteristic.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusstartlingspeed",
+        "type": "Upgrade",
+        "name": "Startling Speed",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Homunculus adds +1 DICE to its Dash ACTIONs.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONs", "id": "gl_action"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculussealofsolomon",
+        "type": "Upgrade",
+        "name": "Seal Of Solomon",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This Formula greatly enhances the intelligence of the Homunculus. It can now buy and use Equipment from the Sultanate Warband Equipment list as long as it is not limited to ELITE models.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusgargantuansize",
+        "type": "Upgrade",
+        "name": "Gargantuan Size",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Can only be bought if the Homunculus already has Human Hands, Inhuman Strength and Massive Size Formulas. The Homunculus now has a Base Size of 60mm and it can now use 1 Brazen Bull Only weapon.",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_alchemistsecretsmedicine",
+        "type": "Upgrade",
+        "name": "Medicine",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to 2 BLOOD MARKERs or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectinomarker"}]
+            }
+            ]
+    },
+    {
+        "id": "up_alchemistsecretscartographyandgeometry",
+        "type": "Upgrade",
+        "name": "Cartography and Geometry",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Alchemist has studied long and hard the sciences of cartography and Geometry. In the beginning of each battle up to 2 models (besides any Alchemists) In the Warband gain the Keyword INFILTRATOR as long as they are on 32mm or a smaller base. In addition, the Warband may re-roll one Exploration dice in the Exploration phase if you wish. The second result stands.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
+        "id": "up_alchemistsecretssecretsoftawkin",
+        "type": "Upgrade",
+        "name": "Secrets Of Tawkin",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If the Alchemist is hit while within 1” of their own Homunculi, you can choose to redirect the hit against the Homunculi instead. Determine the injuries exactly as if the weapon just hit the Homunculi",
+                "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_alchemistsecretschemistryandalchemy",
+        "type": "Upgrade",
+        "name": "Chemistry and Alchemy",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Before the battle starts but after all models (including INFILTRATORs) are deployed, you may place a rectangular elemental obstacle 2” wide and 6” long. It counts both as Difficult Terrain and Dangerous Terrain, and damage it causes has the Keyword FIRE, GAS or SHRAPNEL (chosen by the player at the start of the Battle). It cannot be placed within 6” of any model or on top of any other terrain.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+            }
+            ]
+    },
+    {
+        "id": "up_alchemistsecretsphilosiphypoetryandtheology",
+        "type": "Upgrade",
+        "name": "Philosophy Poetry and Theology",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Alchemist is well-versed in the hidden truths of the universe and of the Divine and has a calm and clear mind. The Warband gains +1 DICE to all Morale Rolls, cannot become Shaken, and the Alchemist is immune to the effects of the Keyword FEAR.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "FEAR", "id": "gl_fear"}]
+            }
+            ]
     }
 ]
