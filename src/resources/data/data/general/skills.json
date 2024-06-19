@@ -279,7 +279,7 @@
         "tags": [
             {"tag_name": "ranged", "val": ""}
             ],
-        "name": "Hit Shot",
+        "name": "Hip Shot",
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -616,7 +616,7 @@
         "tags": [
             {"tag_name": "patron", "val": ""}
             ],
-        "name": "Ensure the Suffering",
+        "name": "Endure the Suffering",
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
