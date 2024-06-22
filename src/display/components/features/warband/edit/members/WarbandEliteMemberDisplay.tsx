@@ -233,6 +233,11 @@ const WarbandEliteMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    function duplicateModel() {
+        Manager.DuplicateMember(WarbandItem, WarbandMember);
+        UpdateFunction(WarbandItem)
+    }
+
     function returnUpgrades() {
         return (
             <>
@@ -290,9 +295,17 @@ const WarbandEliteMemberDisplay = (props: any) => {
     function returnButtons() {
         return (
             <>
-            <div className="row row-cols-lg-3 row-cols-1">
+            <div className="row row-cols-lg-4 row-cols-1">
+
+                <div className="col">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
+                        </div>
+                    </div>
+                </div>
                 
-            <div className="col">
+                <div className="col">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>

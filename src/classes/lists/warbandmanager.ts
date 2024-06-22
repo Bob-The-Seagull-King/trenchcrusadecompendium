@@ -217,6 +217,12 @@ class WarbandManager {
         localStorage.setItem('warbandstorage', JSON.stringify(this.WarbandList));
     }
 
+    public DuplicateMember(_warband : Warband, _member : WarbandMember) {
+        const NewMember : WarbandMember = JSON.parse(JSON.stringify(_member));
+        NewMember.Name = _member.Name + " - Copy"
+        _warband.Members.push(NewMember);
+    }
+
     public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
         let ReturnMsg = "";
         try {

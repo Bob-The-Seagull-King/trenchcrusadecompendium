@@ -269,6 +269,12 @@ const WarbandInfantryMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem);
     }
 
+    function duplicateModel() {
+        Manager.DuplicateMember(WarbandItem, WarbandMember);
+        UpdateFunction(WarbandItem)
+    }
+
+
     function buryModel() {
         if (WarbandMember.Model.CostType == "ducats") {
             WarbandItem.DucatLost += WarbandMember.Model.Cost;
@@ -288,8 +294,16 @@ const WarbandInfantryMemberDisplay = (props: any) => {
         return (
             <>
             <div className="row row-cols-lg-3 row-cols-1">
+
+                <div className="col">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
+                        </div>
+                    </div>
+                </div>
                 
-            <div className="col">
+                <div className="col">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
