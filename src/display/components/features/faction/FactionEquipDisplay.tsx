@@ -34,6 +34,8 @@ const FactionEquipDisplay = (props: any) => {
                 rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
             } else if (ModelEquip.Restrictions[i].type == "model") {
                 rstrctnlst += getModelName(ModelEquip.Restrictions[i].val.toString());
+            } else if (ModelEquip.Restrictions[i].type == "antikeyword") {
+                rstrctnlst += "Non-" + ModelEquip.Restrictions[i].val.toString().toUpperCase();
             } else {
                 rstrctnlst += ModelEquip.Restrictions[i].val.toString()
             }

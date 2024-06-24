@@ -1146,6 +1146,7 @@
         "equipment": [
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_greataxe", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_lochaberaxe", "cost": 18, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},

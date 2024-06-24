@@ -297,7 +297,7 @@
             {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_medikit", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_alchemicalammunition", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "", "val": "Must have a Jezail or Seige Jezail"}]},
-            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Non-Elite"}]},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "antikeyword", "val": "Elite"}]},
             {"id": "eq_cloakofalamut", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_windamulet", "cost": 10, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},

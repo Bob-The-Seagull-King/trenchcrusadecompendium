@@ -1155,6 +1155,17 @@
         "blurb": "Automatic pistols are symbols of prestige owing to their rarity and cost. They are excellent weapons when storming trenches or fighting in hand-to-hand combat. They boast a high rate of fire, though they can be hard to control even for the best sharpshooters since they usually lack a stock.",
         "modifiers": ["-1D to Injury"],
         "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model armed with an automatic pistol can use it in melee as well as ranged combat, including as an off-hand weapon to execute an additional melee attack. You can make two Attack ACTIONS with the automatic pistol instead of one if used as a ranged weapon. They can be against the same target or two different ones",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    }
+                ]
+            }
             ]
     },
     {
@@ -2146,6 +2157,34 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from Beelzebub’s Axe, they will gain an INFECTION MARKER instead.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_lochaberaxe",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": ""},
+            {"tag_name": "Critical", "val": ""}
+                ],
+        "category": "melee",
+        "name": "Lochaber Axe",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Tuagh-chatha axes combine the power of the Great Axe with the defensive qualities of a polearm. Its wicked spike has stopped many Heretic in their tracks. Dùn Èideann Guard are especially adept at their use.",
+        "modifiers": ["+1 on Injury Results","-1D to Hit for Chargers"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Lochaber axes take two hands to use and the model armed with it cannot use any Shield. Rolls all injuries with +1 added to the result (ie. roll of 7 on Injury Chart becomes 8). Models equipped with a Lochaber Axe incur -1 DICE penalty to any charging enemies in Melee combat when rolling to hit. This only applies when a charging model attacks, not on subsequent rounds of Melee.",
+                            "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                         }
                     ]
                 }

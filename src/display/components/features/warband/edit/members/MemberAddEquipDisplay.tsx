@@ -216,6 +216,8 @@ const MemberAddEquipDisplay = (props: any) => {
         let i = 0;
         let HasModel = false;
         let ModelMatch = false;
+        let HasAntiKeyword = false;
+        let AntiKeywordMatch = false;
         for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
             if (value == WarbandItem.Faction.Equipment[i].ID) {  
                 let j = 0;
@@ -233,9 +235,21 @@ const MemberAddEquipDisplay = (props: any) => {
                         if ((Member.Model.Object.Tags != undefined) && (Member.Model.Object.Tags != null)){
                             for (k = 0; k < (Member.Model.Object.Tags? Member.Model.Object.Tags.length : 0); k++) {
                                 const tag: any = Member.Model.Object.Tags[k]
-                                console.log(tag);
                                 if ((tag.tag_name.toUpperCase()) == WarbandItem.Faction.Equipment[i].Restrictions[j].val.toString().toUpperCase()) {
                                     ModelMatch = true;
+                                }
+                            }
+                        }
+                    }
+                    if (WarbandItem.Faction.Equipment[i].Restrictions[j].type == "antikeyword") {
+                        HasAntiKeyword = true;
+                        let k = 0;
+                        if ((Member.Model.Object.Tags != undefined) && (Member.Model.Object.Tags != null)){
+                            for (k = 0; k < (Member.Model.Object.Tags? Member.Model.Object.Tags.length : 0); k++) {
+                                const tag: any = Member.Model.Object.Tags[k]
+                                
+                                if ((tag.tag_name.toUpperCase()) == WarbandItem.Faction.Equipment[i].Restrictions[j].val.toString().toUpperCase()) {
+                                    AntiKeywordMatch = true;
                                 }
                             }
                         }
@@ -243,7 +257,14 @@ const MemberAddEquipDisplay = (props: any) => {
                 }
             }
         }
-        
+
+        if (HasAntiKeyword) {
+            if (HasModel) {
+                return ModelMatch && !AntiKeywordMatch;
+            } else {
+                return !AntiKeywordMatch;
+            }
+        }
         if (HasModel) {
             return ModelMatch;
         }
