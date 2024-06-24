@@ -222,6 +222,14 @@ class WarbandManager {
         NewMember.Name = _member.Name + " - Copy"
         _warband.Members.push(NewMember);
     }
+    public DuplicateWarband(_warband : Warband) {
+        const NewMember : Warband = JSON.parse(JSON.stringify(_warband));
+        NewMember.Name = _warband.Name + " - Copy"
+        NewMember.ID = this.CalcID(_warband.Name + " - Copy");
+        
+        this.WarbandList.push(NewMember);
+        this.SetStorage();
+    }
 
     public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
         let ReturnMsg = "";

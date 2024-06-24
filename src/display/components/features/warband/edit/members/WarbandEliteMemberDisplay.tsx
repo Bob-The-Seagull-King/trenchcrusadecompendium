@@ -219,16 +219,20 @@ const WarbandEliteMemberDisplay = (props: any) => {
     }
 
     function buryModel() {
-        if (WarbandMember.Model.CostType == "ducats") {
-            WarbandItem.DucatLost += WarbandMember.Model.Cost;
-        } else {
-            WarbandItem.GloryLost += WarbandMember.Model.Cost;
-        }
+        WarbandItem.DucatLost += parseInt(Manager.GetDucatCost(WarbandMember));
+        WarbandItem.GloryLost += parseInt(Manager.GetGloryCost(WarbandMember));
         Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
     }
 
-    function resellModel() {
+    function sellModel() {
+        WarbandItem.DucatLost += Math.round((parseInt(Manager.GetDucatCost(WarbandMember)))/2);
+        WarbandItem.GloryLost += Math.round((parseInt(Manager.GetGloryCost(WarbandMember)))/2);
+        Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
+        UpdateFunction(WarbandItem)
+    }
+
+    function refundModel() {
         Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
     }
@@ -297,7 +301,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
             <>
             <div className="row row-cols-lg-4 row-cols-1">
 
-                <div className="col">
+                <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
@@ -305,15 +309,19 @@ const WarbandEliteMemberDisplay = (props: any) => {
                     </div>
                 </div>
                 
-                <div className="col">
+                <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="col">
+            </div>
+            <div className="verticalspacerbig"/>
+            <div className="row">
+
+                <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => buryModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Bury This Model</div>
@@ -321,10 +329,18 @@ const WarbandEliteMemberDisplay = (props: any) => {
                     </div>
                 </div>
 
-                <div className="col">
+                <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => resellModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Resell This Model</div>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => sellModel()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Sell This Model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-12">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => refundModel()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Refund This Model</div>
                         </div>
                     </div>
                 </div>
