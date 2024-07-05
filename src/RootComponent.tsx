@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
+import { useGlobalState } from './utility/globalstate'
+
 /* 
     Major routes are placed here.
     These routes have NO states, and are where the controllers/manager
@@ -20,45 +22,19 @@ import ToolsRoute from './display/superroutes/ToolsRoute'
 
 const RootComponent: React.FC = () => {
 
-    const [theme, setTheme] = useState(InitTheme());
 
-    function ChangeTheme() {
-        if (theme == 'light') {
-            
-            localStorage.setItem('theme', 'dark');
-            setTheme('dark')
-        } else if (theme == 'dark') {
-            
-            localStorage.setItem('theme', 'light');
-            setTheme('light')
-        }
-        
+    const [theme, setTheme] = useGlobalState('theme');
+
+    if ((theme == "" ) || (theme == null)) {
+        setTheme('light');
     }
 
-    function InitTheme() {
-        const theme = localStorage.getItem('theme');
-        if (theme != null) {
-            return theme
-        } else {
-            return 'light'
-        }
-    }
 
     return (
         <div className="backgroundBaseColour" data-theme={theme}>
 
             <Router>
                 <SuperHeader/>
-                <div style={{position:"fixed",display:"flex",zIndex:"1000000000"}} >
-                        <Fab variant="extended" aria-label="add" onClick={() => ChangeTheme()} style={{marginLeft:"0.5em"}} className="fabbutton">
-                            {theme == 'light' &&
-                            <FontAwesomeIcon icon={faSun} style={{fontSize:"2em",width:"1em"}}/>
-                            }
-                            {theme != "light" &&
-                            <FontAwesomeIcon icon={faMoon} style={{fontSize:"2em",width:"1em"}}/>
-                            }
-                        </Fab>
-                </div>
                 <Routes>
                     <Route path={ROUTES.COMPENDIUM_ROUTE} element={<CompendiumRoute />} />
                     <Route path={ROUTES.TOOLS_ROUTE} element={<ToolsRoute />} />

@@ -20,10 +20,13 @@ import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
+import { useGlobalState } from '../../../../utility/globalstate'
+
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
+    const [theme, setTheme] = useGlobalState('theme');
 
     let warbandNotes = WarbandItem.Notes;
 
@@ -202,9 +205,9 @@ const WarbandEditDisplay = (props: any) => {
         
                     </div>
 
-                    <Modal onEnterKeyDown={() => handleCloseExport()} size="xl" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+                    <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExport()} size="xl" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
                         
-                        <h1 className={'titleShape titlepurple'}>
+                        <h1 className={'titleShape titlestyler backgroundtc'}>
                             {("Warband") + " Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>
@@ -225,9 +228,9 @@ const WarbandEditDisplay = (props: any) => {
                         </Modal.Body>
                     </Modal>
 
-                    <Modal onEnterKeyDown={() => handleCloseExportBasic()} size="xl" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+                    <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExportBasic()} size="xl" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
                         
-                        <h1 className={'titleShape titlepurple'}>
+                        <h1 className={'titleShape titlestyler backgroundtc'}>
                             {("Warband") + " Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>

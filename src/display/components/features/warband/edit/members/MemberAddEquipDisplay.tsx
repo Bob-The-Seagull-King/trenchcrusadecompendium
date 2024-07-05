@@ -18,11 +18,15 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { ListEquipment } from '../../../../../../classes/lists/ListEquipment';
 import { Requester } from '../../../../../../factories/Requester';
 
+import { useGlobalState } from '../../../../../../utility/globalstate'
+
 const MemberAddEquipDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const Member : WarbandMember = props.member;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
+    
+    const [theme, setTheme] = useGlobalState('theme');
 
     // Creation of New warband member ---------------------------
 
@@ -297,9 +301,9 @@ const MemberAddEquipDisplay = (props: any) => {
                 </div>
             </div>
             
-            <Modal onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Equip New Item"}
                     <div className="row float-end">
                         <div className='col-12 float-end'>

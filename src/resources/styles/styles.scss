@@ -6,7 +6,7 @@ button {
 .DropdownMenuContent,
 .DropdownMenuSubContent {
   min-width: 220px;
-  background-color: --colour_background_white;
+  background-color: --colour_white;
   border-radius: 6px;
   padding: 5px;
   box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
@@ -90,7 +90,7 @@ button {
 }
 
 .DropdownMenuArrow {
-  fill: --colour_background_white;
+  fill: --colour_white;
 }
 
 .IconButton {
@@ -102,7 +102,7 @@ button {
   align-items: center;
   justify-content: center;
   color: var(--violet-11);
-  background-color: --colour_background_white;
+  background-color: --colour_white;
   box-shadow: 0 2px 10px var(--black-a7);
 }
 .IconButton:hover {
@@ -118,7 +118,7 @@ button {
   color: var(--mauve-11);
 }
 [data-highlighted] > .RightSlot {
-  color: --colour_background_white;
+  color: --colour_white;
 }
 [data-disabled] .RightSlot {
   color: var(--mauve-8);

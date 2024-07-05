@@ -10,6 +10,8 @@ import FilterTagItem from '../FilterTagItem'
 import FilterTextItem from '../FilterTextItem'
 import FilterDisplay from '../FilterDisplay'
 
+import { useGlobalState } from './../../../../../utility/globalstate'
+
 import Modal from 'react-bootstrap/Modal';
 
 const FactionFilterSelectDisplay = (prop: any) => {
@@ -22,6 +24,7 @@ const FactionFilterSelectDisplay = (prop: any) => {
     const [_activemiscfilters, returnactivemisc] = useState(FilterManager.ReturnActiveMiscFilters());
     const [_activestatfilters, returnactivestat] = useState(FilterManager.ReturnActiveStatFilters());
     const [_keyval, updatekey] = useState(1);
+    const [theme, setTheme] = useGlobalState('theme');
 
     const [show, setShow] = useState(false);
 
@@ -43,7 +46,7 @@ const FactionFilterSelectDisplay = (prop: any) => {
     // Return result -----------------------------
     return (
         <>
-            <div onClick={() => handleShow()}className='bordermainpurple roundBody hovermouse'>
+            <div onClick={() => handleShow()}className='borderstyler bordertc roundBody hovermouse'>
                 {((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) && (_activestatfilters.length == 0) ) &&
                     <div className="">
                             <h1 className="subtletext">No Filters Selected</h1>
@@ -74,9 +77,9 @@ const FactionFilterSelectDisplay = (prop: any) => {
                 }
             </div>
 
-            <Modal show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
+            <Modal data-theme={theme} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 
-                            <h1 className={'titleShape titlepurple'}>Select Filters</h1>
+                            <h1 className={'titleShape titlestyler backgroundtc'}>Select Filters</h1>
                             <Modal.Body >
                             <div className="row p-3 overflow-auto flex-grow-1">
                                 <div style={{"maxHeight": "calc(70vh"}}>

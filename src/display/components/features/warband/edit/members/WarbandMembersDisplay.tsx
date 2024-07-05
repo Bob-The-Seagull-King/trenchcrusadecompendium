@@ -17,6 +17,8 @@ import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { useGlobalState } from './../../../../../../utility/globalstate'
+
 const WarbandMembersDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -25,6 +27,7 @@ const WarbandMembersDisplay = (props: any) => {
     // Creation of New warband member ---------------------------
 
     const [_limitfaction, returnLimitFaction] = useState(true);
+    const [theme, setTheme] = useGlobalState('theme');
 
     let NewMemberName = "";
     let NewMemberModel = "";
@@ -193,9 +196,9 @@ const WarbandMembersDisplay = (props: any) => {
                     </div>
             </div>
             
-            <Modal onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler background'}>
                     {"Add New Member"}
                     <div className="row float-end">
                         <div className='col-12 float-end'>

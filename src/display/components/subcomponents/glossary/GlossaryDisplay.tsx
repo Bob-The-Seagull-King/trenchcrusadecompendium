@@ -21,8 +21,8 @@ const GlossaryDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermainpurple'}>
-            <h1 className={'titleShape titlepurple'}>{ruleObject.Name || ""}</h1>
+        <div className={'modelStructure borderstyler bordertc'}>
+            <h1 className={'titleShape titlestyler backgroundtc'}>{ruleObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnDescription()}

@@ -35,7 +35,7 @@ class ViewInjuriesCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<IListItem>(['roll_start','roll_end','source', 'name', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = new ListItem(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, "tc");
             this.itemcollection.push(ItemNew);
         }
         this.UpdateList();

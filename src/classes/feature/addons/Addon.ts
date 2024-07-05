@@ -15,15 +15,11 @@ interface IAddonParent {
  */
 interface IPlayerAddon extends ITrenchCrusadeItemData {
     faction_id: string,
-    model_id: string,
-    parent: IAddonParent,
     description: []
 }
 
 class PlayerAddon extends TrenchCrusadeItem {
     public readonly Faction;
-    public readonly Model;
-    public readonly Parent;
     public readonly Description;
 
     /**
@@ -36,8 +32,6 @@ class PlayerAddon extends TrenchCrusadeItem {
         super(data)
         this.ItemType = ItemType.Addon;
         this.Faction = data.faction_id;
-        this.Model = data.model_id;
-        this.Parent = data.parent;
         this.Description = this.DescriptionFactory(data.description);
     }
 

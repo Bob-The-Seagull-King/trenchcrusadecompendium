@@ -17,11 +17,15 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import InjuryHover from '../../../../../components/subcomponents/informationpanel/hovermisc/InjuryHover';
 
+import { useGlobalState } from '../../../../../../utility/globalstate'
+
 const MemberEditScarsDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
+    
+    const [theme, setTheme] = useGlobalState('theme');
 
 
     const factionRef = useRef<HTMLSelectElement>(null);
@@ -60,9 +64,9 @@ const MemberEditScarsDisplay = (props: any) => {
                     <FontAwesomeIcon icon={faPlus} className="" style={{fontSize:"0.75em"}}/>
                 </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Add New Scar"}
                 </h1>
                 <Modal.Body >

@@ -14,7 +14,8 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
     attachments: [], // List of addons, summons, etc featured in an model
     blurb: [], // Flavour text
     equipment: [], // Mechanical description of the item
-    abilities: [] // Mechanical description of the item
+    abilities: [], // Mechanical description of the item
+    team?: string
 }
 
 class PlayerModel extends TrenchCrusadeItem {
@@ -23,6 +24,7 @@ class PlayerModel extends TrenchCrusadeItem {
     public readonly Melee;
     public readonly Armour;
     public readonly Base;
+    public readonly Team;
     
     public readonly Faction;
     public readonly Variant;
@@ -53,6 +55,12 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Armour = data.armour;
         this.Base = data.base;
         //
+
+        if (data.team) {
+            this.Team = data.team;
+        } else {
+            this.Team = "none"
+        }
 
         this.Blurb = this.DescriptionFactory(data.blurb);
         this.Equipment = this.DescriptionFactory(data.equipment);

@@ -24,7 +24,7 @@ const FilterTextItem = (prop: any) => {
     return (
         <div className="col">
             <div className="centerPosition">
-                <InputGroup className="mb-3 bordersubpurple filtertextinput">
+                <InputGroup className="mb-3 borderstyler subbordertc filtertextinput">
                     <Form.Control onChange={e => updateName(e.target.value)} className='' aria-label="Text input with checkbox" defaultValue={ItemFilter.Val}/>
                     <InputGroup.Text className=''>Exact Match?</InputGroup.Text>
                     <InputGroup.Checkbox checked={_currentstate}  onChange={e => updateStrict(e.target.checked)}  className='' aria-label="Checkbox for following text input" ></InputGroup.Checkbox>

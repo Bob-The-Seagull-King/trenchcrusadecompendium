@@ -96,8 +96,8 @@ const ModelDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour(ModelObject.Faction)}>
-            <h1 className={'titleShape title'+getColour(ModelObject.Faction)}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure borderstyler border'+getColour(ModelObject.Team)}>
+            <h1 className={'titleShape titlestyler background'+getColour(ModelObject.Team)}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}

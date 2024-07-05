@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
+import { useGlobalState } from '../../../../../utility/globalstate'
+
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,6 +19,7 @@ const WarbandFactionEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
+    const [theme, setTheme] = useGlobalState('theme');
 
     let factionRef : any = null;
 
@@ -58,9 +61,9 @@ const WarbandFactionEditDisplay = (props: any) => {
                 <FactionHover titlename={Warband_Faction} data={WarbandItem.Faction}/>
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Warband Faction"}
                 </h1>
                 <Modal.Body >

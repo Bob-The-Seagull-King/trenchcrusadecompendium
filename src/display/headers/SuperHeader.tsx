@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation  } from 'react-rout
 import { ROUTES } from '../../resources/routes-constants'
 
 import PlayerTacticsHeader from './PlayerTacticsHeader'
+import MenuHeader from './MenuHeader'
 
 const SuperHeader: React.FC = () => {
     const [stateheight, setHeight] = useState(0);
@@ -29,6 +30,7 @@ const SuperHeader: React.FC = () => {
             <Routes>
                 <Route path={ROUTES.COMPENDIUM_ROUTE} element={<PlayerTacticsHeader/>} />
                 <Route path={ROUTES.TOOLS_ROUTE} element={<PlayerTacticsHeader/>} />
+                <Route path={ROUTES.HOME_ROUTE} element={<MenuHeader/>} />
             </Routes>
         </div>
         <div style={{height:stateheight}}/>

@@ -22,6 +22,13 @@ class FactionVariantFactory {
         const equipSet : IEquipmentFactionList[] = FactionVariantFactory.ModifyEquipment(_addon, baseFaction);
         const modelSet : IModelFactionList[] = FactionVariantFactory.ModifyModels(_addon, baseFaction);
 
+        let teamval = "";
+        if (_addon.team) {
+            teamval = _addon.team;
+        } else {
+            teamval = baseFaction.team? baseFaction.team : "none"
+        }
+
         const variantFaction : IPlayerFaction = {
                 id: _addon.id, // The id of the item
                 type: _addon.type, // The type of the item (model, addon, summon, talent, relic, etc)
@@ -31,7 +38,8 @@ class FactionVariantFactory {
                 rules: ruleSet,
                 name:  "(" + _faction + " Variant) " + _addon.name,
                 equipment: equipSet,
-                models: modelSet
+                models: modelSet,
+                team: teamval
             }
 
         const VarFaction = FactionFactory.CreateFactory(variantFaction);

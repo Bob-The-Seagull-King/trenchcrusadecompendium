@@ -36,7 +36,7 @@ class ViewEquipmentCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<IPlayerEquipment>(['source', 'equip_type', 'name', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = EquipmentFactory.CreateFactory(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, getColour("tc"));
             this.itemcollection.push(ItemNew);
         }
     }

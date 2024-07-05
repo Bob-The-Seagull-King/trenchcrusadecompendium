@@ -122,7 +122,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
 
         if (AddonFound != null) {
             return (
-                <AddonDisplay data={AddonFound}/>
+                <AddonDisplay data={AddonFound} colour={parentItem.Team}/>
             )
         } else {
             return (

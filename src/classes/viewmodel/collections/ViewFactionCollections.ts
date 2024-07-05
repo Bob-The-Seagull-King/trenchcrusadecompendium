@@ -39,7 +39,7 @@ class ViewFactionCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<PlayerFaction>(['Name']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = FactionFactory.CreateFactory(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, modelNew.Team);
             this.itemcollection.push(ItemNew);
             this.GetVariants(modelNew);
         }
@@ -70,7 +70,7 @@ class ViewFactionCollection extends ViewCollectionsModel {
         let i = 0;
         for (i = 0; i < variants.length ; i++) {
             const variantfaction = FactionVariantFactory.CreateFactory(variants[i],faction.Name);
-            const ItemNew = new ViewTableItem(variantfaction, getColour("purple"));
+            const ItemNew = new ViewTableItem(variantfaction, variantfaction.Team);
             this.itemcollection.push(ItemNew);
         }
     }

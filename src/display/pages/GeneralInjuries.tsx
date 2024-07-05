@@ -78,7 +78,7 @@ const GeneralInjuries = (prop: any) => {
                                     <div className='col-12'>
                                         {_activeItems.length == 0 &&
                                             <div className="">
-                                                <div className='bordersubgrey emptyboxStructure'>
+                                                <div className='borderstyler subbordergrey emptyboxStructure'>
                                                     <h1 className="subtletext">No Items Selected</h1>
                                                 </div>
                                             </div>

@@ -35,7 +35,7 @@ class ViewQuickRulesCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<IQuickRule>(['source', 'name', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = new QuickRule(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, "tc");
             this.itemcollection.push(ItemNew);
         }
         this.UpdateList();

@@ -37,7 +37,7 @@ class ViewScenarioCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<Scenario>(['Name']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = ScenarioFactory.CreateFactory(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, "tc");
             this.itemcollection.push(ItemNew);
         }
     }

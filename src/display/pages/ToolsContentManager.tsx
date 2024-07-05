@@ -81,7 +81,7 @@ const ToolsContentManager = (prop: any) => {
                 <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-12">
                     <div className="row">
                         <div className="col-12 justify-content-center" style={{display:"flex"}}>
-                            <label htmlFor="pack-upload" className="generalbuttonbox bordersubpurple hovermouse">
+                            <label htmlFor="pack-upload" className="generalbuttonbox borderstyler subbordertc hovermouse">
                                 <FontAwesomeIcon icon={faFileImport} className="pageaccestext"/>
                                 <h1 className="pageaccestext">
                                     UPLOAD CONTENT PACK

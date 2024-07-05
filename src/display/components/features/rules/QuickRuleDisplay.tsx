@@ -50,8 +50,8 @@ const QuickRuleDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
-            <h1 className={'titleShape title'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure borderstyler border'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
+            <h1 className={'titleShape titlestyler background'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <>
                     <div>

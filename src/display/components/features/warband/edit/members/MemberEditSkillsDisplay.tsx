@@ -14,11 +14,14 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 
+import { useGlobalState } from './../../../../../../utility/globalstate'
+
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import SkillHover from '../../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
 
 const MemberEditSkillsDisplay = (props: any) => {
+    const [theme, setTheme] = useGlobalState('theme');
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
@@ -61,9 +64,9 @@ const MemberEditSkillsDisplay = (props: any) => {
                     <FontAwesomeIcon icon={faPlus} className="" style={{fontSize:"0.75em"}}/>
                 </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Add New Skill"}
                 </h1>
                 <Modal.Body >
@@ -141,15 +144,15 @@ const MemberEditSkillsDisplay = (props: any) => {
         return (
             <>
                 <div className="col-12">
-                    <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox borderstyler bordertc" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {"Experience : " + Warband_MaxCount}
                         </div>
                     </div>
                 </div>
-                <Modal onEnterKeyDown={() => handleCloseDucatsEdit()} show={showDucatsEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsEdit} keyboard={true}  centered>
+                <Modal data-theme={theme} onEnterKeyDown={() => handleCloseDucatsEdit()} show={showDucatsEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsEdit} keyboard={true}  centered>
                     
-                    <h1 className={'titleShape titlepurple'}>
+                    <h1 className={'titleShape titlestyler backgroundtc'}>
                         {"Update Model Experience"}
                     </h1>
                     

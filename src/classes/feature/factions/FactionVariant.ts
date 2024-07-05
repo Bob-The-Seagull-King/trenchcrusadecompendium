@@ -12,7 +12,8 @@ interface IPlayerFactionVariant extends ITrenchCrusadeItemData {
     models: IModelFactionList[],
     removed_rules : string[],
     removed_equip : string[],
-    removed_model : string[]
+    removed_model : string[],
+    team?: string
 }
 
 export {IPlayerFactionVariant}

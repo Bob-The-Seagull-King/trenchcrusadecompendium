@@ -6,8 +6,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticpriest",
-        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
         "name": "Puppet Master",
         "description":  [
                         {
@@ -24,8 +22,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticpriest",
-        "parent_id": {"tag_name": "model", "val": "md_hereticpriest"},
         "name": "Tough",
         "description":  [
                         {
@@ -42,8 +38,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticdeathcommando",
-        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
         "name": "Infiltrator",
         "description":  [
                         {
@@ -60,8 +54,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanateassassin",
-        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
         "name": "Infiltrator",
         "description":  [
                         {
@@ -78,8 +70,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticdeathcommando",
-        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
         "name": "Stealth Generator",
         "description":  [
                         {
@@ -96,8 +86,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_plagueknight_fv_dirgeofthegreathegemon",
-        "parent_id": {"tag_name": "model", "val": "md_plagueknight_fv_dirgeofthegreathegemon"},
         "name": "Hegemon's Will",
         "description":  [
                         {
@@ -165,8 +153,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticdeathcommando",
-        "parent_id": {"tag_name": "model", "val": "md_hereticdeathcommando"},
         "name": "Hide",
         "description":  [
                         {
@@ -183,8 +169,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticchorister",
-        "parent_id": {"tag_name": "model", "val": "md_hereticchorister"},
         "name": "Unholy Hymns",
         "description":  [
                         {
@@ -201,8 +185,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticchorister",
-        "parent_id": {"tag_name": "model", "val": "md_hereticchorister"},
         "name": "Unholy Horror",
         "description":  [
                         {
@@ -219,8 +201,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_anointedheavyinfantry",
-        "parent_id": {"tag_name": "model", "val": "md_anointedheavyinfantry"},
         "name": "Strong",
         "description":  [
                         {
@@ -237,8 +217,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_warwolfassaultbeast",
-        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
         "name": "Tough",
         "description":  [
                         {
@@ -255,8 +233,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_warwolfassaultbeast",
-        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
         "name": "Loping Dash",
         "description":  [
                         {
@@ -273,8 +249,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_warwolfassaultbeast",
-        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
         "name": "Terrifying",
         "description":  [
                         {
@@ -291,8 +265,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_warwolfassaultbeast",
-        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
         "name": "Chainmaw",
         "description":  [
                         {
@@ -309,8 +281,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_warwolfassaultbeast",
-        "parent_id": {"tag_name": "model", "val": "md_warwolfassaultbeast"},
         "name": "Shredding Claws",
         "description":  [
                         {
@@ -328,8 +298,6 @@
             
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_artillerywitch",
-        "parent_id": {"tag_name": "model", "val": "md_artillerywitch"},
         "name": "Infernal Bomb",
         "description":  [
             {
@@ -356,8 +324,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_artillerywitch",
-        "parent_id": {"tag_name": "model", "val": "md_artillerywitch"},
         "name": "Artificial Life",
         "description":  [
                         {
@@ -374,8 +340,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_artillerywitch_fv_knightsofavarice",
-        "parent_id": {"tag_name": "model", "val": "md_artillerywitch_fv_knightsofavarice"},
         "name": "Infernal Bomb",
         "description":  [
             {
@@ -402,8 +366,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_hereticpriest_fv_knightsofavarice",
-        "parent_id": {"tag_name": "model", "val": "md_hereticpriest_fv_knightsofavarice"},
         "name": "The Price Of Greed",
         "description":  [
             {
@@ -420,8 +382,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_goeticwarlock",
-        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
         "name": "Goetic Portal",
         "description":  [
             {
@@ -438,8 +398,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_goeticwarlock",
-        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
         "name": "Barbed Embrace",
         "description":  [
             {
@@ -456,8 +414,6 @@
         "tags": [
                 ],
         "faction_id": "fc_hereticlegion",
-        "model_id": "md_goeticwarlock",
-        "parent_id": {"tag_name": "model", "val": "md_goeticwarlock"},
         "name": "Goetic Gaze",
         "description":  [
             {
@@ -474,8 +430,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_warprophet",
-        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
         "name": "Loudspeakers",
         "description":  [
             {
@@ -492,8 +446,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_warprophet",
-        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
         "name": "Memento Mori",
         "description":  [
             {
@@ -510,8 +462,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_warprophet",
-        "parent_id": {"tag_name": "model", "val": "md_warprophet"},
         "name": "Laying On Hands",
         "description":  [
             {
@@ -528,8 +478,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_castigator",
-        "parent_id": {"tag_name": "model", "val": "md_castigator"},
         "name": "Enforced Orthodoxy",
         "description":  [
             {
@@ -546,8 +494,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_castigator",
-        "parent_id": {"tag_name": "model", "val": "md_castigator"},
         "name": "Whip Of God",
         "description":  [
             {
@@ -564,8 +510,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_communicant",
-        "parent_id": {"tag_name": "model", "val": "md_communicant"},
         "name": "Communicant Cross",
         "description":  [
             {
@@ -582,8 +526,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_communicant",
-        "parent_id": {"tag_name": "model", "val": "md_communicant"},
         "name": "Miracle of Regeneration",
         "description":  [
             {
@@ -600,8 +542,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_communicant",
-        "parent_id": {"tag_name": "model", "val": "md_communicant"},
         "name": "Bodyguard",
         "description":  [
             {
@@ -618,8 +558,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_corpseguard",
-        "parent_id": {"tag_name": "model", "val": "md_corpseguard"},
         "name": "Bodyguard",
         "description":  [
             {
@@ -636,8 +574,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_trenchpilgrim",
-        "parent_id": {"tag_name": "model", "val": "md_trenchpilgrim"},
         "name": "Ressurection",
         "description":  [
             {
@@ -659,8 +595,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_ecclesiasticprisoner",
-        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
         "name": "Mad Dash",
         "description":  [
             {
@@ -677,8 +611,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_ecclesiasticprisoner",
-        "parent_id": {"tag_name": "model", "val": "md_ecclesiasticprisoner"},
         "name": "Prisoner",
         "description":  [
             {
@@ -695,8 +627,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_stigmaticnun",
-        "parent_id": {"tag_name": "model", "val": "md_stigmaticnun"},
         "name": "Blessed Stigmata",
         "description":  [
             {
@@ -713,8 +643,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_stigmaticnun",
-        "parent_id": {"tag_name": "model", "val": "md_stigmaticnun"},
         "name": "Agile",
         "description":  [
             {
@@ -731,8 +659,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_anchoriteshrine",
-        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
         "name": "Catherine Wheel",
         "description":  [
             {
@@ -749,8 +675,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_anchoriteshrine",
-        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
         "name": "Bonebreaker Mace",
         "description":  [
             {
@@ -767,8 +691,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_anchoriteshrine",
-        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
         "name": "Fear",
         "description":  [
             {
@@ -785,8 +707,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_anchoriteshrine",
-        "parent_id": {"tag_name": "model", "val": "md_anchoriteshrine"},
         "name": "Broken on the Wheel",
         "description":  [
             {
@@ -803,8 +723,6 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "model_id": "md_warprophet_fv_cavalcadeofthetenthplague",
-        "parent_id": {"tag_name": "model", "val": "md_warprophet_fv_cavalcadeofthetenthplague"},
         "name": "Day of His Wrath",
         "description":  [
             {
@@ -821,8 +739,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_yuzbasicaptain",
-        "parent_id": {"tag_name": "model", "val": "md_yuzbasicaptain"},
         "name": "Mubarizun",
         "description":  [
             {
@@ -839,8 +755,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_jabireanalchemist",
-        "parent_id": {"tag_name": "model", "val": "md_jabireanalchemist"},
         "name": "Mastery of the Elements",
         "description":  [
             {
@@ -857,8 +771,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanateassassin",
-        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
         "name": "Time Slip",
         "description":  [
             {
@@ -875,8 +787,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanateassassin",
-        "parent_id": {"tag_name": "model", "val": "md_sultanateassassin"},
         "name": "Temporal Assassin",
         "description":  [
             {
@@ -893,8 +803,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanatesapper",
-        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
         "name": "Mine-setting",
         "description":  [
             {
@@ -911,8 +819,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanatesapper",
-        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
         "name": "De-mine",
         "description":  [
             {
@@ -929,8 +835,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_sultanatesapper",
-        "parent_id": {"tag_name": "model", "val": "md_sultanatesapper"},
         "name": "Dig In",
         "description":  [
             {
@@ -947,8 +851,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_lionsofjabir",
-        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
         "name": "Artificial Body",
         "description":  [
             {
@@ -965,8 +867,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_lionsofjabir",
-        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
         "name": "Mauling",
         "description":  [
             {
@@ -983,8 +883,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_lionsofjabir",
-        "parent_id": {"tag_name": "model", "val": "md_lionsofjabir"},
         "name": "Lion's Grace",
         "description":  [
             {
@@ -1001,8 +899,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_janissaries",
-        "parent_id": {"tag_name": "model", "val": "md_janissaries"},
         "name": "Counter-Charge",
         "description":  [
             {
@@ -1019,8 +915,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_brazenbull",
-        "parent_id": {"tag_name": "model", "val": "md_brazenbull"},
         "name": "Trample",
         "description":  [
             {
@@ -1037,8 +931,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_homunculus",
-        "parent_id": {"tag_name": "model", "val": "md_homunculus"},
         "name": "Re-Creation",
         "description":  [
             {
@@ -1055,8 +947,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_homunculus",
-        "parent_id": {"tag_name": "model", "val": "md_homunculus"},
         "name": "Alchemical Formula",
         "description":  [
             {
@@ -1073,8 +963,6 @@
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "model_id": "md_dervish",
-        "parent_id": {"tag_name": "model", "val": "md_dervish"},
         "name": "Whirling Dervishes",
         "description":  [
             {
@@ -1091,8 +979,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_lieutenant",
-        "parent_id": {"tag_name": "model", "val": "md_lieutenant"},
         "name": "On My Command!",
         "description":  [
             {
@@ -1109,8 +995,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_trenchcleric",
-        "parent_id": {"tag_name": "model", "val": "md_trenchcleric"},
         "name": "Onward, Christian Soldiers!",
         "description":  [
             {
@@ -1127,8 +1011,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_sniperpriest",
-        "parent_id": {"tag_name": "model", "val": "md_sniperpriest"},
         "name": "Aim",
         "description":  [
             {
@@ -1145,8 +1027,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_sniperpriest",
-        "parent_id": {"tag_name": "model", "val": "md_sniperpriest"},
         "name": "Absolute Faith",
         "description":  [
             {
@@ -1163,8 +1043,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_shocktroopers",
-        "parent_id": {"tag_name": "model", "val": "md_shocktroopers"},
         "name": "Shock Charge",
         "description":  [
             {
@@ -1181,8 +1059,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatengineer",
-        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
         "name": "Engineer Body Armour",
         "description":  [
             {
@@ -1199,8 +1075,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatengineer",
-        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
         "name": "Battlefield Demolition",
         "description":  [
             {
@@ -1217,8 +1091,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatengineer",
-        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
         "name": "Dig-In",
         "description":  [
             {
@@ -1235,8 +1107,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatengineer",
-        "parent_id": {"tag_name": "model", "val": "md_combatengineer"},
         "name": "De-Mine",
         "description":  [
             {
@@ -1253,8 +1123,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatmedic",
-        "parent_id": {"tag_name": "model", "val": "md_combatmedic"},
         "name": "Finish the Fallen",
         "description":  [
             {
@@ -1271,8 +1139,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_combatmedic",
-        "parent_id": {"tag_name": "model", "val": "md_combatmedic"},
         "name": "Expert Medic",
         "description":  [
             {
@@ -1289,8 +1155,6 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "model_id": "md_fianna",
-        "parent_id": {"tag_name": "model", "val": "md_fianna"},
         "name": "Skirmisher",
         "description":  [
             {
@@ -1307,8 +1171,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_lordoftumours",
-        "parent_id": {"tag_name": "model", "val": "md_lordoftumours"},
         "name": "Beelzebub's Touch",
         "description":  [
             {
@@ -1325,8 +1187,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_lordoftumours",
-        "parent_id": {"tag_name": "model", "val": "md_lordoftumours"},
         "name": "Undead Fortitude",
         "description":  [
             {
@@ -1343,8 +1203,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_corpseguard",
-        "parent_id": {"tag_name": "model", "val": "md_corpseguard"},
         "name": "Parasitic Tick",
         "description":  [
             {
@@ -1361,8 +1219,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_houndoftheblackgrail",
-        "parent_id": {"tag_name": "model", "val": "md_houndoftheblackgrail"},
         "name": "Frightening Speed",
         "description":  [
             {
@@ -1379,8 +1235,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_grailthrall",
-        "parent_id": {"tag_name": "model", "val": "md_grailthrall"},
         "name": "Overwhelming Horde",
         "description":  [
             {
@@ -1397,8 +1251,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_heraldofbeelzebub",
-        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
         "name": "Infected Proboscis",
         "description":  [
             {
@@ -1415,8 +1267,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_heraldofbeelzebub",
-        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
         "name": "Maddening Buzz",
         "description":  [
             {
@@ -1433,8 +1283,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_heraldofbeelzebub",
-        "parent_id": {"tag_name": "model", "val": "md_heraldofbeelzebub"},
         "name": "Toxic",
         "description":  [
             {
@@ -1451,8 +1299,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_amalgam",
-        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
         "name": "Corpulent",
         "description":  [
             {
@@ -1469,8 +1315,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_amalgam",
-        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
         "name": "Trample",
         "description":  [
             {
@@ -1487,8 +1331,6 @@
         "tags": [
                 ],
         "faction_id": "fc_blackgrail",
-        "model_id": "md_amalgam",
-        "parent_id": {"tag_name": "model", "val": "md_amalgam"},
         "name": "Unstoppable",
         "description":  [
             {
@@ -1505,8 +1347,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_wardog",
-        "parent_id": {"tag_name": "model", "val": "md_wardog"},
         "name": "Four Paws",
         "description":  [
             {
@@ -1523,8 +1363,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_guarddog",
-        "parent_id": {"tag_name": "model", "val": "md_guarddog"},
         "name": "Guard Dog",
         "description":  [
             {
@@ -1541,8 +1379,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_mercydog",
-        "parent_id": {"tag_name": "model", "val": "md_mercydog"},
         "name": "Mercy Dog",
         "description":  [
             {
@@ -1559,8 +1395,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_martyrdomdog",
-        "parent_id": {"tag_name": "model", "val": "md_martyrdomdog"},
         "name": "Martyrdom Dog",
         "description":  [
             {
@@ -1577,8 +1411,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_hellhound",
-        "parent_id": {"tag_name": "model", "val": "md_hellhound"},
         "name": "Hellhound",
         "description":  [
             {
@@ -1595,8 +1427,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_witchburnergeneral",
-        "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
         "name": "Divine Judgement",
         "description":  [
             {
@@ -1613,8 +1443,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_witchburnergeneral",
-        "parent_id": {"tag_name": "model", "val": "md_witchburnergeneral"},
         "name": "Ceremonial Duty",
         "description":  [
             {
@@ -1631,8 +1459,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_mendelistammomonk",
-        "parent_id": {"tag_name": "model", "val": "md_mendelistammomonk"},
         "name": "Faithful Followers",
         "description":  [
             {
@@ -1649,8 +1475,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_mendelistammomonk",
-        "parent_id": {"tag_name": "model", "val": "md_mendelistammomonk"},
         "name": "The Ammunition Sacrament",
         "description":  [
             {
@@ -1707,8 +1531,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_observer",
-        "parent_id": {"tag_name": "model", "val": "md_observer"},
         "name": "Lightning Speed",
         "description":  [
             {
@@ -1725,8 +1547,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_observer",
-        "parent_id": {"tag_name": "model", "val": "md_observer"},
         "name": "Temporal Fugue",
         "description":  [
             {
@@ -1743,8 +1563,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_observer",
-        "parent_id": {"tag_name": "model", "val": "md_observer"},
         "name": "Eye of God",
         "description":  [
             {
@@ -1761,8 +1579,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_observer",
-        "parent_id": {"tag_name": "model", "val": "md_observer"},
         "name": "Voice of God",
         "description":  [
             {
@@ -1779,8 +1595,6 @@
         "tags": [
                 ],
         "faction_id": "fc_none",
-        "model_id": "md_sineater",
-        "parent_id": {"tag_name": "model", "val": "md_sineater"},
         "name": "Devour",
         "description":  [
             {

@@ -13,10 +13,14 @@ import { faLock } from '@fortawesome/free-solid-svg-icons'
 import { faUnlock } from '@fortawesome/free-solid-svg-icons'
 import { makestringpresentable } from '../../../../utility/functions'
 
+import { useGlobalState } from '../../../../utility/globalstate'
+
 const ContentPackDisplay = (props: any) => {
     const PackItem: ContentPack = props.data;
     const parentView = props.parent;
     const updateHost = props.statefunction;
+
+    const [theme, setTheme] = useGlobalState('theme');
     
     const [stateWidth, setWidth] = useState(window.innerWidth);
     const ref = useRef<HTMLDivElement>(null);
@@ -133,8 +137,8 @@ const ContentPackDisplay = (props: any) => {
                 }
             </div>
 
-            <Modal size="lg" onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>    
-                <h1 className={'titleShape titlepurple'}>
+            <Modal data-theme={theme} size="lg" onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>    
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {PackItem.Name}
                     <div className="row float-end">
                         <div className='col-12 float-end'>

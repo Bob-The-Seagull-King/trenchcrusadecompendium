@@ -11,6 +11,8 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { useGlobalState } from '../../../../../utility/globalstate'
+
 const WarbandEditBankGloryDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -18,6 +20,7 @@ const WarbandEditBankGloryDisplay = (props: any) => {
 
     const Warband_MaxCount = WarbandItem? WarbandItem.GloryTotal : 0;
     let NewMaxCount = Warband_MaxCount;
+    const [theme, setTheme] = useGlobalState('theme');
 
     const Warband_LostCount = WarbandItem? WarbandItem.GloryLost : 0;
     let NewLostCount = Warband_LostCount;
@@ -73,22 +76,22 @@ const WarbandEditBankGloryDisplay = (props: any) => {
                 <div className="verticalspacerbig"/>
             </div>
             <div className="col-lg-5 col-md-5 col-12">
-                    <div onClick={() => handleShowGlorysEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowGlorysEdit()} className="hovermouse generalbackgroundbuttonbox borderstyler bordertc" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
                         </div>
                     </div>
             </div>
             <div className="col-lg-5 col-md-5 col-12">
-                    <div onClick={() => handleShowGlorysLostEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowGlorysLostEdit()} className="hovermouse generalbackgroundbuttonbox borderstyler bordertc" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             { Warband_LostCount + " Lost to War"}
                         </div>
                     </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseGlorysEdit()} show={showGlorysEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseGlorysEdit()} show={showGlorysEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Total Glory"}
                 </h1>
                 
@@ -105,9 +108,9 @@ const WarbandEditBankGloryDisplay = (props: any) => {
                     </div>
                 </Modal.Body>
             </Modal>
-            <Modal onEnterKeyDown={() => handleCloseGlorysLostEdit()} show={showGlorysLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysLostEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseGlorysLostEdit()} show={showGlorysLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseGlorysLostEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Lost Glory"}
                 </h1>
                 

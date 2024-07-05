@@ -12,6 +12,8 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { useGlobalState } from '../../../../../utility/globalstate'
+
 const WarbandNameEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -19,6 +21,7 @@ const WarbandNameEditDisplay = (props: any) => {
 
     const Warband_Name = WarbandItem? WarbandItem.Name : "";
     let NewBandName = Warband_Name;
+    const [theme, setTheme] = useGlobalState('theme');
 
     const [showNameEdit, setShowNameEdit] = useState(false);
     const handleCloseNameEdit = () => setShowNameEdit(false); 
@@ -47,9 +50,9 @@ const WarbandNameEditDisplay = (props: any) => {
                 </div>
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Warband Name"}
                 </h1>
                 <Modal.Body >

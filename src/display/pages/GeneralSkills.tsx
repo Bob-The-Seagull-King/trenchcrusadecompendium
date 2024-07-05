@@ -102,7 +102,7 @@ const GeneralSkills = (prop: any) => {
                                 </div>
                                 <div className="row">
                                     <div className='col-12'>
-                                        <div className='bordermainpurple roundBody no-padding '>
+                                        <div className='borderstyler bordertc roundBody no-padding '>
                                             {_foundItems.length == 0 && 
                                                 <div className="">
                                                     <h1 className="subtletext">No Models Found</h1>
@@ -133,7 +133,7 @@ const GeneralSkills = (prop: any) => {
                                     <div className='col-12'>
                                         {_activeItems.length == 0 &&
                                             <div className="">
-                                                <div className='bordersubgrey emptyboxStructure'>
+                                                <div className='borderstyler subbordergrey emptyboxStructure'>
                                                     <h1 className="subtletext">No Items Selected</h1>
                                                 </div>
                                             </div>

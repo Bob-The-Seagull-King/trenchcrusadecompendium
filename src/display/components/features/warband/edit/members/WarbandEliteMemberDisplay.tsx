@@ -12,6 +12,8 @@ import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
 import {ITrenchCrusadeItemTag} from '../../../../../../classes/TrenchCrusadeItem'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
+import { useGlobalState } from './../../../../../../utility/globalstate'
+
 import TagDisplay from '../../../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../../../subcomponents/description/ModelDescriptionItemDisplay';
 import Form from 'react-bootstrap/Form';
@@ -38,6 +40,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
     const bannedModelTags = ["inflict", "type"]
+    const [theme, setTheme] = useGlobalState('theme');
 
     const ducatcost = Manager.GetDucatCost(WarbandMember);
     const glorycost = Manager.GetGloryCost(WarbandMember)
@@ -352,8 +355,8 @@ const WarbandEliteMemberDisplay = (props: any) => {
 
     return (
         <>
-        <div className={'modelStructure bordermain'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
-            <h1 className={'titleShape title'+getColour(WarbandMember.Model.Object.Faction)}>
+        <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
+            <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
                 {WarbandMember.Name || ""}
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
                     
@@ -430,9 +433,9 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 
             </div>
         </div>
-            <Modal onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Name"}
                 </h1>
                 <Modal.Body >
@@ -449,9 +452,9 @@ const WarbandEliteMemberDisplay = (props: any) => {
                 </Modal.Body>
             </Modal>
 
-            <Modal onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {WarbandMember.Name + " Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>
@@ -471,9 +474,9 @@ const WarbandEliteMemberDisplay = (props: any) => {
                     </div>
                 </Modal.Body>
             </Modal>
-            <Modal onEnterKeyDown={() => handleCloseExportBasic()} size="lg" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExportBasic} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExportBasic()} size="lg" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExportBasic} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {WarbandMember.Name + " Basic Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>

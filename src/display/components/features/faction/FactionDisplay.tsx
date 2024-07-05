@@ -192,8 +192,8 @@ const FactionDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
-            <h1 className={'titleShape title'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure borderstyler border'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>
+            <h1 className={'titleShape titlestyler background'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnFlavour()}

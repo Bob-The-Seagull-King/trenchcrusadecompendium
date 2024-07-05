@@ -10,11 +10,14 @@ import Modal from 'react-bootstrap/Modal';
 import { ModelDescription } from '../../../../../classes/feature/models/ModelDescription';
 import ModelDescriptionItemDisplay from '../../description/ModelDescriptionItemDisplay';
 
+import { useGlobalState } from './../../../../../utility/globalstate'
+
 const InjuryHover = (props: any) => {
     const ruleObject: ListItem = props.data
     const ruleName = props.titlename
 
     const [show, setShow] = useState(false);
+    const [theme, setTheme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -26,7 +29,7 @@ const InjuryHover = (props: any) => {
             <span className='glossaryPurple hovermouse' style={{fontSize:"1.1em"}} onClick={() => handleShow()}>{ruleName}</span>                
           </span>
 
-          <Modal onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
+          <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="overcomeBackground" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
               <Modal.Body > 
                     {
                     <>{ruleObject.Description.map((item : any) => ( 

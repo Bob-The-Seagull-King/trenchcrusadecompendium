@@ -27,8 +27,8 @@ const UpgradeDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure bordermain'+getColour("purple")}>
-            <h1 className={'titleShape title'+getColour("purple")}>{ModelObject.Name || ""}</h1>
+        <div className={'modelStructure borderstyler border'+getColour("tc")}>
+            <h1 className={'titleShape titlestyler background'+getColour("tc")}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
 
                 <div>

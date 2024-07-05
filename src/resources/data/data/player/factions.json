@@ -7,6 +7,7 @@
             {"tag_name": "heretic", "val": ""}
                 ],
         "name": "Heretic Legion",
+        "team": "hell",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
@@ -125,6 +126,7 @@
             {"tag_name": "trenchpilgrim", "val": ""}
                 ],
         "name": "Trench Pilgrim",
+        "team": "heaven",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
@@ -239,6 +241,7 @@
             {"tag_name": "ironsultanate", "val": ""}
                 ],
         "name": "Iron Sultanate",
+        "team": "heaven",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
@@ -337,6 +340,7 @@
             {"tag_name": "newantioch", "val": ""}
                 ],
         "name": "The Principality of New Antioch",
+        "team": "heaven",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
@@ -468,6 +472,7 @@
             {"tag_name": "blackgrail", "val": ""}
                 ],
         "name": "The Cult of the Black Grail",
+        "team": "hell",
         "flavour":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],

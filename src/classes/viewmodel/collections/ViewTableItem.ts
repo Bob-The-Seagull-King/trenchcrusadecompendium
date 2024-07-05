@@ -1,5 +1,6 @@
 // Import typescript classes
 import { TrenchCrusadeItem } from "../../../classes/TrenchCrusadeItem";
+import { getColour } from "../../../utility/functions";
 
 class ViewTableItem {
 
@@ -12,7 +13,7 @@ class ViewTableItem {
      */
     constructor(item: TrenchCrusadeItem, colourName: string){
         this.HeldItem = item;
-        this.Colour = colourName;
+        this.Colour = getColour(colourName);
     }
 
     /**

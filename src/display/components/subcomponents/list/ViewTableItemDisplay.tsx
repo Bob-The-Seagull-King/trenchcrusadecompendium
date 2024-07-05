@@ -30,12 +30,12 @@ const ViewTableItemDisplay = (props: any) => {
                 <div className="colourOverlay"/>
             }
             {_activestate && 
-                <h1 className={"title" + tableItem.Colour + " no-padding itemlisttext softpad"}>
+                <h1 className={"titlestyler background" + tableItem.Colour + " no-padding itemlisttext softpad"}>
                 {tableItem.HeldItem.Name}
                 </h1>
             }
             {!_activestate &&
-                <h1 className={"subtitle" + tableItem.Colour + " no-padding itemlisttext softpad"}>
+                <h1 className={"titlestyler subbackground" + tableItem.Colour + " no-padding itemlisttext softpad"}>
                 {tableItem.HeldItem.Name}
                 </h1>
             }

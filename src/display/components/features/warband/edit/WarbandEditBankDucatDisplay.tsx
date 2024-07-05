@@ -11,6 +11,8 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { useGlobalState } from '../../../../../utility/globalstate'
+
 const WarbandEditBankDucatDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -20,6 +22,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
     let NewMaxCount = Warband_MaxCount;
     const Warband_LostCount = WarbandItem? WarbandItem.DucatLost : 0;
     let NewLostCount = Warband_LostCount;
+    const [theme, setTheme] = useGlobalState('theme');
 
     const CurrentCost = WarbandItem? Manager.TotalCostDucats(WarbandItem): 0;
 
@@ -72,22 +75,22 @@ const WarbandEditBankDucatDisplay = (props: any) => {
                 <div className="verticalspacerbig"/>
             </div>
             <div className="col-lg-5 col-md-5 col-12">
-                    <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowDucatsEdit()} className="hovermouse generalbackgroundbuttonbox borderstyler bordertc" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {CurrentCost + "/" + Warband_MaxCount + " (" + (Warband_MaxCount-CurrentCost) + " Available)"}
                         </div>
                     </div>
             </div>
             <div className="col-lg-5 col-md-5 col-12">
-                    <div onClick={() => handleShowDucatsLostEdit()} className="hovermouse generalbackgroundbuttonbox bordermainpurple" style={{justifyContent:"center",width:"100%"}} >
+                    <div onClick={() => handleShowDucatsLostEdit()} className="hovermouse generalbackgroundbuttonbox borderstyler bordertc" style={{justifyContent:"center",width:"100%"}} >
                         <div style={{textAlign:"center"}}>
                             {Warband_LostCount + " Lost to War"}
                         </div>
                     </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseDucatsEdit()} show={showDucatsEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseDucatsEdit()} show={showDucatsEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Total Ducats"}
                 </h1>
                 
@@ -104,9 +107,9 @@ const WarbandEditBankDucatDisplay = (props: any) => {
                     </div>
                 </Modal.Body>
             </Modal>
-            <Modal onEnterKeyDown={() => handleCloseDucatsLostEdit()} show={showDucatsLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsLostEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseDucatsLostEdit()} show={showDucatsLostEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseDucatsLostEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Lost Ducats"}
                 </h1>
                 

@@ -45,7 +45,7 @@ const HomeRoute: React.FC = () => {
                     </div>
                     <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1 form-group">
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/models/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/models/")}>
                                     <FontAwesomeIcon icon={faShapes} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         MODELS
@@ -53,7 +53,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/equipment/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/equipment/")}>
                                     <FontAwesomeIcon icon={faPersonRifle} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         EQUIPMENT
@@ -61,7 +61,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/factions/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/factions/")}>
                                     <FontAwesomeIcon icon={faPeopleGroup} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         FACTIONS
@@ -69,7 +69,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/scenarios/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/scenarios/")}>
                                     <FontAwesomeIcon icon={faCrosshairs} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         SCENARIOS
@@ -77,7 +77,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/injuries/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/injuries/")}>
                                     <FontAwesomeIcon icon={faUserInjured} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         INJURIES
@@ -85,7 +85,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/skills/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/skills/")}>
                                     <FontAwesomeIcon icon={faHandFist} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         SKILLS
@@ -93,7 +93,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/tables/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/tables/")}>
                                     <FontAwesomeIcon icon={faTable} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         RESULT TABLES
@@ -101,7 +101,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("compendium/rules/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/rules/")}>
                                     <FontAwesomeIcon icon={faScaleBalanced} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         RULES GUIDE
@@ -115,7 +115,7 @@ const HomeRoute: React.FC = () => {
                     <div className="row">
                         <div className="col row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/content/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("tools/content/")}>
                                     <FontAwesomeIcon icon={faFileLines} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         CONTENT MANAGER
@@ -123,7 +123,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/warband/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("tools/warband/")}>
                                     <FontAwesomeIcon icon={faScrewdriverWrench} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         WARBAND BUILDER
@@ -131,7 +131,7 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                             <div className="col mb-2">
-                                <div className="pageaccessbox bordersubpurple hovermouse" onClick={() => NavigateHome("tools/randomscenario/")}>
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("tools/randomscenario/")}>
                                     <FontAwesomeIcon icon={faDice} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         SCENARIO GENERATOR

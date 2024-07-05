@@ -12,6 +12,8 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { useGlobalState } from '../../../../../utility/globalstate'
+
 const WarbandImageEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -19,6 +21,7 @@ const WarbandImageEditDisplay = (props: any) => {
 
     const Warband_Image = ((WarbandItem? WarbandItem.Image : ""));
     let NewBandImage = Warband_Image;
+    const [theme, setTheme] = useGlobalState('theme');
 
     const [showImageEdit, setShowImageEdit] = useState(false);
     const handleCloseImageEdit = () => setShowImageEdit(false); 
@@ -78,14 +81,14 @@ const WarbandImageEditDisplay = (props: any) => {
         <>
             <div className="row">
                 <div className="col" style={{width:"100%"}}>
-                    <div ref={imageDisplay} className={(showsize? "image-wrapperwide" : "image-wrapper") + " hovermouse bordermainpurple"} onClick={() => handleShowImageEdit()} style={{paddingTop:heightimg}}>
+                    <div ref={imageDisplay} className={(showsize? "image-wrapperwide" : "image-wrapper") + " hovermouse borderstyler bordertc"} onClick={() => handleShowImageEdit()} style={{paddingTop:heightimg}}>
                         <Image src={Warband_Image} />
                     </div>
                 </div>
             </div>
-            <Modal onEnterKeyDown={() => handleCloseImageEdit()} show={showImageEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseImageEdit} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseImageEdit()} show={showImageEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseImageEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlepurple'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Warband Image Link"}
                 </h1>
                 <Modal.Body >

@@ -14,7 +14,8 @@ interface IPlayerFaction extends ITrenchCrusadeItemData {
     flavour: [],
     rules: IFactionRuleset[],
     equipment: IEquipmentFactionList[],
-    models: IModelFactionList[]
+    models: IModelFactionList[],
+    team?: string
 }
 
 class PlayerFaction extends TrenchCrusadeItem {
@@ -24,6 +25,7 @@ class PlayerFaction extends TrenchCrusadeItem {
     public readonly Equipment;
     public readonly Models : FactionModel[];
     public readonly InterfaceVal;
+    public readonly Team;
     
     /**
      * Assigns parameters and creates a series of description
@@ -36,6 +38,12 @@ class PlayerFaction extends TrenchCrusadeItem {
         this.ItemType = ItemType.Faction;
 
         this.InterfaceVal = data
+
+        if (data.team) {
+            this.Team = data.team;
+        } else {
+            this.Team = "none";
+        }
 
         this.Name = data.name;
         this.Equipment = this.EquipmentFactory(data.equipment)

@@ -8,9 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
+import { useGlobalState } from './../../../../utility/globalstate'
+
 const ContentPackInformation = (prop: any) => {
 
     const [show, setShow] = useState(false);
+    const [theme, setTheme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -22,9 +25,9 @@ const ContentPackInformation = (prop: any) => {
             <div style={{display:"flex"}}>
                 <FontAwesomeIcon icon={faCircleInfo} onClick={() => handleShow()} className="pageaccestext hovermouse" style={{fontSize:"3em"}}/>
             </div>
-            <Modal onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 
-                            <h1 className={'titleShape titlepurple'}>
+                            <h1 className={'titleShape titlestyler backgroundtc'}>
                                 Content Packs
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>

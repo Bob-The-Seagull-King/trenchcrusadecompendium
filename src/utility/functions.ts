@@ -50,33 +50,38 @@ export function makestringpresentable(stringVal: string) {
  * @returns The colour associated with that job or class
  */
 export function getColour(name: string){
-    const yellow = ["yellow"];
-    const red = ["red"];
-    const green = ["green"];
-    const blue = ["blue"];
-    const purple = ["purple", "Purple"];
-
-    if (yellow.includes(name.toLowerCase())) {
-        return yellow[0];
+    switch (name.toLowerCase()) {
+        case "hell": {
+            return "hell"
+        }
+        case "heaven": {
+            return "heaven"
+        }
+        case "yellow": {
+            return "yellow"
+        }
+        case "red": {
+            return "red"
+        }
+        case "green": {
+            return "green"
+        }
+        case "blue": {
+            return "blue"
+        }
+        case "tc": {
+            return "tc"
+        }
+        case "grey": {
+            return "grey"
+        }
+        case "none": {
+            return "grey"
+        }
+        default: {
+            return "tc"
+        }
     }
-
-    if (red.includes(name.toLowerCase())) {
-        return red[0];
-    }
-
-    if (green.includes(name.toLowerCase())) {
-        return green[0];
-    }
-
-    if (blue.includes(name.toLowerCase())) {
-        return blue[0];
-    }
-
-    if (purple.includes(name.toLowerCase())) {
-        return purple[0];
-    }
-
-    return purple[0];
 }
 
 /**

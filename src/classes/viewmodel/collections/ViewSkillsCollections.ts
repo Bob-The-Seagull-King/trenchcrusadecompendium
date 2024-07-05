@@ -35,7 +35,7 @@ class ViewSkillsCollection extends ViewCollectionsModel {
         this.dataresults.sort(byPropertiesOf<IListGroup>(['source', 'name', 'id']))
         for (i = 0; i < this.dataresults.length; i++) {
             const modelNew = new ListGroup(this.dataresults[i]);
-            const ItemNew = new ViewTableItem(modelNew, getColour("purple"));
+            const ItemNew = new ViewTableItem(modelNew, "tc");
             this.itemcollection.push(ItemNew);
         }
     }

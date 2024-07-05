@@ -1,65 +1,90 @@
 
 :root {
-  --colour_purple_main: #b80909;
+  --colour_tc_main: #b80909;
+  --colour_tc_secondary: #db3939;
+
+  --colour_hell_main: #EE220C;
+  --colour_heaven_main: #FEAE00;
+
+  --colour_hell_secondary: #FF968D;
+  --colour_heaven_secondary: #FFD932;
+
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
-  --colour_grey_main: #929292;
 
-  --colour_purple_secondary: #db3939;
   --colour_red_secondary: #FF968D;
-  --colour_yellow_secondary: #FFD932;
   --colour_green_secondary: #88FA4E;
+  --colour_yellow_secondary: #FFD932;
   --colour_blue_secondary: #4CDDFE;
+
+  --colour_grey_main: #929292;
   --colour_grey_secondary: #D5D5D5;
 
-  --colour_background_grey: #fafafa;
-  --colour_background_white: #ffffff;
+  --colour_offwhite: #fafafa;
+  --colour_white: #ffffff;
 
   --colour_basic_text: #000000;
 }
 
 [data-theme='light'] {
-  --colour_purple_main: #b80909;
+  --colour_tc_main: #b80909;
+  --colour_tc_secondary: #db3939;
+
+  --colour_hell_main: #EE220C;
+  --colour_heaven_main: #FEAE00;
+
+  --colour_hell_secondary: #FF968D;
+  --colour_heaven_secondary: #FFD932;
+
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
-  --colour_grey_main: #929292;
 
-  --colour_purple_secondary: #db3939;
   --colour_red_secondary: #FF968D;
-  --colour_yellow_secondary: #FFD932;
   --colour_green_secondary: #88FA4E;
+  --colour_yellow_secondary: #FFD932;
   --colour_blue_secondary: #4CDDFE;
+
+  --colour_grey_main: #929292;
   --colour_grey_secondary: #D5D5D5;
 
-  --colour_background_grey: #fafafa;
-  --colour_background_white: #ffffff;
+  --colour_offwhite: #fafafa;
+  --colour_white: #ffffff;
 
   --colour_basic_text: #000000;
 }
 
 [data-theme='dark'] {
-  --colour_purple_main: #b80909;
+  --colour_tc_main: #b80909;
+  --colour_tc_secondary: #911a1a;
+
+  --colour_hell_main: #EE220C;
+  --colour_heaven_main: #FEAE00;
+
+  --colour_hell_secondary: #b11200;
+  --colour_heaven_secondary: #c78903;
+
   --colour_red_main: #EE220C;
   --colour_green_main: #61D836;
   --colour_yellow_main: #FEAE00;
   --colour_blue_main: #00A2FF;
-  --colour_grey_main: #5e5e5e;
 
-  --colour_purple_secondary: #911a1a;
-  --colour_red_secondary: #c03121;
-  --colour_yellow_secondary: #c28e1f;
-  --colour_green_secondary: #5dac40;
-  --colour_blue_secondary: #238ac5;
-  --colour_grey_secondary: #383838;
+  --colour_red_secondary: #b11200;
+  --colour_green_secondary: #3da318;
+  --colour_yellow_secondary: #c78903;
+  --colour_blue_secondary: #0073b6;
 
-  --colour_background_grey: #0f0f0f;
-  --colour_background_white: #ffffff;
+  --colour_offwhite: #0f0f0f;
+  --colour_white: #ffffff;
+  
+  --colour_grey_main: #3d3d3d;
+  --colour_grey_secondary: #1b1b1b;
 
   --colour_basic_text: #ffffff;
+
 }
 
 .colourOverlay {
@@ -70,12 +95,86 @@
   }
 
 .setWhite {
-  color: var(--colour_background_white);
+  color: var(--colour_white);
 }
 
 .backgroundBaseColour {
-  background-color: var(--colour_background_grey);
+  background-color: var(--colour_offwhite);
   min-height: 100vh;
   height: 100%;
   color: var(--colour_basic_text);
 }
+
+
+.backgroundtc { background-color: var(--colour_tc_main);  }
+.colortc { color: var(--colour_tc_main);  }
+.bordertc { border-color: var(--colour_tc_main) !important; }
+
+.subbackgroundtc { background-color: var(--colour_tc_secondary);  }
+.subcolortc { color: var(--colour_tc_secondary);  }
+.subbordertc { border-color: var(--colour_tc_secondary) !important;  }
+
+
+.backgroundhell { background-color: var(--colour_hell_main);  }
+.colorhell { color: var(--colour_hell_main);  }
+.borderhell { border-color: var(--colour_hell_main) !important;  }
+
+.subbackgroundhell { background-color: var(--colour_hell_secondary);  }
+.subcolorhell { color: var(--colour_hell_secondary);  }
+.subborderhell { border-color: var(--colour_hell_secondary) !important;  }
+
+
+.backgroundheaven { background-color: var(--colour_heaven_main);  }
+.colorheaven { color: var(--colour_heaven_main);  }
+.borderheaven { border-color: var(--colour_heaven_main) !important;  }
+
+.subbackgroundheaven { background-color: var(--colour_heaven_secondary);  }
+.subcolorheaven { color: var(--colour_heaven_secondary);  }
+.subborderheaven { border-color: var(--colour_heaven_secondary) !important;  }
+
+
+.backgroundred { background-color: var(--colour_red_main);  }
+.colorred { color: var(--colour_red_main);  }
+.borderred { border-color: var(--colour_red_main) !important;  }
+
+.subbackgroundred { background-color: var(--colour_red_secondary);  }
+.subcolorred { color: var(--colour_red_secondary);  }
+.subborderred { border-color: var(--colour_red_secondary) !important;  }
+
+
+.backgroundgreen { background-color: var(--colour_green_main);  }
+.colorgreen { color: var(--colour_green_main);  }
+.bordergreen { border-color: var(--colour_green_main) !important;  }
+
+.subbackgroundgreen { background-color: var(--colour_green_secondary);  }
+.subcolorgreen { color: var(--colour_green_secondary);  }
+.subbordergreen { border-color: var(--colour_green_secondary) !important;  }
+
+
+.backgroundyellow { background-color: var(--colour_yellow_main);  }
+.coloryellow { color: var(--colour_yellow_main);  }
+.borderyellow { border-color: var(--colour_yellow_main) !important;  }
+
+.subbackgroundyellow { background-color: var(--colour_yellow_secondary);  }
+.subcoloryellow { color: var(--colour_yellow_secondary);  }
+.subborderyellow { border-color: var(--colour_yellow_secondary) !important;  }
+
+
+.backgroundblue { background-color: var(--colour_blue_main);  }
+.colorblue { color: var(--colour_blue_main);  }
+.borderblue { border-color: var(--colour_blue_main) !important;  }
+
+.subbackgroundblue { background-color: var(--colour_blue_secondary);  }
+.subcolorblue { color: var(--colour_blue_secondary);  }
+.subborderblue { border-color: var(--colour_blue_secondary) !important;  }
+
+
+.backgroundgrey { background-color: var(--colour_grey_main);  }
+.colorgrey { color: var(--colour_grey_main);  }
+.bordergrey { border-color: var(--colour_grey_main) !important;  }
+
+.subbackgroundgrey { background-color: var(--colour_grey_secondary);  }
+.subcolorgrey { color: var(--colour_grey_secondary);  }
+.subbordergrey { border-color: var(--colour_grey_secondary) !important;  }
+
+

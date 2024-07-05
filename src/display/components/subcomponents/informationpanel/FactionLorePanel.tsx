@@ -10,10 +10,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
+import { useGlobalState } from './../../../../utility/globalstate'
+
 const FactionLorePanel = (props: any) => {
     const ModelObject : PlayerFaction = props.data
 
     const [show, setShow] = useState(false);
+    const [theme, setTheme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -45,9 +48,9 @@ const FactionLorePanel = (props: any) => {
                 </div>
                 
             </div>
-            <Modal onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="filterboxStructure" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
+            <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="filterboxStructure" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
                 
-                            <h1 className={'titleShape titlepurple'}>
+                            <h1 className={'titleShape titlestyler backgroundtc'}>
                                 {ModelObject.Name}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>
