@@ -439,7 +439,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
         
         <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlestyler background'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Update Name"}
                 </h1>
                 <Modal.Body >
@@ -458,7 +458,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
 
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlestyler background'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {WarbandMember.Name + " Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>
@@ -480,7 +480,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
             </Modal>
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExportBasic()} size="lg" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExportBasic} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlestyler background'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {WarbandMember.Name + " Basic Export"}
                                 <div className="row float-end">
                                     <div className='col-12 float-end'>

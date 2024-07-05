@@ -198,7 +198,7 @@ const WarbandMembersDisplay = (props: any) => {
             
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNewModel()} show={showNewModel} size="lg" contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNewModel} keyboard={true}  centered>
                 
-                <h1 className={'titleShape titlestyler background'}>
+                <h1 className={'titleShape titlestyler backgroundtc'}>
                     {"Add New Member"}
                     <div className="row float-end">
                         <div className='col-12 float-end'>
