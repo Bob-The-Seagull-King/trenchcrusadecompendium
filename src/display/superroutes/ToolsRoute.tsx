@@ -15,7 +15,14 @@ import { ContentPackManager } from '../../classes/contentpacks/contentmanager'
 import { WarbandManager } from '../../classes/lists/warbandmanager'
 import { ScenarioGenerator } from '../../classes/feature/scenarios/ScenarioGenerator'
 
-const ToolsRoute: React.FC = () => {
+import {ToolsController} from '../../classes/ToolsController'
+
+
+interface IControllerProp {
+    controller : ToolsController;
+}
+
+const ToolsRoute: React.FC<IControllerProp> = (prop) => {
 
 
     const [theme, setTheme] = useGlobalState('theme');
@@ -24,19 +31,15 @@ const ToolsRoute: React.FC = () => {
         setTheme('light');
     }
 
-    // Initialize Controller //
-    const ContentManager = new ContentPackManager;
-    const ListManager = new WarbandManager;
-    const ScenarioGen = new ScenarioGenerator;
 
     // Return result -----------------------------
     return (
         
         <div className="backgroundBaseColour" data-theme={theme}>
         <Routes>
-            <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={ContentManager}/>} />
-            <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder manager={ListManager}/>} />
-            <Route path={ROUTES.TOOLS_SCENARIO_GENERATOR_ROUTE} element={<ToolsScenarioGenerator manager={ScenarioGen}/>} />
+            <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={prop.controller.ContentManager}/>} />
+            <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder manager={prop.controller.ListManager}/>} />
+            <Route path={ROUTES.TOOLS_SCENARIO_GENERATOR_ROUTE} element={<ToolsScenarioGenerator manager={prop.controller.ScenarioGen}/>} />
         </Routes>
         </div>
     )

@@ -9,6 +9,7 @@ import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
 import { ControllerController } from './classes/ControllerController'
+import { ToolsController } from './classes/ToolsController';
 
 /* 
     Major routes are placed here.
@@ -23,6 +24,7 @@ import ToolsRoute from './display/superroutes/ToolsRoute'
 const RootComponent: React.FC = () => {
 
     const mastercontroller = new ControllerController();
+    const toolcontroller = new ToolsController();
 
     return (
         <div>
@@ -30,7 +32,7 @@ const RootComponent: React.FC = () => {
                 <SuperHeader/>
                 <Routes>
                     <Route path={ROUTES.COMPENDIUM_ROUTE} element={<CompendiumRoute controller={mastercontroller} />} />
-                    <Route path={ROUTES.TOOLS_ROUTE} element={<ToolsRoute />} />
+                    <Route path={ROUTES.TOOLS_ROUTE} element={<ToolsRoute controller={toolcontroller} />} />
                     <Route path={ROUTES.HOME_ROUTE} element={<HomeRoute />} />
                 </Routes>
             </Router>

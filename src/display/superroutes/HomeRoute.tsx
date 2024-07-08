@@ -35,9 +35,6 @@ const HomeRoute: React.FC = () => {
 
     const navigate = useNavigate();
 
-    // Initialize Controller //
-    const ModelsCollectionController = new AllModelsListPage()    
-
     function NavigateHome(dir: string) {
         navigate('/' + dir);
     }
