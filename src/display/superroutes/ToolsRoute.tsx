@@ -4,6 +4,8 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
+import { useGlobalState } from './../../utility/globalstate'
+
 import ToolsContentManager from '../../display/pages/ToolsContentManager'
 import ToolsWarbandBuilder from '../../display/pages/ToolsWarbandBuilder'
 import ToolsScenarioGenerator from '../../display/pages/ToolsScenarioGenerator'
@@ -15,6 +17,13 @@ import { ScenarioGenerator } from '../../classes/feature/scenarios/ScenarioGener
 
 const ToolsRoute: React.FC = () => {
 
+
+    const [theme, setTheme] = useGlobalState('theme');
+
+    if ((theme == "" ) || (theme == null)) {
+        setTheme('light');
+    }
+
     // Initialize Controller //
     const ContentManager = new ContentPackManager;
     const ListManager = new WarbandManager;
@@ -22,11 +31,14 @@ const ToolsRoute: React.FC = () => {
 
     // Return result -----------------------------
     return (
+        
+        <div className="backgroundBaseColour" data-theme={theme}>
         <Routes>
             <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={ContentManager}/>} />
             <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder manager={ListManager}/>} />
             <Route path={ROUTES.TOOLS_SCENARIO_GENERATOR_ROUTE} element={<ToolsScenarioGenerator manager={ScenarioGen}/>} />
         </Routes>
+        </div>
     )
     // -------------------------------------------
 }

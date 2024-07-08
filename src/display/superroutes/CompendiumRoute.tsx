@@ -21,32 +21,38 @@ import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesLi
 import { AllTableReferenceListPage } from '../../classes/viewmodel/pages/AllTableReferenceListPage'
 import { AllSkillsListPage } from '../../classes/viewmodel/pages/AllSkillsListPage'
 import { AllQuickRulesPage } from '../../classes/viewmodel/pages/AllQuickRulesListPage'
+import { ControllerController } from '../../classes/ControllerController'
+
+import { useGlobalState } from './../../utility/globalstate'
 import path from 'path'
 
-const CompendiumRoute: React.FC = () => {
+interface IControllerProp {
+    controller : ControllerController;
+}
 
-    // Initialize Controller //
-    const ModelsCollectionController = new AllModelsListPage()
-    const EquipmentCollectionController = new AllEquipmentListPage()
-    const FactionCollectionController = new AllFactionListPage()
-    const ScenarioCollectionController = new AllScenarioListPage()
-    const InjuryCollectionController = new AllInjuriesListPage()
-    const SkillCollectionController = new AllSkillsListPage()
-    const TableReferenceCollectionController = new AllTableReferenceListPage()
-    const QuickRulesCollectionController = new AllQuickRulesPage()
+const CompendiumRoute: React.FC<IControllerProp> = (prop) => {
+
+
+    const [theme, setTheme] = useGlobalState('theme');
+
+    if ((theme == "" ) || (theme == null)) {
+        setTheme('light');
+    }
 
     // Return result -----------------------------
     return (
+        <div className="backgroundBaseColour" data-theme={theme}>
         <Routes>
-        <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<PlayerTacticsModels controller={ModelsCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<PlayerTacticsEquipment controller={EquipmentCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_FACTION_ROUTE} element={<PlayerTacticsFaction controller={FactionCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<GeneralScenarios controller={ScenarioCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={InjuryCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={SkillCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={TableReferenceCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<GeneralQuickRules controller={QuickRulesCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<PlayerTacticsModels controller={prop.controller.ModelsCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<PlayerTacticsEquipment controller={prop.controller.EquipmentCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_FACTION_ROUTE} element={<PlayerTacticsFaction controller={prop.controller.FactionCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<GeneralScenarios controller={prop.controller.ScenarioCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={prop.controller.InjuryCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={prop.controller.SkillCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={prop.controller.TableReferenceCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<GeneralQuickRules controller={prop.controller.QuickRulesCollectionController}/>} />
         </Routes>
+        </div>
     )
     // -------------------------------------------
 }

@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
-import { useGlobalState } from './utility/globalstate'
+import { ControllerController } from './classes/ControllerController'
 
 /* 
     Major routes are placed here.
@@ -22,21 +22,14 @@ import ToolsRoute from './display/superroutes/ToolsRoute'
 
 const RootComponent: React.FC = () => {
 
-
-    const [theme, setTheme] = useGlobalState('theme');
-
-    if ((theme == "" ) || (theme == null)) {
-        setTheme('light');
-    }
-
+    const mastercontroller = new ControllerController();
 
     return (
-        <div className="backgroundBaseColour" data-theme={theme}>
-
+        <div>
             <Router>
                 <SuperHeader/>
                 <Routes>
-                    <Route path={ROUTES.COMPENDIUM_ROUTE} element={<CompendiumRoute />} />
+                    <Route path={ROUTES.COMPENDIUM_ROUTE} element={<CompendiumRoute controller={mastercontroller} />} />
                     <Route path={ROUTES.TOOLS_ROUTE} element={<ToolsRoute />} />
                     <Route path={ROUTES.HOME_ROUTE} element={<HomeRoute />} />
                 </Routes>
