@@ -19,7 +19,7 @@ const GlossaryHover = (props: any) => {
           <span className='glossaryPurple hovermouse'>{ruleName}</span>
         </HoverCard.Trigger>
         <HoverCard.Portal>
-          <HoverCard.Content data-theme={theme} className="HoverCardContent" sideOffset={5}>
+          <HoverCard.Content data-theme={theme} style={{ pointerEvents: "auto" }} className="HoverCardContent topdisplay" sideOffset={5}>
               <div  className='popupBody'>
                 <GlossaryDisplay data={ruleObject}/>
               </div>

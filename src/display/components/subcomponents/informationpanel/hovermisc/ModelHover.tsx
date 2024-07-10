@@ -25,7 +25,7 @@ const ModelHover = (props: any) => {
             <span className='glossaryPurple hovermouse' onClick={() => handleShow()}>{ruleName}</span>                
           </span>
 
-          <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="overcomeBackground" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
+          <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="overcomeBackground" dialogClassName="noborder"  onHide={handleClose} keyboard={true}  centered>
               <Modal.Body > 
                   <ModelDisplay data={ruleObject}/>
               </Modal.Body>

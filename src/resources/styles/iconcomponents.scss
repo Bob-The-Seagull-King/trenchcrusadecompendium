@@ -32,6 +32,7 @@
 
 .overcomeBackground {
     background: none !important;
+    border: none !important;
 }
 
 .modelInternalStructure {
@@ -208,6 +209,15 @@
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.topdisplay {
+    
+    z-index: 9999999999999999999999999999;
+}
+
+.noborder {
+    border: none !important;
 }
 
 .floatingButton {
