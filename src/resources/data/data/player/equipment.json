@@ -34,7 +34,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": ""}
+                {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Semi-Automatic Rifle",
@@ -50,7 +50,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": ""}
+                {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Automatic Rifle",
@@ -105,7 +105,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": ""}
+                {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Silenced Pistol",
@@ -132,8 +132,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""},
-            {"tag_name": "Shrapnel", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"},
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
                 ],
         "category": "ranged",
         "name": "Grenades",
@@ -159,8 +159,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""},
-            {"tag_name": "Gas", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"},
+            {"tag_name": "Gas", "val": "gl_gas"}
                 ],
         "category": "ranged",
         "name": "Gas Grenades",
@@ -187,8 +187,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""},
-            {"tag_name": "Fire", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"},
+            {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "ranged",
         "name": "Incendiary Grenades",
@@ -214,7 +214,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": ""}
+                {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Submachine Gun",
@@ -267,7 +267,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": ""}
+                {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Automatic Shotgun",
@@ -294,8 +294,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": ""},
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Grenade Launcher",
@@ -321,7 +321,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Heavy", "val": ""}
+                {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Machine Gun",
@@ -348,7 +348,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Fire", "val": ""}
+                {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "ranged",
         "name": "Flamethrower",
@@ -375,8 +375,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Fire", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "ranged",
         "name": "Heavy Flamethrower",
@@ -403,8 +403,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "ranged",
         "name": "Anti-Material Rifle",
@@ -512,7 +512,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Critical", "val": ""}
+                {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Sword/Axe",
@@ -554,8 +554,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "GreatSword/Axe",
@@ -571,7 +571,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Heavy", "val": ""}
+                {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "melee",
         "name": "Two-Handed Hammer",
@@ -587,7 +587,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Risky", "val": ""}
+                {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "category": "melee",
         "name": "Sacrificial Knife",
@@ -613,7 +613,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Fire", "val": ""}
+                {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "melee",
         "name": "Hellblade",
@@ -655,8 +655,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fire", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Fire", "val": "gl_fire"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Blasphemous Staff",
@@ -747,7 +747,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": ""}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
                 ],
         "category": "equipment",
         "name": "Combat Helmet",
@@ -774,7 +774,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Gas", "val": ""}
+            {"tag_name": "Gas", "val": "gl_gas"}
                 ],
         "category": "equipment",
         "name": "Gas Mask",
@@ -801,7 +801,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Unholy Trinket",
@@ -828,7 +828,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fear", "val": ""}
+            {"tag_name": "Fear", "val": "gl_fear"}
                 ],
         "category": "equipment",
         "name": "Unholy Relic",
@@ -855,8 +855,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fire", "val": ""},
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Fire", "val": "gl_fire"},
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Incendiary Bullets",
@@ -908,7 +908,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "equipment",
         "name": "Marid Shovel",
@@ -934,7 +934,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": ""}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
                 ],
         "category": "ranged",
         "name": "Alaybozan",
@@ -960,7 +960,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fire", "val": ""}
+            {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "equipment",
         "name": "Infernal Brand Mark",
@@ -1013,7 +1013,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fire", "val": ""}
+            {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "equipment",
         "name": "Hellbound Soul Contract",
@@ -1092,7 +1092,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Golden Calf Altar",
@@ -1119,7 +1119,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "melee",
         "name": "Coin Hammer",
@@ -1147,7 +1147,7 @@
         "source": "core",
         "tags": [
             {"tag_name": "Off-Hand", "val": ""},
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Automatic Pistol",
@@ -1174,8 +1174,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Fire", "val": ""},
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Fire", "val": "gl_fire"},
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Molotov Cocktail",
@@ -1217,7 +1217,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": ""}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
                 ],
         "category": "ranged",
         "name": "Blunderbuss",
@@ -1270,8 +1270,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Risky", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Risky", "val": "gl_riskyaction"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Anti-Tank Hammer",
@@ -1584,7 +1584,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Sacrificial Lamb",
@@ -1627,7 +1627,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Siege Jezzail",
@@ -1644,8 +1644,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Risky", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Risky", "val": "gl_riskyaction"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "ranged",
         "name": "Sniper Rifle",
@@ -1661,7 +1661,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "MURAD Bombard",
@@ -1688,8 +1688,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Fire", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Fire", "val": "gl_fire"}
                 ],
         "category": "ranged",
         "name": "Flame Cannon",
@@ -1716,7 +1716,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "melee",
         "name": "Halberd-Gun",
@@ -1743,8 +1743,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Titan Zulfiqar",
@@ -1771,7 +1771,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Assassin's Dagger",
@@ -1955,7 +1955,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Critical", "val" : ""}
+            {"tag_name": "Critical", "val" : "gl_critical"}
                 ],
         "category": "ranged",
         "name": "Bow of Alumat",
@@ -1982,7 +1982,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Hashashin Leaf",
@@ -2009,8 +2009,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""},
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"},
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Satchel Charge",
@@ -2141,7 +2141,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "melee",
         "name": "Beelzebub's Axe",
@@ -2168,8 +2168,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""},
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Lochaber Axe",
@@ -2222,7 +2222,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Gas", "val": ""}
+            {"tag_name": "Gas", "val": "gl_gas"}
                 ],
         "category": "ranged",
         "name": "Corruption Belcher",
@@ -2249,7 +2249,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Putrid Shotgun",
@@ -2276,7 +2276,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Parasite Grenade",
@@ -2303,7 +2303,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Viscera Cannon",
@@ -2356,7 +2356,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": ""}
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "ranged",
         "name": "Sultanate Grand Cannon",
@@ -2383,7 +2383,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "melee",
         "name": "Kilij",
@@ -2399,7 +2399,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Critical", "val": ""}
+            {"tag_name": "Critical", "val": "gl_critical"}
                 ],
         "category": "ranged",
         "name": "Masterwork Jezzail",
@@ -2426,7 +2426,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "ranged",
         "name": "Rocket Propelled Grenade",
@@ -2453,8 +2453,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": ""},
-            {"tag_name": "Assault", "val": ""}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Holy Grenade",
@@ -2522,7 +2522,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Cup of Filth",
@@ -2705,7 +2705,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Heavy", "val": ""}
+                {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "melee",
         "name": "Tenderizer Maul",
@@ -2810,7 +2810,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Smoke Screen",
@@ -2915,7 +2915,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Resurrection Engine",
@@ -2994,7 +2994,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": ""}
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Elixer Of Al-Khidr",

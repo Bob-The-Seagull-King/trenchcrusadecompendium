@@ -4,9 +4,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": ""},
-                    {"tag_name": "elite", "val": ""},
-                    {"tag_name": "tough", "val": ""}
+                    {"tag_name": "heretic", "val": "gl_heretic"},
+                    {"tag_name": "elite", "val": "gl_elite"},
+                    {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -45,9 +45,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": ""},
-                    {"tag_name": "elite", "val": ""},
-                    {"tag_name": "tough", "val": ""}
+                    {"tag_name": "heretic", "val": "gl_heretic"},
+                    {"tag_name": "elite", "val": "gl_elite"},
+                    {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -86,9 +86,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "heretic", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "infiltrator", "val": ""}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -132,9 +132,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "heretic", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "6\"",
         "ranged": "-2",
@@ -185,7 +185,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": ""}
+                    {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -216,8 +216,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "heretic", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -252,9 +252,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "heretic", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "8\"",
         "ranged": "",
@@ -309,7 +309,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": ""}
+                    {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -349,7 +349,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": ""}
+                    {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -389,8 +389,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "heretic", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -440,8 +440,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -489,8 +489,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -538,8 +538,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -582,10 +582,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "strong", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "strong", "val": "gl_strong"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "-3",
@@ -647,9 +647,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "strong", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "strong", "val": "gl_strong"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -700,7 +700,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -738,7 +738,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
         "movement": "6\"",
         "ranged": "N/A",
@@ -781,7 +781,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
         "movement": "8\"",
         "ranged": "+1",
@@ -828,9 +828,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "N/A",
@@ -889,9 +889,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -935,8 +935,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -975,9 +975,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "infiltrator", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1026,10 +1026,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "infiltrator", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "infiltrator", "val": "gl_infiltrator"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1083,7 +1083,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1117,7 +1117,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1151,8 +1151,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "infiltrator", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1191,7 +1191,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1240,8 +1240,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1285,9 +1285,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "strong", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "strong", "val": "gl_strong"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1331,7 +1331,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "8\"",
         "ranged": "N/A",
@@ -1380,7 +1380,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1424,10 +1424,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1486,7 +1486,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "ironsultanate", "val": ""}
+            {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1547,9 +1547,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -1601,10 +1601,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -1661,10 +1661,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "skirmisher", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "skirmisher", "val": "gl_skirmisher"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -1716,8 +1716,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1756,8 +1756,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+2",
@@ -1801,7 +1801,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1845,7 +1845,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -1884,7 +1884,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1938,8 +1938,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -1983,8 +1983,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""},
-            {"tag_name": "strong", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2028,7 +2028,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "newantioch", "val": ""}
+            {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2085,11 +2085,11 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "strong", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "strong", "val": "gl_strong"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -2148,9 +2148,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2199,9 +2199,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2255,10 +2255,10 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "tough", "val": ""},
-            {"tag_name": "elite", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "+1",
@@ -2317,9 +2317,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "elite", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2373,8 +2373,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "8\"",
         "ranged": "N/A",
@@ -2423,8 +2423,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "4\"",
         "ranged": "N/A",
@@ -2473,8 +2473,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "movement": "4\"",
         "ranged": "0",
@@ -2523,9 +2523,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "skirmisher", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "skirmisher", "val": "gl_skirmisher"}
                 ],
         "movement": "10\"/Fly",
         "ranged": "0",
@@ -2588,9 +2588,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "blackgrail", "val": ""},
-            {"tag_name": "fear", "val": ""},
-            {"tag_name": "tough", "val": ""}
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"}
                 ],
         "movement": "6\"",
         "ranged": "0",
@@ -2879,7 +2879,7 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name":"elite", "val": ""}
+            {"tag_name":"elite", "val": "gl_elite"}
                 ],
         "movement": "6\"",
         "ranged": "0",
