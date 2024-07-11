@@ -791,7 +791,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When the Assassin charges an enemy and you’ve rolled to see if their charge reaches them, check if there are any other enemies within Assassin’s charge distance. If there is more than one eligible target, you may move the Assassin in base contact with up to two enemy models one after the other, and resolve the Assassin attacking both of the models separately, including any injuries. You can attack each model with only one of the Melee Attacks available to the Assassin. After resolving both attacks, you can decide which of the two positions the Assassin ends up in after making the melee attacks.",
+                "content": "After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin split itself through time. Choose up to two enemy models within the charging distance from the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may Make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation. .",
                 "glossary": []
             }
         ]
@@ -829,18 +829,34 @@
         ]
     },
     {
-        "id": "ab_digin",
+        "id": "ab_fortify",
         "type": "Addon",
         "source": "core",
         "tags": [
                 ],
         "faction_id": "fc_ironsultanate",
-        "name": "Dig In",
+        "name": "Fortify",
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "During their Activation, an Sapper can take a RISKY ACTION with +1 DICE. If successful, the Sapper is considered to be in Cover until the model moves. This can only be done on the ground.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_forwardpositions",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_ironsultanate",
+        "name": "Forward Positions",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Any Sapper can deploy up to 6\" away from the Sultanate Deployment zone if they can be deployed this way while touching a piece of scenery. This ability cannot be used if the Scenario does not allow the use of INFILTRATORS.",
+                "glossary": [{"val": "INFILTRATORS", "id": "gl_infiltrator"}]
             }
         ]
     },
@@ -871,7 +887,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Downed opponent cannot stand up if it is in melee combat with a Lion of Jabir, unless it is on a 40mm or larger base.",
+                "content": "A Downed opponent cannot stand up if it is in melee combat with a Lion of Jabir, (even if the Lion is Down itself) unless it is on a 40mm or larger base.",
                 "glossary": []
             }
         ]
@@ -1053,18 +1069,18 @@
         ]
     },
     {
-        "id": "ab_engineerbodyarmour",
+        "id": "ab_assaultdrill",
         "type": "Addon",
         "source": "core",
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "name": "Engineer Body Armour",
+        "name": "Assault Drill",
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All weapons with keyword SHRAPNEL suffer -1 DICE on all Injury rolls against the Combat Engineer, and the SHRAPNEL attacks do not cause the extra BLOOD MARKERS on a model wearing this suit. These effects work even against attacks that ignore armour.",
-                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                "content": "Shocktroopers ignore the effects of Keyword HEAVY on Melee weapons. The Shocktrooper can still only carry a single HEAVY item, unless they are STRONG.",
+                "glossary": [{"val": "HEAVY", "id": "gl_heavy"},{"val": "STRONG", "id": "gl_strong"}]
             }
         ]
     },
@@ -1191,8 +1207,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All injury rolls against the Model are made with -1 DICE, unless the attack has the Keyword FIRE, in which case it works normally. Attacks with the Keyword GAS have no effect on it.",
-                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"}]
+                "content": "All injury rolls against the Lord of Tumours are made with -1 DICE, unless the attack has the Keyword FIRE, in which case it works normally. This model does not suffer additional BLOOD MARKERS from attacks with Keyword GAS.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"}]
             }
         ]
     },
@@ -1207,8 +1223,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If a Corpse Guard attack causes a BLOOD MARKER on a creature without the Keyword BLACK GRAIL in melee combat, the Corpse Guard can remove one of their own BLOOD MARKERS.",
-                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                "content": "If a Corpse Guard’s attack causes a BLOOD MARKER or an INFECTION MARKER on a creature without the Keyword BLACK GRAIL in melee combat, the Corpse Guard can remove one of their own BLOOD MARKERS or INFECTION MARKERS.",
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"}]
             }
         ]
     },
@@ -1255,24 +1271,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "In melee, the Heralds attack with their proboscis and suffer no penalties for being unarmed. If this attack causes a BLOOD MARKER on any enemy without the Keyword BLACK GRAIL, the Herald can remove one of their own BLOOD MARKERS.",
+                "content": "Heralds suffer no penalties for fighting unarmed in melee and they cause INFECTION MARKERS with their unarmed attacks instead of BLOOD MARKERS. If this attack causes an INFECTION MARKER on any enemy without the Keyword BLACK GRAIL, the Herald can remove one of their own BLOOD MARKERS.",
                 "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
-            }
-        ]
-    },
-    {
-        "id": "ab_maddeningbuzz",
-        "type": "Addon",
-        "source": "core",
-        "tags": [
-                ],
-        "faction_id": "fc_blackgrail",
-        "name": "Maddening Buzz",
-        "description":  [
-            {
-                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " Every ACTION taken by an enemy within 8” of a Herald is considered a RISKY ACTION.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
     },

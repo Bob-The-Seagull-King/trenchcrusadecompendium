@@ -482,7 +482,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Each Assassin included in the Warband may purchase any of the following abilities. You may purchase the same ability for more than one Assassin if you wish, but you cannot purchase the same ability more than once for the same Assassin.",
+                                "content": "Each Assassin included in the Warband may purchase any of the following abilities. There can’t be any duplicates in the Warband, and you can buy only one for each Assassin.",
                                 "subcontent":  []
                             },
                             {
@@ -521,6 +521,17 @@
                                                 "glossary": [{"val": "-1 DICE", "id" : "gl_minusdice"}]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                        "content": "Secret Paths (10 ducats):",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "At the start of the battle, right before the first model is set up, declare whether or not this model will be set up by using Secret Paths. A model using the Secret Paths is not set up on the battlefield at the start of the battle and it may not be activated normally during the first turn. Starting in the second turn, you may activate these models. When you do, set up the model on the battlefield within contact with an edge of the battlefield and more than 8\" away from all enemy models at the start of its activation. If both players have such models, the starting player declares whether one of their models is deployed or not first, followed by the other player. Alternate as normal until all such models have been declared as using Secret Paths or not.",
+                                                "glossary": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -540,8 +551,8 @@
             {"id": "eq_assassinsdagger", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
         ],
         "models" : [
-            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"}]},
-            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationsecretpaths", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationsecretpaths", "cost": 10, "cost_id": "ducats"}]},
             {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": [{"id": "up_azebskirmisher", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_dervish", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": []}
         ]
@@ -693,7 +704,7 @@
         "models" : [
             {"id": "md_kavass", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_kavassmelee", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_faris", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6, "equipment": [], "upgrades": []},
-            {"id": "md_homunculus", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": [], "upgrades": [{"id": "up_homunculuswings", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculuselementalresistance", "cost": 40, "cost_id": "ducats"},{"id": "up_homunculusmassivesize", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculusenslavedmind", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculushumanhands", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusinhumanstrength", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusterrifyingappearance", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusadditionalarm", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculustwoheads", "cost": 5, "cost_id": "ducats"},{"id": "up_homunculushypnoticeyes", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculushawkeyes", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusstartlingspeed", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculussealofsolomon", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusgargantuansize", "cost": 20, "cost_id": "ducats"}]},
+            {"id": "md_homunculus", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": [], "upgrades": [{"id": "up_homunculuswings", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculuselementalresistance", "cost": 40, "cost_id": "ducats"},{"id": "up_homunculusmassivesize", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculusenslavedmind", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculushumanhands", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusinhumanstrength", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusterrifyingappearance", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusadditionalarm", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculustwoheads", "cost": 5, "cost_id": "ducats"},{"id": "up_homunculushypnoticeyes", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculushawkeyes", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusstartlingspeed", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculussealofsolomon", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusgargantuansize", "cost": 20, "cost_id": "ducats"},{"id": "up_homunculusregenerativetissue", "cost": 20, "cost_id": "ducats"}]},
             {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 1, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_alchemistsecretsmedicine", "cost": 15, "cost_id": "ducats"},{"id": "up_alchemistsecretscartographyandgeometry", "cost":20, "cost_id": "ducats"},{"id": "up_alchemistsecretssecretsoftawkin", "cost": 20, "cost_id": "ducats"},{"id": "up_alchemistsecretschemistryandalchemy", "cost": 25, "cost_id": "ducats"},{"id": "up_alchemistsecretsphilosiphypoetryandtheology", "cost": 20, "cost_id": "ducats"}]},
             {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": []}
         ]
@@ -879,7 +890,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "A single Fianna or Lieutenant in the Warband can be made a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model.",
+                                "content": "Either your Lieutenant or one of the Fianna can be a Berserker. This model is immune to FEAR and disregards any BLOOD MARKERS from any source. Berserkers never wear armour, though they can carry a Trench Shield. Add +15 Ducats to the cost of this model.",
                                 "glossary":  [{"val": "FEAR", "id": "gl_fear"}, {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                             }
 
@@ -935,6 +946,18 @@
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "The Warband is allowed to field only one Mechanised Heavy Infantry. No model (save for the single Mechanised Heavy Infantry) may carry a HEAVY weapon or wear Heavy or Machine Armour. This does not apply to allies, or Combat Engineers’ Satchel Charges.",
                                 "glossary":  [{"val": "HEAVY", "id": "gl_heavy"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Hit and Run Tactics:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If a model of this Warband uses the Retreat ACTION to move away from Combat, enemies have a -1 DICE penalty to hit rolls with their free attack.",
+                                "glossary":  [{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                             }
 
                         ]
@@ -1028,7 +1051,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Up to two Shocktroops can have the Keyword INFILTRATOR at the cost of +10 ducats.",
+                                "content": "Up to two Shocktroops can have the Keyword INFILTRATOR at the cost of +10 ducats per model.",
                                 "glossary":  [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
                             }
 
@@ -1135,8 +1158,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Machine Armour of the Warband can take Dash ACTIONs as normal.",
-                                "glossary":  [{"val": "ACTIONs", "id": "gl_action"}]
+                                "content": "Machine Armour of the Warband can Charge without normal penalties.",
+                                "glossary":  []
                             }
 
                         ]
@@ -1249,9 +1272,10 @@
         "models" : [
             {"id": "md_executor", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_plagueknight_fv_dirgeofthegreathegemon", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
-            {"id": "md_houndoftheblackgrail", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_houndoftheblackgrail", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_houndinfection", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_thebereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
-            {"id": "md_heraldofbeelzebub", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []}
+            {"id": "md_theflybereaved", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
+            {"id": "md_heraldofbeelzebub", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_maddeningbuzz", "cost": 10, "cost_id": "ducats"}]}
         ]
     }    
 ]

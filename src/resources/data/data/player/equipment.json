@@ -974,7 +974,7 @@
         "name": "Marid Shovel",
         "equip_type": null,
         "range": null,
-        "blurb": "Battlefield shovel allows troops to dig in and fight from cover in virtually any battlefield.",
+        "blurb": "You can buy this enormous shovel made from alchemical bronze which makes it almost indestructible. Brazen bulls use it for public works (such as digging canals, foundations of buildings and mining during peacetime while at war it is used for digging trenches, ditches and bunkers.",
         "modifiers": null,
         "description":  [
                             {
@@ -990,6 +990,26 @@
                         ]
     },
     {
+        "id": "eq_engineerbodyarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Engineer Body Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "You can buy this enormous shovel made from alchemical bronze which makes it almost indestructible. Brazen bulls use it for public works (such as digging canals, foundations of buildings and mining during peacetime while at war it is used for digging trenches, ditches and bunkers.",
+        "modifiers": null,
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "All weapons with keyword SHRAPNEL suffer -1 DICE on all Injury rolls against the Combat Engineer, and the SHRAPNEL attacks do not cause the extra BLOOD MARKERS on a model wearing this suit. These effects work even against attacks that ignore armour.",
+                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            }
+        ]
+    },
+    {
         "id": "eq_alaybozan",
         "type": "Equipment",
         "source": "core",
@@ -1003,16 +1023,6 @@
         "blurb": "The design of this blunderbuss is based on the traditional design of tribal warriors and thoroughly modernised by the foundries of the Sultanate. It has proven it’s worth as the preferred weapon of the Sapper corps who often have to fight in close quarters. It shoots a hail of lead bullets and iron shrapnel.",
         "modifiers": [],
         "description":  [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                                "content": "Rule:",
-                                "subcontent": [
-                                    {
-                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "You can buy Alchemical Ammunition for Alaybozan."
-                                    }
-                                ]
-                            }
                         ]
     },
     {
@@ -1828,7 +1838,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Once the landing site of the bomb has been determined, it will detonate. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models in 3\" hit by the Bomb suffer a Down result due the booming shockwave and take BLOOD MARKERS, but do not suffer any other effects from this attack.",
+                            "content": "Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the landing 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bombard suffer a Down result due the booming shockwave, but do not take any BLOOD MARKERS or other effects from this attack.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -1868,7 +1878,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Assault", "val": "gl_assault"}
+            {"tag_name": "Assault", "val": "gl_assault"},
+            {"tag_name": "Cumbersome", "val": "gl_cumbersome"}
                 ],
         "category": "melee",
         "name": "Halberd-Gun",
@@ -1990,7 +2001,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails and Siege Jezzails.",
+                            "content": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails, Alaybozan, and Siege Jezzails.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
@@ -2256,7 +2267,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Works exactly as a standard shield. In addition, if a model carrying a Black Grail Shield is targeted by a ranged attack, before rolling to hit it can immediately take an ACTION without an Activation. If successful, the missile attack suffers -2 DICE to the roll determining whether the attack hits, as the power of the Black Grail disturbs the flow of reality. If the roll is a Critical, the attack misses automatically.",
+                            "content": "Works exactly as a trench shield, including Shield Combo capability. In addition, if a model carrying a Black Grail Shield is targeted by a ranged attack, before rolling to hit it can immediately take an ACTION without an Activation. If successful, the Ranged attack suffers -2 DICE to the roll determining whether the attack hits, as the power of the Black Grail disturbs the flow of reality. If the roll is a Critical, the attack misses automatically.",
                             "glossary": [{"val": "-2 DICE", "id": "gl_minusdice"},{"val": "ACTION", "id": "gl_action"}]
                         }
                     ]
@@ -2322,7 +2333,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "Heavy", "val": "gl_heavy"},
-            {"tag_name": "Critical", "val": "gl_critical"}
+            {"tag_name": "Critical", "val": "gl_critical"},
+            {"tag_name": "Cumbersome", "val": "gl_cumbersome"}
                 ],
         "category": "melee",
         "name": "Lochaber Axe",
@@ -2353,7 +2365,7 @@
         "category": "ranged",
         "name": "Infested Rifle",
         "equip_type": "2-Handed",
-        "range": "12\"",
+        "range": "18\"",
         "blurb": "Armour offers little protection against the horrid, tainted bullets of this rifle, polluted by the power of Beelzebub himself. The bullets are semi-sentient, flying through the tiniest of chink in any armour.",
         "modifiers": [],
         "description":  [
@@ -2417,7 +2429,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. Due to its high accuracy,  add +1 DICE to all rolls to hit and ignores penalties for long range. However, Injuries are rolled with -1 DICE at long range due the low penetration power.  Counts as a 1-Handed weapon when wielded with a shield.",
+                            "content": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. The Putrid Shotgun adds +1 DICE to hit on its Ranged Attacks.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                         }
                     ]
@@ -2444,7 +2456,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "If a Parasite Grenade hits a model, the Black Grail player can move this model up 3” into any direction they wish. This can be used to move the model out of cover, to fall from a high position, or even into Melee with their enemies. This additional effect does not work on models with the Keyword FEAR.",
+                            "content": "If Parasite Grenade hits a model, the Black Grail player can move this model up 3” into any direction they wish. This can be used to move the model out of cover, to fall from a high position, or even into Melee with their enemies. This additional effect does not work on models with the Keyword FEAR or ones not affected by FEAR.",
                             "glossary": [{"val": "FEAR", "id": "gl_fear"}]
                         }
                     ]

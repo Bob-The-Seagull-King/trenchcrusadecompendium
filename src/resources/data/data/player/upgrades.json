@@ -120,6 +120,18 @@
             ]
     },
     {
+        "id": "up_artofassassinationsecretpaths",
+        "type": "Upgrade",
+        "name": "Secret Paths",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the start of the battle, right before the first model is set up, declare whether or not this model will be set up by using Secret Paths. A model using the Secret Paths is not set up on the battlefield at the start of the battle and it may not be activated normally during the first turn. Starting in the second turn, you may activate these models. When you do, set up the model on the battlefield within contact with an edge of the battlefield and more than 8\" away from all enemy models at the start of its activation. If both players have such models, the starting player declares whether one of their models is deployed or not first, followed by the other player. Alternate as normal until all such models have been declared as using Secret Paths or not.",
+                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
+            }
+            ]
+    },
+    {
         "id": "up_artofassassinationthunderboltofalumat",
         "type": "Upgrade",
         "name": "Thunderbolt of Alumat",
@@ -212,6 +224,18 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The Homunculi can Fly as explained in the rules and gains a movement speed of 8”.",
                 "glossary": []
+            }
+            ]
+    },
+    {
+        "id": "up_homunculusregenerativetissue",
+        "type": "Upgrade",
+        "name": "Regenerative Tissue",
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Homunculus has an astonishing healing factor, and can remove 1 BLOOD MARKER every time it is Activated if it has any.",
+                "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"}]
             }
             ]
     },
@@ -379,7 +403,7 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to 2 BLOOD MARKERs or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectinomarker"}]
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
             }
             ]
     },
@@ -464,6 +488,30 @@
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "This model is immune to FEAR and disregards any BLOOD MARKERS from any source. This model may never wear armour, though they can carry a Trench Shield or Holy Icon Shield. This model may not carry any Ranged Weapons.",
                             "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_houndinfection",
+        "type": "Upgrade",
+        "name": "Hound Infection",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "This model causes INFECTION MARKERS with their unarmed attacks instead of BLOOD MARKERS.",
+                            "glossary": [{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_maddeningbuzz",
+        "type": "Upgrade",
+        "name": "Maddening Buzz",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Every ACTION taken by a model without Keyword BLACK GRAIL within 8” of a Herald is considered a RISKY ACTION. Does not affect non-ACTION rolls such as Charge Distance rolls.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
     }

@@ -1205,7 +1205,8 @@
         "attachments": [
             {"tag_name": "addons", "val": "ab_minesetting"},
             {"tag_name": "addons", "val": "ab_demine"},
-            {"tag_name": "addons", "val": "ab_digin"}
+            {"tag_name": "addons", "val": "ab_forwardpositions"},
+            {"tag_name": "addons", "val": "ab_fortify"}
                     ],
         "blurb": [
             {
@@ -1231,7 +1232,11 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_digin"
+                "content": "ab_forwardpositions"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fortify"
             }
         ]
     },
@@ -1857,7 +1862,8 @@
         "variant_id": "fv_basic",
         "name": "Shocktrooper",
         "attachments": [
-            {"tag_name": "addons", "val": "ab_shockcharge"}
+            {"tag_name": "addons", "val": "ab_shockcharge"},
+            {"tag_name": "addons", "val": "ab_assaultdrill"}
                     ],
         "blurb": [
             {
@@ -1876,6 +1882,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_shockcharge"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_assaultdrill"
             }
         ]
     },
@@ -1896,9 +1906,8 @@
         "variant_id": "fv_basic",
         "name": "Combat Engineer",
         "attachments": [
-            {"tag_name": "addons", "val": "ab_engineerbodyarmour"},
             {"tag_name": "addons", "val": "ab_battlefielddemolition"},
-            {"tag_name": "addons", "val": "ab_digin"},
+            {"tag_name": "addons", "val": "ab_fortify"},
             {"tag_name": "addons", "val": "db_demine"}
                     ],
         "blurb": [
@@ -1917,15 +1926,11 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_engineerbodyarmour"
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_battlefielddemolition"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_digin"
+                "content": "ab_fortify"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -1945,7 +1950,7 @@
         "ranged": "+1",
         "melee": "0",
         "armour": "-2",
-        "base": "32",
+        "base": "32-40",
         "faction_id": "fc_newantioch",
         "team":"heaven",
         "variant_id": "fv_basic",
@@ -2469,6 +2474,51 @@
         ]
     },
     {
+        "id": "md_flythrall",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"}
+                ],
+        "movement": "6\"/Flying",
+        "ranged": "N/A",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_blackgrail",
+        "team":"hell",
+        "variant_id": "fv_basic",
+        "name": "Fly Thrall",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_overwhelminghorde"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The boons of the Black Grail lead slowly but surely down the path of utter corruption. Only very few of the chosen can withstand the blessings of the Lord of the Flies. Most are turned into Grail Thralls, and join the endless legions of empty, hollowed-out and diseased husks who must obey the whims of the Black Grail nobles for all eternity, while suffering the torment of their countless supernatural infections."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Thrall never carries any type of weapons, armour or equipment. They suffer no penalties to their combat ability for being unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_overwhelminghorde"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
         "id": "md_thebereaved",
         "type": "Model",
         "source": "core",
@@ -2519,6 +2569,51 @@
         ]
     },
     {
+        "id": "md_theflybereaved",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "blackgrail", "val": "gl_blackgrail"},
+            {"tag_name": "fear", "val": "gl_fear"}
+                ],
+        "movement": "6\"/Flying",
+        "ranged": "0",
+        "melee": "-1",
+        "armour": "0",
+        "base": "25",
+        "faction_id": "fc_blackgrail",
+        "team":"hell",
+        "variant_id": "fv_basic",
+        "name": "Fly Bereaved (Dirge of the Great Hegemon)",
+        "attachments": [
+            {"tag_name": "addons", "val": "ab_overwhelminghorde"},
+            {"tag_name": "addons", "val": "ab_unholyhorror"}
+                    ],
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The boons of the Black Grail lead slowly but surely down the path of utter corruption. Only very few of the chosen can withstand the blessings of the Lord of the Flies. Most are turned into Grail Thralls, and join the endless legions of empty, hollowed-out and diseased husks who must obey the whims of the Black Grail nobles for all eternity, while suffering the torment of their countless supernatural infections."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Thrall can use ranged weapons from the Black Grail List (though not any other weapons armour and equipment except Standards and Musical Instruments). They suffer no penalties to their combat ability for being unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_overwhelminghorde"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            }
+        ]
+    },
+    {
         "id": "md_heraldofbeelzebub",
         "type": "Model",
         "source": "core",
@@ -2538,7 +2633,6 @@
         "name": "Herald of Beelzebub",
         "attachments": [
             {"tag_name": "addons", "val": "ab_infectedproboscis"},
-            {"tag_name": "addons", "val": "ab_maddeningbuzz"},
             {"tag_name": "addons", "val": "ab_toxic"},
             {"tag_name": "addons", "val": "ab_skirmisher"},
             {"tag_name": "addons", "val": "ab_unholyhorror"}
@@ -2564,10 +2658,6 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_infectedproboscis"
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_maddeningbuzz"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -2618,7 +2708,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION.",
+                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION and suffers no off-hand penalties in melee.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
             ],
