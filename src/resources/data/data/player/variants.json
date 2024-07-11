@@ -155,9 +155,10 @@
         ],
         "removed_rules": [],
         "removed_equip": ["eq_hellboundsoulcontract","eq_infernalbrandmark"],
-        "removed_model": ["md_warwolfassaultbeast","md_artillerywitch"],
+        "removed_model": ["md_warwolfassaultbeast","md_artillerywitch","md_anointedheavyinfantry"],
         "equipment": [ ],
-        "models" : [ ]
+        "models" : [
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": ["eq_heavyarmour"], "upgrades": []} ]
     },
     {
         "id": "fv_knightsofavarice",
@@ -314,8 +315,32 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All models in the Procession of the Sacred Affliction add extra +1 DICE to Injury rolls with melee attacks against enemies who are Down.",
+                                "content": "All models in the Procession of the Sacred Affliction (execpt Ecclesiastic Prisoners who are not worthy) add extra +1 DICE to Injury rolls with melee attacks against enemies who are Down.",
                                 "glossary":  [{"val" : "+1 DICE", "id" : "gl_plusdice"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Zealot Strength:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Up to 3 Trench Pilgrims may purchase the Zealot Strength upgrade.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Wrath of God:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One Trench Pilgrim or Castigator in this Warband can be gripped by the vengeful fury of the Lord as an Upgrade.",
+                                "glossary":  []
                             }
 
                         ]
@@ -324,13 +349,16 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_machinegun"],
-        "removed_model": [],
+        "removed_equip": ["eq_machinegun","eq_antitankhammer"],
+        "removed_model": ["md_castigator","md_trenchpilgrim"],
         "equipment": [
+            {"id": "eq_antitankhammer", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": []},
             {"id": "eq_holyiconshield", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_holyiconarmour", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
         "models" : [
+            {"id": "md_castigator", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_zealotstrength", "cost": 5, "cost_id": "ducats"},{"id": "up_furyofthelord", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_trenchpilgrimressurection", "cost": 45, "cost_id": "ducats"},{"id": "up_zealotstrengthpilgrim", "cost": 5, "cost_id": "ducats"},{"id": "up_furyofthelord", "cost": 15, "cost_id": "ducats"}]}
         ]
     },
     {
@@ -379,6 +407,18 @@
                             }
 
                         ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Favour Of The Lord:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the start of each Turn, you can give any one model of the Warband a BLESSING MARKER.",
+                                "glossary":  [{"val" : "BLESSING MARKER", "id" : "gl_blessingmarker"}]
+                            }
+
+                        ]
                     }
                 ]
             } 
@@ -391,8 +431,8 @@
             {"id": "eq_sacrificiallamb", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []}
         ],
         "models" : [
-            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
-            {"id": "md_communicant", "cost": 120, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_zealotstrengthpilgrim", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_communicant", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_martyrdomdevice", "cost": 35, "cost_id": "ducats"}]},
             {"id": "md_warprophet_fv_cavalcadeofthetenthplague", "cost": 80, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []}
         ]

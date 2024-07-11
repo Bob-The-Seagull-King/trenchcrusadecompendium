@@ -77,7 +77,6 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Off-Hand", "val": ""}
                 ],
         "category": "ranged",
         "name": "Pistol",
@@ -92,7 +91,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The pistol can use Ranged or Melee characteristic in Melee combat (choose highest).",
+                        "content": "A model armed with a pistol can use it in melee as well as ranged combat (using Ranged Characteristic), including as an off-hand weapon to execute an additional melee attack.",
                         "glossary": []
                     }
                 ]
@@ -105,7 +104,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-                {"tag_name": "Assault", "val": "gl_assault"}
+            {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
         "name": "Silenced Pistol",
@@ -120,7 +119,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "A model armed with a silenced pistol can use it in melee as well as ranged combat, including as an off-hand weapon to execute an additional melee attack. Add +1 DICE to hit rolls if shot from behind any terrain obstacles.",
+                                        "content": "A model armed with a silenced pistol can use it in melee as well as ranged combat (using Ranged Characteristic), including as an off-hand weapon to execute an additional melee attack. Add +1 DICE to hit rolls if shot from behind any terrain obstacles",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                                     }
                                 ]
@@ -133,7 +132,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "Assault", "val": "gl_assault"},
-            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
+            {"tag_name": "BLAST 2\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "Grenades",
@@ -148,7 +148,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Grenades have a blast radius of 2” – all models within this blast radius are hit."
+                                        "content": "Grenades have BLAST 2” - all models within 2” of a model are hit but models other than the original target roll Injuries with -1 DICE.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
@@ -160,7 +161,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "Assault", "val": "gl_assault"},
-            {"tag_name": "Gas", "val": "gl_gas"}
+            {"tag_name": "Gas", "val": "gl_gas"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "Gas Grenades",
@@ -188,7 +190,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "Assault", "val": "gl_assault"},
-            {"tag_name": "Fire", "val": "gl_fire"}
+            {"tag_name": "Fire", "val": "gl_fire"},
+            {"tag_name": "BLAST 2\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "Incendiary Grenades",
@@ -472,6 +475,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Cumbersome", "val": "gl_cumbersome"}
                 ],
         "category": "melee",
         "name": "Bayonet",
@@ -486,7 +490,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": " Bayonets can only be attached to a Bolt Action Rifle, Automatic Rifle, Musket, Shotgun, Automatic Shotgun and Submachine Gun, and does not count towards the maximum Melee weapons a model can carry. Requires two hands to use in Melee.”"
+                                        "content": "Bayonets can only be attached to weapons indicated in each Warband’s Armoury with ‘Bayonet lug’. They do not count towards the maximum Melee weapons a model can carry."
                                     }
                                 ]
                             }
@@ -528,6 +532,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Cumbersome", "val": "gl_cumbersome"}
                 ],
         "category": "melee",
         "name": "Polearm",
@@ -542,7 +547,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Polearms take two hands to use and the model armed with it cannot use any shield. Models equipped with a Trench Polearm give any charging opponent -1 DICE in Melee combat when rolling to hit. This only applies when a charging model attacks, not on subsequent rounds of Melee.",
+                                        "content": "Polearms take two hands to use and the model armed with it cannot use any shield. Melee attacks made against this model are made with -1 DICE if the attacking model charged this turn.",
                                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -602,7 +607,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "The Sacrificial Knife adds +2 to all rolls on the Injury Chart. For example, a roll of 7 on the Injury Chart becomes 9 when using the Sacrificial Knife."
+                                        "content": "The Sacrificial Knife adds +2 DICE to all rolls on the Injury Chart."
                                     }
                                 ]
                             }
@@ -629,6 +634,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Cumbersome", "val": "gl_cumbersome"}
                 ],
         "category": "melee",
         "name": "Tartarus Claws",
@@ -643,7 +649,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Tartarus Claws always come as a pair and do not allow the use of any other melee weapons. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with the Claws you may immediately move the model up to 3”. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with the claws. You can only do this follow-up move once per Activation.",
+                                        "content": "Tartarus Claws always come as a pair and do not allow the use of any other melee weapons or carry shield. You can make two Attack ACTIONS with the Claws without the usual -1 DICE for the second attack. If the opponent is taken Down or Out of Action with either of the Claws you may immediately move the model up to 6” into any direction. If the move takes you into contact with another enemy model, this counts as a charge and you can make a second Melee Attack ACTION with both of the claws. You can only do this follow-up move once per Activation.",
                                         "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTION", "id": "gl_action"}]
                                     }
                                 ]
@@ -736,7 +742,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Takes one hand to use in both melee and in ranged combat, and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated."
+                                        "content": "Takes always one hand to use in both melee and in ranged combat and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. 2-handed Ranged weapons with ‘Shield Combo’ indicator in the Armoury list of the Warband only take 1 hand to use if the model also carries a Trench Shield."
                                     }
                                 ]
                             }
@@ -762,7 +768,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Ignores additional BLOOD MARKERS caused by weapons with Keyword SHRAPNEL.",
+                                        "content": "Ignores additional BLOOD MARKERS caused by the Keyword SHRAPNEL.",
                                         "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
                                     }
                                 ]
@@ -789,7 +795,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Models with Gas Masks ignore the extra BLOOD MARKER from weapons with the keyword GAS, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
+                                        "content": "Negates the extra BLOOD MARKER from attacks with the keyword GAS, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
                                         "glossary": [{"val": "GAS", "id": "gl_gas"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -816,7 +822,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "When a model fails in a RISKY ACTION, this does not end the Activation. Keyword: CONSUMABLE.",
+                                        "content": "When a model equipped with an Unholy Trinket fails a RISKY ACTION, that model may use this item. If it does, its Activation is not ended.",
                                         "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
                                     }
                                 ]
@@ -851,6 +857,60 @@
                         ]
     },
     {
+        "id": "eq_armourpiercingbullets",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"}
+                ],
+        "category": "equipment",
+        "name": "Armour Piercing Bullets",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Advanced armour technology has forced the armouries of the Great War to forge new types of bullets. Expensive and labour-intensive to produce, these hardened tungsten rounds are more effective against battlefield armour.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Before the battle begins, a model may use this item to grant a “rifle” or “pistol” weapon that they are equipped with the following ability: “Reduce the injury penalty from Armour and Shields by 1” until the end of the battle.",
+                                        "glossary": []
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_tracerbullets",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"}
+                ],
+        "category": "equipment",
+        "name": "Tracer Bullets",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Tracer bullets allow soldiers to adjust their aim efficiently.",
+        "modifiers": null,
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Before the battle begins, a model may use this item to grant a “rifle” or “pistol” weapon that they are equipped with +1D to hit with ranged attacks until the end of the battle.",
+                                        "glossary": [{"val": "+1D", "id": "gl_plusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
         "id": "eq_incendiarybullets",
         "type": "Equipment",
         "source": "core",
@@ -871,8 +931,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Only usable in rifles and pistols (i.e. weapons which have the Keyword pistol or rifle in their name). Adds the Keyword FIRE to the weapon that uses the Incendiary ammunition. Keywords: FIRE, CONSUMABLE.",
-                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "FIRE", "id": "gl_fire"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
+                                        "content": "Before the battle begins, a model may use this item to grant a “rifle” or “pistol” weapon that they are equipped with the FIRE keyword until the end of the battle.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"}]
                                     }
                                 ]
                             }
@@ -897,7 +957,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "A model equipped with a Shovel always starts the game in Cover, even if placed in open terrain and on a surface that you can dig in. As soon as the model  moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use"
+                                        "content": "A model equipped with a Shovel always starts the game in Cover if deployed on ground level, even if placed in open terrain. As soon as the model moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use."
                                     }
                                 ]
                             }
@@ -975,7 +1035,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "This model negates the extra BLOOD MARKER from weapons with the keyword FIRE, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
+                                        "content": "Negates the extra BLOOD MARKER from attacks with the keyword FIRE, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
                                         "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -1146,7 +1206,6 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Off-Hand", "val": ""},
             {"tag_name": "Assault", "val": "gl_assault"}
                 ],
         "category": "ranged",
@@ -1162,8 +1221,8 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "A model armed with an automatic pistol can use it in melee as well as ranged combat, including as an off-hand weapon to execute an additional melee attack. You can make two Attack ACTIONS with the automatic pistol instead of one if used as a ranged weapon. They can be against the same target or two different ones",
-                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                        "content": "A model armed with an automatic pistol can use it in melee as well as ranged combat (using Ranged Characteristic), including as an off-hand weapon to execute an additional melee attack. You can make two Attack ACTIONS with the automatic pistol instead of one if used as a ranged weapon. They can be against the same target or two different ones.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
                     }
                 ]
             }
@@ -1258,8 +1317,8 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If a model is fighting in melee with a Whip, any off-hand weapon the model has will suffer -2D instead of -1D penalty to hit.",
-                        "glossary": []
+                        "content": "Add +1 DICE to their Hit Rolls. This bonus does not apply if used as an off-hand weapon.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                     }
                 ]
             }
@@ -1376,6 +1435,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Blessed Icon",
@@ -1390,7 +1450,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When a model equipped with the Blessed Icon fails in a RISKY ACTION, this does not end the Activation. Keyword - CONSUMABLE.",
+                            "content": "When a model equipped with a Blessed Icon fails a RISKY ACTION, that model may use this item. If it does, its Activation is not ended.Can be used once per Battle.",
                             "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "CONSUMABLE", "id": "gl_consumable"}]
                         }
                     ]
@@ -1468,8 +1528,34 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon.",
+                            "content": "Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_mountaineerkit",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Mountaineer Kit",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This kit includes ropes, carabiners, slings, mountaineering harness and pitons to aid a soldier in overcoming almost any vertical obstacle.",
+        "modifiers": [],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Model with this Kit adds +1 DICE to any Climbing ACTION rolls.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
                         }
                     ]
                 }
@@ -1546,7 +1632,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add -1 DICE for all injury rolls against this model. The model is immune to FEAR. If taken Out of Action, roll twice on the Permanent Injury Chart and your opponent gets to choose the result.",
+                            "content": "Before the battle begins, a model may use this item. If it does, injuries rolled against it suffer -1 DICE until the end of the battle, and the model is not affected by FEAR.",
                             "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FEAR", "id": "gl_fear"}]
                         }
                     ]
@@ -1607,6 +1693,61 @@
             ]
     },
     {
+        "id": "eq_warcross",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": "gl_assault"}
+                ],
+        "category": "ranged",
+        "name": "Warcross",
+        "equip_type": "Special",
+        "range": "8\"",
+        "blurb": "Warcross (also known as a wurfkreuz in the Holy Roman Empire) is a four-pronged throwing weapon in the shape of a cross. It is engraved with prayers and psalms that guide it on an unerring path.",
+        "modifiers": ["Ignore Long Range Penalty"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Does not count as one of the Ranged weapons carried by the model. Cannot be carried wih Grenades. Ignores penalties for long range. A model with the weapon will not run out of them",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_puntgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
+                ],
+        "category": "ranged",
+        "name": "Punt Gun",
+        "equip_type": "2-Handed",
+        "range": "18\"",
+        "blurb": "Punt Gun is an enormous shotgun loaded with up to 25 ounces of shot. It can be loaded with a risky amount of powder and square shot which causes widespread damage and destruction. It is a very popular weapon among Trench Pilgrims who lack access to conventional heavy weapons.",
+        "modifiers": ["+1D to Hit","+1D to Injury"],
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Owing to its high accuracy and lethal shot, Punt Gun adds +1 DICE to all rolls to hit and to Injury rolls. You can overcharge it with a shot, giving the weapon BLAST 3” radius. If you do this, the Shooting ACTION with the Punt Gun always ends the shooter’s Activation and causes 1 BLOOD MARKER on the shooter. If a model carrying it does not have Keyword STRONG, another model must be in base contact with the shooter before it can make a Ranged Attack ACTION with the Punt Gun.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "STRONG", "id": "gl_strong"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
         "id": "eq_jezzail",
         "type": "Equipment",
         "source": "core",
@@ -1654,6 +1795,17 @@
         "blurb": "A sniper rifle is a high-precision, long-range rifle, widely used in the trenches to pick off high value targets such as officers, sappers and artillery crews. Expensive and rare, they are commonly given to the best marksmen and sharpshooters of the warband.",
         "modifiers": ["+1D to Hit"],
         "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Add +1 DICE when making a Ranged Weapon attack with this weapon. If equipped with a Sniper Scope (see Equipment), the Sniper Rifle also ignores the penalty for Long Range, even if it has moved this turn.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
             ]
     },
     {
@@ -2010,7 +2162,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "Consumable", "val": "gl_consumable"},
-            {"tag_name": "Heavy", "val": "gl_heavy"}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "Satchel Charge",
@@ -2051,7 +2204,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer cannot DASH. Machine armour cannot be combined with any shield.",
+                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer rolls 2D6 during a change and picks the lowest number. Machine armour cannot be combined with any shield.",
                             "glossary": []
                         }
                     ]

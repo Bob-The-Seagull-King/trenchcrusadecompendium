@@ -83,7 +83,7 @@ const FactionDisplay = (props: any) => {
     function returnEquipList() {
         return (
             <>
-            <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+            <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                 <div className="col">
                     {returnEquipTypeList("ranged")}
                     <div className="verticalspacer"/>
@@ -106,16 +106,19 @@ const FactionDisplay = (props: any) => {
                     <div className="row">
                         <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable(type)}</div>
                     </div>
-                    <div className="row row-cols-3">
+                    <div className="row row-cols-4">
 
-                    <div className="col-5">
+                    <div className="col-4">
                             <div className="equiptitle">Name</div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-2">
                             <div className="equiptitle">Cost</div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-3">
                             <div className="equiptitle">Restriction</div>
+                        </div>
+                        <div className="col-3">
+                            <div className="equiptitle">Feature</div>
                         </div>
                     </div>
                 </div>

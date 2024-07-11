@@ -6,7 +6,8 @@ interface IEquipmentFactionList {
     cost: number,
     cost_id: string,
     limit: number,
-    restriction: IEquipmentRestriction[]
+    restriction: IEquipmentRestriction[],
+    features?: string[]
 }
 
 interface IEquipmentRestriction {
@@ -21,6 +22,7 @@ class FactionEquip {
     public readonly Limit;
     public readonly Restrictions;
     public readonly Object : PlayerEquipment;
+    public readonly Features;
 
     public constructor(data: IEquipmentFactionList) {
         this.ID = data.id;
@@ -28,6 +30,7 @@ class FactionEquip {
         this.CostID = data.cost_id;
         this.Limit = data.limit;
         this.Restrictions = data.restriction;
+        this.Features = data.features? data.features : [];
 
         this.Object = new PlayerEquipment(Requester.MakeRequest({searchtype: "id", searchparam: {type: 'equipment', id: this.ID}}));
     }

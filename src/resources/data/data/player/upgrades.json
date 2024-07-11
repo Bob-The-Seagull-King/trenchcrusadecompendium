@@ -430,5 +430,41 @@
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "FEAR", "id": "gl_fear"}]
             }
             ]
+    },
+    {
+        "id": "up_zealotstrength",
+        "type": "Upgrade",
+        "name": "Zealot Strength",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Gain the keyword STRONG.",
+                            "glossary": [{"val": "STRONG", "id": "gl_strong"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_zealotstrengthpilgrim",
+        "type": "Upgrade",
+        "name": "Zealot Strength",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "One pilgrim may take this upgrade to gain the keyword STRONG.",
+                            "glossary": [{"val": "STRONG", "id": "gl_strong"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_furyofthelord",
+        "type": "Upgrade",
+        "name": "Fury Of The Lord",
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "This model is immune to FEAR and disregards any BLOOD MARKERS from any source. This model may never wear armour, though they can carry a Trench Shield or Holy Icon Shield. This model may not carry any Ranged Weapons.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                        }
+                        ]
     }
 ]

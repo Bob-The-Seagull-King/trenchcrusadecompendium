@@ -39,12 +39,44 @@ const MemberAddEquipDisplay = (props: any) => {
     let isGlory = false;
     
     const restrictionRef = useRef<HTMLInputElement>(null);
+    const featureRef = useRef<HTMLInputElement>(null);
     const modelRef = useRef<HTMLSelectElement>(null);
     const costRef = useRef<HTMLInputElement>(null);
     const costTypeDucatRef = useRef<HTMLInputElement>(null);
     const costTypeGloryRef = useRef<HTMLInputElement>(null);
     const factionlimitcheck = useRef<HTMLInputElement>(null);
+    function getFeatureList(model : ListEquipment) {
+        let ftrlst = "";
 
+        let i = 0;
+
+        let ModelEquip : any = null;
+        
+        for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
+            if (WarbandItem.Faction.Equipment[i].ID == model.ID) {
+                ModelEquip = WarbandItem.Faction.Equipment[i]
+            }
+        }
+
+        if (ModelEquip != null) {
+
+                let i = 0;
+                for (i = 0; i < ModelEquip.Features.length; i++) {
+                    if ( i > 0) {
+                        ftrlst += ", "
+                    }
+                    ftrlst += ModelEquip.Features[i].toString().toUpperCase();
+                }
+            }
+
+        if (ftrlst == "") {
+            ftrlst = "-"
+        }
+            
+
+        return ftrlst;
+
+    }
     
     function getRestrictionList(model : ListEquipment) {
         let rstrctnlst = "";
@@ -127,6 +159,9 @@ const MemberAddEquipDisplay = (props: any) => {
                 if (restrictionRef.current != null) {
                     restrictionRef.current.value = "Restrictions : " + getRestrictionList(temp);
                 }
+                if (featureRef.current != null) {
+                    featureRef.current.value = "Features : " + getFeatureList(temp);
+                }
 
             }
         }
@@ -161,6 +196,9 @@ const MemberAddEquipDisplay = (props: any) => {
         ItemRecall();
         if (restrictionRef.current != null) {
             restrictionRef.current.value = "";
+        }
+        if (featureRef.current != null) {
+            featureRef.current.value = "";
         }
         if (costRef.current != null) {
             costRef.current.value = "0";
@@ -366,13 +404,24 @@ const MemberAddEquipDisplay = (props: any) => {
                             <div className="verticalspacer"/>
 
                             <div className="row">
-                                <div className="col-md-8 col-lg-8 col-6"> {/* Add Member */}
+                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
                                     
                                     <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                         <Form.Control ref={restrictionRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Restrictions : -"}/>
                                     </InputGroup>
                                 </div>
-                                <div className="col-md-4 col-lg-4 col-6"> {/* Add Member */}
+                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
+                                    
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control ref={featureRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Features : -"}/>
+                                    </InputGroup>
+                                </div>
+                            </div>
+
+                            <div className="verticalspacerbig"/>
+
+                            <div className="row">
+                                <div className="col-md-12 col-lg-12 col-12"> {/* Add Member */}
                                     <div className="generalbuttonbox hovermouse" onClick={() => NewMember()} style={{width:"100%",alignItems:"center",height:"2em",borderRadius:"0em"}}>
                                         <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}}  className=" ">
                                             <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext" style={{fontSize:"1.25em"}}/>

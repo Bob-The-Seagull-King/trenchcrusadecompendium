@@ -61,7 +61,7 @@
         "name": "Assault",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Ranged attacks made with weapons that have this Keyword do not prevent a model from charging during the same activation. A charge may only be made if a single ranged attack is made with a weapon with this Keyword, regardless of any other rules that the weapon might have.",
+            "content": " Ranged attacks made with weapons that have this Keyword do not prevent a model from charging during the same activation. A charge may only be made if a single ranged attack is made with a weapon with this Keyword, regardless of any other rules that the weapon might have.",
             "subcontent":   [],
             "glossary": []
         }]
@@ -109,7 +109,8 @@
             {"tag_name": "category", "val": "dice"}
         ],
         "name": "Blood Marker",
-        "description":  [{
+        "description":  [
+            {
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
             "content": "Damage inflicted by attacks. Each can be converted into -1 DICE for any ACTION the wounded model takes or into +1 DICE when rolling injuries for this model.",
             "subcontent":   [],
@@ -118,7 +119,21 @@
                 {"val": "ACTION", "id": "gl_action"},
                 {"val": "-1 DICE", "id": "gl_minusdice"}
             ]
-        }]
+            },
+            {
+            "tags": [{"tag_name": "desc_type", "val": "effect"}],
+            "content": "BLOODBATH:",
+            "subcontent":   [
+                {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can roll an additional D6 on Injury rolls at the cost of 6 BLOOD MARKERS on any model, or at the cost of 3 BLOOD MARKERS if the target is Down. This means that instead of rolling 2D6 on your typical weapon, you roll 3D6 on your injury roll and add the numbers together. Weapons such as Artillery Witch’s Infernal Bomb would therefore roll 4D6 and add the results together (3D6+1D6).",
+                "subcontent":   [],
+                "glossary": [
+                    {"val": "D6", "id": "gl_plusdice"}
+                ]
+                }]
+            }
+        ]
     },
     {
         "id": "gl_infectionmarker",
@@ -209,9 +224,9 @@
         "name": "Fire",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Damage by this weapon is due to fire. This weapon causes an extra +1 BLOOD MARKER when it hits enemies, even if the damage is otherwise negated by armour or other circumstances.",
+            "content": "A model hit by a weapon will this Keyword suffers a BLOOD MARKER, in addition to any other effects of the attack. The model suffers this Blood Marker even if the attack has no other effects or is otherwise negated. Some equipment or abilities can negate the additional BLOOD MARKER caused by this Keyword.",
             "subcontent":   [],
-            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
         }]
     },
     {
@@ -224,10 +239,9 @@
         "name": "Fireteam",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without your opponent getting their turn in between. They can take their ACTIONS in any order between them as they wish. Note that if either member of the Fireteam fails in a RISKY ACTION, it ends both Activations.",
+            "content": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without the opponent getting their turn in between. Note that if the Activation of either member of the Fireteam forcefully ends (due a failed RISKY ACTION for example), it ends both Activations. Note that Mercenaries cannot be part of a FIRETEAM.",
             "subcontent":   [],
             "glossary": [
-                {"val": "ACTIONS", "id": "gl_action"},
                 {"val": "RISKY ACTION", "id": "gl_riskyaction"}]
         }]
     },
@@ -241,9 +255,9 @@
         "name": "Gas",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "These weapons damage lungs so they cause an extra +1 BLOOD MARKER due to toxic fumes, even if the damage is otherwise negated by armour. Some equipment specifically protects against this type of damage. Troops equipped with Gas Masks will be immune to such weapons and will suffer no damage from them under any circumstances.",
+            "content": "A model hit by a weapon will this Keyword suffers a BLOOD MARKER, in addition to any other effects of the attack. The model suffers this Blood Marker even if the attack has no other effects or is otherwise negated. Some equipment or abilities can negate the additional BLOOD MARKER caused by this Keyword.",
             "subcontent":   [],
-            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
         }]
     },
     {
@@ -257,7 +271,7 @@
         "name": "Grenade",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Grenade-type weapons ignore penalties for cover and long range. They do not count towards the number of missile weapons a model can carry and do not have to be held in your hand at all times. A model armed with grenades can use them as many times as they wish.",
+            "content": "Grenade-type weapons ignore penalties for cover and long range. They do not count towards the number of Ranged weapons a model can carry and do not have to be held in your hand at all times. A model armed with grenades can use them as many times as they wish.",
             "subcontent":   [],
             "glossary": []
         }]
@@ -303,7 +317,7 @@
         "name": "Infiltrator",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": " Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword. If Infiltrator cannot be deployed using their special rules, then those models can always be deployed in your deployment zone as standard.",
+            "content": "Models with this Keyword can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without this Keyword. If any infiltrators cannot be deployed according to these restrictions then those models can always be deployed in your deployment zone.",
             "subcontent":   [],
             "glossary": [
                 ]
@@ -383,9 +397,9 @@
         "name": "Shrapnel",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "These weapons cause damage via an explosion of shrapnel, so they always cause an extra +1 BLOOD MARKER due to fragments hitting the target, even if the damage is otherwise negated by armour or other means. Wearing a helmet negates this extra marker.",
+            "content": "A model hit by a weapon will this Keyword suffers a BLOOD MARKER, in addition to any other effects of the attack. The model suffers this Blood Marker even if the attack has no other effects or is otherwise negated. Some equipment or abilities can negate the additional BLOOD MARKER caused by this Keyword.",
             "subcontent":   [],
-            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
         }]
     },
     {
@@ -398,7 +412,7 @@
         "name": "Skirmisher",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Unless engaged in melee, before an enemy makes a charge against a SKIRMISHER, you can immediately move D3” in any direction you wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter Melee.",
+            "content": "Unless engaged in melee, when an enemy model declares a charge against a model with this Keyword, the SKIRMISHER can immediately move D3” in any direction they wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. If the SKIRMISHER moves behind another friendly model so it is now in the path and reach of the Charger, then the Charge is redirected to this model.",
             "subcontent":   [],
             "glossary": []
         }]
@@ -428,11 +442,9 @@
         "name": "Strong",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "A model with this Keyword ignores the rules for weapons/armour/equipment with the Keyword HEAVY. A model with the Keyword STRONG may wield a two-handed melee weapon in one hand, but your off-hand must always be a 1-handed weapon. In addition, STRONG models can carry one HEAVY Melee weapon and one HEAVY ranged weapon.",
+            "content": "A model with this Keyword ignores the rules for weapons/armour/equipment with Keyword HEAVY. In addition, it may use a single 2-handed Melee weapon as a 1-handed weapon.",
             "subcontent":   [],
             "glossary": [
-                    {"val": "HEAVY", "id": "gl_heavy"},
-                    {"val": "HEAVY", "id": "gl_heavy"},
                     {"val": "HEAVY", "id": "gl_heavy"}
                 ]
         }]
@@ -463,9 +475,42 @@
         "name": "Tough",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "If a TOUGH model would be taken Out Of Action, it is taken Down instead. After a TOUGH model is taken Down in this way, it can be taken Out of Action as normal.",
+            "content": " If a TOUGH model would be taken Out Of Action, it is taken Down instead. After a TOUGH model has been taken Down in this way once, it can be taken Out of Action as normal.",
             "subcontent":   [],
             "glossary": [
+                ]
+        }]
+    },
+    {
+        "id": "gl_blastx",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Blast (X)",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "A weapon with BLAST (X) has an area of effect with a radius of inches indicated by the (X). If this weapon targets a model, this radius is measured from the centre of that model’s base in all directions. If this weapon targets a point on the ground, this radius is measured from that point in all directions, including vertically. If the Attack ACTION with this weapon is successful, it hits every model within this radius that the target (either model or point) has line of sight to (ie. not completely blocked by terrain).",
+            "subcontent":   [],
+            "glossary": [
+                ]
+        }]
+    },
+    {
+        "id": "gl_cumbersome",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Cumbersome",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Model always requires two hands to use this weapon, even if the model has Keyword STRONG.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "STRONG", "id": "gl_strong"}
                 ]
         }]
     }

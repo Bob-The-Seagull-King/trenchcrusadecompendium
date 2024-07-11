@@ -302,18 +302,18 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Choose a point on the battlefield that is visible to the Witchand within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, thebomb is off-target and will deviate 1” from your nominated target point for eachdegree of failure of the Ranged Attack ACTION in a direction determined by youropponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). Thedirection is decided by your opponent. Once the landing site of the bomb has beendetermined, it will detonate. Roll once on the Injury Chart for each model that iswithin 3” of where the bomb landed. No to hit roll is needed.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+                "content": "This wicked infernal weapon as BLAST 3” Keyword. Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
+                "glossary": [{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "BLAST", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chartand add the dice together! Other models hit by the Bomb roll on the Injury Chartas standard. Any model hit but not taken Out of Action by this attack is blownD3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causesand additional +1 BLOOD MARKER. Cover, range and higher position do notaffect the attacks by the Infernal Bomb. Roll injuries for models in cover/behindintervening terrain with -1 DICE.",
+                "content": "If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the Bomb roll on the Injury Chart as standard. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact (roll for each model separately), stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causes an additional +1 BLOOD MARKER.",
                 "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
-                "glossary": []
+                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
                         ]
     },
@@ -344,18 +344,18 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Choose a point on the battlefield that is visible to the Witchand within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, thebomb is off-target and will deviate 1” from your nominated target point for eachdegree of failure of the Ranged Attack ACTION in a direction determined by youropponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). Thedirection is decided by your opponent. Once the landing site of the bomb has beendetermined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
+                "content": "This wicked infernal weapon as BLAST 3” Keyword. Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
+                "glossary": [{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "BLAST", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If the bomb lands exactly on top of any model, roll with 2D6 on the Injury Chart. Other models hit by the Bomb roll on the Injury Chart with -1 DICE. Injury rolls caused by the bomb ignore armour. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact, stopping if they hit other models/buildings/objects. This attack has the Keyword GAS and therefore causesand additional +1 BLOOD MARKER. Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behindintervening terrain with -1 DICE.",
-                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "GAS", "id": "gl_gas"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                "content": "If the bomb lands exactly on top of any model, roll with 2D6 on the Injury Chart. Other models hit by the Bomb roll on the Injury Chart with -1 DICE. Injury rolls caused by the bomb ignore armour. Any model hit but not taken Out of Action by this attack is blown D3” directly away from the point of impact (roll for each model separately), stopping if they hit other models/buildings/objects. This attack has the Keyword GAS and therefore causes an additional +1 BLOOD MARKER.",
+                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Once the landing site of the bomb has been determined, it will detonate. Roll once on the Injury Chart for each model that is within 3” of where the bomb landed. No to hit roll is needed.",
-                "glossary": []
+                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE.",
+                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
                         ]
     },
@@ -605,17 +605,17 @@
         ]
     },
     {
-        "id": "ab_prisoner",
+        "id": "ab_awaited",
         "type": "Addon",
         "source": "core",
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "name": "Prisoner",
+        "name": "Awaited",
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Ecclesiastic Prisoners do not count as a part of your warband for any rules related to morale.",
+                "content": "If the Ecclesiastic Prisoner is taken Out of Action by its Martyrdom Device, it does not count as being Out of Action for any rules related to Morale.",
                 "glossary": []
             }
         ]
@@ -631,8 +631,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When a Stigmatic Nun suffers any BLOOD MARKERS from any source (except attacks with the Keyword GAS or FIRE which damage the nuns normally), you may immediately convert any such BLOOD MARKERS into BLESSING MARKERS. Note: This must be done when the BLOOD MARKERS are received and may not be done at a later point in the turn.",
-                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "BLESSING MARKERS", "id": "gl_blessingmarker"}]
+                "content": "At the start of each of their Activations, any Stigmatic can remove 1 BLOOD MARKER (but not an INFECTION MARKER) from themselves, and convert it into a BLESSING MARKER.",
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLESSING MARKERS", "id": "gl_blessingmarker"}]
             }
         ]
     },

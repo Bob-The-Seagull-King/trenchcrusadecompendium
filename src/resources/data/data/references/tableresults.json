@@ -105,7 +105,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "During its next Activation a Downed warrior can stand up, but all types of movement it takes is at half distance, rounding down.",
+                "content": "During its own Activations a Downed warrior can stand up, but all types of movement it takes is at half distance, rounding down.",
                 "glossary": []
             }
         ]

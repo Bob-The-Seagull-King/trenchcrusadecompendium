@@ -81,23 +81,48 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": " The model may move its full Movement Speed. Normal Movement requires no roll on the Action Success Chart. You cannot Move if you Charge (see below).",
-                        "subcontent": [ ]
+                        "content": "When a model takes this ACTION during its activation, choose one of the three options below. The Move ACTION does not require a roll on the ACTION SUCCESS CHART.",
+                        "subcontent": [ ],
+                        "glossary": [{"val": "ACTION", "id": "gl_action"} ]
                     },
                     {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "A model may move away from Melee combat during their normal Move. However, every enemy that is in Melee combat with the retreating model may immediately use one of their Melee ACTIONS against the retreating model. Resolve the effects of this attack before moving the retreating model",
-                        "glossary": [{"val": "ACTIONS", "id": "gl_action"} ]
-                    }
-                ]
-            },
-            {
-                "title": "Charge",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "A player can choose to Charge instead of Move a model during its Activation. Choose a specific enemy model within your model’s line of sight and declare it to be the Target. A distance check should be made to see if the Target is within 12” inches of your attacking model. If they are within 12”, roll a D6 and add the result to your model’s movement speed. Use this modified movement value to Move towards the target by the most direct route possible. If you get within 1”, the model is now in Melee Combat with the target. You may Charge more than one model if you can get within 1” of them. Charging requires no roll on the Action Success Chart. If you cannot reach your opponent, simply move the distance indicated towards the target. Interposing unengaged models on the way will have to be Charged first as you cannot come within 1” of an enemy otherwise.",
-                        "subcontent": [ ]
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Standard Move:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The model moves up to its Movement characteristic.",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Charge:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Choose an enemy model the charger can see within 12” as the target. The charging model then moves directly toward that target via the shortest and the most effective route possible determined by distance, with a d6” bonus to its Movement characteristic. This movement can allow the charging model to move within 1” of the target, putting the two models in Melee Combat with each other.",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Retreat:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The model moves up to its Movement characteristic and it may leave Melee Combat during this movement. Each enemy model in Melee Combat with the retreating model may immediately take a Melee Attack ACTION with a single melee weapon that it has. Resolve the effects of this attack before moving the retreating model.",
+                                        "glossary": [{"val": "ACTION", "id": "gl_action"} ]
+                                    }
+                                 ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -126,8 +151,8 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If the model has a ranged weapon and it is not engaged in Melee combat, it may attack with the weapon as detailed in its profile in the rules. Note that you cannot make a Ranged Attack and Charge afterwards, unless the Ranged Weapon has the ASSAULT Keyword. Each ranged attack is considered a separate ACTIONs.",
-                        "glossary": [{"val": "ASSAULT", "id": "gl_assault"} ,{"val": "ACTIONs", "id": "gl_action"} ]
+                        "content": "The model may shoot with a ranged weapon that it is equipped with. A model engaged in Melee Combat cannot shoot. A model cannot both Shoot and then Charge during the same Activation, unless they made a single ranged attack with a weapon that has the ASSAULT keyword.",
+                        "glossary": [{"val": "ASSAULT", "id": "gl_assault"}]
                     }
                 ]
             },
@@ -136,8 +161,8 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules. Each melee weapon attack is considered a separate ACTION.",
-                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                        "content": "If the model is engaged in Melee combat, it may attack as detailed in the Melee Weapon’s entry in the rules. The attacker must see at least part of the target -no Melee attacks through walls!",
+                        "glossary": []
                     }
                 ]
             },
@@ -216,6 +241,17 @@
                     },
                     { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
                     {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Shooting Into Melee:",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If you shoot at any models engaged in melee, roll a D6 for each shot (or automatic hit) to determine which model is hit: on a 1-3, the attack targets one of your models at random within 1” of the target, on a 4-6, the attack targets an enemy model at random within 1” of the target. Resolve the attack as normal once the target is determined.",
+                                "subcontent": [ ]
+                            }]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
                         "tags": [{"tag_name": "desc_type", "val": "list"}],
                         "content": "A ranged attack could be modified under the following conditions:",
                         "subcontent": [ 
@@ -225,7 +261,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Add -1 DICE to the roll. A model is considered to be cover if it is touching a piece of scenery. If the shooter can see the model in its entirety (including the base), despite it touching a scenery piece, then this penalty does not apply.",
+                                        "content": "Add -1 DICE to the roll. A model is considered to be in cover if it is touching a piece of scenery. If the shooter can see the model in its entirety (including the entire base), despite it touching a scenery piece, then this penalty does not apply. The piece of cover must be big enough that it is horizontally at least as long as the base of the model taking cover in order to count",
                                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"} ]
                                     }
                                  ]
@@ -299,8 +335,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "A model armed with two melee weapons can execute an additional attack with its second weapon. For example, a model armed with a pistol (first weapon) and knife (second weapon) can make one attack with the pistol and a second attack using the knife’s attack profile. One of the attacks (chosen by the player) suffers -1 DICE to the dice pool when determining if the attack hits. Resolve these attacks one at a time.",
-                                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+                                "content": "A model armed with two melee weapons can take two separate Melee Attack ACTIONS, one with each weapon. One of these weapons, determined before you make your first ACTION roll, is an Off-Hand weapon. Off-Hand weapons suffer -1 DICE to hit. If a STRONG model wields a two-handed melee weapon in one hand and a one-handed melee weapon in the other, the one-handed weapon is always regarded as the Off-Hand weapon. Resolve attacks made by a model wielding two melee weapons one at a time and resolve attacks with the Off-Hand weapon last.",
+                                "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "STRONG", "id": "gl_strong"}]
                             }
                          ]
                     },
@@ -311,8 +347,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "If the target of a melee attack is defending a stone wall, earthen rampart, fighting from a trench and so on (a simple hedge, bush or low fence is not enough), the attacker suffers -1 DICE to all rolls to see if their melee attacks hit. A model that is Down cannot benefit from a defended obstacle. To count as a defended obstacle the piece of scenery must be 1” or taller, but not blocking LOS between the models completely. Defender must be touching the terrain piece when charged, and the defended obstacle must be between the defender and the charger in the most direct charge route possible.",
-                                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+                                "content": "If the target of a melee attack is defending a stone wall, earthen rampart, fighting from a trench and so on (a simple hedge, bush or low fence is not enough), the attacker suffers -1 DICE to all rolls to see if their melee attacks hit. A model that is Down cannot benefit from a defended obstacle. The obstacle must be at least ½” high, it must be between the attacker and defender, with the defender touching it.",
+                                "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                             }
                          ]
                     },
@@ -341,8 +377,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "If a model is in Melee combat at the start of their Activation, they may move while staying  within 1” of the enemies they are engaged in combat with. This is most often used to negate the Defended Obstacle bonus. No roll is needed to do this.",
-                                "subcontent": [ ]
+                                "content": "If a model is in Melee combat at the start of their Activation, they may use their Standard Move ACTION while staying  within 1” of the enemies they are engaged in combat with. This is most often used to negate the Defended Obstacle bonus. No roll is needed to do this.",
+                                "glossary": [{"val": "ACTION", "id": "gl_action"}]
                             }
                          ]
                     }
@@ -393,6 +429,16 @@
             }
         ],
         "rules": [
+            {
+                "title": "Charging",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A player can choose to Charge instead of moving during its Activation. Choose a specific enemy model within your model’s line of sight and declare it to be the target. A distance check should be made to see if the target is within 12” inches of your attacking model. If they are within 12”, roll a D6 and add the result to your model’s movement speed. Use this modified movement value to move towards the target by the shortest and most effective route determined by distance. Using Jumping Climbing or going through Dangerous terrain is always optional during a Charge move even if it is the shortest route, though the route avoiding such obstacles must still be as short as possible. If you get within 1”, the model is now in Melee Combat with the target. You may charge more than one model if you can get within 1” of them.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
             {
                 "title": "Terrain",
                 "description": [
@@ -463,7 +509,7 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Flying models ignore penalties for difficult terrain, can cross/land on dangerous terrain safely, can move vertically without the need to take Climbing or Jumping tests, do not trigger mines unless they land within trigger range at the end of their movement.",
+                        "content": "Flying models ignore penalties for difficult terrain, can cross/land on dangerous terrain (including mines etc) safely and can move vertically without the need to take Climbing tests. Additionally, they can jump across gaps up to their Movement characteristic and do not need to make a roll on the Action Success Chart to do so. Models only ever have 1 type of movement, either Flying or Infantry.",
                         "subcontent": [ ]
                     }
                 ]
@@ -485,7 +531,7 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Unless otherwise stated in the rules, each warrior may carry the following:",
+                        "content": "Unless otherwise stated in the rules, each warrior in your warband may carry one or more of the following Ranged weapons:",
                         "subcontent": [ ]
                     },
                     {
@@ -494,19 +540,19 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "One firearm and one pistol OR",
+                                "content": "One two-handed ranged weapon.",
                                 "subcontent": [ ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Two pistols.",
+                                "content": "Up to two one-handed ranged weapons",
                                 "subcontent": [ ]
                             }
                          ]
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "In addition, they may carry:",
+                        "content": "In addition, they may carry the following Melee weapons:",
                         "subcontent": [ ]
                     },
                     {
@@ -515,24 +561,19 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "One two-handed melee weapon OR",
+                                "content": "One two-handed melee weapon",
                                 "subcontent": [ ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "One single-handed melee weapon and a trench shield OR",
-                                "subcontent": [ ]
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Two single-handed melee weapons.",
+                                "content": "Up to two single-handed melee weapons.",
                                 "subcontent": [ ]
                             }
                          ]
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "All weapon entries clearly indicate if you need one or two hands to effectively use the given weapon. Unless clearly stated in the Range characteristic, a ranged weapon cannot be used in Melee combat. As such they do not use either hand in melee (leaving both hands free for melee weapons).",
+                        "content": "All weapon entries clearly indicate if you need one or two hands to effectively use the given weapon. Unless clearly stated in the Range characteristic, a ranged weapon cannot be used in Melee combat. Uness they can be used in Melee, Ranged weapons do not use either hand in melee (leaving both hands free for melee weapons).",
                         "subcontent": [ ]
                     },
                     {
@@ -546,17 +587,38 @@
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Armour and equipment that takes up one hand in both ranged and melee cannot be switch out.",
-                                "subcontent": [ ]
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "Each model can carry one type of grenade.",
                                 "subcontent": [ ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "A model can have any number of Equipment items, but only one of each type per model.",
+                                "subcontent": [ ]
+                            }
+                         ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The following pieces of Equipment or Amour can be carried by models as indicated by the rules and take one of the hands of the character at all times, thus limiting which weapons they may use in combat:",
+                        "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One shield (most commonly, a trench shield) which always takes one hand to use in both melee and in ranged combat and cannot be switched out.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One Standard/banner/flag which always takes one hand to use in both melee and in ranged combat and cannot be switched out.",
+                                "subcontent": [ ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One musical instrument which always takes one hand to use in both melee and in ranged combat and cannot be switched out.",
                                 "subcontent": [ ]
                             }
                          ]

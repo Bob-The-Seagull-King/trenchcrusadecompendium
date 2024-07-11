@@ -15,6 +15,25 @@ const FactionEquipDisplay = (props: any) => {
         return modelFound.name;
     }
 
+    function getFeatureList() {
+        let ftrlst = "";
+
+        let i = 0;
+        for (i = 0; i < ModelEquip.Features.length; i++) {
+            if ( i > 0) {
+                ftrlst += ", "
+            }
+            ftrlst += ModelEquip.Features[i].toString().toUpperCase();
+        }
+
+        if (ftrlst == "") {
+            ftrlst = "-"
+        }
+
+        return ftrlst;
+
+    }
+
     function getRestrictionList() {
         let rstrctnlst = "";
 
@@ -49,21 +68,26 @@ const FactionEquipDisplay = (props: any) => {
     }
 
     return (
-        <div className="row row-cols-3">
+        <div className="row row-cols-4">
 
-            <div className="col-5">
+            <div className="col-4">
                 <div className="equipbody">
                     <EquipmentHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
                 </div>
             </div>
-            <div className="col-3">
+            <div className="col-2">
                 <div className="equipbody">
                     <div className="equipbody">{ModelEquip.Cost.toString() + " " + ModelEquip.CostID}</div>
                 </div>
             </div>
-            <div className="col-4">
+            <div className="col-3">
                 <div className="equipbody">
                     <div className="equipbody">{getRestrictionList()}</div>
+                </div>
+            </div>
+            <div className="col-3">
+                <div className="equipbody">
+                    <div className="equipbody">{getFeatureList()}</div>
                 </div>
             </div>
         </div>

@@ -88,7 +88,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Creatures treats the first Out of Action result as Down instead. Once a TOUGH Creature is Down it is treated as any other model when rolling on the Injury Chart and can be taken Out of Action.",
+                                "content": "If a TOUGH model would be taken Out Of Action, it is taken Down instead. After a TOUGH model has been taken Down in this way once, it can be taken Out of Action as normal",
                                 "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
                             }
                         ]
@@ -112,6 +112,17 @@
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "An opponent can expend 1 BLOOD MARKER to add -1 DICE to the dice pool when determining injuries for a model that is. The opponent always selects when a BLOOD MARKER is used, even if the Injury your model suffered was caused by you",
                                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Bloodbath:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Roll additional D6 and add it to the Injury roll total. Costs 6 BLOOD MARKERs (3 if the target is Down).",
+                                "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
                             }
                         ]
                     }

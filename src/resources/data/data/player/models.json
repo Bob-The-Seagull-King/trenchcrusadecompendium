@@ -751,7 +751,7 @@
         "name": "Ecclesiastic Prisoner",
         "attachments": [
             {"tag_name": "addons", "val": "ab_maddash"},
-            {"tag_name": "addons", "val": "ab_prisoner"}
+            {"tag_name": "addons", "val": "ab_awaited"}
                     ],
         "blurb": [
             {
@@ -772,7 +772,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_prisoner"
+                "content": "ab_awaited"
             }
         ]
     },
