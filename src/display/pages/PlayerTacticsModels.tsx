@@ -9,6 +9,7 @@ import { ModelsFilterManager } from '../../classes/viewmodel/collections/filters
 import ModelDisplay from '../components/features/models/ModelDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import ModelFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ModelFilterSelectDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
@@ -73,7 +74,7 @@ const PlayerTacticsModels = (prop: any) => {
      */
     function ReturnSearchFilterBox() {
         return (
-            <ModelFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
+            <BaseFilterSelectDisplay filtertype={"model"} controller={ViewPageController} runfunction={UpdateSearch}/>
         )
     }
 

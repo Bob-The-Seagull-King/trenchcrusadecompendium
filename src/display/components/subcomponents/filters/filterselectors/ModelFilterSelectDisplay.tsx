@@ -17,65 +17,14 @@ import Modal from 'react-bootstrap/Modal';
 const ModelFilterSelectDisplay = (prop: any) => {
     const ViewPageController: AllModelsListPage = prop.controller
     const FilterManager: ModelsFilterManager = ViewPageController.FilterManager;
-    const updatesearch = prop.runfunction;
-
-    const [_activetextfilters, returnactivetext] = useState(FilterManager.ReturnActiveTextFilters());
-    const [_activetagfilters, returnactivetag] = useState(FilterManager.ReturnActiveTagFilters());
-    const [_activemiscfilters, returnactivemisc] = useState(FilterManager.ReturnActiveMiscFilters());
-    const [_activestatfilters, returnactivestat] = useState(FilterManager.ReturnActiveStatFilters());
-    const [_keyval, updatekey] = useState(1);
-    const [theme, setTheme] = useGlobalState('theme');
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => {
-        setShow(false);
-        RunUpdate();
-    };
-    const handleShow = () => setShow(true);
-
-    function RunUpdate() {
-        updatesearch();
-        returnactivetext(FilterManager.ReturnActiveTextFilters())
-        returnactivetag(FilterManager.ReturnActiveTagFilters())
-        returnactivemisc(FilterManager.ReturnActiveMiscFilters())
-        returnactivestat(FilterManager.ReturnActiveStatFilters())
-        updatekey(_keyval+1)
-    }
+    const theme = prop.usetheme
+    const handleClose = prop.closemodal;
+    const RunUpdate = prop.update;
+    const show = prop.useshow;
     
     // Return result -----------------------------
     return (
         <>
-            <div onClick={() => handleShow()}className='borderstyler bordertc roundBody hovermouse'>
-                {((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) && (_activestatfilters.length == 0) ) &&
-                    <div className="">
-                            <h1 className="subtletext">No Filters Selected</h1>
-                    </div>
-                }
-                {!((_activetextfilters.length == 0) && (_activetagfilters.length == 0) && (_activemiscfilters.length == 0) && (_activestatfilters.length == 0) ) &&
-                    <div className="row">
-                        
-                        <div style={{paddingLeft: "2em", paddingRight: "2em", paddingTop: "1em", paddingBottom: "0.5em"}}>
-                            <div className="separator"><h3>Filters</h3></div>
-                        </div>
-                        <div className="filterbox centerPosition">
-                            {_activetextfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.Val+(_keyval.toString())} state={""} title={"Name"} value={item.Val}/>
-                                ))}
-                            {_activetagfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} state={item.DoInclude? "positive" : "negative" } title={item.Group} value={item.Name}/>
-                                ))}
-                            {_activemiscfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} title={item.Group} state={item.DoInclude? "positive" : "negative" } value={item.Name}/>
-                                ))}
-                            {_activestatfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.TagType.Name+(_keyval.toString())} title={item.TagType.Name} state={item.TagType.DoInclude? "positive" : "negative" } value={item.TagVal.Val}/>
-                                ))}
-                        </div>
-                        <div className='toppad'></div>
-                    </div>
-                }
-            </div>
 
             <Modal data-theme={theme} show={show}  contentClassName="filterboxStructure" dialogClassName="" size="xl" onHide={handleClose} keyboard={true}  centered>
                 

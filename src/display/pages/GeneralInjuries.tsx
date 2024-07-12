@@ -9,6 +9,7 @@ import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesLi
 
 import ListItemDisplay from '../../display/components/features/list/ListItemDisplay'
 import EquipmentFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/EquipmentFilterSelectDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const GeneralInjuries = (prop: any) => {
     // Initialize controllers and managers
@@ -49,15 +50,6 @@ const GeneralInjuries = (prop: any) => {
     function RecallTable() {
         const table = ModelsCollectionController.ReturnItems();
         return table;
-    }
-
-    /**
-     * @returns The filter display component
-     */
-    function ReturnSearchFilterBox() {
-        return (
-            <EquipmentFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
-        )
     }
 
     // Return result -----------------------------

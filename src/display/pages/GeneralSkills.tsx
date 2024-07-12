@@ -8,6 +8,7 @@ import { SkillsFilterManager } from '../../classes/viewmodel/collections/filters
 
 import ListGroupDisplay from '../../display/components/features/list/ListGroupDisplay'
 import SkillFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ListFilterSelectDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 
 const GeneralSkills = (prop: any) => {
@@ -73,7 +74,7 @@ const GeneralSkills = (prop: any) => {
      */
     function ReturnSearchFilterBox() {
         return (
-            <SkillFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
+            <BaseFilterSelectDisplay filtertype={"list"} controller={ViewPageController} runfunction={UpdateSearch}/>
         )
     }
 

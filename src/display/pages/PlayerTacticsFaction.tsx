@@ -9,6 +9,7 @@ import { AllFactionListPage } from '../../classes/viewmodel/pages/AllFactionList
 import FactionDisplay from '../../display/components/features/faction/FactionDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import FactionFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/FactionFilterSelectDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
@@ -73,7 +74,7 @@ const PlayerTacticsModels = (prop: any) => {
      */
     function ReturnSearchFilterBox() {
         return (
-            <FactionFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
+            <BaseFilterSelectDisplay filtertype={"faction"} controller={ViewPageController} runfunction={UpdateSearch}/>
         )
     }
 

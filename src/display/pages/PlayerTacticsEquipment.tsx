@@ -9,6 +9,7 @@ import { AllEquipmentListPage } from '../../classes/viewmodel/pages/AllEquipment
 import EquipmentDisplay from '../../display/components/features/equipment/EquipmentDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import EquipmentFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/EquipmentFilterSelectDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
@@ -73,7 +74,7 @@ const PlayerTacticsModels = (prop: any) => {
      */
     function ReturnSearchFilterBox() {
         return (
-            <EquipmentFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
+            <BaseFilterSelectDisplay filtertype={"equipment"} controller={ViewPageController} runfunction={UpdateSearch}/>
         )
     }
 

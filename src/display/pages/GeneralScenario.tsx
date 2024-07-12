@@ -9,6 +9,7 @@ import { ScenarioFilterManager } from '../../classes/viewmodel/collections/filte
 import ScenarioDisplay from '../../display/components/features/scenario/ScenarioDisplay'
 import ScenarioFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ScenarioFilterSelectDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
+import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const GeneralScenarios = (prop: any) => {
     // Initialize controllers and managers
@@ -73,7 +74,7 @@ const GeneralScenarios = (prop: any) => {
      */
     function ReturnSearchFilterBox() {
         return (
-            <ScenarioFilterSelectDisplay controller={ViewPageController} runfunction={UpdateSearch}/>
+            <BaseFilterSelectDisplay filtertype={"scenario"} controller={ViewPageController} runfunction={UpdateSearch}/>
         )
     }
 
