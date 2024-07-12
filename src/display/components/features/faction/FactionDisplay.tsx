@@ -20,7 +20,7 @@ const FactionDisplay = (props: any) => {
     function returnModelList() {
         return (
             <>
-            <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+            <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                 {(ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).length > 0) &&
                 <div className="col">
                     <div className="row">
@@ -28,16 +28,23 @@ const FactionDisplay = (props: any) => {
                             <div className="row">
                                 <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("ELITE")}</div>
                             </div>
-                            <div className="row row-cols-3">
+                            <div className="row row-cols-5">
 
-                            <div className="col-5">
+
+                                <div className="col-3">
                                     <div className="equiptitle">Name</div>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-2">
                                     <div className="equiptitle">Cost</div>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-3">
                                     <div className="equiptitle">Limit</div>
+                                </div>
+                                <div className="col-2">
+                                    <div className="equiptitle">Equipment</div>
+                                </div>
+                                <div className="col-2">
+                                    <div className="equiptitle">Upgrades</div>
                                 </div>
                             </div>
                         </div>
@@ -55,16 +62,22 @@ const FactionDisplay = (props: any) => {
                             <div className="row">
                                 <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("INFANTRY")}</div>
                             </div>
-                            <div className="row row-cols-3">
+                            <div className="row row-cols-5">
 
-                            <div className="col-5">
+                                <div className="col-3">
                                     <div className="equiptitle">Name</div>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-2">
                                     <div className="equiptitle">Cost</div>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-3">
                                     <div className="equiptitle">Limit</div>
+                                </div>
+                                <div className="col-2">
+                                    <div className="equiptitle">Equipment</div>
+                                </div>
+                                <div className="col-2">
+                                    <div className="equiptitle">Upgrades</div>
                                 </div>
                             </div>
                         </div>
