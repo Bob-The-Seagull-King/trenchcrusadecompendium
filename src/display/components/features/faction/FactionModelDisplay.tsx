@@ -91,17 +91,17 @@ const FactionModelDisplay = (props: any) => {
                     <div className="equipbody">{ModelEquip.Cost.toString() + " " + ModelEquip.CostID}</div>
                 </div>
             </div>
-            <div className="col-3">
+            <div className="col-1">
                 <div className="equipbody">
                     <div className="equipbody">{getRestrictionList()}</div>
                 </div>
             </div>
-            <div className="col-2">
+            <div className="col-3">
                 <div className="equipbody">
                     <div className="equipbody">{getEquipment()}</div>
                 </div>
             </div>
-            <div className="col-2">
+            <div className="col-3">
                 <div className="equipbody">
                     <div className="equipbody">{getUpgrades()}</div>
                 </div>

@@ -37,13 +37,13 @@ const FactionDisplay = (props: any) => {
                                 <div className="col-2">
                                     <div className="equiptitle">Cost</div>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-1">
                                     <div className="equiptitle">Limit</div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-3">
                                     <div className="equiptitle">Equipment</div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-3">
                                     <div className="equiptitle">Upgrades</div>
                                 </div>
                             </div>
@@ -70,13 +70,13 @@ const FactionDisplay = (props: any) => {
                                 <div className="col-2">
                                     <div className="equiptitle">Cost</div>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-1">
                                     <div className="equiptitle">Limit</div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-3">
                                     <div className="equiptitle">Equipment</div>
                                 </div>
-                                <div className="col-2">
+                                <div className="col-3">
                                     <div className="equiptitle">Upgrades</div>
                                 </div>
                             </div>
