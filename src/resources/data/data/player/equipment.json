@@ -583,7 +583,7 @@
         "equip_type": "2-Handed",
         "range": "Melee",
         "blurb": "Mauls, clubs, maces… these are large, cumbersome weapons, often made from sturdy wood with a metal tip of steel, lead or Iron of Tartarus. It takes great strength to fight with it for any length of time. They are especially suited for attacking armoured targets.",
-        "modifiers": ["+1D to Injury"],
+        "modifiers": ["+1 to Injury"],
         "description":  [
                         ]
     },

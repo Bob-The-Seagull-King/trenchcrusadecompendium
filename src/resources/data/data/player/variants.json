@@ -44,7 +44,7 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": [],
+        "removed_equip": ["eq_submachinegun"],
         "removed_model": ["md_warwolfassaultbeast","md_anointedheavyinfantry","md_artillerywitch","md_heretictrooper","md_goeticwarlock","md_wardog","md_guarddog","md_mercydog","md_hellhound","md_sineater"],
         "equipment": [
             {"id": "eq_submachinegun", "cost": 25, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "", "val": ""}]}
@@ -260,8 +260,8 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": [],
-        "removed_model": ["md_artillerywitch","md_hereticdeathcommando","md_goeticwarlock"],
+        "removed_equip": ["eq_flamethrower","eq_grenadelauncher","eq_grenades","eq_incendiarygrenades","eq_incendiarybullets","eq_hellblade","eq_heavyflamethrower","eq_blasphemousstaff"],
+        "removed_model": ["md_artillerywitch","md_hereticdeathcommando","md_goeticwarlock","md_hellhound"],
         "equipment": [
             {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_standardofmammon", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": []},
@@ -1102,7 +1102,7 @@
         "equipment": [
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 4, "restriction": []},
             {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []},
-            {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models" : [
@@ -1211,7 +1211,7 @@
             {"id": "eq_greataxe", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_lochaberaxe", "cost": 18, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
-            {"id": "eq_automaticshotgun", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_machinegun", "cost": 60, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_bagpipes", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Not ELITE"}]}
@@ -1263,8 +1263,8 @@
         "removed_equip": ["eq_blackgrailshield","eq_beelzebubsaxe","eq_plagueblade","eq_putridshotgun"],
         "removed_model": ["md_lordoftumours","md_amalgam","md_plagueknight","md_houndoftheblackgrail","md_heraldofbeelzebub","md_grailthrall"],
         "equipment": [
-            {"id": "eq_plagueblade", "cost": 25, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_putridshotgun", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_plagueblade", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_putridshotgun", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []},
             {"id": "eq_blunderbuss", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_brokencrown", "cost": 25, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_urnofbitterashes", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]}
