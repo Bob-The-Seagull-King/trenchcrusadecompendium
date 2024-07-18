@@ -453,7 +453,12 @@
             {"id": "eq_resurrectionengine", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_ducalwingedarmour", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_greatbannerofnewantioch", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 4, "restriction": []}
+            {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 4, "restriction": []},
+            {"id": "eq_markofcain", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_armourofcobar", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_tormentorchain", "cost": 3, "cost_id": "glory", "limit": 2, "restriction": []},
+            {"id": "eq_executionersaxe", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_demonicauragrenade", "cost": 3, "cost_id": "glory", "limit": 1, "restriction": []}
         ],
         "models": [
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},

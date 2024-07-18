@@ -1884,7 +1884,7 @@
         "category": "melee",
         "name": "Halberd-Gun",
         "equip_type": "2-Handed",
-        "range": "Melle/24\"",
+        "range": "Melee/24\"",
         "blurb": "Invention of the House of Wisdom, this weapon acts both as a symbol of high rank and an excellent weapon in combat.",
         "modifiers": [],
         "description":  [
@@ -1939,7 +1939,7 @@
         "category": "melee",
         "name": "Assassin's Dagger",
         "equip_type": "1-Handed",
-        "range": "Melle",
+        "range": "Melee",
         "blurb": "The blades of the Assassins are imbued with the Supreme Poison. In chambers deep below the surface, generations of young assassins are raised in the dark; fed a diet of scorpions, frogs, deadly mushrooms and even stranger, more noxious things, and generation by generation their tolerance grows. The poisonous blood of these willing vessels is drawn and smelted into a poisonous iron. The iron is forged into blades and deadly spells of slaying layered into each fold of the envenomed metal. Thus the blood of the first generation of Assassins lives to this day, growing more potent with each generation.",
         "modifiers": ["+1 on Injury Results"],
         "description":  [
@@ -3202,6 +3202,139 @@
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                         "content": "Always takes one hand to use in both melee and in ranged combat. Grants -1 to all Injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. Any attack against this model that has the Keyword FIRE will suffer -1 DICE on Injury Rolls and will not cause an additional BLOOD MARKER.",
                         "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_markofcain",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "The Mark Of Cain",
+        "equip_type": null,
+        "range": null,
+        "blurb": "“And the LORD set a mark upon Cain, lest any finding him should kill him.” Cain, the first of murderers, was marked by God, as a ward against those who would kill him. Corrupted copies of the mark are carved on the flesh of those who travel to Hell in order to learn the art of murder from the greatest of killers who reside in the Eternal Fire.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Any model that causes 1+ BLOOD MARKER on the bearer of this mark through any ACTION suffers 1 BLOOD MARKER themselves in return.",
+                        "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "ACTION", "id": "gl_action"},{"val": "1+ BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_armourofcobar",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Armour Of Cobar",
+        "equip_type": null,
+        "range": null,
+        "blurb": "A suit of armour fashioned after the mail worn by Cobar the Betrayer, the first Lord of the Sixty-Six. This black Iron suit is produced in the Death-Factories of Hell from souls of those who betrayed their friends in life. It rewards those who lead their followers and friends to ruin and death.",
+        "modifiers": [],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. cannot be combined with any shield. Grains -1 DICE to Dash due the weight of the Sins of the wearer. Each time any model in the wearer’s Warband (including any Allies) is taken Out of Action, the Model gains +1 BLESSINGS MARKER.",
+                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "+1 BLESSINGS MARKER", "id": "gl_blessingmarker"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_tormentorchain",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
+                ],
+        "category": "ranged",
+        "name": "Tormentor Chain",
+        "equip_type": "1-Handed",
+        "range": "10\"",
+        "blurb": "A barbed Chain used to bind the damned in Hell. It is sometimes granted as a weapon to the Heretic warriors that have proven the most adept of dragging prisoners to the Gates of Hell alive. The chain possesses a will of its own and can traverse long distances to snare some poor unfortunate soul in its barbed embrace.",
+        "modifiers": ["Special"],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Tormentor Chain suffers no penalties for range or for Cover, and causes no damage except for the BLOOD MARKER it causes due the SHRAPNEL. If the Tormentor Chain hits an opponent on a 32mm or smaller (base and that opponent is not engaged in Melee), then the model is moved into base contact (and into Melee with the wielder and any other eligible model) with the user of the chain, occupying the nearest legal point next to the wielder. No enemy can move away from Melee with a model using the Tormentor Chain.",
+                        "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_executionersaxe",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "Critical", "val": "gl_critical"}
+                ],
+        "category": "melee",
+        "name": "Executioner's Axe",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "This axe is carried by the executioner demons of Hell whose job is to dismember those damned who brought division on Earth. As the damned flesh gathers itself together after a while, this grisly task is repeated again and again through eternity.",
+        "modifiers": ["+2D to Injury"],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Rolls all injuries with +2 DICE. If the Axe hits an enemy in Melee, the model armed with it can take a second Melee Attack ACTION after resolving the damage from the first strike. This attack can be against the same or a different target.",
+                        "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_demonicauragrenade",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
+                ],
+        "category": "ranged",
+        "name": "Demonic Aura Grenade",
+        "equip_type": "Grenade",
+        "range": "8\"",
+        "blurb": "It is theorised this horrid grenade is based on the same technology as the demon weapon that destroyed the original city of Antioch. Its explosion seems to cause no physical damage, but emits eerie, bright green light which causes rapid but painful death to those within its reach, and armour offers no protection to its withering effects. Why it is not used by the Heretics in greater numbers remains a mystery.",
+        "modifiers": ["Double Blood Marker"],
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can aim the Demonic Aura Grenade against either a 1mmx1mm point on the ground or an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (ie. you roll 6 or less), the Demonic Aura Grenade lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the grenade lands 2” away, as 7-5=2). The direction is decided by your opponent. The Demonic Aura Grenade ignores armour and interposing scenery. This weapon causes double BLOOD MARKERS.",
+                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "ACTION", "id": "gl_action"}]
                     }
                 ]
             }

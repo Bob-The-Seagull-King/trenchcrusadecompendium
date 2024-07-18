@@ -260,7 +260,7 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_flamethrower","eq_grenadelauncher","eq_grenades","eq_incendiarygrenades","eq_incendiarybullets","eq_hellblade","eq_heavyflamethrower","eq_blasphemousstaff"],
+        "removed_equip": ["eq_flamethrower","eq_grenadelauncher","eq_grenades","eq_incendiarygrenades","eq_incendiarybullets","eq_hellblade","eq_heavyflamethrower","eq_blasphemousstaff","eq_tormentorchain"],
         "removed_model": ["md_artillerywitch","md_hereticdeathcommando","md_goeticwarlock","md_hellhound"],
         "equipment": [
             {"id": "eq_tarnishedarmour", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
