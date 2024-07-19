@@ -31,6 +31,12 @@ const MemberAddEquipDisplay = (props: any) => {
     // Creation of New warband member ---------------------------
 
     const [_limitfaction, returnLimitFaction] = useState(true);
+    const [_limitranged, returnLimitRanged] = useState(true);
+    const [_limitmelee, returnLimitMelee] = useState(true);
+    const [_limitarmour, returnLimitArmour] = useState(true);
+    const [_limitequipment, returnLimitEquipment] = useState(true);
+    const [_limitglory, returnLimitGlory] = useState(true);
+    const [_limitducat, returnLimitDucat] = useState(true);
 
     let NewMemberModel = "";
     let NewMemberCost = "0";
@@ -45,6 +51,14 @@ const MemberAddEquipDisplay = (props: any) => {
     const costTypeDucatRef = useRef<HTMLInputElement>(null);
     const costTypeGloryRef = useRef<HTMLInputElement>(null);
     const factionlimitcheck = useRef<HTMLInputElement>(null);
+
+    const filterListRanged = useRef<HTMLInputElement>(null);
+    const filterListMelee = useRef<HTMLInputElement>(null);
+    const filterListArmour = useRef<HTMLInputElement>(null);
+    const filterListEquipment = useRef<HTMLInputElement>(null);
+    const filterListGlory = useRef<HTMLInputElement>(null);
+    const filterListDucat = useRef<HTMLInputElement>(null);
+
     function getFeatureList(model : ListEquipment) {
         let ftrlst = "";
 
@@ -184,6 +198,24 @@ const MemberAddEquipDisplay = (props: any) => {
     function updateFactionLimit() {
         returnLimitFaction(!_limitfaction)
     }
+    function updateFactionRanged() {
+        returnLimitRanged(!_limitranged)
+    }
+    function updateFactionMelee() {
+        returnLimitMelee(!_limitmelee)
+    }
+    function updateFactionArmour() {
+        returnLimitArmour(!_limitarmour)
+    }
+    function updateFactionEquipment() {
+        returnLimitEquipment(!_limitequipment)
+    }
+    function updateFactionGlory() {
+        returnLimitGlory(!_limitglory)
+    }
+    function updateFactionDucat() {
+        returnLimitDucat(!_limitducat)
+    }
 
     function NewMember() {
         const NewMemberCostType = isDucats? "ducats" : "glory";
@@ -214,6 +246,24 @@ const MemberAddEquipDisplay = (props: any) => {
         }
         if (factionlimitcheck.current != null) {
             factionlimitcheck.current.checked = true;
+        }
+        if (filterListRanged.current != null) {
+            filterListRanged.current.checked = true;
+        }
+        if (filterListMelee.current != null) {
+            filterListMelee.current.checked = true;
+        }
+        if (filterListArmour.current != null) {
+            filterListArmour.current.checked = true;
+        }
+        if (filterListEquipment.current != null) {
+            filterListEquipment.current.checked = true;
+        }
+        if (filterListGlory.current != null) {
+            filterListGlory.current.checked = true;
+        }
+        if (filterListDucat.current != null) {
+            filterListDucat.current.checked = true;
         }
         handleCloseNewModel()
         UpdateFunction(Manager.GetWarbandByName(WarbandItem.Name))
@@ -252,6 +302,34 @@ const MemberAddEquipDisplay = (props: any) => {
     function ItemRecall() {
         returnstate(WarbandItem.Members)
         updateKey(_key+1)
+    }
+
+    function FilterByEquipType(value : string) {
+        
+        if (value == "ranged") {
+            return _limitranged;
+        }
+        if (value == "melee") {
+            return _limitmelee;
+        }
+        if (value == "armour") {
+            return _limitarmour;
+        }
+        if (value == "equipment") {
+            return _limitequipment;
+        }
+        return true;
+    }
+
+    function FilterByCostType(value : string) {
+        
+        if (value == "ducats") {
+            return _limitducat;
+        }
+        if (value == "glory") {
+            return _limitglory;
+        }
+        return true;
     }
 
     function FilterByModelType(value : string) {
@@ -357,27 +435,98 @@ const MemberAddEquipDisplay = (props: any) => {
                         <div className="col-12" >
 
                             <div className="row">
-                                <div className="col-md-8 col-6">
-                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                        <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
-                                            <option key="modeloption" value="[No Model Selected]">[No Item Selected]</option>
-                                            {_limitfaction &&
-                                            <>{WarbandItem.Faction.Equipment.filter(value => FilterByModelType(value.ID)).map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
-                                            }
-                                            {!_limitfaction &&
-                                            <>{Manager.Equipment.map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
-                                            }
-                                        </Form.Control>
+                                <div className="col-md-3 col-sm-4 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={filterListRanged} onClick={e => {updateFactionRanged()}} label="Ranged" defaultChecked={_limitranged}/>
                                     </InputGroup>
                                 </div>
-                                <div className="col-md-4 col-6">
+                                <div className="col-md-3 col-sm-4 col-6">
                                     <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
-                                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Faction Only" defaultChecked={true}/>
+                                        <Form.Check type="checkbox" ref={filterListMelee} onClick={e => {updateFactionMelee()}} label="Melee" defaultChecked={_limitmelee}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-3 col-sm-4 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={filterListArmour} onClick={e => {updateFactionArmour()}} label="Armour" defaultChecked={_limitarmour}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-3 col-sm-4 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={filterListEquipment} onClick={e => {updateFactionEquipment()}} label="Equipment" defaultChecked={_limitequipment}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-sm-12 col-12">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={factionlimitcheck} onClick={e => {updateFactionLimit()}} label="Faction Only" defaultChecked={_limitfaction}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-sm-6 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={filterListDucat} onClick={e => {updateFactionDucat()}} label="Ducat Cost" defaultChecked={_limitducat}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-4 col-sm-6 col-6">
+                                    <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
+                                        <Form.Check type="checkbox" ref={filterListGlory} onClick={e => {updateFactionGlory()}} label="Glory Cost" defaultChecked={_limitglory}/>
                                     </InputGroup>
                                 </div>
                             </div>
 
+                            <div className="verticalspacerbig"/>
+                            <div>
+                                <div className="separator"></div>
+                            </div> 
+                            <div className="verticalspacerbig"/>
+
+                            <div className="row">
+                                <div className="col-md-12 col-12">
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={modelRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateModel(e.target.value)    } } >
+                                            <option key="modeloption" value="[No Model Selected]">[No Item Selected]</option>
+                                            {_limitfaction &&
+                                            <>{WarbandItem.Faction.Equipment.filter(value => FilterByModelType(value.ID)).filter(value => FilterByCostType(value.CostID)).filter(value => {
+                                                if (value.Object.Category) {
+                                                    return FilterByEquipType(value.Object.Category)
+                                                } else {
+                                                    return FilterByEquipType("")
+                                                }}).map((item) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}</>
+                                            }
+                                            {!_limitfaction &&
+                                            <>{Manager.Equipment.filter(value => {
+                                                if (value.Category) {
+                                                    return FilterByEquipType(value.Category)
+                                                } else {
+                                                    return FilterByEquipType("")
+                                                }
+                                            }).map((item) => ( <option key="modeloption" value={item.ID}>{item.Name}</option> ))}</>
+                                            }
+                                        </Form.Control>
+                                    </InputGroup>
+                                </div>
+                            </div>
+                            
                             <div className="verticalspacer"/>
+
+                            <div className="row">
+                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
+                                    
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control ref={restrictionRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Restrictions : -"}/>
+                                    </InputGroup>
+                                </div>
+                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
+                                    
+                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
+                                        <Form.Control ref={featureRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Features : -"}/>
+                                    </InputGroup>
+                                </div>
+                            </div>
+                            
+                            <div className="verticalspacerbig"/>
+                            <div>
+                                <div className="separator"></div>
+                            </div> 
+                            <div className="verticalspacerbig"/>
 
                             <div className="row">
                                 <div className="col-6">
@@ -399,23 +548,6 @@ const MemberAddEquipDisplay = (props: any) => {
                                         </div>
                                     </div>
                                 </div>                        
-                            </div>
-                            
-                            <div className="verticalspacer"/>
-
-                            <div className="row">
-                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
-                                    
-                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                        <Form.Control ref={restrictionRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Restrictions : -"}/>
-                                    </InputGroup>
-                                </div>
-                                <div className="col-md-6 col-lg-6 col-12"> {/* Add Member */}
-                                    
-                                    <InputGroup className="tagboxpad" style={{height:"2em"}}>
-                                        <Form.Control ref={featureRef} style={{ height:"100%",textAlign:"center",borderRadius:"0em"}} readOnly aria-label="Text input" defaultValue={"Features : -"}/>
-                                    </InputGroup>
-                                </div>
                             </div>
 
                             <div className="verticalspacerbig"/>
