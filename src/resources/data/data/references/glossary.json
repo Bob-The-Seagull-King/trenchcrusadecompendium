@@ -513,5 +513,21 @@
                 {"val": "STRONG", "id": "gl_strong"}
                 ]
         }]
+    },
+    {
+        "id": "gl_grenade",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Grenade",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Grenade-type weapons ignore penalties for cover and long range. They do not count towards the number of Ranged weapons a model can carry and do not have to be held in your hand at all times. A model armed with grenades can use them as many times as they wish.",
+            "subcontent":   [],
+            "glossary": [
+                ]
+        }]
     }
 ]
