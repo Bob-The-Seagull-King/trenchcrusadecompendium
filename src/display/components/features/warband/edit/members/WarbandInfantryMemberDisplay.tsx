@@ -20,7 +20,9 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { getColour, makestringpresentable } from '../../../../../../utility/functions';
 import ModelStat from '../../../../subcomponents/description/ModelStat';
-import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
+import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover';
+import GenericHover from '../../../../generics/GenericHover'
+import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
 import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
@@ -237,7 +239,10 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                     
                     <div className="col-md-4 col-12">
                         <div className="stattitle">{"Model Type"}</div>
-                        <div className="statbody"><ModelHover data={WarbandMember.Model.Object} titlename={WarbandMember.Model.Object.Name} /></div>
+                        <div className="statbody">
+                            <GenericHover titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>
+                            
+                        </div>
                         <div className="verticalspacer"/>
                     </div>
                     <div className="col-md-4 col-6">

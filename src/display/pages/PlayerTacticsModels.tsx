@@ -11,6 +11,8 @@ import ViewTableItemDisplay from '../../display/components/subcomponents/list/Vi
 import ModelFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ModelFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
+
 const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllModelsListPage = prop.controller
@@ -144,8 +146,8 @@ const PlayerTacticsModels = (prop: any) => {
                                 <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                                     {_activeItems.map((item) => (
                                         <div className="col" key={"modelDisplay"+item.ID}>
-                                            <ModelDisplay data={item}/>
-                                            <br/>
+                                             <GenericDisplay  d_colour={item.Team} d_name={item.Name} d_type={""} d_method={() => <ModelDisplay data={item}/>}/>
+                                             <br/>
                                         </div>
                                     ))}
                                 </div>

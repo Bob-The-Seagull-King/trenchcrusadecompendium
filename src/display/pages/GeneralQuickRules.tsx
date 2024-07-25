@@ -8,6 +8,7 @@ import { AllQuickRulesPage } from '../../classes/viewmodel/pages/AllQuickRulesLi
 import { QuickRulesFilterManager } from '../../classes/viewmodel/collections/filters/QuickRulesFilterManager'
 
 import QuickRuleDisplay from '../../display/components/features/rules/QuickRuleDisplay'
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
 
 const GeneralQuickRules = (prop: any) => {
     // Initialize controllers and managers
@@ -33,7 +34,8 @@ const GeneralQuickRules = (prop: any) => {
                                     <Masonry gutter="20px">
                                         {_activeItems.map((item) => (
                                             <div className="col" key={"modelDisplay"+item.ID}>
-                                                <QuickRuleDisplay data={item}/>
+                                                
+                                                <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <QuickRuleDisplay data={item}/>}/>
                                                 <br/>
                                             </div>
                                         ))}

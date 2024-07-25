@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons'
 
 import ScenarioDisplay from '../../display/components/features/scenario/ScenarioDisplay'
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
 
 const ToolsScenarioGenerator = (prop: any) => {
     const Manager : ScenarioGenerator = prop.manager;
@@ -42,7 +43,8 @@ const ToolsScenarioGenerator = (prop: any) => {
             <br/>
             {_currenscenario != null &&
                 <div>
-                    <ScenarioDisplay key={_keyval} data={_currenscenario}/>
+                    
+                    <GenericDisplay  d_colour={"tc"} d_name={_currenscenario.Name} d_type={""} d_method={() => <ScenarioDisplay data={_currenscenario}/>}/>
                 </div>
             }
         </div>

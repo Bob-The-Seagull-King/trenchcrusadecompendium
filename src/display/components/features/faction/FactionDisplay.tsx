@@ -208,8 +208,8 @@ const FactionDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure borderstyler border'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>
-            <h1 className={'titleShape titlestyler background'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>{ModelObject.Name || ""}</h1>
+        //<div className={'modelStructure borderstyler border'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>
+          //  <h1 className={'titleShape titlestyler background'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnFlavour()}
@@ -240,7 +240,7 @@ const FactionDisplay = (props: any) => {
                 </div>
                 <div className="verticalspacer"/>          
             </div>
-        </div>
+        //</div>
     )
 }
 

@@ -11,6 +11,9 @@ import { Warband } from '../../../../../../classes/lists/Warband'
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember'
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager'
 
+import GenericHover from '../../../../../components/generics/GenericHover'
+import EquipmentDisplay from '../../../../../components/features/equipment/EquipmentDisplay'
+
 const WarbandEquipDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
@@ -39,7 +42,8 @@ const WarbandEquipDisplay = (props: any) => {
 
             <div className="col-5 align-content-center">
                 <div className="equipbody">
-                    <EquipmentHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
+                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
+                
                 </div>
             </div>
             <div className="col-3 align-content-center">

@@ -7,6 +7,7 @@ import { ViewTableReferenceCollection } from '../../classes/viewmodel/collection
 import { AllTableReferenceListPage } from '../../classes/viewmodel/pages/AllTableReferenceListPage'
 import { TableReferenceFilterManager } from '../../classes/viewmodel/collections/filters/TableReferenceFilterManager'
 
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
 import ListGroupDisplay from '../../display/components/features/list/ListGroupDisplay'
 
 const GeneralTableReferences = (prop: any) => {
@@ -33,7 +34,8 @@ const GeneralTableReferences = (prop: any) => {
                                     <Masonry gutter="20px">
                                         {_activeItems.map((item) => (
                                             <div className="col" key={"modelDisplay"+item.ID}>
-                                                <ListGroupDisplay data={item}/>
+                                                <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ListGroupDisplay data={item}/>}/>
+                                                
                                                 <br/>
                                             </div>
                                         ))}

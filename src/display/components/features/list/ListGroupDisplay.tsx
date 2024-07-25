@@ -60,8 +60,8 @@ const ListGroupDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure borderstyler border'+getColour("tc")}>
-            <h1 className={'titleShape titlestyler background'+getColour("tc")}>{ModelObject.Name || ""}</h1>
+        //<div className={'modelStructure borderstyler border'+getColour("tc")}>
+          //  <h1 className={'titleShape titlestyler background'+getColour("tc")}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 
                 {ModelObject.Description.length != 0 &&
@@ -101,7 +101,7 @@ const ListGroupDisplay = (props: any) => {
                     ))}
                 </div>
             </div>
-        </div>
+       // </div>
     )
 }
 

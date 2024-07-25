@@ -20,6 +20,9 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import SkillHover from '../../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
 
+import GenericHover from '../../../../../components/generics/GenericHover'
+import ModelDescriptionItemDisplay from '../../../../../components/subcomponents/description/ModelDescriptionItemDisplay';
+
 const MemberEditSkillsDisplay = (props: any) => {
     const [theme, setTheme] = useGlobalState('theme');
     const WarbandItem: Warband = props.warband;
@@ -104,7 +107,10 @@ const MemberEditSkillsDisplay = (props: any) => {
 
             <div className="col-9 align-content-center">
                 <div className="equipbody">
-                    <SkillHover data={item} titlename={item.name} />
+                <GenericHover titlename={item.name} d_colour={"tc"} d_name={item.name} d_type={""} d_method={() => 
+                        <SkillHover data={item}/>
+                    }/>
+                    
                 </div>
             </div>
             <div className="col-3 align-content-center">

@@ -96,8 +96,8 @@ const ModelDisplay = (props: any) => {
     }
 
     return (
-        <div className={'modelStructure borderstyler border'+getColour(ModelObject.Team)}>
-            <h1 className={'titleShape titlestyler background'+getColour(ModelObject.Team)}>{ModelObject.Name || ""}</h1>
+        //<div className={'modelStructure borderstyler border'+getColour(ModelObject.Team)}>
+          //  <h1 className={'titleShape titlestyler background'+getColour(ModelObject.Team)}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
@@ -133,7 +133,7 @@ const ModelDisplay = (props: any) => {
                     {returnAbilities()}
                 </div>
             </div>
-        </div>
+       // </div>
     )
 }
 

@@ -4,13 +4,16 @@ import React from 'react'
 
 import { FactionUpgrade } from '../../../../../../classes/feature/factions/FactionUpgrade'
 import EquipmentHover from '../../../../../components/subcomponents/informationpanel/hovermisc/EquipmentHover'
-import UpgradeHover from '../../../../..//components/subcomponents/informationpanel/hovermisc/UpgradeHover'
+import UpgradeHover from '../../../../../components/subcomponents/informationpanel/hovermisc/UpgradeHover'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCoins } from '@fortawesome/free-solid-svg-icons'
 import { Warband } from '../../../../../../classes/lists/Warband'
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember'
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager'
+
+import GenericHover from '../../../../../components/generics/GenericHover'
+import UpgradeDisplay from '../../../../../components/features/equipment/UpgradeDisplay'
 
 const ModelUpgradeDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -40,7 +43,8 @@ const ModelUpgradeDisplay = (props: any) => {
 
             <div className="col-5 align-content-center">
                 <div className="equipbody">
-                    <UpgradeHover data={ModelEquip} titlename={ModelEquip.Name} />
+                    <GenericHover titlename={ModelEquip.Name} d_colour={WarbandMember.Model.Object.Team} d_name={ModelEquip.Name} d_type={""} d_method={() => <UpgradeDisplay data={ModelEquip} />}/>
+                 
                 </div>
             </div>
             <div className="col-3 align-content-center">

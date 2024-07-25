@@ -7,6 +7,7 @@ import {ConvertContentWithGlossary} from '../../../../utility/util'
 import { ModelDescription} from '../../../../classes/feature/models/ModelDescription'
 import { PlayerModel } from '../../../../classes/feature/models/Model'
 import AddonDisplay from '../../features/addons/AddonDisplay'
+import GenericDisplay from '../../generics/GenericDisplay'
 
 
 const ModelDescriptionItemDisplay = (props: any) => {
@@ -111,7 +112,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
     }
 
     function findAddon(id: string) {
-        let AddonFound = null;
+        let AddonFound: any = null;
 
         let i = 0;
         for (i = 0; i < parentItem.Addons.length; i++) {
@@ -122,7 +123,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
 
         if (AddonFound != null) {
             return (
-                <AddonDisplay data={AddonFound} colour={parentItem.Team}/>
+                <GenericDisplay d_colour={parentItem.Team} d_name={AddonFound.Name} d_type={"sub"} d_method={() => <AddonDisplay data={AddonFound} />}/>
             )
         } else {
             return (

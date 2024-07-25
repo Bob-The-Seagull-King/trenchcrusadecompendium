@@ -4,12 +4,16 @@ import React from 'react'
 
 import { PlayerModel } from '../../../../classes/feature/models/Model'
 import { FactionModel } from '../../../../classes/feature/factions/FactionModel'
+import GenericHover from '../../../components/generics/GenericHover'
+import ModelDisplay from '../models/ModelDisplay'
 import ModelHover from '../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
 import { Requester } from '../../../../factories/Requester'
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
 import { FactionUpgrade } from '../../../../classes/feature/factions/FactionUpgrade'
 import UpgradeHover from '../../../../display/components/subcomponents/informationpanel/hovermisc/UpgradeHover'
 import EquipmentHover from '../../../../display/components/subcomponents/informationpanel/hovermisc/EquipmentHover'
+import UpgradeDisplay from '../../../../display/components/features/equipment/UpgradeDisplay'
+import EquipmentDisplay from '../equipment/EquipmentDisplay'
 
 const FactionModelDisplay = (props: any) => {
 
@@ -32,7 +36,11 @@ const FactionModelDisplay = (props: any) => {
                     <span>{"-"}</span>
                 }
                 {UpgradeList.length > 0 && UpgradeList.map((item) => (
-                    <span key={"upgrades" + item.ID}> <UpgradeHover data={item} titlename={item.Name} /><span>{", "}</span> </span>
+                    <span key={"upgrades" + item.ID}> 
+                    <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item} />}/>
+                 
+                    <span>{", "}</span> 
+                    </span>
                 ))}
             </>
         )
@@ -54,7 +62,9 @@ const FactionModelDisplay = (props: any) => {
                     <span>{"-"}</span>
                 }
                 {EquipmentList.length > 0 && EquipmentList.map((item) => (
-                    <span key={"equipment" + item.ID}> <EquipmentHover data={item} titlename={item.Name} /><span>{", "}</span> </span>
+                    <span key={"equipment" + item.ID}> 
+                        <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item} />}/>
+                    <span>{", "}</span> </span>
                 ))}
             </>
         )
@@ -83,7 +93,8 @@ const FactionModelDisplay = (props: any) => {
 
             <div className="col-3">
                 <div className="equipbody">
-                    <ModelHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
+                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={ModelEquip.Object.Team} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <ModelDisplay data={ModelEquip.Object}/>}/>
+                        
                 </div>
             </div>
             <div className="col-2">

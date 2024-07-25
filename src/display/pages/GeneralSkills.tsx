@@ -10,6 +10,7 @@ import ListGroupDisplay from '../../display/components/features/list/ListGroupDi
 import SkillFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ListFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
 
 const GeneralSkills = (prop: any) => {
     // Initialize controllers and managers
@@ -144,7 +145,7 @@ const GeneralSkills = (prop: any) => {
                                 <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                                     {_activeItems.map((item) => (
                                         <div className="col" key={"modelDisplay"+item.ID}>
-                                            <ListGroupDisplay data={item}/>
+                                            <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ListGroupDisplay data={item}/>}/>
                                             <br/>
                                         </div>
                                     ))}

@@ -47,20 +47,13 @@ const SkillHover = (props: any) => {
   }
 
     return (
-      <>
-          <span>
-            <span className='glossaryPurple hovermouse' style={{fontSize:"1.1em"}} onClick={() => handleShow()}>{ruleName}</span>                
-          </span>
-
-          <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="overcomeBackground" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
-              <Modal.Body > 
-                    {
-                    <>{description.map((item) => ( 
-                        <ModelDescriptionItemDisplay key="modeloption" data={item} parent={ruleObject}/> 
-                    ))}</>
-                    } 
-              </Modal.Body>
-          </Modal>
+      <><div className='modelInternalStructure'>
+        {
+        <>{description.map((item) => ( 
+            <ModelDescriptionItemDisplay key="modeloption" data={item} parent={ruleObject}/> 
+        ))}</>
+        } 
+        </div>
       </>
     )
 }

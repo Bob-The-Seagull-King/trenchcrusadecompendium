@@ -11,6 +11,8 @@ import ScenarioFilterSelectDisplay from '../../display/components/subcomponents/
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
+import GenericDisplay from '../../display/components/generics/GenericDisplay'
+
 const GeneralScenarios = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllScenarioListPage = prop.controller
@@ -144,7 +146,8 @@ const GeneralScenarios = (prop: any) => {
                                 <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
                                     {_activeItems.map((item) => (
                                         <div className="col" key={"modelDisplay"+item.ID}>
-                                            <ScenarioDisplay data={item}/>
+                                            <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ScenarioDisplay data={item}/>}/>
+                                            
                                             <br/>
                                         </div>
                                     ))}

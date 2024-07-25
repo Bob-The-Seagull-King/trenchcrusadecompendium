@@ -14,6 +14,8 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FactionHover from '../../../../../display/components/subcomponents/informationpanel/hovermisc/FactionHover';
+import GenericHover from '../../../../../display/components/generics/GenericHover';
+import FactionDisplay from '../../faction/FactionDisplay';
 
 const WarbandFactionEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -58,7 +60,8 @@ const WarbandFactionEditDisplay = (props: any) => {
     return (
         <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                <FactionHover titlename={Warband_Faction} data={WarbandItem.Faction}/>
+                <GenericHover titlename={WarbandItem.Faction.Name} d_colour={WarbandItem.Faction.Team} d_name={WarbandItem.Faction.Name} d_type={""} d_method={() => <FactionDisplay data={WarbandItem.Faction}/>}/>
+                        
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShowNameEdit()}/>
             </div>
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>

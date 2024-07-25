@@ -6,6 +6,9 @@ import { FactionEquip } from '../../../../classes/feature/factions/FactionEquip'
 import EquipmentHover from '../../../components/subcomponents/informationpanel/hovermisc/EquipmentHover'
 import { Requester } from '../../../../factories/Requester'
 
+import GenericHover from '../../../components/generics/GenericHover'
+import EquipmentDisplay from '../equipment/EquipmentDisplay'
+
 const FactionEquipDisplay = (props: any) => {
 
     const ModelEquip: FactionEquip = props.data;
@@ -72,7 +75,8 @@ const FactionEquipDisplay = (props: any) => {
 
             <div className="col-4">
                 <div className="equipbody">
-                    <EquipmentHover data={ModelEquip.Object} titlename={ModelEquip.Object.Name} />
+                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
+                    
                 </div>
             </div>
             <div className="col-2">
