@@ -5,10 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 import { useNavigate } from "react-router-dom";
 
-import { AllModelsListPage } from  '../../classes/viewmodel/pages/AllModelsListPage'
-
 import logo from '../../resources/images/trenchcrusade_logo.png'
 import ReactDOM from 'react-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShapes } from '@fortawesome/free-solid-svg-icons'
 import { faPersonRifle } from '@fortawesome/free-solid-svg-icons'

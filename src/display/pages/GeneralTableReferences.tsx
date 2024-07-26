@@ -5,7 +5,6 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import { ViewTableReferenceCollection } from '../../classes/viewmodel/collections/ViewTableReferenceCollections'
 import { AllTableReferenceListPage } from '../../classes/viewmodel/pages/AllTableReferenceListPage'
-import { TableReferenceFilterManager } from '../../classes/viewmodel/collections/filters/TableReferenceFilterManager'
 
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
 import ListGroupDisplay from '../../display/components/features/list/ListGroupDisplay'
@@ -14,12 +13,11 @@ const GeneralTableReferences = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllTableReferenceListPage = prop.controller
     const ModelsCollectionController: ViewTableReferenceCollection = ViewPageController.Collection;
-    const FilterManager: TableReferenceFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
-    const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);
-    const [_foundItems, returntable] = useState(ModelsCollectionController.itemcollection);
-    const [_keyval, updatekey] = useState(1);
+    const [_activeItems] = useState(ModelsCollectionController.ModelsList);
+    const [_foundItems] = useState(ModelsCollectionController.itemcollection);
+    const [_keyval] = useState(1);
 
     // Return result -----------------------------
     return (

@@ -1,5 +1,5 @@
 // Import typescript interfaces and classes
-import { IFilterItem, IFilterTag, IFilterText, FilterTag, FilterItem, FilterText } from "./FilterInterfaces"
+import { IFilterItem, FilterItem, FilterText } from "./FilterInterfaces"
 import { Requester } from "../../../../factories/Requester";
 import { FilterManager } from "./FilterManager";
 

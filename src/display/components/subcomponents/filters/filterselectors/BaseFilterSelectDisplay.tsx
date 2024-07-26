@@ -4,11 +4,7 @@ import React, { useState } from 'react'
 
 import { FilterManager } from '../../../../../classes/viewmodel/collections/filters/FilterManager'
 
-import FilterItemItem from '../FilterItemItem'
-import FilterTagItem from '../FilterTagItem'
-import FilterTextItem from '../FilterTextItem'
 import FilterDisplay from '../FilterDisplay'
-
 import EquipmentFilterSelectDisplay from './EquipmentFilterSelectDisplay'
 import FactionFilterSelectDisplay from './FactionFilterSelectDisplay'
 import ListFilterSelectDisplay from './ListFilterSelectDisplay'
@@ -16,8 +12,6 @@ import ModelFilterSelectDisplay from './ModelFilterSelectDisplay'
 import ScenarioFilterSelectDisplay from './ScenarioFilterSelectDisplay'
 
 import { useGlobalState } from '../../../../../utility/globalstate'
-
-import Modal from 'react-bootstrap/Modal';
 
 const BaseFilterSelectDisplay = (prop: any) => {
     const ViewPageController = prop.controller
@@ -30,7 +24,7 @@ const BaseFilterSelectDisplay = (prop: any) => {
     const [_activemiscfilters, returnactivemisc] = useState(FilterManager.ReturnActiveMiscFilters());
     const [_activestatfilters, returnactivestat] = useState(FilterManager.ReturnActiveStatFilters());
     const [_keyval, updatekey] = useState(1);
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const [show, setShow] = useState(false);
 

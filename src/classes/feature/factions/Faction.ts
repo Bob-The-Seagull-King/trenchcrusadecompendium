@@ -1,12 +1,9 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
 import {ModelDescription} from '../models/ModelDescription'
-import { IEquipmentFactionList, IEquipmentRestriction, FactionEquip } from './FactionEquip'
+import { IEquipmentFactionList, FactionEquip } from './FactionEquip'
 import { IFactionRuleset, FactionRule } from './FactionRule'
-import { PlayerModel, IPlayerModel } from '../models/Model'
-import { Requester } from '../../../factories/Requester'
-import { ModelFactory } from '../../../factories/features/ModelFactory'
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf } from "../../../utility/functions";
 import { IModelFactionList, FactionModel } from './FactionModel'
 
 interface IPlayerFaction extends ITrenchCrusadeItemData {

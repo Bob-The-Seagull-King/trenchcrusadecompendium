@@ -2,7 +2,7 @@ import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IPlayerModel, PlayerModel } from "../../feature/models/Model";
 import { ModelFactory } from "../../../factories/features/ModelFactory";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf, getColour } from "../../../utility/functions";
 
 class ViewModelsCollection extends ViewCollectionsModel {
 

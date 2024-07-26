@@ -4,9 +4,10 @@ import React from 'react'
 
 import {capitalizeString} from '../../../utility/functions'
 import {ITrenchCrusadeItemTag} from '../../../classes/TrenchCrusadeItem'
-import GlossaryHover from './glossary/GlossaryHover'
 import { GlossaryRule, IGlossaryRule } from '../../../classes/feature/glossary/Glossary'
 import { Requester } from '../../../factories/Requester'
+
+import GlossaryHover from './glossary/GlossaryHover'
 
 const TagDisplay = (props: any) => {
     const tag: ITrenchCrusadeItemTag = props.data

@@ -1,17 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React, { useRef, useState } from 'react'
 
-import { Warband } from '../../../../../classes/lists/Warband';
-import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
+import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { Warband } from '../../../../../classes/lists/Warband';
+import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { useGlobalState } from '../../../../../utility/globalstate'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandEditBankGloryDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -20,7 +20,7 @@ const WarbandEditBankGloryDisplay = (props: any) => {
 
     const Warband_MaxCount = WarbandItem? WarbandItem.GloryTotal : 0;
     let NewMaxCount = Warband_MaxCount;
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const Warband_LostCount = WarbandItem? WarbandItem.GloryLost : 0;
     let NewLostCount = Warband_LostCount;

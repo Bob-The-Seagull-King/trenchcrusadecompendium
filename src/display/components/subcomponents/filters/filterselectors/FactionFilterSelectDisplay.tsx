@@ -1,16 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { AllFactionListPage } from '../../../../../classes/viewmodel/pages/AllFactionListPage'
 import { FactionFilterManager } from '../../../../../classes/viewmodel/collections/filters/FactionFilterManager'
 
 import FilterItemItem from '../FilterItemItem'
-import FilterTagItem from '../FilterTagItem'
 import FilterTextItem from '../FilterTextItem'
-import FilterDisplay from '../FilterDisplay'
-
-import { useGlobalState } from './../../../../../utility/globalstate'
 
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,7 +15,6 @@ const FactionFilterSelectDisplay = (prop: any) => {
     const FilterManager: FactionFilterManager = ViewPageController.FilterManager;
     const theme = prop.usetheme
     const handleClose = prop.closemodal;
-    const RunUpdate = prop.update;
     const show = prop.useshow;
 
     // Return result -----------------------------

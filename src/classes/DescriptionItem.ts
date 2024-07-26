@@ -1,6 +1,3 @@
-import {ItemType} from './Enum'
-import {getTagValue} from '../utility/functions'
-
 /**
  * Data structure for the description section
  */

@@ -3,13 +3,14 @@ import '../../../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { ListEquipment } from '../../../../../../classes/lists/ListEquipment'
-import EquipmentHover from '../../../../../components/subcomponents/informationpanel/hovermisc/EquipmentHover'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { faCoins } from '@fortawesome/free-solid-svg-icons'
 import { Warband } from '../../../../../../classes/lists/Warband'
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember'
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faCoins } from '@fortawesome/free-solid-svg-icons'
+
 import GenericHover from '../../../../../components/generics/GenericHover'
 import EquipmentDisplay from '../../../../../components/features/equipment/EquipmentDisplay'
 

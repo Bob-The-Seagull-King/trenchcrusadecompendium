@@ -5,23 +5,21 @@ import Button from 'react-bootstrap/Button';
 
 import Modal from 'react-bootstrap/Modal';
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
-import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
-import { useGlobalState } from './../../../../utility/globalstate'
+import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
+import { useGlobalState } from '../../../../utility/globalstate'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 const FactionLorePanel = (props: any) => {
     const ModelObject : PlayerFaction = props.data
 
     const [show, setShow] = useState(false);
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    
 
     function returnFlavour() {
         return (

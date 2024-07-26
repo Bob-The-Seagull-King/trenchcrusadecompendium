@@ -2,7 +2,7 @@ import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IPlayerEquipment, PlayerEquipment } from "../../../classes/feature/equipment/Equipment";
 import { EquipmentFactory } from "../../../factories/features/EquipmentFactory";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf, getColour } from "../../../utility/functions";
 
 class ViewEquipmentCollection extends ViewCollectionsModel {
 

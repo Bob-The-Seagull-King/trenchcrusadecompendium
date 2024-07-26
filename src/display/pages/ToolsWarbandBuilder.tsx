@@ -1,11 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 
 import { WarbandManager } from '../../classes/lists/warbandmanager';
+import { Warband } from '../../classes/lists/Warband';
+
 import WarbandListDisplay from '../../display/components/features/warband/WarbandListDisplay';
 import WarbandEditDisplay from '../../display/components/features/warband/WarbandEditDisplay';
-import { Warband } from '../../classes/lists/Warband';
 
 const ToolsWarbandBuilder = (prop: any) => {
     const Manager : WarbandManager = prop.manager;

@@ -1,30 +1,26 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
+
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
+import { useGlobalState } from './../../../../../../utility/globalstate'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 
-import { useGlobalState } from './../../../../../../utility/globalstate'
-
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import SkillHover from '../../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
-
 import GenericHover from '../../../../../components/generics/GenericHover'
-import ModelDescriptionItemDisplay from '../../../../../components/subcomponents/description/ModelDescriptionItemDisplay';
 
 const MemberEditSkillsDisplay = (props: any) => {
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;

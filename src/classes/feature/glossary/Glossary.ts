@@ -1,6 +1,6 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {IModelDescription, ModelDescription} from '../models/ModelDescription'
+import {ModelDescription} from '../models/ModelDescription'
 
 interface IGlossaryRule extends ITrenchCrusadeItemData {
     description: []

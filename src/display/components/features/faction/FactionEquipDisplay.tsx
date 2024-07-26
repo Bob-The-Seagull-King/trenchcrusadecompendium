@@ -3,7 +3,6 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { FactionEquip } from '../../../../classes/feature/factions/FactionEquip'
-import EquipmentHover from '../../../components/subcomponents/informationpanel/hovermisc/EquipmentHover'
 import { Requester } from '../../../../factories/Requester'
 
 import GenericHover from '../../../components/generics/GenericHover'

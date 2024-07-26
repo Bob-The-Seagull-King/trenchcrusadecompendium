@@ -11,7 +11,6 @@ import MenuHeader from './MenuHeader'
 
 const SuperHeader: React.FC = () => {
 
-
     const [theme, setTheme] = useGlobalState('theme');
 
     if ((theme == "" ) || (theme == null)) {

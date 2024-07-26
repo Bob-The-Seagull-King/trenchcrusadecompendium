@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour } from '../../../../utility/functions';
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment';
 import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
@@ -12,7 +11,7 @@ import ModelStat from '../../subcomponents/description/ModelStat';
 
 const EquipmentDisplay = (props: any) => {
     const ModelObject: PlayerEquipment = props.data
-    const bannedModelTags = ["inflict", "type"]
+    const bannedModelTags = ["empty"]
 
     function returnDescription() {
         return (
@@ -72,8 +71,7 @@ const EquipmentDisplay = (props: any) => {
     }
 
     return (
-        //<div className={'modelStructure borderstyler border'+getColour("tc")}>
-          //  <h1 className={'titleShape titlestyler background'+getColour("tc")}>{ModelObject.Name || ""}</h1>
+        
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
@@ -109,7 +107,6 @@ const EquipmentDisplay = (props: any) => {
                 </>
                 }
             </div>
-        //</div>
     )
 }
 

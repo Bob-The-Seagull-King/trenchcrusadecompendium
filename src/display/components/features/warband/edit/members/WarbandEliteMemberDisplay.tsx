@@ -1,34 +1,32 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
 import {ITrenchCrusadeItemTag} from '../../../../../../classes/TrenchCrusadeItem'
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import { useGlobalState } from './../../../../../../utility/globalstate'
+import { getColour } from '../../../../../../utility/functions';
 
 import TagDisplay from '../../../../subcomponents/TagDisplay'
-import ModelDescriptionItemDisplay from '../../../../subcomponents/description/ModelDescriptionItemDisplay';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import ModelDisplay from '../../../../../components/features/models/ModelDisplay';
-import { getColour, makestringpresentable } from '../../../../../../utility/functions';
 import GenericHover from '../../../../../components/generics/GenericHover'
 import ModelStat from '../../../../subcomponents/description/ModelStat';
-import ModelHover from '../../../../../components/subcomponents/informationpanel/hovermisc/ModelHover'
 import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
 import MemberEditScarsDisplay from './MemberEditScarsDisplay';
 import MemberAddUpgradeDisplay from './MemberAddUpgradeDisplay.';
 import ModelUpgradeDisplay from './MemberUpgradeDisplay';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
@@ -41,7 +39,7 @@ const WarbandEliteMemberDisplay = (props: any) => {
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
-    const bannedModelTags = ["inflict", "type"]
+    const bannedModelTags = ["empty"]
     const [theme, setTheme] = useGlobalState('theme');
 
     const ducatcost = Manager.GetDucatCost(WarbandMember);

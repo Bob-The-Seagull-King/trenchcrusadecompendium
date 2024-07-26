@@ -2,8 +2,7 @@ import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IScenario, Scenario } from "../../../classes/feature/scenarios/Scenario";
 import { ScenarioFactory } from "../../../factories/features/ScenarioFactory";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
-import { Requester } from "../../../factories/Requester";
+import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewScenarioCollection extends ViewCollectionsModel {
 

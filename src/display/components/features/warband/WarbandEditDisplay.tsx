@@ -1,37 +1,35 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Warband } from '../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../classes/lists/warbandmanager';
+import { useGlobalState } from '../../../../utility/globalstate'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
 import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
 import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-
-import { useGlobalState } from '../../../../utility/globalstate'
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     let warbandNotes = WarbandItem.Notes;
-
-    const Warband_Name = WarbandItem? WarbandItem.Name : "";
-
     
     function returnNotes() {
         return (
@@ -59,13 +57,6 @@ const WarbandEditDisplay = (props: any) => {
                     </h1>
                 </div>
             </div>
-            </>
-        )
-    }
-    
-    function ReturnPrinter() {
-        return (
-            <>
             </>
         )
     }

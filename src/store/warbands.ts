@@ -1,6 +1,5 @@
 import { create } from "zustand";
-import { IWarband, Warband } from "../classes/lists/Warband";
-import Cookies from 'js-cookie'
+import { Warband } from "../classes/lists/Warband";
 
 type WarbandStore = {
     Warbands: Warband[];

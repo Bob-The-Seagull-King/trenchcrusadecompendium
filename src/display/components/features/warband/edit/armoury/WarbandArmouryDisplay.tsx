@@ -1,14 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import { ToastContainer, toast } from 'react-toastify';
+import React from 'react'
+
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+
 import WarbandEquipDisplay from './WarbandEquipDisplay';
 import WarbandAddEquipDisplay from './WarbandAddEquipDisplay';
 

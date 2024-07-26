@@ -1,10 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React, { useEffect, useRef, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
+
 import Button from 'react-bootstrap/Button';
 
 import { Warband } from '../../../../classes/lists/Warband';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'

@@ -1,6 +1,5 @@
 import { Requester } from "../../../factories/Requester"
-import {ItemType} from '../../Enum'
-import {IModelDescription, ModelDescription} from '../models/ModelDescription'
+import { ModelDescription} from '../models/ModelDescription'
 
 interface IFactionUpgrade {
     id: string,

@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour } from '../../../../utility/functions';
 import { PlayerAddon } from '../../../../classes/feature/addons/Addon';
 import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
@@ -11,7 +10,7 @@ import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDe
 
 const AddonDisplay = (props: any) => {
     const ModelObject: PlayerAddon = props.data
-    const bannedModelTags = ["inflict", "type"]
+    const bannedModelTags = ["empty"]
 
     function returnDescription() {
         return (
@@ -57,8 +56,6 @@ const AddonDisplay = (props: any) => {
     }
 
     return (
-        //<div className={'modelStructure borderstyler subborder'+getColour(props.colour)}>
-          //  <h1 className={'titleShape titlestyler subbackground'+getColour(props.colour)}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnTags()}
@@ -68,7 +65,6 @@ const AddonDisplay = (props: any) => {
                     {returnDescription()}
                 </div>
             </div>
-        //</div>
     )
 }
 

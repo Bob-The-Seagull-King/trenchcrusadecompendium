@@ -1,5 +1,3 @@
-
-import {IModelDescription, ModelDescription} from '../../classes/feature/models/ModelDescription'
 import { IPlayerFaction, PlayerFaction } from '../../classes/feature/factions/Faction';
 
 class FactionFactory {

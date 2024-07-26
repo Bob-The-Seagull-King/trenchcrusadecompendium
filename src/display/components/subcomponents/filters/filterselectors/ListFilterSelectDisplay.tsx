@@ -1,16 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { AllSkillsListPage } from '../../../../../classes/viewmodel/pages/AllSkillsListPage'
 import { SkillsFilterManager } from '../../../../../classes/viewmodel/collections/filters/SkillsFilterManager'
 
 import FilterItemItem from '../FilterItemItem'
-import FilterTagItem from '../FilterTagItem'
 import FilterTextItem from '../FilterTextItem'
-import FilterDisplay from '../FilterDisplay'
-
-import { useGlobalState } from './../../../../../utility/globalstate'
 
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,7 +15,6 @@ const SkillFilterSelectDisplay = (prop: any) => {
     const FilterManager: SkillsFilterManager = ViewPageController.FilterManager;
     const theme = prop.usetheme
     const handleClose = prop.closemodal;
-    const RunUpdate = prop.update;
     const show = prop.useshow;
     
     // Return result -----------------------------

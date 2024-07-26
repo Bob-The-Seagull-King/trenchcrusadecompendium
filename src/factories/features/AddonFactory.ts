@@ -1,6 +1,4 @@
-
-import {IModelDescription, ModelDescription} from '../../classes/feature/models/ModelDescription'
-import {IAddonParent, IPlayerAddon, PlayerAddon} from '../../classes/feature/addons/Addon'
+import {IPlayerAddon, PlayerAddon} from '../../classes/feature/addons/Addon'
 
 class AddonFactory {
 

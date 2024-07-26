@@ -1,7 +1,7 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IQuickRule, QuickRule } from "../../../classes/feature/rules/QuickRule";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf} from "../../../utility/functions";
 
 class ViewQuickRulesCollection extends ViewCollectionsModel {
 

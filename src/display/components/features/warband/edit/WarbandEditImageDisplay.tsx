@@ -1,27 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React, { useEffect, useRef, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
 
-import { Warband } from '../../../../../classes/lists/Warband';
-import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
+import Modal from 'react-bootstrap/Modal';
+import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { Warband } from '../../../../../classes/lists/Warband';
 import { useGlobalState } from '../../../../../utility/globalstate'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandImageEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
-    const Manager : WarbandManager = props.manager;
 
     const Warband_Image = ((WarbandItem? WarbandItem.Image : ""));
     let NewBandImage = Warband_Image;
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const [showImageEdit, setShowImageEdit] = useState(false);
     const handleCloseImageEdit = () => setShowImageEdit(false); 

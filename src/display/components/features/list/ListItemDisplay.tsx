@@ -2,19 +2,15 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour } from '../../../../utility/functions';
 import { ListItem } from '../../../../classes/feature/list/ListItem';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
-import TagDisplay from '../../subcomponents/TagDisplay'
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
-import ModelStat from '../../subcomponents/description/ModelStat';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons'
 
+import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+
 const ListItemDisplay = (props: any) => {
     const ModelObject: ListItem = props.data
-    const bannedModelTags = ["inflict", "type"]
 
     function returnDescription() {
         return (

@@ -5,22 +5,22 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 import { ContentPack } from '../../../../classes/contentpacks/contentpack'
+import { makestringpresentable } from '../../../../utility/functions'
+import { useGlobalState } from '../../../../utility/globalstate'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 import { faUnlock } from '@fortawesome/free-solid-svg-icons'
-import { makestringpresentable } from '../../../../utility/functions'
-
-import { useGlobalState } from '../../../../utility/globalstate'
 
 const ContentPackDisplay = (props: any) => {
     const PackItem: ContentPack = props.data;
     const parentView = props.parent;
     const updateHost = props.statefunction;
 
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
     
     const [stateWidth, setWidth] = useState(window.innerWidth);
     const ref = useRef<HTMLDivElement>(null);

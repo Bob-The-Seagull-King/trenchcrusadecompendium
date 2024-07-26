@@ -3,12 +3,10 @@ import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
 import { ViewEquipmentCollection } from '../../classes/viewmodel/collections/ViewEquipmentCollections'
-import { EquipmentFilterManager } from '../../classes/viewmodel/collections/filters/EquipmentFilterManager'
 import { AllEquipmentListPage } from '../../classes/viewmodel/pages/AllEquipmentListPage'
 
 import EquipmentDisplay from '../../display/components/features/equipment/EquipmentDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import EquipmentFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/EquipmentFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
@@ -17,7 +15,6 @@ const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllEquipmentListPage = prop.controller
     const ModelsCollectionController: ViewEquipmentCollection = ViewPageController.Collection;
-    const FilterManager: EquipmentFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
     const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);

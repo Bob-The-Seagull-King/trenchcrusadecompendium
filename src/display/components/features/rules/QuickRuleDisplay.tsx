@@ -2,14 +2,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour, containsTag } from '../../../../utility/functions';
 import { QuickRule } from '../../../../classes/feature/rules/QuickRule';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
-import { makestringpresentable } from '../../../../utility/functions'
 
-import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
-import FactionEquipDisplay from '../faction/FactionEquipDisplay';
 
 const QuickRuleDisplay = (props: any) => {
     const ModelObject: QuickRule = props.data
@@ -50,8 +45,7 @@ const QuickRuleDisplay = (props: any) => {
     }
 
     return (
-        //<div className={'modelStructure borderstyler border'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
-          //  <h1 className={'titleShape titlestyler background'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
+        
             <div className='modelInternalStructure'>
                 <>
                     <div>
@@ -67,7 +61,6 @@ const QuickRuleDisplay = (props: any) => {
                     </>
                 }          
             </div>
-        //</div>
     )
 }
 

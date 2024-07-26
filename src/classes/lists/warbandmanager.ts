@@ -1,6 +1,4 @@
 import { IWarband, Warband } from './Warband';
-import Cookies from 'js-cookie'
-import { useWarbandStore } from '../../store/warbands';
 import { GrabWarband } from '../../store/warbands';
 import { IPlayerFaction, PlayerFaction } from "../../classes/feature/factions/Faction";
 import { IPlayerModel, PlayerModel } from '../../classes/feature/models/Model';
@@ -10,7 +8,7 @@ import { EquipmentFactory } from '../../factories/features/EquipmentFactory';
 import { IPlayerFactionVariant } from "../../classes/feature/factions/FactionVariant";
 import { FactionFactory } from "../../factories/features/FactionFactory";
 import { FactionVariantFactory } from "../../factories/features/FactionVariantFactory";
-import { byPropertiesOf, getColour, sort } from "../../utility/functions";
+import { byPropertiesOf } from "../../utility/functions";
 import { Requester } from "../../factories/Requester";
 import noimage from '../../resources/images/no_image.jpg'
 import { IWarbandMember, WarbandMember } from './WarbandMember';

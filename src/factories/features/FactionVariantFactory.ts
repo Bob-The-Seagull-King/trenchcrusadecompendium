@@ -1,6 +1,4 @@
-
-import {IModelDescription, ModelDescription} from '../../classes/feature/models/ModelDescription'
-import { IPlayerFaction, PlayerFaction } from '../../classes/feature/factions/Faction';
+import { IPlayerFaction } from '../../classes/feature/factions/Faction';
 import { IPlayerFactionVariant } from '../../classes/feature/factions/FactionVariant';
 import { Requester } from '../../factories/Requester';
 import { IEquipmentFactionList } from '../../classes/feature/factions/FactionEquip'

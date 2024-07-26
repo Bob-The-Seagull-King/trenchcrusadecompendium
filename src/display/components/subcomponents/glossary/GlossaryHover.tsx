@@ -11,7 +11,7 @@ import { useGlobalState } from './../../../../utility/globalstate'
 const GlossaryHover = (props: any) => {
     const ruleObject: GlossaryRule = props.data
     const ruleName = props.titlename
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     return (
       <HoverCard.Root data-theme={theme}>

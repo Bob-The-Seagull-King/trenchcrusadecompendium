@@ -3,12 +3,10 @@ import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
 import { ViewFactionCollection } from '../../classes/viewmodel/collections/ViewFactionCollections'
-import { FactionFilterManager } from '../../classes/viewmodel/collections/filters/FactionFilterManager'
 import { AllFactionListPage } from '../../classes/viewmodel/pages/AllFactionListPage'
 
 import FactionDisplay from '../../display/components/features/faction/FactionDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import FactionFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/FactionFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
 
@@ -16,7 +14,6 @@ const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllFactionListPage = prop.controller
     const ModelsCollectionController: ViewFactionCollection = ViewPageController.Collection;
-    const FilterManager: FactionFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
     const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);

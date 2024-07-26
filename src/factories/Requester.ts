@@ -1,6 +1,5 @@
 import { ContentPack } from '../classes/contentpacks/contentpack';
 import {DataResponder} from '../resources/data/util/DataResponder'
-import { useContentPackStore } from '../store/contentpacks'
 
 /**
  * Format for a given request to send to the icon-data repo

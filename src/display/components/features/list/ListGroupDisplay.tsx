@@ -2,19 +2,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour } from '../../../../utility/functions';
 import { ListGroup } from '../../../../classes/feature/list/ListGroup';
-import { ListItem } from '../../../../classes/feature/list/ListItem';
-import ListItemDisplay from './ListItemDisplay';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 
-import TagDisplay from '../../subcomponents/TagDisplay'
+import ListItemDisplay from './ListItemDisplay';
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
-import ModelStat from '../../subcomponents/description/ModelStat';
 
 const ListGroupDisplay = (props: any) => {
     const ModelObject: ListGroup = props.data
-    const bannedModelTags = ["inflict", "type"]
 
     function returnDescription() {
         return (
@@ -28,40 +22,8 @@ const ListGroupDisplay = (props: any) => {
         )
     }
 
-    function returnTags() {
-        const displaytags = sortTagsForDisplay()
-
-        return (
-            <div className="tagBox">
-                    {displaytags.map((item) => (
-                        <div key={"tagDisplay"+item.tag_name+item.val}>
-                            <TagDisplay data={item}/>
-                        </div>
-                    ))}
-            </div>
-        )
-    }
-
-    function sortTagsForDisplay() {
-        const tagarray: ITrenchCrusadeItemTag[] = []
-
-        let i = 0;
-        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
-            if (ModelObject.Tags != undefined) {
-                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
-
-                if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
-                    temptag.tag_name = "blast"; }
-
-                if (!bannedModelTags.includes(temptag.tag_name)) {
-                    tagarray.push(temptag);
-                }}}
-        return tagarray;
-    }
-
     return (
-        //<div className={'modelStructure borderstyler border'+getColour("tc")}>
-          //  <h1 className={'titleShape titlestyler background'+getColour("tc")}>{ModelObject.Name || ""}</h1>
+        
             <div className='modelInternalStructure'>
                 
                 {ModelObject.Description.length != 0 &&
@@ -101,7 +63,7 @@ const ListGroupDisplay = (props: any) => {
                     ))}
                 </div>
             </div>
-       // </div>
+            
     )
 }
 

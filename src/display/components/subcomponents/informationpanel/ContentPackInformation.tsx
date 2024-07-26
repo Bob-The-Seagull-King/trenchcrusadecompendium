@@ -13,12 +13,11 @@ import { useGlobalState } from './../../../../utility/globalstate'
 const ContentPackInformation = (prop: any) => {
 
     const [show, setShow] = useState(false);
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    
     // Return result -----------------------------
     return (
         <>

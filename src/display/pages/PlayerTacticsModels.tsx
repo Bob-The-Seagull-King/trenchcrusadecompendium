@@ -4,11 +4,9 @@ import React, { useState } from 'react'
 
 import { ViewModelsCollection } from '../../classes/viewmodel/collections/ViewModelsCollections'
 import { AllModelsListPage } from '../../classes/viewmodel/pages/AllModelsListPage'
-import { ModelsFilterManager } from '../../classes/viewmodel/collections/filters/ModelsFilterManager'
 
 import ModelDisplay from '../components/features/models/ModelDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import ModelFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ModelFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
@@ -17,7 +15,6 @@ const PlayerTacticsModels = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllModelsListPage = prop.controller
     const ModelsCollectionController: ViewModelsCollection = ViewPageController.Collection;
-    const FilterManager: ModelsFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
     const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);

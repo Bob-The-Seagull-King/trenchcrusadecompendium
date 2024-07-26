@@ -4,10 +4,8 @@ import React, { useState } from 'react'
 
 import { ViewScenarioCollection } from '../../classes/viewmodel/collections/ViewScenarioCollections'
 import { AllScenarioListPage } from '../../classes/viewmodel/pages/AllScenarioListPage'
-import { ScenarioFilterManager } from '../../classes/viewmodel/collections/filters/ScenarioFilterManager'
 
 import ScenarioDisplay from '../../display/components/features/scenario/ScenarioDisplay'
-import ScenarioFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ScenarioFilterSelectDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
@@ -17,7 +15,6 @@ const GeneralScenarios = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllScenarioListPage = prop.controller
     const ModelsCollectionController: ViewScenarioCollection = ViewPageController.Collection;
-    const FilterManager: ScenarioFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
     const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);

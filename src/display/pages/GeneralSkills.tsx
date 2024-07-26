@@ -4,10 +4,8 @@ import React, { useState } from 'react'
 
 import { ViewSkillsCollection } from '../../classes/viewmodel/collections/ViewSkillsCollections'
 import { AllSkillsListPage } from '../../classes/viewmodel/pages/AllSkillsListPage'
-import { SkillsFilterManager } from '../../classes/viewmodel/collections/filters/SkillsFilterManager'
 
 import ListGroupDisplay from '../../display/components/features/list/ListGroupDisplay'
-import SkillFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/ListFilterSelectDisplay'
 import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
@@ -16,7 +14,6 @@ const GeneralSkills = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllSkillsListPage = prop.controller
     const ModelsCollectionController: ViewSkillsCollection = ViewPageController.Collection;
-    const FilterManager: SkillsFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
     const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);

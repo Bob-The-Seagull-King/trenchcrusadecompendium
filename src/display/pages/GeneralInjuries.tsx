@@ -3,54 +3,20 @@ import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
 import { ViewInjuriesCollection } from '../../classes/viewmodel/collections/ViewInjuriesCollections'
-import { InjuryFilterManager } from '../../classes/viewmodel/collections/filters/InjuryFilterManager'
 import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesListPage'
 
 
 import ListItemDisplay from '../../display/components/features/list/ListItemDisplay'
-import EquipmentFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/EquipmentFilterSelectDisplay'
-import BaseFilterSelectDisplay from '../../display/components/subcomponents/filters/filterselectors/BaseFilterSelectDisplay'
 
 const GeneralInjuries = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllInjuriesListPage = prop.controller
     const ModelsCollectionController: ViewInjuriesCollection = ViewPageController.Collection;
-    const FilterManager: InjuryFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
-    const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);
-    const [_foundItems, returntable] = useState(ModelsCollectionController.itemcollection);
-    const [_keyval, updatekey] = useState(1);
-
-    // Functions -----------------------------------------------------------------------------------
-
-    /**
-     * Get the controller to update the search, then update
-     * the state of the model/item list arrays. Update the
-     * keyval in order to force a rerender of elements.
-     */
-    function UpdateSearch() {
-        ViewPageController.updateSearch();
-        returntable(RecallTable())
-        returnstate(RecallModels())
-        updatekey(_keyval+1)
-    }
-
-    /**
-     * @returns Update the state of the models selected
-     */
-    function RecallModels() {
-        const models = ModelsCollectionController.ReturnModels();
-        return models;
-    }
-
-    /**
-     * @returns Update the state of the items available to select
-     */
-    function RecallTable() {
-        const table = ModelsCollectionController.ReturnItems();
-        return table;
-    }
+    const [_activeItems] = useState(ModelsCollectionController.ModelsList);
+    const [_foundItems] = useState(ModelsCollectionController.itemcollection);
+    const [_keyval] = useState(1);
 
     // Return result -----------------------------
     return (

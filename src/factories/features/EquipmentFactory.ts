@@ -1,5 +1,3 @@
-
-import {IModelDescription, ModelDescription} from '../../classes/feature/models/ModelDescription'
 import { IPlayerEquipment, PlayerEquipment } from '../../classes/feature/equipment/Equipment';
 
 class EquipmentFactory {

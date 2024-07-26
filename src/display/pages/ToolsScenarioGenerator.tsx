@@ -1,9 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 
 import { ScenarioGenerator } from '../../classes/feature/scenarios/ScenarioGenerator'
-import { Scenario } from '../../classes/feature/scenarios/Scenario'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons'
 

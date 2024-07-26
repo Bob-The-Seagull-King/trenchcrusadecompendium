@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 import { ViewTableItem } from '../../../../classes/viewmodel/collections/ViewTableItem'
 
-
 const ViewTableItemDisplay = (props: any) => {
     const tableItem: ViewTableItem = props.data
     const parentView = props.parent;

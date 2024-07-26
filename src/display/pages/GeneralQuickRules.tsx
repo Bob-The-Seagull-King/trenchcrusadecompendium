@@ -5,7 +5,6 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import { ViewQuickRulesCollection } from '../../classes/viewmodel/collections/ViewQuickRulesCollection'
 import { AllQuickRulesPage } from '../../classes/viewmodel/pages/AllQuickRulesListPage'
-import { QuickRulesFilterManager } from '../../classes/viewmodel/collections/filters/QuickRulesFilterManager'
 
 import QuickRuleDisplay from '../../display/components/features/rules/QuickRuleDisplay'
 import GenericDisplay from '../../display/components/generics/GenericDisplay'
@@ -14,12 +13,11 @@ const GeneralQuickRules = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: AllQuickRulesPage = prop.controller
     const ModelsCollectionController: ViewQuickRulesCollection = ViewPageController.Collection;
-    const FilterManager: QuickRulesFilterManager = ViewPageController.FilterManager;
 
     // Initialize Use State
-    const [_activeItems, returnstate] = useState(ModelsCollectionController.ModelsList);
-    const [_foundItems, returntable] = useState(ModelsCollectionController.itemcollection);
-    const [_keyval, updatekey] = useState(1);
+    const [_activeItems] = useState(ModelsCollectionController.ModelsList);
+    const [_foundItems] = useState(ModelsCollectionController.itemcollection);
+    const [_keyval] = useState(1);
 
     // Return result -----------------------------
     return (

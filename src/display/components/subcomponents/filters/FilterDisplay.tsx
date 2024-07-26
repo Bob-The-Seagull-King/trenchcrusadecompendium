@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { makestringpresentable } from '../../../../utility/functions'
 

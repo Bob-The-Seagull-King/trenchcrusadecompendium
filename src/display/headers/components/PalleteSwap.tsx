@@ -1,11 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
+
 import Dropdown from 'react-bootstrap/Dropdown';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import ReactDOM from 'react-dom'
-import { Route, Link, Routes, useLocation } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'

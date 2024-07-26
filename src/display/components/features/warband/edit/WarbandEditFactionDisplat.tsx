@@ -1,19 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
+
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 import { useGlobalState } from '../../../../../utility/globalstate'
-
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FactionHover from '../../../../../display/components/subcomponents/informationpanel/hovermisc/FactionHover';
+
 import GenericHover from '../../../../../display/components/generics/GenericHover';
 import FactionDisplay from '../../faction/FactionDisplay';
 
@@ -21,7 +21,7 @@ const WarbandFactionEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     let factionRef : any = null;
 
@@ -34,7 +34,6 @@ const WarbandFactionEditDisplay = (props: any) => {
     const [showNameEdit, setShowNameEdit] = useState(false);
     const handleCloseNameEdit = () => setShowNameEdit(false); 
     const handleShowNameEdit = () => setShowNameEdit(true);
-
 
     function updateFaction(value: string) {
         NewFactionName = value;

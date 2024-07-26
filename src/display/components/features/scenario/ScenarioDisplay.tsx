@@ -2,19 +2,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour, containsTag } from '../../../../utility/functions';
 import { Scenario } from '../../../../classes/feature/scenarios/Scenario';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
-import { makestringpresentable } from '../../../../utility/functions'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 
 const ScenarioDisplay = (props: any) => {
     const ModelObject: Scenario = props.data
-    const bannedModelTags = ["inflict", "type"]
-
-
 
     function returnRules() {
         return (
@@ -45,8 +39,6 @@ const ScenarioDisplay = (props: any) => {
 
 
     return (
-       // <div className={'modelStructure borderstyler border'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>
-         //   <h1 className={'titleShape titlestyler background'+getColour((ModelObject.ID? ModelObject.ID : "purple"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <img src={ModelObject.ImageUrl} style={{width:"100%"}}/>
                 {(ModelObject.Rules.length > 0) &&
@@ -57,7 +49,6 @@ const ScenarioDisplay = (props: any) => {
                     </>
                 }     
             </div>
-        //</div>
     )
 }
 

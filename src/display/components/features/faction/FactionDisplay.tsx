@@ -2,12 +2,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { getColour, containsTag } from '../../../../utility/functions';
+import { containsTag } from '../../../../utility/functions';
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
 import { makestringpresentable } from '../../../../utility/functions'
 
-import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 import FactionEquipDisplay from './FactionEquipDisplay';
 import FactionModelDisplay from './FactionModelDisplay';
@@ -15,7 +13,6 @@ import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePa
 
 const FactionDisplay = (props: any) => {
     const ModelObject: PlayerFaction = props.data
-    const bannedModelTags = ["inflict", "type"]
 
     function returnModelList() {
         return (
@@ -175,41 +172,7 @@ const FactionDisplay = (props: any) => {
         )
     }
 
-
-    function returnTags() {
-        const displaytags = sortTagsForDisplay()
-
-        return (
-            <div className="tagBox">
-                    {displaytags.map((item) => (
-                        <div key={"tagDisplay"+item.tag_name+item.val}>
-                            <TagDisplay data={item}/>
-                        </div>
-                    ))}
-            </div>
-        )
-    }
-
-    function sortTagsForDisplay() {
-        const tagarray: ITrenchCrusadeItemTag[] = []
-
-        let i = 0;
-        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
-            if (ModelObject.Tags != undefined) {
-                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
-
-                if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
-                    temptag.tag_name = "blast"; }
-
-                if (!bannedModelTags.includes(temptag.tag_name)) {
-                    tagarray.push(temptag);
-                }}}
-        return tagarray;
-    }
-
     return (
-        //<div className={'modelStructure borderstyler border'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>
-          //  <h1 className={'titleShape titlestyler background'+getColour((ModelObject.Team? ModelObject.Team : "tc"))}>{ModelObject.Name || ""}</h1>
             <div className='modelInternalStructure'>
                 <div>
                     {returnFlavour()}
@@ -240,7 +203,6 @@ const FactionDisplay = (props: any) => {
                 </div>
                 <div className="verticalspacer"/>          
             </div>
-        //</div>
     )
 }
 

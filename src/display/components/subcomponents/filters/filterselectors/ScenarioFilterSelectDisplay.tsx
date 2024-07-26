@@ -1,16 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { AllScenarioListPage } from '../../../../../classes/viewmodel/pages/AllScenarioListPage'
 import { ScenarioFilterManager } from '../../../../../classes/viewmodel/collections/filters/ScenarioFilterManager'
 
 import FilterItemItem from '../FilterItemItem'
-import FilterTagItem from '../FilterTagItem'
 import FilterTextItem from '../FilterTextItem'
-import FilterDisplay from '../FilterDisplay'
-
-import { useGlobalState } from './../../../../../utility/globalstate'
 
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,7 +15,6 @@ const ScenarioFilterSelectDisplay = (prop: any) => {
     const FilterManager: ScenarioFilterManager = ViewPageController.FilterManager;
     const theme = prop.usetheme
     const handleClose = prop.closemodal;
-    const RunUpdate = prop.update;
     const show = prop.useshow;
     
     // Return result -----------------------------

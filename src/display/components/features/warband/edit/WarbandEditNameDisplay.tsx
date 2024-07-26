@@ -1,27 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useEffect, useRef, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React, { useRef, useState } from 'react'
 
-import { Warband } from '../../../../../classes/lists/Warband';
-import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
+import { Warband } from '../../../../../classes/lists/Warband';
 import { useGlobalState } from '../../../../../utility/globalstate'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandNameEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
-    const Manager : WarbandManager = props.manager;
 
     const Warband_Name = WarbandItem? WarbandItem.Name : "";
     let NewBandName = Warband_Name;
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const [showNameEdit, setShowNameEdit] = useState(false);
     const handleCloseNameEdit = () => setShowNameEdit(false); 

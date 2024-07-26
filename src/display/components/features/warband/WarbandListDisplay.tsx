@@ -1,13 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React, { useState, useRef } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { WarbandManager } from '../../../../classes/lists/warbandmanager';
 import { Warband } from '../../../../classes/lists/Warband';
+
 import WarbandDisplay from '../../../../display/components/features/warband/WarbandDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

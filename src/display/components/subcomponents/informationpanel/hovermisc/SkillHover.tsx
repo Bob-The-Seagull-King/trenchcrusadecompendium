@@ -1,27 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { IItemPartial } from '../../../../../classes/feature/list/ListGroup'
-import * as HoverCard from '@radix-ui/react-hover-card';
-import EquipmentDisplay from '../../../../../display/components/features/equipment/EquipmentDisplay';
-import Modal from 'react-bootstrap/Modal';
 import { ModelDescription } from '../../../../../classes/feature/models/ModelDescription';
+
 import ModelDescriptionItemDisplay from '../../description/ModelDescriptionItemDisplay';
-
-
-import { useGlobalState } from './../../../../../utility/globalstate'
 
 const SkillHover = (props: any) => {
     const ruleObject: IItemPartial = props.data
-    const ruleName = props.titlename
-
-    const [show, setShow] = useState(false);
-    const [theme, setTheme] = useGlobalState('theme');
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     const description = DescriptionFactory(ruleObject.description);
     
     /**

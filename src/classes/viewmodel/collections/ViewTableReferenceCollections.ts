@@ -1,7 +1,7 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IListGroup, ListGroup } from "../../../classes/feature/list/ListGroup";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewTableReferenceCollection extends ViewCollectionsModel {
 

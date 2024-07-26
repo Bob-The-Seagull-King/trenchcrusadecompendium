@@ -1,6 +1,5 @@
 import { IWarbandMember, WarbandMember } from "./WarbandMember"
-import { IListModel, ListModel } from "./ListModel"
-import { IPlayerFaction, PlayerFaction } from "../../classes/feature/factions/Faction"
+import { IPlayerFaction } from "../../classes/feature/factions/Faction"
 import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
 import { FactionFactory } from "../../factories/features/FactionFactory"

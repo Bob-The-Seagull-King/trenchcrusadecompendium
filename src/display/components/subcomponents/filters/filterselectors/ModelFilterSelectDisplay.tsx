@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { AllModelsListPage } from '../../../../../classes/viewmodel/pages/AllModelsListPage'
 import { ModelsFilterManager } from '../../../../../classes/viewmodel/collections/filters/ModelsFilterManager'
@@ -8,9 +8,6 @@ import { ModelsFilterManager } from '../../../../../classes/viewmodel/collection
 import FilterItemItem from '../FilterItemItem'
 import FilterTagItem from '../FilterTagItem'
 import FilterTextItem from '../FilterTextItem'
-import FilterDisplay from '../FilterDisplay'
-
-import { useGlobalState } from './../../../../../utility/globalstate'
 
 import Modal from 'react-bootstrap/Modal';
 
@@ -19,7 +16,6 @@ const ModelFilterSelectDisplay = (prop: any) => {
     const FilterManager: ModelsFilterManager = ViewPageController.FilterManager;
     const theme = prop.usetheme
     const handleClose = prop.closemodal;
-    const RunUpdate = prop.update;
     const show = prop.useshow;
     
     // Return result -----------------------------

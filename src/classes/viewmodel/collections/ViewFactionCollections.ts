@@ -1,10 +1,10 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
-import { IPlayerFaction, PlayerFaction } from "../../../classes/feature/factions/Faction";
+import { PlayerFaction } from "../../../classes/feature/factions/Faction";
 import { IPlayerFactionVariant } from "../../../classes/feature/factions/FactionVariant";
 import { FactionFactory } from "../../../factories/features/FactionFactory";
 import { FactionVariantFactory } from "../../../factories/features/FactionVariantFactory";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf } from "../../../utility/functions";
 import { Requester } from "../../../factories/Requester";
 
 class ViewFactionCollection extends ViewCollectionsModel {

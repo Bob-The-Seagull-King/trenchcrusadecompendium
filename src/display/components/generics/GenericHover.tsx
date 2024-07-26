@@ -2,12 +2,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
-import * as HoverCard from '@radix-ui/react-hover-card';
-import EquipmentDisplay from '../../../display/components/features/equipment/EquipmentDisplay';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import Button from 'react-bootstrap/Button';
 
 import { getColour } from '../../../utility/functions';
 import { useGlobalState } from '../../../utility/globalstate'
@@ -21,7 +20,7 @@ const GenericHover = (props: any) => {
     const ruleName = props.titlename
 
     const [show, setShow] = useState(false);
-    const [theme, setTheme] = useGlobalState('theme');
+    const [theme] = useGlobalState('theme');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);

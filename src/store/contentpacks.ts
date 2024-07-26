@@ -1,6 +1,5 @@
 import { create } from "zustand";
-import {ContentPack, IContentPack, IContentPackFile, IContentPackTag} from '../classes/contentpacks/contentpack'
-import Cookies from 'js-cookie'
+import {ContentPack} from '../classes/contentpacks/contentpack'
 
 type ContentPackStore = {
     ContentPacks: ContentPack[];

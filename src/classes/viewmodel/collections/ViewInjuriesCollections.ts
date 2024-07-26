@@ -1,7 +1,7 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
 import { IListItem, ListItem } from "../../../classes/feature/list/ListItem";
 import { ViewTableItem } from "./ViewTableItem";
-import { byPropertiesOf, getColour, sort } from "../../../utility/functions";
+import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewInjuriesCollection extends ViewCollectionsModel {
 
