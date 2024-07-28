@@ -1,23 +1,25 @@
-import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
-import {ItemType} from '../../Enum'
+import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
+import { ItemType } from '../../Enum'
 import { DescriptionFactory } from '../../../utility/functions';
 
+/**
+ * Structure of a roll-based list item
+ */
 interface IListItem extends ITrenchCrusadeItemData {
    roll_start : number | string,
    roll_end : number | string,
    description: []
 }
 
+/**
+ * Object descripting item available on a table to
+ * roll on - ie Injuries or Skills
+ */
 class ListItem extends TrenchCrusadeItem {
     public readonly RollStart;
     public readonly RollEnd;
     public readonly Description;
     
-    /**
-     * Assigns parameters and creates a series of description
-     * objects with DescriptionFactory
-     * @param data Object data in IPlayerModel format
-     */
     public constructor(data: IListItem)
     {
         super(data)
@@ -38,7 +40,6 @@ class ListItem extends TrenchCrusadeItem {
             delete this.Description[i];
         }
     }
-
 }
 
 export {IListItem, ListItem}
