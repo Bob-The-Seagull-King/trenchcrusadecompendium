@@ -1,4 +1,4 @@
-import {IDescriptionItemData, DescriptionItem} from '../../DescriptionItem'
+import { IDescriptionItemData, DescriptionItem } from '../../DescriptionItem'
 
 /**
  * Interface for an model description item
@@ -7,6 +7,10 @@ interface IModelDescription extends IDescriptionItemData {
     glossary?: [] // The glossary of a given description item
 }
 
+/**
+ * Description containing text, glossary terms, subcontent,
+ * and a clarification on the way to render the text.
+ */
 class ModelDescription extends DescriptionItem {
     public readonly Glossary;
     public SubContent;
@@ -21,7 +25,6 @@ class ModelDescription extends DescriptionItem {
         this.Glossary = data.glossary;
         this.SubContent = this.ModelSubConstructor(data.subcontent)
     }
-    
 
     /**
      * Deconstructs the description JSON object into an
@@ -42,10 +45,10 @@ class ModelDescription extends DescriptionItem {
         } else {
             return sublist;
         }
-    } catch (e) {
-        const emergencylist: ModelDescription[] = []
-        return emergencylist;
-    }
+        } catch (e) {
+            const emergencylist: ModelDescription[] = []
+            return emergencylist;
+        }
     }
 }
 

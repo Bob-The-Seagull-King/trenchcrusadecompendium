@@ -1,6 +1,6 @@
 import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
 import { ItemType } from '../../Enum'
-import { IListItem, ListItem} from './ListItem'
+import { IListItem, ListItem } from './ListItem'
 import { Requester } from '../../../factories/Requester'
 import { DescriptionFactory } from '../../../utility/functions'
 

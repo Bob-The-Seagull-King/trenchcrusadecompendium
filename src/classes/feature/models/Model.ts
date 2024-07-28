@@ -1,23 +1,30 @@
-import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
-import {ItemType} from '../../Enum'
+import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
+import { ItemType } from '../../Enum'
 import { PlayerAddon } from '../addons/Addon'
 import { DescriptionFactory } from '../../../utility/functions'
 
+/**
+ * Structure of a Model
+ */
 interface IPlayerModel extends ITrenchCrusadeItemData {
     movement: string,
     ranged: string,
     melee: string,
     armour: string,
     base: string,
-    faction_id: string, // Faction of the model
+    faction_id: string,
     variant_id: string,
-    attachments: [], // List of addons, summons, etc featured in an model
-    blurb: [], // Flavour text
-    equipment: [], // Mechanical description of the item
-    abilities: [], // Mechanical description of the item
+    attachments: [],
+    blurb: [], 
+    equipment: [],
+    abilities: [],
     team?: string
 }
 
+/**
+ * Model without the context of a particular faction
+ * or variant - stats, features, and abilities.
+ */
 class PlayerModel extends TrenchCrusadeItem {
     public readonly Movement;
     public readonly Ranged;
@@ -91,7 +98,6 @@ class PlayerModel extends TrenchCrusadeItem {
             delete this.Abilities[i];
         }
     }
-
 }
 
 export {IPlayerModel, PlayerModel}
