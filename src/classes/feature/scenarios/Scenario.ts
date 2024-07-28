@@ -1,14 +1,21 @@
-import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
-import {ItemType} from '../../Enum'
-import {ModelDescription} from '../models/ModelDescription'
+import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
+import { ItemType } from '../../Enum'
 import { IFactionRuleset, FactionRule } from '../factions/FactionRule'
 
+/**
+ * Data structure of a game scenario
+ */
 interface IScenario extends ITrenchCrusadeItemData {
     name: string,
     image_url: string,
     rules: IFactionRuleset[]
 }
 
+/**
+ * Scenario's are the ruleset that determine how
+ * a game of Trench Crusade will play out and the
+ * way that a winner is determined.
+ */
 class Scenario extends TrenchCrusadeItem {
     public readonly Name;
     public readonly ImageUrl;
@@ -29,6 +36,11 @@ class Scenario extends TrenchCrusadeItem {
         this.Rules = this.RulesetFactory(data.rules);
     }
 
+    /**
+     * Creates the array of Rule objects
+     * @param data Array of rule data
+     * @returns Array of FactionRule objects
+     */
     private RulesetFactory(data: IFactionRuleset[]) {
         const ruleslist = [];
         let i = 0;
