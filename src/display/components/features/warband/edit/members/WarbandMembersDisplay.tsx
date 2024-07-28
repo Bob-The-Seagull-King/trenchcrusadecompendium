@@ -12,8 +12,7 @@ import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import WarbandEliteMemberDisplay from './WarbandEliteMemberDisplay';
-import WarbandInfantryMemberDisplay from './WarbandInfantryMemberDisplay';
+import WarbandMemberDisplay from './WarbandMemberDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
@@ -290,7 +289,7 @@ const WarbandMembersDisplay = (props: any) => {
             <div className="row"> {/* Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == true).map((item) => (
                     <div key={item.Model.ID + item.Name} >
-                        <WarbandEliteMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
+                        <WarbandMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
                         <br></br>
                     </div>
                 ))}
@@ -309,7 +308,7 @@ const WarbandMembersDisplay = (props: any) => {
             <div className="row"> {/* Non-Elite Members */}
                 {WarbandItem.Members.filter((item) => item.Elite == false).map((item) => (
                     <div key={item.Model.ID + item.Name} >
-                        <WarbandInfantryMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
+                        <WarbandMemberDisplay warband={WarbandItem} member={item} updater={UpdateFunction} manager={Manager} />
                         <br></br>
                     </div>
                 ))}

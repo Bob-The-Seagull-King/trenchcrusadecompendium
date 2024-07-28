@@ -33,7 +33,7 @@ import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 
-const WarbandInfantryMemberDisplay = (props: any) => {
+const WarbandMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
@@ -76,26 +76,6 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     }
 
     let modelNotes = WarbandMember.Notes;
-
-    function returnEquipment() {
-        return (
-            <>
-                <div className="row" style={{width:"100%"}}>
-                    <div className="col-12">
-                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
-                        <Masonry gutter="20px">
-                            {returnEquipTypeList("ranged")}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                    </div>
-                </div>
-                <div className="verticalspacerbig"/>
-                <div className="row">
-                    <MemberAddEquipDisplay member={WarbandMember} data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                </div>
-            </>
-        )
-    }
 
     function returnUpgrades() {
         return (
@@ -147,6 +127,26 @@ const WarbandInfantryMemberDisplay = (props: any) => {
             </>
             }
             </div>
+        )
+    }
+
+    function returnEquipment() {
+        return (
+            <>
+                <div className="row" style={{width:"100%"}}>
+                    <div className="col-12">
+                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
+                        <Masonry gutter="20px">
+                            {returnEquipTypeList("ranged")}
+                        </Masonry>
+                    </ResponsiveMasonry>
+                    </div>
+                </div>
+                <div className="verticalspacerbig"/>
+                <div className="row">
+                    <MemberAddEquipDisplay member={WarbandMember} data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                </div>
+            </>
         )
     }
     
@@ -239,6 +239,11 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     }
 
     function demoteModel() {
+        WarbandMember.Elite = false;
+        UpdateFunction(WarbandItem);
+    }
+
+    function promoteModel() {
         WarbandMember.Elite = true;
         UpdateFunction(WarbandItem);
     }
@@ -247,7 +252,6 @@ const WarbandInfantryMemberDisplay = (props: any) => {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
         UpdateFunction(WarbandItem)
     }
-
 
     function buryModel() {
         WarbandItem.DucatLost += parseInt(Manager.GetDucatCost(WarbandMember));
@@ -281,16 +285,26 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                     </div>
                 </div>
                 
+                {WarbandMember.Elite == false && 
                 <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
                         </div>
                     </div>
                 </div>
+                }
 
+                {WarbandMember.Elite == true && 
+                <div className="col-lg-6 col-12">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
+                        </div>
+                    </div>
+                </div>
+                }
 
-            
             </div>
             <div className="verticalspacerbig"/>
             <div className="row">
@@ -331,15 +345,15 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                 {WarbandMember.Name || ""}
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
                 <div className="row float-end">
-                                    <div className='col-12 float-end'>
-                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
-                                            <FontAwesomeIcon icon={faFileLines} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                                        </Button>
-                                        <Button style={{padding:"0em",paddingLeft:"0.5em"}} variant="" onClick={() => handleShowExportBasic()}>
-                                            <FontAwesomeIcon icon={faQuoteLeft} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                                        </Button>
-                                    </div>
-                                </div>
+                    <div className='col-12 float-end'>
+                        <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
+                            <FontAwesomeIcon icon={faFileLines} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                        </Button>
+                        <Button style={{padding:"0em",paddingLeft:"0.5em"}} variant="" onClick={() => handleShowExportBasic()}>
+                            <FontAwesomeIcon icon={faQuoteLeft} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                        </Button>
+                    </div>
+                </div>
             </h1>
             <div className='modelInternalStructure'>
                 <div>
@@ -376,7 +390,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                 <div className="verticalspacer"/>
                 <div>
                     <div className="row row-cols-md-2 row-cols-1">
-                        {WarbandMember.Skills.length > 0 &&
+                        {(WarbandMember.Skills.length > 0 || WarbandMember.Elite == true) &&
                         <div className="col">
                             <div>
                                 <div className="separator">Skills</div>
@@ -385,7 +399,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
                             <div className="verticalspacer"/>
                         </div>
                         }
-                        {WarbandMember.Injuries.length > 0 &&
+                        {(WarbandMember.Injuries.length > 0 || WarbandMember.Elite == true) &&
                         <div className="col">
                             <div>
                                 <div className="separator">Scars</div>
@@ -475,4 +489,4 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     )
 }
 
-export default WarbandInfantryMemberDisplay;
+export default WarbandMemberDisplay;
