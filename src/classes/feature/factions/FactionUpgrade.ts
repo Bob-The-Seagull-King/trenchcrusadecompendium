@@ -1,5 +1,5 @@
+import { DescriptionFactory } from "../../../utility/functions";
 import { Requester } from "../../../factories/Requester"
-import { ModelDescription} from '../models/ModelDescription'
 
 interface IFactionUpgrade {
     id: string,
@@ -28,29 +28,7 @@ class FactionUpgrade {
 
         const requestdata: IUpgradeData = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: this.ID}}));
         this.Name = requestdata.name;
-        this.Description = this.DescriptionFactory(requestdata.description);
-    }
-
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
+        this.Description = DescriptionFactory(requestdata.description);
     }
 
 }

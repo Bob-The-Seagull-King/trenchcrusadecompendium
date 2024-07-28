@@ -1,9 +1,8 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {ModelDescription} from '../models/ModelDescription'
 import { IEquipmentFactionList, FactionEquip } from './FactionEquip'
 import { IFactionRuleset, FactionRule } from './FactionRule'
-import { byPropertiesOf } from "../../../utility/functions";
+import { byPropertiesOf, DescriptionFactory } from "../../../utility/functions";
 import { IModelFactionList, FactionModel } from './FactionModel'
 
 interface IPlayerFaction extends ITrenchCrusadeItemData {
@@ -24,11 +23,6 @@ class PlayerFaction extends TrenchCrusadeItem {
     public readonly InterfaceVal;
     public readonly Team;
     
-    /**
-     * Assigns parameters and creates a series of description
-     * objects with DescriptionFactory
-     * @param data Object data in IPlayerModel format
-     */
     public constructor(data: IPlayerFaction)
     {
         super(data)
@@ -45,7 +39,7 @@ class PlayerFaction extends TrenchCrusadeItem {
         this.Name = data.name;
         this.Equipment = this.EquipmentFactory(data.equipment)
         this.Rules = this.RulesetFactory(data.rules);
-        this.Flavour = this.DescriptionFactory(data.flavour);
+        this.Flavour = DescriptionFactory(data.flavour);
         this.Models = this.ModelsFactory(data.models)
     }
 
@@ -81,28 +75,6 @@ class PlayerFaction extends TrenchCrusadeItem {
             ruleslist.push(tempAD);
         }
         return ruleslist;
-    }
-
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
     }
     
     /**

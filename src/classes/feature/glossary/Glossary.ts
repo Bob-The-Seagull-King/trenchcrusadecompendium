@@ -1,6 +1,6 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {ModelDescription} from '../models/ModelDescription'
+import { DescriptionFactory } from '../../../utility/functions';
 
 interface IGlossaryRule extends ITrenchCrusadeItemData {
     description: []
@@ -18,29 +18,7 @@ class GlossaryRule extends TrenchCrusadeItem {
     {
         super(data)
         this.ItemType = ItemType.GlossaryRule;
-        this.Description = this.DescriptionFactory(data.description);
-    }
-
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
+        this.Description = DescriptionFactory(data.description);
     }
     
     /**

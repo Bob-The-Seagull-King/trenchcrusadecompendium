@@ -1,3 +1,5 @@
+import { ModelDescription } from "../classes/feature/models/ModelDescription";
+
 /**
  * Returns a capitalized version of a given string
  * @param stringVal The string to be capitalized
@@ -224,4 +226,27 @@ export function byPropertiesOf<T extends object> (sortBy: Array<sortArg<T>>) {
  */
 export function sort<T extends object> (arr: T[], ...sortBy: Array<sortArg<T>>) {
     arr.sort(byPropertiesOf<T>(sortBy))
+}
+
+
+/**
+ * Translates the description JSON objects into a collection
+ * of ModelDescription objects
+ * @param data The array of description data objects
+ * @returns Array of ModelDescription objects
+ */
+export function DescriptionFactory(data: []) {
+    let i = 0;
+    const array: ModelDescription[] = []
+    try {
+    for (i = 0; i < data.length; i++) {
+        const tempAD = new ModelDescription(data[i])
+        array.push(tempAD)
+    }
+    return array;
+    } catch (e) {
+        
+        const emergencyarray: ModelDescription[] = []
+        return emergencyarray;
+    }
 }

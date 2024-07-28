@@ -1,7 +1,7 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {ModelDescription} from '../models/ModelDescription'
 import { IFactionRuleset, FactionRule } from '../factions/FactionRule'
+import { DescriptionFactory } from '../../../utility/functions'
 
 interface IQuickRule extends ITrenchCrusadeItemData {
     name: string,
@@ -26,7 +26,7 @@ class QuickRule extends TrenchCrusadeItem {
 
         this.Name = data.name;
         this.Rules = this.RulesetFactory(data.rules);
-        this.Description = this.DescriptionFactory(data.description);
+        this.Description = DescriptionFactory(data.description);
     }
 
     private RulesetFactory(data: IFactionRuleset[]) {
@@ -37,28 +37,6 @@ class QuickRule extends TrenchCrusadeItem {
             ruleslist.push(tempAD);
         }
         return ruleslist;
-    }
-
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
     }
     
     /**

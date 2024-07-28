@@ -1,7 +1,7 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {ModelDescription} from './ModelDescription'
 import { PlayerAddon } from '../addons/Addon'
+import { DescriptionFactory } from '../../../utility/functions'
 
 interface IPlayerModel extends ITrenchCrusadeItemData {
     movement: string,
@@ -62,33 +62,11 @@ class PlayerModel extends TrenchCrusadeItem {
             this.Team = "none"
         }
 
-        this.Blurb = this.DescriptionFactory(data.blurb);
-        this.Equipment = this.DescriptionFactory(data.equipment);
-        this.Abilities = this.DescriptionFactory(data.abilities);
+        this.Blurb = DescriptionFactory(data.blurb);
+        this.Equipment = DescriptionFactory(data.equipment);
+        this.Abilities = DescriptionFactory(data.abilities);
     }
 
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
-    }
-    
     /**
      * Add an addon to the model
      * @param list the PlayerAddon being created

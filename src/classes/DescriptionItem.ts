@@ -1,3 +1,5 @@
+import { DescriptionFactory } from "../utility/functions";
+
 /**
  * Data structure for the description section
  */
@@ -18,22 +20,7 @@ class TextBlock {
 
     public constructor(data: ITextBlock) {
         this.Title = data.title;
-        this.Content = this.DescriptionFactory(data.content);
-    }
-
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        try {
-        const array: DescriptionItem[] = []
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new DescriptionItem(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            const emergencyarray: DescriptionItem[] = []
-            return emergencyarray;
-        }
+        this.Content = DescriptionFactory(data.content);
     }
 }
 

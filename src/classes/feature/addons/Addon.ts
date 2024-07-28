@@ -1,63 +1,33 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
-import {ModelDescription} from '../models/ModelDescription'
+import { DescriptionFactory } from '../../../utility/functions'
+
 
 /**
- * Data structure for an addon's parent
- */
-interface IAddonParent {
-    type: string,
-    id: string
-}
-
-/**
- * Data structure for the player addon's
+ * Data structure for a model's abilities and other addons
  */
 interface IPlayerAddon extends ITrenchCrusadeItemData {
     faction_id: string,
     description: []
 }
 
+/**
+ * Subtype of item which describes an ability/action that a model
+ * can take.
+ */
 class PlayerAddon extends TrenchCrusadeItem {
     public readonly Faction;
     public readonly Description;
 
-    /**
-     * Assigns parameters and creates a series of description
-     * objects with DescriptionFactory
-     * @param data Object data in IPlayerAddon format
-     */
     public constructor(data: IPlayerAddon)
     {
         super(data)
         this.ItemType = ItemType.Addon;
         this.Faction = data.faction_id;
-        this.Description = this.DescriptionFactory(data.description);
-    }
-
-    /**
-     * Translates the description JSON objects into a collection
-     * of ModelDescription objects
-     * @param data The array of description data objects
-     * @returns Array of ModelDescription objects
-     */
-    private DescriptionFactory(data: []) {
-        let i = 0;
-        const array: ModelDescription[] = []
-        try {
-        for (i = 0; i < data.length; i++) {
-            const tempAD = new ModelDescription(data[i])
-            array.push(tempAD)
-        }
-        return array;
-        } catch (e) {
-            
-            const emergencyarray: ModelDescription[] = []
-            return emergencyarray;
-        }
+        this.Description = DescriptionFactory(data.description);
     }
 
 }
 
-export {IAddonParent, IPlayerAddon, PlayerAddon}
+export {IPlayerAddon, PlayerAddon}
 
