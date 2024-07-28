@@ -10,6 +10,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import { Warband } from '../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../classes/lists/warbandmanager';
 import { useGlobalState } from '../../../../utility/globalstate'
+import { ExportDisplayText, ExportDisplayTextBasic } from '../../../../classes/lists/warbandmanagerstatic';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -163,13 +164,13 @@ const WarbandEditDisplay = (props: any) => {
     const handleCloseExport = () => setShowExport(false); 
     const handleShowExport = () => setShowExport(true);
 
-    const modelExport = Manager.ExportDisplayText(WarbandItem, true)
+    const modelExport = ExportDisplayText(WarbandItem, true)
 
     const [showExportBasic, setShowExportBasic] = useState(false);
     const handleCloseExportBasic = () => setShowExportBasic(false); 
     const handleShowExportBasic = () => setShowExportBasic(true);
 
-    const modelExportBasic = Manager.ExportDisplayTextBasic(WarbandItem, true)
+    const modelExportBasic = ExportDisplayTextBasic(WarbandItem, true)
 
     function ReturnExport() {
         return (

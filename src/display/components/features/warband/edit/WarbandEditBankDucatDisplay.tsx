@@ -8,6 +8,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
+import { TotalCostDucats } from '../../../../../classes/lists/warbandmanagerstatic';
 import { useGlobalState } from '../../../../../utility/globalstate'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -24,7 +25,7 @@ const WarbandEditBankDucatDisplay = (props: any) => {
     let NewLostCount = Warband_LostCount;
     const [theme] = useGlobalState('theme');
 
-    const CurrentCost = WarbandItem? Manager.TotalCostDucats(WarbandItem): 0;
+    const CurrentCost = WarbandItem? TotalCostDucats(WarbandItem): 0;
 
     const [showDucatsEdit, setShowDucatsEdit] = useState(false);
     const handleCloseDucatsEdit = () => setShowDucatsEdit(false); 

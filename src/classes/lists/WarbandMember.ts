@@ -2,9 +2,11 @@ import { IListModel, ListModel } from "./ListModel"
 import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { IListItem, ListItem } from "../feature/list/ListItem"
 import { IItemPartial } from "../feature/list/ListGroup"
-import { ITextBlock, TextBlock } from "../DescriptionItem"
 import { IFactionUpgrade, FactionUpgrade } from "../feature/factions/FactionUpgrade"
 
+/**
+ * Interface describing a member of a warband
+ */
 interface IWarbandMember {
     name: string,
     model: IListModel,
@@ -17,19 +19,19 @@ interface IWarbandMember {
     upgrades : IFactionUpgrade[]
 }
 
+/**
+ * Object class describing a member of a warband
+ * for use in gameplay and during a campaign.
+ */
 class WarbandMember {
     public Name;
-
     public Elite;
     public Model;
-
     public Equipment;
     public Injuries;
     public Skills;
     public Upgrades;
-
     public Experience;
-    
     public Notes;
 
     public constructor(data: IWarbandMember) {
@@ -45,90 +47,20 @@ class WarbandMember {
         this.Notes = data.notes
     }
 
-    private InjuryMaker(_data : IListItem[]) {
-        const InjuryList : ListItem[] = [];
-        let i = 0
-
-        for (i = 0; i < _data.length ; i ++) {
-            const injurytemp = new ListItem(_data[i])
-            InjuryList.push(injurytemp)
-        }
-
-        return InjuryList;
-    }
-
-    private UpgradeMaker(_data : IFactionUpgrade[]) {
-        const upgradelist : FactionUpgrade[] = [];
-        let i = 0
-
-        for (i = 0; i < _data.length ; i ++) {
-            const upgradetemp = new FactionUpgrade(_data[i])
-            upgradelist.push(upgradetemp)
-        }
-
-        return upgradelist;
-    }
-
-    public GetDucatCost() {
-        let totalCost = 0;
-
-        if (this.Model.CostType == "ducats") {
-            totalCost += this.Model.Cost;
-        }
-
-        let i = 0;
-        for (i = 0; i < this.Equipment.length; i++) {
-            if (this.Equipment[i].CostType == "ducats") {
-                totalCost += this.Equipment[i].Cost;
-            }
-        }
-        for (i = 0; i < this.Upgrades.length; i++) {
-            if (this.Upgrades[i].CostID == "ducats") {
-                totalCost += this.Upgrades[i].Cost;
-            }
-        }
-
-        return totalCost.toString()
-    }
-
-    public GetGloryCost() {
-        let totalCost = 0;
-
-        if (this.Model.CostType == "glory") {
-            totalCost += this.Model.Cost;
-        }
-
-        let i = 0;
-        for (i = 0; i < this.Equipment.length; i++) {
-            if (this.Equipment[i].CostType == "glory") {
-                totalCost += this.Equipment[i].Cost;
-            }
-        }
-        for (i = 0; i < this.Upgrades.length; i++) {
-            if (this.Upgrades[i].CostID == "glory") {
-                totalCost += this.Upgrades[i].Cost;
-            }
-        }
-
-        return totalCost.toString()
-    }
-
+    /**
+     * Converts ListModel data into a ListModel object
+     * @param data The model information
+     * @returns ListModel object type that represents this warband member
+     */
     private ModelMaker(data : IListModel) {
         return new ListModel(data);
     }
 
-    private TextMaker(data : ITextBlock[]) {
-        const tempList: TextBlock[] = [];
-
-        let i = 0;
-        for (i = 0 ; i < data.length ; i ++) {
-            const tempEquip = new TextBlock(data[i]);
-            tempList.push(tempEquip);
-        }
-
-        return tempList;
-    }
-
+    /**
+     * Converts ListEquipment data into ListEquipment objects
+     * @param data The model's equipment information
+     * @returns Array of ListEquipment object type that represents this member's equipment
+     */
     private EquipmentMaker(data : IListEquipment[]) {
         const tempList: ListEquipment[] = [];
 
@@ -141,6 +73,39 @@ class WarbandMember {
         return tempList;
     }
 
+    /**
+     * Converts ListItem data into ListItem objects
+     * @param data The model's injury information
+     * @returns Array of ListItem object type that represents this member's injuries
+     */
+    private InjuryMaker(_data : IListItem[]) {
+        const InjuryList : ListItem[] = [];
+        let i = 0
+
+        for (i = 0; i < _data.length ; i ++) {
+            const injurytemp = new ListItem(_data[i])
+            InjuryList.push(injurytemp)
+        }
+
+        return InjuryList;
+    }
+
+    /**
+     * Converts FactionUpgrade data into FactionUpgrade objects
+     * @param data The model's upgrade information
+     * @returns Array of FactionUpgrade object type that represents this member's upgrades
+     */
+    private UpgradeMaker(_data : IFactionUpgrade[]) {
+        const upgradelist : FactionUpgrade[] = [];
+        let i = 0
+
+        for (i = 0; i < _data.length ; i ++) {
+            const upgradetemp = new FactionUpgrade(_data[i])
+            upgradelist.push(upgradetemp)
+        }
+
+        return upgradelist;
+    }
 
 }
 

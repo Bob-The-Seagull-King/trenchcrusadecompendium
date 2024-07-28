@@ -2,12 +2,20 @@ import { PlayerModel } from "../feature/models/Model"
 import { ModelFactory } from "../../factories/features/ModelFactory"
 import { Requester } from "../../factories/Requester"
 
+/**
+ * Structure of a warband member model
+ */
 interface IListModel {
     id: string,
     cost: number,
     cost_type: string
 }
 
+/**
+ * Object reflecting the model used by
+ * a warband member, and how much that
+ * member cost
+ */
 class ListModel {
     public readonly ID;
     public readonly Cost;

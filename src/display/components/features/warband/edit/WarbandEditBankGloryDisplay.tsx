@@ -8,6 +8,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
+import { TotalCostGlory } from '../../../../../classes/lists/warbandmanagerstatic';
 import { useGlobalState } from '../../../../../utility/globalstate'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,7 +26,7 @@ const WarbandEditBankGloryDisplay = (props: any) => {
     const Warband_LostCount = WarbandItem? WarbandItem.GloryLost : 0;
     let NewLostCount = Warband_LostCount;
 
-    const CurrentCost = WarbandItem? Manager.TotalCostGlory(WarbandItem): 0;
+    const CurrentCost = WarbandItem? TotalCostGlory(WarbandItem): 0;
 
     const [showGlorysEdit, setShowGlorysEdit] = useState(false);
     const handleCloseGlorysEdit = () => setShowGlorysEdit(false); 

@@ -12,6 +12,7 @@ import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
 import { returnTags } from '../../../../../../utility/util';
+import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic } from '../../../../../../classes/lists/warbandmanagerstatic';
 
 import { useGlobalState } from './../../../../../../utility/globalstate'
 import { getColour } from '../../../../../../utility/functions';
@@ -41,8 +42,8 @@ const WarbandMemberDisplay = (props: any) => {
     const bannedModelTags = ["empty"]
     const [theme] = useGlobalState('theme');
 
-    const ducatcost = Manager.GetDucatCost(WarbandMember);
-    const glorycost = Manager.GetGloryCost(WarbandMember)
+    const ducatcost = GetDucatCost(WarbandMember);
+    const glorycost = GetGloryCost(WarbandMember)
 
     const Warband_Name = WarbandMember? WarbandMember.Name : "";
     let NewBandName = Warband_Name;
@@ -60,8 +61,8 @@ const WarbandMemberDisplay = (props: any) => {
     const handleShowExportBasic = () => setShowExportBasic(true);
 
     const inputRefNameEdit = useRef<HTMLInputElement>(null);
-    const modelExport = Manager.ExportModelDisplayText(WarbandMember, true, false)
-    const modelExportBasic = Manager.ExportModelDisplayTextBasic(WarbandMember, true, false)
+    const modelExport = ExportModelDisplayText(WarbandMember, true, false)
+    const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
 
     function updateName(value: string) {
         NewBandName = value;
@@ -254,15 +255,15 @@ const WarbandMemberDisplay = (props: any) => {
     }
 
     function buryModel() {
-        WarbandItem.DucatLost += parseInt(Manager.GetDucatCost(WarbandMember));
-        WarbandItem.GloryLost += parseInt(Manager.GetGloryCost(WarbandMember));
+        WarbandItem.DucatLost += parseInt(GetDucatCost(WarbandMember));
+        WarbandItem.GloryLost += parseInt(GetGloryCost(WarbandMember));
         Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
     }
 
     function sellModel() {
-        WarbandItem.DucatLost += Math.round((parseInt(Manager.GetDucatCost(WarbandMember)))/2);
-        WarbandItem.GloryLost += Math.round((parseInt(Manager.GetGloryCost(WarbandMember)))/2);
+        WarbandItem.DucatLost += Math.round((parseInt(GetDucatCost(WarbandMember)))/2);
+        WarbandItem.GloryLost += Math.round((parseInt(GetGloryCost(WarbandMember)))/2);
         Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
     }

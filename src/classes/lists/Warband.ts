@@ -4,6 +4,9 @@ import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
 import { FactionFactory } from "../../factories/features/FactionFactory"
 
+/**
+ * Structure of a Warband
+ */
 interface IWarband {
     id: string;
     ducat_total : number,
@@ -22,24 +25,23 @@ interface IWarband {
     glory_cost: number
 }
 
-
+/**
+ * Warband class contianing information on a user's
+ * warband for battle and campaign play.
+ */
 export class Warband {
     public ID;
-
     public Name;
     public Faction;
     public Image;
-
     public DucatTotal;
     public GloryTotal;
     public DucatLost;
     public GloryLost;
     public DucatCost;
     public GloryCost;
-
     public Members;
     public Armoury;
-
     public Deeds;
     public Flavour;
     public Notes;
@@ -63,10 +65,15 @@ export class Warband {
 
         this.Deeds = data.deeds;
 
-        this.DucatCost = this.TotalCostDucats();
-        this.GloryCost = this.TotalCostGlory();
+        this.DucatCost = 0;
+        this.GloryCost = 0;
     }
 
+    /**
+     * Converts ListEquipment data into ListEquipment objects
+     * @param data The warbands's equipment information
+     * @returns Array of ListEquipment object type that represents this warband's equipment
+     */
     private EquipmentMaker(data : IListEquipment[]) {
         const tempList: ListEquipment[] = [];
 
@@ -79,6 +86,11 @@ export class Warband {
         return tempList;
     }
 
+    /**
+     * Converts WarbandMember data into WarbandMember objects
+     * @param data The warbands's member information
+     * @returns Array of WarbandMember object type that represents this warband's members
+     */
     private WarbandMemberMaker(data : IWarbandMember[]) {
         const tempList: WarbandMember[] = [];
 
@@ -91,6 +103,11 @@ export class Warband {
         return tempList;
     }
 
+    /**
+     * Converts warband flavour data into textbox objects
+     * @param data The warbands's flavour information
+     * @returns Array of TextBlock object type that represents this warband's flavour.
+     */
     private TextMaker(data : ITextBlock[]) {
         const tempList: TextBlock[] = [];
 
@@ -101,61 +118,7 @@ export class Warband {
         }
 
         return tempList;
-    }
-
-    public TotalCostDucats() {
-        let totalducats = this.DucatLost;
-
-        let i = 0;
-        
-        for (i = 0; i < this.Armoury.length ; i++) {
-            if (this.Armoury[i].CostType == "ducats") {
-                totalducats += this.Armoury[i].Cost;
-            }
-        }
-
-        for (i = 0; i < this.Members.length ; i++) {
-            if (this.Members[i].Model.CostType == "ducats") {
-                totalducats += this.Members[i].Model.Cost;
-            }
-            let j = 0;
-            for (j = 0; j < this.Members[i].Equipment.length; j++ ) {
-                if (this.Members[i].Equipment[j].CostType == "ducats") {
-                    totalducats += this.Members[i].Equipment[j].Cost;
-                }
-            }
-        }
-
-        return totalducats;
-    }
-
-    public TotalCostGlory() {
-        let totalglory = this.GloryLost;
-
-        let i = 0;
-        
-        for (i = 0; i < this.Armoury.length ; i++) {
-            if (this.Armoury[i].CostType == "glory") {
-                totalglory += this.Armoury[i].Cost;
-            }
-        }
-
-        for (i = 0; i < this.Members.length ; i++) {
-            if (this.Members[i].Model.CostType == "glory") {
-                totalglory += this.Members[i].Model.Cost;
-            }
-            let j = 0;
-            for (j = 0; j < this.Members[i].Equipment.length; j++ ) {
-                if (this.Members[i].Equipment[j].CostType == "glory") {
-                    totalglory += this.Members[i].Equipment[j].Cost;
-                }
-            }
-        }
-
-        return totalglory;
-    }
-
-    
+    }    
 }
 
 export {IWarband}
