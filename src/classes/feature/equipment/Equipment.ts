@@ -1,17 +1,25 @@
-import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
-import {ItemType} from '../../Enum'
+import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
+import { ItemType } from '../../Enum'
 import { DescriptionFactory } from '../../../utility/functions';
 
+/**
+ * Structure of equipment item. Information is faction
+ * and model neutral.
+ */
 interface IPlayerEquipment extends ITrenchCrusadeItemData {
     category: string,
     name: string,
     equip_type: string | null,
     range: string | null,
     modifiers: string[],
-    blurb: string, // Flavour text
-    description: [] // Mechanical description of the item
+    blurb: string,
+    description: []
 }
 
+/**
+ * Piece of equipment. Created without the context of
+ * a particular faction, variant, or model.
+ */
 class PlayerEquipment extends TrenchCrusadeItem {
     public readonly Category;
     public readonly Name;
@@ -34,7 +42,6 @@ class PlayerEquipment extends TrenchCrusadeItem {
 
         this.Description = DescriptionFactory(data.description);
     }
-
 }
 
 export {IPlayerEquipment, PlayerEquipment}
