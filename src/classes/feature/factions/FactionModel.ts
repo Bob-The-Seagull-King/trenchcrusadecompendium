@@ -3,6 +3,10 @@ import { PlayerModel } from "../models/Model";
 import { ModelFactory } from "../../../factories/features/ModelFactory";
 import { IFactionUpgrade, FactionUpgrade } from "./FactionUpgrade"
 
+/**
+ * Structure of a model in the context
+ * of a faction.
+ */
 interface IModelFactionList {
     id: string,
     cost: number,
@@ -13,6 +17,11 @@ interface IModelFactionList {
     upgrades: []
 }
 
+/**
+ * A model with the context of a particular faction
+ * or variant - which includes costs available upgrades
+ * and starting equipment.
+ */
 class FactionModel {
     public readonly ID;
     public readonly Cost;
@@ -34,6 +43,13 @@ class FactionModel {
         this.Upgrades = this.UpgradeFactory(data.upgrades);
     }
 
+    /**
+     * Generates the list of Upgrade objects available to this model
+     * with relevant costs and cost types.
+     * @param data Array of FactionUpgrade information that this
+     * model has available to them in this faction / variant.
+     * @returns Array of FactionUpgrade items available to a model.
+     */
     private UpgradeFactory(data : IFactionUpgrade[]) {
         const upgradeList: FactionUpgrade[] = [];
 
@@ -45,6 +61,5 @@ class FactionModel {
 
         return upgradeList;
     }
-
 }
 export {IModelFactionList, FactionModel}

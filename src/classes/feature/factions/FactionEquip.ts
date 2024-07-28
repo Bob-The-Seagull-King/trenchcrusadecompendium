@@ -1,6 +1,10 @@
 import { Requester } from "../../../factories/Requester"
 import { PlayerEquipment } from "../equipment/Equipment"
 
+/**
+ * Structure of an equipment item in 
+ * the context of a faction.
+ */
 interface IEquipmentFactionList {
     id: string,
     cost: number,
@@ -10,11 +14,21 @@ interface IEquipmentFactionList {
     features?: string[]
 }
 
+/**
+ * Structure of a restriction that a
+ * piece of equipment will have in an
+ * arbitrary faction.
+ */
 interface IEquipmentRestriction {
     type: string,
     val: string | number
 }
 
+/**
+ * Piece of equipment in the context of a faction
+ * or variant - including costs, limits, restrictions,
+ * and special features.
+ */
 class FactionEquip {
     public readonly ID;
     public readonly Cost;
@@ -34,6 +48,6 @@ class FactionEquip {
 
         this.Object = new PlayerEquipment(Requester.MakeRequest({searchtype: "id", searchparam: {type: 'equipment', id: this.ID}}));
     }
-
 }
+
 export {IEquipmentFactionList, IEquipmentRestriction, FactionEquip}
