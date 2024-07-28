@@ -1,24 +1,45 @@
-import {ContentPack, IContentPack, IContentPackFile, IContentPackTag} from './contentpack'
+import { ContentPack, IContentPack } from './contentpack'
 import { useContentPackStore } from '../../store/contentpacks'
 
+/**
+ * Handles getting and setting the list of Content Packs uploaded
+ * to the browser's local storage.
+ */
 class ContentPackManager {
-    PackList: ContentPack[] = [];
+    PackList: ContentPack[] = []; // Array of Content Packs
 
+    /**
+     * Gets the list of content packs currently stored.
+     */
     constructor() {
         const GrabData = useContentPackStore((state) => state.SetFromCookies)
+
         GrabData;
+
         const ReturnData = useContentPackStore((state) => state.ContentPacks)
         this.PackList = ReturnData;
     }
 
+    /**
+     * Updates the browser's local storage to match the
+     * manager's current array of Content Pack information.
+     */
     public SetStorage() {
         localStorage.setItem('contentpackstorage', JSON.stringify(this.PackList));
     }
 
+    /**
+     * Receives the contents of a file uploaded from the users
+     * computer and attempts to convert that into a content pack.
+     * @param _content The string data of the imported JSON file.
+     * @returns String message explaining any upload errors.
+     */
     public FileToContentPack(_content : string) {
         let ReturnMsg = "";
+
         try {
             ReturnMsg = this.ValidateFileData(_content) 
+            // If successfully validated, add the content pack to local storage
             if (ReturnMsg == "") {
                 const ContentNew: ContentPack = new ContentPack(JSON.parse(_content));
                 this.PackList.push(ContentNew);
@@ -30,13 +51,23 @@ class ContentPackManager {
             ReturnMsg = "File was not in the Content Pack format.";
         }
 
+        // Return uploade message, non-empty strings represent an error
         return ReturnMsg;
     }
 
+    /**
+     * Checks if the JSON file has the right parameters.
+     * NOTE:    Does not check the specific data uploaded, only that
+     *          the minimum file structure exists
+     * @param _content The string content of the uploaded file
+     * @returns String, empty if no error occured during validation
+     */
     private ValidateFileData(_content : string) {
 
+        // Temporary parse as JSON object
         const TestPack = (JSON.parse(_content) as IContentPack)
-
+        
+        // Raise nothing if all the required structure is there
         if (    TestPack.id &&
                 TestPack.name &&
                 TestPack.author &&
@@ -50,6 +81,7 @@ class ContentPackManager {
             return "Invalid file format structure.";
         }
 
+        // Check if a content pack with the same ID already exists
         let i = 0;
         for (i = 0; i < this.PackList.length; i++) {
             if (this.PackList[i].ID == TestPack.id) {
@@ -57,6 +89,8 @@ class ContentPackManager {
             }
         }
 
+        // Check if any ID provided match an ID in other content packs
+        // such as Models, Equipment, etc to avoid conflicts
         const IDArray = [];
         for (i = 0; i < TestPack.files.length; i ++) {
             let j = 0;
@@ -78,14 +112,22 @@ class ContentPackManager {
             }
         }
 
-
+        // If nothing is raised, return an empty string
         return ""
     }
 
+    /**
+     * @returns Content Pack array
+     */
     public GetPack() {
         return this.PackList;
     }
 
+    /**
+     * Deletes a specific pack from the array and updates
+     * local storage to reflect this.
+     * @param _pack The content pack marked for deletion
+     */
     public DeletePack(_pack : ContentPack) {
         let i = 0;
         for (i = 0; i < this.PackList.length; i++) {
