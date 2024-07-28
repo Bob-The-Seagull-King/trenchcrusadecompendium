@@ -6,6 +6,9 @@ import React from 'react'
 import { Requester } from '../factories/Requester';
 import { IGlossaryRule, GlossaryRule } from '../classes/feature/glossary/Glossary';
 import GlossaryHover from '../display/components/subcomponents/glossary/GlossaryHover';
+import { ITrenchCrusadeItemTag } from '../classes/TrenchCrusadeItem';
+import TagDisplay from '../display/components/subcomponents/TagDisplay';
+import ModelDescriptionItemDisplay from '../display/components/subcomponents/description/ModelDescriptionItemDisplay';
 
 /**
  * Takes a string, and an array of string:glossary_id pairs, and turns
@@ -73,4 +76,48 @@ function ArrayItemIntoHtml(content: string, delim: any) {
         
     }
     return ( <span></span> )
+}
+
+
+export function returnTags(taglist: [] | undefined, bannedList : string[]) {
+    const displaytags = sortTagsForDisplay(taglist, bannedList)
+
+    return (
+        <div className="tagBox">
+                {displaytags.map((item) => (
+                    <div key={"tagDisplay"+item.tag_name+item.val}>
+                        <TagDisplay data={item}/>
+                    </div>
+                ))}
+        </div>
+    )
+}
+
+function sortTagsForDisplay(taglist: [] | undefined, bannedList : string[]) {
+    const tagarray: ITrenchCrusadeItemTag[] = []
+
+    let i = 0;
+    for (i = 0; i < (taglist?.length || 0); i++) {
+        if (taglist != undefined) {
+            const temptag: ITrenchCrusadeItemTag = taglist[i]
+
+            if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
+                temptag.tag_name = "blast"; }
+
+            if (!bannedList.includes(temptag.tag_name)) {
+                tagarray.push(temptag);
+            }}}
+    return tagarray;
+}
+
+export function returnDescription(baseObject: any, objectArray : any[]) {
+    return (
+        <div>
+            {objectArray.map((item) => (
+                <div key={"descriptionDisplay"}>
+                    <ModelDescriptionItemDisplay data={item} parent={baseObject}/>
+                </div>
+            ))}
+        </div>
+    )
 }

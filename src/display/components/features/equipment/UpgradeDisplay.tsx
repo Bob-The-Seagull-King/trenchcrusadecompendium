@@ -3,29 +3,16 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { FactionUpgrade } from '../../../../classes/feature/factions/FactionUpgrade';
-
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import { returnDescription } from '../../../../utility/util';
 
 const UpgradeDisplay = (props: any) => {
     const ModelObject: FactionUpgrade = props.data
-
-    function returnDescription() {
-        return (
-            <div>
-                {ModelObject.Description.map((item) => (
-                    <div key={"descriptionDisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
-                    </div>
-                ))}
-            </div>
-        )
-    }
 
     return (
             <div className='modelInternalStructure'>
 
                 <div>
-                    {returnDescription()}
+                {returnDescription(ModelObject, ModelObject.Description)}
                 </div>
             </div>
     )

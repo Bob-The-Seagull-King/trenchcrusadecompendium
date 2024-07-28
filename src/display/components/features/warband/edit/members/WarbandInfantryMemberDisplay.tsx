@@ -11,12 +11,11 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
-import {ITrenchCrusadeItemTag} from '../../../../../../classes/TrenchCrusadeItem'
+import { returnTags } from '../../../../../../utility/util';
 
 import { useGlobalState } from './../../../../../../utility/globalstate'
 import { getColour } from '../../../../../../utility/functions';
 
-import TagDisplay from '../../../../subcomponents/TagDisplay'
 import ModelStat from '../../../../subcomponents/description/ModelStat';
 import GenericHover from '../../../../generics/GenericHover'
 import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
@@ -77,37 +76,6 @@ const WarbandInfantryMemberDisplay = (props: any) => {
     }
 
     let modelNotes = WarbandMember.Notes;
-
-    function returnTags() {
-        const displaytags = sortTagsForDisplay()
-
-        return (
-            <div className="tagBox">
-                    {displaytags.map((item) => (
-                        <div key={"tagDisplay"+item.tag_name+item.val}>
-                            <TagDisplay data={item}/>
-                        </div>
-                    ))}
-            </div>
-        )
-    }
-
-    function sortTagsForDisplay() {
-        const tagarray: ITrenchCrusadeItemTag[] = []
-
-        let i = 0;
-        for (i = 0; i < (WarbandMember.Model.Object.Tags?.length || 0); i++) {
-            if (WarbandMember.Model.Object.Tags != undefined) {
-                const temptag: ITrenchCrusadeItemTag = WarbandMember.Model.Object.Tags[i]
-
-                if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
-                    temptag.tag_name = "blast"; }
-
-                if (!bannedModelTags.includes(temptag.tag_name)) {
-                    tagarray.push(temptag);
-                }}}
-        return tagarray;
-    }
 
     function returnEquipment() {
         return (
@@ -375,7 +343,7 @@ const WarbandInfantryMemberDisplay = (props: any) => {
             </h1>
             <div className='modelInternalStructure'>
                 <div>
-                    {returnTags()}
+                    {returnTags(WarbandMember.Model.Object.Tags, bannedModelTags)}
                 </div>
                 <div className="verticalspacerbig"/>
                 <div>

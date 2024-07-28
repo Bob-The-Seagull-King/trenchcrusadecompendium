@@ -3,9 +3,8 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { PlayerAddon } from '../../../../classes/feature/addons/Addon';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
+import { returnTags } from '../../../../utility/util';
 
-import TagDisplay from '../../subcomponents/TagDisplay'
 import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 
 const AddonDisplay = (props: any) => {
@@ -24,41 +23,10 @@ const AddonDisplay = (props: any) => {
         )
     }
 
-    function returnTags() {
-        const displaytags = sortTagsForDisplay()
-
-        return (
-            <div className="tagBox">
-                    {displaytags.map((item) => (
-                        <div key={"tagDisplay"+item.tag_name+item.val}>
-                            <TagDisplay data={item}/>
-                        </div>
-                    ))}
-            </div>
-        )
-    }
-
-    function sortTagsForDisplay() {
-        const tagarray: ITrenchCrusadeItemTag[] = []
-
-        let i = 0;
-        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
-            if (ModelObject.Tags != undefined) {
-                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
-
-                if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
-                    temptag.tag_name = "blast"; }
-
-                if (!bannedModelTags.includes(temptag.tag_name)) {
-                    tagarray.push(temptag);
-                }}}
-        return tagarray;
-    }
-
     return (
             <div className='modelInternalStructure'>
                 <div>
-                    {returnTags()}
+                    {returnTags(ModelObject.Tags, bannedModelTags)}
                 </div>
                 <div className="verticalspacer"/>
                 <div>

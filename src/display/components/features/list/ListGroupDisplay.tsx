@@ -3,24 +3,12 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { ListGroup } from '../../../../classes/feature/list/ListGroup';
+import { returnDescription } from '../../../../utility/util';
 
 import ListItemDisplay from './ListItemDisplay';
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 
 const ListGroupDisplay = (props: any) => {
     const ModelObject: ListGroup = props.data
-
-    function returnDescription() {
-        return (
-            <div>
-                {ModelObject.Description.map((item) => (
-                    <div key={"descriptionDisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
-                    </div>
-                ))}
-            </div>
-        )
-    }
 
     return (
         
@@ -29,7 +17,7 @@ const ListGroupDisplay = (props: any) => {
                 {ModelObject.Description.length != 0 &&
                     <>
                 <div>
-                    {returnDescription()}
+                    {returnDescription(ModelObject, ModelObject.Description)}
                 </div>
                 </>
                 }

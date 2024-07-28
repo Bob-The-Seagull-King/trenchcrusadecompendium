@@ -3,23 +3,10 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { QuickRule } from '../../../../classes/feature/rules/QuickRule';
-
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import { returnDescription } from '../../../../utility/util';
 
 const QuickRuleDisplay = (props: any) => {
     const ModelObject: QuickRule = props.data
-
-    function returnDescription() {
-        return (
-            <div>
-                {ModelObject.Description.map((descitem) => (
-                    <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                        <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
-                    </div>
-                ))}
-            </div>
-        )
-    }
 
     function returnRules() {
         return (
@@ -31,11 +18,7 @@ const QuickRuleDisplay = (props: any) => {
                         <div className="separator">{item.Title}</div>
                     </div> 
                     <div>
-                        {item.Description.map((descitem) => (
-                            <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                                <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
-                            </div>
-                        ))}
+                        {returnDescription(ModelObject, item.Description)}
                     </div>
                     <div className="verticalspacer"/>
                 </div>
@@ -49,7 +32,7 @@ const QuickRuleDisplay = (props: any) => {
             <div className='modelInternalStructure'>
                 <>
                     <div>
-                        {returnDescription()}
+                        {returnDescription(ModelObject, ModelObject.Description)}
                     </div>
                 </>
 

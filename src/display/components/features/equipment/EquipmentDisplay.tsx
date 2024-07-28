@@ -3,27 +3,13 @@ import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment';
-import {ITrenchCrusadeItemTag} from '../../../../classes/TrenchCrusadeItem'
+import { returnTags, returnDescription } from '../../../../utility/util';
 
-import TagDisplay from '../../subcomponents/TagDisplay'
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
 import ModelStat from '../../subcomponents/description/ModelStat';
 
 const EquipmentDisplay = (props: any) => {
     const ModelObject: PlayerEquipment = props.data
     const bannedModelTags = ["empty"]
-
-    function returnDescription() {
-        return (
-            <div>
-                {ModelObject.Description.map((item) => (
-                    <div key={"descriptionDisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
-                    </div>
-                ))}
-            </div>
-        )
-    }
 
     function returnStats() {
         return (
@@ -39,42 +25,11 @@ const EquipmentDisplay = (props: any) => {
         )
     }
 
-    function returnTags() {
-        const displaytags = sortTagsForDisplay()
-
-        return (
-            <div className="tagBox">
-                    {displaytags.map((item) => (
-                        <div key={"tagDisplay"+item.tag_name+item.val}>
-                            <TagDisplay data={item}/>
-                        </div>
-                    ))}
-            </div>
-        )
-    }
-
-    function sortTagsForDisplay() {
-        const tagarray: ITrenchCrusadeItemTag[] = []
-
-        let i = 0;
-        for (i = 0; i < (ModelObject.Tags?.length || 0); i++) {
-            if (ModelObject.Tags != undefined) {
-                const temptag: ITrenchCrusadeItemTag = ModelObject.Tags[i]
-
-                if ((temptag.tag_name == "blast_size") || (temptag.tag_name == "blast_distance")) {
-                    temptag.tag_name = "blast"; }
-
-                if (!bannedModelTags.includes(temptag.tag_name)) {
-                    tagarray.push(temptag);
-                }}}
-        return tagarray;
-    }
-
     return (
         
             <div className='modelInternalStructure'>
                 <div>
-                    {returnTags()}
+                    {returnTags(ModelObject.Tags, bannedModelTags)}
                 </div>
                 <div className="verticalspacer"/>
                 <div>
@@ -102,7 +57,7 @@ const EquipmentDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    {returnDescription()}
+                    {returnDescription(ModelObject, ModelObject.Description)}
                 </div>
                 </>
                 }
