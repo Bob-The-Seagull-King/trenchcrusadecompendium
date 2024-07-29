@@ -9,12 +9,11 @@ const UpgradeDisplay = (props: any) => {
     const ModelObject: FactionUpgrade = props.data
 
     return (
-            <div className='modelInternalStructure'>
-
-                <div>
+        <div className='modelInternalStructure'>
+            <div>
                 {returnDescription(ModelObject, ModelObject.Description)}
-                </div>
             </div>
+        </div>
     )
 }
 

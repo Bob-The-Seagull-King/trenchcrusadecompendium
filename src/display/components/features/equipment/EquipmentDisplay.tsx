@@ -11,6 +11,7 @@ const EquipmentDisplay = (props: any) => {
     const ModelObject: PlayerEquipment = props.data
     const bannedModelTags = ["empty"]
 
+    // Returns the stats of the equipment item structured
     function returnStats() {
         return (
             <div>
@@ -27,41 +28,42 @@ const EquipmentDisplay = (props: any) => {
 
     return (
         
-            <div className='modelInternalStructure'>
-                <div>
-                    {returnTags(ModelObject.Tags, bannedModelTags)}
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <i><p dangerouslySetInnerHTML={{__html: (ModelObject.Blurb)}}></p></i>
-                </div> 
-                <div className="verticalspacer"/> 
-                
-                {((ModelObject.EquipType != null) && (ModelObject.Range != null) ) &&
-                    <>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                
-                <div className="verticalspacer"/>
-                <div>
-                    {returnStats()}
-                </div>
-                </>
-                }
-                {ModelObject.Description.length != 0 &&
-                    <>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div>
-                    {returnDescription(ModelObject, ModelObject.Description)}
-                </div>
-                </>
-                }
+        <div className='modelInternalStructure'>
+            <div>
+                {returnTags(ModelObject.Tags, bannedModelTags)}
             </div>
+            <div className="verticalspacer"/>
+            <div>
+                <i><p dangerouslySetInnerHTML={{__html: (ModelObject.Blurb)}}></p></i>
+            </div> 
+            <div className="verticalspacer"/> 
+            
+            {((ModelObject.EquipType != null) && (ModelObject.Range != null) ) &&
+                <>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    
+                    <div className="verticalspacer"/>
+                    <div>
+                        {returnStats()}
+                    </div>
+                </>
+            }
+
+            {ModelObject.Description.length != 0 &&
+                <>
+                    <div className="verticalspacer"/>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    <div className="verticalspacer"/>
+                    <div>
+                        {returnDescription(ModelObject, ModelObject.Description)}
+                    </div>
+                </>
+            }
+        </div>
     )
 }
 
