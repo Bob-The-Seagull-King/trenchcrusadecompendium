@@ -18,6 +18,7 @@ const FactionModelDisplay = (props: any) => {
     const EquipmentList : PlayerEquipment[] = [];
     const UpgradeList : FactionUpgrade[] = [];
 
+    // Return a formatted list of valid upgrades for a model
     function getUpgrades() {
         let i = 0;
 
@@ -27,6 +28,7 @@ const FactionModelDisplay = (props: any) => {
             const newObject = new FactionUpgrade(Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: ModelEquip.Upgrades[i].ID}}));
             UpgradeList.push(newObject);
         }
+
         return (
             <>
                 {UpgradeList.length == 0 &&
@@ -34,15 +36,15 @@ const FactionModelDisplay = (props: any) => {
                 }
                 {UpgradeList.length > 0 && UpgradeList.map((item) => (
                     <span key={"upgrades" + item.ID}> 
-                    <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item} />}/>
-                 
-                    <span>{", "}</span> 
+                        <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item} />}/>
+                        <span>{", "}</span> 
                     </span>
                 ))}
             </>
         )
     }
 
+    // Return a formatted list of starting equipment for a model
     function getEquipment() {
         let i = 0;
 
@@ -67,6 +69,7 @@ const FactionModelDisplay = (props: any) => {
         )
     }
 
+    // Get a formatted list of restrictions a model must abide by
     function getRestrictionList() {
         let rstrctnlst = "";
 

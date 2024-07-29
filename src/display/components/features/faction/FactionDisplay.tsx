@@ -14,101 +14,101 @@ import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePa
 const FactionDisplay = (props: any) => {
     const ModelObject: PlayerFaction = props.data
 
+    // Return a list of all Models a faction has available
     function returnModelList() {
         return (
             <>
-            <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                {(ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).length > 0) &&
-                <div className="col">
-                    <div className="row">
-                        <div className="col">
-                            <div className="row">
-                                <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("ELITE")}</div>
+                <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                    {(ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).length > 0) &&
+                    <div className="col">
+                        <div className="row">
+                            <div className="col">
+                                <div className="row">
+                                    <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("ELITE")}</div>
+                                </div>
+                                <div className="row row-cols-5">
+                                    <div className="col-3">
+                                        <div className="equiptitle">Name</div>
+                                    </div>
+                                    <div className="col-2">
+                                        <div className="equiptitle">Cost</div>
+                                    </div>
+                                    <div className="col-1">
+                                        <div className="equiptitle">Limit</div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="equiptitle">Equipment</div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="equiptitle">Upgrades</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="row row-cols-5">
-
-
-                                <div className="col-3">
-                                    <div className="equiptitle">Name</div>
+                            {ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).map((item) => (
+                                <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                                    <FactionModelDisplay data={item}/>
                                 </div>
-                                <div className="col-2">
-                                    <div className="equiptitle">Cost</div>
-                                </div>
-                                <div className="col-1">
-                                    <div className="equiptitle">Limit</div>
-                                </div>
-                                <div className="col-3">
-                                    <div className="equiptitle">Equipment</div>
-                                </div>
-                                <div className="col-3">
-                                    <div className="equiptitle">Upgrades</div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
-                        {ModelObject.Models.filter(item => (containsTag(item.Object.Tags, "elite"))).map((item) => (
-                            <div key={"flavourFaction"+(item.ID? item.ID : "")}>
-                                <FactionModelDisplay data={item}/>
+                    </div>
+                    }
+                    <div className="col">
+                        <div className="row">
+                            <div className="col">
+                                <div className="row">
+                                    <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("INFANTRY")}</div>
+                                </div>
+                                <div className="row row-cols-5">
+                                    <div className="col-3">
+                                        <div className="equiptitle">Name</div>
+                                    </div>
+                                    <div className="col-2">
+                                        <div className="equiptitle">Cost</div>
+                                    </div>
+                                    <div className="col-1">
+                                        <div className="equiptitle">Limit</div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="equiptitle">Equipment</div>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="equiptitle">Upgrades</div>
+                                    </div>
+                                </div>
                             </div>
-                        ))}
+                            {ModelObject.Models.filter(item => (!containsTag(item.Object.Tags, "elite"))).map((item) => (
+                                <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                                    <FactionModelDisplay data={item}/>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-                }
-                <div className="col">
-                    <div className="row">
-                        <div className="col">
-                            <div className="row">
-                                <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable("INFANTRY")}</div>
-                            </div>
-                            <div className="row row-cols-5">
-
-                                <div className="col-3">
-                                    <div className="equiptitle">Name</div>
-                                </div>
-                                <div className="col-2">
-                                    <div className="equiptitle">Cost</div>
-                                </div>
-                                <div className="col-1">
-                                    <div className="equiptitle">Limit</div>
-                                </div>
-                                <div className="col-3">
-                                    <div className="equiptitle">Equipment</div>
-                                </div>
-                                <div className="col-3">
-                                    <div className="equiptitle">Upgrades</div>
-                                </div>
-                            </div>
-                        </div>
-                        {ModelObject.Models.filter(item => (!containsTag(item.Object.Tags, "elite"))).map((item) => (
-                            <div key={"flavourFaction"+(item.ID? item.ID : "")}>
-                                <FactionModelDisplay data={item}/>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
             </>
         )
     }
 
+    // Return list of all equipment available to a faction
     function returnEquipList() {
         return (
             <>
-            <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
-                <div className="col">
-                    {returnEquipTypeList("ranged")}
-                    <div className="verticalspacer"/>
-                    {returnEquipTypeList("armour")}
+                <div className="row row-cols-lg-1 row-cols-md-1 row-cols-sx-1 row-cols-xs-1 row-cols-1">
+                    <div className="col">
+                        {returnEquipTypeList("ranged")}
+                        <div className="verticalspacer"/>
+                        {returnEquipTypeList("armour")}
+                    </div>
+                    <div className="col">
+                        {returnEquipTypeList("melee")}
+                        <div className="verticalspacer"/>
+                        {returnEquipTypeList("equipment")}
+                    </div>
                 </div>
-                <div className="col">
-                    {returnEquipTypeList("melee")}
-                    <div className="verticalspacer"/>
-                    {returnEquipTypeList("equipment")}
-                </div>
-            </div>
             </>
         )
     }
 
+    // Return a subset of the equipment available to a faction
     function returnEquipTypeList(type: string) {
         return (
             <div className="row">
@@ -117,7 +117,6 @@ const FactionDisplay = (props: any) => {
                         <div style={{marginBottom:"-0.25em"}} className="equipgrouptext">{makestringpresentable(type)}</div>
                     </div>
                     <div className="row row-cols-4">
-
                     <div className="col-4">
                             <div className="equiptitle">Name</div>
                         </div>
@@ -141,6 +140,7 @@ const FactionDisplay = (props: any) => {
         )
     }
 
+    // Return the faction flavour
     function returnFlavour() {
         return (
             <div>
@@ -149,25 +149,26 @@ const FactionDisplay = (props: any) => {
         )
     }
 
+    // Return faction rules
     function returnRules() {
         return (
             <>
-            {ModelObject.Rules.map((item) => (
-                <div key={"flavourFaction"+(item.Title? item.Title : "")}>
-                    <div className="verticalspacer"/> 
-                    <div>
-                        <div className="separator">{item.Title}</div>
-                    </div> 
-                    <div>
-                        {item.Description.map((descitem) => (
-                            <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                                <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
-                            </div>
-                        ))}
+                {ModelObject.Rules.map((item) => (
+                    <div key={"flavourFaction"+(item.Title? item.Title : "")}>
+                        <div className="verticalspacer"/> 
+                        <div>
+                            <div className="separator">{item.Title}</div>
+                        </div> 
+                        <div>
+                            {item.Description.map((descitem) => (
+                                <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
+                                    <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="verticalspacer"/>
                     </div>
-                    <div className="verticalspacer"/>
-                </div>
-            ))}
+                ))}
             </>
         )
     }
@@ -181,9 +182,9 @@ const FactionDisplay = (props: any) => {
 
                 {(ModelObject.Rules.length > 0) &&
                     <>
-                    <div>
-                        {returnRules()}
-                    </div>
+                        <div>
+                            {returnRules()}
+                        </div>
                     </>
                 }   
 

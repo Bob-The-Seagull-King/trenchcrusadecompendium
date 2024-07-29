@@ -12,45 +12,39 @@ const FactionEquipDisplay = (props: any) => {
 
     const ModelEquip: FactionEquip = props.data;
 
+    // Get the name of the equipment item by ID
     function getModelName(md : string) {
         const modelFound = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: md}}));
         return modelFound.name;
     }
 
+    // Get a list of features an equipment item has.
     function getFeatureList() {
         let ftrlst = "";
 
         let i = 0;
         for (i = 0; i < ModelEquip.Features.length; i++) {
-            if ( i > 0) {
-                ftrlst += ", "
-            }
+            if ( i > 0) { ftrlst += ", " }
             ftrlst += ModelEquip.Features[i].toString().toUpperCase();
         }
 
-        if (ftrlst == "") {
-            ftrlst = "-"
-        }
+        if (ftrlst == "") { ftrlst = "-" }
 
         return ftrlst;
-
     }
 
+    // Get a list of restrictions on an equipment item.
     function getRestrictionList() {
         let rstrctnlst = "";
 
         if (ModelEquip.Limit > 0) {
             rstrctnlst += "LIMIT: " + ModelEquip.Limit;
-            if (ModelEquip.Restrictions.length > 0) {
-                rstrctnlst += ", "
-            }
+            if (ModelEquip.Restrictions.length > 0) { rstrctnlst += ", " }
         }
 
         let i = 0;
         for (i = 0; i < ModelEquip.Restrictions.length; i++) {
-            if ( i > 0) {
-                rstrctnlst += ", "
-            }
+            if ( i > 0) { rstrctnlst += ", " }
             if (ModelEquip.Restrictions[i].type == "keyword") {
                 rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
             } else if (ModelEquip.Restrictions[i].type == "model") {
@@ -62,16 +56,13 @@ const FactionEquipDisplay = (props: any) => {
             }
         }
 
-        if (rstrctnlst == "") {
-            rstrctnlst = "-"
-        }
+        if (rstrctnlst == "") { rstrctnlst = "-" }
 
         return rstrctnlst;
     }
 
     return (
         <div className="row row-cols-4">
-
             <div className="col-4">
                 <div className="equipbody">
                     <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
