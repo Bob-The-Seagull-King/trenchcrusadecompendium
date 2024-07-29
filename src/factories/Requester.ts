@@ -44,6 +44,12 @@ class Requester {
 
 export {Requester, IRequest}
 
+/**
+ * Adds any information from content packs which is of the type
+ * being searched for (ie 'Models' 'Equipment' etc)
+ * @param request The base request
+ * @returns Updated request featuring content pack data
+ */
 function GetContentPackData(request: IRequest): any {
     const BonusData = [];
 
