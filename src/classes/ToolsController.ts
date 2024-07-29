@@ -6,12 +6,11 @@ import { ScenarioGenerator } from '../classes/feature/scenarios/ScenarioGenerato
 
 class ToolsController {
    
-     ContentManager;
-     ListManager;
-     ScenarioGen;
+    ContentManager;
+    ListManager;
+    ScenarioGen;
 
     constructor () {
-
         this.ContentManager = new ContentPackManager()
         this.ListManager = new WarbandManager()
         this.ScenarioGen = new ScenarioGenerator()

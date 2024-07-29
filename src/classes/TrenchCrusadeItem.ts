@@ -1,4 +1,4 @@
-import {ItemType} from './Enum'
+import { ItemType } from './Enum'
 
 /**
  * Basic data package for any TrenchCrusade Item

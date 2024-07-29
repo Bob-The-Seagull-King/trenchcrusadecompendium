@@ -7,7 +7,10 @@ import { AllTableReferenceListPage } from '../classes/viewmodel/pages/AllTableRe
 import { AllSkillsListPage } from '../classes/viewmodel/pages/AllSkillsListPage'
 import { AllQuickRulesPage } from '../classes/viewmodel/pages/AllQuickRulesListPage'
 
-
+/**
+ * Holds all controllers at the base level of the
+ * website so that state changes don't reset anything.
+ */
 class ControllerController {
    
     ModelsCollectionController;
@@ -20,7 +23,6 @@ class ControllerController {
     QuickRulesCollectionController;
 
     constructor () {
-
         this.ModelsCollectionController = new AllModelsListPage()
         this.EquipmentCollectionController = new AllEquipmentListPage()
         this.FactionCollectionController = new AllFactionListPage()

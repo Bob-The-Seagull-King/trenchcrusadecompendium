@@ -1,14 +1,8 @@
 import { DescriptionFactory } from "../utility/functions";
 
 /**
- * Data structure for the description section
+ * Basic text block with a title and description
  */
-interface IDescriptionItemData {
-    tags: [],
-    content?: string,
-    subcontent?: []
-}
-
 interface ITextBlock {
     title: [],
     content: []
@@ -22,6 +16,15 @@ class TextBlock {
         this.Title = data.title;
         this.Content = DescriptionFactory(data.content);
     }
+}
+
+/**
+ * Data structure for the description section
+ */
+interface IDescriptionItemData {
+    tags: [],
+    content?: string,
+    subcontent?: []
 }
 
 class DescriptionItem {
@@ -39,7 +42,6 @@ class DescriptionItem {
             this.Tags = data.tags;
             this.Content = data.content || "";
         }
-
     }
 
     /**
