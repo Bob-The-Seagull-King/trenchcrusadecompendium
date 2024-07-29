@@ -11,6 +11,7 @@ import { faDice } from '@fortawesome/free-solid-svg-icons'
 const ListItemDisplay = (props: any) => {
     const ModelObject: ListItem = props.data
 
+    // Return the formatted roll-requirements
     function returnRoll() {
         let rstrctnlst = ""
         
@@ -18,13 +19,9 @@ const ListItemDisplay = (props: any) => {
             if (ModelObject.RollEnd != 0) {
                 rstrctnlst = ModelObject.RollEnd.toString();
             }
-        } else {
-            rstrctnlst = ModelObject.RollStart.toString() + " - " + ModelObject.RollEnd.toString();
-        }
+        } else { rstrctnlst = ModelObject.RollStart.toString() + " - " + ModelObject.RollEnd.toString(); }
 
-        if (rstrctnlst == "") {
-            rstrctnlst = "-"
-        }
+        if (rstrctnlst == "") { rstrctnlst = "-" }
 
         return rstrctnlst;
     }
