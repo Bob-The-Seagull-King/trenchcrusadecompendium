@@ -36,10 +36,13 @@ class EquipmentFilterManager extends FilterManager {
         return tempTags;
     }
 
+    /**
+     * Dud method added for structural integrity
+     * @returns Empty list of Stat tags
+     */
     FindStat() {
         const tempMisc: FilterTag[] = []
         return tempMisc;
-
     }
 
     /**

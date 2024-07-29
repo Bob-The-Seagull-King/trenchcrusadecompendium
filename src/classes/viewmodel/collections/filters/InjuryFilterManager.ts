@@ -36,10 +36,13 @@ class InjuryFilterManager extends FilterManager {
         return tempTags;
     }
 
+    /**
+     * Dud method added for structural integrity
+     * @returns Empty list of Stat tags
+     */
     FindStat() {
         const tempMisc: FilterTag[] = []
         return tempMisc;
-
     }
 
     /**
@@ -67,7 +70,6 @@ class InjuryFilterManager extends FilterManager {
 
         return tempMisc;
     }
-    
 }
 
 export {InjuryFilterManager}

@@ -36,6 +36,11 @@ class ModelsFilterManager extends FilterManager {
         return tempTags;
     }
 
+    /**
+     * Find all the variants of stats, specifically
+     * cost, movement, base, armour, ranged stat, and melee stat
+     * @returns List of add stat options
+     */
     FindStat() {
         const tempMisc: FilterTag[] = []
         
@@ -103,8 +108,7 @@ class ModelsFilterManager extends FilterManager {
         }
 
         return tempMisc;
-    }
-    
+    }  
 }
 
 export {ModelsFilterManager}
