@@ -8,6 +8,7 @@ import { returnDescription } from '../../../../utility/util';
 const QuickRuleDisplay = (props: any) => {
     const ModelObject: QuickRule = props.data
 
+    // Return faction rules
     function returnRules() {
         return (
             <>
@@ -28,22 +29,21 @@ const QuickRuleDisplay = (props: any) => {
     }
 
     return (
-        
-            <div className='modelInternalStructure'>
-                <>
-                    <div>
-                        {returnDescription(ModelObject, ModelObject.Description)}
-                    </div>
-                </>
+        <div className='modelInternalStructure'>
+            <>
+                <div>
+                    {returnDescription(ModelObject, ModelObject.Description)}
+                </div>
+            </>
 
-                {(ModelObject.Rules.length > 0) &&
-                    <>
+            {(ModelObject.Rules.length > 0) &&
+                <>
                     <div>
                         {returnRules()}
                     </div>
-                    </>
-                }          
-            </div>
+                </>
+            }          
+        </div>
     )
 }
 
