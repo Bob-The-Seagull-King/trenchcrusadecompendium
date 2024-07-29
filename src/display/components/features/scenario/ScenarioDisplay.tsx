@@ -10,45 +10,46 @@ import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDe
 const ScenarioDisplay = (props: any) => {
     const ModelObject: Scenario = props.data
 
+    // Return rules sorted in a masonry
     function returnRules() {
         return (
             <>
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 2}} >
-                <Masonry gutter="20px">
-                    {ModelObject.Rules.map((item) => (
-                        
-                        <div key={"flavourFaction"+(item.Title? item.Title : "")}>
-                            <div>
-                                <div className="separator">{item.Title}</div>
-                            </div> 
-                            <div>
-                                {item.Description.map((descitem) => (
-                                    <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                                        <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
-                                    </div>
-                                ))}
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 2}} >
+                    <Masonry gutter="20px">
+                        {ModelObject.Rules.map((item) => (
+                            
+                            <div key={"flavourFaction"+(item.Title? item.Title : "")}>
+                                <div>
+                                    <div className="separator">{item.Title}</div>
+                                </div> 
+                                <div>
+                                    {item.Description.map((descitem) => (
+                                        <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
+                                            <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                                    
-                    ))}
-                </Masonry>
-            </ResponsiveMasonry>
+                                        
+                        ))}
+                    </Masonry>
+                </ResponsiveMasonry>
             </>
         )
     }
 
 
     return (
-            <div className='modelInternalStructure'>
-                <img src={ModelObject.ImageUrl} style={{width:"100%"}}/>
-                {(ModelObject.Rules.length > 0) &&
-                    <>
+        <div className='modelInternalStructure'>
+            <img src={ModelObject.ImageUrl} style={{width:"100%"}}/>
+            {(ModelObject.Rules.length > 0) &&
+                <>
                     <div>
                         {returnRules()}
                     </div>
-                    </>
-                }     
-            </div>
+                </>
+            }     
+        </div>
     )
 }
 
