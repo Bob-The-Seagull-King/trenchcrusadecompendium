@@ -22,6 +22,7 @@ const ModelUpgradeDisplay = (props: any) => {
 
     const ModelEquip: FactionUpgrade = props.data;
 
+    // Remove upgrade and lose money spent
     function tossItem() {
         if (ModelEquip.CostID == "ducats") {
             WarbandItem.DucatLost += ModelEquip.Cost;
@@ -32,6 +33,7 @@ const ModelUpgradeDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    // Remove upgrade and get the money back
     function sellItem() {
         Manager.DeleteUpgradeFromModel(ModelEquip, WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
@@ -39,11 +41,9 @@ const ModelUpgradeDisplay = (props: any) => {
 
     return (
         <div className="row">
-
             <div className="col-5 align-content-center">
                 <div className="equipbody">
                     <GenericHover titlename={ModelEquip.Name} d_colour={WarbandMember.Model.Object.Team} d_name={ModelEquip.Name} d_type={""} d_method={() => <UpgradeDisplay data={ModelEquip} />}/>
-                 
                 </div>
             </div>
             <div className="col-3 align-content-center">

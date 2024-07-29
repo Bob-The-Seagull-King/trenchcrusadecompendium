@@ -22,6 +22,7 @@ const ModelEquipDisplay = (props: any) => {
 
     const ModelEquip: ListEquipment = props.data;
 
+    // Remove equipment and lose the monye spent
     function tossItem() {
         if (ModelEquip.CostType == "ducats") {
             WarbandItem.DucatLost += ModelEquip.Cost;
@@ -32,6 +33,7 @@ const ModelEquipDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    // Remove equipment and get the money back
     function sellItem() {
         Manager.DeleteEquipmentFromModel(ModelEquip, WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
@@ -39,7 +41,6 @@ const ModelEquipDisplay = (props: any) => {
 
     return (
         <div className="row">
-
             <div className="col-5 align-content-center">
                 <div className="equipbody">
                     <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>

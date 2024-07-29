@@ -39,14 +39,15 @@ const WarbandMemberDisplay = (props: any) => {
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
-    const bannedModelTags = ["empty"]
-    const [theme] = useGlobalState('theme');
 
+    const bannedModelTags = ["empty"]
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
-
     const Warband_Name = WarbandMember? WarbandMember.Name : "";
+    
     let NewBandName = Warband_Name;
+
+    const [theme] = useGlobalState('theme');
 
     const [showNameEdit, setShowNameEdit] = useState(false);
     const handleCloseNameEdit = () => setShowNameEdit(false); 
@@ -78,6 +79,7 @@ const WarbandMemberDisplay = (props: any) => {
 
     let modelNotes = WarbandMember.Notes;
 
+    // Return the upgrade component of a member display
     function returnUpgrades() {
         return (
             <>
@@ -98,6 +100,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
     
+    // Return the table of member upgrades
     function returnUpgradeTypeList(type: string) {
         return (
             <div className="col-12" style={{width:"100%"}}>
@@ -131,6 +134,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Return a formatted table of a member's equipment
     function returnEquipment() {
         return (
             <>
@@ -151,6 +155,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
     
+    // Return a subtype of equipment items
     function returnEquipTypeList(type: string) {
         return (
             <div className="col-12" style={{width:"100%"}}>
@@ -184,6 +189,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Return the text box contianing user notes on the member
     function returnNotes() {
         return (
             <>
@@ -194,11 +200,13 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Update the member's notes
     function updateNotes(_value : string) {
         modelNotes = _value;
         WarbandMember.Notes = modelNotes;
     }
 
+    // Return the basic information of the member
     function returnStats() {
         return (
             <div>
@@ -207,8 +215,7 @@ const WarbandMemberDisplay = (props: any) => {
                     <div className="col-md-4 col-12">
                         <div className="stattitle">{"Model Type"}</div>
                         <div className="statbody">
-                            <GenericHover titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>
-                            
+                            <GenericHover titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>      
                         </div>
                         <div className="verticalspacer"/>
                     </div>
@@ -223,6 +230,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Return formatted list of skills
     function returnSkills() {
         return (
             <>
@@ -231,6 +239,7 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Return formatted list of injuries
     function returnScars() {
         return (
             <>
@@ -239,21 +248,25 @@ const WarbandMemberDisplay = (props: any) => {
         )
     }
 
+    // Make the model an infantry unit
     function demoteModel() {
         WarbandMember.Elite = false;
         UpdateFunction(WarbandItem);
     }
 
+    // Make the model an elite unit
     function promoteModel() {
         WarbandMember.Elite = true;
         UpdateFunction(WarbandItem);
     }
 
+    // Create a copy of the model to add to the warband
     function duplicateModel() {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
         UpdateFunction(WarbandItem)
     }
 
+    // Remove model and get nothing back
     function buryModel() {
         WarbandItem.DucatLost += parseInt(GetDucatCost(WarbandMember));
         WarbandItem.GloryLost += parseInt(GetGloryCost(WarbandMember));
@@ -261,6 +274,7 @@ const WarbandMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    // Remove model and get half the cost back
     function sellModel() {
         WarbandItem.DucatLost += Math.round((parseInt(GetDucatCost(WarbandMember)))/2);
         WarbandItem.GloryLost += Math.round((parseInt(GetGloryCost(WarbandMember)))/2);
@@ -268,11 +282,13 @@ const WarbandMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    // Remove model and get all the cost back
     function refundModel() {
         Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
         UpdateFunction(WarbandItem)
     }
 
+    // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
             <>

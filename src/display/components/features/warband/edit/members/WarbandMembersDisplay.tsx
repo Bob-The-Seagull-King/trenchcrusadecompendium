@@ -9,6 +9,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 
 import { Warband } from '../../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
+import { useGlobalState } from './../../../../../../utility/globalstate'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -19,14 +20,11 @@ import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
 
-import { useGlobalState } from './../../../../../../utility/globalstate'
 
 const WarbandMembersDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
-
-    // Creation of New warband member ---------------------------
 
     const [_limitfaction, returnLimitFaction] = useState(true);
     const [theme] = useGlobalState('theme');
