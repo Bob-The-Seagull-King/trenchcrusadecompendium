@@ -44,6 +44,13 @@ class FactionVariantFactory {
         return VarFaction;
     }
 
+    /**
+     * Takes the base faction, removes any rules specified
+     * by the variant, then add any of the variant's new rules.
+     * @param data The variant's data
+     * @param base The base faction
+     * @returns New list of rules
+     */
     static ModifyRules(data: IPlayerFactionVariant, base: IPlayerFaction) {
         const ruleList : IFactionRuleset[] = []
 
@@ -61,6 +68,13 @@ class FactionVariantFactory {
         return ruleList;
     }
 
+    /**
+     * Takes the base faction, removes any equipment specified
+     * by the variant, then add any of the variant's new equipment.
+     * @param data The variant's data
+     * @param base The base faction
+     * @returns New list of equipment
+     */
     static ModifyEquipment(data: IPlayerFactionVariant, base: IPlayerFaction) {
         const equipList : IEquipmentFactionList[] = []
 
@@ -78,6 +92,13 @@ class FactionVariantFactory {
         return equipList;
     }
 
+    /**
+     * Takes the base faction, removes any moodels specified
+     * by the variant, then add any of the variant's new moodels.
+     * @param data The variant's data
+     * @param base The base faction
+     * @returns New list of moodels
+     */
     static ModifyModels(data: IPlayerFactionVariant, base: IPlayerFaction) {
         const modelList : IModelFactionList[] = []
 
@@ -95,6 +116,11 @@ class FactionVariantFactory {
         return modelList;
     }
 
+    /**
+     * Gets the faction that the new faction is a variant of
+     * @param faction_id The ID of the base faction
+     * @returns The faction's data
+     */
     static GetBaseFaction(faction_id : string) {
         return Requester.MakeRequest({searchtype: "id", searchparam: {type: 'faction', id: faction_id}})
     }
