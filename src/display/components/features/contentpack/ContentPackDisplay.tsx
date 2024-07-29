@@ -20,26 +20,30 @@ const ContentPackDisplay = (props: any) => {
     const parentView = props.parent;
     const updateHost = props.statefunction;
 
+    // States
     const [theme] = useGlobalState('theme');
-    
     const [stateWidth, setWidth] = useState(window.innerWidth);
-    const ref = useRef<HTMLDivElement>(null);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    const ref = useRef<HTMLDivElement>(null);
 
+    // Deletes the content pack
     function removeContentPack() {
         parentView.DeletePack(PackItem);
         updateHost();
     }
 
+    // Activates / Deactives the content pack
     function switchContentPackState() {
         PackItem.IsActive = !PackItem.IsActive;
         parentView.SetStorage();
         updateHost();
     }
     
+    // Updates the composition of the display based on screen width
     useEffect(() => {
         const setContentPackWidth = () => {
             if(ref.current) {
@@ -54,6 +58,7 @@ const ContentPackDisplay = (props: any) => {
     return (
         <>
             <div className='' ref={ref}>
+
                 {stateWidth > 700 &&
                     <div className="contentpackcontainer smallbordersubpurple" >
                         <span className="packvrbox">
@@ -90,6 +95,7 @@ const ContentPackDisplay = (props: any) => {
                         </span>
                     </div>
                 }
+
                 {stateWidth <= 700 &&
                     <div className="contentpacksmallcontainer smallbordersubpurple" >
                         
