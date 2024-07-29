@@ -1,80 +1,83 @@
 import { Warband } from "./Warband";
 import { WarbandMember } from "./WarbandMember";
 
+/**
+ * Returns as a string the glory cost of a memebr
+ * @param _member The warband member being checked
+ * @returns The total glory cost of the model, upgrades, and equipment
+ */
 export function GetGloryCost(_member : WarbandMember) {
     let totalCost = 0;
-
-    if (_member.Model.CostType == "glory") {
-        totalCost += _member.Model.Cost;
-    }
-
     let i = 0;
+
+    if (_member.Model.CostType == "glory") { totalCost += _member.Model.Cost; }
+
     for (i = 0; i < _member.Equipment.length; i++) {
-        if (_member.Equipment[i].CostType == "glory") {
-            totalCost += _member.Equipment[i].Cost;
-        }
+        if (_member.Equipment[i].CostType == "glory") { totalCost += _member.Equipment[i].Cost; }
     }
     for (i = 0; i < _member.Upgrades.length; i++) {
-        if (_member.Upgrades[i].CostID == "glory") {
-            totalCost += _member.Upgrades[i].Cost;
-        }
+        if (_member.Upgrades[i].CostID == "glory") { totalCost += _member.Upgrades[i].Cost; }
     }
 
     return totalCost.toString()
 }
 
+/**
+ * Returns as a string the ducat cost of a memebr
+ * @param _member The warband member being checked
+ * @returns The total ducat cost of the model, upgrades, and equipment
+ */
 export function GetDucatCost(_member : WarbandMember) {
     let totalCost = 0;
-
-    if (_member.Model.CostType == "ducats") {
-        totalCost += _member.Model.Cost;
-    }
-
     let i = 0;
+
+    if (_member.Model.CostType == "ducats") { totalCost += _member.Model.Cost; }
+
     for (i = 0; i < _member.Equipment.length; i++) {
-        if (_member.Equipment[i].CostType == "ducats") {
-            totalCost += _member.Equipment[i].Cost;
-        }
+        if (_member.Equipment[i].CostType == "ducats") { totalCost += _member.Equipment[i].Cost; }
     }
-    
     for (i = 0; i < _member.Upgrades.length; i++) {
-        if (_member.Upgrades[i].CostID == "ducats") {
-            totalCost += _member.Upgrades[i].Cost;
-        }
+        if (_member.Upgrades[i].CostID == "ducats") { totalCost += _member.Upgrades[i].Cost; }
     }
 
     return totalCost.toString()
 }
-    
+   
+/**
+ * Returns the total ducat cost of the warband and
+ * all of its members.
+ * @param _band  The warband being checked
+ * @returns The total cost of the warband, the armoury,
+ * all models, and any lost or sold off.
+ */
 export function TotalCostDucats(_band : Warband) {
     let totalducats = _band.DucatLost;
-
     let i = 0;
     
     for (i = 0; i < _band.Armoury.length ; i++) {
-        if (_band.Armoury[i].CostType == "ducats") {
-            totalducats += _band.Armoury[i].Cost;
-        }
+        if (_band.Armoury[i].CostType == "ducats") { totalducats += _band.Armoury[i].Cost; }
     }
-
-    for (i = 0; i < _band.Members.length ; i++) {
-        totalducats += Number(GetDucatCost(_band.Members[i]))
+    for (i = 0; i < _band.Members.length ; i++) { 
+        totalducats += Number(GetDucatCost(_band.Members[i])) 
     }
 
     return totalducats;
 }
-
+   
+/**
+ * Returns the total glory cost of the warband and
+ * all of its members.
+ * @param _band  The warband being checked
+ * @returns The total cost of the warband, the armoury,
+ * all models, and any lost or sold off.
+ */
 export function TotalCostGlory(_band : Warband) {
     let totalglory = _band.GloryLost;
-
     let i = 0;
     
     for (i = 0; i < _band.Armoury.length ; i++) {
-        if (_band.Armoury[i].CostType == "glory") {
-            totalglory += _band.Armoury[i].Cost;
-        }
+        if (_band.Armoury[i].CostType == "glory") { totalglory += _band.Armoury[i].Cost; }
     }
-
     for (i = 0; i < _band.Members.length ; i++) {
         totalglory += Number(GetGloryCost(_band.Members[i]))
     }
@@ -82,54 +85,71 @@ export function TotalCostGlory(_band : Warband) {
     return totalglory;
 }
 
-
-
+/**
+ * Takes a warband and produces a text representation of it
+ * for use in sharing/showing off.
+ * @param _warband The warband being exported
+ * @param _notes If any additional notes exist
+ * @returns Text string representing the export
+ */
 export function ExportDisplayText(_warband : Warband, _notes : boolean) {
+    let returnRow = ""; // This will be added to to generate the text representation
+
+    // First row + warband header
     const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
-
     const startrowlength = StartingRow.length;
+    returnRow += ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
 
-    let returnRow = ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
-
+    // Add notes below the first row if requested
     if (_notes) {
         if (_warband.Notes.trim().length > 0){
-        returnRow += "\n" + "[ NOTES ]" + "\n" + _warband.Notes + "\n"
+            returnRow += "\n" + "[ NOTES ]" + "\n" + _warband.Notes + "\n"
         }
     }
 
+    // -------------------------------- Warband Costs -------------------------------
+
+    // Get base phrases for the total and spent of each cost type
     const ducatTotal = "Total : " + _warband.DucatTotal.toString();
     const ducatCost = "Spent : " + TotalCostDucats( _warband).toString() + " (" + _warband.DucatLost.toString() + " Lost)";
     const gloryTotal = "Total : " + _warband.GloryTotal.toString();
     const gloryCost = "Spent : " + TotalCostGlory(_warband).toString() + " (" + _warband.GloryCost.toString() + " Lost)";
 
+    // Determine the length of the two rows
     const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
     const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
 
+    // Create and append the rows for the warband's ducat and glory cost
     const DucatRow = ducatTotal + (" ".repeat(((totalRow - ducatTotal.length) > 0)? totalRow - ducatTotal.length : 0)) + " | " + ducatCost + (" ".repeat(((costRow - ducatCost.length) > 0)? costRow - ducatCost.length : 0)) + " | Available : " + (_warband.DucatTotal - TotalCostDucats(_warband)).toString()
     const GloryRow = gloryTotal + (" ".repeat(((totalRow - gloryTotal.length) > 0)? totalRow - gloryTotal.length : 0)) + " | " + gloryCost + (" ".repeat(((costRow - gloryCost.length) > 0)? costRow - gloryCost.length : 0)) + " | Available : " + (_warband.GloryTotal - TotalCostGlory(_warband)).toString()
-
     returnRow += "\n" + "[ DUCATS ]" + "\n" + DucatRow + "\n" + "[ GLORY ]" + "\n" + GloryRow + "\n"
 
+    // ------------------------------------------------------------------------------
+
+    // ------------------------------- Warband Armoury ------------------------------
+
+    // Initialize Variables and Arrays
+    let lengthMarker = 0;
+    let i = 0;
+    let lengthCheckEquip = 0;
+    const RangedSet = [];
+    const MeleeSet = [];
+    const ArmourSet = [];
+    const MiscSet = [];
+
+    // Intro Row
     if (_warband.Armoury.length > 0) {
         returnRow += "\n" + "[ ARMOURY ]"
     }
-    let lengthMarker = 0;
 
-    let i = 0;
+    // Find the longest possible armoury row for column alignment
     for (i = 0 ; i < _warband.Armoury.length ; i ++) {
         if (_warband.Armoury[i].Object.Name.length > lengthMarker) {
             lengthMarker = _warband.Armoury[i].Object.Name.length;
         }
     }
 
-
-    const RangedSet = [];
-    const MeleeSet = [];
-    const ArmourSet = [];
-    const MiscSet = [];
-
-    let lengthCheckEquip = 0;
-
+    // Add the row for each type of equipment, fully formatted including alignment
     for (i = 0 ; i < _warband.Armoury.length ; i ++) {
         lengthCheckEquip = lengthMarker-((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "").length)
         if (_warband.Armoury[i].Object.Category == "ranged") {
@@ -145,24 +165,32 @@ export function ExportDisplayText(_warband : Warband, _notes : boolean) {
             MiscSet.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + (" ".repeat((lengthCheckEquip > 0)? lengthCheckEquip : 0)) + " | " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType);
         }
     }
+
+    // Append rows for Ranged equipment
     if (RangedSet.length > 0) {
         returnRow += "\n" + "- RANGED"
         for (i = 0; i < RangedSet.length; i++) {
             returnRow += "\n" + "  " + RangedSet[i]
         }
     }
+
+    // Append rows for Melee equipment
     if (MeleeSet.length > 0) {
         returnRow += "\n" + "- MELEE"
         for (i = 0; i < MeleeSet.length; i++) {
             returnRow += "\n" + "  " + MeleeSet[i]
         }
     }
+
+    // Append rows for Armour equipment
     if (ArmourSet.length > 0) {
         returnRow += "\n" + "- ARMOUR"
         for (i = 0; i < ArmourSet.length; i++) {
             returnRow += "\n" + "  " + ArmourSet[i]
         }
     }
+
+    // Append rows for Equipment equipment
     if (MiscSet.length > 0) {
         returnRow += "\n" + "- MISC"
         for (i = 0; i < MiscSet.length; i++) {
@@ -170,32 +198,128 @@ export function ExportDisplayText(_warband : Warband, _notes : boolean) {
         }
     }
 
-    returnRow += "\n" + "\n" + "[ ELITE MEMBERS ]"
+    // ------------------------------------------------------------------------------
+    
+    // ------------------------------- Warband Members ------------------------------
 
+    // Add the text description for each Elite member
+    returnRow += "\n" + "\n" + "[ ELITE MEMBERS ]"
     for (i = 0; i < _warband.Members.length; i ++) {
         if (_warband.Members[i].Elite) {
             returnRow += "\n" + "\n" + ExportModelDisplayText(_warband.Members[i], _notes, true);
         }
     }
 
+    // Add the text description for each Infantry member
     returnRow += "\n" + "\n" + "[ INFANTRY ]"
-
     for (i = 0; i < _warband.Members.length; i ++) {
         if (!(_warband.Members[i].Elite)) {
             returnRow += "\n" + "\n" + ExportModelDisplayText(_warband.Members[i], _notes, true);
         }
     }
 
+    // ------------------------------------------------------------------------------
+
+    // Add final row and return
     returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
 
     return returnRow;
 }
 
+/**
+ * Takes a warband and produces a text representation of it
+ * for use in sharing/showing off with minimal characters.
+ * @param _warband The warband being exported
+ * @param _notes If any additional notes exist
+ * @returns Text string representing the export
+ */
+export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
+    let returnRow = ""; // This will be added to to generate the text representation
+    let i = 0;
+
+    // First row + warband header
+    const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
+    const startrowlength = StartingRow.length;
+    returnRow += ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
+
+    // ------------------------------- Warband Costs --------------------------------
+
+    // Get base phrases for the total and spent of each cost type
+    const ducatTotal = "Total : " + _warband.DucatTotal.toString();
+    const ducatCost = "Spent : " + TotalCostDucats( _warband).toString() + " (" + _warband.DucatLost.toString() + " Lost)";
+    const gloryTotal = "Total : " + _warband.GloryTotal.toString();
+    const gloryCost = "Spent : " + TotalCostGlory(_warband).toString() + " (" + _warband.GloryCost.toString() + " Lost)";
+
+    // Determine the length of the two rows
+    const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
+    const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
+
+    // Create and append the rows for the warband's ducat and glory cost
+    const DucatRow = ducatTotal + (" ".repeat(((totalRow - ducatTotal.length) > 0)? totalRow - ducatTotal.length : 0)) + " | " + ducatCost + (" ".repeat(((costRow - ducatCost.length) > 0)? costRow - ducatCost.length : 0)) + " | Available : " + (_warband.DucatTotal - TotalCostDucats(_warband)).toString()
+    const GloryRow = gloryTotal + (" ".repeat(((totalRow - gloryTotal.length) > 0)? totalRow - gloryTotal.length : 0)) + " | " + gloryCost + (" ".repeat(((costRow - gloryCost.length) > 0)? costRow - gloryCost.length : 0)) + " | Available : " + (_warband.GloryTotal - TotalCostGlory(_warband)).toString()
+    returnRow += "\n" + "[ DUCATS ] " + DucatRow + "\n" + "[ GLORY ] " + GloryRow;
+
+    // ------------------------------------------------------------------------------
+
+    // ------------------------------- Warband Armoury ------------------------------
+
+    // Add formatted text for each piece of equipment to array
+    const Equipment = [];
+    for (i = 0 ; i < _warband.Armoury.length ; i ++) {
+        Equipment.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + " ( " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType + " )");
+    }
+
+    // Append equipment text
+    if (Equipment.length > 0) {
+        returnRow += "\n" + "\n" + "[ ARMOURY ]"
+        for (i = 0; i < Equipment.length; i++) { returnRow += "\n" + "  " + Equipment[i] }
+    }
+    returnRow += "\n";
+
+    // ------------------------------------------------------------------------------
+
+    // ------------------------------- Warband Members ------------------------------
+
+    // Add the text description for each Elite member
+    if (_warband.Members.filter((value) => (value.Elite == true)).length > 0) { returnRow += "\n" + "[ ELITE MEMBERS ]" }
+    for (i = 0; i < _warband.Members.length; i ++) {
+        if (_warband.Members[i].Elite) {
+            returnRow +=  "\n" + ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
+        }
+    }
+
+    // Add the text description for each Infantry member
+    if (_warband.Members.filter((value) => (value.Elite != true)).length > 0) { returnRow += "\n" + "[ INFANTRY ]" }
+    for (i = 0; i < _warband.Members.length; i ++) {
+        if (!(_warband.Members[i].Elite)) {
+            returnRow +=  "\n" + ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
+        }
+    }
+
+    // ------------------------------------------------------------------------------
+
+    // Add final row and return
+    returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
+
+    return returnRow;
+}
+
+/**
+ * Takes a model and produces a text representation of it
+ * for use in sharing/showing off.
+ * @param _model The model being exported
+ * @param _notes If any additional notes exist
+ * @param _inside If this export is inside a warband export or on its own
+ * @returns Text string representing the export
+ */
 export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean, _inside : boolean) {
+
+    // First row
     const StartingRow = _model.Name + " | " + (GetDucatCost(_model) + " ducats") + " | " + (GetGloryCost(_model) + " glory")
+    
+    // Find the longest piece of text in the equipment options for column alignment
     let lengthMarker = _model.Model.Object.Name? _model.Model.Object.Name?.length : 0;
     let rowMarker = StartingRow.length + 8;
-
     let i = 0;
     for (i = 0 ; i < _model.Equipment.length ; i ++) {
         if (_model.Equipment[i].Object.Name.length > lengthMarker) {
@@ -203,32 +327,28 @@ export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean,
         }
     }
 
-    const modelLengthCheck = lengthMarker-((_model.Model.Object.Name? _model.Model.Object.Name : "").length)
-    const ModelRow = (_model.Model.Object.Name? _model.Model.Object.Name : "") + (" ".repeat((modelLengthCheck > 0)? modelLengthCheck : 0)) + " | " + _model.Model.Cost.toString() + " " + _model.Model.CostType;
-
-    if (ModelRow.length > rowMarker) {
-        rowMarker = ModelRow.length + 1;
-    }
+    // ---------------------------- Member Upgrades ---------------------------------
 
     const UpgradeSet = [];
     let upgradelengthcheck = 0
+
+    // Add upgrade text to array
     for (i = 0 ; i < _model.Upgrades.length ; i ++) {
         upgradelengthcheck = lengthMarker-((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "").length)
         UpgradeSet.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + (" ".repeat((upgradelengthcheck > 0)? upgradelengthcheck : 0)) + " | " + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID);
     }
 
-    for (i = 0; i < UpgradeSet.length; i ++) {
-        if (UpgradeSet[i].length > rowMarker) {
-            rowMarker = UpgradeSet[i].length;
-        }
-    }
+    // ------------------------------------------------------------------------------
 
+    // ---------------------------- Member Equipment --------------------------------
+
+    let equiplengthcheck = 0
     const RangedSet = [];
     const MeleeSet = [];
     const ArmourSet = [];
     const MiscSet = [];
     
-    let equiplengthcheck = 0
+    // Add equipment text to arrays
     for (i = 0 ; i < _model.Equipment.length ; i ++) {
         equiplengthcheck = lengthMarker-((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "").length)
         if (_model.Equipment[i].Object.Category == "ranged") {
@@ -245,55 +365,74 @@ export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean,
         }
     }
 
-    for (i = 0; i < RangedSet.length; i ++) {
-        if (RangedSet[i].length > rowMarker) {
-            rowMarker = RangedSet[i].length;
+    // ------------------------------------------------------------------------------
+    
+    // ------------------------ Calculate Row Length --------------------------------
+
+    const modelLengthCheck = lengthMarker-((_model.Model.Object.Name? _model.Model.Object.Name : "").length)
+    const ModelRow = (_model.Model.Object.Name? _model.Model.Object.Name : "") + (" ".repeat((modelLengthCheck > 0)? modelLengthCheck : 0)) + " | " + _model.Model.Cost.toString() + " " + _model.Model.CostType;
+    if (ModelRow.length > rowMarker) {
+        rowMarker = ModelRow.length + 1;
+    }
+
+    // Check upgrade lengths for column alignment
+    for (i = 0; i < UpgradeSet.length; i ++) {
+        if (UpgradeSet[i].length > rowMarker) {
+            rowMarker = UpgradeSet[i].length;
         }
+    }
+
+    // Check equipment lengths for column alignment
+    for (i = 0; i < RangedSet.length; i ++) {
+        if (RangedSet[i].length > rowMarker) { rowMarker = RangedSet[i].length; }
     }
     for (i = 0; i < MeleeSet.length; i ++) {
-        if (MeleeSet[i].length > rowMarker) {
-            rowMarker = MeleeSet[i].length;
-        }
+        if (MeleeSet[i].length > rowMarker) { rowMarker = MeleeSet[i].length; }
     }
     for (i = 0; i < ArmourSet.length; i ++) {
-        if (ArmourSet[i].length > rowMarker) {
-            rowMarker = ArmourSet[i].length;
-        }
+        if (ArmourSet[i].length > rowMarker) { rowMarker = ArmourSet[i].length; }
     }
     for (i = 0; i < MiscSet.length; i ++) {
-        if (MiscSet[i].length > rowMarker) {
-            rowMarker = MiscSet[i].length;
-        }
+        if (MiscSet[i].length > rowMarker) { rowMarker = MiscSet[i].length; }
     }
 
     if (rowMarker % 2 == 1) {
         rowMarker += 1;
     }
 
+    // ------------------------------------------------------------------------------
+
+    // ------------------------ Generate Text ---------------------------------------
+
     const rowMarkerDiv = (rowMarker - StartingRow.length - 2)/2
     const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
     const LastRow = ("-".repeat(rowMarker))
 
+    // Add discord-friendly comment block characters if needed
     let returnString = (_inside? "" : ("```" + ("\n"))  )
 
-    returnString += (FirstRow + "\n" + 
-    "[ MODEL ]" + "\n" + "  " + ModelRow )
+    // Starting row
+    returnString += (FirstRow + "\n" +  "[ MODEL ]" + "\n" + "  " + ModelRow )
     
+    // Add notes if requested
     if (_notes) {
         if (_model.Notes.trim().length > 0) {
-        returnString += "\n" + "[ NOTES ]" + "\n" + _model.Notes
+            returnString += "\n" + "[ NOTES ]" + "\n" + _model.Notes
         }
     }
 
-    returnString += "\n" + "[ UPGRADES ]"
-
+    // Add upgrades if some exist
     if (UpgradeSet.length > 0) {
+        returnString += "\n" + "[ UPGRADES ]"
         for (i = 0; i < UpgradeSet.length; i++) {
             returnString += "\n" + "  " + UpgradeSet[i]
         }
     }
 
-    returnString += "\n" + "[ GEAR ]"
+    // Add equipment if some exists
+    if ((RangedSet.length > 0) || (MeleeSet.length > 0) || (ArmourSet.length > 0) || (MiscSet.length > 0)) {
+        returnString += "\n" + "[ EQUIPMENT ]"
+    }
 
     if (RangedSet.length > 0) {
         returnString += "\n" + "- RANGED"
@@ -320,6 +459,7 @@ export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean,
         }
     }
 
+    // Add skills if some exist
     if (_model.Skills.length > 0) {
         returnString += "\n" + "[ SKILLS ]" + "\n" + "Experience : " + _model.Experience;
         for (i = 0; i < _model.Skills.length; i++) {
@@ -327,6 +467,7 @@ export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean,
         }
     }
 
+    // Add injuries if some exist
     if (_model.Injuries.length > 0) {
         returnString += "\n" + "[ INJURIES ]" + "\n" + "Scars : " + _model.Injuries.length;
         
@@ -335,94 +476,50 @@ export function ExportModelDisplayText(_model : WarbandMember, _notes : boolean,
         }
     }
 
+    // Add final row
     returnString += "\n" + LastRow + (_inside? "" : ("\n" + "```"))
+    
+    // ------------------------------------------------------------------------------
 
     return returnString
 }
 
-export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
-    const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
-
-    const startrowlength = StartingRow.length;
-
-    let returnRow = ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
-
-    const ducatTotal = "Total : " + _warband.DucatTotal.toString();
-    const ducatCost = "Spent : " + TotalCostDucats( _warband).toString() + " (" + _warband.DucatLost.toString() + " Lost)";
-    const gloryTotal = "Total : " + _warband.GloryTotal.toString();
-    const gloryCost = "Spent : " + TotalCostGlory(_warband).toString() + " (" + _warband.GloryCost.toString() + " Lost)";
-
-    const totalRow = (ducatTotal.length > gloryTotal.length)? ducatTotal.length : gloryTotal.length;
-    const costRow = (ducatCost.length > gloryCost.length)? ducatCost.length : gloryCost.length;
-
-    const DucatRow = ducatTotal + (" ".repeat(((totalRow - ducatTotal.length) > 0)? totalRow - ducatTotal.length : 0)) + " | " + ducatCost + (" ".repeat(((costRow - ducatCost.length) > 0)? costRow - ducatCost.length : 0)) + " | Available : " + (_warband.DucatTotal - TotalCostDucats(_warband)).toString()
-    const GloryRow = gloryTotal + (" ".repeat(((totalRow - gloryTotal.length) > 0)? totalRow - gloryTotal.length : 0)) + " | " + gloryCost + (" ".repeat(((costRow - gloryCost.length) > 0)? costRow - gloryCost.length : 0)) + " | Available : " + (_warband.GloryTotal - TotalCostGlory(_warband)).toString()
-
-    returnRow += "\n" + "[ DUCATS ] " + DucatRow + "\n" + "[ GLORY ] " + GloryRow;
-
-    if (_warband.Armoury.length > 0) {
-        returnRow += "\n" + "\n" + "[ ARMOURY ]"
-    }
-
-    let i = 0;
-
-
-    const Equipment = [];
-
-    for (i = 0 ; i < _warband.Armoury.length ; i ++) {
-        Equipment.push((_warband.Armoury[i].Object.Name? _warband.Armoury[i].Object.Name : "") + " ( " + _warband.Armoury[i].Cost.toString() + " " + _warband.Armoury[i].CostType + " )");
-    }
-
-    if (Equipment.length > 0) {
-        for (i = 0; i < Equipment.length; i++) {
-            returnRow += "\n" + "  " + Equipment[i]
-        }
-    }
-
-    returnRow += "\n";
-
-    if (_warband.Members.filter((value) => (value.Elite == true)).length > 0) {
-        returnRow += "\n" + "[ ELITE MEMBERS ]"
-    }
-
-    for (i = 0; i < _warband.Members.length; i ++) {
-        if (_warband.Members[i].Elite) {
-            returnRow +=  "\n" + ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
-        }
-    }
-
-    if (_warband.Members.filter((value) => (value.Elite != true)).length > 0) {
-        returnRow += "\n" + "[ INFANTRY ]"
-    }
-
-    for (i = 0; i < _warband.Members.length; i ++) {
-        if (!(_warband.Members[i].Elite)) {
-            returnRow +=  "\n" + ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
-        }
-    }
-
-    returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
-
-    return returnRow;
-}
-
+/**
+ * Takes a model and produces a text representation of it
+ * for use in sharing/showing off with minimal characters.
+ * @param _model The model being exported
+ * @param _notes If any additional notes exist
+ * @param _inside If this export is inside a warband export or on its own
+ * @returns Text string representing the export
+ */
 export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boolean, _inside : boolean) {
-    const StartingRow = _model.Name + " | " + _model.Model.Object.Name + " | " + (GetDucatCost(_model) + " ducats") + " " + (GetGloryCost(_model) + " glory")
-    let rowMarker = StartingRow.length + 8;
-
     let i = 0;
+
+    // Initial row
+    const StartingRow = _model.Name + " | " + _model.Model.Object.Name + " | " + (GetDucatCost(_model) + " ducats") + " " + (GetGloryCost(_model) + " glory")
+    
+    // ---------------------------- Member Information ------------------------------
 
     const Equipment = [];
     const Upgrades = [];
     
+    // Gather all equipment items
     for (i = 0 ; i < _model.Equipment.length ; i ++) {
         Equipment.push((_model.Equipment[i].Object.Name? _model.Equipment[i].Object.Name : "") + " (" + _model.Equipment[i].Cost.toString() + " " + _model.Equipment[i].CostType + ")");
     }
     
+    // Gather all upgrades
     for (i = 0 ; i < _model.Upgrades.length ; i ++) {
         Upgrades.push((_model.Upgrades[i].Name? _model.Upgrades[i].Name : "") + " (" + _model.Upgrades[i].Cost.toString() + " " + _model.Upgrades[i].CostID + ")");
     }
+    
+    // ------------------------------------------------------------------------------
 
+    // ------------------------ Calculate Row Length --------------------------------
+
+    let rowMarker = StartingRow.length + 8;
+
+    // Find the longest upgrade/equipment for alignment
     for (i = 0; i < Equipment.length; i ++) {
         if (Equipment[i].length > rowMarker) {
             rowMarker = Equipment[i].length;
@@ -434,30 +531,39 @@ export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boo
         }
     }
 
-    if (rowMarker % 2 == 1) {
-        rowMarker += 1;
-    }
+    if (rowMarker % 2 == 1) {  rowMarker += 1; }
+    
+    // ------------------------------------------------------------------------------
+
+    // ------------------------ Generate Text ---------------------------------------
 
     const rowMarkerDiv = (rowMarker - StartingRow.length - 2)/2
     const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
     const LastRow = ("-".repeat(rowMarker))
 
+    // Add discord-friendly comment block characters if needed
     let returnString = (_inside? "" : ("```" + ("\n"))  )
 
+    // Starting Row
     returnString += (FirstRow)
 
+    // Add any upgrades
     if (Upgrades.length > 0) {
+        returnString += "\n" + "[ UPGRADES ]"
         for (i = 0; i < Upgrades.length; i++) {
             returnString += "\n" + "-" + Upgrades[i]
         }
     }
 
+    // Add any equipment
     if (Equipment.length > 0) {
+        returnString += "\n" + "[ EQUIPMENT ]"
         for (i = 0; i < Equipment.length; i++) {
             returnString += "\n" + "-" + Equipment[i]
         }
     }
 
+    // Add any skills
     if (_model.Skills.length > 0) {
         returnString += "\n" + "[ SKILLS ]" + " (" + _model.Experience + " Experience)";
         for (i = 0; i < _model.Skills.length; i++) {
@@ -465,6 +571,7 @@ export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boo
         }
     }
 
+    // Add any injuries
     if (_model.Injuries.length > 0) {
         returnString += "\n" + "[ INJURIES ]" + " (" +  _model.Injuries.length + " Scars)";
         
@@ -473,11 +580,20 @@ export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boo
         }
     }
 
+    // Final row
     returnString += "\n" + LastRow + (_inside? "" : ("\n" + "```"))
+    
+    // ------------------------------------------------------------------------------
 
     return returnString
 }
 
+/**
+ * Generates a unique ID to differentiate
+ * otherwise identical warbands.
+ * @param _name Base name to use
+ * @returns unique ID for the warband
+ */
 export function CalcID(_name : string) {
     const currentDate = new Date();
     const milliseconds = currentDate.getMilliseconds();
