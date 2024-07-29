@@ -1,6 +1,6 @@
 # Glossary
 
-Keywords and simple rules that are shown on hover.
+Keywords are simple rules that are shown on hover.
 
 ## Structure
 
@@ -15,12 +15,12 @@ name        : string
 description : []
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../Tags.md) for more information.
-- **name** - The name of the model.
-- **description** - Specially formatted array of information included in the model, see [Description](../Description.md) for more informaiton.
+- **id** - The identifying value of the glossary item, all glossary items start their id with "gl_".
+- **type** - Used for broad categorization, all glossary item have the type "GLossary".
+- **source** - Where the glossary item comes from. Currently, it's expected all glossary items will have the source "core".
+- **tags** - A series of tags which identify what kind of glossary item something is, see [Tags](../Tags.md) for more information.
+- **name** - The name of the glossary item.
+- **description** - Specially formatted array of information included in the glossary item, see [Description](../Description.md) for more informaiton.
 
 ## Example
 

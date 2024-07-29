@@ -17,12 +17,12 @@ listtype    : string
 list_items  : {id : string, roll_start : string | number, roll_end : string | number}[]
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../Tags.md) for more information.
-- **name** - The name of the model.
-- **description** - Specially formatted array of information included in the model, see [Description](../Description.md) for more informaiton.
+- **id** - The identifying value of the list, lists will start with different values.
+- **type** - Used for broad categorization, lists may have different values.
+- **source** - Where the list comes from. Currently, it's expected all lists will have the source "core".
+- **tags** - A series of tags which identify what kind of list something is, see [Tags](../Tags.md) for more information.
+- **name** - The name of the list.
+- **description** - Specially formatted array of information included in the list, see [Description](../Description.md) for more informaiton.
 - **listtype** - The data source for search for item ids in.
 - **list_items** - The items in this list, and their result starts and ends.
 

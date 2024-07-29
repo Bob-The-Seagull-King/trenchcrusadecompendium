@@ -16,11 +16,11 @@ description : []
 rules       : []
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../../Tags.md) for more information.
-- **name** - The name of the model.
+- **id** - The identifying value of the rule, all rules start their id with "qr_".
+- **type** - Used for broad categorization, all rules have the type "QuickRule".
+- **source** - Where the rule comes from. Currently, it's expected all rules will have the source "core".
+- **tags** - A series of tags which identify what kind of rule something is, see [Tags](../../Tags.md) for more information.
+- **name** - The name of the rule.
 - **description** - Specially formatted array of information included in the quick rules, see [Description](../../Description.md) for more informaiton.
 - **rules** - Specially formatted array of information included in the quick rules, see [Description](../../Rules.md) for more informaiton.
 
