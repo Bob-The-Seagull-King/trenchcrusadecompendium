@@ -12,6 +12,7 @@ const ModelDisplay = (props: any) => {
     const ModelObject: PlayerModel = props.data
     const bannedModelTags = ["empty"]
 
+    // Equipment information
     function returnEquipment() {
         return (
             <div>
@@ -24,6 +25,7 @@ const ModelDisplay = (props: any) => {
         )
     }
 
+    // Formatted model statistics
     function returnStats() {
         return (
             <div>
@@ -38,6 +40,7 @@ const ModelDisplay = (props: any) => {
         )
     }
 
+    // List of a model's abilities
     function returnAbilities() {
         return (
             <div>
@@ -50,6 +53,7 @@ const ModelDisplay = (props: any) => {
         )
     }
 
+    // Return model lore information
     function returnBlurb() {
         return (
             <div>
@@ -62,44 +66,42 @@ const ModelDisplay = (props: any) => {
         )
     }
 
-
     return (
-        
-            <div className='modelInternalStructure'>
-                <div>
-                    {returnTags(ModelObject.Tags, bannedModelTags)}
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    {returnBlurb()}
-                </div> 
-                <div className="verticalspacer"/> 
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                
-                <div className="verticalspacer"/>
-                <div>
-                    {returnStats()}
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                
-                <div className="verticalspacer"/>
-                <div>
-                    {returnEquipment()}
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div>
-                    {returnAbilities()}
-                </div>
+        <div className='modelInternalStructure'>
+            <div>
+                {returnTags(ModelObject.Tags, bannedModelTags)}
             </div>
+            <div className="verticalspacer"/>
+            <div>
+                {returnBlurb()}
+            </div> 
+            <div className="verticalspacer"/> 
+            <div>
+                <div className="separator">&#x27E1;</div>
+            </div> 
+            
+            <div className="verticalspacer"/>
+            <div>
+                {returnStats()}
+            </div>
+            <div className="verticalspacer"/>
+            <div>
+                <div className="separator">&#x27E1;</div>
+            </div> 
+            
+            <div className="verticalspacer"/>
+            <div>
+                {returnEquipment()}
+            </div>
+            <div className="verticalspacer"/>
+            <div>
+                <div className="separator">&#x27E1;</div>
+            </div> 
+            <div className="verticalspacer"/>
+            <div>
+                {returnAbilities()}
+            </div>
+        </div>
     )
 }
 
