@@ -17,16 +17,14 @@ const WarbandArmouryDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    // Creation of New warband member ---------------------------
-
-    
+    // Formatted list of equipment
     function returnEquipment() {
         return (
             <>
-            <div className="row">
-                <WarbandAddEquipDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-            </div>
-            <div className="verticalspacerbig"/>
+                <div className="row">
+                    <WarbandAddEquipDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                </div>
+                <div className="verticalspacerbig"/>
                 <div className="row" style={{width:"100%"}}>
                     <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
                         <Masonry gutter="20px">
@@ -34,18 +32,17 @@ const WarbandArmouryDisplay = (props: any) => {
                         </Masonry>
                     </ResponsiveMasonry>
                 </div>
-                
             </>
         )
     }
     
+    // Formatted sublist of a type of equipment
     function returnEquipTypeList(type: string) {
         return (
             <div className="col-12" style={{width:"100%"}}>
                 {WarbandItem.Armoury.length > 0 &&
                 <>
                     <div className="row" style={{width:"100%"}}>
-
                         <div className="col-5">
                             <div className="equiptitle">Name</div>
                         </div>
@@ -58,23 +55,19 @@ const WarbandArmouryDisplay = (props: any) => {
                         <div className="col-2">
                             <div className="equiptitle">Resell</div>
                         </div>
-            </div>
-            <div className="row" style={{width:"100%"}}>
-                {WarbandItem.Armoury.map((item : any) => (
-                    <div key={"flavourFaction"+(item.ID? item.ID : "")}>
-                        <WarbandEquipDisplay data={item} warband={WarbandItem} updater={UpdateFunction} manager={Manager} />
                     </div>
-                ))}
-            </div>
-            </>
-            }
+                    <div className="row" style={{width:"100%"}}>
+                        {WarbandItem.Armoury.map((item : any) => (
+                            <div key={"flavourFaction"+(item.ID? item.ID : "")}>
+                                <WarbandEquipDisplay data={item} warband={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                            </div>
+                        ))}
+                    </div>
+                </>
+                }
             </div>
         )
     }
-
-
-
-    // ----------------------------------------------------------
 
     return (
         <>

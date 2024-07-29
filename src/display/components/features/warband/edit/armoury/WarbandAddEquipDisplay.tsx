@@ -25,10 +25,8 @@ const WarbandAddEquipDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
     
+    // Set states
     const [theme] = useGlobalState('theme');
-
-    // Creation of New warband member ---------------------------
-
     const [_limitfaction, returnLimitFaction] = useState(true);
     const [_limitranged, returnLimitRanged] = useState(true);
     const [_limitmelee, returnLimitMelee] = useState(true);
@@ -36,12 +34,18 @@ const WarbandAddEquipDisplay = (props: any) => {
     const [_limitequipment, returnLimitEquipment] = useState(true);
     const [_limitglory, returnLimitGlory] = useState(true);
     const [_limitducat, returnLimitDucat] = useState(true);
+    const [_allwarbands, returnstate] = useState(WarbandItem.Members);
+    const [_key, updateKey] = useState(0);
+    const [showNewModel, setShowNewModel] = useState(false);
+    const handleCloseNewModel = () => setShowNewModel(false); 
+    const handleShowNewModel = () => setShowNewModel(true);
 
+    // Initialize variables
     let NewMemberModel = "";
     let NewMemberCost = "0";
-
     let isDucats = true;
     
+    // Assign references to Elements
     const restrictionRef = useRef<HTMLInputElement>(null);
     const featureRef = useRef<HTMLInputElement>(null);
     const modelRef = useRef<HTMLSelectElement>(null);
@@ -57,12 +61,10 @@ const WarbandAddEquipDisplay = (props: any) => {
     const filterListGlory = useRef<HTMLInputElement>(null);
     const filterListDucat = useRef<HTMLInputElement>(null);
 
-
+    // Get the list of features an equipment piece has
     function getFeatureList(model : ListEquipment) {
         let ftrlst = "";
-
         let i = 0;
-
         let ModelEquip : any = null;
         
         for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
@@ -75,27 +77,20 @@ const WarbandAddEquipDisplay = (props: any) => {
 
                 let i = 0;
                 for (i = 0; i < ModelEquip.Features.length; i++) {
-                    if ( i > 0) {
-                        ftrlst += ", "
-                    }
+                    if ( i > 0) { ftrlst += ", " }
                     ftrlst += ModelEquip.Features[i].toString().toUpperCase();
                 }
             }
 
-        if (ftrlst == "") {
-            ftrlst = "-"
-        }
-            
+        if (ftrlst == "") { ftrlst = "-" }
 
         return ftrlst;
-
     }
     
+    // Get the list of restricitons an equipment piece has
     function getRestrictionList(model : ListEquipment) {
         let rstrctnlst = "";
-
         let i = 0;
-
         let ModelEquip : any = null;
         
         for (i = 0; i < WarbandItem.Faction.Equipment.length ; i++) {
@@ -105,40 +100,36 @@ const WarbandAddEquipDisplay = (props: any) => {
         }
 
         if (ModelEquip != null) {
-        if (ModelEquip.Limit > 0) {
-            rstrctnlst += "LIMIT: " + ModelEquip.Limit;
-            if (ModelEquip.Restrictions.length > 0) {
-                rstrctnlst += ", "
+            if (ModelEquip.Limit > 0) {
+                rstrctnlst += "LIMIT: " + ModelEquip.Limit;
+                if (ModelEquip.Restrictions.length > 0) { rstrctnlst += ", " }
+            }
+
+            let i = 0;
+            for (i = 0; i < ModelEquip.Restrictions.length; i++) {
+                if ( i > 0) { rstrctnlst += ", " }
+                if (ModelEquip.Restrictions[i].type == "keyword") {
+                    rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
+                } else if (ModelEquip.Restrictions[i].type == "model") {
+                    rstrctnlst += getModelName(ModelEquip.Restrictions[i].val.toString());
+                } else {
+                    rstrctnlst += ModelEquip.Restrictions[i].val.toString()
+                }
             }
         }
 
-        let i = 0;
-        for (i = 0; i < ModelEquip.Restrictions.length; i++) {
-            if ( i > 0) {
-                rstrctnlst += ", "
-            }
-            if (ModelEquip.Restrictions[i].type == "keyword") {
-                rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
-            } else if (ModelEquip.Restrictions[i].type == "model") {
-                rstrctnlst += getModelName(ModelEquip.Restrictions[i].val.toString());
-            } else {
-                rstrctnlst += ModelEquip.Restrictions[i].val.toString()
-            }
-        }
-    }
-
-        if (rstrctnlst == "") {
-            rstrctnlst = "-"
-        }
+        if (rstrctnlst == "") { rstrctnlst = "-" }
 
         return rstrctnlst;
     }
     
+    // Get the name of a model for equipment restrictions
     function getModelName(md : string) {
         const modelFound = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: md}}));
         return modelFound.name;
     }
 
+    // Update the form fields when a new equipment is selected
     function updateModel(value: string) {
         NewMemberModel = value;
         if (_limitfaction) {
@@ -178,6 +169,8 @@ const WarbandAddEquipDisplay = (props: any) => {
         }
     }
 
+    // Update the form fields by user input ---------------------
+
     function updateCost(value: string) {
         NewMemberCost = value;
     }
@@ -193,25 +186,34 @@ const WarbandAddEquipDisplay = (props: any) => {
     function updateFactionLimit() {
         returnLimitFaction(!_limitfaction)
     }
+
     function updateFactionRanged() {
         returnLimitRanged(!_limitranged)
     }
+
     function updateFactionMelee() {
         returnLimitMelee(!_limitmelee)
     }
+
     function updateFactionArmour() {
         returnLimitArmour(!_limitarmour)
     }
+
     function updateFactionEquipment() {
         returnLimitEquipment(!_limitequipment)
     }
+
     function updateFactionGlory() {
         returnLimitGlory(!_limitglory)
     }
+
     function updateFactionDucat() {
         returnLimitDucat(!_limitducat)
     }
 
+    // ----------------------------------------------------------
+
+    // Add a new piece of equipment to a warband
     function NewMember() {
         const NewMemberCostType = isDucats? "ducats" : "glory";
         const Result = Manager.NewEquipmentForWarband(WarbandItem, NewMemberModel, NewMemberCost, NewMemberCostType);
@@ -221,6 +223,8 @@ const WarbandAddEquipDisplay = (props: any) => {
             UpdateFunction(Manager.GetWarbandByName(WarbandItem.Name))
         }
         ItemRecall();
+
+        // Reset form
         if (restrictionRef.current != null) {
             restrictionRef.current.value = "";
         }
@@ -283,6 +287,7 @@ const WarbandAddEquipDisplay = (props: any) => {
         });
     }
 
+    // Return if the equipment should be shown by type
     function FilterByEquipType(value : string) {
         
         if (value == "ranged") {
@@ -300,6 +305,7 @@ const WarbandAddEquipDisplay = (props: any) => {
         return true;
     }
 
+    // Return if the equipment should be shown by cost
     function FilterByCostType(value : string) {
         
         if (value == "ducats") {
@@ -310,17 +316,9 @@ const WarbandAddEquipDisplay = (props: any) => {
         }
         return true;
     }
-
-    const [showNewModel, setShowNewModel] = useState(false);
-    const handleCloseNewModel = () => setShowNewModel(false); 
-    const handleShowNewModel = () => setShowNewModel(true);
-
     // ----------------------------------------------------------
 
     // List of Warband Members ----------------------------------
-
-    const [_allwarbands, returnstate] = useState(WarbandItem.Members);
-    const [_key, updateKey] = useState(0);
 
     function ItemRecall() {
         returnstate(WarbandItem.Members)
