@@ -17,11 +17,11 @@ roll_end    : number | string
 description : []
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../../Tags.md) for more information.
-- **name** - The name of the model.
+- **id** - The identifying value of the injurt, all injuries start their id with "ij_".
+- **type** - Used for broad categorization, all injuries have the type "Injury".
+- **source** - Where the injury comes from. Currently, it's expected all injuries will have the source "core".
+- **tags** - A series of tags which identify what kind of injury something is, see [Tags](../../Tags.md) for more information.
+- **name** - The name of the injurt.
 - **roll_start** - The beginning of the range of values that result in this injury (inclusive).
 - **roll_end** - The end of the range of values that result in this injury (inclusive).
 - **description** - Specially formatted array of information included in the injury, see [Description](../../Description.md) for more informaiton.

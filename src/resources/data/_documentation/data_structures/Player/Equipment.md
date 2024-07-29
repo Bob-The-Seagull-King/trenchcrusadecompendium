@@ -20,11 +20,11 @@ modifiers   : string[]
 description : []
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../../Tags.md) for more information.
-- **name** - The name of the model.
+- **id** - The identifying value of the equipment, all equipment start their id with "eq_".
+- **type** - Used for broad categorization, all equipment have the type "Equipment".
+- **source** - Where the equipment comes from. Currently, it's expected all equipment will have the source "core".
+- **tags** - A series of tags which identify what kind of equipment something is, see [Tags](../../Tags.md) for more information.
+- **name** - The name of the equipment.
 - **category** - The type of equipment something is, such as ranged weapon or armour.
 - **equip_type** - How many hands it takes to hold this item, not always applicable.
 - **range** - The range of the item, typically only used for weapons.

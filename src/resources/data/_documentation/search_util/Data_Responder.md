@@ -14,7 +14,21 @@ All search requests have a *type* value which determines what json data file wil
 | --------- | ---------- |
 | models.json | "models" |
 | addons.json | "addons" |
+| equipment.json | "equipment" |
+| factions.json | "faction" |
+| variants.json | "variants" |
 | glossary.json | "glossary" |
+| scenarios.json | "scenario" |
+| injuries.json | "injuries" |
+| skills.json | "skills" |
+| skillgroup.json | "skillgroup" |
+| tablecharts.json | "tablechart" |
+| tableresults.json | "tableresult" |
+| quickrules.json | "quickrules" |
+| upgrades.json | "upgrade" |
+| gen_deeds.json | "genDeed" |
+| gen_deployment.json | "genDeployment" |
+| gen_scenario.json | "genScenario" |
 
 ## Search Options
 

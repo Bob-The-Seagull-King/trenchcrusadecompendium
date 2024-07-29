@@ -16,11 +16,11 @@ rules       : []
 image_url   : string
 ```
 
-- **id** - The identifying value of the model, all models start their id with "ab_".
-- **type** - Used for broad categorization, all models have the type "Model".
-- **source** - Where the model comes from. Currently, it's expected all models will have the source "core".
-- **tags** - A series of tags which identify what kind of model something is, see [Tags](../../Tags.md) for more information.
-- **name** - The name of the model.
+- **id** - The identifying value of the scenario, all scenarios start their id with "sc_".
+- **type** - Used for broad categorization, all scenarios have the type "Scenario".
+- **source** - Where the scenario comes from. Currently, it's expected all scenarios will have the source "core".
+- **tags** - A series of tags which identify what kind of scenario something is, see [Tags](../../Tags.md) for more information.
+- **name** - The name of the scenario.
 - **image_url** - The src for the scenario exemplar image.
 - **rules** - Specially formatted array of information included in the scenario, see [Rules](../../Rules.md) for more informaiton.
 
