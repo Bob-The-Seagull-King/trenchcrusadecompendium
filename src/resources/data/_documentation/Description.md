@@ -22,7 +22,7 @@ glossary?: []
 
 ### Subcontent
 
-The subcontent of a description object contains any description objects that we would consider to be 'included in' the description object, but would have different display needs. For example, an model effect has both the name of the effect (eg, "Impact") and the description of the effect (eg, "The colliding foe takes 2 damage.").
+The subcontent of a description object contains any description objects that we would consider to be 'included in' the description object, but would have different display needs. For example, a rule list has both the description of the effect and the description of each item in the list.
 
 ### Glossary
 
@@ -48,75 +48,80 @@ id: string
 
 ## Description Example
 
-Below is the description of the model *Heracule* and it's equivilent description object.
+Below is the description of the addon *Hegemon's Will* and it's equivilent description object.
 
-**Attack:** *On Hit:* <u>[D]</u> + <u>fray</u> *Miss:* <u>Fray</u>  
-**Effect:** Your target and one (4+) two (6+) all targets in range are <u>shoved</u> 1.  
-**<u>Overdrive:</u>** Increase <u>shove</u> to 3.
+___
+
+Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls during a single Activation if all the conditions are met.
+<ul>
+<li> <i>Move:</i> The Thrall makes the standard Move <b>ACTION</b>.</li>
+<li> <i>Ranged Attack:</i> The Thrall performs a Ranged Attack <b>ACTION</b> with any Ranged weapon it has.</li>
+<li> <i>Charge:</i> The Thrall makes a standard Charge <b>ACTION</b>.</li>
+<li> <i>Melee Attack:</i> The Thrall performs a Melee Attack <b>ACTION</b>.</li>
+</ul>
+
+
+___
+
+
 
 ```
-[{
-"tags": [{"tag_name": "desc_type", "val": "effect"}],
-"content": "Attack:",
-"subcontent":   [{
-                    "tags": [
-                        {"tag_name": "desc_type", "val": "subeffect"}
-                    ],
-                    "content": "On Hit:",
-                    "subcontent":   [{
-                        "tags": [
-                            {"tag_name": "desc_type", "val": "desc"}
-                        ],
-                        "content": "[D] + fray",
-                        "glossary": [
-                            {"val": "[D]", "id": "gl_damagedice"},
-                            {"val": "fray", "id": "gl_fray"}
-                        ]
-                    }]
+"description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                    "content": "Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18\" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls during a single Activation if all the conditions are met.",
+                    "glossary": [{"val": "", "id": ""}]
                 },
                 {
-                    "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                    "content": "Miss:",
-                    "subcontent":   [{
-                        "tags": [
-                            {"tag_name": "desc_type", "val": "desc"}
-                        ],
-                        "content": "Fray",
-                        "glossary": [
-                            {"val": "Fray", "id": "gl_fray"}
-                        ]
-                    }]
-                }]
-},
-{
-    "tags": [{"tag_name": "desc_type", "val": "effect"}],
-    "content": "Effect:",
-    "subcontent":   [{
-                        "tags": [
-                            {"tag_name": "desc_type", "val": "desc"}
-                        ],
-                        "content": "Your attack target and one (4+) two (6+) all targets in range are shoved 1.",
-                        "glossary": [
-                            {"val": "shoved", "id": "gl_shove"}
-                        ]
-                    }]
-},
-{
-    "tags": [
-        {"tag_name": "desc_type", "val": "effect"}
-    ],
-    "content": "Overdrive:",
-    "subcontent":   [{
-        "tags": [
-            {"tag_name": "desc_type", "val": "desc"}
-        ],
-        "content": "Increase shove to 3",
-        "glossary": [
-            {"val": "shove", "id": "gl_shove"}
-        ]
-    }],
-    "glossary": [
-        {"val": "Overdrive", "id": "gl_overdrive"}
-    ]
-}]
+                    "tags": [{"tag_name": "desc_type", "val": "list"}],
+                    "content": "",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                            "content": "Move:",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                    "content": "The Thrall makes the standard Move ACTION.",
+                                    "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                }
+                            ]
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                            "content": "Ranged Attack:",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                    "content": "The Thrall performs a Ranged Attack ACTION with any Ranged weapon it has.",
+                                    "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                }
+                            ]
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                            "content": "Charge:",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                    "content": "The Thrall makes a standard Charge ACTION.",
+                                    "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                }
+                            ]
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                            "content": "Melee Attack:",
+                            "subcontent": [
+                                {
+                                    "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                    "content": "The Thrall performs a Melee Attack ACTION.",
+                                    "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+                ]
 ```

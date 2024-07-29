@@ -2,7 +2,7 @@
 
 A tag is the name given to a way to structure data for use in scenarios in which we want a flexible way to identify a given data object in many different ways. Tags are intended to be used regularly whenever we need to give an object a variety of bits of information that may not apply to all instances of that type.
 
-For example, not all models are attacks, not all models are interrupts, and not all models are stances. Rather than having an "attack", "interrupt", and "stance" attribute in every model (which would leave a lot of redundancy) we simply apply an attack, interrupt, or stance tag when applicable - and check for the presence of that tag when needed.
+For example, not all models are ELITE, not all models cause FEAR, and not all models are STRONG. Rather than having an "ELITE", "FEAR", and "STRING" attribute in every model (which would leave a lot of redundancy) we simply apply an attack, interrupt, or stance tag when applicable - and check for the presence of that tag when needed.
 
 ## Structure
 
