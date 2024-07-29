@@ -5,7 +5,7 @@ import { byPropertiesOf} from "../../../utility/functions";
 
 class ViewQuickRulesCollection extends ViewCollectionsModel {
 
-     ModelsList: QuickRule[] = [];
+    ModelsList: QuickRule[] = [];
     
     /**
      * Empty constructor

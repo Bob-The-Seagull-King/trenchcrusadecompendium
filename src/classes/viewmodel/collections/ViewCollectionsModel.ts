@@ -45,6 +45,9 @@ abstract class ViewCollectionsModel {
         return this.searchParam as IRequest
     }
 
+    /**
+     * Empty for use in child classes
+     */
     UpdateList() {
         undefined;
     }

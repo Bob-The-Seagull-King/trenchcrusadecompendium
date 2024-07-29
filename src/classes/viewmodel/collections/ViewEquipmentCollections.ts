@@ -6,7 +6,7 @@ import { byPropertiesOf, getColour } from "../../../utility/functions";
 
 class ViewEquipmentCollection extends ViewCollectionsModel {
 
-     ModelsList: PlayerEquipment[] = [];
+    ModelsList: PlayerEquipment[] = [];
     
     /**
      * Empty constructor

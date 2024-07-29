@@ -9,7 +9,7 @@ import { Requester } from "../../../factories/Requester";
 
 class ViewFactionCollection extends ViewCollectionsModel {
 
-     ModelsList: PlayerFaction[] = [];
+    ModelsList: PlayerFaction[] = [];
     
     /**
      * Empty constructor

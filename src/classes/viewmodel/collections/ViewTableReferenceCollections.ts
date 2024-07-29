@@ -5,7 +5,7 @@ import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewTableReferenceCollection extends ViewCollectionsModel {
 
-     ModelsList: ListGroup[] = [];
+    ModelsList: ListGroup[] = [];
     
     /**
      * Empty constructor

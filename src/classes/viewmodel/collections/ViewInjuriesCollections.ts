@@ -5,7 +5,7 @@ import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewInjuriesCollection extends ViewCollectionsModel {
 
-     ModelsList: ListItem[] = [];
+    ModelsList: ListItem[] = [];
     
     /**
      * Empty constructor

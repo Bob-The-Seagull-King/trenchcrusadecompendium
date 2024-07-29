@@ -1,12 +1,12 @@
 import { ViewCollectionsModel } from "./ViewCollectionsModel";
-import { IScenario, Scenario } from "../../../classes/feature/scenarios/Scenario";
+import { Scenario } from "../../../classes/feature/scenarios/Scenario";
 import { ScenarioFactory } from "../../../factories/features/ScenarioFactory";
 import { ViewTableItem } from "./ViewTableItem";
 import { byPropertiesOf } from "../../../utility/functions";
 
 class ViewScenarioCollection extends ViewCollectionsModel {
 
-     ModelsList: Scenario[] = [];
+    ModelsList: Scenario[] = [];
     
     /**
      * Empty constructor
