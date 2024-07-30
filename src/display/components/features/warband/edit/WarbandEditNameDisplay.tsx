@@ -33,7 +33,7 @@ const WarbandNameEditDisplay = (props: any) => {
 
     function EditWarbandName() {
         if (WarbandItem != null) {
-            WarbandItem.Name = NewBandName;
+            WarbandItem.Name = NewBandName.trim();
         }
         UpdateFunction(WarbandItem)
         handleCloseNameEdit();

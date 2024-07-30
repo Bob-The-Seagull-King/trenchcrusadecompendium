@@ -702,12 +702,12 @@ class WarbandManager {
 
                 // Generate faction data
                 const _content : IWarband = {
-                    id: CalcID(_name),
+                    id: CalcID(_name.trim()),
                     ducat_total : 0,
                     glory_total : 0,
                     members : [],
                     armoury : [],
-                    name: _name,
+                    name: _name.trim(),
                     faction: factionVal.InterfaceVal,
                     flavour: [],
                     notes: "",
