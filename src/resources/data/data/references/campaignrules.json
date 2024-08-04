@@ -1,0 +1,1177 @@
+[
+    {
+        "id": "cr_basics",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Basics of a Campaign",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "Introduction",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "These rules govern playing a series of linked games with your friends. A minimum number of 2 players is required to complete a Campaign, but the more players you can muster, the better! You can also play games against players who are not part of the Campaign. Rules on how to do this are explained below.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Beggining A Campaign",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "At the beginning of a Campaign, your Warband's Threshold Value is 700 ducats. This is the maximum combined ducat value of models, items, upgrades, and so on that you can field in a single battle. It will increase with each battle you fight during your Campaign. You begin with an equal amount of ducats in your Warband's Paychest. This is a reserve of wealth that you will use to recruit and arm your models. Whenever you make a purchase, you must deduct the cost from your Paychest and you must have enough to cover the entire cost.",
+                        "glossary": []
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Some Warbands begin Campaigns with a higher or lower Threshold Value and Paychest. Such Warbands will outline their unique rules explicitly in their sections.",
+                        "glossary": []
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Next, select the Patron for your Warband, a list of all Patrons and their skills can be found in the Skills page. The choice of Patron determines which Skill you may select if you roll a Patron Skill on any of the Skill Tables above when your ELITE model gains an Advancement (see Experience and Advancement below). One model cannot have duplicates of the same Patron Skill.",
+                        "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                    }
+                ]
+            },
+            {
+                "title": "Playing A Campaign",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "To start the campaign, the two players select one of the scenarios to fight (see the Scenarios rule). At the end of each game the players work out how much experience their ELITE warriors have earned and how much loot the warband has collected before returning to its barracks.",
+                        "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Experience is expressed as Experience points which ELITE models receive for surviving each game. This is covered later in the Experience section. When an ELITE warrior has sufficient Experience points they receive a Skill. Normal troopers taking part in a Campaign will also have a chance of becoming an ELITE.",
+                        "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You can recruit more warriors or buy new weapons from traders with gold ducats or Glory Points you have earned. All this is explained in the Income and Trading sections of campaign rules.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_selectingascenario",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Selecting A Scenario",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When determining which Scenario you wish to play, note how many battles you have played in the Campaign thus far, and roll on the appropriate table below. Neither player should play the same scenario twice in a row. If this happens, re-roll until you get a new one.",
+                "glossary": []
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If one player has played more Battles than the other, then the player with a higher number of battles shows the Chart you use. The player with the lower battle count determines who is the Attacker and who is the Defender in each scenario. Otherwise roll a dice to determine who is attacking and who is defending.",
+                "glossary": []
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "See the Scenarios section for details on each battle.",
+                "glossary": []
+            }
+        ],
+        "rules": [
+            {
+                "title": "Early Campaign (Battle 1 - 3)",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll D6 to determine which Scenario to play:",
+                        "subcontent": [ ],
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "1",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Skirmish",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "2",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Scouting Parties",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "3",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Fallen Idols",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "4",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Vanguard",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "5",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Storming The Shores",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "6",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Battle Trophies",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Mid Campaign (Battles 4 - 9)",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll D6 to determine which Scenario to play:",
+                        "subcontent": [ ],
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "1",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Hunt for Heroes",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "2",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Relic Hunt",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "3",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Barbed Wire",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "4",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Linebreaker",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "5",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Claim the No Man's Land",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "6",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Armoured Train",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Endgame (Battles 9 - 11)",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll D6 to determine which Scenario to play:",
+                        "subcontent": [ ],
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "1",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Trench Warfare",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "2",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Over the Top",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "3",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Opposed River Crossing",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "4",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Let the Sleeping Beasts Lie",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "5",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Poison Gas",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }, 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "6",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Fields of Glory",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Final Battle (Battle 12)",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Play one of the Final Battles Scenarios such as the Great War.",
+                        "subcontent": [ ],
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_thresholdsandfieldstrength",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Thresholds and Field Strength",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "Reinforcement Threshold Value",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "As you play the campaign, the words of your deeds on the battlefield spreads and attracts the attention of your superiors who will allocate more troops and resources at your disposal within their organisation, and make greater reinforcements available to you. This is represented by Warband Threshold Value. Warbands starting value is indicated in the Warband list, and is typically 700 Gold Ducats. This value grows during the Campaign as indicated below (additions to the Value are cumulative).",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Maximum Field Strength",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The number of models you can field in a single battle is limited as listed in the table below. This maximum increases during the campaign, so in the first battle the maximum number of models you can field is 10, while it increases to 11 for the second battle.",
+                        "glossary": []
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Note that the Warband can be bigger than this, you just cannot field more models in battle than indicated in the table below. Also, some Scenarios limit the number of models below your Max Field Strength. In such cases, follow the Scenario’s instructions.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "title": "Battles Table",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 1",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (700) Field Strength (10)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 2",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (800) Field Strength (11)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 3",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (900) Field Strength (12)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 4",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1000) Field Strength (13)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 5",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1100) Field Strength (14)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 6",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1200) Field Strength (15)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 7",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1300) Field Strength (16)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 8",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1400) Field Strength (17)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 9",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1500) Field Strength (18)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 10",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1600) Field Strength (19)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 11",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1700) Field Strength (20)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battle 12",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Threshold (1800) Field Strength (22)",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_reinforcements",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Reinforcements",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "In Trench Crusade all Warbands are part of one of great military organisations or under the guidance of a powerful patron, and periodically receive reinforcements to offset their combat losses. Thus after each battle you can build up your force back to the current Warband Threshold Value in Gold Ducats if the Warband Value has fallen under this threshold. When you do this, you must first do the following:",
+                "subcontent": [ ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [ 
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Forego Exploration & Looting Phase completely. Your Warband falls back and requests Reinforcements, missing the opportunity to Explore and Loot."
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Give up/Sell all Weapons, Armour and Equipment that is not assigned to any of your models. Remember to adhere to the limits of Equipment per model!"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Empty your Warband treasury of all ducats."
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Once you’ve done this, calculate the current value of your warband in ducats."
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You may now buy new troops, weapons, armour and equipment up to the Warband Threshold Value (see above). Do not keep any leftover ducats."
+                    }
+                ]
+            }   
+        ],
+        "rules": [
+        ]
+    },
+    {
+        "id": "cr_loss",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Loss",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "Disbanding a Warband",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You may disband your old warband at the end of any game and start again with a new one. All the warriors in the original warband and any equipment and other benefits they acquired are lost. You can NOT dismiss any warrior from your warband. Your Patrons expect you to use them to the last!",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Models Killed In Action",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When a model is killed all the weapons, armour and equipment are lost in the ruinous tumult of the battlefield. It is not possible to reallocate fallen warriors’ weapons or equipment once they die.",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_stages",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Campaign Stages",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Campaigns are divided into 3 Stages: Early, Mid, and Endgame. You play a set number of games in each of these stages before moving on to the next. Once a player has played 11 Battles in total they can play no more until all the other players have played 11 games as well.",
+                "subcontent": [ ]
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At this stage all the players play a game against another player who has also played 11 games. Once all the players have played the Final Battle Scenario, you can determine who has won the Campaign as explained below.",
+                "subcontent": [ ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Late Joiners to the Campaign",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players often want to join a Campaign in progress. This is fine, and new forces are purchased   with the currentWarband Reinforced Threshold of the campaign.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Winning The Campaign",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Each Scenario lists the number of Victory Points the players may gain from it. At the end of the Campaign, tally the points together to see your ranking on the Campaign leaderboard.",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_postbattlesequence",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Post Battle Sequence",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "After each battle, all players who took part go through the following set of steps to prepare your Warband for the future battles.",
+                "subcontent": [ ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Step 1 : Injuries",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Determine the extent of injuries for each warrior who is Out of Action at the end of the game. Mark any Scars your ELITES suffer. See Injuries section for details.",
+                        "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                    }
+                ]
+            },
+            {
+                "title": "Step 2 : Experience & Advancement",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Heroes and gain experience for surviving battles. See the Experience & Advancement section for details.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 3 : Increase the Warband Threshold Value",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Increase the Threshold value of your Warband.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 4 : Request Reinforcements",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You may Replenish your Warband’s losses until it’s total value is up to the highest current Warband Threshold value if you wish. You must first empty the Warband treasury by giving up all the ducats and stored gear you have first, and you must skip the Exploration step above.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 5 : Looting & Exploration",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll to see what your Warband discovers in the area they are currently occupying. See Exploration section for details.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 6 : Hire new recruits",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "New recruits can be acquired from your Warband List and can be recruited and equipped from your Warbands Equipment list.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 7 : Trade",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Buy items allowed for your Warband. See your Warband Equipment list for the available items, and Trading section to see what other items might be offered to you. You may also sell any surplus Weapons, Armour and Equipment, and you receive half of their base value from the merchants. See Trading rules for details.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 8 : Use Glory Points",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Use your Glory to attract Mercenaries, acquiring special equipment and other benefits. See the rules for Glory for details.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 9 : Reallocate equipment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Swap equipment between models as desired (provided they are eligible to use it). You can take any armour, weapons and equipment from the Warband Paychest and give them to any eligible models.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Step 10 : Update Warband Roster Update",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Update your Warband Roster, including the total cost of the Warband (a total cost in Ducats of all your models and their weapons, armour and equipment). You are now ready for the next battle!",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_injuries",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Injuries",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Whenever one of your ELITE models is taken Out of Action during a Battle, you will have to roll D66 for each such model after the battle ends. Consult the Injury Chart table below to see what happened to your character. Unless rules state otherwise, each Injury causes a Battle Scar, so mark this on your Warband roster sheet. You will notice that there are only two Battle Scars slots for your ELITE warriors. This means that if you sustain a third Battle Scar, this model dies and can no longer be used in your Campaign. If the model has an ability that allows their revival (such as the Trench Pilgrim), they use it. When they return to life, they ignore the last Battle Scar that killed them. Otherwise, their profile remains the same.",
+                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "For non-ELITE models that went Out of Action during a battle, simply roll D6 for each model: on a result 1-2, they are dead or irrevocably wounded, and you must remove them from your roster. On a roll of 3+, they survive the battle and fight on as normal.",
+                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Whatever reason one of your soldiers die, their equipment is lost unless otherwise noted in the rules.",
+                "glossary": []
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can only have one of each type of Battle Scar or Skill per ELITE, unless explicitly stated in its entry. If a model rolls a result that would cause it to gain a Battle Scar that it cannot gain again, re-roll on the chart until a viable result is achieved.",
+                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+            }
+        ],
+        "rules": [
+            
+        ]
+    },
+    {
+        "id": "cr_experienceandadvancement",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Experience And Advancement",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As your warriors fight battles, they will quickly become hardened veterans and their skills improve, forged in the crucible of the Great War. An ELITE model that took part in a battle and survived (even if they were Taken Out of Action) will gain 1 Experience Point. Mark this on your Roster Sheet. In addition, if any ELITE model performs at least one Glorious Deed, they gain another Experience Point. When a model reaches (2), (4), (7), (10), (14), and (18) experience, you can make a Skill Advancement Roll:",
+                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Skill Advancement Rolls",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Pick 2 of the following 4 Charts (Melee & Strength Skills, Ranged Skills, Stealth & Speed Skills or Wildcard Skills)"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Roll 2D6 once for each chart to see what Skills you can choose from."
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If you already have any Skill indicated by the roll(s), choose the next lowest number on the table that has a skill you don’t yet have. If there are no such skills left, choose the next highest number on the table that has a skill you don’t yet have."
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Select which of the two Skills generated you want the model to acquire and add it to your Warband roster."
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When a Patron Skill is rolled, you can select any one of the Patron Skills offered by the Patron you have selected (see section on Patrons below).",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "title": "Skill Advancement Rolls",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Gather your Promotion Dice Pool: 1 dice if you lost the battle, 2 if you won. Add 1 dice for each Glorious Deed your Warband completed."
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Assign the Promotions dice to the non-ELITE models in your warband. You can choose which model gets the dice, but you can assign a maximum of 2 per model, unless all such models already have 2, in which case you can assign the remaining surplus dice as you wish.",
+                                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Roll the Promotions dice for each model separately in any order you wish. On a roll of 6 the model is promoted and gains ELITE Keyword and starts to gain Experience Points starting at 0 Exp. Move the model into the ELITE portion of the Warband Roster Sheet.",
+                                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Once a model is promoted, stop! Only 1 Promotion per Battle!",
+                                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Your Warband may have a maximum of 6 ELITE models. If you are at maximum, do not roll for promotions until your Warband again has less than 6 ELITE models.",
+                                "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Unpromotables",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "All of the models in your Warband cannot necessarily be Promoted. This could be due to their inherent limitations, being machines, lack of access to training and/or necessary equipment and so on. A model will be marked as Unpromotable.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "title": "Limited Potential",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Some models have a limited capacity to gain Experience and learn new skills. They might be too bestial, have limited in intelligence or have their utmost potential might be supernaturally limited. Such units can only gain 3 Experience Advances (ie. 7 Experience Points). A model will be marked as Limited Potential.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_exploration",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Exploration",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [ 
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Determine the number of Exploration Dice each player has."
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll The Exploration Dice"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Modify the Exploration Dice results with Exploration Skills & Items"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Consult the Exploration Table to see if you found a Location"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Collect Loot worth total combined result of dice rolled X10 ducats"
+                    }
+                ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Determine the number of Exploration Dice",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "After the Battle, both Players are allocated Exploration Dice. In addition, the Winner of the Battle can re-roll any 1 of the Exploration Dice during the Exploration.",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (1 - 2)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "3 Exploration Dice",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (3 - 5)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "4 Exploration Dice",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (6 - 9)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "5 Exploration Dice",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (10+)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6 Exploration Dice",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Roll the Exploration Dice",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Once the players have determined the number of Exploration Dice, each rolls their dice and consults the result by adding the numbers together to get your Exploration Score. For example, if a player rolls three Exploration Dice and the results are 3, 5, and 6, the combined Exploration Score is 14.",
+                        "subcontent": [ ]
+                    }
+                ]
+            },
+            {
+                "title": "Modify the Exploration Dice",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Next, the players can modify the Exploration Dice results with any items, Exploration Skills, Ally abilities and other bonuses in order to improve their chances of finding some rare elusive location and claiming it for your Warband.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Each Warband Starts the Campaign with the Reroll Skill. More can be earned during the campaign or by hiring Allies. You can have multiples of any of the Skills.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "title": "Consult the Exploration Location Table",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "After you have modified the Exploration roll result, consult the appropriate Exploration Table to see if you have found something of special interest during your exploration. You have to Match the number on the Table exactly with your dice -rolling too high or too low means you did not find the location.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Note that each player can find any of the Locations only once during the Campaign, though it is completely legal for two different players to discover the same Location during the same Campaign. We encourage players to maintain a War Journal that tracks the Locations they have found during the Campaign.",
+                        "glossary": []
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "To find out which Exploration Table you should use, consult the following Chart:",
+                        "glossary": [ {"val": "ELITE", "id": "gl_elite"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (1 - 3)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Common Exploration Location Table",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (3 - 5)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Common or Rare Exploration Location Table",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (6 - 9)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Rare Exploration Location Table",
+                                        "glossary": []
+                                    }
+                                 ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battles (10+)",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Legendary Exploration Location Table",
+                                        "glossary": []
+                                    }
+                                 ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Looting, foraging, scavenging and pillaging",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Whether you found an Exploration Location or not, the player can now collect loot from the battlefield by scavenging, foraging, selling broken weapons and armour to traders, receiving the regular pay from their Patron, hunting, and so on.",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The value of the Loot you find is determined simply by the Exploration Score X10 in ducats. So if your Exploration Score was 12, you find 120 ducats from Looting. Add this to your Warband’s Paychest.",
+                        "glossary": []
+                    }
+                ]
+            },
+            {
+                "title": "Step 6 : Hire new recruits",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "New recruits can be acquired from your Warband List and can be recruited and equipped from your Warbands Equipment list.",
+                        "subcontent": [ ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cr_gloryitems",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Glory Items",
+        "description": [
+        ],
+        "rules": [
+            {
+                "title": "Introduction",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Glory items are available in several different ways to your Warband:",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [ 
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Some can be bought by your Warband from their own Armoury List, and can be bought at any time during the campaign."
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Glory items listed below are only available if you get an opportunity to spend your Glory Points on them during Exploration & Looting Phase."
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "When playing one-off games, you can buy any Glory Equipment up to the maximum Glory Point limit agreed with your opponent."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

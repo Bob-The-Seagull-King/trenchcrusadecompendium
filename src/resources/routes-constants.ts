@@ -13,6 +13,7 @@ export const ROUTES = {
     COMPENDIUM_TABLEREF_ROUTE: '/tables/*',
     COMPENDIUM_SKILLS_ROUTE: '/skills/*',
     COMPENDIUM_RULES_ROUTE: '/rules/*',
+    COMPENDIUM_CAMPAIGN_RULES_ROUTE: '/campaign/*',
     COMPENDIUM_EXPLORATION_ROUTE: '/locations/*',
     
     TOOLS_CONTENT_UPLOAD_ROUTE: '/content/*',

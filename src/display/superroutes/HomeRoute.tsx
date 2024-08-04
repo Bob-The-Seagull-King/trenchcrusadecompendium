@@ -20,6 +20,7 @@ import { faTable } from '@fortawesome/free-solid-svg-icons'
 import { faDice } from '@fortawesome/free-solid-svg-icons'
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons'
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
+import { faPeace } from '@fortawesome/free-solid-svg-icons'
 
 import { useGlobalState } from './../../utility/globalstate'
 
@@ -120,6 +121,14 @@ const HomeRoute: React.FC = () => {
                                     <FontAwesomeIcon icon={faScaleBalanced} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         RULES GUIDE
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/campaign/")}>
+                                    <FontAwesomeIcon icon={faPeace} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        CAMPAIGN RULES
                                     </h1>
                                 </div>
                             </div>

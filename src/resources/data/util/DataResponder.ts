@@ -15,6 +15,7 @@ import location from '../data/general/explorationitems.json'
 import tablechartdata from '../data/references/tablecharts.json'
 import tableresultdata from '../data/references/tableresults.json'
 import quickrulesdata from '../data/references/quickrules.json'
+import campaignrulesdata from '../data/references/campaignrules.json'
 import genDeeds from '../data/scenarios/gen_deeds.json'
 import genDeployment from '../data/scenarios/gen_deployment.json'
 import genScenario from '../data/scenarios/gen_scenario.json'
@@ -120,6 +121,9 @@ class DataResponder {
             }
             case "quickrules": {
                 return quickrulesdata.concat(data)
+            }
+            case "campaignrules": {
+                return campaignrulesdata.concat(data)
             }
             case "upgrade": {
                 return upgradedata.concat(data)

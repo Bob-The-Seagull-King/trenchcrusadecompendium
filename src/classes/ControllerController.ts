@@ -7,6 +7,7 @@ import { AllTableReferenceListPage } from '../classes/viewmodel/pages/AllTableRe
 import { AllSkillsListPage } from '../classes/viewmodel/pages/AllSkillsListPage'
 import { AllQuickRulesPage } from '../classes/viewmodel/pages/AllQuickRulesListPage'
 import { AllExplorationListPage } from './viewmodel/pages/AllExplorationListPage'
+import { AllCampaignRulesPage } from './viewmodel/pages/AllCampaignRulesListPage'
 
 /**
  * Holds all controllers at the base level of the
@@ -23,6 +24,7 @@ class ControllerController {
     TableReferenceCollectionController;
     QuickRulesCollectionController;
     ExplorationCollectionController;
+    CampaignRulesCollectionController;
 
     constructor () {
         this.ModelsCollectionController = new AllModelsListPage()
@@ -33,6 +35,7 @@ class ControllerController {
         this.SkillCollectionController = new AllSkillsListPage()
         this.TableReferenceCollectionController = new AllTableReferenceListPage()
         this.QuickRulesCollectionController = new AllQuickRulesPage()
+        this.CampaignRulesCollectionController = new AllCampaignRulesPage()
         this.ExplorationCollectionController = new AllExplorationListPage()
     }
 
