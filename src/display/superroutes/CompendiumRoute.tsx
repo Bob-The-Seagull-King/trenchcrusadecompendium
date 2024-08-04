@@ -12,6 +12,7 @@ import GeneralInjuries from '../../display/pages/GeneralInjuries'
 import GeneralSkills from '../../display/pages/GeneralSkills'
 import GeneralTableReferences from '../../display/pages/GeneralTableReferences'
 import GeneralQuickRules from '../../display/pages/GeneralQuickRules'
+import GeneralExploration from '../../display/pages/GeneralExploration'
 
 import { ControllerController } from '../../classes/ControllerController'
 
@@ -42,6 +43,7 @@ const CompendiumRoute: React.FC<IControllerProp> = (prop) => {
         <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={prop.controller.SkillCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={prop.controller.TableReferenceCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<GeneralQuickRules controller={prop.controller.QuickRulesCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_EXPLORATION_ROUTE} element={<GeneralExploration controller={prop.controller.ExplorationCollectionController}/>} />
         </Routes>
         </div>
     )

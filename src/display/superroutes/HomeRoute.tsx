@@ -9,7 +9,7 @@ import logo from '../../resources/images/trenchcrusade_logo.png'
 import ReactDOM from 'react-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShapes } from '@fortawesome/free-solid-svg-icons'
+import { faMap, faShapes } from '@fortawesome/free-solid-svg-icons'
 import { faPersonRifle } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
@@ -96,6 +96,14 @@ const HomeRoute: React.FC = () => {
                                     <FontAwesomeIcon icon={faHandFist} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
                                         SKILLS
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={() => NavigateHome("compendium/locations/")}>
+                                    <FontAwesomeIcon icon={faMap} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        EXPLORATION
                                     </h1>
                                 </div>
                             </div>

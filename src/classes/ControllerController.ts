@@ -6,6 +6,7 @@ import { AllInjuriesListPage } from '../classes/viewmodel/pages/AllInjuriesListP
 import { AllTableReferenceListPage } from '../classes/viewmodel/pages/AllTableReferenceListPage'
 import { AllSkillsListPage } from '../classes/viewmodel/pages/AllSkillsListPage'
 import { AllQuickRulesPage } from '../classes/viewmodel/pages/AllQuickRulesListPage'
+import { AllExplorationListPage } from './viewmodel/pages/AllExplorationListPage'
 
 /**
  * Holds all controllers at the base level of the
@@ -21,6 +22,7 @@ class ControllerController {
     SkillCollectionController;
     TableReferenceCollectionController;
     QuickRulesCollectionController;
+    ExplorationCollectionController;
 
     constructor () {
         this.ModelsCollectionController = new AllModelsListPage()
@@ -31,6 +33,7 @@ class ControllerController {
         this.SkillCollectionController = new AllSkillsListPage()
         this.TableReferenceCollectionController = new AllTableReferenceListPage()
         this.QuickRulesCollectionController = new AllQuickRulesPage()
+        this.ExplorationCollectionController = new AllExplorationListPage()
     }
 
 }

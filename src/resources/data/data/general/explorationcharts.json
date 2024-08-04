@@ -1,0 +1,50 @@
+[
+    {
+        "id": "ec_common",
+        "type": "ExplorationChart",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Common Exploration Location Table",
+        "description": [
+        ],
+        "listtype": "location",
+        "list_items": [
+            { "id": "lc_moonshinestash", "roll_start": 4, "roll_end": 4},
+            { "id": "lc_heavyweaponscache", "roll_start": 5, "roll_end": 5},
+            { "id": "lc_trenchshrine", "roll_start": 6, "roll_end": 6},
+            { "id": "lc_ruinedhouse", "roll_start": 8, "roll_end": 8},
+            { "id": "lc_survivor", "roll_start": 9, "roll_end": 9},
+            { "id": "lc_fallensoldier", "roll_start": 10, "roll_end": 10},
+            { "id": "lc_trenchmerchant", "roll_start": 11, "roll_end": 11},
+            { "id": "lc_mapanddocumentbag", "roll_start": 14, "roll_end": 14},
+            { "id": "lc_snipersnest", "roll_start": 16, "roll_end": 16},
+            { "id": "lc_fallenknight", "roll_start": 18, "roll_end": 18},
+            { "id": "lc_warbandstrongbox", "roll_start": 20, "roll_end": 20}
+        ]
+    },
+    {
+        "id": "ec_rare",
+        "type": "ExplorationChart",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Rare Exploration Location Table",
+        "description": [
+        ],
+        "listtype": "location",
+        "list_items": [
+            { "id": "lc_angelicinstrument", "roll_start": 5, "roll_end": 5},
+            { "id": "lc_abandonedprophecyradiopost", "roll_start": 9, "roll_end": 9},
+            { "id": "lc_potofmanna", "roll_start": 11, "roll_end": 11},
+            { "id": "lc_ransackedalchemistworkshop", "roll_start": 12, "roll_end": 12},
+            { "id": "lc_blackmarket", "roll_start": 15, "roll_end": 15},
+            { "id": "lc_bookofgolems", "roll_start": 17, "roll_end": 17},
+            { "id": "lc_ruinedchurch", "roll_start": 19, "roll_end": 19},
+            { "id": "lc_stashofdrugsanderotica", "roll_start": 21, "roll_end": 21},
+            { "id": "lc_saintsreliquary", "roll_start": 23, "roll_end": 23},
+            { "id": "lc_highrankingcaptive", "roll_start": 25, "roll_end": 25},
+            { "id": "lc_abandonedresurrectionmachine", "roll_start": 32, "roll_end": 32}
+        ]
+    }
+]

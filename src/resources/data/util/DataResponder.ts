@@ -10,6 +10,8 @@ import scenariodata from '../data/scenarios/scenarios.json'
 import injurydata from '../data/general/injuries.json'
 import skilldata from '../data/general/skills.json'
 import skillgroupdata from '../data/general/skillgroup.json'
+import explorationtable from '../data/general/explorationcharts.json'
+import location from '../data/general/explorationitems.json'
 import tablechartdata from '../data/references/tablecharts.json'
 import tableresultdata from '../data/references/tableresults.json'
 import quickrulesdata from '../data/references/quickrules.json'
@@ -103,6 +105,12 @@ class DataResponder {
             }
             case "skillgroup": {
                 return skillgroupdata.concat(data)
+            }
+            case "location": {
+                return location.concat(data)
+            }
+            case "exploration": {
+                return explorationtable.concat(data)
             }
             case "tablechart": {
                 return tablechartdata.concat(data)

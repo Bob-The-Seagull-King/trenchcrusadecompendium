@@ -249,5 +249,38 @@
             { "id": "sk_deceitofbeelzebub", "roll_start": "choose", "roll_end": "choose"},
             { "id": "sk_knightoftheflies", "roll_start": "choose", "roll_end": "choose"}
         ]
+    },
+    {
+        "id": "sg_learnedsaint",
+        "type": "SkillGroup",
+        "source": "core",
+        "tags": [
+            {"tag_name": "learned_saint", "val": ""},
+            {"tag_name": "trenchpilgrim", "val": ""},
+            {"tag_name": "newantioch", "val": ""},
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Patron: Learned Saint",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Your Patron is a great teacher saint such as St. Patrick, St. Thomas Aquinas or St. Methodius. Followers of such Saint emphasise planning, sciences, strategy and organisational skills.",
+                "subcontent": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This type of Patron allows you to select one of the following when a Patron Skill rolled up on your Skill Chart:",
+                "subcontent": []
+            }
+        ],
+        "listtype": "skills",
+        "list_items": [
+            { "id": "sk_godwithgod", "roll_start": "choose", "roll_end": "choose"},
+            { "id": "sk_knowledgeofsciences", "roll_start": "choose", "roll_end": "choose"},
+            { "id": "sk_favouredbygod", "roll_start": "choose", "roll_end": "choose"},
+            { "id": "sk_penniesfromheaven", "roll_start": "choose", "roll_end": "choose"},
+            { "id": "sk_organisationalskills", "roll_start": "choose", "roll_end": "choose"},
+            { "id": "sk_healingarts", "roll_start": "choose", "roll_end": "choose"}
+        ]
     }
 ]

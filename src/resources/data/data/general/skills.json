@@ -976,5 +976,101 @@
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]
+    },
+    {
+        "id": "sk_godwithgod",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "God With God",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model can pick any Skill from any Skill Chart allowed to it, including any Exploration Skill.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_knowledgeofsciences",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Knowledge Of Sciences",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can increase a LIMIT of any Weapon, piece of Equipment or Armour by 1.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_favouredbygod",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Favoured By God",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the end of each battle, your Warband gains an additional Glory Point.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_penniesfromheaven",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Pennies From Heaven",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "At the end of each battle, if this model was fielded, your Warband gains an additional D6x5 ducats.",
+                "glossary": []
+            }
+        ]
+    },
+    {
+        "id": "sk_organisationalskills",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Organisational Skills",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can increase the number of models that are normally limited (such as Shocktroopers) by 1. This does not include ELITE Models.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+        ]
+    },
+    {
+        "id": "sk_healingarts",
+        "type": "Skill",
+        "source": "core",
+        "tags": [
+            {"tag_name": "patron", "val": ""}
+            ],
+        "name": "Healing Arts",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When this model rolls on the Serious Injuries Chart, it may re-roll. The second result stands.",
+                "glossary": []
+            }
+        ]
     }
 ]
