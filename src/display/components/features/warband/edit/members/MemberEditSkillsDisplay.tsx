@@ -59,7 +59,7 @@ const MemberEditSkillsDisplay = (props: any) => {
             <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowNameEdit()}>
-                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Skill</div>
+                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Skill {(WarbandMember.Model.Object.Promotion !== 0)? "(Limited Potential)" : ""}</div>
                     <FontAwesomeIcon icon={faPlus} className="" style={{fontSize:"0.75em"}}/>
                 </div>
             </div>

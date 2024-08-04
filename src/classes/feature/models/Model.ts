@@ -7,6 +7,7 @@ import { DescriptionFactory } from '../../../utility/functions'
  * Structure of a Model
  */
 interface IPlayerModel extends ITrenchCrusadeItemData {
+    promotion: number, // 0 = true 1 = limited 2 = none
     movement: string,
     ranged: string,
     melee: string,
@@ -26,6 +27,7 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
  * or variant - stats, features, and abilities.
  */
 class PlayerModel extends TrenchCrusadeItem {
+    public readonly Promotion;
     public readonly Movement;
     public readonly Ranged;
     public readonly Melee;
@@ -50,6 +52,7 @@ class PlayerModel extends TrenchCrusadeItem {
     public constructor(data: IPlayerModel)
     {
         super(data)
+        this.Promotion = data.promotion;
         this.ItemType = ItemType.Model;
         this.Variant = data.variant_id;
         this.Faction = data.faction_id;

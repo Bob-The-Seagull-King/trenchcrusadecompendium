@@ -8,6 +8,7 @@
                     {"tag_name": "elite", "val": "gl_elite"},
                     {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -49,6 +50,7 @@
                     {"tag_name": "elite", "val": "gl_elite"},
                     {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -90,6 +92,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+2",
@@ -136,6 +139,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "-2",
         "melee": "+2",
@@ -187,6 +191,7 @@
         "tags": [
                     {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -219,6 +224,7 @@
             {"tag_name": "heretic", "val": "gl_heretic"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -256,6 +262,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 1,
         "movement": "8\"",
         "ranged": "",
         "melee": "+3/+1",
@@ -311,6 +318,7 @@
         "tags": [
                     {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
+        "promotion": 1,
         "movement": "6\"",
         "ranged": "0",
         "melee": "-1",
@@ -351,6 +359,7 @@
         "tags": [
                     {"tag_name": "heretic", "val": "gl_heretic"}
                 ],
+        "promotion": 1,
         "movement": "6\"",
         "ranged": "0",
         "melee": "-1",
@@ -392,6 +401,7 @@
             {"tag_name": "heretic", "val": "gl_heretic"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -443,6 +453,7 @@
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -492,6 +503,7 @@
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -541,6 +553,7 @@
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -587,6 +600,7 @@
             {"tag_name": "strong", "val": "gl_strong"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 1,
         "movement": "6\"",
         "ranged": "-3",
         "melee": "+2",
@@ -651,6 +665,7 @@
             {"tag_name": "strong", "val": "gl_strong"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 1,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -702,6 +717,7 @@
         "tags": [
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -740,6 +756,7 @@
         "tags": [
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
+        "promotion": 2,
         "movement": "6\"",
         "ranged": "N/A",
         "melee": "-1 DICE",
@@ -783,6 +800,7 @@
         "tags": [
             {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"}
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "+1",
         "melee": "+1",
@@ -832,6 +850,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 2,
         "movement": "6\"",
         "ranged": "N/A",
         "melee": "+3/+1",
@@ -893,6 +912,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -938,6 +958,7 @@
             {"tag_name": "ironsultanate", "val": "gl_sultanate"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+1",
@@ -979,6 +1000,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+2",
@@ -1031,6 +1053,7 @@
             {"tag_name": "infiltrator", "val": "gl_infiltrator"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+2",
@@ -1085,6 +1108,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "-1",
@@ -1119,6 +1143,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "-1",
@@ -1154,6 +1179,7 @@
             {"tag_name": "ironsultanate", "val": "gl_sultanate"},
             {"tag_name": "infiltrator", "val": "gl_infiltrator"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "-1",
@@ -1193,6 +1219,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -1248,6 +1275,7 @@
             {"tag_name": "ironsultanate", "val": "gl_sultanate"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -1294,6 +1322,7 @@
             {"tag_name": "strong", "val": "gl_strong"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -1338,6 +1367,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 2,
         "movement": "8\"",
         "ranged": "N/A",
         "melee": "+1",
@@ -1387,6 +1417,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -1434,6 +1465,7 @@
             {"tag_name": "tough", "val": "gl_tough"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 1,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+2",
@@ -1493,6 +1525,7 @@
         "tags": [
             {"tag_name": "ironsultanate", "val": "gl_sultanate"}
                 ],
+        "promotion": 2,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -1556,6 +1589,7 @@
             {"tag_name": "tough", "val": "gl_tough"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -1611,6 +1645,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -1671,6 +1706,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "skirmisher", "val": "gl_skirmisher"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+2",
@@ -1724,6 +1760,7 @@
             {"tag_name": "newantioch", "val": "gl_newantioch"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+1",
@@ -1764,6 +1801,7 @@
             {"tag_name": "newantioch", "val": "gl_newantioch"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+2",
         "melee": "+1",
@@ -1808,6 +1846,7 @@
         "tags": [
             {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -1852,6 +1891,7 @@
         "tags": [
             {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+1",
@@ -1896,6 +1936,7 @@
         "tags": [
             {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "0",
@@ -1946,6 +1987,7 @@
             {"tag_name": "newantioch", "val": "gl_newantioch"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "0",
@@ -1991,6 +2033,7 @@
             {"tag_name": "newantioch", "val": "gl_newantioch"},
             {"tag_name": "strong", "val": "gl_strong"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+1",
@@ -2035,6 +2078,7 @@
         "tags": [
             {"tag_name": "newantioch", "val": "gl_newantioch"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -2096,6 +2140,7 @@
             {"tag_name": "strong", "val": "gl_strong"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+4",
@@ -2157,6 +2202,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+2",
@@ -2208,6 +2254,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+2",
@@ -2265,6 +2312,7 @@
             {"tag_name": "tough", "val": "gl_tough"},
             {"tag_name": "elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "+1",
         "melee": "+2",
@@ -2326,6 +2374,7 @@
             {"tag_name": "elite", "val": "gl_elite"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+1",
@@ -2381,6 +2430,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 2,
         "movement": "8\"",
         "ranged": "N/A",
         "melee": "+1",
@@ -2431,6 +2481,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 2,
         "movement": "4\"",
         "ranged": "N/A",
         "melee": "-1",
@@ -2481,6 +2532,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 2,
         "movement": "6\"/Flying",
         "ranged": "N/A",
         "melee": "-1",
@@ -2526,6 +2578,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 2,
         "movement": "4\"",
         "ranged": "0",
         "melee": "-1",
@@ -2576,6 +2629,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
+        "promotion": 2,
         "movement": "6\"/Flying",
         "ranged": "0",
         "melee": "-1",
@@ -2622,6 +2676,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "skirmisher", "val": "gl_skirmisher"}
                 ],
+        "promotion": 0,
         "movement": "10\"/Fly",
         "ranged": "0",
         "melee": "0",
@@ -2682,6 +2737,7 @@
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
+        "promotion": 2,
         "movement": "6\"",
         "ranged": "0",
         "melee": "0",
@@ -2745,6 +2801,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "0",
         "melee": "0",
@@ -2786,6 +2843,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "0",
         "melee": "0",
@@ -2832,6 +2890,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "0",
         "melee": "0",
@@ -2878,6 +2937,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "0",
         "melee": "0",
@@ -2924,6 +2984,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "0",
         "melee": "+1",
@@ -2971,6 +3032,7 @@
         "tags": [
             {"tag_name":"elite", "val": "gl_elite"}
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "0",
         "melee": "+1",
@@ -3017,6 +3079,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "-1",
         "melee": "-1",
@@ -3067,6 +3130,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "8\"",
         "ranged": "N/A",
         "melee": "+2",
@@ -3131,6 +3195,7 @@
         "source": "core",
         "tags": [
                 ],
+        "promotion": 0,
         "movement": "6\"",
         "ranged": "N/A",
         "melee": "+2",

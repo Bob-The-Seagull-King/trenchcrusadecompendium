@@ -302,7 +302,7 @@ const WarbandMemberDisplay = (props: any) => {
                     </div>
                 </div>
                 
-                {WarbandMember.Elite == false && 
+                {((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) && 
                 <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>

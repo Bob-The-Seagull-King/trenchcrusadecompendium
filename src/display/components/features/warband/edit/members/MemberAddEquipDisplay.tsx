@@ -120,6 +120,8 @@ const MemberAddEquipDisplay = (props: any) => {
             }
             if (ModelEquip.Restrictions[i].type == "keyword") {
                 rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
+            } else if (ModelEquip.Restrictions[i].type == "purchase") {
+                rstrctnlst += (ModelEquip.Restrictions[i].val === 'explore')? "Exploration Only" : "";
             } else if (ModelEquip.Restrictions[i].type == "model") {
                 rstrctnlst += getModelName(ModelEquip.Restrictions[i].val.toString());
             } else {
