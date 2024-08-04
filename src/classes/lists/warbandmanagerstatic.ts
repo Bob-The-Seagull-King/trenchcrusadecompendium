@@ -219,6 +219,23 @@ export function ExportDisplayText(_warband : Warband, _notes : boolean) {
     }
 
     // ------------------------------------------------------------------------------
+    
+    // ------------------------------ Warband Locations -----------------------------
+
+    // Add formatted text for each piece of equipment to array
+    const Locations = [];
+    for (i = 0 ; i < _warband.Locations.length ; i ++) {
+        Locations.push((_warband.Locations[i].name));
+    }
+
+    // Append equipment text
+    if (Locations.length > 0) {
+        returnRow += "\n" + "\n" + "[ LOCATIONS FOUND ]"
+        for (i = 0; i < Locations.length; i++) { returnRow += "\n" + "  " + Locations[i] }
+    }
+    returnRow += "\n";
+
+    // ------------------------------------------------------------------------------
 
     // Add final row and return
     returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
@@ -295,6 +312,23 @@ export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
             returnRow +=  "\n" + ExportModelDisplayTextBasic(_warband.Members[i], _notes, true);
         }
     }
+
+    // ------------------------------------------------------------------------------
+
+    // ------------------------------ Warband Locations -----------------------------
+
+    // Add formatted text for each piece of equipment to array
+    const Locations = [];
+    for (i = 0 ; i < _warband.Locations.length ; i ++) {
+        Locations.push((_warband.Locations[i].name));
+    }
+
+    // Append equipment text
+    if (Locations.length > 0) {
+        returnRow += "\n" + "\n" + "[ LOCATIONS FOUND ]"
+        for (i = 0; i < Locations.length; i++) { returnRow += "\n" + "  " + Locations[i] }
+    }
+    returnRow += "\n";
 
     // ------------------------------------------------------------------------------
 

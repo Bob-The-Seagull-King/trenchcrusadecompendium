@@ -3,6 +3,7 @@ import { IPlayerFaction } from "../../classes/feature/factions/Faction"
 import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { ITextBlock, TextBlock } from "../DescriptionItem"
 import { FactionFactory } from "../../factories/features/FactionFactory"
+import { IItemPartial } from "../feature/list/ListGroup"
 
 /**
  * Structure of a Warband
@@ -13,6 +14,7 @@ interface IWarband {
     glory_total : number,
     members : IWarbandMember[],
     armoury : IListEquipment[],
+    locations? : IItemPartial[],
     name: string,
     faction: IPlayerFaction,
     flavour: ITextBlock[],
@@ -45,6 +47,7 @@ export class Warband {
     public Deeds;
     public Flavour;
     public Notes;
+    public Locations : IItemPartial[];
 
     public constructor(data: IWarband) {
         this.ID = data.id;
@@ -55,6 +58,11 @@ export class Warband {
 
         this.Members = this.WarbandMemberMaker(data.members);
         this.Armoury = this.EquipmentMaker(data.armoury);
+        if (data.locations) {
+            this.Locations = data.locations
+        } else {
+            this.Locations = [];
+        }
 
         this.Name = data.name;
         this.Faction = FactionFactory.CreateFactory( data.faction);

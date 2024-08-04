@@ -23,6 +23,7 @@ import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
+import WarbandExplorationDisplay from './edit/WarbandExplorationDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -159,6 +160,16 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
     
+    function ReturnExploration() {
+        return (
+            <>
+                { WarbandItem != null &&
+                    <WarbandExplorationDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
+            </>
+        )
+    }
+    
 
     const [showExport, setShowExport] = useState(false);
     const handleCloseExport = () => setShowExport(false); 
@@ -289,6 +300,18 @@ const WarbandEditDisplay = (props: any) => {
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">
                             {ReturnArmoury()}                            
+                        </div>
+                    </div>
+                    <div className="verticalspacerbig"/>
+                    <div>
+                        <div className="separator" style={{fontSize:"3em"}}>Exploration</div>
+                    </div> 
+                    <div className="row justify-content-center">
+                        <div className="col-lg-6 col-md-6 col-12">
+                            {ReturnExploration()}
+                        </div>
+                        <div className="col-lg-6 col-md-6 col-12">
+                            {/* */}                            
                         </div>
                     </div>
                     <div className="verticalspacerbig"/>

@@ -26,6 +26,7 @@ class WarbandManager {
     Models: PlayerModel[] = [];
     Equipment: PlayerEquipment[] = [];
     Skills: IItemPartial[] = [];
+    Locations: IItemPartial[] = [];
     Injuries: ListItem[] = [];
     Upgrades : FactionUpgrade[] = [];
 
@@ -35,6 +36,7 @@ class WarbandManager {
         this.FindModels();
         this.FindEquipment();
         this.FindSkills();
+        this.FindLocations();
         this.FindInjuries();
         this.FindUpgrades();
         this.WarbandList = this.UpdateWarbands(ReturnData);
@@ -100,6 +102,21 @@ class WarbandManager {
         for (i = 0; i < dataresults.length; i++) {
             const modelNew = (dataresults[i]);
             this.Skills.push(modelNew);
+        }
+    }
+ 
+    /**
+     * For each entry in the data results, create an Model object
+     * and add it to the internal list.
+     */
+    FindLocations() {
+        this.Locations = [];
+        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "location"}});
+        let i = 0;
+        dataresults.sort(byPropertiesOf<IItemPartial>(['name',"id"]))
+        for (i = 0; i < dataresults.length; i++) {
+            const modelNew = (dataresults[i]);
+            this.Locations.push(modelNew);
         }
     }
  
@@ -237,6 +254,22 @@ class WarbandManager {
      * @param _model The model to delete it from
      * @param _warband The warband the model is a part of
      */
+    public DeleteLocationFromWarband(_location : IItemPartial, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _warband.Locations.length; i++) {
+            if (_warband.Locations[i] == _location) {
+                _warband.Locations.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Removes a single skill from a warband member
+     * @param _skill The skill to be deleted
+     * @param _model The model to delete it from
+     * @param _warband The warband the model is a part of
+     */
     public DeleteSkillFromModel(_skill : IItemPartial, _model : WarbandMember, _warband : Warband) {
         let i = 0;
         for (i = 0; i < _model.Skills.length; i++) {
@@ -342,6 +375,21 @@ class WarbandManager {
         for (i=0; i < this.Skills.length ; i++) {
             if (this.Skills[i].id == _name) {
                 return this.Skills[i]
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Finds a skill from the manager's internal list
+     * @param _name The ID of that Skill
+     * @returns A partial list item object
+     */
+    public GetLocationByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Locations.length ; i++) {
+            if (this.Locations[i].id == _name) {
+                return this.Locations[i]
             }
         }
         return null;
@@ -707,6 +755,7 @@ class WarbandManager {
                     glory_total : 0,
                     members : [],
                     armoury : [],
+                    locations : [],
                     name: _name.trim(),
                     faction: factionVal.InterfaceVal,
                     flavour: [],
