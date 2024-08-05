@@ -9,7 +9,7 @@ import { makestringpresentable } from '../../../../utility/functions'
 import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
 import FactionEquipDisplay from './FactionEquipDisplay';
 import FactionModelDisplay from './FactionModelDisplay';
-import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePanel';
+import GenericPopup from '../../../../display/components/generics/GenericPopup';
 
 const FactionDisplay = (props: any) => {
     const ModelObject: PlayerFaction = props.data
@@ -143,8 +143,8 @@ const FactionDisplay = (props: any) => {
     // Return the faction flavour
     function returnFlavour() {
         return (
-            <div>
-                <FactionLorePanel data={ModelObject}/>
+            <div>                
+                <GenericPopup panelname={"factionlore"} panelObj={ModelObject}/>
             </div>
         )
     }

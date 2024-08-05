@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import ContentPackInformation from '../../display/components/subcomponents/informationpanel/ContentPackInformation'
 import ContentPackDisplay from '../../display/components/features/contentpack/ContentPackDisplay'
+import GenericPopup from '../../display/components/generics/GenericPopup';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileImport } from '@fortawesome/free-solid-svg-icons'
@@ -87,7 +87,7 @@ const ToolsContentManager = (prop: any) => {
                             </label>
                             <div className="navpad"/>
                             <div style={{width:"fit-content"}}>
-                                <ContentPackInformation/>
+                                <GenericPopup panelname={"contentpack"} panelObj={null}/>
                             </div>
                         </div>
                     </div>
