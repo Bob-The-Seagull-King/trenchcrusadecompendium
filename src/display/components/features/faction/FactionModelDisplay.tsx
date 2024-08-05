@@ -7,7 +7,7 @@ import { Requester } from '../../../../factories/Requester'
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
 import { FactionUpgrade } from '../../../../classes/feature/factions/FactionUpgrade'
 
-import GenericHover from '../../../components/generics/GenericHover'
+import GenericPanel from '../../../components/generics/GenericPanel'
 import ModelDisplay from '../models/ModelDisplay'
 import UpgradeDisplay from '../../../../display/components/features/equipment/UpgradeDisplay'
 import EquipmentDisplay from '../equipment/EquipmentDisplay'
@@ -36,7 +36,7 @@ const FactionModelDisplay = (props: any) => {
                 }
                 {UpgradeList.length > 0 && UpgradeList.map((item) => (
                     <span key={"upgrades" + item.ID}> 
-                        <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item} />}/>
+                        <GenericPanel titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item} />}/>
                         <span>{", "}</span> 
                     </span>
                 ))}
@@ -62,7 +62,7 @@ const FactionModelDisplay = (props: any) => {
                 }
                 {EquipmentList.length > 0 && EquipmentList.map((item) => (
                     <span key={"equipment" + item.ID}> 
-                        <GenericHover titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item} />}/>
+                        <GenericPanel titlename={item.Name} d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item} />}/>
                     <span>{", "}</span> </span>
                 ))}
             </>
@@ -93,7 +93,7 @@ const FactionModelDisplay = (props: any) => {
 
             <div className="col-3">
                 <div className="equipbody">
-                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={ModelEquip.Object.Team} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <ModelDisplay data={ModelEquip.Object}/>}/>
+                    <GenericPanel titlename={ModelEquip.Object.Name} d_colour={ModelEquip.Object.Team} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <ModelDisplay data={ModelEquip.Object}/>}/>
                         
                 </div>
             </div>

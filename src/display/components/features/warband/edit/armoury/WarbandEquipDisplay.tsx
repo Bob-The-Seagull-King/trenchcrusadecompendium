@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCoins } from '@fortawesome/free-solid-svg-icons'
 
-import GenericHover from '../../../../../components/generics/GenericHover'
+import GenericPanel from '../../../../../components/generics/GenericPanel'
 import EquipmentDisplay from '../../../../../components/features/equipment/EquipmentDisplay'
 
 const WarbandEquipDisplay = (props: any) => {
@@ -40,7 +40,7 @@ const WarbandEquipDisplay = (props: any) => {
         <div className="row">
             <div className="col-5 align-content-center">
                 <div className="equipbody">
-                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
+                    <GenericPanel titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
                 </div>
             </div>
             <div className="col-3 align-content-center">

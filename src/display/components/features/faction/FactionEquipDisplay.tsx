@@ -5,7 +5,7 @@ import React from 'react'
 import { FactionEquip } from '../../../../classes/feature/factions/FactionEquip'
 import { Requester } from '../../../../factories/Requester'
 
-import GenericHover from '../../../components/generics/GenericHover'
+import GenericPanel from '../../../components/generics/GenericPanel'
 import EquipmentDisplay from '../equipment/EquipmentDisplay'
 
 const FactionEquipDisplay = (props: any) => {
@@ -67,7 +67,7 @@ const FactionEquipDisplay = (props: any) => {
         <div className="row row-cols-4">
             <div className="col-4">
                 <div className="equipbody">
-                    <GenericHover titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
+                    <GenericPanel titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>
                     
                 </div>
             </div>

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
-import GenericHover from '../../../../../display/components/generics/GenericHover';
+import GenericPanel from '../../../../../display/components/generics/GenericPanel';
 import FactionDisplay from '../../faction/FactionDisplay';
 
 const WarbandFactionEditDisplay = (props: any) => {
@@ -59,7 +59,7 @@ const WarbandFactionEditDisplay = (props: any) => {
     return (
         <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                <GenericHover titlename={WarbandItem.Faction.Name} d_colour={WarbandItem.Faction.Team} d_name={WarbandItem.Faction.Name} d_type={""} d_method={() => <FactionDisplay data={WarbandItem.Faction}/>}/>
+                <GenericPanel titlename={WarbandItem.Faction.Name} d_colour={WarbandItem.Faction.Team} d_name={WarbandItem.Faction.Name} d_type={""} d_method={() => <FactionDisplay data={WarbandItem.Faction}/>}/>
                         
                 <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShowNameEdit()}/>
             </div>

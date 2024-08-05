@@ -5,10 +5,11 @@ multiple locations, and also return DOM elements.
 import React from 'react'
 import { Requester } from '../factories/Requester';
 import { IGlossaryRule, GlossaryRule } from '../classes/feature/glossary/Glossary';
-import GlossaryHover from '../display/components/subcomponents/glossary/GlossaryHover';
+import GenericHover from '../display/components/generics/GenericHover';
 import { ITrenchCrusadeItemTag } from '../classes/TrenchCrusadeItem';
 import TagDisplay from '../display/components/subcomponents/TagDisplay';
 import AdvancedDescriptionItemDisplay from '../display/components/subcomponents/description/AdvancedDescriptionItemDisplay';
+import GlossaryDisplay from '../display/components/features/glossary/GlossaryDisplay';
 
 /**
  * Takes a string, and an array of string:glossary_id pairs, and turns
@@ -68,7 +69,7 @@ function ArrayItemIntoHtml(content: string, delim: any) {
                 const GlossaryData: IGlossaryRule = Requester.MakeRequest( {searchtype: "id", searchparam: {type: "glossary", id: delim[i].id}} ) as IGlossaryRule
                 const GlossaryObject = new GlossaryRule(GlossaryData)
 
-                return ( <GlossaryHover data={GlossaryObject} titlename={content}/> )
+                return ( <GenericHover d_colour={'tc'} d_name={content} titlename={GlossaryObject.Name} d_type={""} d_method={() => <GlossaryDisplay data={GlossaryObject} />}/> )
             }
         }
         

@@ -7,7 +7,8 @@ import {ITrenchCrusadeItemTag} from '../../../classes/TrenchCrusadeItem'
 import { GlossaryRule, IGlossaryRule } from '../../../classes/feature/glossary/Glossary'
 import { Requester } from '../../../factories/Requester'
 
-import GlossaryHover from './glossary/GlossaryHover'
+import GenericHover from '../generics/GenericHover'
+import GlossaryDisplay from '../features/glossary/GlossaryDisplay'
 
 const TagDisplay = (props: any) => {
     const tag: ITrenchCrusadeItemTag = props.data
@@ -28,7 +29,9 @@ const TagDisplay = (props: any) => {
         </div>}
         {JSON.stringify(searchResult) != "{}" &&
         <div className="tagItem tagText">
-            <div style={{display:"flex"}}>&#x2b9e;<GlossaryHover data={GlossaryObject} titlename={name}/></div>
+            <div style={{display:"flex"}}>&#x2b9e;
+                    <GenericHover d_colour={'tc'} d_name={name} titlename={(GlossaryObject)? GlossaryObject.Name : ''} d_type={""} d_method={() => <GlossaryDisplay data={GlossaryObject} />}/>
+                </div>
         </div>}
         </>
     )

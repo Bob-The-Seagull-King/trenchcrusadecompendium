@@ -1,15 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React from 'react'
 
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import * as HoverCard from '@radix-ui/react-hover-card';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-
-import { getColour } from '../../../utility/functions';
+// Classes
 import { useGlobalState } from '../../../utility/globalstate'
+import { getColour } from '../../../utility/functions';
 
 const GenericHover = (props: any) => {
     const DisplayColour : string = props.d_colour;
@@ -19,37 +16,29 @@ const GenericHover = (props: any) => {
 
     const ruleName = props.titlename
 
-    const [show, setShow] = useState(false);
+    // State
     const [theme] = useGlobalState('theme');
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     return (
       <>
-          <span>
-            <span className='glossaryPurple hovermouse' onClick={() => handleShow()}>{ruleName}</span>                
-          </span>
-
-          <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="lg" contentClassName="overcomeBackground" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
-              <Modal.Body > 
-                
+      <HoverCard.Root data-theme={theme} >
+        <HoverCard.Trigger asChild>
+          <span className='glossaryPurple hovermouse'>{DisplayName}</span>
+        </HoverCard.Trigger>
+        <HoverCard.Portal>
+          <HoverCard.Content data-theme={theme} className="HoverCardContent" sideOffset={5}>
+              <div  className='popupBody'>
                 <div className={'modelStructure borderstyler ' + DisplayType + 'border'+getColour(DisplayColour)}>
-                    <h1 className={'titleShape titlestyler ' + DisplayType + 'background'+getColour(DisplayColour)}>
-                        {DisplayName || ""}
-                        
-                        <div className="row float-end">
-                            <div className='col-12 float-end'>
-                                <Button style={{padding:"0em"}} variant="" onClick={() => handleClose()}>
-                                    <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                                </Button>
-                            </div>
-                        </div>
+                    <h1 className={'titleShape titlebody titlestyler ' + DisplayType + 'background'+getColour(DisplayColour)}>
+                        {ruleName || ""}
                     </h1>
-                        {displayMethod()}
+                    {displayMethod()}
                 </div>
-              </Modal.Body>
-          </Modal>
+              </div>
+            <HoverCard.Arrow className="HoverCardArrow" />
+          </HoverCard.Content>
+        </HoverCard.Portal>
+      </HoverCard.Root>
       </>
     )
 }

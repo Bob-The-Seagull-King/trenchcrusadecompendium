@@ -16,7 +16,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 import PartialItemDisplay from '../../../../features/partialitem/PartialItemDisplay';
-import GenericHover from '../../../../../components/generics/GenericHover';
+import GenericPanel from '../../../../../components/generics/GenericPanel';
 
 const MemberEditScarsDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -103,7 +103,7 @@ const MemberEditScarsDisplay = (props: any) => {
 
             <div className="col-9 align-content-center">
                 <div className="equipbody">
-                    <GenericHover titlename={item.name} d_colour={"tc"} d_name={item.name} d_type={""} d_method={() => 
+                    <GenericPanel titlename={item.name} d_colour={"tc"} d_name={item.name} d_type={""} d_method={() => 
                         <PartialItemDisplay data={item}/>
                     }/>
                     

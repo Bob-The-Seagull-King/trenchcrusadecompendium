@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCoins } from '@fortawesome/free-solid-svg-icons'
 
-import GenericHover from '../../../../../components/generics/GenericHover'
+import GenericPanel from '../../../../../components/generics/GenericPanel'
 import UpgradeDisplay from '../../../../../components/features/equipment/UpgradeDisplay'
 
 const ModelUpgradeDisplay = (props: any) => {
@@ -43,7 +43,7 @@ const ModelUpgradeDisplay = (props: any) => {
         <div className="row">
             <div className="col-5 align-content-center">
                 <div className="equipbody">
-                    <GenericHover titlename={ModelEquip.Name} d_colour={WarbandMember.Model.Object.Team} d_name={ModelEquip.Name} d_type={""} d_method={() => <UpgradeDisplay data={ModelEquip} />}/>
+                    <GenericPanel titlename={ModelEquip.Name} d_colour={WarbandMember.Model.Object.Team} d_name={ModelEquip.Name} d_type={""} d_method={() => <UpgradeDisplay data={ModelEquip} />}/>
                 </div>
             </div>
             <div className="col-3 align-content-center">
