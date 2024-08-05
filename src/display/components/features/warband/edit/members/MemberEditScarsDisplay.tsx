@@ -15,8 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-import GenericHover from '../../../../../../display/components/generics/GenericHover';
-import SkillHover from '../../../../../../display/components/subcomponents/informationpanel/hovermisc/SkillHover';
+import PartialItemDisplay from '../../../../features/partialitem/PartialItemDisplay';
+import GenericHover from '../../../../../components/generics/GenericHover';
 
 const MemberEditScarsDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -104,7 +104,7 @@ const MemberEditScarsDisplay = (props: any) => {
             <div className="col-9 align-content-center">
                 <div className="equipbody">
                     <GenericHover titlename={item.name} d_colour={"tc"} d_name={item.name} d_type={""} d_method={() => 
-                        <SkillHover data={item}/>
+                        <PartialItemDisplay data={item}/>
                     }/>
                     
                 </div>

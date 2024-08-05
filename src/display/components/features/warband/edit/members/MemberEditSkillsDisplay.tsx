@@ -16,7 +16,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 
-import SkillHover from '../../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
+import PartialItemDisplay from '../../../../../components/features/partialitem/PartialItemDisplay';
 import GenericHover from '../../../../../components/generics/GenericHover'
 
 const MemberEditSkillsDisplay = (props: any) => {
@@ -104,7 +104,7 @@ const MemberEditSkillsDisplay = (props: any) => {
             <div className="col-9 align-content-center">
                 <div className="equipbody">
                 <GenericHover titlename={item.name} d_colour={"tc"} d_name={item.name} d_type={""} d_method={() => 
-                        <SkillHover data={item}/>
+                        <PartialItemDisplay data={item}/>
                     }/>
                     
                 </div>
