@@ -15,7 +15,7 @@ import GeneralQuickRules from '../../display/pages/GeneralQuickRules'
 import GeneralCampaignRules from '../../display/pages/GeneralCampaignRules'
 import GeneralExploration from '../../display/pages/GeneralExploration'
 
-import { ControllerController } from '../../classes/ControllerController'
+import { ControllerController } from '../../classes/_high_level_controllers/ControllerController'
 
 import { useGlobalState } from './../../utility/globalstate'
 

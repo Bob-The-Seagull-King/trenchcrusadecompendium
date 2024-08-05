@@ -10,7 +10,7 @@ import ToolsContentManager from '../../display/pages/ToolsContentManager'
 import ToolsWarbandBuilder from '../../display/pages/ToolsWarbandBuilder'
 import ToolsScenarioGenerator from '../../display/pages/ToolsScenarioGenerator'
 
-import {ToolsController} from '../../classes/ToolsController'
+import {ToolsController} from '../../classes/_high_level_controllers/ToolsController'
 
 
 interface IControllerProp {

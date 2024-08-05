@@ -1,7 +1,7 @@
 
-import { ContentPackManager } from '../classes/contentpacks/contentmanager'
-import { WarbandManager } from '../classes/lists/warbandmanager'
-import { ScenarioGenerator } from '../classes/feature/scenarios/ScenarioGenerator'
+import { ContentPackManager } from '../contentpacks/contentmanager'
+import { WarbandManager } from '../lists/warbandmanager'
+import { ScenarioGenerator } from '../feature/scenarios/ScenarioGenerator'
 
 
 class ToolsController {
