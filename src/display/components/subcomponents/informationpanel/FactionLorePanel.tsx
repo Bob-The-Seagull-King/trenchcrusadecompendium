@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 
 import Modal from 'react-bootstrap/Modal';
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
 
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
 import { useGlobalState } from '../../../../utility/globalstate'
@@ -26,7 +26,7 @@ const FactionLorePanel = (props: any) => {
             <div>
                 {ModelObject.Flavour.map((item) => (
                     <div key={"flavourFaction"+(ModelObject.Flavour.indexOf(item))}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                        <AdvancedDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>

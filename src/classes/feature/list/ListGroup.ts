@@ -4,7 +4,7 @@ import { IListItem, ListItem } from './ListItem'
 import { Requester } from '../../../factories/Requester'
 import { DescriptionFactory } from '../../../utility/functions'
 import { IDescriptionItemData } from '../../../classes/DescriptionItem'
-import { IModelDescription } from '../models/ModelDescription'
+import { IAdvancedDescription } from '../../AdvancedDescription'
 
 /**
  * Structure of a group of List Items
@@ -29,7 +29,7 @@ interface IListSet {
  * Structure of a list item without a roll range
  */
 interface IItemPartial extends ITrenchCrusadeItemData {
-    description : IModelDescription[]
+    description : IAdvancedDescription[]
 }
 
 /**

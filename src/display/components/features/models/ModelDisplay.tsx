@@ -5,7 +5,7 @@ import React from 'react'
 import {PlayerModel } from "../../../../classes/feature/models/Model";
 import { returnTags } from '../../../../utility/util';
 
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
 import ModelStat from '../../subcomponents/description/ModelStat';
 
 const ModelDisplay = (props: any) => {
@@ -18,7 +18,7 @@ const ModelDisplay = (props: any) => {
             <div>
                 {ModelObject.Equipment.map((item) => (
                     <div key={"equipmentDisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                        <AdvancedDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>
@@ -46,7 +46,7 @@ const ModelDisplay = (props: any) => {
             <div>
                 {ModelObject.Abilities.map((item) => (
                     <div key={"abilitiesDisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                        <AdvancedDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>
@@ -59,7 +59,7 @@ const ModelDisplay = (props: any) => {
             <div>
                 {ModelObject.Blurb.map((item) => (
                     <div key={"blurbdisplay"+(item.Content? item.Content : "")}>
-                        <ModelDescriptionItemDisplay data={item} parent={ModelObject}/>
+                        <AdvancedDescriptionItemDisplay data={item} parent={ModelObject}/>
                     </div>
                 ))}
             </div>

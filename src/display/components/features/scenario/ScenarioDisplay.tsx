@@ -5,7 +5,7 @@ import React from 'react'
 import { Scenario } from '../../../../classes/feature/scenarios/Scenario';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
 
 const ScenarioDisplay = (props: any) => {
     const ModelObject: Scenario = props.data
@@ -25,7 +25,7 @@ const ScenarioDisplay = (props: any) => {
                                 <div>
                                     {item.Description.map((descitem) => (
                                         <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                                            <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
+                                            <AdvancedDescriptionItemDisplay data={descitem} parent={ModelObject}/>
                                         </div>
                                     ))}
                                 </div>

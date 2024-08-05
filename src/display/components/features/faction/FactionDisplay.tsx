@@ -6,7 +6,7 @@ import { containsTag } from '../../../../utility/functions';
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction';
 import { makestringpresentable } from '../../../../utility/functions'
 
-import ModelDescriptionItemDisplay from '../../subcomponents/description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
 import FactionEquipDisplay from './FactionEquipDisplay';
 import FactionModelDisplay from './FactionModelDisplay';
 import FactionLorePanel from '../../subcomponents/informationpanel/FactionLorePanel';
@@ -162,7 +162,7 @@ const FactionDisplay = (props: any) => {
                         <div>
                             {item.Description.map((descitem) => (
                                 <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
-                                    <ModelDescriptionItemDisplay data={descitem} parent={ModelObject}/>
+                                    <AdvancedDescriptionItemDisplay data={descitem} parent={ModelObject}/>
                                 </div>
                             ))}
                         </div>

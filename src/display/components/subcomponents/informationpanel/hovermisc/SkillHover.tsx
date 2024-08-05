@@ -4,7 +4,7 @@ import React from 'react'
 
 import { IItemPartial } from '../../../../../classes/feature/list/ListGroup'
 
-import ModelDescriptionItemDisplay from '../../description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../../description/AdvancedDescriptionItemDisplay';
 import { DescriptionFactory } from '../../../../../utility/functions';
 
 const SkillHover = (props: any) => {
@@ -15,7 +15,7 @@ const SkillHover = (props: any) => {
       <><div className='modelInternalStructure'>
         {
         <>{description.map((item) => ( 
-            <ModelDescriptionItemDisplay key="modeloption" data={item} parent={ruleObject}/> 
+            <AdvancedDescriptionItemDisplay key="modeloption" data={item} parent={ruleObject}/> 
         ))}</>
         } 
         </div>

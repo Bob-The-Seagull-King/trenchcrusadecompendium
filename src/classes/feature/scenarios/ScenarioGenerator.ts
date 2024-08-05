@@ -1,7 +1,7 @@
 import { IScenario, Scenario } from "./Scenario"
 import { Requester } from "../../../factories/Requester";
 import { IFactionRuleset } from "../factions/FactionRule";
-import { IModelDescription } from "../models/ModelDescription";
+import { IAdvancedDescription } from "../../AdvancedDescription";
 
 /**
  * Data structure of the scenario
@@ -157,7 +157,7 @@ class ScenarioGenerator {
 
         // Add glorious deeds to the list of scenario rules
 
-        const DeedsDesc: IModelDescription[] = [];
+        const DeedsDesc: IAdvancedDescription[] = [];
         for (i = 0; i < FinalDeeds.length; i ++) {
             let j = 0;
             for (j = 0; j < FinalDeeds[i].description.length; j ++) {

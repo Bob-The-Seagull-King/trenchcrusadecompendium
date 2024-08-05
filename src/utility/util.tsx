@@ -8,7 +8,7 @@ import { IGlossaryRule, GlossaryRule } from '../classes/feature/glossary/Glossar
 import GlossaryHover from '../display/components/subcomponents/glossary/GlossaryHover';
 import { ITrenchCrusadeItemTag } from '../classes/TrenchCrusadeItem';
 import TagDisplay from '../display/components/subcomponents/TagDisplay';
-import ModelDescriptionItemDisplay from '../display/components/subcomponents/description/ModelDescriptionItemDisplay';
+import AdvancedDescriptionItemDisplay from '../display/components/subcomponents/description/AdvancedDescriptionItemDisplay';
 
 /**
  * Takes a string, and an array of string:glossary_id pairs, and turns
@@ -132,7 +132,7 @@ export function returnDescription(baseObject: any, objectArray : any[]) {
         <div>
             {objectArray.map((item) => (
                 <div key={"descriptionDisplay"}>
-                    <ModelDescriptionItemDisplay data={item} parent={baseObject}/>
+                    <AdvancedDescriptionItemDisplay data={item} parent={baseObject}/>
                 </div>
             ))}
         </div>

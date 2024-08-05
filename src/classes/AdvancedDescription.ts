@@ -1,9 +1,9 @@
-import { IDescriptionItemData, DescriptionItem } from '../../DescriptionItem'
+import { IDescriptionItemData, DescriptionItem } from './DescriptionItem'
 
 /**
  * Interface for an model description item
  */
-interface IModelDescription extends IDescriptionItemData {
+interface IAdvancedDescription extends IDescriptionItemData {
     glossary?: [] // The glossary of a given description item
 }
 
@@ -11,15 +11,15 @@ interface IModelDescription extends IDescriptionItemData {
  * Description containing text, glossary terms, subcontent,
  * and a clarification on the way to render the text.
  */
-class ModelDescription extends DescriptionItem {
+class AdvancedDescription extends DescriptionItem {
     public readonly Glossary;
     public SubContent;
 
     /**
      * Assign parameter values
-     * @param data The data in IModelDescription format
+     * @param data The data in IAdvancedDescription format
      */
-    public constructor(data: IModelDescription)
+    public constructor(data: IAdvancedDescription)
     {
         super (data)
         this.Glossary = data.glossary;
@@ -33,12 +33,12 @@ class ModelDescription extends DescriptionItem {
      * @returns Array of DescriptionItems
      */
     ModelSubConstructor(data?: []) {
-        const sublist: ModelDescription[] = []
+        const sublist: AdvancedDescription[] = []
         try {
         if (data) {
             let i = 0;
             for (i = 0; i < data.length; i++) {
-                const tempDI = new ModelDescription(data[i])
+                const tempDI = new AdvancedDescription(data[i])
                 sublist.push(tempDI);
             }
             return sublist;
@@ -46,10 +46,10 @@ class ModelDescription extends DescriptionItem {
             return sublist;
         }
         } catch (e) {
-            const emergencylist: ModelDescription[] = []
+            const emergencylist: AdvancedDescription[] = []
             return emergencylist;
         }
     }
 }
 
-export {IModelDescription, ModelDescription}
+export {IAdvancedDescription, AdvancedDescription}

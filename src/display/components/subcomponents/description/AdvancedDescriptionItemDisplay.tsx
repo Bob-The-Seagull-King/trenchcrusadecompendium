@@ -4,18 +4,18 @@ import React from 'react'
 
 import { getTagValue} from '../../../../utility/functions'
 import {ConvertContentWithGlossary} from '../../../../utility/util'
-import { ModelDescription} from '../../../../classes/feature/models/ModelDescription'
+import { AdvancedDescription} from '../../../../classes/AdvancedDescription'
 import { PlayerModel } from '../../../../classes/feature/models/Model'
 
 import AddonDisplay from '../../features/addons/AddonDisplay'
 import GenericDisplay from '../../generics/GenericDisplay'
 
 
-const ModelDescriptionItemDisplay = (props: any) => {
-    const description: ModelDescription = props.data
+const AdvancedDescriptionItemDisplay = (props: any) => {
+    const description: AdvancedDescription = props.data
     const parentItem: PlayerModel = props.parent
 
-    function returnFullItem(item: ModelDescription) {
+    function returnFullItem(item: AdvancedDescription) {
         switch (getTagValue(item.Tags, "desc_type")) {
             case "effect": {
                 return (
@@ -23,7 +23,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                         <span><b>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </b></span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                     </div>
@@ -37,7 +37,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                             <ul>
                                 {item.SubContent?.map((subitem) => (
                                     <li  key="descriptionsubitem">
-                                        <ModelDescriptionItemDisplay data={subitem} parent={parentItem}/>
+                                        <AdvancedDescriptionItemDisplay data={subitem} parent={parentItem}/>
                                     </li>
                                 ))}
                             </ul>
@@ -51,7 +51,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                         <span><i>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </i></span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -64,7 +64,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                         <span>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </span>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -77,7 +77,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                         <div className='addonbox'>{findAddon(item.Content?.toString() || "")}</div>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -90,7 +90,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                         <div><br/></div>
                         <span>
                             {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
                         <span>{" "}</span>
@@ -103,7 +103,7 @@ const ModelDescriptionItemDisplay = (props: any) => {
                     <span>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")}</span>
                     <span>
                         {item.SubContent?.map((subitem) => (
-                               <ModelDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                         ))}
                     </span>
                     </span>
@@ -140,4 +140,4 @@ const ModelDescriptionItemDisplay = (props: any) => {
     )
 }
 
-export default ModelDescriptionItemDisplay;
+export default AdvancedDescriptionItemDisplay;

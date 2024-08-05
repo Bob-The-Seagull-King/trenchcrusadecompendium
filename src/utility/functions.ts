@@ -1,5 +1,5 @@
 import { IDescriptionItemData } from "../classes/DescriptionItem";
-import { ModelDescription } from "../classes/feature/models/ModelDescription";
+import { AdvancedDescription } from "../classes/AdvancedDescription";
 
 /**
  * Returns a capitalized version of a given string
@@ -238,16 +238,16 @@ export function sort<T extends object> (arr: T[], ...sortBy: Array<sortArg<T>>) 
  */
 export function DescriptionFactory(data: IDescriptionItemData[]) {
     let i = 0;
-    const array: ModelDescription[] = []
+    const array: AdvancedDescription[] = []
     try {
     for (i = 0; i < data.length; i++) {
-        const tempAD = new ModelDescription(data[i])
+        const tempAD = new AdvancedDescription(data[i])
         array.push(tempAD)
     }
     return array;
     } catch (e) {
         
-        const emergencyarray: ModelDescription[] = []
+        const emergencyarray: AdvancedDescription[] = []
         return emergencyarray;
     }
 }
