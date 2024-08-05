@@ -1,6 +1,7 @@
 import { ITrenchCrusadeItemData, TrenchCrusadeItem } from '../../TrenchCrusadeItem'
 import { ItemType } from '../../Enum'
 import { DescriptionFactory } from '../../../utility/functions';
+import { IDescriptionItemData } from '../../../classes/DescriptionItem';
 
 /**
  * Structure of a roll-based list item
@@ -8,7 +9,7 @@ import { DescriptionFactory } from '../../../utility/functions';
 interface IListItem extends ITrenchCrusadeItemData {
    roll_start : number | string,
    roll_end : number | string,
-   description: []
+   description: IDescriptionItemData[]
 }
 
 /**

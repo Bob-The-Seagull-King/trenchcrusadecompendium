@@ -24,6 +24,7 @@ import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 import WarbandExplorationDisplay from './edit/WarbandExplorationDisplay';
+import WarbandExplorationModDisplay from './edit/WarbandExplorationModDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -170,6 +171,16 @@ const WarbandEditDisplay = (props: any) => {
         )
     }
     
+    function ReturnExplorationMods() {
+        return (
+            <>
+                { WarbandItem != null &&
+                    <WarbandExplorationModDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                }
+            </>
+        )
+    }
+    
 
     const [showExport, setShowExport] = useState(false);
     const handleCloseExport = () => setShowExport(false); 
@@ -311,7 +322,7 @@ const WarbandEditDisplay = (props: any) => {
                             {ReturnExploration()}
                         </div>
                         <div className="col-lg-6 col-md-6 col-12">
-                            {/* */}                            
+                            {ReturnExplorationMods()}                            
                         </div>
                     </div>
                     <div className="verticalspacerbig"/>

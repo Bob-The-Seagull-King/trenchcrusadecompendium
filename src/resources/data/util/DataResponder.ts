@@ -11,6 +11,7 @@ import injurydata from '../data/general/injuries.json'
 import skilldata from '../data/general/skills.json'
 import skillgroupdata from '../data/general/skillgroup.json'
 import explorationtable from '../data/general/explorationcharts.json'
+import explorationmodifiers from '../data/general/explorationmodifiers.json'
 import location from '../data/general/explorationitems.json'
 import tablechartdata from '../data/references/tablecharts.json'
 import tableresultdata from '../data/references/tableresults.json'
@@ -109,6 +110,9 @@ class DataResponder {
             }
             case "location": {
                 return location.concat(data)
+            }
+            case "exploremodifiers": {
+                return explorationmodifiers.concat(data)
             }
             case "exploration": {
                 return explorationtable.concat(data)

@@ -1,4 +1,5 @@
 import { DescriptionFactory } from "../utility/functions";
+import { ITrenchCrusadeItemTag } from "./TrenchCrusadeItem";
 
 /**
  * Basic text block with a title and description
@@ -22,7 +23,7 @@ class TextBlock {
  * Data structure for the description section
  */
 interface IDescriptionItemData {
-    tags: [],
+    tags: ITrenchCrusadeItemTag[],
     content?: string,
     subcontent?: []
 }

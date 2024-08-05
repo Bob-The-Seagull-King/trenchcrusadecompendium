@@ -1,3 +1,4 @@
+import { IDescriptionItemData } from "../classes/DescriptionItem";
 import { ModelDescription } from "../classes/feature/models/ModelDescription";
 
 /**
@@ -235,7 +236,7 @@ export function sort<T extends object> (arr: T[], ...sortBy: Array<sortArg<T>>) 
  * @param data The array of description data objects
  * @returns Array of ModelDescription objects
  */
-export function DescriptionFactory(data: []) {
+export function DescriptionFactory(data: IDescriptionItemData[]) {
     let i = 0;
     const array: ModelDescription[] = []
     try {

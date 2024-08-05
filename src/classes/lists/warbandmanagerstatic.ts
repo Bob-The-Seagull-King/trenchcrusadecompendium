@@ -232,8 +232,25 @@ export function ExportDisplayText(_warband : Warband, _notes : boolean) {
     if (Locations.length > 0) {
         returnRow += "\n" + "\n" + "[ LOCATIONS FOUND ]"
         for (i = 0; i < Locations.length; i++) { returnRow += "\n" + "  " + Locations[i] }
+        returnRow += "\n";
     }
-    returnRow += "\n";
+
+    // ------------------------------------------------------------------------------
+    
+    // ----------------------------- Warband Explore Mods ---------------------------
+
+    // Add formatted text for each piece of equipment to array
+    const Modifiers = [];
+    for (i = 0 ; i < _warband.Modifiers.length ; i ++) {
+        Modifiers.push((_warband.Modifiers[i].name));
+    }
+
+    // Append equipment text
+    if (Modifiers.length > 0) {
+        returnRow += "\n" + "\n" + "[ EXPLORATION MODIFIERS ]"
+        for (i = 0; i < Modifiers.length; i++) { returnRow += "\n" + "  " + Modifiers[i] }
+        returnRow += "\n";
+    }
 
     // ------------------------------------------------------------------------------
 
@@ -290,8 +307,8 @@ export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
     if (Equipment.length > 0) {
         returnRow += "\n" + "\n" + "[ ARMOURY ]"
         for (i = 0; i < Equipment.length; i++) { returnRow += "\n" + "  " + Equipment[i] }
+        returnRow += "\n";
     }
-    returnRow += "\n";
 
     // ------------------------------------------------------------------------------
 
@@ -327,8 +344,25 @@ export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
     if (Locations.length > 0) {
         returnRow += "\n" + "\n" + "[ LOCATIONS FOUND ]"
         for (i = 0; i < Locations.length; i++) { returnRow += "\n" + "  " + Locations[i] }
+        returnRow += "\n";
     }
-    returnRow += "\n";
+
+    // ------------------------------------------------------------------------------
+    
+    // ----------------------------- Warband Explore Mods ---------------------------
+
+    // Add formatted text for each piece of equipment to array
+    const Modifiers = [];
+    for (i = 0 ; i < _warband.Modifiers.length ; i ++) {
+        Modifiers.push((_warband.Modifiers[i].name));
+    }
+
+    // Append equipment text
+    if (Modifiers.length > 0) {
+        returnRow += "\n" + "\n" + "[ EXPLORATION MODIFIERS ]"
+        for (i = 0; i < Modifiers.length; i++) { returnRow += "\n" + "  " + Modifiers[i] }
+        returnRow += "\n";
+    }
 
     // ------------------------------------------------------------------------------
 

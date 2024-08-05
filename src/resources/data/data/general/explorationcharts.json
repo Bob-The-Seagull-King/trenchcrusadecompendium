@@ -46,5 +46,32 @@
             { "id": "lc_highrankingcaptive", "roll_start": 25, "roll_end": 25},
             { "id": "lc_abandonedresurrectionmachine", "roll_start": 32, "roll_end": 32}
         ]
+    },
+    {
+        "id": "ec_modifiers",
+        "type": "ExplorationChart",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Modifiers",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Each Warband Starts the Campaign with the Reroll Skill. More can be earned during the campaign or by hiring Allies. You can have multiples of any of the Skills.",
+                "glossary": []
+            }
+        ],
+        "listtype": "exploremodifiers",
+        "list_items": [
+            { "id": "em_extradice", "roll_start": "", "roll_end": ""},
+            { "id": "em_duplicate", "roll_start": "", "roll_end": ""},
+            { "id": "em_split", "roll_start": "", "roll_end": ""},
+            { "id": "em_reroll", "roll_start": "", "roll_end": ""},
+            { "id": "em_setdice", "roll_start": "", "roll_end": ""},
+            { "id": "em_seek", "roll_start": "", "roll_end": ""},
+            { "id": "em_circleback", "roll_start": "", "roll_end": ""},
+            { "id": "em_combine", "roll_start": "", "roll_end": ""},
+            { "id": "em_lucky", "roll_start": "", "roll_end": ""}
+        ]
     }
 ]

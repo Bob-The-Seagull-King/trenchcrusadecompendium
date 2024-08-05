@@ -27,6 +27,7 @@ class WarbandManager {
     Equipment: PlayerEquipment[] = [];
     Skills: IItemPartial[] = [];
     Locations: IItemPartial[] = [];
+    Modifiers: IItemPartial[] = [];
     Injuries: ListItem[] = [];
     Upgrades : FactionUpgrade[] = [];
 
@@ -37,6 +38,7 @@ class WarbandManager {
         this.FindEquipment();
         this.FindSkills();
         this.FindLocations();
+        this.FindModifiers();
         this.FindInjuries();
         this.FindUpgrades();
         this.WarbandList = this.UpdateWarbands(ReturnData);
@@ -117,6 +119,21 @@ class WarbandManager {
         for (i = 0; i < dataresults.length; i++) {
             const modelNew = (dataresults[i]);
             this.Locations.push(modelNew);
+        }
+    }
+ 
+    /**
+     * For each entry in the data results, create an Model object
+     * and add it to the internal list.
+     */
+    FindModifiers() {
+        this.Modifiers = [];
+        const dataresults = Requester.MakeRequest({searchtype: "file", searchparam: {type: "exploremodifiers"}});
+        let i = 0;
+        dataresults.sort(byPropertiesOf<IItemPartial>(['name',"id"]))
+        for (i = 0; i < dataresults.length; i++) {
+            const modelNew = (dataresults[i]);
+            this.Modifiers.push(modelNew);
         }
     }
  
@@ -270,6 +287,22 @@ class WarbandManager {
      * @param _model The model to delete it from
      * @param _warband The warband the model is a part of
      */
+    public DeleteModifierFromWarband(_modifier : IItemPartial, _warband : Warband) {
+        let i = 0;
+        for (i = 0; i < _warband.Modifiers.length; i++) {
+            if (_warband.Modifiers[i] == _modifier) {
+                _warband.Modifiers.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Removes a single skill from a warband member
+     * @param _skill The skill to be deleted
+     * @param _model The model to delete it from
+     * @param _warband The warband the model is a part of
+     */
     public DeleteSkillFromModel(_skill : IItemPartial, _model : WarbandMember, _warband : Warband) {
         let i = 0;
         for (i = 0; i < _model.Skills.length; i++) {
@@ -396,6 +429,21 @@ class WarbandManager {
     }
     
     /**
+     * Finds a skill from the manager's internal list
+     * @param _name The ID of that Skill
+     * @returns A partial list item object
+     */
+    public GetModifierByID(_name : string) {
+        let i = 0;
+        for (i=0; i < this.Modifiers.length ; i++) {
+            if (this.Modifiers[i].id == _name) {
+                return this.Modifiers[i]
+            }
+        }
+        return null;
+    }
+    
+    /**
      * Finds an injury from the manager's internal list
      * @param _name The ID of that injury
      * @returns A ListItem object
@@ -435,6 +483,31 @@ class WarbandManager {
                     data[i].Faction = this.Factions[j];
                     break;
                 }
+            }
+
+            // Update modifiers and locations
+            if (!data[i].Locations) {
+                data[i].Locations = []
+            }
+            if (!data[i].Modifiers) {
+                
+                const _reroll : IItemPartial = {
+                    id: "em_lucky",
+                    type: "Location",
+                    source: "core",
+                    tags: [
+                        {tag_name: "common", val: ""}
+                        ],
+                    name: "Lucky",
+                    description: [
+                        {
+                            tags: [{tag_name: "desc_type", val: "desc"}],
+                            content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
+                            glossary: []
+                        }
+                    ]
+                }
+                data[i].Modifiers = [_reroll]
             }
 
             // Update model information
@@ -748,6 +821,23 @@ class WarbandManager {
                     }
                 }
 
+                const _reroll : IItemPartial = {
+                    id: "em_lucky",
+                    type: "Location",
+                    source: "core",
+                    tags: [
+                        {tag_name: "common", val: ""}
+                        ],
+                    name: "Lucky",
+                    description: [
+                        {
+                            tags: [{tag_name: "desc_type", val: "desc"}],
+                            content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
+                            glossary: []
+                        }
+                    ]
+                }
+
                 // Generate faction data
                 const _content : IWarband = {
                     id: CalcID(_name.trim()),
@@ -756,6 +846,7 @@ class WarbandManager {
                     members : [],
                     armoury : [],
                     locations : [],
+                    modifiers : [_reroll],
                     name: _name.trim(),
                     faction: factionVal.InterfaceVal,
                     flavour: [],

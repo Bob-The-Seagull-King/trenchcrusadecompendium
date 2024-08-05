@@ -3,6 +3,8 @@ import { ItemType } from '../../Enum'
 import { IListItem, ListItem } from './ListItem'
 import { Requester } from '../../../factories/Requester'
 import { DescriptionFactory } from '../../../utility/functions'
+import { IDescriptionItemData } from '../../../classes/DescriptionItem'
+import { IModelDescription } from '../models/ModelDescription'
 
 /**
  * Structure of a group of List Items
@@ -27,7 +29,7 @@ interface IListSet {
  * Structure of a list item without a roll range
  */
 interface IItemPartial extends ITrenchCrusadeItemData {
-    description : []
+    description : IModelDescription[]
 }
 
 /**

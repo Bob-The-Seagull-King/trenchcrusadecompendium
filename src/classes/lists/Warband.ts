@@ -15,6 +15,7 @@ interface IWarband {
     members : IWarbandMember[],
     armoury : IListEquipment[],
     locations? : IItemPartial[],
+    modifiers? : IItemPartial[],
     name: string,
     faction: IPlayerFaction,
     flavour: ITextBlock[],
@@ -47,7 +48,8 @@ export class Warband {
     public Deeds;
     public Flavour;
     public Notes;
-    public Locations : IItemPartial[];
+    public Locations : IItemPartial[] = [];
+    public Modifiers : IItemPartial[] = []
 
     public constructor(data: IWarband) {
         this.ID = data.id;
@@ -62,6 +64,28 @@ export class Warband {
             this.Locations = data.locations
         } else {
             this.Locations = [];
+        }
+        if (data.modifiers) {
+            this.Modifiers = data.modifiers
+        } else {
+            
+            const _reroll : IItemPartial = {
+                id: "em_lucky",
+                type: "Location",
+                source: "core",
+                tags: [
+                    {tag_name: "common", val: ""}
+                    ],
+                name: "Lucky",
+                description: [
+                    {
+                        tags: [{tag_name: "desc_type", val: "desc"}],
+                        content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
+                        glossary: []
+                    }
+                ]
+            }
+            this.Modifiers = [_reroll];
         }
 
         this.Name = data.name;

@@ -84,7 +84,7 @@ function ArrayItemIntoHtml(content: string, delim: any) {
  * @param bannedList Any tag which matches a string in here should not be shown
  * @returns Map of TagDisplay objects
  */
-export function returnTags(taglist: [] | undefined, bannedList : string[]) {
+export function returnTags(taglist: ITrenchCrusadeItemTag[] | undefined, bannedList : string[]) {
     const displaytags = sortTagsForDisplay(taglist, bannedList)
 
     return (
@@ -104,7 +104,7 @@ export function returnTags(taglist: [] | undefined, bannedList : string[]) {
  * @param bannedList Any tag which matches a string in here should not be shown
  * @returns Array of tag objects
  */
-function sortTagsForDisplay(taglist: [] | undefined, bannedList : string[]) {
+function sortTagsForDisplay(taglist: ITrenchCrusadeItemTag[] | undefined, bannedList : string[]) {
     const tagarray: ITrenchCrusadeItemTag[] = []
 
     let i = 0;

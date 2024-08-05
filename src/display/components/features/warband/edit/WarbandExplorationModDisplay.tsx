@@ -19,7 +19,7 @@ import { faSave } from '@fortawesome/free-solid-svg-icons'
 import SkillHover from '../../../../components/subcomponents/informationpanel/hovermisc/SkillHover';
 import GenericHover from '../../../../components/generics/GenericHover'
 
-const WarbandExplorationDisplay = (props: any) => {
+const WarbandExplorationModDisplay = (props: any) => {
     const [theme] = useGlobalState('theme');
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -43,44 +43,44 @@ const WarbandExplorationDisplay = (props: any) => {
         NewFactionName = value;
     }
 
-    function AddNewLocation() {
-        const locationdata : any = Manager.GetLocationByID(NewFactionName);
+    function AddNewModifier() {
+        const Modifierdata : any = Manager.GetModifierByID(NewFactionName);
 
-        if (locationdata != null) {
-            WarbandItem.Locations.push(locationdata);
+        if (Modifierdata != null) {
+            WarbandItem.Modifiers.push(Modifierdata);
             UpdateFunction(WarbandItem);
         }
         handleCloseNameEdit();
     }
 
-    function addLocation() {
+    function addModifier() {
         return (
             <>
             <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => handleShowNameEdit()}>
-                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Location</div>
+                    <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Add New Modifier</div>
                     <FontAwesomeIcon icon={faPlus} className="" style={{fontSize:"0.75em"}}/>
                 </div>
             </div>
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
                 
                 <h1 className={'titleShape titlestyler backgroundtc'}>
-                    {"Add New Location"}
+                    {"Add New Modifier"}
                 </h1>
                 <Modal.Body >
                     <div className="row">
                         <div className="col-10">
                             <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                 <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={factionRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateFaction(e.target.value)    } } >
-                                    <option key="modeloption" value="[No Model Selected]">[No Location Selected]</option>
+                                    <option key="modeloption" value="[No Model Selected]">[No Modifier Selected]</option>
                                     {
-                                    <>{Manager.Locations.map((item) => ( <option key="modeloption" value={item.id}>{item.name}</option> ))}</>
+                                    <>{Manager.Modifiers.map((item) => ( <option key="modeloption" value={item.id}>{item.name}</option> ))}</>
                                     }
                                 </Form.Control>
                             </InputGroup>
                         </div>
                         <div className="col-2">
-                        <FontAwesomeIcon icon={faPlus} onClick={() => AddNewLocation()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                        <FontAwesomeIcon icon={faPlus} onClick={() => AddNewModifier()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>
@@ -90,11 +90,11 @@ const WarbandExplorationDisplay = (props: any) => {
     }
 
     function tossItem(item : any) {
-        Manager.DeleteLocationFromWarband(item, WarbandItem);
+        Manager.DeleteModifierFromWarband(item, WarbandItem);
         UpdateFunction(WarbandItem);
     }
 
-    function returnLocationEntry(item : any) {
+    function returnModifierEntry(item : any) {
         
         return (
             
@@ -143,20 +143,19 @@ const WarbandExplorationDisplay = (props: any) => {
             <div>
                 <div className="verticalspacerbig"/>
                 <div className="row">
-                    {addLocation()}
+                    {addModifier()}
                 </div>
                 <div className="verticalspacerbig"/>
                 <div className="row">
                     {
-                    <>{WarbandItem.Locations.map((item) => ( 
-                        <div key="modeloption">{returnLocationEntry(item)}</div> 
+                    <>{WarbandItem.Modifiers.map((item) => ( 
+                        <div key="modeloption">{returnModifierEntry(item)}</div> 
                     ))}</>
                     }
                 </div>
-                
             </div>
         </>
     )
 }
 
-export default WarbandExplorationDisplay;
+export default WarbandExplorationModDisplay;
