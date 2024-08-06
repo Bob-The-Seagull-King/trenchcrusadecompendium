@@ -36,6 +36,7 @@ export const CollectionDataDex : CollectionDataTable = {
             for (i = 0; i < model.dataresults.length; i++) {
                 const modelNew = new QuickRule(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(modelNew, "tc");
+                ItemNew.IsActive = true;
                 model.itemcollection.push(ItemNew);
             }
             model.UpdateList();
@@ -102,6 +103,7 @@ export const CollectionDataDex : CollectionDataTable = {
             for (i = 0; i < model.dataresults.length; i++) {
                 const modelNew = new ListItem(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(modelNew, "tc");
+                ItemNew.IsActive = true;
                 model.itemcollection.push(ItemNew);
             }
             model.UpdateList();
@@ -135,6 +137,7 @@ export const CollectionDataDex : CollectionDataTable = {
             for (i = 0; i < model.dataresults.length; i++) {
                 const modelNew = new QuickRule(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(modelNew, "tc");
+                ItemNew.IsActive = true;
                 model.itemcollection.push(ItemNew);
             }
             model.UpdateList();
@@ -184,6 +187,7 @@ export const CollectionDataDex : CollectionDataTable = {
             for (i = 0; i < model.dataresults.length; i++) {
                 const modelNew = new ListGroup(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(modelNew, "tc");
+                ItemNew.IsActive = true;
                 model.itemcollection.push(ItemNew);
             }
             model.UpdateList();
