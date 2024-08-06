@@ -6,7 +6,7 @@ import {PlayerModel } from "../../../../classes/feature/models/Model";
 import { returnTags } from '../../../../utility/util';
 
 import AdvancedDescriptionItemDisplay from '../../subcomponents/description/AdvancedDescriptionItemDisplay';
-import ModelStat from '../../subcomponents/description/ModelStat';
+import ItemStat from '../../subcomponents/description/ItemStat';
 
 const ModelDisplay = (props: any) => {
     const ModelObject: PlayerModel = props.data
@@ -30,11 +30,11 @@ const ModelDisplay = (props: any) => {
         return (
             <div>
                 <div className="row row-cols-lg-5 row-cols-md-5 row-cols-sx-5 row-cols-xs-3 row-cols-3 justify-content-center">
-                    <ModelStat title={"Base"} value={ModelObject.Base + "mm"}/>
-                    <ModelStat title={"Movement"} value={ModelObject.Movement}/>
-                    <ModelStat title={"Armour"} value={ModelObject.Armour}/>
-                    <ModelStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
-                    <ModelStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
+                    <ItemStat title={"Base"} value={ModelObject.Base + "mm"}/>
+                    <ItemStat title={"Movement"} value={ModelObject.Movement}/>
+                    <ItemStat title={"Armour"} value={ModelObject.Armour}/>
+                    <ItemStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
+                    <ItemStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
                 </div>
             </div>
         )

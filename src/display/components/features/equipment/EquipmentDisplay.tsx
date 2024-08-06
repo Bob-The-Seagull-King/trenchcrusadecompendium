@@ -5,7 +5,7 @@ import React from 'react'
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment';
 import { returnTags, returnDescription } from '../../../../utility/util';
 
-import ModelStat from '../../subcomponents/description/ModelStat';
+import ItemStat from '../../subcomponents/description/ItemStat';
 
 const EquipmentDisplay = (props: any) => {
     const ModelObject: PlayerEquipment = props.data
@@ -17,9 +17,9 @@ const EquipmentDisplay = (props: any) => {
             <div>
                 {((ModelObject.EquipType != null) && (ModelObject.Range != null) && (ModelObject.Modifiers != null)) &&
                 <div className="row row-cols-lg-3 row-cols-md-3 row-cols-sx-3 row-cols-xs-3 row-cols-3 justify-content-center">
-                    <ModelStat title={"Type"} value={ModelObject.EquipType}/>
-                    <ModelStat title={"Range"} value={ModelObject.Range}/>
-                    <ModelStat title={"Modifiers"} value={ModelObject.Modifiers.join(', ')}/>
+                    <ItemStat title={"Type"} value={ModelObject.EquipType}/>
+                    <ItemStat title={"Range"} value={ModelObject.Range}/>
+                    <ItemStat title={"Modifiers"} value={ModelObject.Modifiers.join(', ')}/>
                 </div>
                 }
             </div>

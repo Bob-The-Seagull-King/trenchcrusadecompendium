@@ -17,7 +17,7 @@ import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayT
 import { useGlobalState } from './../../../../../../utility/globalstate'
 import { getColour } from '../../../../../../utility/functions';
 
-import ModelStat from '../../../../subcomponents/description/ModelStat';
+import ItemStat from '../../../../subcomponents/description/ItemStat';
 import GenericPanel from '../../../../generics/GenericPanel'
 import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
 import ModelEquipDisplay from './MemberEquipDisplay';
@@ -220,10 +220,10 @@ const WarbandMemberDisplay = (props: any) => {
                         <div className="verticalspacer"/>
                     </div>
                     <div className="col-md-4 col-6">
-                    <ModelStat title={"Ducat Cost"} value={ducatcost}/>
+                    <ItemStat title={"Ducat Cost"} value={ducatcost}/>
                     </div>
                     <div className="col-md-4 col-6">
-                    <ModelStat title={"Glory Cost"} value={glorycost}/>
+                    <ItemStat title={"Glory Cost"} value={glorycost}/>
                     </div>
                 </div>
             </div>

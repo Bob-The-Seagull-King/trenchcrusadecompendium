@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-const ModelStat = (props: any) => {
+const ItemStat = (props: any) => {
     const Title = props.title;
     const Content = props.value;
 
@@ -15,4 +15,4 @@ const ModelStat = (props: any) => {
     )
 }
 
-export default ModelStat;
+export default ItemStat;
