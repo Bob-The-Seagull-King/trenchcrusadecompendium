@@ -23,7 +23,6 @@ import ModelDisplay from '../../../../../components/features/models/ModelDisplay
 import ModelEquipDisplay from './MemberEquipDisplay';
 import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberEditSkillsDisplay from './MemberEditSkillsDisplay';
-import MemberEditScarsDisplay from './MemberEditScarsDisplay';
 import MemberAddUpgradeDisplay from './MemberAddUpgradeDisplay.';
 import ModelUpgradeDisplay from './MemberUpgradeDisplay';
 
@@ -33,6 +32,7 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import WarbandItemAppendListDisplay from '../WarbandItemAppendListDisplay';
 
 const WarbandMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -242,9 +242,7 @@ const WarbandMemberDisplay = (props: any) => {
     // Return formatted list of injuries
     function returnScars() {
         return (
-            <>
-                <MemberEditScarsDisplay member={WarbandMember} warband={WarbandItem} updater={UpdateFunction} manager={Manager} />    
-            </>
+            <WarbandItemAppendListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
         )
     }
 

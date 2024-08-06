@@ -23,8 +23,7 @@ import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
-import WarbandExplorationDisplay from './edit/WarbandExplorationDisplay';
-import WarbandExplorationModDisplay from './edit/WarbandExplorationModDisplay';
+import WarbandItemAppendListDisplay from './edit/WarbandItemAppendListDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -165,7 +164,7 @@ const WarbandEditDisplay = (props: any) => {
         return (
             <>
                 { WarbandItem != null &&
-                    <WarbandExplorationDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                    <WarbandItemAppendListDisplay manager={Manager} warband={WarbandItem} statictype={'locations'} updater={UpdateFunction}/>    
                 }
             </>
         )
@@ -175,7 +174,7 @@ const WarbandEditDisplay = (props: any) => {
         return (
             <>
                 { WarbandItem != null &&
-                    <WarbandExplorationModDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                    <WarbandItemAppendListDisplay manager={Manager} warband={WarbandItem} statictype={'explorationmodifiers'} updater={UpdateFunction}/>   
                 }
             </>
         )
