@@ -14,20 +14,20 @@ import { ROUTES } from './resources/routes-constants'
 
 const App: React.FC = () => {
 
-    const mastercontroller = new ControllerController();
-    const toolcontroller = new ToolsController();
     const InitializeContentState = useContentPackStore((state) => state.SetFromCookies)
     InitializeContentState();
 
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [theme] = useState(InitTheme());
+    
+    const mastercontroller = new ControllerController();
+    const toolcontroller = new ToolsController();
 
     function InitTheme() {
         const theme = localStorage.getItem('theme');
         if (theme != null) {
             return theme
         } else {
-            return (defaultDark)? 'dark' : 'light'
+            return 'light'
         }
     }
 
