@@ -15,7 +15,6 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
     base: string,
     faction_id: string,
     variant_id: string,
-    attachments: [],
     blurb: [], 
     equipment: [],
     abilities: [],
@@ -37,7 +36,6 @@ class PlayerModel extends TrenchCrusadeItem {
     
     public readonly Faction;
     public readonly Variant;
-    public readonly Attachments;
     public readonly Blurb;
     public readonly Equipment;
     public readonly Abilities;
@@ -56,7 +54,6 @@ class PlayerModel extends TrenchCrusadeItem {
         this.ItemType = ItemType.Model;
         this.Variant = data.variant_id;
         this.Faction = data.faction_id;
-        this.Attachments = data.attachments;
 
         // Stats
         this.Movement = data.movement;
@@ -76,14 +73,6 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Equipment = DescriptionFactory(data.equipment);
         this.Abilities = DescriptionFactory(data.abilities);
     }
-
-    /**
-     * Add an addon to the model
-     * @param list the PlayerAddon being created
-     */
-    public AddAddons(list: PlayerAddon) {
-        this.Addons.push(list);
-    }
     
     /**
      * When destroyed, also delete all associated
@@ -91,9 +80,6 @@ class PlayerModel extends TrenchCrusadeItem {
      */
     destructor() {
         let i = 0;
-        for (i = 0; i < this.Addons.length; i++) {
-            delete this.Addons[i];
-        }
         for (i = 0; i < this.Equipment.length; i++) {
             delete this.Equipment[i];
         }

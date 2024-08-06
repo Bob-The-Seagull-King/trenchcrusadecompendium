@@ -9,6 +9,8 @@ import { PlayerModel } from '../../../../classes/feature/models/Model'
 
 import AddonDisplay from '../../features/addons/AddonDisplay'
 import GenericDisplay from '../../generics/GenericDisplay'
+import { AddonFactory } from '../../../../factories/features/AddonFactory'
+import { PlayerAddon } from '../../../../classes/feature/addons/Addon'
 
 
 const AdvancedDescriptionItemDisplay = (props: any) => {
@@ -113,24 +115,13 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
     }
 
     function findAddon(id: string) {
-        let AddonFound: any = null;
+        let addon: PlayerAddon | null = null;
 
-        let i = 0;
-        for (i = 0; i < parentItem.Addons.length; i++) {
-            if (parentItem.Addons[i].ID == id) {
-                AddonFound = parentItem.Addons[i];
-            }
-        }
+        addon = AddonFactory.CreateNewAddon(id)
 
-        if (AddonFound != null) {
-            return (
-                <GenericDisplay d_colour={parentItem.Team} d_name={AddonFound.Name} d_type={"sub"} d_method={() => <AddonDisplay data={AddonFound} />}/>
-            )
-        } else {
-            return (
-                <span>ERROR: ADDON NOT FOUND</span>
-            )
-        }
+        return (
+            <GenericDisplay d_colour={parentItem.Team} d_name={addon.Name} d_type={"sub"} d_method={() => <AddonDisplay data={addon} />}/>
+        )
     }
 
     return (
