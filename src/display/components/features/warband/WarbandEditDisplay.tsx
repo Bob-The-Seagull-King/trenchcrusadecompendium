@@ -18,8 +18,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
-import WarbandEditBankDucatDisplay from './edit/WarbandEditBankDucatDisplay';
-import WarbandEditBankGloryDisplay from './edit/WarbandEditBankGloryDisplay';
+import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
@@ -89,44 +88,25 @@ const WarbandEditDisplay = (props: any) => {
     function ReturnBank() {
         return (
             <div className="row">
-                <div className="col-12">
-                    <div className="row justify-content-center">
-
-                        <div className="mediumfonttext" style={{width:"fit-content"}}>
-                            Warband Vault
+                { WarbandItem != null &&
+                    <div className="col-12">
+                        <div className="row justify-content-center">
+                            <div className="mediumfonttext" style={{width:"fit-content"}}>
+                                Warband Vault
+                            </div>
+                            <div className="verticalspacerbig"/>
                         </div>
-                        <div className="verticalspacerbig"/>
+                        <div className="row">
+                            <div className="verticalspacer"/>
+                            <WarbandEditBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'ducats'}/>
+                        </div>
+                        <div className="row">
+                            <div className="verticalspacerbig"/>
+                            <WarbandEditBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'glory'}/>
+                        </div>
                     </div>
-                    <div className="row">
-                        <div className="verticalspacer"/>
-                        {ReturnBankDucat()}
-                    </div>
-                    <div className="row">
-                        <div className="verticalspacerbig"/>
-                        {ReturnBankGlory()}
-                    </div>
-                </div>
+                }   
             </div>
-        )
-    }
-    
-    function ReturnBankDucat() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <WarbandEditBankDucatDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                }
-            </>
-        )
-    }
-    
-    function ReturnBankGlory() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <WarbandEditBankGloryDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                }
-            </>
         )
     }
     
