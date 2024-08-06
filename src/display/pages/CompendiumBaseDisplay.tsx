@@ -11,7 +11,7 @@ import ViewTableItemDisplay from '../../display/components/subcomponents/list/Vi
 import BaseFilterSelectDisplay from '../components/subcomponents/filters/BaseFilterSelectDisplay'
 import { DisplayCollectionDataDex, DisplayCollectionType } from './DisplayPageStatic'
 
-const BaseDisplayCompendium = (prop: any) => {
+const CompendiumBaseDisplay = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: CollectionsListPage = prop.controller
     const CollectionController: ViewCollectionsModel = ViewPageController.Collection;
@@ -134,4 +134,4 @@ const BaseDisplayCompendium = (prop: any) => {
     // -------------------------------------------
 }
 
-export default BaseDisplayCompendium
+export default CompendiumBaseDisplay

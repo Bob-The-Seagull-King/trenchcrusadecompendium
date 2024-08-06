@@ -1,46 +1,48 @@
 import React, { useState, useRef } from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import RootComponent from './RootComponent'
 import { persistor, store } from './store/reducers/store'
 import { useContentPackStore } from './store/contentpacks'
+import { ControllerController } from './classes/_high_level_controllers/ControllerController'
+import { ToolsController } from './classes/_high_level_controllers/ToolsController'
+import SuperHeader from './display/headers/SuperHeader'
+import CompendiumRoute from './display/superroutes/CompendiumRoute'
+import HomeRoute from './display/superroutes/HomeRoute'
+import ToolsRoute from './display/superroutes/ToolsRoute'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { ROUTES } from './resources/routes-constants'
 
 const App: React.FC = () => {
 
+    const mastercontroller = new ControllerController();
+    const toolcontroller = new ToolsController();
     const InitializeContentState = useContentPackStore((state) => state.SetFromCookies)
     InitializeContentState();
 
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const [theme, setTheme] = useState(InitTheme());
-
-    function ChangeTheme() {
-        
-        if (theme == 'light') {
-            
-            localStorage.setItem('theme', 'dark');
-            setTheme('dark')
-        } else {
-            
-            localStorage.setItem('theme', 'light');
-            setTheme('light')
-        }
-        
-    }
+    const [theme] = useState(InitTheme());
 
     function InitTheme() {
         const theme = localStorage.getItem('theme');
         if (theme != null) {
             return theme
         } else {
-            return 'light'
+            return (defaultDark)? 'dark' : 'light'
         }
     }
 
     return (
         <div data-theme={theme}>
             <Provider store={store} >
-                <PersistGate loading={null} persistor={persistor}>
-                    <RootComponent />
+                <PersistGate loading={null} persistor={persistor}>      
+                    <Router>
+                        <SuperHeader/>
+                        <Routes>
+                            <Route path={ROUTES.COMPENDIUM_ROUTE} element={<CompendiumRoute controller={mastercontroller} />} />
+                            <Route path={ROUTES.TOOLS_ROUTE} element={<ToolsRoute controller={toolcontroller} />} />
+                            <Route path={ROUTES.HOME_ROUTE} element={<HomeRoute />} />
+                        </Routes>
+                    </Router>
                 </PersistGate>
             </Provider>
         </div>

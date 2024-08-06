@@ -8,11 +8,9 @@ import { CollectionsListPage } from '../../classes/viewmodel/pages/CollectionsLi
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 // Components
-import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import BaseFilterSelectDisplay from '../components/subcomponents/filters/BaseFilterSelectDisplay'
 import { DisplayCollectionDataDex, DisplayCollectionType } from './DisplayPageStatic'
 
-const TiledDisplayCompendium = (prop: any) => {
+const CompendiumTiledDisplay = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: CollectionsListPage = prop.controller
     const CollectionController: ViewCollectionsModel = ViewPageController.Collection;
@@ -53,4 +51,4 @@ const TiledDisplayCompendium = (prop: any) => {
     // -------------------------------------------
 }
 
-export default TiledDisplayCompendium
+export default CompendiumTiledDisplay

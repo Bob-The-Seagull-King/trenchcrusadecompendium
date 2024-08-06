@@ -7,11 +7,9 @@ import { ViewCollectionsModel } from '../../classes/viewmodel/collections/ViewCo
 import { CollectionsListPage } from '../../classes/viewmodel/pages/CollectionsListPage'
 
 // Components
-import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
-import BaseFilterSelectDisplay from '../components/subcomponents/filters/BaseFilterSelectDisplay'
 import { DisplayCollectionDataDex, DisplayCollectionType } from './DisplayPageStatic'
 
-const StrictListDisplayCompendium = (prop: any) => {
+const CompendiumStrictListDisplay = (prop: any) => {
     // Initialize controllers and managers
     const ViewPageController: CollectionsListPage = prop.controller
     const CollectionController: ViewCollectionsModel = ViewPageController.Collection;
@@ -85,4 +83,4 @@ const StrictListDisplayCompendium = (prop: any) => {
     // -------------------------------------------
 }
 
-export default StrictListDisplayCompendium
+export default CompendiumStrictListDisplay
