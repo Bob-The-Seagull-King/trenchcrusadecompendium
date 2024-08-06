@@ -87,7 +87,7 @@ const ToolsContentManager = (prop: any) => {
                             </label>
                             <div className="navpad"/>
                             <div style={{width:"fit-content"}}>
-                                <GenericPopup panelname={"contentpack"} panelObj={null}/>
+                                <GenericPopup d_colour={'tc'} d_type={''} panelname={"contentpack"} panelObj={null}/>
                             </div>
                         </div>
                     </div>

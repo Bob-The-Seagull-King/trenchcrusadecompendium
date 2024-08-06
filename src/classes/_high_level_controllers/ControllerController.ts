@@ -1,13 +1,4 @@
-import { AllModelsListPage } from '../viewmodel/pages/AllModelsListPage'
-import { AllEquipmentListPage } from '../viewmodel/pages/AllEquipmentListPage'
-import { AllFactionListPage } from '../viewmodel/pages/AllFactionListPage'
-import { AllScenarioListPage } from '../viewmodel/pages/AllScenarioListPage'
-import { AllInjuriesListPage } from '../viewmodel/pages/AllInjuriesListPage'
-import { AllTableReferenceListPage } from '../viewmodel/pages/AllTableReferenceListPage'
-import { AllSkillsListPage } from '../viewmodel/pages/AllSkillsListPage'
-import { AllQuickRulesPage } from '../viewmodel/pages/AllQuickRulesListPage'
-import { AllExplorationListPage } from '../viewmodel/pages/AllExplorationListPage'
-import { AllCampaignRulesPage } from '../viewmodel/pages/AllCampaignRulesListPage'
+import { CollectionsListPage } from "../viewmodel/pages/CollectionsListPage"
 
 /**
  * Holds all controllers at the base level of the
@@ -27,16 +18,16 @@ class ControllerController {
     CampaignRulesCollectionController;
 
     constructor () {
-        this.ModelsCollectionController = new AllModelsListPage()
-        this.EquipmentCollectionController = new AllEquipmentListPage()
-        this.FactionCollectionController = new AllFactionListPage()
-        this.ScenarioCollectionController = new AllScenarioListPage()
-        this.InjuryCollectionController = new AllInjuriesListPage()
-        this.SkillCollectionController = new AllSkillsListPage()
-        this.TableReferenceCollectionController = new AllTableReferenceListPage()
-        this.QuickRulesCollectionController = new AllQuickRulesPage()
-        this.CampaignRulesCollectionController = new AllCampaignRulesPage()
-        this.ExplorationCollectionController = new AllExplorationListPage()
+        this.ModelsCollectionController =  new CollectionsListPage('models')
+        this.EquipmentCollectionController = new CollectionsListPage('equipment')
+        this.FactionCollectionController = new CollectionsListPage('faction')
+        this.ScenarioCollectionController = new CollectionsListPage('scenario')
+        this.InjuryCollectionController = new CollectionsListPage('injuries')
+        this.SkillCollectionController = new CollectionsListPage('skills')
+        this.TableReferenceCollectionController = new CollectionsListPage('tablereference')
+        this.QuickRulesCollectionController = new CollectionsListPage('quickrules')
+        this.CampaignRulesCollectionController = new CollectionsListPage('campaignrules')
+        this.ExplorationCollectionController = new CollectionsListPage('exploration')
     }
 
 }

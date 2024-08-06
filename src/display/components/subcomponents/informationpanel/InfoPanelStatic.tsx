@@ -68,7 +68,11 @@ export const PanelDataDex : PanelDataTable = {
         },
         returnButton(open : NoneToNoneFunction) {
             return (
-                <FontAwesomeIcon icon={faCircleInfo} onClick={() => open()} className="pageaccestext hovermouse" style={{fontSize:"3em"}}/>
+                <div className="pageaccessbox hovermouse" onClick={() => open()}>
+                    <p className="loreaccesstext">
+                        Click to Expand Assorted Historical Accounts and Information
+                    </p>
+                </div>
             )
         },
         returnModal(_obj : PlayerFaction) {

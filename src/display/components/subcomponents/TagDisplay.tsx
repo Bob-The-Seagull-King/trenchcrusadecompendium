@@ -14,7 +14,7 @@ const TagDisplay = (props: any) => {
     const tag: ITrenchCrusadeItemTag = props.data
     const name = capitalizeString(tag.tag_name.toString() || "")
     const val =  capitalizeString(tag.val.toString() || "")
-    let GlossaryObject = null;
+    let GlossaryObject: GlossaryRule | null = null;
     const searchResult = Requester.MakeRequest( {searchtype: "id", searchparam: {type: "glossary", id: tag.val}} )
     if (JSON.stringify(searchResult) != "{}") {
         const GlossaryData: IGlossaryRule = searchResult as IGlossaryRule

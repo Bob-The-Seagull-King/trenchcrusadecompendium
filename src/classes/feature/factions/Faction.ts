@@ -4,6 +4,10 @@ import { IEquipmentFactionList, FactionEquip } from './FactionEquip'
 import { IFactionRuleset, FactionRule } from './FactionRule'
 import { byPropertiesOf, DescriptionFactory } from "../../../utility/functions";
 import { IModelFactionList, FactionModel } from './FactionModel'
+import { ViewTableItem } from '../../viewmodel/collections/ViewTableItem';
+import { FactionVariantFactory } from '../../../factories/features/FactionVariantFactory';
+import { Requester } from '../../../factories/Requester';
+import { IPlayerFactionVariant } from './FactionVariant';
 
 /**
  * Data structure of an available faction.
@@ -106,6 +110,36 @@ class PlayerFaction extends TrenchCrusadeItem {
         let i = 0;
         for (i = 0; i < this.Flavour.length; i++) {
             delete this.Flavour[i];
+        }
+    }
+
+    static GetVariants(faction : PlayerFaction, collection : any[]) {
+        const variants : IPlayerFactionVariant[] = Requester.MakeRequest(
+            {
+                searchtype: "complex",
+                searchparam: {
+                    type: "variants",
+                    request: {
+                        operator: "and",
+                        terms: [
+                            {
+                                item: "faction_id", // The string name of the key being checked
+                                value: faction.ID, // The desired value of the key
+                                equals: true, // true -> check if item == value, false -> check if item != value
+                                strict: true, // true -> exact match of value, false -> item includes value
+                                istag: false
+                            }
+                        ],
+                        subparams: []
+                    }
+                }
+            }); 
+        
+        let i = 0;
+        for (i = 0; i < variants.length ; i++) {
+            const variantfaction = FactionVariantFactory.CreateFactory(variants[i],faction.Name);
+            const ItemNew = new ViewTableItem(variantfaction, variantfaction.Team);
+            collection.push(ItemNew);
         }
     }
 }

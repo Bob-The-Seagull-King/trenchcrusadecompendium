@@ -4,20 +4,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from '../../resources/routes-constants'
 
-import PlayerTacticsEquipment from '../../display/pages/PlayerTacticsEquipment'
-import PlayerTacticsModels from '../../display/pages/PlayerTacticsModels'
-import PlayerTacticsFaction from '../../display/pages/PlayerTacticsFaction'
-import GeneralScenarios from '../../display/pages/GeneralScenario'
-import GeneralInjuries from '../../display/pages/GeneralInjuries'
-import GeneralSkills from '../../display/pages/GeneralSkills'
-import GeneralTableReferences from '../../display/pages/GeneralTableReferences'
-import GeneralQuickRules from '../../display/pages/GeneralQuickRules'
-import GeneralCampaignRules from '../../display/pages/GeneralCampaignRules'
-import GeneralExploration from '../../display/pages/GeneralExploration'
-
 import { ControllerController } from '../../classes/_high_level_controllers/ControllerController'
 
 import { useGlobalState } from './../../utility/globalstate'
+import BaseDisplayCompendium from '../../display/pages/BaseDisplayCompendium'
+import TiledDisplayCompendium from '../../display/pages/TiledDisplayCompendium'
+import StrictListDisplayCompendium from '../../display/pages/StrictListDisplayCompendium'
 
 interface IControllerProp {
     controller : ControllerController;
@@ -36,16 +28,16 @@ const CompendiumRoute: React.FC<IControllerProp> = (prop) => {
     return (
         <div className="backgroundBaseColour" data-theme={theme}>
         <Routes>
-        <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<PlayerTacticsModels controller={prop.controller.ModelsCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<PlayerTacticsEquipment controller={prop.controller.EquipmentCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_FACTION_ROUTE} element={<PlayerTacticsFaction controller={prop.controller.FactionCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<GeneralScenarios controller={prop.controller.ScenarioCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<GeneralInjuries controller={prop.controller.InjuryCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<GeneralSkills controller={prop.controller.SkillCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<GeneralTableReferences controller={prop.controller.TableReferenceCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<GeneralQuickRules controller={prop.controller.QuickRulesCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_CAMPAIGN_RULES_ROUTE} element={<GeneralCampaignRules controller={prop.controller.CampaignRulesCollectionController}/>} />
-        <Route path={ROUTES.COMPENDIUM_EXPLORATION_ROUTE} element={<GeneralExploration controller={prop.controller.ExplorationCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.ModelsCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.EquipmentCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_FACTION_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.FactionCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_SCENARIO_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.ScenarioCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_INJURY_ROUTE} element={<StrictListDisplayCompendium controller={prop.controller.InjuryCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_SKILLS_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.SkillCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_TABLEREF_ROUTE} element={<TiledDisplayCompendium controller={prop.controller.TableReferenceCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_RULES_ROUTE} element={<TiledDisplayCompendium controller={prop.controller.QuickRulesCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_CAMPAIGN_RULES_ROUTE} element={<TiledDisplayCompendium controller={prop.controller.CampaignRulesCollectionController}/>} />
+        <Route path={ROUTES.COMPENDIUM_EXPLORATION_ROUTE} element={<BaseDisplayCompendium controller={prop.controller.ExplorationCollectionController}/>} />
         </Routes>
         </div>
     )

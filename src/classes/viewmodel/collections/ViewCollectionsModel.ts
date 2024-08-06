@@ -1,16 +1,21 @@
-import {Requester, IRequest} from '../../../factories/Requester'
+import { Requester, IRequest } from '../../../factories/Requester'
+import { CollectionDataDex, CollectionType } from './CollectionsStatic';
 
-abstract class ViewCollectionsModel {
+class ViewCollectionsModel {
 
     searchParam: any = {};
     dataresults: any = [];
     itemcollection: any[] = [];
 
+    ObjectList: any[] = [];
+    CollectionType: CollectionType;
+
     /**
      * Empty constructor
      */
-    constructor() {
-        undefined;
+    constructor(type : Lowercase<string>) {
+        this.ObjectList = []
+        this.CollectionType = CollectionDataDex[type]
     }
 
     /**
@@ -29,6 +34,9 @@ abstract class ViewCollectionsModel {
         if (this.dataresults.length == undefined) {
             this.dataresults = [this.dataresults]
         }
+        if (this.CollectionType) {
+            this.CollectionType.postSearch(this);
+        }
     }
 
     /**
@@ -46,12 +54,62 @@ abstract class ViewCollectionsModel {
     }
 
     /**
-     * Empty for use in child classes
+     * When destroyed, delete all ability objects
      */
-    UpdateList() {
-        undefined;
+    destructor() {
+        this.CleanupModels() 
     }
 
+    /**
+     * Delete each ability object stored in the collection
+     */
+    CleanupModels() {
+        let i = 0;
+        for (i = 0; i < this.ObjectList.length; i ++) {
+            delete this.ObjectList[i]
+        }
+        this.ObjectList = []
+    }
+
+    /**
+     * Delete the currently searched text Items
+     */
+    CleanupCollection() {
+        let i = 0;
+        for (i = 0; i < this.itemcollection.length; i ++) {
+            delete this.itemcollection[i]
+        }
+        this.itemcollection = []
+    }
+
+    /**
+     * Basic get function
+     */
+    public ReturnObjects() {
+        this.UpdateList();
+        return this.ObjectList;
+    }
+
+    /**
+     * Basic return function
+     */
+    public ReturnItems() {
+        return this.itemcollection;
+    }
+    
+    /**
+     * Updates the list of abilities to be displayed
+     * on screen.
+     */
+    UpdateList() {
+        let i = 0;
+        this.ObjectList = []
+        for (i = 0; i < this.itemcollection.length; i++) {
+            if (this.itemcollection[i].IsActive) {
+                this.ObjectList.push(this.itemcollection[i].HeldItem)
+            }
+        }
+    }
 }
 
 export {ViewCollectionsModel}

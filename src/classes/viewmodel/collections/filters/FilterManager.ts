@@ -1,15 +1,30 @@
 // Import typescript classes
-import {FilterText, FilterTag, FilterItem} from './FilterInterfaces'
+import { FilterText, FilterTag, FilterItem } from './FilterInterfaces'
+import { FilterType, FitlerDataDex } from './FiltersStatic';
 
-abstract class FilterManager {
+class FilterManager {
     
     TextOptions: FilterText[] = [];
     TagOptions: FilterItem[] = [];
-    MiscOptions: FilterItem[] = [];
-    StatOptions: FilterTag[] = [];
+    MiscOptions: FilterItem[] = []
+    StatOptions: FilterTag[] = []
 
-    constructor() {
-        undefined;
+    MyFilters : FilterType;
+
+    constructor(type : Lowercase<string>) {
+        this.MyFilters = FitlerDataDex[type]
+        if (this.MyFilters.findMisc) {
+            this.MiscOptions = this.MyFilters.findMisc();
+        }
+        if (this.MyFilters.findTags) {
+            this.TagOptions = this.MyFilters.findTags();
+        }
+        if (this.MyFilters.findText) {
+            this.TextOptions = this.MyFilters.findText();
+        }
+        if (this.MyFilters.findStat) {
+            this.StatOptions = this.MyFilters.findStat();
+        }
     }
 
     /**
@@ -28,7 +43,7 @@ abstract class FilterManager {
     ReturnMiscFilters() { return this.MiscOptions; }
 
     /**
-     * @returns Array of all stat filters
+     * @returns Array of all misc filters
      */
     ReturnStatFilters() { return this.StatOptions; }
 
@@ -55,12 +70,12 @@ abstract class FilterManager {
     /**
      * @returns Integer count of all the filters that currently exist
      */
-    ReturnCount() { return this.ReturnMiscFilters.length + this.ReturnTagFilters.length + this.ReturnTextFilters.length + this.ReturnStatFilters.length; }
+    ReturnCount() { return this.ReturnMiscFilters.length + this.ReturnTagFilters.length + this.ReturnTextFilters.length; }
 
     /**
      * @returns Integer count of all the filters that are currently active
      */
-    ReturnActiveCount() { return this.ReturnActiveMiscFilters.length + this.ReturnActiveTagFilters.length + this.ReturnActiveTextFilters.length + this.ReturnActiveStatFilters.length; }
+    ReturnActiveCount() { return this.ReturnActiveMiscFilters.length + this.ReturnActiveTagFilters.length + this.ReturnActiveTextFilters.length; }
 }
 
 export {FilterManager}

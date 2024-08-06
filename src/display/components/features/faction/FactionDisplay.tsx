@@ -144,7 +144,7 @@ const FactionDisplay = (props: any) => {
     function returnFlavour() {
         return (
             <div>                
-                <GenericPopup panelname={"factionlore"} panelObj={ModelObject}/>
+                <GenericPopup d_colour={ModelObject.Team} d_type={''} panelname={"factionlore"} panelObj={ModelObject}/>
             </div>
         )
     }

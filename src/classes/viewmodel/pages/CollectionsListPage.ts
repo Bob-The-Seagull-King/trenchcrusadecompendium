@@ -1,20 +1,22 @@
 // Import typescript classes
+import { ViewCollectionsModel } from "../collections/ViewCollectionsModel";
 import { ConvertFiltersToRequest } from "../collections/filters/FilterConvert";
-import { ViewExplorationCollection } from "../collections/ViewExplorationCollections";
-import { ExplorationFilterManager } from "../collections/filters/ExplorationFilterManager";
+import { FilterManager } from "../collections/filters/FilterManager";
 
-class AllExplorationListPage {
+class CollectionsListPage {
 
-    Collection: ViewExplorationCollection;
-    FilterManager: ExplorationFilterManager;
+    Collection: ViewCollectionsModel;
+    FilterManager: FilterManager;
+    TypeName: Lowercase<string>
 
     /**
      * Creates new collection and filter manager objects then
      * initializes the collection
      */
-    constructor() {
-        this.Collection = new ViewExplorationCollection();
-        this.FilterManager = new ExplorationFilterManager();
+    constructor(type: Lowercase<string>) {
+        this.Collection = new ViewCollectionsModel(type);
+        this.FilterManager = new FilterManager(type);
+        this.TypeName = type;
 
         this.initCollection();
     }
@@ -24,7 +26,7 @@ class AllExplorationListPage {
      * then runs that search.
      */
     initCollection() {
-        this.Collection.UpdateSearchParams({searchtype: "file", searchparam: {type: "exploration"}});
+        this.Collection.UpdateSearchParams({searchtype: "file", searchparam: {type: this.Collection.CollectionType.searchId}});
         this.Collection.RunSearch();
     }
 
@@ -34,7 +36,7 @@ class AllExplorationListPage {
      * collection manager's search.
      */
     updateSearch() {
-        const newfilter = ConvertFiltersToRequest(this.FilterManager, "exploration", ["source"])
+        const newfilter = ConvertFiltersToRequest(this.FilterManager, this.Collection.CollectionType.searchId, this.Collection.CollectionType.sort)
         if (!(JSON.stringify(newfilter) == JSON.stringify(this.Collection.searchParam))) {
             this.Collection.UpdateSearchParams(newfilter);
             this.Collection.RunSearch();
@@ -43,4 +45,4 @@ class AllExplorationListPage {
     
 }
 
-export {AllExplorationListPage}
+export {CollectionsListPage}

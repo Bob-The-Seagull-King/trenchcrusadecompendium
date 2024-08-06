@@ -2,22 +2,30 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
 
-import { ViewInjuriesCollection } from '../../classes/viewmodel/collections/ViewInjuriesCollections'
-import { AllInjuriesListPage } from '../../classes/viewmodel/pages/AllInjuriesListPage'
+// Classes
+import { ViewCollectionsModel } from '../../classes/viewmodel/collections/ViewCollectionsModel'
+import { CollectionsListPage } from '../../classes/viewmodel/pages/CollectionsListPage'
 
+// Components
+import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
+import BaseFilterSelectDisplay from '../components/subcomponents/filters/BaseFilterSelectDisplay'
+import { DisplayCollectionDataDex, DisplayCollectionType } from './DisplayPageStatic'
 
-import ListItemDisplay from '../../display/components/features/list/ListItemDisplay'
-
-const GeneralInjuries = (prop: any) => {
+const StrictListDisplayCompendium = (prop: any) => {
     // Initialize controllers and managers
-    const ViewPageController: AllInjuriesListPage = prop.controller
-    const ModelsCollectionController: ViewInjuriesCollection = ViewPageController.Collection;
+    const ViewPageController: CollectionsListPage = prop.controller
+    const CollectionController: ViewCollectionsModel = ViewPageController.Collection;
+    const DisplayPage: DisplayCollectionType = DisplayCollectionDataDex[ViewPageController.TypeName]
 
     // Initialize Use State
-    const [_activeItems] = useState(ModelsCollectionController.ModelsList);
-    const [_foundItems] = useState(ModelsCollectionController.itemcollection);
+    const [_activeItems] = useState(CollectionController.ObjectList);
+    const [_foundItems] = useState(CollectionController.itemcollection);
     const [_keyval] = useState(1);
 
+    // Functions -----------------------------------------------------------------------------------
+
+    // Return result -----------------------------
+    
     // Return result -----------------------------
     return (
         <div className="container">
@@ -62,7 +70,7 @@ const GeneralInjuries = (prop: any) => {
                                             <div>
                                                 <div className="separator"></div>
                                             </div> 
-                                            <ListItemDisplay data={item}/>
+                                                {DisplayPage.returnDisplay(item)}
                                             <br/>
                                         </div>
                                     ))}
@@ -77,4 +85,4 @@ const GeneralInjuries = (prop: any) => {
     // -------------------------------------------
 }
 
-export default GeneralInjuries
+export default StrictListDisplayCompendium

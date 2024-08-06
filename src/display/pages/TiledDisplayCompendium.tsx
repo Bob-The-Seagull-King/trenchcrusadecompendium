@@ -1,25 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
+
+// Classes
+import { ViewCollectionsModel } from '../../classes/viewmodel/collections/ViewCollectionsModel'
+import { CollectionsListPage } from '../../classes/viewmodel/pages/CollectionsListPage'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
-import { ViewCampaignRulesCollection } from '../../classes/viewmodel/collections/ViewCampaignRulesCollection'
-import { AllCampaignRulesPage } from '../../classes/viewmodel/pages/AllCampaignRulesListPage'
+// Components
+import ViewTableItemDisplay from '../../display/components/subcomponents/list/ViewTableItemDisplay'
+import BaseFilterSelectDisplay from '../components/subcomponents/filters/BaseFilterSelectDisplay'
+import { DisplayCollectionDataDex, DisplayCollectionType } from './DisplayPageStatic'
 
-import QuickRuleDisplay from '../../display/components/features/rules/QuickRuleDisplay'
-import GenericDisplay from '../../display/components/generics/GenericDisplay'
-
-const GeneralQuickRules = (prop: any) => {
+const TiledDisplayCompendium = (prop: any) => {
     // Initialize controllers and managers
-    const ViewPageController: AllCampaignRulesPage = prop.controller
-    const ModelsCollectionController: ViewCampaignRulesCollection = ViewPageController.Collection;
+    const ViewPageController: CollectionsListPage = prop.controller
+    const CollectionController: ViewCollectionsModel = ViewPageController.Collection;
+    const DisplayPage: DisplayCollectionType = DisplayCollectionDataDex[ViewPageController.TypeName]
 
     // Initialize Use State
-    const [_activeItems] = useState(ModelsCollectionController.ModelsList);
-    const [_foundItems] = useState(ModelsCollectionController.itemcollection);
+    const [_activeItems] = useState(CollectionController.ObjectList);
+    const [_foundItems] = useState(CollectionController.itemcollection);
     const [_keyval] = useState(1);
 
     // Return result -----------------------------
+        
     return (
         <div className="container">
             <div className="row">
@@ -32,8 +37,7 @@ const GeneralQuickRules = (prop: any) => {
                                     <Masonry gutter="20px">
                                         {_activeItems.map((item) => (
                                             <div className="col" key={"modelDisplay"+item.ID}>
-                                                
-                                                <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <QuickRuleDisplay data={item}/>}/>
+                                                {DisplayPage.returnDisplay(item)}
                                                 <br/>
                                             </div>
                                         ))}
@@ -49,4 +53,4 @@ const GeneralQuickRules = (prop: any) => {
     // -------------------------------------------
 }
 
-export default GeneralQuickRules
+export default TiledDisplayCompendium
