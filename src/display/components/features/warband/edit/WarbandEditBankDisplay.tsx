@@ -6,7 +6,7 @@ import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 
 import { capitalizeString } from '../../../../../utility/functions';
-import WarbandItemEditNumberDisplay from './WarbandItemEditNumberDisplay';
+import GenericEditNumberDisplay from './GenericEditNumberDisplay';
 
 const WarbandEditBankDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -27,10 +27,10 @@ const WarbandEditBankDisplay = (props: any) => {
                 <div className="verticalspacerbig"/>
             </div>
             <div className="col-lg-5 col-md-5 col-12">
-                <WarbandItemEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type+'total'} updater={UpdateFunction}/>
+                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type+'total'} updater={UpdateFunction}/>
             </div>    
             <div className="col-lg-5 col-md-5 col-12">
-                <WarbandItemEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type+'lost'} updater={UpdateFunction}/>
+                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type+'lost'} updater={UpdateFunction}/>
             </div>
         </>
 

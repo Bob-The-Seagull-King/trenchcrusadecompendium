@@ -13,10 +13,9 @@ import { useGlobalState } from '../../../../../utility/globalstate'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { EditItemType, EditItemDataDex } from './WarbandEditStatic';
+import { EditItemType, EditItemDataDex } from './StaticEditList';
 
-const WarbandItemAppendListDisplay = (props: any) => {
+const GenericEditListDisplay = (props: any) => {
     const Manager : WarbandManager = props.manager;
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember | null = props.member;
@@ -95,4 +94,4 @@ const WarbandItemAppendListDisplay = (props: any) => {
     )
 }
 
-export default WarbandItemAppendListDisplay;
+export default GenericEditListDisplay;

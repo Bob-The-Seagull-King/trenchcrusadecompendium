@@ -31,8 +31,8 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
-import WarbandItemAppendListDisplay from '../WarbandItemAppendListDisplay';
-import WarbandItemEditNumberDisplay from '../WarbandItemEditNumberDisplay';
+import GenericEditListDisplay from '../GenericEditListDisplay';
+import GenericEditNumberDisplay from '../GenericEditNumberDisplay';
 
 const WarbandMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -235,9 +235,9 @@ const WarbandMemberDisplay = (props: any) => {
         return (
             <>
                 <div>
-                    <WarbandItemEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
+                    <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
                     <div className="verticalspacer"/>
-                    <WarbandItemAppendListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
+                    <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
                 </div>   
             </>
         )
@@ -246,7 +246,7 @@ const WarbandMemberDisplay = (props: any) => {
     // Return formatted list of injuries
     function returnScars() {
         return (
-            <WarbandItemAppendListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
+            <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
         )
     }
 
