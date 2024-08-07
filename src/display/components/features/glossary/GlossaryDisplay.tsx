@@ -9,12 +9,9 @@ const GlossaryDisplay = (props: any) => {
     const ruleObject: GlossaryRule = props.data
 
     return (
-        <div className={'modelStructure borderstyler bordertc'}>
-            <h1 className={'titleShape titlestyler backgroundtc'}>{ruleObject.Name || ""}</h1>
-            <div className='modelInternalStructure'>
-                <div>
-                    {returnDescription(ruleObject, ruleObject.Description)}
-                </div>
+        <div className='modelInternalStructure'>
+            <div>
+                {returnDescription(ruleObject, ruleObject.Description)}
             </div>
         </div>
     )
