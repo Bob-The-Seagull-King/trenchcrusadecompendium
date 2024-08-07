@@ -176,7 +176,7 @@ const WarbandEditDisplay = (props: any) => {
             <div className="row">
                 
                 { WarbandItem != null &&
-                <div className="col-12">
+                <div className="col-12" key={props.key}>
 
                     <div className="row">
                         {ReturnReturner()}

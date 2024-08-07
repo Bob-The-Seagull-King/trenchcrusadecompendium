@@ -929,6 +929,13 @@ class WarbandManager {
 
         return ReturnMsg;
     }
+
+    // ----------------------------------- Warband Manager Functions --------------------------
+
+    public UpdateWarbandCosts(_warband : Warband) {
+        _warband.DucatCost = TotalCostDucats(_warband);
+        _warband.GloryCost = TotalCostGlory(_warband);
+    }
 }
 
 export {WarbandManager}

@@ -59,12 +59,13 @@ const GenericEditListDisplay = (props: any) => {
     }
 
     function updateModel() {
+        console.log('dsadsad')
         if (restrictionRef.current) { restrictionRef.current.value = NewItemComments; }
         if (costTypeRef.current) { costTypeRef.current.value = NewItemCost.type; }
         if (costValueRef.current) { costValueRef.current.value = NewItemCost.value.toString(); }
 
-        setFilters( EditStaticType.returnFilters());
         UpdateFunction(WarbandItem)
+        setFilters( EditStaticType.returnFilters());
     }
 
     function updateFilter(_filter : string) {
@@ -138,7 +139,7 @@ const GenericEditListDisplay = (props: any) => {
                     </div>
                     <div className="row">
                         <div className="col-6">
-                            <FontAwesomeIcon icon={faPlus} onClick={() => EditStaticType.addNewItem(Manager, WarbandItem, NewItemName, updateModel, handleCloseItemEdit, NewItemCost, WarbandMember)} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
+                            <FontAwesomeIcon icon={faPlus} onClick={() => EditStaticType.addNewItem(Manager, WarbandItem, NewItemName, handleCloseItemEdit, updateModel, NewItemCost, WarbandMember)} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
                         </div>
                     </div>
                 </Modal.Body>
