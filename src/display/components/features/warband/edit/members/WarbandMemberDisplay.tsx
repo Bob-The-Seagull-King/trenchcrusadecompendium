@@ -20,8 +20,6 @@ import { getColour } from '../../../../../../utility/functions';
 import ItemStat from '../../../../subcomponents/description/ItemStat';
 import GenericPanel from '../../../../generics/GenericPanel'
 import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
-import MemberAddUpgradeDisplay from './MemberAddUpgradeDisplay.';
-import ModelUpgradeDisplay from './MemberUpgradeDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
@@ -58,61 +56,6 @@ const WarbandMemberDisplay = (props: any) => {
     const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
 
     let modelNotes = WarbandMember.Notes;
-
-    // Return the upgrade component of a member display
-    function returnUpgrades() {
-        return (
-            <>
-                <div className="row" style={{width:"100%"}}>
-                    <div className="col-12">
-                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
-                        <Masonry gutter="20px">
-                            {returnUpgradeTypeList("ranged")}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                    </div>
-                </div>
-                <div className="verticalspacerbig"/>
-                <div className="row">
-                    <MemberAddUpgradeDisplay member={WarbandMember} data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                </div>
-            </>
-        )
-    }
-    
-    // Return the table of member upgrades
-    function returnUpgradeTypeList(type: string) {
-        return (
-            <div className="col-12" style={{width:"100%"}}>
-                {WarbandMember.Upgrades.length > 0 &&
-                <>
-            <div className="row" style={{width:"100%"}}>
-
-                        <div className="col-5">
-                            <div className="equiptitle">Name</div>
-                        </div>
-                        <div className="col-3">
-                            <div className="equiptitle">Cost</div>
-                        </div>
-                        <div className="col-2">
-                            <div className="equiptitle">Toss</div>
-                        </div>
-                        <div className="col-2">
-                            <div className="equiptitle">Resell</div>
-                        </div>
-            </div>
-            <div className="row" style={{width:"100%"}}>
-                {WarbandMember.Upgrades.map((item) => (
-                    <div key={"flavourFaction"+(item.ID? item.ID : "")}>
-                        <ModelUpgradeDisplay data={item} warband={WarbandItem} member={WarbandMember} updater={UpdateFunction} manager={Manager} />
-                    </div>
-                ))}
-            </div>
-            </>
-            }
-            </div>
-        )
-    }
 
     // Return the text box contianing user notes on the member
     function returnNotes() {
@@ -320,7 +263,7 @@ const WarbandMemberDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    {returnUpgrades()}
+                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberupgrade'} updater={UpdateFunction}/> 
                 </div>
                 <div className="verticalspacer"/>
                 <div>
