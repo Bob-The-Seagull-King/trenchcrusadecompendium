@@ -28,12 +28,13 @@ const GenericEditListDisplay = (props: any) => {
     const costTypeRef = useRef<HTMLSelectElement>(null);
     const costValueRef = useRef<HTMLInputElement>(null);
 
-    let Filters : {[_name : string] : boolean} = EditStaticType.returnFilters();
+    const [Filters, setFilters] = useState( EditStaticType.returnFilters());
     const List_Selection = "";
     let NewItemName : string = List_Selection;
     let NewItemCost : ItemCost = {type: 'ducats', value : 0}
     let NewItemComments = "";
 
+    const [options, setOptions] = useState(EditStaticType.returnOptions(EditStaticType, Manager, WarbandItem, Filters, WarbandMember));
     const [showNameEdit, setShowNameEdit] = useState(false);
     const handleCloseItemEdit = () => setShowNameEdit(false); 
     const handleShowItemEdit = () => setShowNameEdit(true);
@@ -62,27 +63,23 @@ const GenericEditListDisplay = (props: any) => {
         if (costTypeRef.current) { costTypeRef.current.value = NewItemCost.type; }
         if (costValueRef.current) { costValueRef.current.value = NewItemCost.value.toString(); }
 
-        Filters = EditStaticType.returnFilters();
+        setFilters( EditStaticType.returnFilters());
         UpdateFunction(WarbandItem)
     }
 
     function updateFilter(_filter : string) {
-        if (Filters[_filter]) {
-            Filters[_filter] = !(Filters[_filter])
-        } else {
-            Filters[_filter] = true;
-        }
+        const FilterCopy = Filters
+        FilterCopy[_filter] = !(Filters[_filter])
+        setFilters(FilterCopy);
+        setOptions(EditStaticType.returnOptions(EditStaticType, Manager, WarbandItem, Filters, WarbandMember))
     }
 
     function filter(_filter :  string) {
         return (
-            <div className="col-lg-3 col-md-4 col-sm-6">
-                <div className="row">
-                    {_filter}
-                </div>
+            <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="row">
                     <InputGroup className="tagboxpad squaredThree" style={{height:"2em"}}>
-                        <Form.Check type="checkbox" onClick={e => {updateFilter(_filter)}} label="Melee" defaultChecked={Filters[_filter]}/>
+                        <Form.Check type="checkbox" onClick={(e) => {updateFilter(_filter)}} label={_filter} defaultChecked={Filters[_filter]}/>
                     </InputGroup>
                 </div>
             </div>
@@ -111,7 +108,7 @@ const GenericEditListDisplay = (props: any) => {
                             <InputGroup className="tagboxpad" style={{height:"2em"}}>
                                 <Form.Control as="select" style={{height:"100%",textAlign:"center",fontSize:"0.85em",paddingTop:"0em",borderRadius:"0em"}} ref={listRef} aria-label="Default select example"  placeholder="Member Type" onChange={e => { updateItem(e.target.value)    } } >
                                     <option key="modeloption" value="[None Selected]">[None Selected]</option>
-                                    { EditStaticType.returnOptions(EditStaticType, Manager, WarbandItem, Filters, WarbandMember) }
+                                    {options.map((item : any) => (  EditStaticType.displayOptions(EditStaticType, Manager, WarbandItem, item, Filters, WarbandMember) ))}
                                 </Form.Control>
                             </InputGroup>
                         </div>

@@ -127,7 +127,6 @@ export const EditItemDataDex : EditItemDataTable = {
     locations: {
         title : 'Add New Location',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
-            console.log(_warband);
             if (_warband) {return _warband.Locations}
             return []
         },

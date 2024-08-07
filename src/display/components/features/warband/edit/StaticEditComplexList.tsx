@@ -14,7 +14,8 @@ export interface EditListType {
     title      : string,
     returnItemArray : (_warband : Warband | null, _member? : WarbandMember | null) => any[],
     returnShowSelector : (_warband : Warband | null, _member? : WarbandMember | null) => boolean,
-    returnOptions : (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) => JSX.Element,
+    returnOptions : (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) => any[],
+    displayOptions : (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) => JSX.Element,
     returnFilters : () => {[_name : string] : boolean},
     returnItem : (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) => JSX.Element,
     returnItemData : (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) => any,
@@ -42,18 +43,21 @@ export const EditListDataDex : EditListDataTable = {
             return true;
         },
         returnOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null,  _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            if ((_filters['Restricted'] === true) && (_warband)) {
+                return _warband.Faction.Equipment.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member))            
+            } else {
+                return _manager.Equipment.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member))
+            }
+        },
+        displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {((_filters['Restricted'] === true) && (_warband)) &&
-                        <>
-                            {_warband.Faction.Equipment.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member)).map((item : any) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}
-                        </>
-                    }
-                    {((_filters['Restricted'] === false)) && 
-                        <>
-                            {_manager.Equipment.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member)).map((item : any) => ( <option key="modeloption" value={item.Object.ID}>{item.Object.Name}</option> ))}
-                        </>
-                    }
+                {(_filters['Restricted'] === true) &&
+                    <option key={"modeloption"} value={_item.Object.ID}>{_item.Object.Name}</option>
+                } 
+                {(_filters['Restricted'] === false) &&
+                    <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>
+                }
                 </>
             )
         },
@@ -114,16 +118,16 @@ export const EditListDataDex : EditListDataTable = {
 
             if (_filter['Restricted'] === true) {
                 if (_warband) {
-                    if ((_filter['Glory'] === false) && (_item.cost_id === 'glory')) { return false; }
-                    if ((_filter['Ducats'] === false) && (_item.cost_id === 'ducats')) { return false; }
+                    if ((_filter['Glory'] === false) && (_item.CostID === 'glory')) { return false; }
+                    if ((_filter['Ducats'] === false) && (_item.CostID === 'ducats')) { return false; }
                     ItemToCheck = _item.Object;
                 } else { return false; }
             } else { ItemToCheck = _item; }
 
-            if ((_filter['Ranged'] === false) && (_item.Category === 'ranged')) { return false; }     
-            if ((_filter['Melee'] === false) && (_item.Category === 'melee')) { return false; }     
-            if ((_filter['Armour'] === false) && (_item.Category === 'armour')) { return false; }     
-            if ((_filter['Equipment'] === false) && (_item.Category === 'equipment')) { return false; }            
+            if ((_filter['Ranged'] === false) && (ItemToCheck.Category === 'ranged')) { return false; }     
+            if ((_filter['Melee'] === false) && (ItemToCheck.Category === 'melee')) { return false; }     
+            if ((_filter['Armour'] === false) && (ItemToCheck.Category === 'armour')) { return false; }     
+            if ((_filter['Equipment'] === false) && (ItemToCheck.Category === 'equipment')) { return false; }            
 
             return true;
         },
