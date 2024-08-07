@@ -16,12 +16,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
-import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
+import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
 import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
-import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
-import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 import GenericEditListDisplay from './edit/GenericEditListDisplay';
+import GenericEditComplexListDisplay from './edit/GenericEditComplexListDisplay';
 import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
 
 const WarbandEditDisplay = (props: any) => {
@@ -34,11 +33,11 @@ const WarbandEditDisplay = (props: any) => {
     
     function returnNotes() {
         return (
-            <>
+            <div>
                 <InputGroup>
                     <Form.Control as="textarea" style={{height:"10em"}} aria-label="With textarea" defaultValue={warbandNotes} placeholder={"Notes & Information on " + WarbandItem.Name} onChange={e => updateNotes(e.target.value)}/>
                 </InputGroup>
-            </>
+            </div>
         )
     }
 
@@ -49,37 +48,12 @@ const WarbandEditDisplay = (props: any) => {
     
     function ReturnReturner() {
         return (
-            <>
             <div className="col-12" >
                 <div className="hovermouse iconandtextbox" onClick={() => UpdateFunction(null)} style={{width:"fit-content"}}>
                     <FontAwesomeIcon icon={faAngleLeft} className="pageaccestextsmall" style={{paddingTop:"0.25em"}}/>
                     <h1 className="pageaccestextsmall">
                         Return
                     </h1>
-                </div>
-            </div>
-            </>
-        )
-    }
-    
-
-    function ReturnName() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandname'} updater={UpdateFunction}/>  
-                }
-            </>
-        )
-    }
-    
-    function ReturnFaction() {
-        return (
-            <div className="row">
-                <div className="col-12">
-                    { WarbandItem != null &&
-                        <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                    }
                 </div>
             </div>
         )
@@ -108,58 +82,7 @@ const WarbandEditDisplay = (props: any) => {
                 }   
             </div>
         )
-    }
-    
-    function ReturnImage() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandimage'} updater={UpdateFunction}/> 
-                }
-            </>
-        )
-    }
-    
-    function ReturnMembers() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <WarbandMembersDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                }
-            </>
-        )
-    }
-    
-    function ReturnArmoury() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <WarbandArmouryDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                }
-            </>
-        )
-    }
-    
-    function ReturnExploration() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <GenericEditListDisplay manager={Manager} warband={WarbandItem} statictype={'locations'} updater={UpdateFunction}/>    
-                }
-            </>
-        )
-    }
-    
-    function ReturnExplorationMods() {
-        return (
-            <>
-                { WarbandItem != null &&
-                    <GenericEditListDisplay manager={Manager} warband={WarbandItem} statictype={'explorationmodifiers'} updater={UpdateFunction}/>   
-                }
-            </>
-        )
-    }
-    
+    }    
 
     const [showExport, setShowExport] = useState(false);
     const handleCloseExport = () => setShowExport(false); 
@@ -175,7 +98,7 @@ const WarbandEditDisplay = (props: any) => {
 
     function ReturnExport() {
         return (
-            <>
+            <div>
                 { WarbandItem != null &&
                 <>
                     <div className="row row-cols-md-2 row-cols-1">
@@ -245,27 +168,33 @@ const WarbandEditDisplay = (props: any) => {
                     </Modal>
                     </>
                 }
-            </>
+            </div>
         )
     }
 
     return (
             <div className="row">
+                
+                { WarbandItem != null &&
                 <div className="col-12">
 
                     <div className="row">
-                            {ReturnReturner()}
+                        {ReturnReturner()}
                     </div>
 
                     <div className="row">
-                        {ReturnName()}
+                        <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandname'} updater={UpdateFunction}/> 
                     </div>
 
                     <div className="verticalspacerbig"/>
 
                     <div className="row justify-content-center">
                         <div className="col-lg-9 col-md-9 col-12">
-                            {ReturnFaction()}
+                            <div className="row">
+                                <div className="col-12">
+                                    <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                                </div>
+                            </div>
                             <div>
                                 <div className="verticalspacerbig"/>
                                 <div className="separator">&#x27E1;</div>
@@ -274,68 +203,53 @@ const WarbandEditDisplay = (props: any) => {
                             <div className="verticalspacerbig"/>
                         </div>
                         <div className="col-lg-3 col-md-3 col-12">
-                            {ReturnImage()}
-                        </div>
-                    </div>
-                    <div className="row justify-content-center">
-                        <div>
-                            <div className="verticalspacerbig"/>
-                            <div className="separator">&#x27E1;</div>
+                            <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandimage'} updater={UpdateFunction}/> 
                         </div>
                     </div>
 
+                    <div className="verticalspacerbig"/>
+                    <div className="separator" style={{fontSize:"3em"}}>&#x27E1;</div>
+                    <div className="verticalspacerbig"/>
+
                     <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-8 col-12">
-                            {ReturnMembers()}
+                            <WarbandMembersDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
                         </div>
-                        <div className="col-lg-4 col-md-4 col-12">
-                            {ReturnArmoury()}                            
+                        <div className="col-lg-4 col-md-4 col-12">     
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/> 
                         </div>
                     </div>
+
                     <div className="verticalspacerbig"/>
-                    <div>
-                        <div className="separator" style={{fontSize:"3em"}}>Exploration</div>
-                    </div> 
+                    <div className="separator" style={{fontSize:"3em"}}>Exploration</div>
+                    <div className="verticalspacerbig"/>
+
                     <div className="row justify-content-center">
                         <div className="col-lg-6 col-md-6 col-12">
-                            {ReturnExploration()}
+                            <GenericEditListDisplay manager={Manager} warband={WarbandItem} statictype={'locations'} updater={UpdateFunction}/> 
                         </div>
                         <div className="col-lg-6 col-md-6 col-12">
-                            {ReturnExplorationMods()}                            
+                            <GenericEditListDisplay manager={Manager} warband={WarbandItem} statictype={'explorationmodifiers'} updater={UpdateFunction}/>                   
                         </div>
                     </div>
+                    
                     <div className="verticalspacerbig"/>
-                    <div>
-                        <div className="separator">&#x27E1;</div>
-                    </div> 
-                    <div>
-                        <div className="verticalspacerbig"/>
-                    </div>
-                    <div>
-                        {returnNotes()}
-                    </div>
-                    <div>
-                        <div className="verticalspacerbig"/>
-                    </div>
-                    <div>
-                        <div className="separator">&#x27E1;</div>
-                    </div> 
-                    <div>
-                        <div className="verticalspacerbig"/>
-                    </div>
-                    <div>
-                        {ReturnExport()}
-                    </div>                        
-                    <div>
-                        <div className="verticalspacerbig"/>
-                    </div>
-                    <div>
-                        <div className="separator">&#x27E1;</div>
-                    </div> 
-                    <div>
-                        <div className="verticalspacerbig" style={{paddingTop:"2em"}}/>
-                    </div>
+                    <div className="separator">&#x27E1;</div>
+                    <div className="verticalspacerbig"/>
+
+                    {returnNotes()}
+
+                    <div className="verticalspacerbig"/>
+                    <div className="separator">&#x27E1;</div>
+                    <div className="verticalspacerbig"/>
+
+                    {ReturnExport()}
+
+                    <div className="verticalspacerbig"/>
+                    <div className="separator">&#x27E1;</div>
+                    <div className="verticalspacerbig"/>
                 </div>
+                }
             </div>
     )
 }
