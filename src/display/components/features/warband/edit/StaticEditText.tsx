@@ -78,8 +78,8 @@ export const EditTextDataDex : EditTextDataTable = {
             const srcVal = (_item)? _item : "";
             
             return (
-                <div className={" hovermouse borderstyler bordertc"} style={{width:"100%"}} onClick={() => open()} >
-                    <Image src={srcVal} />
+                <div className={" hovermouse borderstyler bordertc"} style={{width:"100%", maxHeight: "calc(40vh)"}} onClick={() => open()} >
+                    <Image src={srcVal} fluid />
                 </div>
             )
         },
