@@ -7,6 +7,9 @@ import ItemEquipDisplay from './ItemEquipDisplay'
 import { Requester } from '../../../../../factories/Requester'
 import { FactionUpgrade } from '../../../../../classes/feature/factions/FactionUpgrade'
 import ItemUpgradeDisplay from './ItemUpgradeDisplay'
+import ItemMemberDisplay from './ItemMemberDisplay'
+import { GetDucatCost, GetGloryCost } from '../../../../../classes/lists/warbandmanagerstatic'
+import { makestringpresentable } from '../../../../../utility/functions'
 
 export interface ItemCost {
     type : string,
@@ -174,6 +177,117 @@ export const EditListDataDex : EditListDataTable = {
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband) {
                 _manager.DeleteEquipmentFromWarband(_item, _warband)
+                update()
+            }
+        }
+
+    },
+    warbandmember: {
+        title      : 'Add New Warrior',
+        returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_warband) { return _warband.Members; }
+            return []
+        },
+        returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
+            return true;
+        },
+        returnOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null,  _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            if ((_filters['Restricted'] === true) && (_warband)) {
+                return _warband.Faction.Models.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member))            
+            } else { return _manager.Models.filter((value : any) => _this.filterItem(_this, _manager, _warband, value, _filters,  _member)) }
+        },
+        displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            return (
+                <>
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.Object.ID}>{_item.Object.Name}</option> } 
+                    {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
+                </>
+            )
+        },
+        returnFilters () {
+            const FilterList : {[_name : string] : boolean} = {}
+
+            FilterList['Restricted'] = true;
+            FilterList['Glory'] = true;
+            FilterList['Ducats'] = true;
+
+            return FilterList;
+        },
+        returnItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+            return ( <><div className="verticalspacerbig"/><ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/></> )
+        },
+        returnItemData (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            if ((_filter['Restricted'] === true) && (_warband)) {
+                const tempModel = _manager.GetModelByID(_item)
+                let temp : any = null;
+                let i = 0;
+                for (i = 0 ; i < _warband.Faction.Models.length ; i++) {
+                    if (_warband.Faction.Models[i].ID == (tempModel? tempModel.ID : "")) {
+                        temp = _warband.Faction.Models[i]
+                        break;
+                    }
+                }
+                return temp;
+            } else {
+                return _item;
+            }
+        },
+        returnComment (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            if (typeof _item === 'string') { return  ""
+            } else if (_warband) {
+                let rstrctnlst = "";
+                let i = 0;
+                for (i = 0; i < _item.Object.Tags.length; i++) {
+                    if (i > 0) {
+                        rstrctnlst += ', '
+                    }
+                    rstrctnlst += makestringpresentable( _item.Object.Tags[i].tag_name)
+                }
+                return rstrctnlst;
+            }
+            return "";
+        },
+        returnCost (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            if (typeof _item === 'string') {
+                return {type: 'ducats', value: 0}
+            } else { return {type: _item.CostID, value: _item.Cost} }
+        },
+        addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
+            if (_warband) {
+                const Result = _manager.NewMember(_warband, "", itemName, _cost.value.toString(), _cost.type);
+                update()
+            }
+        },
+        filterItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean},  _member? : WarbandMember | null) {
+
+            if (_filter['Restricted'] === true) {
+                if (_warband) {
+                    if ((_filter['Glory'] === false) && (_item.CostID === 'glory')) { return false; }
+                    if ((_filter['Ducats'] === false) && (_item.CostID === 'ducats')) { return false; }
+                } else { return false; }
+            }        
+
+            return true;
+        },
+        tossItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+            if (_warband) {
+                _warband.DucatLost += parseInt(GetDucatCost(_item));
+                _warband.GloryLost += parseInt(GetGloryCost(_item));
+                _manager.DeleteModelFromWarband(_item, _warband)
+                update()
+            }
+        },
+        sellItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+            if (_warband) {
+                _warband.DucatLost +=  Math.floor(parseInt(GetDucatCost(_item)));
+                _warband.GloryLost +=  Math.floor(parseInt(GetGloryCost(_item)));
+                _manager.DeleteModelFromWarband(_item, _warband)
+                update()
+            }
+        },
+        refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+            if (_warband) {
+                _manager.DeleteModelFromWarband(_item, _warband)
                 update()
             }
         }

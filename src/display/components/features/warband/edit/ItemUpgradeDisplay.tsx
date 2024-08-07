@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import { ListEquipment } from '../../../../../classes/lists/ListEquipment'
 import { Warband } from '../../../../../classes/lists/Warband'
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager'
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember'
@@ -13,7 +12,6 @@ import { faCoins } from '@fortawesome/free-solid-svg-icons'
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons'
 
 import GenericPanel from '../../../../components/generics/GenericPanel'
-import EquipmentDisplay from '../../../../components/features/equipment/EquipmentDisplay'
 import UpgradeDisplay from '../../equipment/UpgradeDisplay'
 import { FactionUpgrade } from '../../../../../classes/feature/factions/FactionUpgrade'
 

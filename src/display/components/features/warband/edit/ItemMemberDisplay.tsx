@@ -1,42 +1,43 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import '../../../../../../resources/styles/_icon.scss'
+import '../../../../../resources/styles/_icon.scss'
 import React, { useRef, useState } from 'react'
 
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
-import { Warband } from '../../../../../../classes/lists/Warband';
-import { WarbandManager } from '../../../../../../classes/lists/warbandmanager';
-import { WarbandMember } from '../../../../../../classes/lists/WarbandMember';
-import { returnTags } from '../../../../../../utility/util';
-import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic } from '../../../../../../classes/lists/warbandmanagerstatic';
+import { Warband } from '../../../../../classes/lists/Warband';
+import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
+import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
+import { returnTags } from '../../../../../utility/util';
+import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic } from '../../../../../classes/lists/warbandmanagerstatic';
 
-import { useGlobalState } from './../../../../../../utility/globalstate'
-import { getColour } from '../../../../../../utility/functions';
+import { useGlobalState } from './../../../../../utility/globalstate'
+import { getColour } from '../../../../../utility/functions';
 
-import ItemStat from '../../../../subcomponents/description/ItemStat';
-import GenericPanel from '../../../../generics/GenericPanel'
-import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
+import ItemStat from '../../../subcomponents/description/ItemStat';
+import GenericPanel from '../../../generics/GenericPanel'
+import ModelDisplay from '../../../../components/features/models/ModelDisplay';  
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSave } from '@fortawesome/free-solid-svg-icons'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
-import GenericEditListDisplay from '../GenericEditListDisplay';
-import GenericEditComplexListDisplay from '../GenericEditComplexListDisplay';
-import GenericEditNumberDisplay from '../GenericEditNumberDisplay';
-import GenericEditTextDisplay from '../GenericEditTextDisplay';
+import GenericEditListDisplay from './GenericEditListDisplay';
+import GenericEditComplexListDisplay from './GenericEditComplexListDisplay';
+import GenericEditNumberDisplay from './GenericEditNumberDisplay';
+import GenericEditTextDisplay from './GenericEditTextDisplay';
 
-const WarbandMemberDisplay = (props: any) => {
+const ItemMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
+
+    const TossItem = props.tossitem;
+    const SellItem = props.sellitem;
+    const RefundItem = props.refunditem;
 
     const bannedModelTags = ["empty"]
     const ducatcost = GetDucatCost(WarbandMember);
@@ -136,28 +137,6 @@ const WarbandMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
-    // Remove model and get nothing back
-    function buryModel() {
-        WarbandItem.DucatLost += parseInt(GetDucatCost(WarbandMember));
-        WarbandItem.GloryLost += parseInt(GetGloryCost(WarbandMember));
-        Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
-        UpdateFunction(WarbandItem)
-    }
-
-    // Remove model and get half the cost back
-    function sellModel() {
-        WarbandItem.DucatLost += Math.round((parseInt(GetDucatCost(WarbandMember)))/2);
-        WarbandItem.GloryLost += Math.round((parseInt(GetGloryCost(WarbandMember)))/2);
-        Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
-        UpdateFunction(WarbandItem)
-    }
-
-    // Remove model and get all the cost back
-    function refundModel() {
-        Manager.DeleteModelFromWarband(WarbandMember, WarbandItem)
-        UpdateFunction(WarbandItem)
-    }
-
     // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
@@ -198,7 +177,7 @@ const WarbandMemberDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => buryModel()}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => TossItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Bury This Model</div>
                         </div>
                     </div>
@@ -206,7 +185,7 @@ const WarbandMemberDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => sellModel()}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => SellItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Sell This Model</div>
                         </div>
                     </div>
@@ -214,7 +193,7 @@ const WarbandMemberDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => refundModel()}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => RefundItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Refund This Model</div>
                         </div>
                     </div>
@@ -356,4 +335,4 @@ const WarbandMemberDisplay = (props: any) => {
     )
 }
 
-export default WarbandMemberDisplay;
+export default ItemMemberDisplay;

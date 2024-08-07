@@ -18,7 +18,6 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
 import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
-import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import GenericEditListDisplay from './edit/GenericEditListDisplay';
 import GenericEditComplexListDisplay from './edit/GenericEditComplexListDisplay';
 import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
@@ -213,7 +212,7 @@ const WarbandEditDisplay = (props: any) => {
 
                     <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-8 col-12">
-                            <WarbandMembersDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandmember'} updater={UpdateFunction}/> 
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">     
                             <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/> 
