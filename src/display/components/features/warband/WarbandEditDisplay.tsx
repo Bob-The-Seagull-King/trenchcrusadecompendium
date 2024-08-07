@@ -16,13 +16,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
-import WarbandNameEditDisplay from './edit/WarbandEditNameDisplay';
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplat';
 import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
 import WarbandImageEditDisplay from './edit/WarbandEditImageDisplay';
 import WarbandMembersDisplay from './edit/members/WarbandMembersDisplay';
 import WarbandArmouryDisplay from './edit/armoury/WarbandArmouryDisplay';
 import GenericEditListDisplay from './edit/GenericEditListDisplay';
+import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
 
 const WarbandEditDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -67,7 +67,7 @@ const WarbandEditDisplay = (props: any) => {
         return (
             <>
                 { WarbandItem != null &&
-                    <WarbandNameEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandname'} updater={UpdateFunction}/>  
                 }
             </>
         )
@@ -114,7 +114,7 @@ const WarbandEditDisplay = (props: any) => {
         return (
             <>
                 { WarbandItem != null &&
-                    <WarbandImageEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandimage'} updater={UpdateFunction}/> 
                 }
             </>
         )

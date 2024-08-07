@@ -33,6 +33,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import GenericEditListDisplay from '../GenericEditListDisplay';
 import GenericEditNumberDisplay from '../GenericEditNumberDisplay';
+import GenericEditTextDisplay from '../GenericEditTextDisplay';
 
 const WarbandMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -43,15 +44,8 @@ const WarbandMemberDisplay = (props: any) => {
     const bannedModelTags = ["empty"]
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
-    const Warband_Name = WarbandMember? WarbandMember.Name : "";
-    
-    let NewBandName = Warband_Name;
 
     const [theme] = useGlobalState('theme');
-
-    const [showNameEdit, setShowNameEdit] = useState(false);
-    const handleCloseNameEdit = () => setShowNameEdit(false); 
-    const handleShowNameEdit = () => setShowNameEdit(true);
 
     const [showExport, setShowExport] = useState(false);
     const handleCloseExport = () => setShowExport(false); 
@@ -61,21 +55,8 @@ const WarbandMemberDisplay = (props: any) => {
     const handleCloseExportBasic = () => setShowExportBasic(false); 
     const handleShowExportBasic = () => setShowExportBasic(true);
 
-    const inputRefNameEdit = useRef<HTMLInputElement>(null);
     const modelExport = ExportModelDisplayText(WarbandMember, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
-
-    function updateName(value: string) {
-        NewBandName = value;
-    }
-
-    function EditWarbandName() {
-        if (WarbandMember != null) {
-            WarbandMember.Name = NewBandName;
-        }
-        UpdateFunction(WarbandItem)
-        handleCloseNameEdit();
-    }
 
     let modelNotes = WarbandMember.Notes;
 
@@ -361,8 +342,7 @@ const WarbandMemberDisplay = (props: any) => {
         <>
         <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
             <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
-                {WarbandMember.Name || ""}
-                <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShowNameEdit()}/>
+                <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
                 <div className="row float-end">
                     <div className='col-12 float-end'>
                         <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
@@ -440,25 +420,6 @@ const WarbandMemberDisplay = (props: any) => {
                 
             </div>
         </div>
-        
-        <Modal data-theme={theme} onEnterKeyDown={() => handleCloseNameEdit()} show={showNameEdit}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseNameEdit} keyboard={true}  centered>
-                
-                <h1 className={'titleShape titlestyler backgroundtc'}>
-                    {"Update Name"}
-                </h1>
-                <Modal.Body >
-                    <div className="row">
-                        <div className="col-10">
-                            <InputGroup className="tagboxpad" >
-                                <Form.Control size="lg" className="no-margins" ref={inputRefNameEdit} style={{fontSize:"1.5em", height:"0.5em", textAlign:"center"}} onChange={e => updateName(e.target.value)} aria-label="Text input" defaultValue={Warband_Name} placeholder=""/>
-                            </InputGroup>
-                        </div>
-                        <div className="col-2">
-                            <FontAwesomeIcon icon={faSave} onClick={() => EditWarbandName()} className="pageaccestextsmall hovermouse" style={{fontSize:"3em"}}/>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
 
             <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
                 
