@@ -59,7 +59,6 @@ const GenericEditListDisplay = (props: any) => {
     }
 
     function updateModel() {
-        console.log('dsadsad')
         if (restrictionRef.current) { restrictionRef.current.value = NewItemComments; }
         if (costTypeRef.current) { costTypeRef.current.value = NewItemCost.type; }
         if (costValueRef.current) { costValueRef.current.value = NewItemCost.value.toString(); }

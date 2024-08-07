@@ -20,8 +20,6 @@ import { getColour } from '../../../../../../utility/functions';
 import ItemStat from '../../../../subcomponents/description/ItemStat';
 import GenericPanel from '../../../../generics/GenericPanel'
 import ModelDisplay from '../../../../../components/features/models/ModelDisplay';  
-import ModelEquipDisplay from './MemberEquipDisplay';
-import MemberAddEquipDisplay from './MemberAddEquipDisplay';
 import MemberAddUpgradeDisplay from './MemberAddUpgradeDisplay.';
 import ModelUpgradeDisplay from './MemberUpgradeDisplay';
 
@@ -32,6 +30,7 @@ import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import GenericEditListDisplay from '../GenericEditListDisplay';
+import GenericEditComplexListDisplay from '../GenericEditComplexListDisplay';
 import GenericEditNumberDisplay from '../GenericEditNumberDisplay';
 import GenericEditTextDisplay from '../GenericEditTextDisplay';
 
@@ -106,61 +105,6 @@ const WarbandMemberDisplay = (props: any) => {
                 {WarbandMember.Upgrades.map((item) => (
                     <div key={"flavourFaction"+(item.ID? item.ID : "")}>
                         <ModelUpgradeDisplay data={item} warband={WarbandItem} member={WarbandMember} updater={UpdateFunction} manager={Manager} />
-                    </div>
-                ))}
-            </div>
-            </>
-            }
-            </div>
-        )
-    }
-
-    // Return a formatted table of a member's equipment
-    function returnEquipment() {
-        return (
-            <>
-                <div className="row" style={{width:"100%"}}>
-                    <div className="col-12">
-                    <ResponsiveMasonry columnsCountBreakPoints={{350: 1}} >
-                        <Masonry gutter="20px">
-                            {returnEquipTypeList("ranged")}
-                        </Masonry>
-                    </ResponsiveMasonry>
-                    </div>
-                </div>
-                <div className="verticalspacerbig"/>
-                <div className="row">
-                    <MemberAddEquipDisplay member={WarbandMember} data={WarbandItem} updater={UpdateFunction} manager={Manager} />
-                </div>
-            </>
-        )
-    }
-    
-    // Return a subtype of equipment items
-    function returnEquipTypeList(type: string) {
-        return (
-            <div className="col-12" style={{width:"100%"}}>
-                {WarbandMember.Equipment.length > 0 &&
-                <>
-            <div className="row" style={{width:"100%"}}>
-
-                        <div className="col-5">
-                            <div className="equiptitle">Name</div>
-                        </div>
-                        <div className="col-3">
-                            <div className="equiptitle">Cost</div>
-                        </div>
-                        <div className="col-2">
-                            <div className="equiptitle">Toss</div>
-                        </div>
-                        <div className="col-2">
-                            <div className="equiptitle">Resell</div>
-                        </div>
-            </div>
-            <div className="row" style={{width:"100%"}}>
-                {WarbandMember.Equipment.map((item) => (
-                    <div key={"flavourFaction"+(item.ID? item.ID : "")}>
-                        <ModelEquipDisplay data={item} warband={WarbandItem} member={WarbandMember} updater={UpdateFunction} manager={Manager} />
                     </div>
                 ))}
             </div>
@@ -384,7 +328,7 @@ const WarbandMemberDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    {returnEquipment()}
+                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberequipment'} updater={UpdateFunction}/> 
                 </div>
                 <div className="verticalspacer"/>
                 <div>
