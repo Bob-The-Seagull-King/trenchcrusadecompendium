@@ -1,8 +1,13 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
+import { faCircleInfo, faFileLines, faQuoteLeft } from "@fortawesome/free-solid-svg-icons"
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction'
 import { returnDescription } from '../../../../utility/util'
+import { Warband } from '../../../../classes/lists/Warband'
+import { WarbandMember } from '../../../../classes/lists/WarbandMember'
+import Button from 'react-bootstrap/esm/Button'
+import InputGroup from 'react-bootstrap/esm/InputGroup'
+import Form from 'react-bootstrap/Form';
 
 export interface PanelType {
     id      : string,
@@ -86,6 +91,110 @@ export const PanelDataDex : PanelDataTable = {
                                 {returnDescription(ModelObject, ModelObject.Flavour)}
                             </div>
                         </div>
+                    </div>
+                </div>
+            )
+        }
+    },
+    exportwarbandbasic: {
+        id : "Faction Lore",
+        returnTitle(_obj : Warband) {
+            return "Warband Basic Export";
+        },
+        returnButton(open : NoneToNoneFunction) {
+            return (
+                <div className="col">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => open()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Export Basic Information</div>
+                        </div>
+                    </div>
+                </div>
+            )
+        },
+        returnModal(_obj : string) {
+            return (
+                <div className="row">
+                    <div className="col-12">
+                        <InputGroup className="tagboxpad" >
+                            <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={_obj} placeholder={""} className="formparagraphtext" style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                        </InputGroup>
+                    </div>
+                </div>
+            )
+        }
+    },
+    exportwarbandexpanded: {
+        id : "Faction Lore",
+        returnTitle(_obj : string) {
+            return "Warband Export";
+        },
+        returnButton(open : NoneToNoneFunction) {
+            return (
+                <div className="col">
+                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => open()}>
+                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Export Warband Information</div>
+                        </div>
+                    </div>
+                </div>
+            )
+        },
+        returnModal(_obj : string) {
+            return (
+                <div className="row">
+                    <div className="col-12">
+                        <InputGroup className="tagboxpad" >
+                            <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={_obj} placeholder={""} className="formparagraphtext" style={{height:"40em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                        </InputGroup>
+                    </div>
+                </div>
+            )
+        }
+    },
+    exportmemberbasic: {
+        id : "Faction Lore",
+        returnTitle(_obj : string) {
+            return "Warband Export";
+        },
+        returnButton(open : NoneToNoneFunction) {
+            return (
+                <Button style={{padding:"0em",paddingLeft:"0.5em"}} variant="" onClick={() => open()}>
+                    <FontAwesomeIcon icon={faQuoteLeft} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                </Button>
+            )
+        },
+        returnModal(_obj : string) {
+            return (
+                <div className="row">
+                    <div className="col-12">
+                        <InputGroup className="tagboxpad" >
+                            <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={_obj} placeholder={""} className="formparagraphtext" style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                        </InputGroup>
+                    </div>
+                </div>
+            )
+        }
+    },
+    exportmemberexpanded: {
+        id : "Faction Lore",
+        returnTitle(_obj : string) {
+            return "Expanded Member Information";
+        },
+        returnButton(open : NoneToNoneFunction) {
+            return (
+                <Button style={{padding:"0em"}} variant="" onClick={() => open()}>
+                    <FontAwesomeIcon icon={faFileLines} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                </Button>
+            )
+        },
+        returnModal(_obj : string) {
+            return (
+                <div className="row">
+                    <div className="col-12">
+                        <InputGroup className="tagboxpad" >
+                            <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={_obj} placeholder={""} className="formparagraphtext" style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                        </InputGroup>
                     </div>
                 </div>
             )

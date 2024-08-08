@@ -2,11 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React, { useRef, useState } from 'react'
 
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-
 import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
@@ -19,15 +14,12 @@ import { getColour } from '../../../../../utility/functions';
 import ItemStat from '../../../subcomponents/description/ItemStat';
 import GenericPanel from '../../../generics/GenericPanel'
 import ModelDisplay from '../../../../components/features/models/ModelDisplay';  
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileLines } from '@fortawesome/free-solid-svg-icons'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
-import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import GenericEditListDisplay from './GenericEditListDisplay';
 import GenericEditComplexListDisplay from './GenericEditComplexListDisplay';
 import GenericEditNumberDisplay from './GenericEditNumberDisplay';
 import GenericEditTextDisplay from './GenericEditTextDisplay';
+import GenericEditTextBoxDisplay from './GenericEditTextBoxDisplay';
+import GenericPopup from '../../../../components/generics/GenericPopup';
 
 const ItemMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -45,35 +37,8 @@ const ItemMemberDisplay = (props: any) => {
 
     const [theme] = useGlobalState('theme');
 
-    const [showExport, setShowExport] = useState(false);
-    const handleCloseExport = () => setShowExport(false); 
-    const handleShowExport = () => setShowExport(true);
-
-    const [showExportBasic, setShowExportBasic] = useState(false);
-    const handleCloseExportBasic = () => setShowExportBasic(false); 
-    const handleShowExportBasic = () => setShowExportBasic(true);
-
     const modelExport = ExportModelDisplayText(WarbandMember, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
-
-    let modelNotes = WarbandMember.Notes;
-
-    // Return the text box contianing user notes on the member
-    function returnNotes() {
-        return (
-            <>
-                <InputGroup>
-                    <Form.Control as="textarea" aria-label="With textarea" defaultValue={modelNotes} placeholder={"Notes & Information on " + WarbandMember.Name} onChange={e => updateNotes(e.target.value)}/>
-                </InputGroup>
-            </>
-        )
-    }
-
-    // Update the member's notes
-    function updateNotes(_value : string) {
-        modelNotes = _value;
-        WarbandMember.Notes = modelNotes;
-    }
 
     // Return the basic information of the member
     function returnStats() {
@@ -96,26 +61,6 @@ const ItemMemberDisplay = (props: any) => {
                     </div>
                 </div>
             </div>
-        )
-    }
-
-    // Return formatted list of skills
-    function returnSkills() {
-        return (
-            <>
-                <div>
-                    <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
-                    <div className="verticalspacer"/>
-                    <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
-                </div>   
-            </>
-        )
-    }
-
-    // Return formatted list of injuries
-    function returnScars() {
-        return (
-            <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
         )
     }
 
@@ -211,12 +156,10 @@ const ItemMemberDisplay = (props: any) => {
                 <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
                 <div className="row float-end">
                     <div className='col-12 float-end'>
-                        <Button style={{padding:"0em"}} variant="" onClick={() => handleShowExport()}>
-                            <FontAwesomeIcon icon={faFileLines} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                        </Button>
-                        <Button style={{padding:"0em",paddingLeft:"0.5em"}} variant="" onClick={() => handleShowExportBasic()}>
-                            <FontAwesomeIcon icon={faQuoteLeft} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                        </Button>
+                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberexpanded"} panelObj={modelExport}/>
+                        
+                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>   
+                        
                     </div>
                 </div>
             </h1>
@@ -226,7 +169,7 @@ const ItemMemberDisplay = (props: any) => {
                 </div>
                 <div className="verticalspacerbig"/>
                 <div>
-                    {returnNotes()}
+                    <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} updater={UpdateFunction}/> 
                 </div>
                 <div className="verticalspacer"/>
                 <div>
@@ -260,7 +203,11 @@ const ItemMemberDisplay = (props: any) => {
                             <div>
                                 <div className="separator">Skills</div>
                             </div> 
-                            {returnSkills()}
+                            <div>
+                                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
+                                <div className="verticalspacer"/>
+                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
+                            </div>   
                             <div className="verticalspacer"/>
                         </div>
                         }
@@ -269,7 +216,7 @@ const ItemMemberDisplay = (props: any) => {
                             <div>
                                 <div className="separator">Scars</div>
                             </div> 
-                            {returnScars()}
+                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
                             <div className="verticalspacer"/>
                         </div>
                         }
@@ -286,51 +233,6 @@ const ItemMemberDisplay = (props: any) => {
                 
             </div>
         </div>
-
-            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExport()} size="lg" show={showExport}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExport} keyboard={true}  centered>
-                
-                <h1 className={'titleShape titlestyler backgroundtc'}>
-                    {WarbandMember.Name + " Export"}
-                                <div className="row float-end">
-                                    <div className='col-12 float-end'>
-                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExport()}>
-                                            <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                                        </Button>
-                                    </div>
-                                </div>
-                </h1>
-                <Modal.Body >
-                    <div className="row">
-                        <div className="col-12">
-                            <InputGroup className="tagboxpad" >
-                                <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={modelExport} placeholder={""} className="formparagraphtext" style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
-                            </InputGroup>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
-            <Modal data-theme={theme} onEnterKeyDown={() => handleCloseExportBasic()} size="lg" show={showExportBasic}  contentClassName="filterboxStructure" dialogClassName="" onHide={handleCloseExportBasic} keyboard={true}  centered>
-                
-                <h1 className={'titleShape titlestyler backgroundtc'}>
-                    {WarbandMember.Name + " Basic Export"}
-                                <div className="row float-end">
-                                    <div className='col-12 float-end'>
-                                        <Button style={{padding:"0em"}} variant="" onClick={() => handleCloseExportBasic()}>
-                                            <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
-                                        </Button>
-                                    </div>
-                                </div>
-                </h1>
-                <Modal.Body >
-                    <div className="row">
-                        <div className="col-12">
-                            <InputGroup className="tagboxpad" >
-                                <Form.Control as="textarea" aria-label="With textarea" className="formparagraphtext" readOnly defaultValue={modelExportBasic} placeholder={""} style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
-                            </InputGroup>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
         </>
     )
 }

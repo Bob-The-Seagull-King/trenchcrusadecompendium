@@ -30,9 +30,9 @@ const GenericPopup = (prop: any) => {
     // Return result -----------------------------
     return (
         <>
-            <div style={{display:"flex"}}>
+            <>
                 {panelType.returnButton(handleShow)}
-            </div>
+            </>
             <Modal data-theme={theme}  show={show} size="lg" contentClassName="overcomeBackground" dialogClassName="" onHide={handleClose} keyboard={true}  centered>
                 
                 <Modal.Body >
