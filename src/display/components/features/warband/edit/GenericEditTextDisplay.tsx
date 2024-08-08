@@ -13,7 +13,7 @@ import { useGlobalState } from '../../../../../utility/globalstate'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-import { EditTextType, EditTextDataDex } from './StaticEditText';
+import { EditTextType, EditTextDataDex } from './static/StaticEditText';
 
 const GenericEditListDisplay = (props: any) => {
     const Manager : WarbandManager = props.manager;

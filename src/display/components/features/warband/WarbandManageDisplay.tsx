@@ -19,7 +19,7 @@ import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './edit/GenericEditTextBoxDisplay';
 import GenericPopup from '../../../components/generics/GenericPopup';
 
-const WarbandEditDisplay = (props: any) => {
+const WarbandManageDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
@@ -155,4 +155,4 @@ const WarbandEditDisplay = (props: any) => {
     )
 }
 
-export default WarbandEditDisplay;
+export default WarbandManageDisplay;

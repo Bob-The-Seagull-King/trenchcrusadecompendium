@@ -13,7 +13,7 @@ import { useGlobalState } from '../../../../../utility/globalstate'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
-import { EditNumberType, EditNumberDataDex } from './StaticEditNumber';
+import { EditNumberType, EditNumberDataDex } from './static/StaticEditNumber';
 
 const GenericEditNumberDisplay = (props: any) => {
     const [theme] = useGlobalState('theme');

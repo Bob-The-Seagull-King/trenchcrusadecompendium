@@ -11,7 +11,7 @@ import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
 import { useGlobalState } from '../../../../../utility/globalstate'
 
-import { EditTextBoxType, EditTextBoxDataDex } from './StaticEditTextBox';
+import { EditTextBoxType, EditTextBoxDataDex } from './static/StaticEditTextBox';
 
 const GenericEditTextBoxDisplay = (props: any) => {
     const Manager : WarbandManager = props.manager;

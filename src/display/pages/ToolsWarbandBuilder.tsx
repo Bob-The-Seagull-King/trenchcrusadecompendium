@@ -6,7 +6,7 @@ import { WarbandManager } from '../../classes/lists/warbandmanager';
 import { Warband } from '../../classes/lists/Warband';
 
 import WarbandListDisplay from '../../display/components/features/warband/WarbandListDisplay';
-import WarbandEditDisplay from '../../display/components/features/warband/WarbandEditDisplay';
+import WarbandManageDisplay from '../../display/components/features/warband/WarbandManageDisplay';
 
 const ToolsWarbandBuilder = (prop: any) => {
     const Manager : WarbandManager = prop.manager;
@@ -48,7 +48,7 @@ const ToolsWarbandBuilder = (prop: any) => {
         <div className="container" style={{width:"100%"}}>
             {_currentWarband != null &&
                 <div>
-                    <WarbandEditDisplay key={_keyval} data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
+                    <WarbandManageDisplay key={_keyval} data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
                 </div>
             }
             {_currentWarband == null &&
