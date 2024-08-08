@@ -2,8 +2,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../resources/styles/_icon.scss'
 import React from 'react'
 
-import * as HoverCard from '@radix-ui/react-hover-card';
-import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
@@ -18,9 +16,6 @@ const GenericHover = (props: any) => {
     const displayMethod = props.d_method
 
     const ruleName = props.titlename
-
-    // State
-    const [theme] = useGlobalState('theme');
 
     return (
       <>

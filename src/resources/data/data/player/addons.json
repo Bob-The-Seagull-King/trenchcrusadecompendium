@@ -1207,7 +1207,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All injury rolls against the Lord of Tumours are made with -1 DICE, unless the attack has the Keyword FIRE, in which case it works normally. This model does not suffer additional BLOOD MARKERS from attacks with Keyword GAS.",
+                "content": "All injury rolls against the model are made with -1 DICE, unless the attack has the Keyword FIRE, in which case it works normally. This model does not suffer additional BLOOD MARKERS from attacks with Keyword GAS.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FIRE", "id": "gl_fire"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"}]
             }
         ]
