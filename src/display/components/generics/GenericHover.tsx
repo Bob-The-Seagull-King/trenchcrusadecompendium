@@ -3,6 +3,9 @@ import '../../../resources/styles/_icon.scss'
 import React from 'react'
 
 import * as HoverCard from '@radix-ui/react-hover-card';
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 // Classes
 import { useGlobalState } from '../../../utility/globalstate'
@@ -21,24 +24,20 @@ const GenericHover = (props: any) => {
 
     return (
       <>
-      <HoverCard.Root data-theme={theme} >
-        <HoverCard.Trigger asChild>
-          <span className='glossaryPurple hovermouse'>{DisplayName}</span>
-        </HoverCard.Trigger>
-        <HoverCard.Portal>
-          <HoverCard.Content data-theme={theme} className="HoverCardContent" sideOffset={5}>
-              <div  className='popupBody'>
-                <div className={'modelStructure borderstyler ' + DisplayType + 'border'+getColour(DisplayColour)}>
-                    <h1 className={'titleShape titlebody titlestyler ' + DisplayType + 'background'+getColour(DisplayColour)}>
-                        {ruleName || ""}
-                    </h1>
-                    {displayMethod()}
-                </div>
+        <OverlayTrigger overlay={
+          <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+            <div style={{ width: "30vw" }} className='popupBody'>
+              <div className={'modelStructure borderstyler ' + DisplayType + 'border'+getColour(DisplayColour)}>
+                  <h1 className={'titleShape titlebody titlestyler ' + DisplayType + 'background'+getColour(DisplayColour)}>
+                      {ruleName || ""}
+                  </h1>
+                  {displayMethod()}
               </div>
-            <HoverCard.Arrow className="HoverCardArrow" />
-          </HoverCard.Content>
-        </HoverCard.Portal>
-      </HoverCard.Root>
+            </div>
+          </Tooltip>
+          }>
+          <span className='glossaryPurple hovermouse'>{DisplayName}</span>
+        </OverlayTrigger>
       </>
     )
 }

@@ -35,6 +35,11 @@
     border: none !important;
 }
 
+.overcomeTooltip {
+    opacity: 1 !important;
+    --bs-tooltip-bg: none !important;
+}
+
 .modelInternalStructure {
     padding: 1em;
     font-size: 0.85em;
