@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 import { Warband } from '../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../classes/lists/warbandmanager';
@@ -9,7 +10,6 @@ import { ExportDisplayText, ExportDisplayTextBasic } from '../../../../classes/l
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
 import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
@@ -25,10 +25,16 @@ const WarbandManageDisplay = (props: any) => {
     const Manager : WarbandManager = props.manager;
     const [theme] = useGlobalState('theme');
     
+    const navigate = useNavigate();
+
+    function NavigateBack(dir: string) {
+        navigate('/' + dir);
+    }
+    
     function ReturnReturner() {
         return (
             <div className="col-12" >
-                <div className="hovermouse iconandtextbox" onClick={() => UpdateFunction(null)} style={{width:"fit-content"}}>
+                <div className="hovermouse iconandtextbox" onClick={() => NavigateBack("tools/warband/")} style={{width:"fit-content"}}>
                     <FontAwesomeIcon icon={faAngleLeft} className="pageaccestextsmall" style={{paddingTop:"0.25em"}}/>
                     <h1 className="pageaccestextsmall">
                         Return
