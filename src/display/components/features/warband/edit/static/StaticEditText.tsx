@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react'
 import Image from 'react-bootstrap/Image';
-import { WarbandManager } from "../../../../../classes/lists/warbandmanager"
-import { Warband } from "../../../../../classes/lists/Warband"
-import { WarbandMember } from "../../../../../classes/lists/WarbandMember"
+import { WarbandManager } from "../../../../../../classes/lists/warbandmanager"
+import { Warband } from "../../../../../../classes/lists/Warband"
+import { WarbandMember } from "../../../../../../classes/lists/WarbandMember"
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

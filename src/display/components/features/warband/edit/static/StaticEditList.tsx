@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react'
-import { WarbandManager } from "../../../../../classes/lists/warbandmanager"
-import { Warband } from "../../../../../classes/lists/Warband"
-import { WarbandMember } from "../../../../../classes/lists/WarbandMember"
+import { WarbandManager } from "../../../../../../classes/lists/warbandmanager"
+import { Warband } from "../../../../../../classes/lists/Warband"
+import { WarbandMember } from "../../../../../../classes/lists/WarbandMember"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import GenericPanel from "../../../generics/GenericPanel"
-import PartialItemDisplay from "../../partialitem/PartialItemDisplay"
+import GenericPanel from "../../../../generics/GenericPanel"
+import PartialItemDisplay from "../../../partialitem/PartialItemDisplay"
 
 export interface EditItemType {
     title      : string,

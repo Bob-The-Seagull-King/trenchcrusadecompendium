@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react'
-import { WarbandManager } from "../../../../../classes/lists/warbandmanager"
-import { Warband } from "../../../../../classes/lists/Warband"
-import { WarbandMember } from "../../../../../classes/lists/WarbandMember"
+import { WarbandManager } from "../../../../../../classes/lists/warbandmanager"
+import { Warband } from "../../../../../../classes/lists/Warband"
+import { WarbandMember } from "../../../../../../classes/lists/WarbandMember"
 
 export interface EditNumberType {
     title      : string,

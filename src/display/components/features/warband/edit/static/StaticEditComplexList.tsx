@@ -1,15 +1,15 @@
 
 import React, { useState } from 'react'
-import { WarbandManager } from "../../../../../classes/lists/warbandmanager"
-import { Warband } from "../../../../../classes/lists/Warband"
-import { WarbandMember } from "../../../../../classes/lists/WarbandMember"
-import ItemEquipDisplay from './ItemEquipDisplay'
-import { Requester } from '../../../../../factories/Requester'
-import { FactionUpgrade } from '../../../../../classes/feature/factions/FactionUpgrade'
-import ItemUpgradeDisplay from './ItemUpgradeDisplay'
-import ItemMemberDisplay from './ItemMemberDisplay'
-import { GetDucatCost, GetGloryCost } from '../../../../../classes/lists/warbandmanagerstatic'
-import { makestringpresentable } from '../../../../../utility/functions'
+import { WarbandManager } from "../../../../../../classes/lists/warbandmanager"
+import { Warband } from "../../../../../../classes/lists/Warband"
+import { WarbandMember } from "../../../../../../classes/lists/WarbandMember"
+import ItemEquipDisplay from '../ItemEquipDisplay'
+import { Requester } from '../../../../../../factories/Requester'
+import { FactionUpgrade } from '../../../../../../classes/feature/factions/FactionUpgrade'
+import ItemUpgradeDisplay from '../ItemUpgradeDisplay'
+import ItemMemberDisplay from '../ItemMemberDisplay'
+import { GetDucatCost, GetGloryCost } from '../../../../../../classes/lists/warbandmanagerstatic'
+import { makestringpresentable } from '../../../../../../utility/functions'
 
 export interface ItemCost {
     type : string,
