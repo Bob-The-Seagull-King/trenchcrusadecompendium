@@ -2005,7 +2005,8 @@
         "tags": [
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"},
-            {"tag_name": "elite", "val": "gl_elite"}
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "string", "val": "gl_string"}
                 ],
         "promotion": 0,
         "movement": "6\"",
@@ -2052,7 +2053,8 @@
         "tags": [
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"},
-            {"tag_name": "elite", "val": "gl_elite"}
+            {"tag_name": "elite", "val": "gl_elite"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "promotion": 0,
         "movement": "6\"",
