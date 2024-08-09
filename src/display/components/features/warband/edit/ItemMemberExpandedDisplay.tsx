@@ -20,6 +20,9 @@ import GenericEditNumberDisplay from './GenericEditNumberDisplay';
 import GenericEditTextDisplay from './GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './GenericEditTextBoxDisplay';
 import GenericPopup from '../../../../components/generics/GenericPopup';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from 'react-bootstrap/esm/Button';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -164,6 +167,9 @@ const ItemMemberExpandedDisplay = (props: any) => {
                         
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>   
                         
+                            <Button style={{padding:"0em"}} variant="" onClick={() => closeSelf()}>
+                                <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                            </Button>
                     </div>
                 </div>
             </h1>
