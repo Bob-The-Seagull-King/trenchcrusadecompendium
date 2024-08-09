@@ -24,9 +24,6 @@ import GenericPopup from '../../../../components/generics/GenericPopup';
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
-    function UpdateFunction() {
-        console.log('test')
-    } //props.updater;
     const Manager : WarbandManager = props.manager;
 
     const TossItem = props.tossitem;
@@ -34,8 +31,13 @@ const ItemMemberExpandedDisplay = (props: any) => {
     const RefundItem = props.refunditem;
 
     const closeSelf = props.close
+    const [key, setkey] = useState(0);
 
     const bannedModelTags = ["empty"]
+    function UpdateFunction() {
+        setkey(key+1)
+    }
+    
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
 
@@ -45,7 +47,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
     // Return the basic information of the member
     function returnStats() {
         return (
-            <div>
+            <div key={key}>
                 <div className="row justify-content-center">
                     
                     <div className="col-md-4 col-12">

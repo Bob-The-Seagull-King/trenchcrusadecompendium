@@ -39,10 +39,31 @@ const ItemMemberDisplay = (props: any) => {
     const glorycost = GetGloryCost(WarbandMember)
 
     const [show, setShow] = useState(false);
+    const [key, setkey] = useState(0);
     const [theme] = useGlobalState('theme');
 
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+        setkey(key + 1)
+        setShow(false);}
     const handleShow = () => setShow(true);
+
+    // Make the model an infantry unit
+    function demoteModel() {
+        WarbandMember.Elite = false;
+        UpdateFunction();
+    }
+
+    // Make the model an elite unit
+    function promoteModel() {
+        WarbandMember.Elite = true;
+        UpdateFunction();
+    }
+
+    // Create a copy of the model to add to the warband
+    function duplicateModel() {
+        Manager.DuplicateMember(WarbandItem, WarbandMember);
+        UpdateFunction()
+    }
 
     // Return the basic information of the member
     function returnStats() {
@@ -68,32 +89,10 @@ const ItemMemberDisplay = (props: any) => {
         )
     }
 
-    // Make the model an infantry unit
-    function demoteModel() {
-        WarbandMember.Elite = false;
-        UpdateFunction();
-    }
-
-    // Make the model an elite unit
-    function promoteModel() {
-        WarbandMember.Elite = true;
-        UpdateFunction();
-    }
-
-    // Create a copy of the model to add to the warband
-    function duplicateModel() {
-        Manager.DuplicateMember(WarbandItem, WarbandMember);
-        UpdateFunction()
-    }
-
-    function updateMember() {
-        console.log('test')
-    }
-
     // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
-            <div className="row">
+            <div className="row" key={key}>
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
@@ -126,7 +125,7 @@ const ItemMemberDisplay = (props: any) => {
         <>
             <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
                 <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
-                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={updateMember}/>
+                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'}/>
                     <div className="row float-end">
                         <div className='col-12 float-end'>
                             <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        

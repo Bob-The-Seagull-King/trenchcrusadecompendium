@@ -136,6 +136,7 @@ export const EditListDataDex : EditListDataTable = {
                 const Result = _manager.NewEquipmentForWarband(_warband, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
+            close();
         },
         filterItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean},  _member? : WarbandMember | null) {
             
@@ -283,6 +284,7 @@ export const EditListDataDex : EditListDataTable = {
                 const Result = _manager.NewMember(_warband, "", itemName, _cost.value.toString(), _cost.type);
                 update()
             }
+            close();
         },
         filterItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean},  _member? : WarbandMember | null) {
 
@@ -418,6 +420,7 @@ export const EditListDataDex : EditListDataTable = {
                 const Result = _manager.NewEquipmentForMember(_member, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
+            close();
         },
         filterItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean},  _member? : WarbandMember | null) {
             
@@ -601,6 +604,7 @@ export const EditListDataDex : EditListDataTable = {
                 const Result = _manager.NewUpgradeForMember(_member, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
+            close();
         },
         filterItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean},  _member? : WarbandMember | null) {
             if (_filter['Restricted'] === true) {
