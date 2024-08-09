@@ -24,7 +24,9 @@ import GenericPopup from '../../../../components/generics/GenericPopup';
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
     const WarbandMember : WarbandMember = props.member;
-    const UpdateFunction = props.updater;
+    function UpdateFunction() {
+        console.log('test')
+    } //props.updater;
     const Manager : WarbandManager = props.manager;
 
     const TossItem = props.tossitem;
@@ -67,19 +69,19 @@ const ItemMemberExpandedDisplay = (props: any) => {
     // Make the model an infantry unit
     function demoteModel() {
         WarbandMember.Elite = false;
-        UpdateFunction(WarbandItem);
+        UpdateFunction();
     }
 
     // Make the model an elite unit
     function promoteModel() {
         WarbandMember.Elite = true;
-        UpdateFunction(WarbandItem);
+        UpdateFunction();
     }
 
     // Create a copy of the model to add to the warband
     function duplicateModel() {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
-        UpdateFunction(WarbandItem)
+        UpdateFunction()
     }
 
     // Return formatted list of actions that can be taken to a member

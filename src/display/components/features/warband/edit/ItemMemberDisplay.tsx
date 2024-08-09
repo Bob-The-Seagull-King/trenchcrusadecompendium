@@ -71,23 +71,23 @@ const ItemMemberDisplay = (props: any) => {
     // Make the model an infantry unit
     function demoteModel() {
         WarbandMember.Elite = false;
-        UpdateFunction(WarbandItem);
+        UpdateFunction();
     }
 
     // Make the model an elite unit
     function promoteModel() {
         WarbandMember.Elite = true;
-        UpdateFunction(WarbandItem);
+        UpdateFunction();
     }
 
     // Create a copy of the model to add to the warband
     function duplicateModel() {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
-        UpdateFunction(WarbandItem)
+        UpdateFunction()
     }
 
     function updateMember() {
-        
+
     }
 
     // Return formatted list of actions that can be taken to a member
