@@ -20,6 +20,10 @@ import GenericEditNumberDisplay from './GenericEditNumberDisplay';
 import GenericEditTextDisplay from './GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './GenericEditTextBoxDisplay';
 import GenericPopup from '../../../../components/generics/GenericPopup';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import Modal from 'react-bootstrap/esm/Modal';
+import ItemMemberExpandedDisplay from './ItemMemberExpandedDisplay';
 
 const ItemMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -35,10 +39,11 @@ const ItemMemberDisplay = (props: any) => {
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
 
+    const [show, setShow] = useState(false);
     const [theme] = useGlobalState('theme');
 
-    const modelExport = ExportModelDisplayText(WarbandMember, true, false)
-    const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     // Return the basic information of the member
     function returnStats() {
@@ -46,17 +51,17 @@ const ItemMemberDisplay = (props: any) => {
             <div>
                 <div className="row justify-content-center">
                     
-                    <div className="col-md-4 col-12">
+                    <div className="col-md-6 col-12">
                         <div className="stattitle">{"Model Type"}</div>
                         <div className="statbody">
                             <GenericPanel titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>      
                         </div>
                         <div className="verticalspacer"/>
                     </div>
-                    <div className="col-md-4 col-6">
+                    <div className="col-md-3 col-6">
                     <ItemStat title={"Ducat Cost"} value={ducatcost}/>
                     </div>
-                    <div className="col-md-4 col-6">
+                    <div className="col-md-3 col-6">
                     <ItemStat title={"Glory Cost"} value={glorycost}/>
                     </div>
                 </div>
@@ -85,10 +90,9 @@ const ItemMemberDisplay = (props: any) => {
     // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
-            <>
             <div className="row">
 
-                <div className="col-lg-6 col-12">
+                <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
@@ -96,143 +100,57 @@ const ItemMemberDisplay = (props: any) => {
                     </div>
                 </div>
                 
-                {((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) && 
-                <div className="col-lg-6 col-12">
+                <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
+                        <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
                         </div>
                     </div>
                 </div>
-                }
-
-                {WarbandMember.Elite == true && 
-                <div className="col-lg-6 col-12">
+                
+                <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
+                        <div className={"subfonttext generalbuttonbox" + ((WarbandMember.Elite == true)? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
                         </div>
                     </div>
                 </div>
-                }
-
             </div>
-            <div className="verticalspacerbig"/>
-            <div className="row">
-
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => TossItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Bury This Model</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => SellItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Sell This Model</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => RefundItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Refund This Model</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            </>
         )
     }
 
     return (
         <>
-        <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
-            <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
-                <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
-                <div className="row float-end">
-                    <div className='col-12 float-end'>
-                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberexpanded"} panelObj={modelExport}/>
-                        
-                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>   
-                        
+            <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
+                <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
+                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
+                    <div className="row float-end">
+                        <div className='col-12 float-end'>
+                            <FontAwesomeIcon icon={faBoxOpen} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        
+                        </div>
+                    </div>
+                </h1>
+                <div className='modelInternalStructure'>
+                    <div className="verticalspacer"/>
+                    <div>
+                        {returnStats()}
+                    </div>
+                    <div className="verticalspacer"/>
+                    <div>
+                        <div className="separator">&#x27E1;</div>
+                    </div> 
+                    <div className="verticalspacer"/>
+                    <div className="row">
+                        {returnButtons()}
                     </div>
                 </div>
-            </h1>
-            <div className='modelInternalStructure'>
-                <div>
-                    {returnTags(WarbandMember.Model.Object.Tags, bannedModelTags)}
-                </div>
-                <div className="verticalspacerbig"/>
-                <div>
-                    <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} updater={UpdateFunction}/> 
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div>
-                    {returnStats()}
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">Upgrades</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div>
-                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberupgrade'} updater={UpdateFunction}/> 
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="separator">Equipment</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div>
-                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberequipment'} updater={UpdateFunction}/> 
-                </div>
-                <div className="verticalspacer"/>
-                <div>
-                    <div className="row row-cols-md-2 row-cols-1">
-                        {(WarbandMember.Skills.length > 0 || WarbandMember.Elite == true) &&
-                        <div className="col">
-                            <div>
-                                <div className="separator">Skills</div>
-                            </div> 
-                            <div>
-                                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
-                                <div className="verticalspacer"/>
-                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
-                            </div>   
-                            <div className="verticalspacer"/>
-                        </div>
-                        }
-                        {(WarbandMember.Injuries.length > 0 || WarbandMember.Elite == true) &&
-                        <div className="col">
-                            <div>
-                                <div className="separator">Scars</div>
-                            </div> 
-                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
-                            <div className="verticalspacer"/>
-                        </div>
-                        }
-                    </div>
-                </div>
-                <div>
-                    <div className="separator">&#x27E1;</div>
-                </div> 
-                <div className="verticalspacer"/>
-                <div className="row">
-                    {returnButtons()}
-                </div>
-
-                
             </div>
-        </div>
+            
+            <Modal data-theme={theme} onEnterKeyDown={() => handleClose()} show={show} size="xl" contentClassName="overcomeBackground" dialogClassName=""  onHide={handleClose} keyboard={true}  centered>
+                <Modal.Body > 
+                    <ItemMemberExpandedDisplay warband={WarbandItem} member={WarbandMember} updater={UpdateFunction} manager={Manager} tossitem={TossItem} sellitem={SellItem} refunditem={RefundItem} close={handleClose} />
+                </Modal.Body>
+            </Modal>
         </>
     )
 }

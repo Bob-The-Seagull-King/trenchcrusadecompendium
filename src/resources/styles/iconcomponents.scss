@@ -286,6 +286,10 @@
     }
 }
 
+.disabledbox {
+    background-color: var(--colour_grey_secondary);
+}
+
 .image-wrapper {
     width: 100%;
     overflow: hidden;
