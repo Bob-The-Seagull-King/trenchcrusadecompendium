@@ -185,7 +185,7 @@ export const EditListDataDex : EditListDataTable = {
     warbandmember: {
         title      : 'Add New Warrior',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
-            if (_warband) { return _warband.Members; }
+            if (_warband) { return [{"Elite" : _warband.Members.filter(x => x.Elite === true), "Infantry" : _warband.Members.filter(x => x.Elite === false)}]; }
             return []
         },
         returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
@@ -214,7 +214,33 @@ export const EditListDataDex : EditListDataTable = {
             return FilterList;
         },
         returnItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
-            return ( <><div className="verticalspacerbig"/><ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/></> )
+            return ( 
+                <>
+                    {Object.keys(_item).map((item) => ( 
+                        <>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator" style={{fontSize:"3em"}}>{item}</div>
+                            {_item[item].map((_var : any) => (
+                                <>
+                                    <div className="verticalspacerbig"/>
+                                    <ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_var} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/>
+                                </>
+                            ))}                            
+                        </>
+                     ))}
+                </> 
+            )
+
+            /**
+             * 
+             * {_item[item].map((var : any) => ( 
+                                <>
+                                <div className="verticalspacerbig"/>
+                                <ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/>
+                                </>}
+                             ))}
+                    
+             */
         },
         returnItemData (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             if ((_filter['Restricted'] === true) && (_warband)) {
