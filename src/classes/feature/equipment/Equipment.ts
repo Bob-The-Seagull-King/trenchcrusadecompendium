@@ -13,6 +13,7 @@ interface IPlayerEquipment extends ITrenchCrusadeItemData {
     range: string | null,
     modifiers: string[],
     blurb: string,
+    eventtags : {[_name : string] : any},
     description: []
 }
 
@@ -28,6 +29,7 @@ class PlayerEquipment extends TrenchCrusadeItem {
     public readonly Modifiers;
     public readonly Blurb;
     public readonly Description;
+    public readonly EventTags
     
     public constructor(data: IPlayerEquipment)
     {
@@ -36,6 +38,7 @@ class PlayerEquipment extends TrenchCrusadeItem {
         this.Category = data.category;
         this.Name = data.name;
         this.Range = data.range;
+        this.EventTags = data.eventtags;
         this.EquipType = data.equip_type;
         this.Modifiers = data.modifiers;
         this.Blurb = data.blurb;

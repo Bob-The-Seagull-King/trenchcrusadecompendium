@@ -19,6 +19,7 @@ interface IUpgradeData {
     id: string,
     type: string,
     name: string,
+    eventtags : {[_name : string] : any},
     description: []
 }
 
@@ -32,6 +33,7 @@ class FactionUpgrade {
     public readonly Cost;
     public readonly CostID;
     public readonly Description;
+    public readonly EventTags
     public readonly Name;
 
     public constructor(data: IFactionUpgrade) {
@@ -42,6 +44,7 @@ class FactionUpgrade {
         const requestdata: IUpgradeData = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: this.ID}}));
         this.Name = requestdata.name;
         this.Description = DescriptionFactory(requestdata.description);
+        this.EventTags = requestdata.eventtags;
     }
 
 }

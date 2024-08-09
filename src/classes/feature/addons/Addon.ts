@@ -7,6 +7,7 @@ import { DescriptionFactory } from '../../../utility/functions'
  */
 interface IPlayerAddon extends ITrenchCrusadeItemData {
     faction_id: string,
+    eventtags : {[_name : string] : any},
     description: []
 }
 
@@ -17,12 +18,14 @@ interface IPlayerAddon extends ITrenchCrusadeItemData {
 class PlayerAddon extends TrenchCrusadeItem {
     public readonly Faction;
     public readonly Description;
+    public readonly EventTags;
 
     public constructor(data: IPlayerAddon)
     {
         super(data)
         this.ItemType = ItemType.Addon;
         this.Faction = data.faction_id;
+        this.EventTags = data.eventtags
         this.Description = DescriptionFactory(data.description);
     }
 }

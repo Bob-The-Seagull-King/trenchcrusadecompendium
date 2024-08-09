@@ -11,6 +11,7 @@
         "range": null,
         "blurb": "Use this item to represent any cost given to a model that does not directly correlate to an existing piece of equipment.",
         "modifiers": [],
+        "eventags": {},
         "description":  [
                         ]
     },
@@ -26,6 +27,7 @@
         "range": "24\"",
         "blurb": "The workhorse of the Great War. Sturdy, highly reliable and reasonably accurate, it is no surprise that most of the infantry of the Great War carry this battlefield classic.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -42,6 +44,7 @@
         "range": "24\"",
         "blurb": "Semi-automatic rifles are said to be an invention of Marbas, the Devil who holds great wisdom and knowledge in mechanical arts. They are excellent both at long range and in assault, combining accuracy and high rate of fire, though they are prone to jamming",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -58,6 +61,7 @@
         "range": "24\"",
         "blurb": "A marvel of modern engineering, only a few prototypes of this weapon exist. It has a high rate of fire and can be quickly re-loaded",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -84,6 +88,7 @@
         "range": "12\"/Melee",
         "blurb": "Pistols come in a staggering variety, ranging from revolvers to semi-automatic pistols. Heretic forges produce their own, often highly elaborate sidearms. They see extensive use in close-quarter combat.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -112,6 +117,7 @@
         "range": "12\"/Melee",
         "blurb": "A sophisticated sidearm made of Orichalcum or other holy metals, or from Infernal iron taken from the very prisons of Hell to muffle the wails of the damned. It is virtually silent and is excellent for ambushes or for shooting from behind cover.",
         "modifiers": ["+1D to Hit in Cover"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -142,6 +148,7 @@
         "range": "8\"",
         "blurb": "Grenades or hand bombs are a staple of trench warfare. Grenades can kill the enemy underground or behind cover. They can also force the enemy into the open, providing targets for rifle and machine gun fire.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -172,6 +179,7 @@
         "range": "8\"",
         "blurb": "Gas Grenades are insidious weapons, attacking the lungs and other internal organs with noxious fumes. Devil Alchemists of the 5th Circle are especially clever in creating these fiendish and hated weapons.",
         "modifiers": ["-1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -202,6 +210,7 @@
         "range": "8\"",
         "blurb": "Incendiary grenades can set their target alight with sulphur, phosphorous or flammable gas captured from the Lake of Fire in the 7th Circle of Hell.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -228,6 +237,7 @@
         "range": "16\"",
         "blurb": "The submachine gun (or SMG) is a fully automatic firearm, trading lower penetration power and range for a much higher rate of fire. Ideal for short-range engagements, it is much sought-after by warbands despite its scarcity and high cost.",
         "modifiers": ["2 Attacks"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -254,6 +264,7 @@
         "range": "12\"",
         "blurb": "Short-barrelled pump action shotgun loaded with six rounds containing antimony hardened 00 buckshot, the combat shotgun is ideal for short-range engagements, clearing trenches and taking out lightly-armoured infantry. Often featuring stocks made of walnut or other rare wood, it is a custom of the troops to decorate these arms with carvings and inscriptions",
         "modifiers": ["+1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -281,6 +292,7 @@
         "range": "12\"",
         "blurb": "This shotgun is equipped with an auto-loader, a recent invention by the Prussian engineering corps of Königsberg. It is ideal for close quarter combat thanks to its high rate of power and accuracy. The technology has not been perfected, however, and sometimes leads to misfeeds and jams.",
         "modifiers": ["+1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -310,6 +322,7 @@
         "range": "36\"",
         "blurb": "Modifications of great siege rifles designed to lob grenades over long distances.",
         "modifiers": ["Ignore Cover"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -336,6 +349,7 @@
         "range": "36\"",
         "blurb": "Machine Guns are lethal fully-automatic firearms, capable of mowing down entire ranks of infantry from afar. The firing rate depends on the lock assembly used but averages 500 rounds per minute.",
         "modifiers": ["3 Attacks"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -363,6 +377,7 @@
         "range": "8\"",
         "blurb": "A flamethrower is a terrifying weapon capable of projecting great streams of fire and flammable liquids at a distance. It is ideal for clearing bunkers, trenches and other fortifications, killing in a most horrific way. Consequently, it is greatly favoured by the Heretic forces.",
         "modifiers": ["-1D Injuries"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -391,6 +406,7 @@
         "range": "10\"",
         "blurb": "These massive flamethrowers are normally mounted on armoured vehicles, but those possessing uncanny strength may use them as infantry weapons.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -419,6 +435,7 @@
         "range": "36\"",
         "blurb": "Enormous long rifles designed to take out heavily armoured targets, vehicles and strongpoints. With the powerful armour available to the armies of the Great war, these terrifying weapons are much in demand. A downside is their enormous weight and terrifying recoil, and thus they are most often used by Communicants or Anointed who possess the supernatural strength to wield such weapons.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -445,6 +462,7 @@
         "range": "Melee",
         "blurb": "Fighting unarmed in the Great War is nigh-suicidal, but some troops carry no melee weapons or their weapons have been lost in the heat of the battle. In such cases, a warrior is forced to defend themselves with fists, kicks and their bare teeth",
         "modifiers": ["-1D to Hit/Injuries"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -471,6 +489,7 @@
         "range": "Melee",
         "blurb": "Virtually all soldiers carry a trench knife, dagger or other kind of blade for close quarter engagements. It may lack the devastating power of a great maul or other heavier melee weapons, but this humble weapon has taken countless lives during the Great War.",
         "modifiers": ["-1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -487,6 +506,7 @@
         "range": "Melee",
         "blurb": "Bayonets are blades in the form of spikes or daggers that can be fixed to the tip of a firearm and used in melee combat.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -512,6 +532,7 @@
         "range": "Melee",
         "blurb": "Trench Clubs are one of the most common weapons of the Great War, as melee combat is frequent and brutal. Usually made of wood with a metal tip from iron, lead or steel, trench clubs often feature spikes and hobnails. Most designs have some form of cord or leather strap at the end to wrap around the user’s wrist.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -528,6 +549,7 @@
         "range": "Melee",
         "blurb": "Because of the martial traditions of many proud nations and due to the advances in armour technology, swords and axes are extremely popular, especially amongst elite units and officers. They are supremely useful for finishing off downed opponents and causing profusely bleeding wounds.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -544,6 +566,7 @@
         "range": "Melee",
         "blurb": "Trench pikes, billhooks, spears and other long polearms are excellent defensive weapons, but are cumbersome and heavy. They are often used to deal with barbed wire.",
         "modifiers": ["-1D to Hit for Chargers"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -572,6 +595,7 @@
         "range": "Melee",
         "blurb": "Claymore, Zweihanders and even huge battle axes are used in the trenches when bullets fail to stop quick or well-armoured targets. The strikes from these weapons can easily lop off limbs and heads.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -588,6 +612,7 @@
         "range": "Melee",
         "blurb": "Mauls, clubs, maces… these are large, cumbersome weapons, often made from sturdy wood with a metal tip of steel, lead or Iron of Tartarus. It takes great strength to fight with it for any length of time. They are especially suited for attacking armoured targets.",
         "modifiers": ["+1 to Injury"],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -604,6 +629,7 @@
         "range": "Melee",
         "blurb": "Terrifying blades blessed by the hand of a greater devil, these knives are used in Heretic rituals to sacrifice captives to the dark powers of Hell. They simply need to touch their opponents to cause indescribable pain and even the slightest wound often proves fatal from the agony alone. They are risky even to their wielders, as the merest scratch wounds friend and a foe alike.",
         "modifiers": ["+2 on Injury Results"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -630,6 +656,7 @@
         "range": "Melee",
         "blurb": "Crafted from iron ore from the mines of Dis in Inferno, this weapon burns with the unquenchable fires of Hell.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -646,6 +673,7 @@
         "range": "Melee",
         "blurb": "Made from severed hands of Malebranche, the Tartarus Claws are granted by Arch-Devils only to those whose hearts are  blackened with the sin of Wrath.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -674,6 +702,7 @@
         "range": "Melee",
         "blurb": "Made in mockery of the rod carried by the Prophet Aaron, the slightest touch from this evil staff causes unimaginable agony due to the hellfire that it produces.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -689,6 +718,7 @@
         "range": null,
         "blurb": "With the advancements in metallurgy and technology, both Faithful and Heretic armies are well-equipped with suits of alloy armour that can withstand an impact from a bullet or turn aside the sharpest of blades. Standard armour is usually mass-produced, but highly effective even against high-calibre weapons.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -714,6 +744,7 @@
         "range": null,
         "blurb": "Heavy armour is a master-crafted suit made individually for the most important and elite troops. Each one is richly decorated and often carries the personal device of the warrior who wears it.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -739,6 +770,7 @@
         "range": null,
         "blurb": "Shields used in trench warfare are made of either steel reinforced with Orichalcum to allow them to withstand even high-calibre bullets, or from metal mined from Infernal bedrock and shaped in the armouries of Pandæmonium, the Capital of Hell.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -765,6 +797,7 @@
         "range": null,
         "blurb": "A combat helmet has proven its value on the battlefield time and again. Since the use of grenades and other explosives became widespread, the humble combat helmet has saved many lives.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -792,6 +825,7 @@
         "range": null,
         "blurb": "Mustard Gas, phosgene, chlorine as well as noxious fumes from the bolgias of Hell plague the battlefield. The Gas Mask allows soldiers to withstand such attacks.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -819,6 +853,7 @@
         "range": null,
         "blurb": "",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -846,6 +881,7 @@
         "range": null,
         "blurb": "An artefact bestowed with unholy power. Examples include Nephilim heads, desecrated splinters of the True Cross or mummified body parts of fallen saints and bishops.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -873,6 +909,7 @@
         "range": null,
         "blurb": "Advanced armour technology has forced the armouries of the Great War to forge new types of bullets. Expensive and labour-intensive to produce, these hardened tungsten rounds are more effective against battlefield armour.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -900,6 +937,7 @@
         "range": null,
         "blurb": "Tracer bullets allow soldiers to adjust their aim efficiently.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -928,6 +966,7 @@
         "range": null,
         "blurb": "Developed by Aym, the Great Duke of Hell, these bullets set any target they hit on fire.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -954,6 +993,7 @@
         "range": null,
         "blurb": "Battlefield shovel allows troops to dig in and fight from cover in virtually any battlefield.",
         "modifiers": null,
+        "eventags": {"trait": true, "action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -980,6 +1020,7 @@
         "range": null,
         "blurb": "You can buy this enormous shovel made from alchemical bronze which makes it almost indestructible. Brazen bulls use it for public works (such as digging canals, foundations of buildings and mining during peacetime while at war it is used for digging trenches, ditches and bunkers.",
         "modifiers": null,
+        "eventags": {"action": true, "trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1005,6 +1046,7 @@
         "range": null,
         "blurb": "You can buy this enormous shovel made from alchemical bronze which makes it almost indestructible. Brazen bulls use it for public works (such as digging canals, foundations of buildings and mining during peacetime while at war it is used for digging trenches, ditches and bunkers.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1026,6 +1068,7 @@
         "range": "12\"",
         "blurb": "The design of this blunderbuss is based on the traditional design of tribal warriors and thoroughly modernised by the foundries of the Sultanate. It has proven it’s worth as the preferred weapon of the Sapper corps who often have to fight in close quarters. It shoots a hail of lead bullets and iron shrapnel.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                         ]
     },
@@ -1042,6 +1085,7 @@
         "range": null,
         "blurb": "A Heretic who has made a Holy Pilgrimage into Hell itself is branded by their patron devil with an ever-burning mark. Mortal fire no longer has the power to harm them.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1068,6 +1112,7 @@
         "range": null,
         "blurb": "Most warbands and units carry banners, flags, standards, pennants or other symbols to rally the troops. Heretic Legions are infamous for their gruesome battle standards, often made of impaled torsos kept alive by unholy magic.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1095,6 +1140,7 @@
         "range": null,
         "blurb": "An infernal contract signed by a Heretic and the devil who will come to collect the damned soul when death is close. The mortal signatory bursts into infernal flames when seriously wounded.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1121,6 +1167,7 @@
         "range": null,
         "blurb": "This suit of armour gilded with gleaming gold comes with a helmet often with a beautiful, cherub-like face twisted on corrupted in some way, such as with inhuman eyes or with the whole face twisted upside-down. Despite its splendour the armour is always tarnished by blood, offal or other kind of corruption. Merely seeing it fills mortals with incredible greed, and makes the wearer an immediate target of their wrath as they attempt to tear it away from the wearer.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1147,6 +1194,7 @@
         "range": null,
         "blurb": "Battle Standards of Mammon are opulently decorated works of art, icons and banners done in mockery of the virtues of Charity and Temperance. Always made of the most expensive materials, each is a unique work of dark genius, often depicting saints performing vile sins or famous acts of Greed. It has the power to make anyone to kneel before the Prince of Greed.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1174,6 +1222,7 @@
         "range": null,
         "blurb": "This portable altar of Mammon creates illusions of immense wealth in any form its target covets above all. Overcome by supernatural greed, those affected by the Curse of Mammon are forced to swoop down, feebly trying to pick up the objects of their desire.",
         "modifiers": null,
+        "eventags": {"trait": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1201,6 +1250,7 @@
         "range": "Melee",
         "blurb": "This double-handed hammer has the rune of mammon on its head. Its strikes leave a permanent, painful scar in the shape of Mammon’s rune which burns through even the thickest armour. Mammon loves marking the innocent with his Rune, as it sows mistrust amongst his enemies.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1228,6 +1278,7 @@
         "range": "12\"/Melee",
         "blurb": "Automatic pistols are symbols of prestige owing to their rarity and cost. They are excellent weapons when storming trenches or fighting in hand-to-hand combat. They boast a high rate of fire, though they can be hard to control even for the best sharpshooters since they usually lack a stock.",
         "modifiers": ["-1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1257,6 +1308,7 @@
         "range": "6\"",
         "blurb": "Developed on the desperate Finnish battle frontier against Ice Demons, this improvised weapon consists of a glass bottle containing a flammable substance such as gasoline, alcohol or a napalm-like mixture plus a source of ignition.",
         "modifiers": ["-1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1283,6 +1335,7 @@
         "range": "18\"",
         "blurb": "A primitive weapon from a bygone age, the musket is a smooth bore long rifle that shoots lead balls. It still sees widespread use due to its simple construction and low price.",
         "modifiers": ["-1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
             ]
     },
@@ -1299,6 +1352,7 @@
         "range": "10\"",
         "blurb": "A relic firearm of a bygone era, this weapon is loaded with rusty nails, lead shot, grenade shrapnel and grenade shell pieces, some Mourners carry this weapon and form a honour guard of sorts for the Procession.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1325,6 +1379,7 @@
         "range": "Melee",
         "blurb": "The metal whips of the Church are supremely good at both instilling discipline in the ranks of the faithful and tormenting the heretics. Many devils also enjoy using these weapons due to the excruciating pain they inflict. These weapons are extremely difficult to dodge.",
         "modifiers": ["+1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1353,6 +1408,7 @@
         "range": "Melee",
         "blurb": "A polearm with a directional explosive mounted on its head. It is exceedingly good at taking out armoured targets but puts its user in grave danger.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1379,6 +1435,7 @@
         "range": "Melee",
         "blurb": "The misericordia dagger is designed to put enemies out of their misery by finding chinks in the armour: eye slits, neck joints and so forth.",
         "modifiers": ["Ignore Armour"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1405,6 +1462,7 @@
         "range": null,
         "blurb": "Only a few of these suits of armour exist in all of Christendom. Covered with miraculous icons this suit of armour is protected by the very hand of Heaven and its wearer can withstand even direct hits from artillery.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1431,6 +1489,7 @@
         "range": null,
         "blurb": "A conical helmet reminiscent of the headgear of the penitents. Blessed by the Church and often containing a fragment of a relic. Iron Capirotes shield their wearers from the psychological horror of war and allow them to face creatures from the pits of Hell unflinchingly",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1458,6 +1517,7 @@
         "range": null,
         "blurb": "Small icons of saints, great angels and holy warriors are a common sight amongst the Trench Pilgrims. They are hung on rosaries, belts, or attached to portable shrines carried on the Pilgrims’ backs.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1484,6 +1544,7 @@
         "range": null,
         "blurb": "Due to the threat to all Creation, the churches, cathedrals and basilicas have emptied their reliquaries and distributed their relics to the frontline troops to aid them in their battle against the damned.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1510,6 +1571,7 @@
         "range": null,
         "blurb": "Battlefield first aid has brought many soldiers back from the brink of death. Blessed ointments can seal fatal wounds completely, while the black blood of demons used by twisted heretic medics allows troops with huge gaping wounds to ignore the pain and return to the fray.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1536,6 +1598,7 @@
         "range": null,
         "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1562,6 +1625,7 @@
         "range": null,
         "blurb": "This kit includes ropes, carabiners, slings, mountaineering harness and pitons to aid a soldier in overcoming almost any vertical obstacle.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1588,6 +1652,7 @@
         "range": null,
         "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1614,6 +1679,7 @@
         "range": null,
         "blurb": "Horns, drums, trumpets, whistles, bagpipes and many other types of instruments are used extensively in the battles of the Great War. They can bolster the hearts of those facing the horrors of Hell – or they can recite terrifying hymns praising the lords of the Inferno!",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1640,6 +1706,7 @@
         "range": null,
         "blurb": "Martyrdom pills are a potent mixture of mind-altering drugs and chemicals that inure a soldier against all pain and injury. However, it takes a tremendous toll on the body.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1666,6 +1733,7 @@
         "range": null,
         "blurb": "This suit of Armour is made of blessed icons and scripture scrolls written with the blood of saints.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1693,6 +1761,7 @@
         "range": null,
         "blurb": "Before the battle, this lamb is sacrificed to God’s glory, and the pilgrim then anoints themselves with its blood, averting the wrath of Yahweh while fighting for His cause.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1720,6 +1789,7 @@
         "range": "8\"",
         "blurb": "Warcross (also known as a wurfkreuz in the Holy Roman Empire) is a four-pronged throwing weapon in the shape of a cross. It is engraved with prayers and psalms that guide it on an unerring path.",
         "modifiers": ["Ignore Long Range Penalty"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1748,6 +1818,7 @@
         "range": "18\"",
         "blurb": "Punt Gun is an enormous shotgun loaded with up to 25 ounces of shot. It can be loaded with a risky amount of powder and square shot which causes widespread damage and destruction. It is a very popular weapon among Trench Pilgrims who lack access to conventional heavy weapons.",
         "modifiers": ["+1D to Hit","+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1774,6 +1845,7 @@
         "range": "18\"",
         "blurb": "These long arms are by far the most common weapons carried by the soldiers of the Sultanate of the Great Iron Wall. Their barrels are smoothbore which limits their accurate range, but this is more than made up by the fact that this allows them to be loaded with different types of Alchemical ammunition made by the Jabirean Alchemists.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 
             ]
@@ -1791,6 +1863,7 @@
         "range": "30\"",
         "blurb": "Heavier version of the standard Jezzail. It is a large, cumbersome weapon with a shot of lead or iron weighing as much as four pounds, designed to take out even the most powerful enemies with a single shot. Azebs armed with these weapons use tripod stakes when firing them, but the mighty Janissaries often use them as their standard service gun.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 
             ]
@@ -1809,6 +1882,7 @@
         "range": "48\"",
         "blurb": "A sniper rifle is a high-precision, long-range rifle, widely used in the trenches to pick off high value targets such as officers, sappers and artillery crews. Expensive and rare, they are commonly given to the best marksmen and sharpshooters of the warband.",
         "modifiers": ["+1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1836,6 +1910,7 @@
         "range": "36\"",
         "blurb": "Named after the great Sultan who commissioned the first of these weapons to defend the Iron Wall, this mighty bombard is used to disrupt advancing enemy formations. The echo of its blast recites the 99 names of Allah, throwing even the greatest of warriors to ground like chaff.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1864,6 +1939,7 @@
         "range": "12\"",
         "blurb": "A great cannon that shoots a stream of alchemical fire with tremendous force. It has a tendency to overheat and ignite the skin of its artillery crew, but the mighty Brazen Bulls use them as mere handguns. The secret formula used for the fuel of the Flame Cannons was gleaned from the lost Byzantine ruins, and is commonly known as Greek Fire.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1892,6 +1968,7 @@
         "range": "Melee/24\"",
         "blurb": "Invention of the House of Wisdom, this weapon acts both as a symbol of high rank and an excellent weapon in combat.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1920,6 +1997,7 @@
         "range": "Melee",
         "blurb": "This twin-tongued greatsword can weigh up to 300 pounds – only the mighty Brazen Bulls can even lift this monstrous blade, let alone wield it in combat. It sheer weight and mono-molecule sharpness cuts through even the thickest armour when swung by the superhuman strength of the takwin monstrosity.",
         "modifiers": ["+2 on Injury Results"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1947,6 +2025,7 @@
         "range": "Melee",
         "blurb": "The blades of the Assassins are imbued with the Supreme Poison. In chambers deep below the surface, generations of young assassins are raised in the dark; fed a diet of scorpions, frogs, deadly mushrooms and even stranger, more noxious things, and generation by generation their tolerance grows. The poisonous blood of these willing vessels is drawn and smelted into a poisonous iron. The iron is forged into blades and deadly spells of slaying layered into each fold of the envenomed metal. Thus the blood of the first generation of Assassins lives to this day, growing more potent with each generation.",
         "modifiers": ["+1 on Injury Results"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1973,6 +2052,7 @@
         "range": null,
         "blurb": "Suit of armour which protects against almost all harm. This is an essential tool of Alchemists’ craft, festooned with the     Seals of Solomon which enables them to bend the elements of Creation to their will and shields them even from the devices of Hell",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1999,6 +2079,7 @@
         "range": null,
         "blurb": "Jabirean Alchemists craft these Jezzail bullets from the slivers of the Iron Wall. Each such shot is carved the Seal of Solomon, guiding them during their path through the air.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2025,6 +2106,7 @@
         "range": null,
         "blurb": "Created by the secret arts of the Assassin’s sect aeons ago, this cloak bends the light so that its wearer looks almost indistinguishable against any surface when they are still. It is this masterwork of Alamut that has led to the tales of the fabled Cloak of Invisibility in the legends of the Sultanate.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2051,6 +2133,7 @@
         "range": null,
         "blurb": "Amulet created by the Jabirean Alchemists, capturing the essence of the Element of Wind within it.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2077,6 +2160,7 @@
         "range": null,
         "blurb": "It is quite common for officers to carry finely-crafted battlefield binoculars with them on the battlefield to survey the land ahead, spot hidden enemy troops and observe any sign of movement.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2104,6 +2188,7 @@
         "range": "Melee",
         "blurb": "Placed on a hand of an especially favoured killer by the Old Man of the Mountain himself, these wickedly curved daggers gleam as if they were made of gold, but instead they are crystallised poison, and allow their wielder to attack twice in the same instance of time. Only the Master of Alamut himself knows the secret of making these blades.",
         "modifiers": ["+1 on Injury Results"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2131,6 +2216,7 @@
         "range": "60\"",
         "blurb": "This terrifying double-stringed bow shoots its deadly barbs through both time and space. Its arrows can reach impossible  distances and pass through armour by flickering through time. It leaves behind a temporal slipstream that the Assassin can travel through in an eyeblink. Made from wood taken from trees planted in the skulls of ancient assassins in the Garden of Alamut so that they might  absorb mystic powers of their former owners, these bows are some of the greatest treasures of the Old Man of the Mountain for it is said that only six now remain in his secret armouries.",
         "modifiers": ["Ignore Armour"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2158,6 +2244,7 @@
         "range": null,
         "blurb": "These leaves from the secret Garden of Alamut enhance the strength of anyone who eats them threefold. Once the effect wears off the subject will suffer from agonising muscle tears and ripping of ligaments, but many of the Order of Assassins feel that this is a small price to pay for being able to use deadlier weapons.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2188,6 +2275,7 @@
         "range": "6\"",
         "blurb": "Battlefield explosives designed to break apart enemy fortifications and to crack even the toughest of armour.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2214,6 +2302,7 @@
         "range": null,
         "blurb": "Combining the rarest of divine metal alloys and the latest technology of New Antioch, Machine Armour makes its wearer a virtual mobile tank.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2240,6 +2329,7 @@
         "range": null,
         "blurb": "Holy reliquaries, blessed artefacts and sacred crosses are often carried to the battlefield to encourage the troops, while the Heretics bring idols of the Golden Calf, tortured captives or other wicked totems to bear.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2266,6 +2356,7 @@
         "range": null,
         "blurb": "The Device of the Black Grail carries the blessing of the Lord of Flies. It has a will of its own, moving to intercept any bullets or other projectiles that might impede the work of Beelzebub",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2292,6 +2383,7 @@
         "range": "Melee",
         "blurb": "Carrying the viral strain of Beelzebub himself, these weapons are the terror of all mortals. Even the tiniest nick or scratch usually leads to an agonising death and eternal servitude to the Lord of Flies as a ghastly walking corpse",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2319,6 +2411,7 @@
         "range": "Melee",
         "blurb": "Carrying the viral strain of Beelzebub himself, these weapons are the terror of all mortals. Even the tiniest nick or scratch usually leads to an agonising death and eternal servitude to the Lord of Flies as a ghastly walking corpse.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2348,6 +2441,7 @@
         "range": "Melee",
         "blurb": "Tuagh-chatha axes combine the power of the Great Axe with the defensive qualities of a polearm. Its wicked spike has stopped many Heretic in their tracks. Dùn Èideann Guard are especially adept at their use.",
         "modifiers": ["+1 on Injury Results","-1D to Hit for Chargers"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2374,6 +2468,7 @@
         "range": "18\"",
         "blurb": "Armour offers little protection against the horrid, tainted bullets of this rifle, polluted by the power of Beelzebub himself. The bullets are semi-sentient, flying through the tiniest of chink in any armour.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2401,6 +2496,7 @@
         "range": "8\"",
         "blurb": "Corruption Belchers spew forth noxious gas and corrosive fumes captured from the Bolgias of the putrid swamps of the seventh layer of Hell.",
         "modifiers": ["-1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2428,6 +2524,7 @@
         "range": "12\"",
         "blurb": "Loaded with corroded demon-possessed winged shot filled with infected parasite larvae, the rounds of the Putrid Shotguns are almost impossible to avoid. This repulsive weapon is nicknamed ‘blunderpus’ by the New Antioch troops.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2456,6 +2553,7 @@
         "range": "8\"",
         "blurb": "Gift from the Lord of the Flies, these grenades are filled with parasitic mind worms whose bites cause fever dreams and terrifying hallucinations. They are used to force the mortals away from the safety of defended bunkers and trenches.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2483,6 +2581,7 @@
         "range": "18\"",
         "blurb": "This heavy firearm is the most loathsome and repulsive of all the weapons in the arsenal of the Black Grail - and that is saying something, considering the stiff competition it has. A warrior armed with this pride of Beelzebub inserts its tubes into their own abdomen and then shoots the corrosive contents of their own innards at the enemy. It is operated by a hand crank that first builds pressure inside the user until they are at the point of bursting, and then releases the spray of viscera at their foe. The greater the amount of their own flesh the user releases, the more horrific the damage.",
         "modifiers": ["+2D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2509,6 +2608,7 @@
         "range": null,
         "blurb": "No armour more splendid exists within the Sultanate than this magnificent chain mail made from the very Iron Wall that protects those who believe by the smiths of New Damascus. They are given as a reward to the greatest warriors for their service on the battlefield by the Sultan’s hand alone. Each ring of this armour is inscribed with a verse from the Holy Quran and is thus utterly unbreakable.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2536,6 +2636,7 @@
         "range": "48\"",
         "blurb": "Mounted on the Great Iron Wall, these are the main artillery that the Sultanate produces in vast numbers. Normally fixed in place, a variant suited for the massive hands of the Brazen Bulls has been designed so the living field artillery of the Padishah can take on truly heavily armoured enemies and vehicles.",
         "modifiers": ["+2D to Injury","Ignore Armour"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2563,6 +2664,7 @@
         "range": "Melee",
         "blurb": "These are swords of warriors sworn to follow the martial ideals of furūsīyah. Curved swords of unsurpassed sharpness, their blades are treated by the Alchemists of the House of Wisdom to cut through even the infernal Tartarus Armour.",
         "modifiers": ["+1 on Injury Results"],
+        "eventags": {"action": true},
         "description":  [
             ]
     },
@@ -2579,6 +2681,7 @@
         "range": "36\"",
         "blurb": "It takes a year of combined efforts from a Jabirean Alchemist and one of the Sultan’s own gunsmiths to produce this magnificent longarm. Its bullets are enhanced to seek new Unbelievers if they penetrate their target.",
         "modifiers": ["+1D to Hit"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2606,6 +2709,7 @@
         "range": "36\"",
         "blurb": "These shoulder-fired weapons launch a rocket with an explosive warhead. They are a recent invention, and thus expensive and difficult to manufacture. Consequently, they are only available in limited numbers and even then only the most famous warbands will be equipped with these deadly armour-piercing weapons.",
         "modifiers": ["+1D to Injury", "Ignore Armour"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2635,6 +2739,7 @@
         "range": "8\"",
         "blurb": "The shells of these grenades are made from the Church Bells of the original city of Antioch.They hold the spirit of vengeance of the LORD against all evil.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2661,6 +2766,7 @@
         "range": "Melee",
         "blurb": "Blessed by YHWH, this bone club grants its wielder the strength of Samson himself.",
         "modifiers": ["+2D to Injury"],
+        "eventags": {"action": true},
         "description":  [
             ]
     },
@@ -2676,6 +2782,7 @@
         "range": null,
         "blurb": "One of the horns that Joshua used to bring down the walls of Jericho. Its blast can still shake the very foundations of the strongest fortifications.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2703,6 +2810,7 @@
         "range": null,
         "blurb": "Taken from the river of nauseating corruption vomited by the Lord of the Flies himself before these was time, this liquid is collected from his unholy river that is the source of every illness and plague the Creation has ever known or will know.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2729,6 +2837,7 @@
         "range": "24\"",
         "blurb": "A nest of infected Hell-locusts acts as a fuel tank for this horrific gun which vaguely resembles a flamethrower. The voracious razor-sharp iron locusts which dwell within can find any chink in armour no matter how small, and guided by the hateful will of the Lord of the Flies they consume the flesh and swarm to their next nearby target in matter of seconds.",
         "modifiers": ["-1D to Injury","Ignore Armour"],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2755,6 +2864,7 @@
         "range": null,
         "blurb": "This suit of armour made from black metal is the very visage of Beelzebub himself. It includes wings that take its wearer to the skies at startling speed, and once latched on the opponent its filth-ridden mouth-part will suck the target dry.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2781,6 +2891,7 @@
         "range": null,
         "blurb": "The final metamorphosis of those most favoured by the Prince of Plague is to take the many-legged shape of their warped master.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2807,6 +2918,7 @@
         "range": "Melee",
         "blurb": "The staff of the Witchburners is both a mark of their office and a weapon imbued with the wrath of God against those who have broken Divine Law. It dooms the souls of those found guilty to burn in flames for all eternity.",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2833,6 +2945,7 @@
         "range": null,
         "blurb": "Made from the twisted and torn remains of their Hegemon’s shattered armour, this crown of barbs and thorns is a constant reminder to the Mourners of their failure.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2859,6 +2972,7 @@
         "range": null,
         "blurb": "This black urn contains ashes left from the burned body of the fallen Hegemon, which still retain a faint echo of its hateful will. It swirls and churns in the air all while sinister whispers emanate from within.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2886,6 +3000,7 @@
         "range": "Melee",
         "blurb": "Mauls, clubs, maces… these are large, cumbersome weapons, often made from sturdy wood with a metal tip of steel, lead or Iron of Tartarus. It takes great strength to fight with it for any length of time. They are especially suited for attacking armoured targets.",
         "modifiers": ["+1D to Injury"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2912,6 +3027,7 @@
         "range": null,
         "blurb": "A sniper scope is a kind of telescope that is attached to a rifle or a similar weapon. Some feature night-vision enhancements and superb, adjustable mountain crystal lenses, while the Sniper Scopes made by the foundry-monastery of St. Sebastian for Sniper Priest have an in-built reliquary instead.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2938,6 +3054,7 @@
         "range": null,
         "blurb": "Golem servitors created by the Rabbis of the Cabbalistic School of Prague are equipped with sophisticated senses and metal detectors. Slow, hard to maintain and methodical, they are not much use in combat, but are invaluable during the lull in battle to uncover hidden caches of Loot.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2964,6 +3081,7 @@
         "range": null,
         "blurb": "War is the crucible which bestows honorifics more rapidly than any other activity. Those who have won great fame can be given a rank of a Baron, Marquis, Bishop or other prestigious title. Within the Taifas of the Iron Sultanate there are many titles to be had, from Chelebi Knight to a mighty Sheik. Such titles command huge respect and attention by the upper echelons of the society. Hell has its own twisted ranks of nobility, where those performing the vilest deeds and committing the greatest acts of deprivation are given a rank amongst the Infernal Principalities.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2991,6 +3109,7 @@
         "range": null,
         "blurb": "The Engineering Corps of New Antioch are experts at the use of Smokescreens to shield their Shock Troops from enemy fire.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3017,6 +3136,7 @@
         "range": null,
         "blurb": "Written by the famous Patriarch of New Antioch Alexios Cerularius, the remaining 137 copies of this blessed book are only entrusted to Warband leaders of extraordinary ability (or excellent political connections!)",
         "modifiers": [],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3043,6 +3163,7 @@
         "range": null,
         "blurb": "Glorious deeds on the battlefield may earn the most determined, ruthless and deadly officers a rank amongst the Holy Orders of the Church, Knighthood of the Teutonic Orders, or a title of Hellknight from one of the Dukes or Princes of Hell. Such a warrior will be allowed to carry the heraldic device of their house upon their wargear, and they have many privileges when it comes to allocating the most precious weapons and armour.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3069,6 +3190,7 @@
         "range": null,
         "blurb": "Field Hospitals have saved many warriors in the immediate aftermath of a bloody battle. Though simple compared to the mighty hospices of New Antioch, Athens or New Damascus, they are still extremely sought-after by successful Warband leaders.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3096,6 +3218,7 @@
         "range": null,
         "blurb": "This magnificent holy clockwork machine that allows you to bring the dead back to life thanks to the grace of God and the research of the Holy Science Academies of New Antioch.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3122,6 +3245,7 @@
         "range": null,
         "blurb": "Based on the prototype battlefield armour worn by Duke Constantine himself and his personal guard Myrmidons, these extremely rare and powerful suits are granted to only the most decorated soldiers. It features MKIII Myrmidon Diesel engine and wings that are painted and decorated to celebrate the deeds of the warrior who has “earned their wings'.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3148,6 +3272,7 @@
         "range": null,
         "blurb": "This item represents a famed standard, army battle banner or regimental colours. It may also represent one of the many Free Companies or forces in the service of the Church. Warband leaders often have their own battle banner decorated with the awards and ribbons the unit has won, and carried proudly by a trusted warrior",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3175,6 +3300,7 @@
         "range": null,
         "blurb": "This extraordinary creation of the House of Wisdom. It is said that within its Gardens is the hidden Fountain of Life that is used as an ingredient of this powerful Alchemical formula.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3201,6 +3327,7 @@
         "range": null,
         "blurb": "An Invention of the al-Jazari School of engineering school within the House of Wisdom, this shield is treated with an Alchemical formula, making it highly resistant to fire weapons. It has proven its value in many desperate battles against the flame-wielding Heretics.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3227,6 +3354,7 @@
         "range": null,
         "blurb": "“And the LORD set a mark upon Cain, lest any finding him should kill him.” Cain, the first of murderers, was marked by God, as a ward against those who would kill him. Corrupted copies of the mark are carved on the flesh of those who travel to Hell in order to learn the art of murder from the greatest of killers who reside in the Eternal Fire.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3253,6 +3381,7 @@
         "range": null,
         "blurb": "A suit of armour fashioned after the mail worn by Cobar the Betrayer, the first Lord of the Sixty-Six. This black Iron suit is produced in the Death-Factories of Hell from souls of those who betrayed their friends in life. It rewards those who lead their followers and friends to ruin and death.",
         "modifiers": [],
+        "eventags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3280,6 +3409,7 @@
         "range": "10\"",
         "blurb": "A barbed Chain used to bind the damned in Hell. It is sometimes granted as a weapon to the Heretic warriors that have proven the most adept of dragging prisoners to the Gates of Hell alive. The chain possesses a will of its own and can traverse long distances to snare some poor unfortunate soul in its barbed embrace.",
         "modifiers": ["Special"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3307,6 +3437,7 @@
         "range": "Melee",
         "blurb": "This axe is carried by the executioner demons of Hell whose job is to dismember those damned who brought division on Earth. As the damned flesh gathers itself together after a while, this grisly task is repeated again and again through eternity.",
         "modifiers": ["+2D to Injury"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3335,6 +3466,7 @@
         "range": "8\"",
         "blurb": "It is theorised this horrid grenade is based on the same technology as the demon weapon that destroyed the original city of Antioch. Its explosion seems to cause no physical damage, but emits eerie, bright green light which causes rapid but painful death to those within its reach, and armour offers no protection to its withering effects. Why it is not used by the Heretics in greater numbers remains a mystery.",
         "modifiers": ["Double Blood Marker"],
+        "eventags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
