@@ -37,8 +37,6 @@ const ItemMemberExpandedDisplay = (props: any) => {
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
 
-    const [theme] = useGlobalState('theme');
-
     const modelExport = ExportModelDisplayText(WarbandMember, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
 

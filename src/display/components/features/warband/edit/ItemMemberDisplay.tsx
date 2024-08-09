@@ -35,7 +35,6 @@ const ItemMemberDisplay = (props: any) => {
     const SellItem = props.sellitem;
     const RefundItem = props.refunditem;
 
-    const bannedModelTags = ["empty"]
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
 
@@ -87,6 +86,10 @@ const ItemMemberDisplay = (props: any) => {
         UpdateFunction(WarbandItem)
     }
 
+    function updateMember() {
+        
+    }
+
     // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
@@ -123,7 +126,7 @@ const ItemMemberDisplay = (props: any) => {
         <>
             <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
                 <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
-                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
+                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={updateMember}/>
                     <div className="row float-end">
                         <div className='col-12 float-end'>
                             <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        
