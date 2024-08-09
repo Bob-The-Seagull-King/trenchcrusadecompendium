@@ -21,7 +21,7 @@ import GenericEditTextDisplay from './GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './GenericEditTextBoxDisplay';
 import GenericPopup from '../../../../components/generics/GenericPopup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/esm/Modal';
 import ItemMemberExpandedDisplay from './ItemMemberExpandedDisplay';
 
@@ -126,7 +126,7 @@ const ItemMemberDisplay = (props: any) => {
                     <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
                     <div className="row float-end">
                         <div className='col-12 float-end'>
-                            <FontAwesomeIcon icon={faBoxOpen} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        
+                            <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        
                         </div>
                     </div>
                 </h1>
