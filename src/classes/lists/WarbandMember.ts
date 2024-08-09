@@ -107,26 +107,21 @@ class WarbandMember {
         return upgradelist;
     }
 
-    public GetBase() {
-        return this.Model.Object.Base;
+    public static returnModelBase(_member : WarbandMember) {
+        return _member.Model.Object.Base;
     }
-
-    public GetMovement() {
-        return this.Model.Object.Movement;
+    public static returnModelMovement(_member : WarbandMember) {
+        return _member.Model.Object.Movement;
     }
-
-    public GetArmour() {
-        return this.Model.Object.Armour;
+    public static returnModelArmour(_member : WarbandMember) {
+        return _member.Model.Object.Armour;
     }
-
-    public GetMelee() {
-        return this.Model.Object.Melee;
+    public static returnModelMelee(_member : WarbandMember) {
+        return _member.Model.Object.Melee;
     }
-
-    public GetRanged() {
-        return this.Model.Object.Ranged;
+    public static returnModelRanged(_member : WarbandMember) {
+        return _member.Model.Object.Ranged;
     }
-
 }
 
 export {IWarbandMember, WarbandMember}

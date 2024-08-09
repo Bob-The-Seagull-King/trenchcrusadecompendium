@@ -26,7 +26,7 @@ import Button from 'react-bootstrap/esm/Button';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
-    const WarbandMember : WarbandMember = props.member;
+    const member : WarbandMember = props.member;
     const Manager : WarbandManager = props.manager;
 
     const TossItem = props.tossitem;
@@ -41,11 +41,11 @@ const ItemMemberExpandedDisplay = (props: any) => {
         setkey(key+1)
     }
     
-    const ducatcost = GetDucatCost(WarbandMember);
-    const glorycost = GetGloryCost(WarbandMember)
+    const ducatcost = GetDucatCost(member);
+    const glorycost = GetGloryCost(member)
 
-    const modelExport = ExportModelDisplayText(WarbandMember, true, false)
-    const modelExportBasic = ExportModelDisplayTextBasic(WarbandMember, true, false)
+    const modelExport = ExportModelDisplayText(member, true, false)
+    const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
 
     // Return the basic information of the member
     function returnStats() {
@@ -56,7 +56,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     <div className="col-md-4 col-12">
                         <div className="stattitle">{"Model Type"}</div>
                         <div className="statbody">
-                            <GenericPanel titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>      
+                            <GenericPanel titlename={member.Model.Object.Name} d_colour={member.Model.Object.Team} d_name={member.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={member.Model.Object}/>}/>      
                         </div>
                         <div className="verticalspacer"/>
                     </div>
@@ -67,19 +67,19 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     <ItemStat title={"Glory Cost"} value={glorycost}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Base"} value={WarbandMember.GetBase()}/>
+                        <ItemStat title={"Base"} value={WarbandMember.returnModelBase(member)}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Movement"} value={WarbandMember.GetMovement()}/>
+                        <ItemStat title={"Movement"} value={WarbandMember.returnModelMovement(member)}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Armour"} value={WarbandMember.GetArmour()}/>
+                        <ItemStat title={"Armour"} value={WarbandMember.returnModelArmour(member)}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Melee"} value={WarbandMember.GetMelee()}/>
+                        <ItemStat title={"Melee"} value={WarbandMember.returnModelMelee(member)}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Ranged"} value={WarbandMember.GetRanged()}/>
+                        <ItemStat title={"Ranged"} value={WarbandMember.returnModelRanged(member)}/>
                     </div>
                 </div>
             </div>
@@ -88,19 +88,19 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
     // Make the model an infantry unit
     function demoteModel() {
-        WarbandMember.Elite = false;
+        member.Elite = false;
         UpdateFunction();
     }
 
     // Make the model an elite unit
     function promoteModel() {
-        WarbandMember.Elite = true;
+        member.Elite = true;
         UpdateFunction();
     }
 
     // Create a copy of the model to add to the warband
     function duplicateModel() {
-        Manager.DuplicateMember(WarbandItem, WarbandMember);
+        Manager.DuplicateMember(WarbandItem, member);
         UpdateFunction()
     }
 
@@ -118,7 +118,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     </div>
                 </div>
                 
-                {((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) && 
+                {((member.Elite == false) && (member.Model.Object.Promotion !== 2)) && 
                 <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
@@ -128,7 +128,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 </div>
                 }
 
-                {WarbandMember.Elite == true && 
+                {member.Elite == true && 
                 <div className="col-lg-6 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                         <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
@@ -144,7 +144,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => TossItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => TossItem(Manager, WarbandItem, member, UpdateFunction, member)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Bury This Model</div>
                         </div>
                     </div>
@@ -152,7 +152,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => SellItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => SellItem(Manager, WarbandItem, member, UpdateFunction, member)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Sell This Model</div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
                 <div className="col-lg-4 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => RefundItem(Manager, WarbandItem, WarbandMember, UpdateFunction, WarbandMember)}>
+                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => RefundItem(Manager, WarbandItem, member, UpdateFunction, member)}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Refund This Model</div>
                         </div>
                     </div>
@@ -173,9 +173,9 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
     return (
         <>
-        <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
-            <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
-                <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'} updater={UpdateFunction}/>
+        <div className={'modelStructure borderstyler border'+getColour(member.Model.Object.Faction)} style={{padding:"0em"}}>
+            <h1 className={'titleShape titlestyler background'+getColour(member.Model.Object.Faction)}>
+                <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'membername'} updater={UpdateFunction}/>
                 <div className="row float-end">
                     <div className='col-12 float-end'>
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberexpanded"} panelObj={modelExport}/>
@@ -190,7 +190,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
             </h1>
             <div className='modelInternalStructure'>
                 <div>
-                    {returnTags(WarbandMember.Model.Object.Tags, bannedModelTags)}
+                    {returnTags(member.Model.Object.Tags, bannedModelTags)}
                 </div>
                 <div className="verticalspacerbig"/>
                 <div>
@@ -210,7 +210,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberupgrade'} updater={UpdateFunction}/> 
+                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'memberupgrade'} updater={UpdateFunction}/> 
                 </div>
                 <div className="verticalspacer"/>
                 <div>
@@ -218,30 +218,30 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 </div> 
                 <div className="verticalspacer"/>
                 <div>
-                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'memberequipment'} updater={UpdateFunction}/> 
+                    <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'memberequipment'} updater={UpdateFunction}/> 
                 </div>
                 <div className="verticalspacer"/>
                 <div>
                     <div className="row row-cols-md-2 row-cols-1">
-                        {(WarbandMember.Skills.length > 0 || WarbandMember.Elite == true) &&
+                        {(member.Skills.length > 0 || member.Elite == true) &&
                         <div className="col">
                             <div>
                                 <div className="separator">Skills</div>
                             </div> 
                             <div>
-                                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'experience'} updater={UpdateFunction}/>
+                                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'experience'} updater={UpdateFunction}/>
                                 <div className="verticalspacer"/>
-                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'skills'} updater={UpdateFunction}/>
+                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'skills'} updater={UpdateFunction}/>
                             </div>   
                             <div className="verticalspacer"/>
                         </div>
                         }
-                        {(WarbandMember.Injuries.length > 0 || WarbandMember.Elite == true) &&
+                        {(member.Injuries.length > 0 || member.Elite == true) &&
                         <div className="col">
                             <div>
                                 <div className="separator">Scars</div>
                             </div> 
-                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'scars'} updater={UpdateFunction}/>    
+                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'scars'} updater={UpdateFunction}/>    
                             <div className="verticalspacer"/>
                         </div>
                         }
