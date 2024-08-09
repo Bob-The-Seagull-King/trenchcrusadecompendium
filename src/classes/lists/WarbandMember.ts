@@ -107,6 +107,26 @@ class WarbandMember {
         return upgradelist;
     }
 
+    public GetBase() {
+        return this.Model.Object.Base;
+    }
+
+    public GetMovement() {
+        return this.Model.Object.Movement;
+    }
+
+    public GetArmour() {
+        return this.Model.Object.Armour;
+    }
+
+    public GetMelee() {
+        return this.Model.Object.Melee;
+    }
+
+    public GetRanged() {
+        return this.Model.Object.Ranged;
+    }
+
 }
 
 export {IWarbandMember, WarbandMember}

@@ -66,6 +66,21 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     <div className="col-md-4 col-6">
                     <ItemStat title={"Glory Cost"} value={glorycost}/>
                     </div>
+                    <div className="col-md-2 col-6">
+                        <ItemStat title={"Base"} value={WarbandMember.GetBase()}/>
+                    </div>
+                    <div className="col-md-2 col-6">
+                        <ItemStat title={"Movement"} value={WarbandMember.GetMovement()}/>
+                    </div>
+                    <div className="col-md-2 col-6">
+                        <ItemStat title={"Armour"} value={WarbandMember.GetArmour()}/>
+                    </div>
+                    <div className="col-md-2 col-6">
+                        <ItemStat title={"Melee"} value={WarbandMember.GetMelee()}/>
+                    </div>
+                    <div className="col-md-2 col-6">
+                        <ItemStat title={"Ranged"} value={WarbandMember.GetRanged()}/>
+                    </div>
                 </div>
             </div>
         )
