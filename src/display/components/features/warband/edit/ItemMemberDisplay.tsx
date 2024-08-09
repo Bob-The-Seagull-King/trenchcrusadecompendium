@@ -87,7 +87,7 @@ const ItemMemberDisplay = (props: any) => {
     }
 
     function updateMember() {
-
+        console.log('test')
     }
 
     // Return formatted list of actions that can be taken to a member
