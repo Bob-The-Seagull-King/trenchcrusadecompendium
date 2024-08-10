@@ -641,6 +641,7 @@ class WarbandManager {
                     injuries: [],
                     skills: [],
                     experience: 0,
+                    scars: 3,
                     notes : "",
                     upgrades : []
                     }

@@ -205,7 +205,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                                 <div className="verticalspacerbig"/>
                                 <div>
                                     <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'experience'} updater={UpdateFunction}/>
-                                    <div className="verticalspacer"/>
+                                    <div className="verticalspacerbig"/>
                                     <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'skills'} updater={UpdateFunction}/>
                                 </div>   
                                 <div className="verticalspacer"/>
@@ -214,7 +214,11 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             {(member.Injuries.length > 0 || member.Elite == true) &&
                             <div className="col">
                                 <div className="verticalspacerbig"/>
-                                <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'scars'} updater={UpdateFunction}/>    
+                                <div>
+                                    <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'scars'} updater={UpdateFunction}/>
+                                    <div className="verticalspacerbig"/>
+                                    <GenericEditListDisplay manager={Manager} warband={WarbandItem} member={member} statictype={'scars'} updater={UpdateFunction}/>    
+                                </div>
                                 <div className="verticalspacer"/>
                             </div>
                             }

@@ -15,6 +15,7 @@ interface IWarbandMember {
     injuries: IListItem[],
     skills: IItemPartial[],
     experience: number,
+    scars: number,
     notes : string,
     upgrades : IFactionUpgrade[]
 }
@@ -32,12 +33,14 @@ class WarbandMember {
     public Skills;
     public Upgrades;
     public Experience;
+    public Scars;
     public Notes;
 
     public constructor(data: IWarbandMember) {
         this.Name = data.name;
         this.Elite = data.elite;
         this.Experience = data.experience;
+        this.Scars = data.scars;
 
         this.Model = this.ModelMaker(data.model);
         this.Equipment = this.EquipmentMaker(data.equipment);

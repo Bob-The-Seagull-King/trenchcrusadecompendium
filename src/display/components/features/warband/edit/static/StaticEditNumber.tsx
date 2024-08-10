@@ -36,6 +36,27 @@ export const EditNumberDataDex : EditNumberDataTable = {
             close();            
         }
     },
+    scars : {
+        title : 'Update Maximum Scars',
+        returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_member) { return _member.Scars }
+            return 0;
+        },
+        returnDisplayValue (_manager : WarbandManager, _warband : Warband | null, _member? : WarbandMember | null) {
+            return ( <span>{"Scars : " + ((_member)? _member.Injuries.length : "0") + "/" + ((_member)? _member.Scars : "0")}</span>)
+        },
+        returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_member) {return _member.Elite}
+            return false;
+        },
+        updateNumber (_manager : WarbandManager, _warband : Warband | null, itemName : number, close : any, update: any, _member? : WarbandMember | null) {
+            if ((_member) && (_warband)) {
+                _member.Scars = itemName;
+                update()
+            }
+            close();            
+        }
+    },
     ducatstotal : {
         title      : 'Update Total Ducats',
         returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
