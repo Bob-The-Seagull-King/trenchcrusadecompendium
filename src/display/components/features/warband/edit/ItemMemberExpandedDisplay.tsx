@@ -220,7 +220,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                         
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>   
                         
-                            <Button style={{padding:"0em"}} variant="" onClick={() => closeSelf()}>
+                            <Button variant="" onClick={() => closeSelf()}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
                             </Button>
                     </div>
