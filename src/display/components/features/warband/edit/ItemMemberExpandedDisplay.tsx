@@ -107,7 +107,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
     // Return formatted list of actions that can be taken to a member
     function returnButtons() {
         return (
-            <div className="row">
+            <div className="row justify-content-center">
 
                 <div className="col-lg-2 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
@@ -115,6 +115,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Toss Member</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
                 <div className="col-lg-2 col-12">
@@ -123,6 +124,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Sell Member</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
                 <div className="col-lg-2 col-12">
@@ -131,6 +133,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Refund Member</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
                 <div className="col-lg-2 col-12">
@@ -139,6 +142,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
                 <div className="col-lg-2 col-12">
@@ -147,6 +151,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote Model</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
                 <div className="col-lg-2 col-12">
@@ -155,6 +160,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote Model</div>
                         </div>
                     </div>
+                    <div className="verticalspacerbig"/>
                 </div>
 
             </div>
@@ -179,12 +185,21 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 </div>
             </h1>
             <div className='modelInternalStructure'>
-                <div className="verticalspacerbig"/>
+                <div className="verticalspacer"/>
                 <div className='row'>
                     <div className='col-md-6 col-sm-12'>
                         <div className='row'>
                             {returnStats()}                 
                         </div>
+                    </div>     
+                    <div className='col-md-6 col-sm-12'>
+                        <div className='row'>
+                            <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} updater={UpdateFunction}/> 
+                        </div>
+                    </div>              
+                </div>  
+                <div className='row '>
+                    <div className='col-md-6 col-sm-12 overflow-auto flex-grow-1' style={{"maxHeight": "calc(55vh)"}}>
                         <div className='row'> 
                             <div className="verticalspacerbig"/>
                             <div>
@@ -224,11 +239,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             }
                         </div>
                     </div>
-                    <div className='col-md-6 col-sm-12'>
-                        <div className="verticalspacer"/>
-                        <div>
-                            <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} updater={UpdateFunction}/> 
-                        </div>
+                    <div className='col-md-6 col-sm-12 overflow-auto flex-grow-1' style={{"maxHeight": "calc(55vh)"}}>
                         <div className="verticalspacer"/>
                         <div>
                             <div className="separator">&#x27E1;</div>
@@ -236,10 +247,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                         <div className="verticalspacer"/>
                     </div>
                 </div>
-                <div className='row'>
-                    <div className="verticalspacerbig"/>
-                    {returnButtons()}                    
-                </div>               
+                <div className="verticalspacerbig"/>
+                {returnButtons()}            
             </div>
         </div>
         </>

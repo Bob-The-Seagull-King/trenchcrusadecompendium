@@ -53,7 +53,6 @@ const ItemUpgradeDisplay = (props: any) => {
                     <FontAwesomeIcon icon={faDollarSign} className="" style={{fontSize:"1em"}}/>
                 </div>
             </div>
-            <div className="verticalspacer"/>
         </div>
     )
 }
