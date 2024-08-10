@@ -23,6 +23,10 @@ import GenericPopup from '../../../../components/generics/GenericPopup';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from 'react-bootstrap/esm/Button';
+import GenericDisplay from '../../../../components/generics/GenericDisplay';
+import EquipmentDisplay from '../../equipment/EquipmentDisplay';
+import UpgradeDisplay from '../../equipment/UpgradeDisplay';
+import AddonDisplay from '../../addons/AddonDisplay';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -46,6 +50,44 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
+
+    function returnComponentsList(_str : string) {
+        const componentsList = WarbandMember.returnComponentsWithTag(member, _str)
+        return (
+            <>
+            {componentsList['addon'] &&
+                <>
+                    {componentsList['addon'].map((item: any) => (
+                        <div key={"componentaddon"+item.Name} className='addonbox'>
+                            <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.Name} d_type={"sub"} d_method={() => <AddonDisplay data={item} />}/>
+                            <div className="verticalspacer"/>
+                        </div>
+                    ))}
+                </>
+            }
+            {componentsList['equipment'] &&
+                <>
+                    {componentsList['equipment'].map((item: any) => (
+                        <div key={"componentequipment"+item.Name} className='addonbox'>
+                        <GenericDisplay  d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item}/>}/>
+                        <div className="verticalspacer"/>
+                        </div>
+                    ))}
+                </>
+            }
+            {componentsList['upgrade'] &&
+                <>
+                    {componentsList['upgrade'].map((item: any) => (
+                        <div key={"componentupgrade"+item.Name} className='addonbox'>
+                        <GenericDisplay  d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item}/>}/>
+                        <div className="verticalspacer"/>
+                        </div>
+                    ))}
+                </>
+            }
+            </>
+        )
+    }
 
     // Return the basic information of the member
     function returnStats() {
@@ -241,8 +283,14 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     </div>
                     <div className='col-md-6 col-sm-12 overflow-auto flex-grow-1' style={{"maxHeight": "calc(55vh)"}}>
                         <div className="verticalspacer"/>
-                        <div>
-                            <div className="separator">&#x27E1;</div>
+                        <div className='row'>
+                            <div className="separator">Actions</div>
+                            {returnComponentsList("action")}
+                        </div> 
+                        <div className="verticalspacerbig"/>
+                        <div className='row'>
+                            <div className="separator">Traits</div>
+                            {returnComponentsList("trait")}
                         </div> 
                         <div className="verticalspacer"/>
                     </div>

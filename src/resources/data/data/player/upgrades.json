@@ -3,7 +3,7 @@
         "id": "up_heretictroopertolegionnareranged",
         "type": "Upgrade",
         "name": "Heretic Legionnare Ranged",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -16,7 +16,7 @@
         "id": "up_heretictroopertolegionnaremelee",
         "type": "Upgrade",
         "name": "Heretic Legionnare Melee",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -29,7 +29,7 @@
         "id": "up_kavassmelee",
         "type": "Upgrade",
         "name": "Kavass Strength",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -42,7 +42,7 @@
         "id": "up_martyrdomdevice",
         "type": "Upgrade",
         "name": "Martyrdom Device",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -55,7 +55,7 @@
         "id": "up_trenchpilgrimressurection",
         "type": "Upgrade",
         "name": "Ressurection",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -68,7 +68,7 @@
         "id": "up_azebskirmisher",
         "type": "Upgrade",
         "name": "Skirmisher",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -81,7 +81,7 @@
         "id": "up_machinearmour",
         "type": "Upgrade",
         "name": "Machine Armour",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -94,7 +94,7 @@
         "id": "up_trenchmole",
         "type": "Upgrade",
         "name": "Infiltrator",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -107,7 +107,7 @@
         "id": "up_infiltratornaval",
         "type": "Upgrade",
         "name": "Infiltrator",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -120,7 +120,7 @@
         "id": "up_artofassassinationhallucinogendisguise",
         "type": "Upgrade",
         "name": "Hallucinogen Disguise",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -133,7 +133,7 @@
         "id": "up_artofassassinationsecretpaths",
         "type": "Upgrade",
         "name": "Secret Paths",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -146,7 +146,7 @@
         "id": "up_artofassassinationthunderboltofalumat",
         "type": "Upgrade",
         "name": "Thunderbolt of Alumat",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -159,7 +159,7 @@
         "id": "up_artofassassinationmirageoftime",
         "type": "Upgrade",
         "name": "Mirage of Time",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -172,7 +172,7 @@
         "id": "up_swissguard",
         "type": "Upgrade",
         "name": "Swiss Guard",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -185,7 +185,7 @@
         "id": "up_fianna",
         "type": "Upgrade",
         "name": "Fianna",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -198,7 +198,7 @@
         "id": "up_berserker",
         "type": "Upgrade",
         "name": "Berserker",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -211,7 +211,7 @@
         "id": "up_forwardposition",
         "type": "Upgrade",
         "name": "Forward Position",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -224,7 +224,7 @@
         "id": "up_rapidassault",
         "type": "Upgrade",
         "name": "Rapid Assault",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -237,7 +237,7 @@
         "id": "up_homunculuswings",
         "type": "Upgrade",
         "name": "Wings",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -250,7 +250,7 @@
         "id": "up_homunculusregenerativetissue",
         "type": "Upgrade",
         "name": "Regenerative Tissue",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -263,7 +263,7 @@
         "id": "up_homunculuselementalresistance",
         "type": "Upgrade",
         "name": "Elemental Resistance",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -276,7 +276,7 @@
         "id": "up_homunculusmassivesize",
         "type": "Upgrade",
         "name": "Massive Size",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -289,7 +289,7 @@
         "id": "up_homunculusenslavedmind",
         "type": "Upgrade",
         "name": "Enslaved Mind",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -302,7 +302,7 @@
         "id": "up_homunculushumanhands",
         "type": "Upgrade",
         "name": "Human Hands",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -315,7 +315,7 @@
         "id": "up_homunculusinhumanstrength",
         "type": "Upgrade",
         "name": "Inuman Strength",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -328,7 +328,7 @@
         "id": "up_homunculusterrifyingappearance",
         "type": "Upgrade",
         "name": "Terrifying Appearance",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -341,7 +341,7 @@
         "id": "up_homunculusadditionalarm",
         "type": "Upgrade",
         "name": "Additional Arm",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -354,7 +354,7 @@
         "id": "up_homunculustwoheads",
         "type": "Upgrade",
         "name": "Two Heads",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -367,7 +367,7 @@
         "id": "up_homunculushypnoticeyes",
         "type": "Upgrade",
         "name": "Hypnotic Eyes",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -380,7 +380,7 @@
         "id": "up_homunculushawkeyes",
         "type": "Upgrade",
         "name": "Hawk Eyes",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -393,7 +393,7 @@
         "id": "up_homunculusstartlingspeed",
         "type": "Upgrade",
         "name": "Startling Speed",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -406,7 +406,7 @@
         "id": "up_homunculussealofsolomon",
         "type": "Upgrade",
         "name": "Seal Of Solomon",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -419,7 +419,7 @@
         "id": "up_homunculusgargantuansize",
         "type": "Upgrade",
         "name": "Gargantuan Size",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -432,7 +432,7 @@
         "id": "up_alchemistsecretsmedicine",
         "type": "Upgrade",
         "name": "Medicine",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -445,7 +445,7 @@
         "id": "up_alchemistsecretscartographyandgeometry",
         "type": "Upgrade",
         "name": "Cartography and Geometry",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -458,7 +458,7 @@
         "id": "up_alchemistsecretssecretsoftawkin",
         "type": "Upgrade",
         "name": "Secrets Of Tawkin",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -471,7 +471,7 @@
         "id": "up_alchemistsecretschemistryandalchemy",
         "type": "Upgrade",
         "name": "Chemistry and Alchemy",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -484,7 +484,7 @@
         "id": "up_alchemistsecretsphilosiphypoetryandtheology",
         "type": "Upgrade",
         "name": "Philosophy Poetry and Theology",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -497,7 +497,7 @@
         "id": "up_zealotstrength",
         "type": "Upgrade",
         "name": "Zealot Strength",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -510,7 +510,7 @@
         "id": "up_zealotstrengthpilgrim",
         "type": "Upgrade",
         "name": "Zealot Strength",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -523,7 +523,7 @@
         "id": "up_furyofthelord",
         "type": "Upgrade",
         "name": "Fury Of The Lord",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -536,7 +536,7 @@
         "id": "up_houndinfection",
         "type": "Upgrade",
         "name": "Hound Infection",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -549,7 +549,7 @@
         "id": "up_maddeningbuzz",
         "type": "Upgrade",
         "name": "Maddening Buzz",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],

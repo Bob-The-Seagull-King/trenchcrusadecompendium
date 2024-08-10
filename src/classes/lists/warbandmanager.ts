@@ -512,6 +512,9 @@ class WarbandManager {
 
             // Update model information
             for (j = 0; j < data[i].Members.length; j++) {
+                if (data[i].Members[j].Scars == undefined) {
+                    data[i].Members[j].Scars = 3;
+                }
                 const modelid = data[i].Members[j].Model.ID;
                 let k = 0;
                 let modelval = null;
@@ -525,6 +528,25 @@ class WarbandManager {
                     data[i].Members[j].Model.Object = modelval;
                 } else {
                     this.DeleteModelFromWarband(data[i].Members[j], data[i]);
+                }
+                let l = 0;
+                for (l = 0; l < data[i].Members[j].Equipment.length; l++) {
+                    for (k = 0; k < this.Equipment.length; k++) {
+                        if (this.Equipment[k].ID == data[i].Members[j].Equipment[l].ID) {
+                            data[i].Members[j].Equipment[l].Object = this.Equipment[k];
+                            break;
+                        }
+                    }
+                }
+                for (l = 0; l < data[i].Members[j].Upgrades.length; l++) {
+                    for (k = 0; k < this.Upgrades.length; k++) {
+                        if (this.Upgrades[k].ID == data[i].Members[j].Upgrades[l].ID) {
+                            data[i].Members[j].Upgrades[l].Name = this.Upgrades[k].Name;
+                            data[i].Members[j].Upgrades[l].Description = this.Upgrades[k].Description;
+                            data[i].Members[j].Upgrades[l].EventTags = this.Upgrades[k].EventTags;
+                            break;
+                        }
+                    }
                 }
             }
 

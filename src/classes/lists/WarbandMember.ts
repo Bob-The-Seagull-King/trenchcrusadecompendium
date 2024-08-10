@@ -3,6 +3,10 @@ import { IListEquipment, ListEquipment } from "./ListEquipment"
 import { IListItem, ListItem } from "../feature/list/ListItem"
 import { IItemPartial } from "../feature/list/ListGroup"
 import { IFactionUpgrade, FactionUpgrade } from "../feature/factions/FactionUpgrade"
+import { getTagValue } from "../../utility/functions"
+import { AddonFactory } from "../../factories/features/AddonFactory"
+import { PlayerAddon } from "../feature/addons/Addon"
+import { PlayerEquipment } from "../feature/equipment/Equipment"
 
 /**
  * Interface describing a member of a warband
@@ -45,6 +49,7 @@ class WarbandMember {
         this.Model = this.ModelMaker(data.model);
         this.Equipment = this.EquipmentMaker(data.equipment);
         this.Injuries = this.InjuryMaker(data.injuries);
+        
         this.Upgrades = this.UpgradeMaker(data.upgrades);
         this.Skills = data.skills;
         this.Notes = data.notes
@@ -113,17 +118,55 @@ class WarbandMember {
     public static returnModelBase(_member : WarbandMember) {
         return _member.Model.Object.Base;
     }
+
     public static returnModelMovement(_member : WarbandMember) {
         return _member.Model.Object.Movement;
     }
+
     public static returnModelArmour(_member : WarbandMember) {
         return _member.Model.Object.Armour;
     }
+
     public static returnModelMelee(_member : WarbandMember) {
         return _member.Model.Object.Melee;
     }
+
     public static returnModelRanged(_member : WarbandMember) {
         return _member.Model.Object.Ranged;
+    }
+
+    public static returnComponentsWithTag(_member : WarbandMember, _tag : string) {
+        const componentsReturn : {[_name : string] : any} = {}
+        
+        let i = 0
+
+        const desc = _member.Model.Object.Abilities;
+
+        const addons = []
+        for (i = 0; i < desc.length; i ++) {
+            if (getTagValue(desc[i].Tags, "desc_type") === 'addon') {
+                const strID = desc[i].Content
+                const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
+                if (item.EventTags[_tag]) { addons.push(item) }
+            }
+        }
+
+        const upgrades = []
+        for (i = 0; i < _member.Upgrades.length; i ++) {
+            if (_member.Upgrades[i].EventTags[_tag]) { upgrades.push(_member.Upgrades[i]) }
+        }
+
+        const equipment = []
+        for (i = 0; i < _member.Equipment.length; i ++) {
+            if (_member.Equipment[i].Object.EventTags[_tag]) {
+                equipment.push(_member.Equipment[i].Object) }
+        }
+
+        componentsReturn['addon'] = addons;
+        componentsReturn['upgrade'] = upgrades;
+        componentsReturn['equipment'] = equipment;
+        
+        return componentsReturn;
     }
 }
 

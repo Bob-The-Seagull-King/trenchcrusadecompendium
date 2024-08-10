@@ -7,7 +7,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Puppet Master",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -24,7 +24,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Tough",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -41,7 +41,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Infiltrator",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -58,7 +58,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Infiltrator",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -75,7 +75,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Stealth Generator",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -92,7 +92,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Hegemon's Will",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -160,7 +160,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Hide",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -177,7 +177,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Unholy Hymns",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -194,7 +194,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Unholy Horror",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -211,7 +211,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Strong",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -228,7 +228,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Tough",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -245,7 +245,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Loping Dash",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -262,7 +262,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Terrifying",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -279,7 +279,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Chainmaw",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -296,7 +296,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Shredding Claws",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -314,7 +314,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Infernal Bomb",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -341,7 +341,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Artificial Life",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -358,7 +358,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Infernal Bomb",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -385,7 +385,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "The Price Of Greed",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -402,7 +402,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Goetic Portal",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -419,7 +419,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Barbed Embrace",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -436,7 +436,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Goetic Gaze",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -453,7 +453,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Loudspeakers",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -470,7 +470,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Memento Mori",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -487,7 +487,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Laying On Hands",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -504,7 +504,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Enforced Orthodoxy",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -521,7 +521,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Whip Of God",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -538,7 +538,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Communicant Cross",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -555,7 +555,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Miracle of Regeneration",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -572,7 +572,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Bodyguard",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -589,7 +589,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Bodyguard",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -606,7 +606,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Ressurection",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -628,7 +628,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Mad Dash",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -645,7 +645,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Awaited",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -662,7 +662,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Blessed Stigmata",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -679,7 +679,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Agile",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -696,7 +696,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Catherine Wheel",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -713,7 +713,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Bonebreaker Mace",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -730,7 +730,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Fear",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -747,7 +747,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Broken on the Wheel",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -764,7 +764,7 @@
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Day of His Wrath",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -781,7 +781,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Mubarizun",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -798,7 +798,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Mastery of the Elements",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -815,7 +815,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Time Slip",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -832,7 +832,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Temporal Assassin",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -849,7 +849,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Mine-setting",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -866,7 +866,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "De-mine",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -883,7 +883,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Fortify",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -900,7 +900,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Forward Positions",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -917,7 +917,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Artificial Body",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -934,7 +934,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Mauling",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -951,7 +951,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Lion's Grace",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -968,7 +968,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Counter-Charge",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -985,7 +985,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Trample",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1002,7 +1002,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Re-Creation",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1019,7 +1019,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Alchemical Formula",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1036,7 +1036,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Whirling Dervishes",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1053,7 +1053,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "On My Command!",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1070,7 +1070,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Onward, Christian Soldiers!",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1087,7 +1087,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Aim",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1104,7 +1104,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Absolute Faith",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1121,7 +1121,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Shock Charge",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1138,7 +1138,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Assault Drill",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1155,7 +1155,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Battlefield Demolition",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1172,7 +1172,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Dig-In",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1189,7 +1189,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "De-Mine",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1206,7 +1206,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Finish the Fallen",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1223,7 +1223,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Expert Medic",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1240,7 +1240,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Skirmisher",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1257,7 +1257,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Beelzebub's Touch",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1274,7 +1274,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Undead Fortitude",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1291,7 +1291,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Parasitic Tick",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1308,7 +1308,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Frightening Speed",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1325,7 +1325,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Overwhelming Horde",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1342,7 +1342,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Infected Proboscis",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1359,7 +1359,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Toxic",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1376,7 +1376,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Corpulent",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1393,7 +1393,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Trample",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1410,7 +1410,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Unstoppable",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1427,7 +1427,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Four Paws",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1444,7 +1444,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Guard Dog",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1461,7 +1461,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Mercy Dog",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1478,7 +1478,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Martyrdom Dog",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1495,7 +1495,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Hellhound",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1512,7 +1512,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Divine Judgement",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1529,7 +1529,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Ceremonial Duty",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1546,7 +1546,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Faithful Followers",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1563,7 +1563,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "The Ammunition Sacrament",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1620,7 +1620,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Lightning Speed",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1637,7 +1637,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Temporal Fugue",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1654,7 +1654,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Eye of God",
-        "eventags": {"trait": true},
+        "eventtags": {"trait": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1671,7 +1671,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Voice of God",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1688,7 +1688,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Devour",
-        "eventags": {"action": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
