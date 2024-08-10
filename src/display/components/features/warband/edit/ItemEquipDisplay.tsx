@@ -27,7 +27,7 @@ const ItemEquipDisplay = (props: any) => {
     const RefundItem = props.refunditem;
 
     return (
-        <div className="row">
+        <div className="row" style={{padding:"0.5em"}}>
             <div className="col-6 align-content-center">
                 <div className="equipbody">
                     <GenericPanel titlename={ModelEquip.Object.Name} d_colour={"tc"} d_name={ModelEquip.Object.Name} d_type={""} d_method={() => <EquipmentDisplay data={ModelEquip.Object} />}/>

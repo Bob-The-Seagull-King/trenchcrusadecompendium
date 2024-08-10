@@ -27,7 +27,7 @@ const ItemUpgradeDisplay = (props: any) => {
     const RefundItem = props.refunditem;
 
     return (
-        <div className="row">
+        <div className="row" style={{padding:"0.5em"}}>
             <div className="col-6 align-content-center">
                 <div className="equipbody">
                     <GenericPanel titlename={ModelUpgrade.Name} d_colour={WarbandMember.Model.Object.Team} d_name={ModelUpgrade.Name} d_type={""} d_method={() => <UpgradeDisplay data={ModelUpgrade} />}/>
