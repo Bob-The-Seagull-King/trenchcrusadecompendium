@@ -76,6 +76,12 @@ const GenericEditListDisplay = (props: any) => {
     return (
         <>
             <div>
+                {EditStaticType.returnShowSelector(WarbandItem, WarbandMember) == true &&
+                    <div className="row">
+                        {addItem()}
+                    </div>
+                }
+                <div className="verticalspacer"/>
                 <div className="row">
                     {
                     <>{EditStaticType.returnItemArray(WarbandItem, WarbandMember).map((item: any) => ( 
@@ -83,12 +89,6 @@ const GenericEditListDisplay = (props: any) => {
                     ))}</>
                     }
                 </div>
-                <div className="verticalspacer"/>
-                {EditStaticType.returnShowSelector(WarbandItem, WarbandMember) == true &&
-                    <div className="row">
-                        {addItem()}
-                    </div>
-                }
             </div>
         </>
     )
