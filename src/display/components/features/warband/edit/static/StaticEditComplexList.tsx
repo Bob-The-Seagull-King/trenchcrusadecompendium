@@ -540,6 +540,7 @@ export const EditListDataDex : EditListDataTable = {
             return ( <ItemUpgradeDisplay  updater={update} manager={_manager} warband={_warband} member={_member} data={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/> )
         },
         returnItemData (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            
             if ((_filter['Restricted'] === true) && (_warband) && (_member)) {
                 const tempModel = _manager.GetEquipmentByID(_item)
                 let temp : any = null;
@@ -548,7 +549,9 @@ export const EditListDataDex : EditListDataTable = {
                     if (_warband.Faction.Models[i].ID == _member.Model.ID) {
                         let j = 0;
                         for (j = 0; j < _warband.Faction.Models[i].Upgrades.length; j++) {
-                            temp = (_warband.Faction.Models[i].Upgrades[j])
+                            if (_warband.Faction.Models[i].Upgrades[j].ID === _item) {
+                                temp = (_warband.Faction.Models[i].Upgrades[j])
+                            }
                         }
                         break;
                     }
@@ -566,6 +569,7 @@ export const EditListDataDex : EditListDataTable = {
             return "";
         },
         returnCost (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
+            
             if (typeof _item === 'string') {
                 return {type: 'ducats', value: 0}
             } else { return {type: _item.CostID, value: _item.Cost} }
