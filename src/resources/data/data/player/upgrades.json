@@ -276,7 +276,7 @@
         "id": "up_homunculusmassivesize",
         "type": "Upgrade",
         "name": "Massive Size",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "sizeset": 50},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -315,7 +315,7 @@
         "id": "up_homunculusinhumanstrength",
         "type": "Upgrade",
         "name": "Inuman Strength",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "sizeset": 32},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -380,7 +380,7 @@
         "id": "up_homunculushawkeyes",
         "type": "Upgrade",
         "name": "Hawk Eyes",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "ranged": 1},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -419,7 +419,7 @@
         "id": "up_homunculusgargantuansize",
         "type": "Upgrade",
         "name": "Gargantuan Size",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "sizeset": 60},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

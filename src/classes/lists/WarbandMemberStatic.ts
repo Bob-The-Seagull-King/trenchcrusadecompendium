@@ -6,9 +6,14 @@ import { WarbandMember } from "./WarbandMember";
 export function returnModelBase(_member : WarbandMember) {
     let str = "";
     let i = 0;
-    for (i = 0; i < _member.Model.Object.Base.length; i++) {
+
+    const BaseCopy  = Object.assign([], _member.Model.Object.Movement);
+    const SizeBaseSet = setValuesToTag(_member, BaseCopy, 'sizeset')
+    const SizeBase = addValuesToTag(_member, SizeBaseSet, 'size')
+
+    for (i = 0; i < SizeBase.length; i++) {
         if (i !== 0) { str += "x" }
-        str += _member.Model.Object.Base[i]
+        str += SizeBase[i]
     }
     str += "mm"
     return str;
@@ -20,11 +25,11 @@ export function returnModelMovement(_member : WarbandMember) {
 
     const BaseCopy  = Object.assign([], _member.Model.Object.Movement);
     const MovementBaseSet = setValuesToTag(_member, BaseCopy, 'movementset')
-    //const MovementBase = addValuesToTag(_member, MovementBaseSet, 'movement')
+    const MovementBase = addValuesToTag(_member, MovementBaseSet, 'movement')
 
-    for (i = 0; i < MovementBaseSet.length; i++) {
+    for (i = 0; i < MovementBase.length; i++) {
         if (i !== 0) {str += " "}
-        str += MovementBaseSet + "\""
+        str += MovementBase + "\""
     }
     if (_member.Model.Object.EventTags["flying"] || doesTagExist(_member, 'flying')) {
         str += " Flying"
