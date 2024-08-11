@@ -8,13 +8,14 @@ import { DescriptionFactory } from '../../../utility/functions'
  */
 interface IPlayerModel extends ITrenchCrusadeItemData {
     promotion: number, // 0 = true 1 = limited 2 = none
-    movement: string,
-    ranged: string,
-    melee: string,
-    armour: string,
-    base: string,
+    movement: number[],
+    ranged: number[],
+    melee: number[],
+    armour: number[],
+    base: number[],
     faction_id: string,
     variant_id: string,
+    eventtags : {[_name : string] : any},
     blurb: [], 
     equipment: [],
     abilities: [],
@@ -27,11 +28,11 @@ interface IPlayerModel extends ITrenchCrusadeItemData {
  */
 class PlayerModel extends TrenchCrusadeItem {
     public readonly Promotion;
-    public readonly Movement;
-    public readonly Ranged;
-    public readonly Melee;
-    public readonly Armour;
-    public readonly Base;
+    public readonly Movement: number[];
+    public readonly Ranged: number[];
+    public readonly Melee: number[];
+    public readonly Armour: number[];
+    public readonly Base: number[];
     public readonly Team;
     
     public readonly Faction;
@@ -39,6 +40,7 @@ class PlayerModel extends TrenchCrusadeItem {
     public readonly Blurb;
     public readonly Equipment;
     public readonly Abilities;
+    public readonly EventTags;
 
     public Addons: PlayerAddon[] = [];
     
@@ -72,6 +74,7 @@ class PlayerModel extends TrenchCrusadeItem {
         this.Blurb = DescriptionFactory(data.blurb);
         this.Equipment = DescriptionFactory(data.equipment);
         this.Abilities = DescriptionFactory(data.abilities);
+        this.EventTags = data.eventtags
     }
     
     /**
@@ -86,6 +89,66 @@ class PlayerModel extends TrenchCrusadeItem {
         for (i = 0; i < this.Abilities.length; i++) {
             delete this.Abilities[i];
         }
+    }
+
+    public returnBase() {
+        let str = "";
+        let i = 0;
+        for (i = 0; i < this.Base.length; i++) {
+            if (i !== 0) { str += "x" }
+            str += this.Base[i]
+        }
+        str += "mm"
+        return str;
+    }
+
+    public returnMovement() {
+        let str = "";
+        let i = 0;
+        for (i = 0; i < this.Movement.length; i++) {
+            if (i !== 0) {str += " "}
+            str += this.Movement[i] + "\""
+        }
+        if (this.EventTags["flying"]) {
+            str += " Flying"
+        }
+        return str;
+    }
+
+    public returnArmour() {
+        let str = "";
+        let i = 0;
+        for (i = 0; i < this.Armour.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += this.Armour[i]
+        }
+        return str;
+    }
+
+    public returnMelee() {
+        let str = "";
+        let i = 0;
+        for (i = 0; i < this.Melee.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += this.Melee[i] + " Dice"
+        }
+        if (str === '') {
+            str = "N/A"
+        }
+        return str;
+    }
+
+    public returnRanged() {
+        let str = "";
+        let i = 0;
+        for (i = 0; i < this.Ranged.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += this.Ranged[i] + " Dice"
+        }
+        if (str === '') {
+            str = "N/A"
+        }
+        return str;
     }
 }
 

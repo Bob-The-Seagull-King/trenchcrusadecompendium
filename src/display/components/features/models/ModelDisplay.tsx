@@ -30,11 +30,11 @@ const ModelDisplay = (props: any) => {
         return (
             <div>
                 <div className="row row-cols-lg-5 row-cols-md-5 row-cols-sx-5 row-cols-xs-3 row-cols-3 justify-content-center">
-                    <ItemStat title={"Base"} value={ModelObject.Base + "mm"}/>
-                    <ItemStat title={"Movement"} value={ModelObject.Movement}/>
-                    <ItemStat title={"Armour"} value={ModelObject.Armour}/>
-                    <ItemStat title={"Ranged"} value={(ModelObject.Ranged.length > 0)? ModelObject.Ranged + " DICE" : "N/A"}/>
-                    <ItemStat title={"Melee"} value={(ModelObject.Melee.length > 0)? ModelObject.Melee + " DICE" : "N/A"}/>
+                    <ItemStat title={"Base"} value={ModelObject.returnBase()}/>
+                    <ItemStat title={"Movement"} value={ModelObject.returnMovement()}/>
+                    <ItemStat title={"Armour"} value={ModelObject.returnArmour()}/>
+                    <ItemStat title={"Ranged"} value={ModelObject.returnRanged()}/>
+                    <ItemStat title={"Melee"} value={ModelObject.returnMelee()}/>
                 </div>
             </div>
         )

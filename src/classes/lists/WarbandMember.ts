@@ -116,23 +116,57 @@ class WarbandMember {
     }
 
     public static returnModelBase(_member : WarbandMember) {
-        return _member.Model.Object.Base;
+        let str = "";
+        let i = 0;
+        for (i = 0; i < _member.Model.Object.Base.length; i++) {
+            if (i !== 0) { str += "x" }
+            str += _member.Model.Object.Base[i]
+        }
+        str += "mm"
+        return str;
     }
 
     public static returnModelMovement(_member : WarbandMember) {
-        return _member.Model.Object.Movement;
+        let str = "";
+        let i = 0;
+        for (i = 0; i < _member.Model.Object.Movement.length; i++) {
+            if (i !== 0) {str += " "}
+            str += _member.Model.Object.Movement[i] + "\""
+        }
+        if (_member.Model.Object.EventTags["flying"]) {
+            str += " Flying"
+        }
+        return str;
     }
 
     public static returnModelArmour(_member : WarbandMember) {
-        return _member.Model.Object.Armour;
+        let str = "";
+        let i = 0;
+        for (i = 0; i < _member.Model.Object.Armour.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += _member.Model.Object.Armour[i]
+        }
+        return str;
     }
 
     public static returnModelMelee(_member : WarbandMember) {
-        return _member.Model.Object.Melee;
+        let str = "";
+        let i = 0;
+        for (i = 0; i < _member.Model.Object.Melee.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += _member.Model.Object.Melee[i] + " Dice"
+        }
+        return str;
     }
 
     public static returnModelRanged(_member : WarbandMember) {
-        return _member.Model.Object.Ranged;
+        let str = "";
+        let i = 0;
+        for (i = 0; i < _member.Model.Object.Ranged.length; i++) {
+            if (i !== 0) {str += ", "}
+            str += _member.Model.Object.Ranged[i] + " Dice"
+        }
+        return str;
     }
 
     public static returnComponentsWithTag(_member : WarbandMember, _tag : string) {
