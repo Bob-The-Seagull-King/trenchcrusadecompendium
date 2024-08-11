@@ -733,16 +733,16 @@
                         ]
     },
     {
-        "id": "eq_heavyarmour",
+        "id": "eq_reinforcedarmour",
         "type": "Equipment",
         "source": "core",
         "tags": [
                 ],
         "category": "armour",
-        "name": "Heavy Armour",
+        "name": "Reinforced Armour",
         "equip_type": null,
         "range": null,
-        "blurb": "Heavy armour is a master-crafted suit made individually for the most important and elite troops. Each one is richly decorated and often carries the personal device of the warrior who wears it.",
+        "blurb": "Reinforced armour is a master-crafted suit made individually for the most important and elite troops. Each one is richly decorated and often carries the personal device of the warrior who wears it.",
         "modifiers": null,
         "eventtags": {"trait": true},
         "description":  [

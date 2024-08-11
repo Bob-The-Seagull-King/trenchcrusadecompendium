@@ -57,7 +57,7 @@
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
             {"id": "md_hellhound", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
-            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour","eq_tenderizermaul"], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_tenderizermaul"], "upgrades": [{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]},
             {"id": "md_heretictrooper", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_heretictroopertolegionnareranged", "cost": 10, "cost_id": "ducats"},{"id": "up_heretictroopertolegionnaremelee", "cost": 10, "cost_id": "ducats"},{"id": "up_infiltratornaval", "cost": 10, "cost_id": "ducats"}]}
         ]
     },
@@ -158,7 +158,7 @@
         "removed_model": ["md_warwolfassaultbeast","md_artillerywitch","md_anointedheavyinfantry"],
         "equipment": [ ],
         "models" : [
-            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": ["eq_heavyarmour"], "upgrades": []} ]
+            {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": ["eq_reinforcedarmour"], "upgrades": []} ]
     },
     {
         "id": "fv_knightsofavarice",
@@ -795,7 +795,7 @@
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"},{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"},{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
@@ -987,7 +987,7 @@
             {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
             {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [{"id": "up_fianna", "cost": 15, "cost_id": "ducats"},{"id": "up_berserker", "cost": 15, "cost_id": "ducats"}]},
             {"id": "md_lieutenant_fv_eirerangers", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_berserker", "cost": 15, "cost_id": "ducats"}]},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
         ]
     }  ,
     {
@@ -1110,7 +1110,7 @@
             {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "upgrades": []},
             {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 2, "limit_max": 8, "equipment": [], "upgrades": [{"id": "up_forwardposition", "cost": 10, "cost_id": "ducats"},{"id": "up_rapidassault", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
+            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]}
         ]
     }  ,
     {
@@ -1217,7 +1217,7 @@
             {"id": "eq_bagpipes", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Not ELITE"}]}
         ],
         "models" : [
-            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_heavyarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry_fv_kingdomofalbaassaultdetachment", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]},
             {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
