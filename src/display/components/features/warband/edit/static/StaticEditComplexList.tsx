@@ -54,7 +54,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.Object.ID}>{_item.Object.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -200,7 +200,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.Object.ID}>{_item.Object.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -338,7 +338,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.Object.ID}>{_item.Object.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -416,6 +416,8 @@ export const EditListDataDex : EditListDataTable = {
             } else { return {type: _item.CostID, value: _item.Cost} }
         },
         addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
+            
+            
             if (_warband && _member) {
                 const Result = _manager.NewEquipmentForMember(_member, itemName, _cost.value.toString(), _cost.type);
                 update()
@@ -486,7 +488,11 @@ export const EditListDataDex : EditListDataTable = {
 
                     if ((_filter['Glory'] === false) && (_item.CostID === 'glory')) { return false; }
                     if ((_filter['Ducats'] === false) && (_item.CostID === 'ducats')) { return false; }
-                    ItemToCheck = _item.Object;
+                    if (_item.Object) {
+                        ItemToCheck = _item.Object;
+                    } else {
+                        ItemToCheck = _item;
+                    }
                 } else { return false; }
             } else { ItemToCheck = _item; }
 

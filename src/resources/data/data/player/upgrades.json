@@ -146,7 +146,7 @@
         "id": "up_artofassassinationthunderboltofalumat",
         "type": "Upgrade",
         "name": "Thunderbolt of Alumat",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "movement": 2},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -237,7 +237,7 @@
         "id": "up_homunculuswings",
         "type": "Upgrade",
         "name": "Wings",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "movementset": 8, "flying": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

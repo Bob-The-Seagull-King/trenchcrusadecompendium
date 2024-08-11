@@ -2864,7 +2864,7 @@
         "range": null,
         "blurb": "This suit of armour made from black metal is the very visage of Beelzebub himself. It includes wings that take its wearer to the skies at startling speed, and once latched on the opponent its filth-ridden mouth-part will suck the target dry.",
         "modifiers": [],
-        "eventtags": {"trait": true, "armour":-2},
+        "eventtags": {"trait": true, "armour":-2, "movementset" : 8, "flying": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3245,7 +3245,7 @@
         "range": null,
         "blurb": "Based on the prototype battlefield armour worn by Duke Constantine himself and his personal guard Myrmidons, these extremely rare and powerful suits are granted to only the most decorated soldiers. It features MKIII Myrmidon Diesel engine and wings that are painted and decorated to celebrate the deeds of the warrior who has “earned their wings'.",
         "modifiers": [],
-        "eventtags": {"trait": true, "armour":-3},
+        "eventtags": {"trait": true, "armour":-3, "movementset": 10, "flying": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],

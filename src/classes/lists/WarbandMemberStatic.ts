@@ -17,11 +17,16 @@ export function returnModelBase(_member : WarbandMember) {
 export function returnModelMovement(_member : WarbandMember) {
     let str = "";
     let i = 0;
-    for (i = 0; i < _member.Model.Object.Movement.length; i++) {
+
+    const BaseCopy  = Object.assign([], _member.Model.Object.Movement);
+    const MovementBaseSet = setValuesToTag(_member, BaseCopy, 'movementset')
+    //const MovementBase = addValuesToTag(_member, MovementBaseSet, 'movement')
+
+    for (i = 0; i < MovementBaseSet.length; i++) {
         if (i !== 0) {str += " "}
-        str += _member.Model.Object.Movement[i] + "\""
+        str += MovementBaseSet + "\""
     }
-    if (_member.Model.Object.EventTags["flying"]) {
+    if (_member.Model.Object.EventTags["flying"] || doesTagExist(_member, 'flying')) {
         str += " Flying"
     }
     return str;
@@ -32,7 +37,7 @@ export function returnModelArmour(_member : WarbandMember) {
     let i = 0;
 
     const BaseCopy  = Object.assign([], _member.Model.Object.Armour);
-    const ArmourBaseSet = addValuesToTag(_member, BaseCopy, 'armourset')
+    const ArmourBaseSet = setValuesToTag(_member, BaseCopy, 'armourset')
     const ArmourBase = addValuesToTag(_member, ArmourBaseSet, 'armour')
 
     for (i = 0; i < ArmourBase.length; i++) {
@@ -47,7 +52,7 @@ export function returnModelMelee(_member : WarbandMember) {
     let i = 0;
 
     const BaseCopy  = Object.assign([], _member.Model.Object.Melee);
-    const MeleeBaseSet = addValuesToTag(_member, BaseCopy, 'meleeset')
+    const MeleeBaseSet = setValuesToTag(_member, BaseCopy, 'meleeset')
     const MeleeBase = addValuesToTag(_member, MeleeBaseSet, 'melee')
 
     for (i = 0; i < MeleeBase.length; i++) {
@@ -62,7 +67,7 @@ export function returnModelRanged(_member : WarbandMember) {
     let i = 0;
 
     const BaseCopy  = Object.assign([], _member.Model.Object.Ranged);
-    const RangeBaseSet = addValuesToTag(_member, BaseCopy, 'rangedset')
+    const RangeBaseSet = setValuesToTag(_member, BaseCopy, 'rangedset')
     const RangedBase = addValuesToTag(_member, RangeBaseSet, 'ranged')
 
     for (i = 0; i < RangedBase.length; i++) {
@@ -102,18 +107,41 @@ export function setValuesToTag(_member : WarbandMember, _array : number[], _tag 
     const ArrayBase = _array
 
     for (i = 0; i < Components['addon'].length; i++) {
-        for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['addon'][i].EventTags[_tag]; } 
+        for (j = 0; j < ArrayBase.length; j++) { 
+            if (Math.abs(ArrayBase[j]) < Math.abs(Components['addon'][i].EventTags[_tag])) {
+                ArrayBase[j] = Components['addon'][i].EventTags[_tag];
+            } 
+        } 
     }
     
     for (i = 0; i < Components['upgrade'].length; i++) {
-        for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['upgrade'][i].EventTags[_tag]; } 
+        for (j = 0; j < ArrayBase.length; j++) { 
+            if (Math.abs(ArrayBase[j]) < Math.abs(Components['upgrade'][i].EventTags[_tag])) {
+                ArrayBase[j] = Components['upgrade'][i].EventTags[_tag];
+            } 
+        } 
     }
     
     for (i = 0; i < Components['equipment'].length; i++) {
-        for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['equipment'][i].EventTags[_tag]; } 
+        for (j = 0; j < ArrayBase.length; j++) { 
+            if (Math.abs(ArrayBase[j]) < Math.abs(Components['equipment'][i].EventTags[_tag])) {
+                ArrayBase[j] = Components['equipment'][i].EventTags[_tag];
+            }
+         } 
     }
 
     return ArrayBase;
+}
+
+export function doesTagExist(_member : WarbandMember, _tag : string) {
+
+    const Components = returnComponentsWithTag(_member, _tag);
+
+    if ((Components['addon'].length > 0) || (Components['upgrade'].length > 0) || (Components['equipment'].length > 0)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 export function returnComponentsWithTag(_member : WarbandMember, _tag : string) {
