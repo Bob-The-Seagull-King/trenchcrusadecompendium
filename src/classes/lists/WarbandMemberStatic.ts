@@ -32,8 +32,6 @@ export function returnModelArmour(_member : WarbandMember) {
     let i = 0;
 
     const BaseCopy  = Object.assign([], _member.Model.Object.Armour);
-    console.log(BaseCopy);
-
     const ArmourBaseSet = addValuesToTag(_member, BaseCopy, 'armourset')
     const ArmourBase = addValuesToTag(_member, ArmourBaseSet, 'armour')
 
@@ -47,9 +45,14 @@ export function returnModelArmour(_member : WarbandMember) {
 export function returnModelMelee(_member : WarbandMember) {
     let str = "";
     let i = 0;
-    for (i = 0; i < _member.Model.Object.Melee.length; i++) {
+
+    const BaseCopy  = Object.assign([], _member.Model.Object.Melee);
+    const MeleeBaseSet = addValuesToTag(_member, BaseCopy, 'meleeset')
+    const MeleeBase = addValuesToTag(_member, MeleeBaseSet, 'melee')
+
+    for (i = 0; i < MeleeBase.length; i++) {
         if (i !== 0) {str += ", "}
-        str += _member.Model.Object.Melee[i] + " Dice"
+        str += MeleeBase[i] + " Dice"
     }
     return str;
 }
@@ -57,9 +60,14 @@ export function returnModelMelee(_member : WarbandMember) {
 export function returnModelRanged(_member : WarbandMember) {
     let str = "";
     let i = 0;
-    for (i = 0; i < _member.Model.Object.Ranged.length; i++) {
+
+    const BaseCopy  = Object.assign([], _member.Model.Object.Ranged);
+    const RangeBaseSet = addValuesToTag(_member, BaseCopy, 'rangedset')
+    const RangedBase = addValuesToTag(_member, RangeBaseSet, 'ranged')
+
+    for (i = 0; i < RangedBase.length; i++) {
         if (i !== 0) {str += ", "}
-        str += _member.Model.Object.Ranged[i] + " Dice"
+        str += RangedBase[i] + " Dice"
     }
     return str;
 }

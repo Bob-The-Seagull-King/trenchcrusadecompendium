@@ -3,7 +3,7 @@
         "id": "up_heretictroopertolegionnareranged",
         "type": "Upgrade",
         "name": "Heretic Legionnare Ranged",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "ranged": 1},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -16,7 +16,7 @@
         "id": "up_heretictroopertolegionnaremelee",
         "type": "Upgrade",
         "name": "Heretic Legionnare Melee",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "melee": 1},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -29,7 +29,7 @@
         "id": "up_kavassmelee",
         "type": "Upgrade",
         "name": "Kavass Strength",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "melee": 1},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -55,7 +55,7 @@
         "id": "up_trenchpilgrimressurection",
         "type": "Upgrade",
         "name": "Ressurection",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "melee": 1},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
