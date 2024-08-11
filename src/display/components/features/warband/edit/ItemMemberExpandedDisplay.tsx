@@ -41,7 +41,9 @@ const ItemMemberExpandedDisplay = (props: any) => {
     const [key, setkey] = useState(0);
 
     const bannedModelTags = ["empty"]
+
     function UpdateFunction() {
+        Manager.SetStorage();
         setkey(key+1)
     }
     
