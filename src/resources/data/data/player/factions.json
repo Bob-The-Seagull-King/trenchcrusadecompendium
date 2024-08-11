@@ -76,7 +76,7 @@
             {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_greataxe", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_greatmaul", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_sacrificialblade", "cost": 23, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
