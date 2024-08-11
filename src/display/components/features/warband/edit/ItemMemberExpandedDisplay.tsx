@@ -27,6 +27,7 @@ import GenericDisplay from '../../../../components/generics/GenericDisplay';
 import EquipmentDisplay from '../../equipment/EquipmentDisplay';
 import UpgradeDisplay from '../../equipment/UpgradeDisplay';
 import AddonDisplay from '../../addons/AddonDisplay';
+import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from '../../../../../classes/lists/WarbandMemberStatic';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -49,17 +50,17 @@ const ItemMemberExpandedDisplay = (props: any) => {
     
     const ducatcost = GetDucatCost(member);
     const glorycost = GetGloryCost(member)
-    const memberBase = WarbandMember.returnModelBase(member);
-    const memberArmour = WarbandMember.returnModelArmour(member);
-    const memberMovement = WarbandMember.returnModelMovement(member);
-    const memberMelee = WarbandMember.returnModelMelee(member);
-    const memberRanged = WarbandMember.returnModelRanged(member);
+    const memberBase = returnModelBase(member);
+    const memberArmour = returnModelArmour(member);
+    const memberMovement = returnModelMovement(member);
+    const memberMelee = returnModelMelee(member);
+    const memberRanged = returnModelRanged(member);
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
 
     function returnComponentsList(_str : string) {
-        const componentsList = WarbandMember.returnComponentsWithTag(member, _str)
+        const componentsList = returnComponentsWithTag(member, _str)
         return (
             <>
             {componentsList['addon'] &&
