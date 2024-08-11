@@ -81,7 +81,7 @@
         "id": "up_machinearmour",
         "type": "Upgrade",
         "name": "Machine Armour",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-1},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

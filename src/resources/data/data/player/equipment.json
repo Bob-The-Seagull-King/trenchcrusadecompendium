@@ -718,7 +718,7 @@
         "range": null,
         "blurb": "With the advancements in metallurgy and technology, both Faithful and Heretic armies are well-equipped with suits of alloy armour that can withstand an impact from a bullet or turn aside the sharpest of blades. Standard armour is usually mass-produced, but highly effective even against high-calibre weapons.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-1},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -744,7 +744,7 @@
         "range": null,
         "blurb": "Reinforced armour is a master-crafted suit made individually for the most important and elite troops. Each one is richly decorated and often carries the personal device of the warrior who wears it.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true,"armour": -2},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -770,7 +770,7 @@
         "range": null,
         "blurb": "Shields used in trench warfare are made of either steel reinforced with Orichalcum to allow them to withstand even high-calibre bullets, or from metal mined from Infernal bedrock and shaped in the armouries of Pandæmonium, the Capital of Hell.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true,"armour":-1},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1167,7 +1167,7 @@
         "range": null,
         "blurb": "This suit of armour gilded with gleaming gold comes with a helmet often with a beautiful, cherub-like face twisted on corrupted in some way, such as with inhuman eyes or with the whole face twisted upside-down. Despite its splendour the armour is always tarnished by blood, offal or other kind of corruption. Merely seeing it fills mortals with incredible greed, and makes the wearer an immediate target of their wrath as they attempt to tear it away from the wearer.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-2},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1462,7 +1462,7 @@
         "range": null,
         "blurb": "Only a few of these suits of armour exist in all of Christendom. Covered with miraculous icons this suit of armour is protected by the very hand of Heaven and its wearer can withstand even direct hits from artillery.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true,"armour":-1},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1733,7 +1733,7 @@
         "range": null,
         "blurb": "This suit of Armour is made of blessed icons and scripture scrolls written with the blood of saints.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true ,"armour":-1},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2052,7 +2052,7 @@
         "range": null,
         "blurb": "Suit of armour which protects against almost all harm. This is an essential tool of Alchemists’ craft, festooned with the     Seals of Solomon which enables them to bend the elements of Creation to their will and shields them even from the devices of Hell",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-2},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2302,7 +2302,7 @@
         "range": null,
         "blurb": "Combining the rarest of divine metal alloys and the latest technology of New Antioch, Machine Armour makes its wearer a virtual mobile tank.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-3},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2356,7 +2356,7 @@
         "range": null,
         "blurb": "The Device of the Black Grail carries the blessing of the Lord of Flies. It has a will of its own, moving to intercept any bullets or other projectiles that might impede the work of Beelzebub",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-1},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2608,7 +2608,7 @@
         "range": null,
         "blurb": "No armour more splendid exists within the Sultanate than this magnificent chain mail made from the very Iron Wall that protects those who believe by the smiths of New Damascus. They are given as a reward to the greatest warriors for their service on the battlefield by the Sultan’s hand alone. Each ring of this armour is inscribed with a verse from the Holy Quran and is thus utterly unbreakable.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-2},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2864,7 +2864,7 @@
         "range": null,
         "blurb": "This suit of armour made from black metal is the very visage of Beelzebub himself. It includes wings that take its wearer to the skies at startling speed, and once latched on the opponent its filth-ridden mouth-part will suck the target dry.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-2},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3245,7 +3245,7 @@
         "range": null,
         "blurb": "Based on the prototype battlefield armour worn by Duke Constantine himself and his personal guard Myrmidons, these extremely rare and powerful suits are granted to only the most decorated soldiers. It features MKIII Myrmidon Diesel engine and wings that are painted and decorated to celebrate the deeds of the warrior who has “earned their wings'.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-3},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3327,7 +3327,7 @@
         "range": null,
         "blurb": "An Invention of the al-Jazari School of engineering school within the House of Wisdom, this shield is treated with an Alchemical formula, making it highly resistant to fire weapons. It has proven its value in many desperate battles against the flame-wielding Heretics.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-1},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3381,7 +3381,7 @@
         "range": null,
         "blurb": "A suit of armour fashioned after the mail worn by Cobar the Betrayer, the first Lord of the Sixty-Six. This black Iron suit is produced in the Death-Factories of Hell from souls of those who betrayed their friends in life. It rewards those who lead their followers and friends to ruin and death.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour":-3},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],

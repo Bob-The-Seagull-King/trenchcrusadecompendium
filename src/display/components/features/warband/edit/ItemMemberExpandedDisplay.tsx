@@ -49,6 +49,11 @@ const ItemMemberExpandedDisplay = (props: any) => {
     
     const ducatcost = GetDucatCost(member);
     const glorycost = GetGloryCost(member)
+    const memberBase = WarbandMember.returnModelBase(member);
+    const memberArmour = WarbandMember.returnModelArmour(member);
+    const memberMovement = WarbandMember.returnModelMovement(member);
+    const memberMelee = WarbandMember.returnModelMelee(member);
+    const memberRanged = WarbandMember.returnModelRanged(member);
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
@@ -111,19 +116,19 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     <ItemStat title={"Glory Cost"} value={glorycost}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Base"} value={WarbandMember.returnModelBase(member)}/>
+                        <ItemStat title={"Base"} value={memberBase}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Movement"} value={WarbandMember.returnModelMovement(member)}/>
+                        <ItemStat title={"Movement"} value={memberMovement}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Armour"} value={WarbandMember.returnModelArmour(member)}/>
+                        <ItemStat title={"Armour"} value={memberArmour}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Melee"} value={WarbandMember.returnModelMelee(member)}/>
+                        <ItemStat title={"Melee"} value={memberMelee}/>
                     </div>
                     <div className="col-md-2 col-6">
-                        <ItemStat title={"Ranged"} value={WarbandMember.returnModelRanged(member)}/>
+                        <ItemStat title={"Ranged"} value={memberRanged}/>
                     </div>
                 </div>
             </div>

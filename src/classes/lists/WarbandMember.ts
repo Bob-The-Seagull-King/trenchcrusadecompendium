@@ -142,9 +142,16 @@ class WarbandMember {
     public static returnModelArmour(_member : WarbandMember) {
         let str = "";
         let i = 0;
-        for (i = 0; i < _member.Model.Object.Armour.length; i++) {
+
+        const BaseCopy  = Object.assign([], _member.Model.Object.Armour);
+        console.log(BaseCopy);
+
+        const ArmourBaseSet = WarbandMember.addValuesToTag(_member, BaseCopy, 'armourset')
+        const ArmourBase = WarbandMember.addValuesToTag(_member, ArmourBaseSet, 'armour')
+
+        for (i = 0; i < ArmourBase.length; i++) {
             if (i !== 0) {str += ", "}
-            str += _member.Model.Object.Armour[i]
+            str += ArmourBase[i]
         }
         return str;
     }
@@ -167,6 +174,50 @@ class WarbandMember {
             str += _member.Model.Object.Ranged[i] + " Dice"
         }
         return str;
+    }
+
+    public static addValuesToTag(_member : WarbandMember, _array : number[], _tag : string) {
+        let i = 0;
+        let j = 0;
+
+        const Components = WarbandMember.returnComponentsWithTag(_member, _tag);
+        const ArrayBase = _array
+
+        for (i = 0; i < Components['addon'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['addon'][i].EventTags[_tag]; } 
+        }
+        
+        for (i = 0; i < Components['upgrade'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['upgrade'][i].EventTags[_tag]; } 
+        }
+        
+        for (i = 0; i < Components['equipment'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['equipment'][i].EventTags[_tag]; } 
+        }
+
+        return ArrayBase;
+    }
+
+    public static setValuesToTag(_member : WarbandMember, _array : number[], _tag : string) {
+        let i = 0;
+        let j = 0;
+
+        const Components = WarbandMember.returnComponentsWithTag(_member, _tag);
+        const ArrayBase = _array
+
+        for (i = 0; i < Components['addon'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['addon'][i].EventTags[_tag]; } 
+        }
+        
+        for (i = 0; i < Components['upgrade'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['upgrade'][i].EventTags[_tag]; } 
+        }
+        
+        for (i = 0; i < Components['equipment'].length; i++) {
+            for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] = Components['equipment'][i].EventTags[_tag]; } 
+        }
+
+        return ArrayBase;
     }
 
     public static returnComponentsWithTag(_member : WarbandMember, _tag : string) {
