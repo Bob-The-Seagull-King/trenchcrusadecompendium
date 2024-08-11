@@ -43,6 +43,7 @@ const ItemMemberDisplay = (props: any) => {
     const [theme] = useGlobalState('theme');
 
     const handleClose = () => {
+        UpdateFunction();
         setkey(key + 1)
         setShow(false);}
     const handleShow = () => setShow(true);
