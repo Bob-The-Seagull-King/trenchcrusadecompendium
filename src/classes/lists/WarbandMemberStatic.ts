@@ -180,9 +180,27 @@ export function returnComponentsWithTag(_member : WarbandMember, _tag : string) 
         }
     }
 
+    const skills = []
+    for (i = 0; i < _member.Skills.length; i ++) {
+        if (_member.Skills[i].eventtags) {
+        if (_member.Skills[i].eventtags[_tag]) {
+            skills.push(_member.Skills[i]) }
+        }
+    }
+
+    const injuries = []
+    for (i = 0; i < _member.Injuries.length; i ++) {
+        if (_member.Injuries[i].EventTags) {
+        if (_member.Injuries[i].EventTags[_tag]) {
+            injuries.push(_member.Injuries[i]) }
+        }
+    }
+
     componentsReturn['addon'] = addons;
     componentsReturn['upgrade'] = upgrades;
     componentsReturn['equipment'] = equipment;
+    componentsReturn['skill'] = skills;
+    componentsReturn['injury'] = injuries;
     
     return componentsReturn;
 }

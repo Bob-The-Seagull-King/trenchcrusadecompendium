@@ -21,13 +21,15 @@ class ListItem extends TrenchCrusadeItem {
     public readonly RollStart;
     public readonly RollEnd;
     public readonly Description;
-    
+    public readonly EventTags;
+
     public constructor(data: IListItem)
     {
         super(data)
         this.ItemType = ItemType.Injury;
         this.RollStart = data.roll_start;
         this.RollEnd = data.roll_end;
+        this.EventTags = data.eventtags;
         
         this.Description = DescriptionFactory(data.description);
     }

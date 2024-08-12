@@ -28,6 +28,7 @@ import EquipmentDisplay from '../../equipment/EquipmentDisplay';
 import UpgradeDisplay from '../../equipment/UpgradeDisplay';
 import AddonDisplay from '../../addons/AddonDisplay';
 import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from '../../../../../classes/lists/WarbandMemberStatic';
+import PartialItemDisplay from '../../partialitem/PartialItemDisplay';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -88,6 +89,26 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['upgrade'].map((item: any) => (
                         <div key={"componentupgrade"+item.Name} className='addonbox'>
                         <GenericDisplay  d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item}/>}/>
+                        <div className="verticalspacer"/>
+                        </div>
+                    ))}
+                </>
+            }
+            {componentsList['skill'] &&
+                <>
+                    {componentsList['skill'].map((item: any) => (
+                        <div key={"componentskill"+item.Name} className='addonbox'>
+                        <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.name} d_type={""} d_method={() => <PartialItemDisplay data={item}/> }/>
+                        <div className="verticalspacer"/>
+                        </div>
+                    ))}
+                </>
+            }
+            {componentsList['injury'] &&
+                <>
+                    {componentsList['injury'].map((item: any) => (
+                        <div key={"componentinjury"+item.Name} className='addonbox'>
+                        <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.name} d_type={""} d_method={() => <PartialItemDisplay data={item}/> }/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
