@@ -31,9 +31,22 @@ const ItemMemberDisplay = (props: any) => {
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
 
-    const TossItem = props.tossitem;
-    const SellItem = props.sellitem;
-    const RefundItem = props.refunditem;
+    const Toss = props.tossitem;
+    const Sell = props.sellitem;
+    const Refund = props.refunditem
+
+    function TossItem(_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+        Toss(_manager, _warband, _item, update, _member);
+        handleClose();
+    }
+    function SellItem(_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+        Sell(_manager, _warband, _item, update, _member);
+        handleClose();
+    }
+    function RefundItem(_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
+        Refund(_manager, _warband, _item, update, _member);
+        handleClose();
+    }
 
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
@@ -63,7 +76,7 @@ const ItemMemberDisplay = (props: any) => {
     // Create a copy of the model to add to the warband
     function duplicateModel() {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
-        UpdateFunction()
+        setShow(false)
     }
 
     // Return the basic information of the member
