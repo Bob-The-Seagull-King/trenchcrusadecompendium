@@ -76,7 +76,7 @@ const ItemMemberDisplay = (props: any) => {
     // Create a copy of the model to add to the warband
     function duplicateModel() {
         Manager.DuplicateMember(WarbandItem, WarbandMember);
-        setShow(false)
+        UpdateFunction();
     }
 
     // Return the basic information of the member
