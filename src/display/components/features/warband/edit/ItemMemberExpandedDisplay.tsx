@@ -245,7 +245,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     </div>     
                     <div className='col-md-6 col-sm-12'>
                         <div className='row'>
-                            <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} updater={UpdateFunction}/> 
+                            <GenericEditTextBoxDisplay manager={Manager} warband={WarbandItem} statictype={'membernotes'} member={member} updater={UpdateFunction}/> 
                         </div>
                     </div>              
                 </div>  
