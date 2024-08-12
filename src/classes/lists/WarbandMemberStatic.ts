@@ -161,19 +161,23 @@ export function returnComponentsWithTag(_member : WarbandMember, _tag : string) 
         if (getTagValue(desc[i].Tags, "desc_type") === 'addon') {
             const strID = desc[i].Content
             const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
-            if (item.EventTags[_tag]) { addons.push(item) }
+            
+            if (_member.Equipment[i].Object.EventTags) {if (item.EventTags[_tag]) { addons.push(item) }}
         }
     }
 
     const upgrades = []
     for (i = 0; i < _member.Upgrades.length; i ++) {
-        if (_member.Upgrades[i].EventTags[_tag]) { upgrades.push(_member.Upgrades[i]) }
+        if (_member.Equipment[i].Object.EventTags) {
+        if (_member.Upgrades[i].EventTags[_tag]) { upgrades.push(_member.Upgrades[i]) }}
     }
 
     const equipment = []
     for (i = 0; i < _member.Equipment.length; i ++) {
+        if (_member.Equipment[i].Object.EventTags) {
         if (_member.Equipment[i].Object.EventTags[_tag]) {
             equipment.push(_member.Equipment[i].Object) }
+        }
     }
 
     componentsReturn['addon'] = addons;
