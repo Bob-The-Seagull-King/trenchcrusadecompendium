@@ -162,13 +162,13 @@ export function returnComponentsWithTag(_member : WarbandMember, _tag : string) 
             const strID = desc[i].Content
             const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
             
-            if (_member.Equipment[i].Object.EventTags) {if (item.EventTags[_tag]) { addons.push(item) }}
+            if (item.EventTags) {if (item.EventTags[_tag]) { addons.push(item) }}
         }
     }
 
     const upgrades = []
     for (i = 0; i < _member.Upgrades.length; i ++) {
-        if (_member.Equipment[i].Object.EventTags) {
+        if (_member.Upgrades[i].EventTags) {
         if (_member.Upgrades[i].EventTags[_tag]) { upgrades.push(_member.Upgrades[i]) }}
     }
 
