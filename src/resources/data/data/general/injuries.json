@@ -38,7 +38,7 @@
     {
         "id": "ij_severenervedamage",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -56,7 +56,7 @@
     {
         "id": "ij_handwound",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true, "melee" : -1},
         "source": "core",
         "tags": [
             ],
@@ -74,7 +74,7 @@
     {
         "id": "ij_lostaneye",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true , "ranged" : -1},
         "source": "core",
         "tags": [
             ],
@@ -92,7 +92,7 @@
     {
         "id": "ij_chestwound",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -110,7 +110,7 @@
     {
         "id": "ij_insomniac",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -128,7 +128,7 @@
     {
         "id": "ij_headwound",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -146,7 +146,7 @@
     {
         "id": "ij_shellshocked",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -164,7 +164,7 @@
     {
         "id": "ij_darkmemory",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -182,7 +182,7 @@
     {
         "id": "ij_paranoid",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -200,7 +200,7 @@
     {
         "id": "ij_lostarm",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -218,7 +218,7 @@
     {
         "id": "ij_legwound",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true, "movement": -2},
         "source": "core",
         "tags": [
             ],
@@ -236,7 +236,7 @@
     {
         "id": "ij_expensivetreatment",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -254,7 +254,7 @@
     {
         "id": "ij_possessed",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -272,7 +272,7 @@
     {
         "id": "ij_muscledamage",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],
@@ -380,7 +380,7 @@
     {
         "id": "ij_facialscar",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait" : true},
         "source": "core",
         "tags": [
             ],

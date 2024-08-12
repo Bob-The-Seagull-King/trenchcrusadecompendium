@@ -100,6 +100,14 @@ export function addValuesToTag(_member : WarbandMember, _array : number[], _tag 
     for (i = 0; i < Components['equipment'].length; i++) {
         for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['equipment'][i].EventTags[_tag]; } 
     }
+    
+    for (i = 0; i < Components['skill'].length; i++) {
+        for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['skill'][i].eventtags[_tag]; } 
+    }
+    
+    for (i = 0; i < Components['injury'].length; i++) {
+        for (j = 0; j < ArrayBase.length; j++) { ArrayBase[j] += Components['injury'][i].EventTags[_tag]; } 
+    }
 
     return ArrayBase;
 }
@@ -134,6 +142,22 @@ export function setValuesToTag(_member : WarbandMember, _array : number[], _tag 
             }
          } 
     }
+    
+    for (i = 0; i < Components['skill'].length; i++) {
+        for (j = 0; j < ArrayBase.length; j++) { 
+            if (Math.abs(ArrayBase[j]) < Math.abs(Components['skill'][i].eventtags[_tag])) {
+                ArrayBase[j] = Components['skill'][i].eventtags[_tag];
+            }
+         } 
+    }
+    
+    for (i = 0; i < Components['injury'].length; i++) {
+        for (j = 0; j < ArrayBase.length; j++) { 
+            if (Math.abs(ArrayBase[j]) < Math.abs(Components['injury'][i].EventTags[_tag])) {
+                ArrayBase[j] = Components['injury'][i].EventTags[_tag];
+            }
+         } 
+    }
 
     return ArrayBase;
 }
@@ -142,7 +166,7 @@ export function doesTagExist(_member : WarbandMember, _tag : string) {
 
     const Components = returnComponentsWithTag(_member, _tag);
 
-    if ((Components['addon'].length > 0) || (Components['upgrade'].length > 0) || (Components['equipment'].length > 0)) {
+    if ((Components['addon'].length > 0) || (Components['upgrade'].length > 0) || (Components['equipment'].length > 0) || (Components['skill'].length > 0) || (Components['injury'].length > 0)) {
         return true;
     } else {
         return false;
