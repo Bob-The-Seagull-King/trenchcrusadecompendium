@@ -1699,6 +1699,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"}
                 ],
         "category": "equipment",
         "name": "Martyrdom Pills",
