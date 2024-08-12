@@ -73,6 +73,7 @@ export class Warband {
                 id: "em_lucky",
                 type: "Location",
                 source: "core",
+                eventtags: {},
                 tags: [
                     {tag_name: "common", val: ""}
                     ],

@@ -2,6 +2,7 @@
     {
         "id": "sk_patronskill",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -18,6 +19,7 @@
     {
         "id": "sk_standfirm",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "strength", "val": ""}
@@ -34,6 +36,7 @@
     {
         "id": "sk_parry",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -50,6 +53,7 @@
     {
         "id": "sk_closequarterscombat",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -66,6 +70,7 @@
     {
         "id": "sk_relentlesscharge",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -82,6 +87,7 @@
     {
         "id": "sk_meleeproficiency",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -98,6 +104,7 @@
     {
         "id": "sk_strengthofsamson",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""},
@@ -115,6 +122,7 @@
     {
         "id": "sk_toughasnails",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "strength", "val": ""}
@@ -131,6 +139,7 @@
     {
         "id": "sk_champion",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -147,6 +156,7 @@
     {
         "id": "sk_surgicalstrike",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -163,6 +173,7 @@
     {
         "id": "sk_hunter",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -179,6 +190,7 @@
     {
         "id": "sk_gunsligner",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -195,6 +207,7 @@
     {
         "id": "sk_farshot",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -211,6 +224,7 @@
     {
         "id": "sk_sharpeyes",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -227,6 +241,7 @@
     {
         "id": "sk_rangedproficiency",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -243,6 +258,7 @@
     {
         "id": "sk_snipersnest",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -259,6 +275,7 @@
     {
         "id": "sk_pointblank",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -275,6 +292,7 @@
     {
         "id": "sk_hipshot",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -291,6 +309,7 @@
     {
         "id": "sk_headshot",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -307,6 +326,7 @@
     {
         "id": "sk_sixthsense",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "stealth", "val": ""}
@@ -323,6 +343,7 @@
     {
         "id": "sk_assassinate",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "stealth", "val": ""}
@@ -339,6 +360,7 @@
     {
         "id": "sk_shadowalker",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "stealth", "val": ""}
@@ -355,6 +377,7 @@
     {
         "id": "sk_athletic",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "speed", "val": ""}
@@ -371,6 +394,7 @@
     {
         "id": "sk_sprinter",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "speed", "val": ""}
@@ -387,6 +411,7 @@
     {
         "id": "sk_disengage",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "speed", "val": ""},
@@ -404,6 +429,7 @@
     {
         "id": "sk_incoming",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "speed", "val": ""}
@@ -420,6 +446,7 @@
     {
         "id": "sk_nimble",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "speed", "val": ""}
@@ -436,6 +463,7 @@
     {
         "id": "sk_dodge",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "stealth", "val": ""}
@@ -452,6 +480,7 @@
     {
         "id": "sk_warluck",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -468,6 +497,7 @@
     {
         "id": "sk_tisbutascratch",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -484,6 +514,7 @@
     {
         "id": "sk_badcompany",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -500,6 +531,7 @@
     {
         "id": "sk_scavenger",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -516,6 +548,7 @@
     {
         "id": "sk_skillandexpertise",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -532,6 +565,7 @@
     {
         "id": "sk_showoff",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -548,6 +582,7 @@
     {
         "id": "sk_friendsinhighplaces",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -564,6 +599,7 @@
     {
         "id": "sk_gloryhound",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -580,6 +616,7 @@
     {
         "id": "sk_warstories",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "wildcard", "val": ""}
@@ -596,6 +633,7 @@
     {
         "id": "sk_blessingsofthewarriorsaint",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -612,6 +650,7 @@
     {
         "id": "sk_endurethesuffering",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -628,6 +667,7 @@
     {
         "id": "sk_dragonslayer",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -644,6 +684,7 @@
     {
         "id": "sk_davidandgoliath",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -660,6 +701,7 @@
     {
         "id": "sk_onyourknees",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -676,6 +718,7 @@
     {
         "id": "sk_warriorsprayer",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -692,6 +735,7 @@
     {
         "id": "sk_blessedmurder",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -708,6 +752,7 @@
     {
         "id": "sk_sadistic",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -724,6 +769,7 @@
     {
         "id": "sk_hellfire",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -740,6 +786,7 @@
     {
         "id": "sk_30piecesofsilver",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -756,6 +803,7 @@
     {
         "id": "sk_bloodsacrifice",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -772,6 +820,7 @@
     {
         "id": "sk_lashofacheron",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -788,6 +837,7 @@
     {
         "id": "sk_swordofallah",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -804,6 +854,7 @@
     {
         "id": "sk_exoticwares",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -820,6 +871,7 @@
     {
         "id": "sk_jannisarytraining",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -836,6 +888,7 @@
     {
         "id": "sk_gures",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -852,6 +905,7 @@
     {
         "id": "sk_rightfullyguided",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -868,6 +922,7 @@
     {
         "id": "sk_sultansfavour",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -884,6 +939,7 @@
     {
         "id": "sk_cockroachvitatlity",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -900,6 +956,7 @@
     {
         "id": "sk_eyesofthefly",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -916,6 +973,7 @@
     {
         "id": "sk_wingsofthefly",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -932,6 +990,7 @@
     {
         "id": "sk_grailplague",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -948,6 +1007,7 @@
     {
         "id": "sk_deceitofbeelzebub",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -964,6 +1024,7 @@
     {
         "id": "sk_knightoftheflies",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -980,6 +1041,7 @@
     {
         "id": "sk_godwithgod",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -996,6 +1058,7 @@
     {
         "id": "sk_knowledgeofsciences",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -1012,6 +1075,7 @@
     {
         "id": "sk_favouredbygod",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -1028,6 +1092,7 @@
     {
         "id": "sk_penniesfromheaven",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -1044,6 +1109,7 @@
     {
         "id": "sk_organisationalskills",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -1060,6 +1126,7 @@
     {
         "id": "sk_healingarts",
         "type": "Skill",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}

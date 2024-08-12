@@ -2,6 +2,7 @@
     {
         "id": "lc_moonshinestash",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -46,6 +47,7 @@
     {
         "id": "lc_heavyweaponscache",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -90,6 +92,7 @@
     {
         "id": "lc_trenchshrine",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -145,6 +148,7 @@
     {
         "id": "lc_ruinedhouse",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -189,6 +193,7 @@
     {
         "id": "lc_survivor",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -205,6 +210,7 @@
     {
         "id": "lc_fallensoldier",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -221,6 +227,7 @@
     {
         "id": "lc_trenchmerchant",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -265,6 +272,7 @@
     {
         "id": "lc_mapanddocumentbag",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -281,6 +289,7 @@
     {
         "id": "lc_snipersnest",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -362,6 +371,7 @@
     {
         "id": "lc_fallenknight",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -406,6 +416,7 @@
     {
         "id": "lc_warbandstrongbox",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "common", "val": ""}
@@ -450,6 +461,7 @@
     {
         "id": "lc_angelicinstrument",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -466,6 +478,7 @@
     {
         "id": "lc_abandonedprophecyradiopost",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -482,6 +495,7 @@
     {
         "id": "lc_potofmanna",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -498,6 +512,7 @@
     {
         "id": "lc_ransackedalchemistworkshop",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -514,6 +529,7 @@
     {
         "id": "lc_blackmarket",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -530,6 +546,7 @@
     {
         "id": "lc_bookofgolems",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -546,6 +563,7 @@
     {
         "id": "lc_stashofdrugsanderotica",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -562,6 +580,7 @@
     {
         "id": "lc_saintsreliquary",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -578,6 +597,7 @@
     {
         "id": "lc_highrankingcaptive",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}
@@ -594,6 +614,7 @@
     {
         "id": "lc_abandonedresurrectionmachine",
         "type": "Location",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             {"tag_name": "rare", "val": ""}

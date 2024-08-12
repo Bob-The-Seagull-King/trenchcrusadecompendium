@@ -9,7 +9,8 @@ import { IDescriptionItemData } from '../../../classes/DescriptionItem';
 interface IListItem extends ITrenchCrusadeItemData {
    roll_start : number | string,
    roll_end : number | string,
-   description: IDescriptionItemData[]
+   description: IDescriptionItemData[],
+   eventtags : {[_name : string] : any}
 }
 
 /**

@@ -29,7 +29,8 @@ interface IListSet {
  * Structure of a list item without a roll range
  */
 interface IItemPartial extends ITrenchCrusadeItemData {
-    description : IAdvancedDescription[]
+    description : IAdvancedDescription[],
+    eventtags : {[_name : string] : any}
 }
 
 /**
@@ -69,6 +70,7 @@ class ListGroup extends TrenchCrusadeItem {
                 name: id_find.name,
                 source: id_find.source,
                 tags: id_find.tags,
+                eventtags : id_find.eventtags,
                 roll_start : data[i].roll_start,
                 roll_end : data[i].roll_end,
                 description: id_find.description

@@ -2,6 +2,7 @@
     {
         "id": "ij_dead",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -19,6 +20,7 @@
     {
         "id": "ij_captured",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -36,6 +38,7 @@
     {
         "id": "ij_severenervedamage",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -53,6 +56,7 @@
     {
         "id": "ij_handwound",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -70,6 +74,7 @@
     {
         "id": "ij_lostaneye",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -87,6 +92,7 @@
     {
         "id": "ij_chestwound",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -104,6 +110,7 @@
     {
         "id": "ij_insomniac",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -121,6 +128,7 @@
     {
         "id": "ij_headwound",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -138,6 +146,7 @@
     {
         "id": "ij_shellshocked",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -155,6 +164,7 @@
     {
         "id": "ij_darkmemory",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -172,6 +182,7 @@
     {
         "id": "ij_paranoid",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -189,6 +200,7 @@
     {
         "id": "ij_lostarm",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -206,6 +218,7 @@
     {
         "id": "ij_legwound",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -223,6 +236,7 @@
     {
         "id": "ij_expensivetreatment",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -240,6 +254,7 @@
     {
         "id": "ij_possessed",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -257,6 +272,7 @@
     {
         "id": "ij_muscledamage",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -274,6 +290,7 @@
     {
         "id": "ij_minorwound",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -291,6 +308,7 @@
     {
         "id": "ij_fullrecovery",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -308,6 +326,7 @@
     {
         "id": "ij_hardened",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -325,6 +344,7 @@
     {
         "id": "ij_bitterlessons",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -342,6 +362,7 @@
     {
         "id": "ij_robbed",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],
@@ -359,6 +380,7 @@
     {
         "id": "ij_facialscar",
         "type": "Injury",
+        "eventtags" : {},
         "source": "core",
         "tags": [
             ],

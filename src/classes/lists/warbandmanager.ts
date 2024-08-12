@@ -495,6 +495,7 @@ class WarbandManager {
                     id: "em_lucky",
                     type: "Location",
                     source: "core",
+                    eventtags: {},
                     tags: [
                         {tag_name: "common", val: ""}
                         ],
@@ -538,6 +539,22 @@ class WarbandManager {
                         }
                     }
                 }
+                for (l = 0; l < data[i].Members[j].Skills.length; l++) {
+                    for (k = 0; k < this.Skills.length; k++) {
+                        if (this.Skills[k].id == data[i].Members[j].Skills[l].id) {
+                            data[i].Members[j].Skills[l] = this.Skills[k];
+                            break;
+                        }
+                    }
+                }
+                for (l = 0; l < data[i].Members[j].Injuries.length; l++) {
+                    for (k = 0; k < this.Injuries.length; k++) {
+                        if (this.Injuries[k].ID == data[i].Members[j].Injuries[l].ID) {
+                            data[i].Members[j].Injuries[l] = this.Injuries[k];
+                            break;
+                        }
+                    }
+                }
                 for (l = 0; l < data[i].Members[j].Upgrades.length; l++) {
                     for (k = 0; k < this.Upgrades.length; k++) {
                         if (this.Upgrades[k].ID == data[i].Members[j].Upgrades[l].ID) {
@@ -565,6 +582,38 @@ class WarbandManager {
                     data[i].Armoury[j].Object = modelval;
                 } else {
                     this.DeleteEquipmentFromWarband(data[i].Armoury[j], data[i]);
+                }
+            }
+
+            // Update equipment information
+            for (j = 0; j < data[i].Locations.length; j++) {
+                const modelid = data[i].Locations[j].id;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Locations.length; k++) {
+                    if (this.Locations[k].id == modelid) {
+                        modelval = this.Locations[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Locations[j] = modelval;
+                }
+            }
+
+            // Update equipment information
+            for (j = 0; j < data[i].Modifiers.length; j++) {
+                const modelid = data[i].Modifiers[j].id;
+                let k = 0;
+                let modelval = null;
+                for (k = 0; k < this.Modifiers.length; k++) {
+                    if (this.Modifiers[k].id == modelid) {
+                        modelval = this.Modifiers[k]
+                        break;
+                    }
+                }
+                if (modelval != null) {
+                    data[i].Modifiers[j] = modelval;
                 }
             }
 
@@ -848,6 +897,7 @@ class WarbandManager {
                     id: "em_lucky",
                     type: "Location",
                     source: "core",
+                    eventtags: {},
                     tags: [
                         {tag_name: "common", val: ""}
                         ],
