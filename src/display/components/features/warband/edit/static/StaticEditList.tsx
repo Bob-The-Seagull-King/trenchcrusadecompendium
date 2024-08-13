@@ -7,6 +7,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import GenericPanel from "../../../../generics/GenericPanel"
 import PartialItemDisplay from "../../../partialitem/PartialItemDisplay"
+import FullItemDisplay from '../../../../features/list/FullItemDisplay'
 
 export interface EditItemType {
     title      : string,
@@ -93,7 +94,7 @@ export const EditItemDataDex : EditItemDataTable = {
                     <div className="col-9 align-content-center">
                         <div className="equipbody">
                             <GenericPanel titlename={_item.Name} d_colour={"tc"} d_name={_item.Name} d_type={""} d_method={() => 
-                                <PartialItemDisplay data={_item}/>
+                                <FullItemDisplay data={_item}/>
                             }/>
                         </div>
                     </div>

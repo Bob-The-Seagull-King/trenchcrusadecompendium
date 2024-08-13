@@ -29,6 +29,7 @@ import UpgradeDisplay from '../../equipment/UpgradeDisplay';
 import AddonDisplay from '../../addons/AddonDisplay';
 import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from '../../../../../classes/lists/WarbandMemberStatic';
 import PartialItemDisplay from '../../partialitem/PartialItemDisplay';
+import FullItemDisplay from '../../list/FullItemDisplay';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -108,7 +109,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 <>
                     {componentsList['injury'].map((item: any) => (
                         <div key={"componentinjury"+item.Name} className='addonbox'>
-                        <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.name} d_type={""} d_method={() => <PartialItemDisplay data={item}/> }/>
+                        <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <FullItemDisplay data={item}/> }/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
