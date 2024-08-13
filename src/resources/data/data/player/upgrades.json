@@ -42,7 +42,7 @@
         "id": "up_martyrdomdevice",
         "type": "Upgrade",
         "name": "Martyrdom Device",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_ranged"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -315,7 +315,7 @@
         "id": "up_homunculusinhumanstrength",
         "type": "Upgrade",
         "name": "Inuman Strength",
-        "eventtags": {"trait": true, "sizeset": 32},
+        "eventtags": {"trait": true, "sizeset": 32, "melee" : 1},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -380,7 +380,7 @@
         "id": "up_homunculushawkeyes",
         "type": "Upgrade",
         "name": "Hawk Eyes",
-        "eventtags": {"trait": true, "ranged": 1},
+        "eventtags": {"trait": true, "ranged": 1, "category_ranged": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -432,7 +432,7 @@
         "id": "up_alchemistsecretsmedicine",
         "type": "Upgrade",
         "name": "Medicine",
-        "eventtags": {"trait": true},
+        "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

@@ -38,7 +38,7 @@
     {
         "id": "ij_severenervedamage",
         "type": "Injury",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"trait" : true, "category_melee": true, "category_ranged": true},
         "source": "core",
         "tags": [
             ],
@@ -56,7 +56,7 @@
     {
         "id": "ij_handwound",
         "type": "Injury",
-        "eventtags" : {"trait" : true, "melee" : -1},
+        "eventtags" : {"category_melee" : true, "melee" : -1},
         "source": "core",
         "tags": [
             ],
@@ -74,7 +74,7 @@
     {
         "id": "ij_lostaneye",
         "type": "Injury",
-        "eventtags" : {"trait" : true , "ranged" : -1},
+        "eventtags" : {"category_ranged": true, "ranged" : -1},
         "source": "core",
         "tags": [
             ],
@@ -326,7 +326,7 @@
     {
         "id": "ij_hardened",
         "type": "Injury",
-        "eventtags" : {},
+        "eventtags" : {"trait": true},
         "source": "core",
         "tags": [
             ],
@@ -380,7 +380,7 @@
     {
         "id": "ij_facialscar",
         "type": "Injury",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true},
         "source": "core",
         "tags": [
             ],

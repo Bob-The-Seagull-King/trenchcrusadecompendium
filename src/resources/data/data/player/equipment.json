@@ -853,7 +853,7 @@
         "range": null,
         "blurb": "",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"tag_Risky": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -909,7 +909,7 @@
         "range": null,
         "blurb": "Advanced armour technology has forced the armouries of the Great War to forge new types of bullets. Expensive and labour-intensive to produce, these hardened tungsten rounds are more effective against battlefield armour.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -937,7 +937,7 @@
         "range": null,
         "blurb": "Tracer bullets allow soldiers to adjust their aim efficiently.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -966,7 +966,7 @@
         "range": null,
         "blurb": "Developed by Aym, the Great Duke of Hell, these bullets set any target they hit on fire.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -1517,7 +1517,7 @@
         "range": null,
         "blurb": "Small icons of saints, great angels and holy warriors are a common sight amongst the Trench Pilgrims. They are hung on rosaries, belts, or attached to portable shrines carried on the Pilgrims’ backs.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"tag_Risky": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -2080,7 +2080,7 @@
         "range": null,
         "blurb": "Jabirean Alchemists craft these Jezzail bullets from the slivers of the Iron Wall. Each such shot is carved the Seal of Solomon, guiding them during their path through the air.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
                 {
                     "tags": [{"tag_name": "desc_type", "val": "effect"}],
@@ -3028,7 +3028,7 @@
         "range": null,
         "blurb": "A sniper scope is a kind of telescope that is attached to a rifle or a similar weapon. Some feature night-vision enhancements and superb, adjustable mountain crystal lenses, while the Sniper Scopes made by the foundry-monastery of St. Sebastian for Sniper Priest have an in-built reliquary instead.",
         "modifiers": [],
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "effect"}],

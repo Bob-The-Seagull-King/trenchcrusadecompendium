@@ -4,6 +4,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Puppet Master",
@@ -157,6 +158,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Hide",
@@ -276,10 +278,11 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Chainmaw",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -296,7 +299,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Shredding Claws",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -314,7 +317,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Infernal Bomb",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_ranged"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -358,7 +361,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Infernal Bomb",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_ranged"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -382,6 +385,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "The Price Of Greed",
@@ -399,6 +403,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Goetic Portal",
@@ -436,7 +441,7 @@
                 ],
         "faction_id": "fc_hereticlegion",
         "name": "Goetic Gaze",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_ranged"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -450,6 +455,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Loudspeakers",
@@ -501,6 +507,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Enforced Orthodoxy",
@@ -693,10 +700,11 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Catherine Wheel",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -710,10 +718,11 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Bonebreaker Mace",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -761,6 +770,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_trenchpilgrim",
         "name": "Day of His Wrath",
@@ -795,10 +805,11 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Mastery of the Elements",
-        "eventtags": {"trait": true},
+        "eventtags": {"category_melee" : true, "category_ranged": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -863,6 +874,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "De-mine",
@@ -880,6 +892,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Fortify",
@@ -985,7 +998,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Trample",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "include": ["category_melee"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1036,7 +1049,7 @@
                 ],
         "faction_id": "fc_ironsultanate",
         "name": "Whirling Dervishes",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "category_melee" : true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1084,6 +1097,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_newantioch",
         "name": "Aim",
@@ -1104,7 +1118,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Absolute Faith",
-        "eventtags": {"trait": true},
+        "eventtags": {"category_ranged": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1169,6 +1183,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_newantioch",
         "name": "Dig-In",
@@ -1186,6 +1201,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_newantioch",
         "name": "De-Mine",
@@ -1206,7 +1222,7 @@
                 ],
         "faction_id": "fc_newantioch",
         "name": "Finish the Fallen",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "category_melee": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1227,7 +1243,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Medic adds +1 BONUS DICE whenever they use their Medi- Kit to aid friendly models.",
+                "content": "Medic adds +1 BONUS DICE whenever they use their Medi-Kit to aid friendly models.",
                 "glossary": [{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -1254,6 +1270,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Beelzebub's Touch",
@@ -1342,7 +1359,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Infected Proboscis",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1393,7 +1410,7 @@
                 ],
         "faction_id": "fc_blackgrail",
         "name": "Trample",
-        "eventtags": {"action": true},
+        "eventtags": {"action": true, "include": ["category_melee"]},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1560,6 +1577,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_none",
         "name": "The Ammunition Sacrament",
@@ -1620,7 +1638,7 @@
                 ],
         "faction_id": "fc_none",
         "name": "Lightning Speed",
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "category_melee": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -1668,6 +1686,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_none",
         "name": "Voice of God",
@@ -1685,6 +1704,7 @@
         "type": "Addon",
         "source": "core",
         "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_none",
         "name": "Devour",

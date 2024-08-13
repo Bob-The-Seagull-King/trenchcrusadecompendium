@@ -70,7 +70,7 @@
     {
         "id": "sk_relentlesscharge",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee" : true},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -104,7 +104,7 @@
     {
         "id": "sk_strengthofsamson",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"trait" : true, "category_melee": true},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""},
@@ -139,7 +139,7 @@
     {
         "id": "sk_champion",
         "type": "Skill",
-        "eventtags" : {"action" : true},
+        "eventtags" : {"category_melee" : true},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -156,7 +156,7 @@
     {
         "id": "sk_surgicalstrike",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true},
         "source": "core",
         "tags": [
             {"tag_name": "melee", "val": ""}
@@ -173,7 +173,7 @@
     {
         "id": "sk_hunter",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -207,7 +207,7 @@
     {
         "id": "sk_farshot",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -224,7 +224,7 @@
     {
         "id": "sk_sharpeyes",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged" : true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -258,7 +258,7 @@
     {
         "id": "sk_snipersnest",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged":true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -292,7 +292,7 @@
     {
         "id": "sk_hipshot",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -309,7 +309,7 @@
     {
         "id": "sk_headshot",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "ranged", "val": ""}
@@ -343,7 +343,7 @@
     {
         "id": "sk_assassinate",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true, "category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "stealth", "val": ""}
@@ -667,7 +667,7 @@
     {
         "id": "sk_dragonslayer",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -684,7 +684,7 @@
     {
         "id": "sk_davidandgoliath",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -871,7 +871,7 @@
     {
         "id": "sk_jannisarytraining",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -939,7 +939,7 @@
     {
         "id": "sk_cockroachvitatlity",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_melee": true, "category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
@@ -956,7 +956,7 @@
     {
         "id": "sk_eyesofthefly",
         "type": "Skill",
-        "eventtags" : {"trait" : true},
+        "eventtags" : {"category_ranged": true},
         "source": "core",
         "tags": [
             {"tag_name": "patron", "val": ""}
