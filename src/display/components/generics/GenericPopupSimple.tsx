@@ -28,7 +28,7 @@ const GenericPopupSimple = (props: any) => {
 
     return (
       <>
-          <span>
+          <span style={{width:"fit-content"}}>
             {buttonMethod(handleShow)}                
           </span>
 

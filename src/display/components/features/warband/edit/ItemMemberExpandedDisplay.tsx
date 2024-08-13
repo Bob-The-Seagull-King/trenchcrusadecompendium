@@ -30,6 +30,7 @@ import AddonDisplay from '../../addons/AddonDisplay';
 import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from '../../../../../classes/lists/WarbandMemberStatic';
 import PartialItemDisplay from '../../partialitem/PartialItemDisplay';
 import FullItemDisplay from '../../list/FullItemDisplay';
+import ItemMemberFacetTags from './ItemMemberFacetTags';
 
 const ItemMemberExpandedDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -70,6 +71,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['addon'].map((item: any) => (
                         <div key={"componentaddon"+item.Name} className='addonbox'>
                             <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.Name} d_type={"sub"} d_method={() => <AddonDisplay data={item} />}/>
+                            <div className="verticalspacerbig"/>
+                            <ItemMemberFacetTags member={member} data={item} type={'addon'}/>
                             <div className="verticalspacer"/>
                         </div>
                     ))}
@@ -80,6 +83,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['equipment'].map((item: any) => (
                         <div key={"componentequipment"+item.Name} className='addonbox'>
                         <GenericDisplay  d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item}/>}/>
+                        <div className="verticalspacerbig"/>
+                        <ItemMemberFacetTags member={member} data={item} type={'equipment'}/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
@@ -90,6 +95,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['upgrade'].map((item: any) => (
                         <div key={"componentupgrade"+item.Name} className='addonbox'>
                         <GenericDisplay  d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <UpgradeDisplay data={item}/>}/>
+                        <div className="verticalspacerbig"/>
+                        <ItemMemberFacetTags member={member} data={item} type={'upgrade'}/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
@@ -100,6 +107,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['skill'].map((item: any) => (
                         <div key={"componentskill"+item.Name} className='addonbox'>
                         <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.name} d_type={""} d_method={() => <PartialItemDisplay data={item}/> }/>
+                        <div className="verticalspacerbig"/>
+                        <ItemMemberFacetTags member={member} data={item} type={'skill'}/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
@@ -110,6 +119,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                     {componentsList['injury'].map((item: any) => (
                         <div key={"componentinjury"+item.Name} className='addonbox'>
                         <GenericDisplay d_colour={member.Model.Object.Team} d_name={item.Name} d_type={""} d_method={() => <FullItemDisplay data={item}/> }/>
+                        <div className="verticalspacerbig"/>
+                        <ItemMemberFacetTags member={member} data={item} type={'injury'}/>
                         <div className="verticalspacer"/>
                         </div>
                     ))}
