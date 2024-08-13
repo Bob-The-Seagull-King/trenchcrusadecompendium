@@ -173,6 +173,92 @@ export function doesTagExist(_member : WarbandMember, _tag : string) {
     }
 }
 
+export function returnComponentsWithinParams(_member : WarbandMember, _tag : string[]) {
+    const componentsReturn : {[_name : string] : any} = {}
+    
+    let i = 0
+    let j = 0;
+
+    const desc = _member.Model.Object.Abilities;
+
+    const addons = []
+    for (i = 0; i < desc.length; i ++) {
+        if (getTagValue(desc[i].Tags, "desc_type") === 'addon') {
+            const strID = desc[i].Content
+            const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
+            if (item.EventTags) {
+                for (j = 0; j < _tag.length; j++) {
+                    if (item.EventTags[_tag[j]]) {
+                        addons.push(item);
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    const upgrades = []
+    for (i = 0; i < _member.Upgrades.length; i ++) {
+        if (_member.Upgrades[i].EventTags) {
+            for (j = 0; j < _tag.length; j++) {
+                if (_member.Upgrades[i].EventTags[_tag[j]]) {
+                    upgrades.push(_member.Upgrades[i]);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    const equipment = []
+    for (i = 0; i < _member.Equipment.length; i ++) {
+        if (_member.Equipment[i].Object.EventTags) {
+            for (j = 0; j < _tag.length; j++) {
+                if (_member.Equipment[i].Object.EventTags[_tag[j]]) {
+                    equipment.push(_member.Equipment[i].Object);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    const skills = []
+    for (i = 0; i < _member.Skills.length; i ++) {
+        if (_member.Skills[i].eventtags) {
+            for (j = 0; j < _tag.length; j++) {
+                if (_member.Skills[i].eventtags[_tag[j]]) {
+                    skills.push(_member.Skills[i]);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    const injuries = []
+    for (i = 0; i < _member.Injuries.length; i ++) {
+        if (_member.Injuries[i].EventTags) {
+            for (j = 0; j < _tag.length; j++) {
+                if (_member.Injuries[i].EventTags[_tag[j]]) {
+                    injuries.push(_member.Injuries[i]);
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+
+    componentsReturn['addon'] = addons;
+    componentsReturn['upgrade'] = upgrades;
+    componentsReturn['equipment'] = equipment;
+    componentsReturn['skill'] = skills;
+    componentsReturn['injury'] = injuries;
+    
+    return componentsReturn;
+}
+
 export function returnComponentsWithTag(_member : WarbandMember, _tag : string) {
     const componentsReturn : {[_name : string] : any} = {}
     
