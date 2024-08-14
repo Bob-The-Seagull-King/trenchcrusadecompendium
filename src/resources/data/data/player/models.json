@@ -1797,6 +1797,44 @@
         ]
     },
     {
+        "id": "md_shocktroopersstostruppenofthefreestateofprussia",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": "gl_newantioch"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [0],
+        "melee": [1],
+        "armour": [0],
+        "base": [25],
+        "faction_id": "fc_newantioch",
+        "team":"heaven",
+        "variant_id": "fv_stostruppenofthefreestateofprussia",
+        "eventtags": {},
+        "name": "Shocktrooper (Stoßtruppen of the Free State of Prussia)",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Assault Troops that specialise in attacking enemy defensive positions. They are masters of rapid assault and melee combat. Experts at combined arms and Fireteam tactics."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_shockcharge"
+            }
+        ]
+    },
+    {
         "id": "md_combatengineer",
         "type": "Model",
         "source": "core",
