@@ -1044,7 +1044,7 @@
         "name": "Engineer Body Armour",
         "equip_type": null,
         "range": null,
-        "blurb": "You can buy this enormous shovel made from alchemical bronze which makes it almost indestructible. Brazen bulls use it for public works (such as digging canals, foundations of buildings and mining during peacetime while at war it is used for digging trenches, ditches and bunkers.",
+        "blurb": "Equipped with close combat weaponry, and steel body armour. Casualties are extremely high in the combat engineer units, but they consider it an honour to fight and die for New Antioch and the Church.",
         "modifiers": null,
         "eventtags": {"trait": true},
         "description":  [
