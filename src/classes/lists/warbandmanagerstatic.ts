@@ -1,5 +1,6 @@
 import { Warband } from "./Warband";
 import { WarbandMember } from "./WarbandMember";
+import { Requester } from "../../factories/Requester";
 
 /**
  * Returns as a string the glory cost of a memebr
@@ -651,6 +652,203 @@ export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boo
     // Final row
     returnString += "\n" + LastRow + (_inside? "" : ("\n" + "```"))
     
+    // ------------------------------------------------------------------------------
+
+    return returnString
+}
+
+/**
+ * Takes a model and produces a text representation of it
+ * for use in Tabletop Simulator.
+ * @param _model The model being exported
+ * @param _notes If any additional notes exist
+ * @param _inside If this export is inside a warband export or on its own
+ * @returns Text string representing the export
+ */
+export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean, _inside: boolean) {
+    // console.log(JSON.stringify(_model))
+
+    // TTS Name row
+    const NameRow = '+++ [b]' + _model.Name + '[/b] +++'
+
+    // TTS Description Row
+    let StartingRow = '[9926A6][b]' + (_model.Model.Object.Name ? _model.Model.Object.Name : '') + '[/b][-]'
+    let i = 0
+    let n = 0
+
+    if (_model.Model.Object.Tags && _model.Model.Object.Tags.length > 1) {
+        StartingRow += ' ('
+        for (i = 1; _model.Model.Object.Tags && _model.Model.Object.Tags.length > i; i++) {
+            StartingRow += _model.Model.Object.Tags?.[i].tag_name.toUpperCase()
+            if (_model.Model.Object.Tags && _model.Model.Object.Tags.length > i + 1) StartingRow += ', '
+            else StartingRow += ')'
+        }
+    }
+
+    let StatsRow = ''
+    StatsRow += '[FFC800][b]Mov.[/b] ' + (_model.Model.Object.Movement ? _model.Model.Object.Movement : 0) + '[-] | '
+    StatsRow += '[44BA26][b]Armor[/b] ' + (_model.Model.Object.Armour ? _model.Model.Object.Armour : 0) + '[-] | '
+    StatsRow += '[DB162F][b]Melee[/b] ' + (_model.Model.Object.Melee ? _model.Model.Object.Melee : 0) + '[-] | '
+    StatsRow += '[3185FC][b]Ranged[/b] ' + (_model.Model.Object.Ranged ? _model.Model.Object.Ranged : 0) + '[-]'
+
+    // ---------------------------- Member Upgrades / Equipment ----------------------
+
+    const AbilitiesSet = []
+    const UpgradeSet = []
+    const ArmourSet = []
+    const RangedSet = []
+    const MeleeSet = []
+    const MiscSet = []
+    let DescText = ''
+    let TempItem
+    let TempDesc
+    let Ability
+
+    // Add Abilities to array
+    for (i = 0; _model.Model.Object.Abilities.length > i; i++) {
+        Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Abilities[i].Content } })
+        DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+        if (Ability.description.length == 1) {
+            DescText += '\n' + Ability.description[0].content
+        } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
+            DescText += '\n' + Ability.description[0].content
+            for (n = 0; Ability.description[1].subcontent.length > n; n++) {
+                DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
+                DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
+            }
+        } else
+            for (n = 0; Ability.description.length > n; n++) {
+                DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
+            }
+        AbilitiesSet.push(DescText)
+    }
+
+    // Add upgrade text to array
+    for (i = 0; i < _model.Upgrades.length; i++) {
+        DescText = '[9926A6][b]' + (_model.Upgrades[i].Name ? _model.Upgrades[i].Name : '') + '[/b][-]'
+        if (_model.Upgrades[i].Description.length == 1) {
+            DescText += '\n' + _model.Upgrades[i].Description[0].Content
+        }
+        // if (_model.Upgrades[i].Description.length > 1) {
+        //     DescText += ': '
+        //     for (n = 0; n < _model.Upgrades[i].Description.length; n++) {
+        //         DescText += '\n' + '+ ' + _model.Upgrades[i].Description[n].Content
+        //     }
+        // }
+        UpgradeSet.push(DescText)
+    }
+
+    // Add equipment text to arrays
+    for (i = 0; i < _model.Equipment.length; i++) {
+        DescText = ''
+        TempItem = _model.Equipment[i].Object
+        if (TempItem.Category == 'ranged' || TempItem.Category == 'melee') {
+            DescText += ' (' + (TempItem.EquipType ? TempItem.EquipType : '')
+            DescText += ', ' + (TempItem.Range ? TempItem.Range : '')
+            for (n = 0; n < TempItem.Modifiers.length; n++) {
+                DescText += ', ' + (TempItem.Modifiers[n] ? TempItem.Modifiers[n] : '')
+            }
+            for (n = 0; TempItem.Tags && TempItem.Tags.length > n; n++) {
+                DescText += ', ' + (TempItem.Tags[n].tag_name ? TempItem.Tags[n].tag_name.toUpperCase() : '')
+            }
+            DescText += ')'
+        }
+        if (TempItem.Description && TempItem.Description.length > 0) {
+            for (n = 0; TempItem.Description && TempItem.Description.length > n; n++) {
+                TempDesc = TempItem.Description[n]
+                if (TempDesc.Tags && TempDesc.Tags[0].val == 'desc') DescText += '\n' + (TempItem.Description.length == 1 ? '' : '+ ') + TempDesc.Content
+                if (TempDesc.Tags && TempDesc.Tags[0].val == 'effect')
+                    DescText += '\n' + (TempItem.Description.length == 1 ? '' : '+ ') + TempDesc.SubContent[0].Content
+            }
+        }
+        if (TempItem.Category == 'ranged') {
+            RangedSet.push('[3185FC][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'melee') {
+            MeleeSet.push('[DB162F][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'armour') {
+            ArmourSet.push('[44BA26][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'equipment') {
+            MiscSet.push('[FFC800][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+    }
+    // ------------------------------------------------------------------------------
+
+    // ------------------------ Generate Text ---------------------------------------
+
+    // Add discord-friendly comment block characters if needed
+    let returnString = ''
+
+    // Starting row
+    returnString += NameRow + '\n' + StartingRow + '\n' + StatsRow + '\n'
+
+    // Add abilities/upgrades/equipment if some exist
+
+    if (UpgradeSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < UpgradeSet.length; i++) {
+            returnString += '\n' + UpgradeSet[i]
+        }
+    }
+    if (AbilitiesSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < AbilitiesSet.length; i++) {
+            returnString += '\n' + AbilitiesSet[i]
+        }
+    }
+    if (ArmourSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < ArmourSet.length; i++) {
+            returnString += '\n' + ArmourSet[i]
+        }
+    }
+    if (RangedSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < RangedSet.length; i++) {
+            returnString += '\n' + RangedSet[i]
+        }
+    }
+    if (MeleeSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < MeleeSet.length; i++) {
+            returnString += '\n' + MeleeSet[i]
+        }
+    }
+    if (MiscSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < MiscSet.length; i++) {
+            returnString += '\n' + MiscSet[i]
+        }
+    }
+
+    // Add skills if some exist
+    if (_model.Skills.length > 0) {
+        returnString += '\n' + '+++ SKILLS +++'
+        for (i = 0; i < _model.Skills.length; i++) {
+            returnString += '\n' + '+ ' + '[00C2D1]' + _model.Skills[i].name + ':[-] ' + _model.Skills[i].description[0].content
+        }
+    }
+
+    // Add injuries if some exist
+    if (_model.Injuries.length > 0) {
+        returnString += '\n' + '+++ INJURIES +++'
+
+        for (i = 0; i < _model.Injuries.length; i++) {
+            returnString += '\n' + '+ ' + '[DB162F]' + _model.Injuries[i].Name + ':[-] ' + _model.Injuries[i].Description[0].Content
+        }
+    }
+
+    // Add notes if requested
+    if (_notes) {
+        if (_model.Notes.trim().length > 0) {
+            returnString += '\n' + '+++ NOTES +++' + '\n' + _model.Notes
+        }
+    }
+
+    // Add final row
+    returnString += ''
     // ------------------------------------------------------------------------------
 
     return returnString
