@@ -753,12 +753,25 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
             }
             DescText += ')'
         }
+        if  (TempItem.Category == 'equipment') {
+            if (TempItem.Tags && TempItem.Tags.length > 0) {
+                DescText += ' (' 
+                for (n = 0; TempItem.Tags && TempItem.Tags.length > n; n++) {
+                    if (n>0) DescText += ', '
+                    DescText += TempItem.Tags[n].tag_name ? TempItem.Tags[n].tag_name.toUpperCase() : ''
+                }
+                DescText += ')'
+            }
+        }
         if (TempItem.Description && TempItem.Description.length > 0) {
             for (n = 0; TempItem.Description && TempItem.Description.length > n; n++) {
                 TempDesc = TempItem.Description[n]
-                if (TempDesc.Tags && TempDesc.Tags[0].val == 'desc') DescText += '\n' + (TempItem.Description.length == 1 ? '' : '+ ') + TempDesc.Content
-                if (TempDesc.Tags && TempDesc.Tags[0].val == 'effect')
+                if (TempDesc.Tags && TempDesc.Tags[0].val == 'desc') {
+                    DescText += '\n' + (TempItem.Description.length == 1 ? '' : '+ ') + TempDesc.Content
+                }
+                if (TempDesc.Tags && TempDesc.Tags[0].val == 'effect') {
                     DescText += '\n' + (TempItem.Description.length == 1 ? '' : '+ ') + TempDesc.SubContent[0].Content
+                }
             }
         }
         if (TempItem.Category == 'ranged') {
