@@ -2284,7 +2284,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "You can aim the Satchel Charge at any point on the ground as well as against an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the satchel charge lands 2” away, as 7-5=2). The direction is decided by your opponent. The Satchel Charge adds +1 DICE to injury rolls and has a blast radius of 3” hitting all models within this range.",
+                            "content": "You can aim the Satchel Charge at any point on the ground as well as against an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the satchel charge lands 2” away, as 7-5=2). The direction is decided by your opponent. The Satchel Charge adds +1 DICE to injury rolls and has a blast radius of 3” hitting all models within this range. Additionally, if the Satchel Charge lands directly on top of a model, it ignores that model’s armour.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
