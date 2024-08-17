@@ -1517,5 +1517,577 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "sc_supplyraid",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "mid_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/bgrfQn6.png",
+        "name": "Supply Raid",
+        "rules": [
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off. The Winner can decide to be either the Attacker or the Defender.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Defender selects up to six models from their Warband. The Attacker selects up to six + D3 models from their Warband.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "In the beginning of Turn 2, both players receive D3 randomly selected models from the rest of their Warband as reinforcements. These reinforcements are placed anywhere along the player’s own table edge, but at least 8” away from any enemy models. Once the player has deployed their entire warband, no further reinforcements can be deployed.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Building (a tower, house etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Hill",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6” Section of a Trench",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In addition, both players should take six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
+                                "glossary":  []
+                            }
+                        ]
+                    },                    
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Starting with the Defender, players then take turns to place an Objective Marker until each player has placed three Markers. Each Objective Marker must be more than 6” away from other Objective Markers and 6” away from the edge of the Battlefield. Only one Objective Marker can be placed in the Defender’s Deployment Zone and none in the Attacker’s. These represent the Defender’s supplies that the Attacker is trying to destroy.",
+                        "subcontent": []
+                    },                    
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Attacker treats the Objective Markers exactly as enemy models and they can be charged, attacked and shot at. The supplies can be destroyed by any Melee or Ranged attack that hits them from a weapon with the Keyword HEAVY.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Starting with the Defender, the players take turns to deploy one model at a time. Models must be set up wholly within their own deployment zone.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts for four turns.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this Scenario.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If one Warband fails its Morale Test, the game ends in an outright victory for their Opponent.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "1 Victory Point is gained per enemy model taken Out of Action.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Attacker gains 1 Victory Point for each Objective Marker that is destroyed.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of the Battle, the Defender gains 2 Victory Points for each Objective that remains on the Table.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Calculate Victory Points for both players and the end of the battle and add them together. The player with the higher number of Victory Points wins, otherwise the game is a draw.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Daring Raid:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Attacker completes this Glorious Deed if they destroy one Objective Marker in their opponent’s Deployment Zone.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Rampage:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Attacker completes this Glorious Deed if a single model destroys 2+ Objective Markers.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Hold Your Ground:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Pass a Morale Test.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Stop Them In Their Tracks:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Defender completes this Glorious Deed if they take an enemy model Out of Action in the Attacker’s Deployment Zone.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Victory Or Death",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Win the battle.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Save The Supplies!:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Defender completes this Glorious Deed if four or more Supplies are left at the end of Turn 4.",
+                                        "glossary": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "sc_stormingtheshores",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "mid_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/bgrfQn6.png",
+        "name": "Storming The Shores",
+        "rules": [
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Use your full Campaign Warband in this battle. Roll off to see which force is the Attacker and which is the Defender.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Building (a tower, house etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Hill",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "6” Section of a Trench",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "In addition, both players should take six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this Scenario, but they cannot be within 8” of any of the Defence Works (see below).",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Starting with the Defender, the players take turns to deploy one model at a time. Models must be set up wholly within their own deployment zone.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Defender chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. The Defender then deploys three Defence Works (at least 4” long vertically – this could be sandbags, barricades, low wall etc.), each of which counts as a defended obstacle. They must:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Be no more than 1” high.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Be within 18” of the centre of the battlefield (measured to the centre).",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Be at least 12” from another Defence Work (measured from the centre).",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Not be within or surrounded by impassable terrain.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game ends when one of the following conditions is met:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The defender controls all Defence Works at the start of the battle. The Attacker can destroy one of the Defence Works by having more fighters than the defender within 3” of the centre of one of the Defence Works at the end of any Turn. When this happens, remove the terrain piece. Once destroyed, it is permanently claimed by the attacker.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of any Turn when all three landmarks are captured by the Attacker.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "When one Warband loses their Morale Test and retreats.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "One Warband is completely wiped out.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Battle ends on Turn 4 and the Defender still controls one or more of the Defence Works.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If you are Playing a Campaign, the Winner gains 5 Victory Points.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Feigned Retreat:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Retreat from Melee Combat and then shoot and hit the enemy you escaped from during the same Activation.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Running the Gauntlet:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "In single Activation, Dash and Charge an enemy that is within 3” of one of the Defence Works.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Last Ditch Effort:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy with the last Model you Activate during any of your Turns.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Unto the Breach:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy in melee who is using one of the Defence Works as a Defended Obstacle.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Hold Your Ground:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Pass a Morale Test.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Barrage:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy with a weapon that has one of the following Keywords: FIRE, GAS or SHRAPNEL.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
