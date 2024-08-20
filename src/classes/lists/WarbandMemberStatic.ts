@@ -7,7 +7,7 @@ export function returnModelBase(_member : WarbandMember) {
     let str = "";
     let i = 0;
 
-    const BaseCopy  = Object.assign([], _member.Model.Object.Movement);
+    const BaseCopy  = Object.assign([], _member.Model.Object.Base);
     const SizeBaseSet = setValuesToTag(_member, BaseCopy, 'sizeset')
     const SizeBase = addValuesToTag(_member, SizeBaseSet, 'size')
 
