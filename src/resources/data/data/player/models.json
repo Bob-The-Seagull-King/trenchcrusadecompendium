@@ -3065,6 +3065,7 @@
         "melee": [3],
         "armour": [0],
         "base": [50],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {"flying": true},
@@ -3116,6 +3117,7 @@
         "melee": [1],
         "armour": [0],
         "base": [50],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {"flying": true},
@@ -3163,6 +3165,7 @@
         "melee": [1],
         "armour": [0],
         "base": [32],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
@@ -3210,6 +3213,7 @@
         "melee": [2],
         "armour": [0],
         "base": [40],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
@@ -3255,6 +3259,7 @@
         "melee": [1],
         "armour": [0],
         "base": [32],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
@@ -3295,6 +3300,7 @@
         "melee": [-1],
         "armour": [0],
         "base": [25],
+        "team":"hell",
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
@@ -3336,6 +3342,7 @@
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
+        "team":"hell",
         "name": "Pit Locust",
         "blurb": [
             {
@@ -3380,6 +3387,7 @@
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
+        "team":"hell",
         "name": "Desecrated Saint",
         "blurb": [
             {
