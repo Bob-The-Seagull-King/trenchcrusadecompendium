@@ -584,10 +584,6 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "This model’s Charge move is always the maximum of 12”, though it still suffers penalties for Difficult Terrain as standard."
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Limit 3"
             }
                         ]
     },
@@ -605,10 +601,6 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "All Injury Rolls against this model suffer -1 DICE penalty.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Limit 3"
             }
                         ]
     },
@@ -622,10 +614,6 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "This model adds +1 DICE to its Dash ACTIONs.",
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "effect"}],
-                "content": "Limit 3"
             }
                         ]
     },

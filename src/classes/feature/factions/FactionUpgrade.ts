@@ -1,5 +1,6 @@
 import { DescriptionFactory } from "../../../utility/functions";
 import { Requester } from "../../../factories/Requester"
+import { IEquipmentRestriction } from "./FactionEquip";
 
 /**
  * Structure describing relationship between
@@ -8,7 +9,9 @@ import { Requester } from "../../../factories/Requester"
 interface IFactionUpgrade {
     id: string,
     cost: number,
-    cost_id: string
+    cost_id: string,
+    restriction? : IEquipmentRestriction[],
+    limit? : number;
 }
 
 /**
@@ -35,11 +38,23 @@ class FactionUpgrade {
     public Description;
     public EventTags
     public Name;
+    public Limit;
+    public Restrictions : IEquipmentRestriction[];
 
     public constructor(data: IFactionUpgrade) {
         this.ID = data.id;
         this.Cost = data.cost;
         this.CostID = data.cost_id;
+        if (data.limit) {
+            this.Limit = data.limit
+        } else {
+            this.Limit = 0;
+        }
+        if (data.restriction) {
+            this.Restrictions = data.restriction
+        } else {
+            this.Restrictions = [];
+        }
         const requestdata: IUpgradeData = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: this.ID}}));
         
         this.Name = requestdata.name;

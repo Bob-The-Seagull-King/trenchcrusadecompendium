@@ -599,7 +599,29 @@ export const EditListDataDex : EditListDataTable = {
         returnComment (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             if (typeof _item === 'string') { return  ""
             } else if (_warband) {
-                return "-";
+                let rstrctnlst = "";
+
+                if (_item != null) {
+                    if (_item.Limit > 0) {
+                        rstrctnlst += "LIMIT: " + _item.Limit;
+                        if (_item.Restrictions.length > 0) { rstrctnlst += ", " }
+                    }
+
+                    let i = 0;
+                    for (i = 0; i < _item.Restrictions.length; i++) {
+                        if ( i > 0) { rstrctnlst += ", " }
+                        if (_item.Restrictions[i].type == "keyword") {
+                            rstrctnlst += _item.Restrictions[i].val.toString().toUpperCase();
+                        } else if (_item.Restrictions[i].type == "purchase") {
+                            rstrctnlst += (_item.Restrictions[i].val === 'explore')? "Exploration Only" : "";
+                        } else if (_item.Restrictions[i].type == "model") {
+                            rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: _item.Restrictions[i].val.toString()}})).name
+                         } else { rstrctnlst += _item.Restrictions[i].val.toString() }
+                    }
+                }
+
+                if (rstrctnlst == "") { rstrctnlst = "-" }
+                return rstrctnlst;
             }
             return "";
         },
