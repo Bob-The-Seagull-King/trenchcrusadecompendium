@@ -598,5 +598,160 @@
             {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_tenderizermaul"], "upgrades": []}
         ]
+    },
+    {
+        "id": "fc_court",
+        "type": "Faction",
+        "source": "core",
+        "tags": [
+            {"tag_name": "demonic", "val": ""}
+                ],
+        "name": "The Court of the Seven-Headed Serpent",
+        "team": "hell",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Because ye have said, We have made a covenant with death, and with Hell are we at agreement; when the overflowing scourge shall pass through, it shall not come unto us: for we have made lies our refuge, and in falsehood we have taken shelter"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Jutting from eternally belching plumes of stinking, corrosive smoke is the Iron City of Dis; and atop its shrieking, black keep is the Infernal War Council. There sits seven of the greatest, most wicked, and most cunning of Arch-Devils, each representing one of the Seven Mortal Sins made manifest. They are the rulers of the Court of the Seven-Headed Serpent which oversees Hell’s war against Creation on Earth. Each is known as one of the Heads of the Serpent, and ultimately it is their commands that dictate all the military forces of the Great War in the service of the Infernal Hierarchy."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In the twisted, treacherous and ever-shifting politics rarely even the mightiest of Devils sit at the great War Council of the Court for long. Towering statues of the Serpent Heads representing Wrath, Envy, Pride, Gluttony, Greed, Sloth and Lust are erected in the Iron City of Dis by slavering work gangs of Yoke Fiends, only to be torn down again and crushed into rubble as new Devil Lords rise to the pinnacle of power by trampling over their rivals"
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Hierarchy of the Court is anything but stable: Only Mammon is said to have held the position of the Serpent Head of Greed almost without a break for the duration of the entire Great War. Other positions have seen a bewildering parade of Dukes, Marquises, Margraves, Barons and Baronesses, Paramounts, Princes, Lords and Ladies and Earls and myriad other High Nobles that make up the Infernal Hierarchy. This whirlwind of political glory followed by utter ruin is reflected as shifts of power amongst their mortal followers on Earth. The Council operates on majority vote, and often at the thinnest of margins. It takes very little for an ambitious Prince or Princess of Hell to make so many enemies that they are deposed and their wings torn, forced to start their ascent from the bottom once more, with the mockery of their rivals burning them like venom."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Countless envious pretenders work against the Heads of the Serpent, seeking to replace them and gain the glory and prestige that comes with such a lofty position. The might of the demons also waxes and wanes based on how many mortal followers they can corrupt to their cause, and thus there is a constant change in which Demon Lords can don one of the seven Serpent-headed crowns."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "While Beelzebub is the most powerful Devil Lord of Gluttony by far, the Lord of the Flies scorns his rightful place at the Court, and wages his battle against the creation through his Black Grail instead. This leaves his seat open so the lesser fallen angels can struggle for the honour of sitting on the Hungry Throne."
+            } ,
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Upon the commands of the Court the Warbands of Hell gather at the Hellgate, and strike out to blight the unhappy world. Yoke fiends muster under the banners of their Praetors and Sorcerers. The shattered forms of the Hellknight are forced into their suits of armour and then emerge from their fiery tombs where their bodies are kept crushed under mighty ever-turning slabs of black basalt while they are not serving in the war effort. Desecrated Saints are brought forth to act as unholy war altars that pollute and pervert the land which they travel over. Ahead of the warbands fly Pit Locusts, the clatter of their wings heralding the coming of the Court, and their poison stings leaving burns that cannot be healed. And sometimes when the deathly omens on Hell's burning sky and black stars are favourable, a Hunter of the Left-hand path will join a Warband as they strike out of the Mouth of Hell. As the Warband marches to join the Great War joyous and triumphant music played by unseen hands can be heard at these times, for taking part in one of these hunts is seen as a great privilege within the Sheol"
+            } ,
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Before most warbands, the whips of the Yoke Fiends drive living human slave soldiers of the Court known as the Wretched. These unfortunate souls posses not a drop of demon blood, and act as disposable shock troops or are to be used as subjects of torture to power the Goetic magic of the Sorcerers and other users of the dark arts. Captured during one of the hunts of the Court, sold to the devils at the Heretic domains or having the misfortune to have foolishly pushed through in the places where the borders of the world are thin, their minds are scarred by witnessing the horror of damnation while still alive. Willing to do anything to escape their fate a million times worse than death, they grasp at the thinnest of straws: Should a Wretch bring down a mighty opponent, the Law of Hell is clear: the mortal will gain its freedom, in memory and honour of the First Rebellion when there was war in Heaven and blood of the angels painted the firmament red."
+            }  ,
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            { "tags": [{"tag_name": "desc_type", "val": "effect"}], "content": "The Court and the Great War" },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "When the Gate of Hell was opened by the Ultimate Heresy of the Templars, it was the warbands of the Court that poured out and took the Levant by the storm, long before the first Heretic Legion was ever formed. They fell upon the people of Middle-East, Asia and Europa. They crushed the mortal armies sent against them like fire burning dry chaff. Only at Antioch and at the Iron Wall were they eventually checked, though at a terrible cost. Meanwhile, awed even by these least of Hell’s servants, countless men and women fell to their knees at the sight of the dark splendour of the Court and worshipped them as gods. Those with truly wicked hearts were spared and they became the first Heretics. Eventually their numbers would swell into the millions who now fill the teeming cities and domains under the shadow of the Hellgate"
+            }  ,
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Being both of the material world and of the world of spirit, the Court’s foot soldiers can march to make war on Earth without a fear of divine retribution as they do not break the Covenant of Hell. The Court also carefully limits the size of these Warbands, so that most of the suffering and dying of the Great War is done by mortals, both to spite the God-Tyrant YHWH, but also to enhance their own power, as more humans are corrupted and die in the rebellion, the more God’s plan is disturbed, and the greater the power of the devils waxes"
+            }  ,
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The missions of the Court against the Faithful do not follow the same logic as one a mortal commander might have. A mighty Praetor could strike at a militarily insignificant village only to kill a new-born future Saint,betray their own mortal followers by suddenly falling upon some unsuspecting Heretic settlement, or even clash with a Warband of a rival Head of the Serpent. The wise do not question the motives of Hell’s rage, and Heretics accept these occasional attacks against their forces as a fitting judgement for their lack of success in the war against the Faithful."
+            }            
+        ],
+        "rules": [
+            {
+                "title": "Seven Deadly Sins",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "You must select which of the Seven Deadly Sins the Warband is dedicated to: Choose either Wrath, Envy, Pride, Gluttony, Greed, Sloth or Lust. Wrath, Envy, Pride, and Lust have access to unique Goetic Powers as repsented by variant factions."
+                    }
+                ]
+            },
+            {
+                "title": "Nobility",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Each Court Warband must include either a Praetor or a Sorcerer when it is created, and it can include both if you wish."
+                    }
+                ]
+            },
+            {
+                "title": "Goetic Powers",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Many of the warriors of the Court have access to Goetic spells, abilities and powers which use the suffering of the mortals as spiritual energy to unleash reality-bending powers of the Demons. As God’s plan for the universe is disrupted and perverted, the Infernal sorcerers and other demonic creatures can use the released primordial energy of Creation to alter the reality. Demons have to be quick, however: God’s omnipotent will soon reasserts over the existence, and the opportunity for Demons to disturb the world is lost. Thus the Infernal creatures have a continuous and growing need for human sacrifices, pain and endless warfare to enable their supernatural powers.",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Goetic Powers and Spells are marked with the keyword GOETIC (x) where the number in brackets indicates how many BLOOD MARKERS will have to be expanded to trigger the effect of the spell. These BLOOD MARKERS can be taken from any model currently taking part of the battle, be they friendly or enemy models, But they must come from models that do not have the Keyword DEMONIC or BLACK GRAIL. BLOOD MARKERs used this way are removed from the game, and the described effect of the Goetic Spell or ability then takes effect as described -no dice roll is needed. As with other Actions, each of these powers and spells can be used by the model only once per Activation, and they can be taken during any point of the Activation",
+                        "glossary": [
+                            {"val": "GOETIC", "id": "gl_goetic"},
+                            {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},
+                            {"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},
+                            {"val": "DEMONIC", "id": "gl_demonic"},
+                            {"val": "BLACK GRAIL", "id": "gl_blackgrail"}
+                        ]
+                    }
+                ]
+            }
+         ],
+        "equipment": [
+            {"id": "eq_boltactionrifle", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Bayonet Lug"]},
+            {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_musket", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Bayonet Lug"]},
+            {"id": "eq_infestedrifle", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Bayonet Lug"]},
+            {"id": "eq_corruptionbelcher", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_putridshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
+            {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_parasitegrenade", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_visceracannon", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_polearm", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_plagueknight"}], "features":["Shield Combo"]},
+            {"id": "eq_greatmaul", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_greataxe", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_plagueblade", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_beelzebubsaxe", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_reinforcedarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_trenchshield", "cost":  15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_blackgrailshield", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_unholytrinket", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_troopflag", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []},
+            {"id": "eq_cupoffilth", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": [{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_locustspitter", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_armourofthefly", "cost": 11, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_beelzebubsambrace", "cost": 20, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_tenderizermaul", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sineater"}]},
+            {"id": "eq_knighthood", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []}
+        ],
+        "models": [
+            {"id": "md_praetor", "cost": 115, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_sorcerer", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_goetic_burninginferno", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_hunterofthelefthandpath", "cost": 110, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_bowoflethe"], "upgrades": []},
+            {"id": "md_hellknight", "cost": 100, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_infernalarmour"], "upgrades": []},
+            {"id": "md_yokefiend", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
+            {"id": "md_wretched", "cost": 20, "cost_id": "ducats", "limit_min": "Must be outnumbered by DEMONIC models", "limit_max": "Must be outnumbered by DEMONIC models", "equipment": [], "upgrades": []},
+            {"id": "md_pitlocust", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": []},
+            {"id": "md_desecratedsaint", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []}
+        ]
     }
 ]
