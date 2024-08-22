@@ -286,8 +286,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The War Wolf can attack any enemy with its Chainsaw Mouth in melee combat - this is a RISKY ACTION with +3 DICE. The attack ignores any armour worn by the target. Roll any injuries with +1 DICE.",
-                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                            "content": "The War Wolf treats its Chainsaw Mouth as a melee weapon with the Keyword RISKY that grants a +1 DICE bonus to hit (for a total of +3D). Additionally, the attack ignores any armour worn by the target and has a +1 DICE bonus to injure. The Chainsaw Mouth does not require any hands to wield.",
+                            "glossary": [{"val": "RISKY", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
     },
@@ -303,8 +303,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": " The War Wolf can take a Melee combat attack as an ACTION with +1 DICE to hit. Roll any injuries with +1 DICE.",
-                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                            "content": "The War Wolf treats its Shredding Claws as a two-handed melee weapon with the Keywords RISKY and CUMBERSOME. The Shredding Claws have a +1 DICE bonus to injure. Because the Shredding Claws are wielded alongside the Chainsaw Mouth, they are treated as an Off-Hand Weapon and suffer penalties accordingly.",
+                            "glossary": [{"val": "RISKY", "id": "gl_riskyaction"},{"val": "CUMBERSOME", "id": "gl_cumbersome"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                         ]
     },

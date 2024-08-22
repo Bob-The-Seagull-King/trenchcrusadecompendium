@@ -250,7 +250,7 @@
         "promotion": 1,
         "movement": [8],
         "ranged": [],
-        "melee": [3,1],
+        "melee": [2],
         "armour": [-3],
         "base": [50],
         "faction_id": "fc_hereticlegion",
