@@ -3334,14 +3334,14 @@
             {"tag_name":"fear", "val": "gl_fear"}
                 ],
         "promotion": 1,
-        "movement": [6],
+        "movement": [8],
         "ranged": [-1],
         "melee": [-1],
         "armour": [0],
         "base": [25],
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
-        "eventtags": {},
+        "eventtags": {"flying": true},
         "team":"hell",
         "name": "Pit Locust",
         "blurb": [
