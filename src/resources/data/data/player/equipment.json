@@ -3481,5 +3481,269 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "eq_arquebus",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "ranged",
+        "name": "Arquebus",
+        "equip_type": "2-Handed",
+        "range": "18\"/Melee",
+        "blurb": "A primitive matchlock weapon that is simple enough that even a Yoke Fiend is capable of operating it.",
+        "modifiers": [],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Counts as a Trench Club in Melee combat.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_ophidianrifle",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"}
+                ],
+        "category": "ranged",
+        "name": "Ophidian Rifle",
+        "equip_type": "2-Handed",
+        "range": "30\"",
+        "blurb": "This Wheel-lock Hunting Rifle is produced in the Infernal forges of demon Sabnock, the Great Marquis of War. Made of both Infernal and earthly metals and materials, it exists simultaneously in the twisted dimension of Hell as well as on Earth. A thing that should not be, the shots of this firearm pervert the laws of God, so taking cover from its bullets and great distances aid the user of this infernal rifle instead of hindering the aim",
+        "modifiers": [],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Ranged Attacks with the Ophidian rifle do not suffer Long Range or Cover penalties and instead gain +1 DICE bonus to Hit at Long range, +1 DICE to hit against enemies in cover.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_serpentassaultgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Gas", "val": "gl_gas"},
+            {"tag_name": "Assault", "val": "gl_assault"}
+                ],
+        "category": "ranged",
+        "name": "Serpent Assault Gun",
+        "equip_type": "2-Handed",
+        "range": "30\"",
+        "blurb": "This terrifying and enormous hand Cannon contains a portal to the foetid swamps and bogs of the Fifth Circle of Hell. Each bullet it fires is enveloped with this awful gas.",
+        "modifiers": ["2 Attacks"],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Serpent Gun can make two Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_bowoflethe",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Assault", "val": "gl_assault"}
+                ],
+        "category": "ranged",
+        "name": "Bow Of Lethe",
+        "equip_type": "1-Handed",
+        "range": "36\"",
+        "blurb": "This terrifying and enormous hand Cannon contains a portal to the foetid swamps and bogs of the Fifth Circle of Hell. Each bullet it fires is enveloped with this awful gas.",
+        "modifiers": ["+2D to Injury", "or", "Ignore Armour"],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When shooting the Bow of Lethe, choose one of the following effects:",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Ignore Armour",
+                                "glossary": []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Add +2 DICE to Injury Rolls",
+                                "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"}]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_tortureinstrument",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Torture Instrument",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "Great scourges made from living spines, red-hot rods, man-catchers, all the tools of torment fashioned by the sadistic smiths of the Iron City of Dis. Their main function is not to kill, but to cause as much agonising pain as possible. Forged in hellfire and quenched in the black waters of river Styx, the agony their wounds bring lasts for days.",
+        "modifiers": [],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll D6 on the Injury table instead of 2D6. Causes and additional BLOOD MARKER for each Blood Marker it inflicts in combat.",
+                        "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_headtaker",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "melee",
+        "name": "Head Taker",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Said to contain a tiny sliver of the stone that Cain used to murder Abel, this weapon allows its wielder to see clearly each spot in the body of their enemy that would bring it instant and agonising death. This makes it a superb ambush weapon much favoured by the Hunters of the Left-Hand Path.",
+        "modifiers": [],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll 3D6 (added the results together) on the Injury table instead of 2D6 if the target of the attack has not yet moved this turn.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_malebranchesword",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"}
+                ],
+        "category": "melee",
+        "name": "Malebranche Sword",
+        "equip_type": "2-Handed",
+        "range": "Melee",
+        "blurb": "These forked Abyssal swords are both terrible weapons as well as symbols of prestige, given to demons who have made great deeds in the service of the Court of the Seven-Headed Serpent.",
+        "modifiers": ["3D6 Injury Roll"],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "This enormous evil sword rolls 3D6 on the Injury Chart in melee, adding the results together.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_crownofhellfire",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Crown Of Hellfire",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This burning crown that is held aloft with pain-seared hands of an invisible damned soul whose weeping cries can still be heard. It is a reward that an elite member of the Court can earn through some extraordinary act in the service of the Serpent Head they are pledged to. Of the Slave Soldiers of the Court, only the Pit Locusts are allowed to wear this symbol of prestige due the fundamental role they played at the start of the Great War",
+        "modifiers": null,
+        "eventtags": {"trait": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Any enemy that is in melee with the model with the Crown of Hellfire suffers 1 BLOOD MARKER as if it was hit by a weapon with the Keyword FIRE at the end of the Activation of the model wearing the crown. Any equipment, abilities etc. that negate FIRE Keyword BLOOD MARKERs also nullify this damage.",
+                                        "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_infernalarmour",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "armour",
+        "name": "Infernal Armour",
+        "equip_type": null,
+        "range": null,
+        "blurb": "This armour is forged simultaneously in Hell and on Earth, so no weapon, whether infernal or man-made can overcome its protection.",
+        "modifiers": null,
+        "eventtags": {"trait": true, "armour":-2},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Grants -2 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour."
+                                    }
+                                ]
+                            }
+                        ]
     }
 ]

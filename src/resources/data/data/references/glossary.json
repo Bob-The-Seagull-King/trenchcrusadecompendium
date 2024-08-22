@@ -308,6 +308,22 @@
         }]
     },
     {
+        "id": "gl_demonic",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "faction"}
+        ],
+        "name": "Demonic",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "This model is a part of the Court Of The Seven-Headed Serpent faction. Due to their infernal origins, no model with the Keyword DEMONIC suffers additional blood markers from any attack with the Keyword FIRE.",
+            "subcontent":   [],
+            "glossary": [
+            ]
+        }]
+    },
+    {
         "id": "gl_infiltrator",
         "type": "Glossary",
         "source": "core",
