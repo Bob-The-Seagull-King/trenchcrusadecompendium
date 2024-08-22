@@ -47,6 +47,7 @@ const BaseFilterSelectDisplay = (prop: any) => {
         updatekey(_keyval+1)
     }
     
+    console.log(_activetagfilters);
     // Return result -----------------------------
     return (
         <>
@@ -67,7 +68,7 @@ const BaseFilterSelectDisplay = (prop: any) => {
                                     <FilterDisplay key={"tag"+item.Val+(_keyval.toString())} state={""} title={"Name"} value={item.Val}/>
                                 ))}
                             {_activetagfilters.map((item) => (
-                                    <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} state={item.DoInclude? "positive" : "negative" } title={item.Name+" Tag"}/>
+                                    <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} state={item.DoInclude? "positive" : "negative" } title={item.Name+" Tag"} value={""}/>
                                 ))}
                             {_activemiscfilters.map((item) => (
                                     <FilterDisplay key={"tag"+item.Name+(_keyval.toString())} title={item.Group} state={item.DoInclude? "positive" : "negative" } value={item.Name}/>

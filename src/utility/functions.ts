@@ -24,6 +24,7 @@ export function makestringpresentable(stringVal: string) {
     const bannedString = ["fc","fv"];
     const namedict : { [id: string]: string; } = {
             'hereticlegion' : 'heretic legion',
+            'demonic' : 'The Court',
             'blackgrail' : 'black grail',
             'trenchpilgrim' : 'trench pilgrim',
             'ironsultanate' : 'iron sultanate',
