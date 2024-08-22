@@ -694,6 +694,7 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
     // ---------------------------- Member Upgrades / Equipment ----------------------
 
     const AbilitiesSet = []
+    const EquipmentSet = []
     const UpgradeSet = []
     const ArmourSet = []
     const RangedSet = []
@@ -707,7 +708,7 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
     // Add Abilities to array
     for (i = 0; _model.Model.Object.Abilities.length > i; i++) {
         Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Abilities[i].Content } })
-        DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+        DescText = '[9926A6][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
         if (Ability.description.length == 1) {
             DescText += '\n' + Ability.description[0].content
         } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
@@ -723,9 +724,28 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
         AbilitiesSet.push(DescText)
     }
 
+    // Add Integrated Equipment to array
+    for (i = 1; _model.Model.Object.Equipment.length > i; i++) {
+        Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Equipment[i].Content } })
+        DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+        if (Ability.description.length == 1) {
+            DescText += '\n' + Ability.description[0].content
+        } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
+            DescText += '\n' + Ability.description[0].content
+            for (n = 0; Ability.description[1].subcontent.length > n; n++) {
+                DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
+                DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
+            }
+        } else
+            for (n = 0; Ability.description.length > n; n++) {
+                DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
+            }
+        EquipmentSet.push(DescText)
+    }
+
     // Add upgrade text to array
     for (i = 0; i < _model.Upgrades.length; i++) {
-        DescText = '[9926A6][b]' + (_model.Upgrades[i].Name ? _model.Upgrades[i].Name : '') + '[/b][-]'
+        DescText = '[44BA26][b]' + (_model.Upgrades[i].Name ? _model.Upgrades[i].Name : '') + '[/b][-]'
         if (_model.Upgrades[i].Description.length == 1) {
             DescText += '\n' + _model.Upgrades[i].Description[0].Content
         }
@@ -809,6 +829,12 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
         returnString += ''
         for (i = 0; i < AbilitiesSet.length; i++) {
             returnString += '\n' + AbilitiesSet[i]
+        }
+    }
+    if (EquipmentSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < EquipmentSet.length; i++) {
+            returnString += '\n' + EquipmentSet[i]
         }
     }
     if (ArmourSet.length > 0) {
