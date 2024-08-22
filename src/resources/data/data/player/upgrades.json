@@ -584,6 +584,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "This model’s Charge move is always the maximum of 12”, though it still suffers penalties for Difficult Terrain as standard."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Limit 3"
             }
                         ]
     },
@@ -667,7 +671,7 @@
     {
         "id": "up_goetic_exquisitepain",
         "type": "Upgrade",
-        "name": "Forbidden Pleasures",
+        "name": "Exquisite Pain",
         "eventtags": {"action": true},
         "description":  [
             {

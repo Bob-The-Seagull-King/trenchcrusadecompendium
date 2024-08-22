@@ -3056,8 +3056,8 @@
             {"tag_name":"demonic", "val": "gl_demonic"},
             {"tag_name":"elite", "val": "gl_elite"},
             {"tag_name":"tough", "val": "gl_tough"},
-            {"tag_name":"gl_fear", "val": "gl_fear"},
-            {"tag_name":"gl_strong", "val": "gl_strong"}
+            {"tag_name":"fear", "val": "gl_fear"},
+            {"tag_name":"strong", "val": "gl_strong"}
                 ],
         "promotion": 0,
         "movement": [10],
@@ -3090,7 +3090,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_unholyhorror"
+                "content": "ab_demonichorror"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -3138,7 +3138,7 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_unholyhorror"
+                "content": "ab_demonichorror"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -3169,7 +3169,7 @@
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {},
-        "name": "Hunter of the Left Hand Path",
+        "name": "Hunter of the Left-Hand Path",
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -3335,10 +3335,10 @@
                 ],
         "promotion": 1,
         "movement": [8],
-        "ranged": [-1],
-        "melee": [-1],
+        "ranged": [0],
+        "melee": [2],
         "armour": [0],
-        "base": [25],
+        "base": [30,60],
         "faction_id": "fc_court",
         "variant_id": "fv_basic",
         "eventtags": {"flying": true},
@@ -3360,7 +3360,7 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_unholyhorror"
+                "content": "ab_demonichorror"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -3405,7 +3405,7 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_unholyhorror"
+                "content": "ab_demonichorror"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],

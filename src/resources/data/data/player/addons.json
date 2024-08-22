@@ -206,6 +206,23 @@
                         ]
     },
     {
+        "id": "ab_demonichorror",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "name": "Demonic Horror",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The grusome visage of the Model causes FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                        ]
+    },
+    {
         "id": "ab_strong",
         "type": "Addon",
         "source": "core",
@@ -1880,7 +1897,7 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "This GOETIC (1) power allows a Hellknight to add +1 DICE to any Injury roll their Melee or Ranged attacks cause.",
                 "glossary": [
-                    {"val": "GOETIC MAGIC", "id": "gl_goetic"},{"val": "+1 DICE", "id": "gl_plusdice"}
+                    {"val": "GOETIC", "id": "gl_goetic"},{"val": "+1 DICE", "id": "gl_plusdice"}
                 ]
             }
         ]
@@ -2000,7 +2017,7 @@
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                 "content": "At the end of the activation of the Desecrated Saint all enemy models within 12” of it suffer 1 BLOOD MARKER from the light of the Morningstar that the Saint emits.",
-                                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                                "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"}]
                             }
                         ]
                     },

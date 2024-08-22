@@ -836,7 +836,7 @@
             {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_incendiarybullets", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
-            {"id": "eq_crownofhellfire", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_pitlocust"}]},
+            {"id": "eq_crownofhellfire", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_pitlocust"}]},
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
         "models": [
