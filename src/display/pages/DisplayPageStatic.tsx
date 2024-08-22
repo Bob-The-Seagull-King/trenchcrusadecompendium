@@ -13,7 +13,8 @@ import ModelDisplay from "../../display/components/features/models/ModelDisplay"
 export interface DisplayCollectionType {
     searchId      : string,
     returnDisplay: (item: any) => JSX.Element
-    returnFilterSelect: (manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) => JSX.Element
+    returnFilterSelect: (manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) => JSX.Element,
+    width : number;
 }
 
 export interface DisplayCollectionDataTable {[moveid: Lowercase<string>]: DisplayCollectionType}
@@ -23,6 +24,7 @@ type NoneToNoneFunction = () => void;
 export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     campaignrules: {
         searchId: 'campaignrules',
+        width: 12,
         returnDisplay(item: any) {
             return (
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <QuickRuleDisplay data={item}/>}/>
@@ -42,6 +44,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <EquipmentDisplay data={item}/>}/>
             )
         },
+        width: 7,
         returnFilterSelect(manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) {
             return (
                 <div className="col-12">
@@ -100,6 +103,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ListGroupDisplay data={item}/>}/>
             )
         },
+        width: 7,
         returnFilterSelect(manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) {
             return (
                 
@@ -135,6 +139,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                 <GenericDisplay  d_colour={item.Team} d_name={item.Name} d_type={""} d_method={() => <FactionDisplay data={item}/>}/>
             )
         },
+        width: 9,
         returnFilterSelect(manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) {
             return (
                 <div className="col-12">
@@ -164,6 +169,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     injuries: {
         searchId: 'injuries',
+        width: 7,
         returnDisplay(item: any) {
             return (
                 <ListItemDisplay data={item}/>
@@ -178,6 +184,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     models: {
         searchId: 'models',
+        width: 7,
         returnDisplay(item: any) {
             return (
                 <GenericDisplay  d_colour={item.Team} d_name={item.Name} d_type={""} d_method={() => <ModelDisplay data={item}/>}/>
@@ -247,6 +254,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     quickrules: {
         searchId: 'quickrules',
+        width: 12,
         returnDisplay(item: any) {
             return (
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <QuickRuleDisplay data={item}/>}/>
@@ -261,6 +269,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     scenario: {
         searchId: 'scenario',
+        width: 9,
         returnDisplay(item: any) {
             return (
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ScenarioDisplay data={item}/>}/>
@@ -300,6 +309,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ListGroupDisplay data={item}/>}/>
             )
         },
+        width: 7,
         returnFilterSelect(manager : FilterManager, update : NoneToNoneFunction, close : NoneToNoneFunction) {
             return (
                 <div className="col-12">
@@ -329,6 +339,7 @@ export const DisplayCollectionDataDex : DisplayCollectionDataTable = {
     },
     tablereference: {
         searchId: 'tablechart',
+        width: 7,
         returnDisplay(item: any) {
             return (
                 <GenericDisplay  d_colour={"tc"} d_name={item.Name} d_type={""} d_method={() => <ListGroupDisplay data={item}/>}/>
