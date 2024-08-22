@@ -1227,7 +1227,7 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Due their knowledge of anatomy and physiology, medics are experts at inflicting debilitating injuries and excruciating pain. Unless the target has the Keyword DEMONIC or BLACK GRAIL, add +1 BONUS DICE to any injury rolls the medic makes in melee against opponents who are Down.",
-                "glossary": [{"val": "DEMONIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
+                "glossary": [{"val": "DEMONIC", "id": "gl_demonic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+1 BONUS DICE", "id": "gl_plusdice"}]
             }
         ]
     },
@@ -1721,6 +1721,311 @@
                     {"val": "TOUGH", "id": "gl_tough"},
                     {"val": "ACTION", "id": "gl_action"},
                     {"val": "+4 DICE", "id": "gl_plusdice"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_goeticpraetor",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Goetic Powers",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may buy up to 2 GOETIC Powers or Spells for the Praetor.",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_goeticsorcerer",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Goetic Powers",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may buy up to 3 GOETIC Powers or Spells for the Sorcerer, and must buy at least 1.",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_goetichellknight",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Goetic Powers",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may buy 1 GOETIC Powers or Spell for the Hell Knight.",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_blessingoftheserpentmoon",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Blessing Of The Serpent Moon",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "GOETIC (1-6) power: Deduct 1 from any Injury Roll against the Sorcerer per BLOOD MARKER used.",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_shadowwalker",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Shadow Walker",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Using GOETIC MAGIC (1) the Hunter can retreat from combat without any of its opponents getting a chance to make attacks against it",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_lefthandpath",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Left-Hand Path",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Using this GOETIC (1) Ability the Hunter can walk the path between Hell and Creation. As part of its Move (be it Charging, Dashing, Jumping etc) the Hunter can move into contact with any piece of terrain on board, and continue its move from base contact with any other piece of terrain on the board,including on top/inside terrain if legal position exists. The hunter can do this multiple times during its move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. Note that Charging with this power requires the Hunter to see its target when it declares the Charge.",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_oraclebeastcloak",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Oracle Beast Cloak",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When the Hunter has to roll on an Injury Chart (for example when hit by an enemy Ranged or Melee attack), it can use GOETIC MAGIC (3) to negate the hit completely. You may decide to do this after seeing what the result of the Injury roll would be.",
+                "glossary": [
+                    {"val": "GOETIC MAGIC", "id": "gl_goetic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_bloodmagic",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Blood Magic",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This GOETIC (1) power allows a Hellknight to add +1 DICE to any Injury roll their Melee or Ranged attacks cause.",
+                "glossary": [
+                    {"val": "GOETIC MAGIC", "id": "gl_goetic"},{"val": "+1 DICE", "id": "gl_plusdice"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_hateful",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Hateful",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When a Yoke Fiend is activated and there is an enemy within 12” that it can see and see, it must attempt a Charge against the target unless it has the Keyword BLACK GRAIL or DEMONIC.",
+                "glossary": [
+                    {"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_torturer",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Goetic", "val": "gl_goetic"}
+                ],
+        "faction_id": "fc_none",
+        "name": "Torturer",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Yoke Fiend can make 1 melee attack against any friendly model with 1” as long as they don’t have the keyword DEMONIC.",
+                "glossary": [
+                    {"val": "DEMONIC", "id": "gl_demonic"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_lawofhell",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Law Of Hell",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If a Wretch manages to take any enemy ELITE model out of action, it gains its freedom and is immediately removed from the battle. It does not count as casualty as such, the maximum Warband size is simply modified.",
+                "glossary": [
+                    {"val": "ELITE", "id": "gl_elite"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_swarmingattack",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Swarming Attack",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When Charging, a Pit Locust can attack twice due its stinger. Pit Locusts suffer no penalties for fighting without weapons, nor any off-hand weapon penalties for its sting.. All Attacks by a Pit Locust have the Keyword SHRAPNEL, and therefore causes additional +1 BLOOD MARKER.",
+                "glossary": [
+                    {"val": "SHRAPNEL", "id": "gl_shrapnel"},
+                    {"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_demonicaura",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Demonic Aura",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Depending on which Deadly Sin the Warband is dedicated to, the Desecrated Saint has one of the following auras:",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Envy: ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All hostile models within 12” of the Desecrated Saint will not charge any enemy model that is already engaged in Melee combat with one of their own allies.",
+                                "glossary": [ ]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Pride: ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "At the end of the activation of the Desecrated Saint all enemy models within 12” of it suffer 1 BLOOD MARKER from the light of the Morningstar that the Saint emits.",
+                                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Wrath: ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "All friendly models within 6” of the Desecrated Saint (including the Saint) add +1 DICE to their Melee Characteristic and +1 DICE to their Dash Actions.",
+                                "glossary": [ {"val": "+1 DICE", "id": "gl_plusdice"}]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Lust: ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": " All hostile models within 8” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it.",
+                                "glossary": [ {"val": "BLACK GRAIL", "id": "gl_blackgrail"} ]
+                            }
+                        ]
+                    }
                 ]
             }
         ]

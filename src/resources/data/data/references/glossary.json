@@ -324,6 +324,24 @@
         }]
     },
     {
+        "id": "gl_goetic",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "general"}
+        ],
+        "name": "Goetic",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "Goetic Powers and Spells are marked with the keyword GOETIC (x) where the number in brackets indicates how many BLOOD MARKERS will have to be expanded to trigger the effect of the spell. These BLOOD MARKERS can be taken from any model currently taking part of the battle, be they friendly or enemy models, But they must come from models that do not have the Keyword DEMONIC or BLACK GRAIL. BLOOD MARKERs used this way are removed from the game, and the described effect of the Goetic Spell or ability then takes effect as described -no dice roll is needed. As with other Actions, each of these powers and spells can be used by the model only once per Activation, and they can be taken during any point of the Activation.",
+            "subcontent":   [],
+            "glossary": [
+                {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},
+                {"val": "DEMONIC", "id": "gl_demonic"}
+            ]
+        }]
+    },
+    {
         "id": "gl_infiltrator",
         "type": "Glossary",
         "source": "core",

@@ -2089,7 +2089,7 @@
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"},
             {"tag_name": "elite", "val": "gl_elite"},
-            {"tag_name": "string", "val": "gl_string"}
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "promotion": 0,
         "movement": [6],
@@ -3045,6 +3045,371 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_devour"
+            }
+        ]
+    },
+    {
+        "id": "md_praetor",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"elite", "val": "gl_elite"},
+            {"tag_name":"tough", "val": "gl_tough"},
+            {"tag_name":"gl_fear", "val": "gl_fear"},
+            {"tag_name":"gl_strong", "val": "gl_strong"}
+                ],
+        "promotion": 0,
+        "movement": [10],
+        "ranged": [3],
+        "melee": [3],
+        "armour": [0],
+        "base": [50],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {"flying": true},
+        "name": "Praetor",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Praetors are demonic commanders and magistrates within a small corner of a fiefdom of a mighty Arch-Devil or Demon Lord. Each commands small cohorts at their liege’s behest, raised from the denizens within the ever-shifting domains of Hell. Yoke Devils muster at their command, and Hellknights bound to blind obedience bend their knees to these field commanders of Hell."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Praetor can be equipped with any weapons, armour and Equipment from the Court Armoury list.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_goeticpraetor"
+            }
+        ]
+    },
+    {
+        "id": "md_sorcerer",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"elite", "val": "gl_elite"},
+            {"tag_name":"fear", "val": "gl_fear"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [1],
+        "melee": [1],
+        "armour": [0],
+        "base": [50],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {"flying": true},
+        "name": "Sorcerer",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Sorcerers come in many forms, and manipulate their own bodies to better cast the mighty spells they are charged with. Some have many arms, others multiple heads, or countless alterations and terrible improvements, some self administered, others by force, based on the whims of the Arch-devil and their cabal of High Sorcerers who lead their Goetic strategy. Sorcerer’s feet do not touch ground -a distant echo of their angelic past, but instead float across the battlefields of No Man’s Land, chanting the cruel gospel of Hell as they advance. Their dark wisdom and cunning makes them equally capable of leading one of the Court's Warbands, or acting as advisors to one of the Praetors as they stride forth into the mortal realms."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Sorcerer can be equipped with any weapons, armour and Equipment from the Court Armoury list.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_goeticsorcerer"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_blessingoftheserpentmoon"
+            }
+        ]
+    },
+    {
+        "id": "md_hunterofthelefthandpath",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"elite", "val": "gl_elite"},
+            {"tag_name":"infiltrator", "val": "gl_infiltrator"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [2],
+        "melee": [1],
+        "armour": [0],
+        "base": [32],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Hunter of the Left Hand Path",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The hunters of the Court of the Seven-headed Serpent are followers of the Left-hand Path. They stalk the primordial hinterlands of hell, where they hunt terrifying beasts and perform vile magicks and auguries using the innards of their still-living prey to discern portents and omens."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Hunter can be equipped with any melee weapons, armour or equipment from the Court Armoury List. The Hunter always carries the Bow of Lethe (included in the cost) as its ranged weapon, and it cannot swap or lose this weapon. It always takes the use of one of the arms of the Hunter.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_shadowwalker"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_lefthandpath"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_oraclebeastcloak"
+            }
+        ]
+    },
+    {
+        "id": "md_hellknight",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"elite", "val": "gl_elite"},
+            {"tag_name":"strong", "val": "gl_strong"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [0],
+        "melee": [2],
+        "armour": [0],
+        "base": [40],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Hell Knight",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The silent battalions of Hell, summoned to serve when the Court of the Seven-Headed Serpent seeks sport, are composed of Hell Knights. Their ever-burning banners stream as they march to war, carrying out the bidding of their masters. They are the bannerets of the High Lords of the Court, champions who respond to foolish mortals daring to challenge the hunting parties of the Serpent's nobility, who embark on hunting excursions beyond the Gate for their amusement."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Hell Knights are always equipped with a suit of Infernal Armour which is included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_goetichellknight"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_bloodmagic"
+            }
+        ]
+    },
+    {
+        "id": "md_yokefiend",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"}
+                ],
+        "promotion": 2,
+        "movement": [6],
+        "ranged": [0],
+        "melee": [1],
+        "armour": [0],
+        "base": [32],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Yoke Fiend",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Yoke Fiend stands some seven to eight feet tall, with layers of shivering fat and muscle branded by their masters and carved by the knives of the Hell-Priests to mark them as property of the greater demons. They exhibit bestial features such as horns and hooves of cattle or goats, ape-like limbs with immensely dense bones. They hate seeing their own reflections, as in their heart of hearts they know the beauty and glory they have lost for all eternity."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Yoke Fiends can be equipped with any melee weapon, armour or equipment from the Court Armoury List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_hateful"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_torturer"
+            }
+        ]
+    },
+    {
+        "id": "md_wretched",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "promotion": 2,
+        "movement": [6],
+        "ranged": [-1],
+        "melee": [-1],
+        "armour": [0],
+        "base": [25],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Wretched",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These unfortunate souls posses not a drop of demon blood, and act as disposable shock troops or are to be used as subjects of torture to power the Goetic magic of the Sorcerers and other users of the dark arts. Captured during one of the hunts of the Court, sold to the devils at the Heretic domains or having the misfortune to have foolishly pushed through in the places where the borders of the world are thin, their minds are scarred by witnessing the horror of damnation while still alive. Willing to do anything to escape their fate a million times worse than death, they grasp at the thinnest of straws: Should a Wretch bring down a mighty opponent, the Law of Hell is clear: the mortal will gain its freedom, in memory and honour of the First Rebellion when there was war in Heaven and blood of the angels painted the firmament red."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Wretched can be equipped with any melee weapon, armour or equipment from the Court Armoury List. None of their weapons, armour or equipment can cost more than 10 ducats each. They must be equipped with at least one weapon.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_lawofhell"
+            }
+        ]
+    },
+    {
+        "id": "md_pitlocust",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"fear", "val": "gl_fear"}
+                ],
+        "promotion": 1,
+        "movement": [6],
+        "ranged": [-1],
+        "melee": [-1],
+        "armour": [0],
+        "base": [25],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Pit Locust",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Pit Locusts are terrifying, horse-sized winged and armoured creatures with twisted faces resembling humans. They fight with rending blades attached to their limbs and with poison stingers."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Pit Locust wears a suit of Reinforced Armour which is reflected in its profile above. They can have no other armour, weapons and equipment, except for the Crown of Hellfire. They do not suffer penalties for fighting unarmed.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_swarmingattack"
+            }
+        ]
+    },
+    {
+        "id": "md_desecratedsaint",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"demonic", "val": "gl_demonic"},
+            {"tag_name":"fear", "val": "gl_fear"},
+            {"tag_name":"tough", "val": "gl_tough"},
+            {"tag_name":"strong", "val": "gl_strong"}
+                ],
+        "promotion": 1,
+        "movement": [6],
+        "ranged": [],
+        "melee": [3],
+        "armour": [-3],
+        "base": [60],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Desecrated Saint",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Desecrated Saints are the most prized possessions of the Lords of Hell: men and women who once were destined to become saints, great prophets or holy ones according to God’s Plan, but who were led astray and fell from Grace."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Desecrated Saint is encased in nigh-impregnable Cocytus armour reflected on the profile above. The Desecrated Saint has three functional arms. They can carry three melee weapons, one of which can be a 2-handed weapon. All of its arms can attack with no penalty in Melee. The Desecrated Saint can be equipped with any melee weapons from the Court Armoury list",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_demonicaura"
             }
         ]
     }
