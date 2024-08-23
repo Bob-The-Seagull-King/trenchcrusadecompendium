@@ -6,7 +6,7 @@ import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
 import { returnTags } from '../../../../../utility/util';
-import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic } from '../../../../../classes/lists/warbandmanagerstatic';
+import { GetGloryCost, GetDucatCost} from '../../../../../classes/lists/warbandmanagerstatic';
 
 import { useGlobalState } from './../../../../../utility/globalstate'
 import { getColour } from '../../../../../utility/functions';
