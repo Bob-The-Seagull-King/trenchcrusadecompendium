@@ -3658,7 +3658,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Roll 3D6 (added the results together) on the Injury table instead of 2D6 if the target of the attack has not yet moved this turn.",
+                        "content": "Attacks made with this weapon have +2 to injure against targets that have not been Activated this turn.",
                         "glossary": []
                     }
                 ]

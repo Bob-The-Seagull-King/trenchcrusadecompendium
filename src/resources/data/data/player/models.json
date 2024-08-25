@@ -3131,7 +3131,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Sorcerer can be equipped with any weapons, armour and Equipment from the Court Armoury list.",
+                "content": "The Sorcerer can be equipped with any melee weapons, armour and Equipment from the Court Armoury list.",
                 "glossary": []
             }
             ],
@@ -3273,7 +3273,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Yoke Fiends can be equipped with any melee weapon, armour or equipment from the Court Armoury List.",
+                "content": "Yoke Fiends can be equipped with any melee weapon, armour or equipment from the Court Armoury List. They can be equipped with any one ranged weapon that costs 30 ducats or less.",
                 "glossary": []
             }
             ],

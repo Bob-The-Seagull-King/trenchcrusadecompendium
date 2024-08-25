@@ -566,7 +566,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using this GOETIC (1-3) spell the Sorcerer opens a portal to the Lake of Fire, and draws forth a great screaming ball of fire. Select a 1x1mm point within 36” the Sorcerer can see. Next, take a Ranged Attack ACTION. If the roll fails (ie. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. For each Blood Marker used, the Burning Inferno adds +1” BLAST to the attack. Additionally, if the Burning Inferno lands directly on top of a model, it ignores that model’s armour. This attack has the Keyword FIRE.",
+                "content": "Using this GOETIC (1-3) spell the Sorcerer opens a portal to the Lake of Fire, and draws forth a great screaming ball of fire. Select a 1x1mm point within 36” the Sorcerer can see. Next, take a Ranged Attack ACTION: this attack suffers penalties for range but not for Cover. If the roll fails (ie. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. For each Blood Marker used, the Burning Inferno adds +1” BLAST to the attack. Additionally, if the Burning Inferno lands directly on top of a model, it ignores that model’s armour. This attack has the Keyword FIRE.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLAST", "id": "gl_blastx"},{"val": "FIRE", "id": "gl_fire"},{"val": "GOETIC", "id": "gl_goetic"}]
             },
             {
@@ -583,7 +583,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This model’s Charge move is always the maximum of 12”, though it still suffers penalties for Difficult Terrain as standard."
+                "content": "This model’s Charge move is always the maximum of 12”, though it still suffers penalties for Difficult Terrain as standard.  If you do not charge the closest target, you must first pass a RISKY ACTION test."
             }
                         ]
     },
@@ -644,6 +644,19 @@
                         ]
     },
     {
+        "id": "up_goetic_whatisyoursismine",
+        "type": "Upgrade",
+        "name": "What Is Yours Is Mine",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Using this GOETIC (1) spell allows the model with this Goetic Power to take 1 BLOOD MARKER or BLESSING MARKER from any model on the battlefield, removing it from the target and gaining that kind of marker for itself. This can even come from a model with a Keyword BLACK GRAIL or DEMONIC. The cost of the spell must still be paid as normal, and it is separate from the MARKER it moves.",
+                "glossary": [{"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLESSING MARKER", "id": "gl_blessingmarker"},{"val": "DEMONIC", "id": "gl_demonic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
+            }
+                        ]
+    },
+    {
         "id": "up_goetic_forbiddenpleasures",
         "type": "Upgrade",
         "name": "Forbidden Pleasures",
@@ -664,7 +677,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using this GOETIC (1-3) spell allows you to give any one enemy model +1 BLOOD MARKER (up to a maximum of 3) for each BLOOD MARKER used to power this spell.",
+                "content": "Using this GOETIC (1-2) spell allows you to give any one enemy model you can see +1 BLOOD MARKER (up to a maximum of 2) for each BLOOD MARKER used to power this spell.",
                 "glossary": [{"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
             }
                         ]
@@ -698,12 +711,12 @@
     {
         "id": "up_goetic_iwillnotkneel",
         "type": "Upgrade",
-        "name": "I Wil Not Kneel",
+        "name": "Too Proud To Kneel",
         "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using this GOETIC (1) spell allows the model to negate a Down state or ignore any Injury, attack or power that would have caused the model to fall Down. This must be done immediately after when the Down result is sustained by the model with this Spell.",
+                "content": "Using this GOETIC (2) spell allows the model to negate a Down state or ignore any Injury, attack or power that would have caused the model to fall Down. This must be done immediately after when the Down result is sustained by the model with this Spell.",
                 "glossary": [{"val": "GOETIC", "id": "gl_goetic"}]
             }
                         ]
@@ -718,6 +731,45 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Using this GOETIC (2) Spell hits any enemy the model sees within 24”. The target must immediately roll on the Injury Chart. If this does not take it Out of Action, the target is pushed back by 1D6” directly away from the user of this power if it is on a 32mm or smaller base. If they hit another model or a solid object, they stop.",
                 "glossary": [{"val": "GOETIC", "id": "gl_goetic"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_goetic_morpheanmind",
+        "type": "Upgrade",
+        "name": "Morphean Mind",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When this model takes an ACTION or causes an Injury, it can choose to wait until after the roll is made to modify it with BLOOD/BLESSING MARKERS. If it chooses to do so, the opponent commits whether or not they will apply BLOOD/BLESSING MARKERS and how many. Then, the model rolls an unmodified roll, typically 2d6. After seeing the result, the model may choose to apply BLOOD/BLESSING MARKERS, including to trigger BLOODBATH. Roll additional dice so that the dice roll reflects all appropriate bonuses/penalties, including BLOOD/BLESSING MARKERS, any modifiers to the ACTION or to injure that the model might have, etc.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD", "id": "gl_bloodmarker"},{"val": "BLESSING", "id": "gl_blessingmarker"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_goetic_charmofacedia",
+        "type": "Upgrade",
+        "name": "Charm Of Acedia",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This GOETIC (1) Spell can be cast right before the model casting it takes an ACTION targeting any model, friend or foe (including the model itself and thus covering Dashing, Climbing, Jumping etc). The target ceases any potential resistance or tension, seeing no point in such effort, making the ACTION succeed automatically with no dice rolled.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "GOETIC", "id": "gl_goetic"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_goetic_daemoniummerdianum",
+        "type": "Upgrade",
+        "name": "Daemonium Meridianum",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "For any enemy model 6” area around this model is considered Difficult Terrain.",
+                "glossary": []
             }
                         ]
     }

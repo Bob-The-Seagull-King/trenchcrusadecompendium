@@ -1815,7 +1815,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "GOETIC (1-6) power: Deduct 1 from any Injury Roll against the Sorcerer per BLOOD MARKER used.",
+                "content": "GOETIC (1-6) power: Immediately before an Injury Roll is made against the Sorcerer, you may use this Goetic power to deduct 1 from that Injury Roll per BLOOD MARKER used.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
                 ]
@@ -1875,7 +1875,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When the Hunter has to roll on an Injury Chart (for example when hit by an enemy Ranged or Melee attack), it can use GOETIC MAGIC (3) to negate the hit completely. You may decide to do this after seeing what the result of the Injury roll would be.",
+                "content": "Once per Turn you can use this GOETIC MAGIC (3) after the Hunter rolls on the Injury Chart to negate the result and any other effects that affect the Hunter caused by the triggering event entirely. Effects from the triggering event, such as BLAST weapons that originally targeted the Hunter, still affect other models as normal.",
                 "glossary": [
                     {"val": "GOETIC MAGIC", "id": "gl_goetic"}
                 ]
@@ -1914,7 +1914,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When a Yoke Fiend is activated and there is an enemy within 12” that it can see and see, it must attempt a Charge against the target unless it has the Keyword BLACK GRAIL or DEMONIC.",
+                "content": "When a Yoke Fiend is Activated, if there is an enemy model without the Keyword BLACK GRAIL or DEMONIC within 12” that it can see, it must make a Charge against the closest enemy model without the Keyword BLACK GRAIL or DEMONIC as it’s first ACTION. If it begins its Activation Down and the above conditions are true, it must Stand and then Charge. If it begins its Activation in Melee Combat, it ignores this ability.",
                 "glossary": [
                     {"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"}
                 ]
@@ -1953,7 +1953,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If a Wretch manages to take any enemy ELITE model out of action, it gains its freedom and is immediately removed from the battle. It does not count as casualty as such, the maximum Warband size is simply modified.",
+                "content": "If a Wretch manages to take any enemy ELITE model out of action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle. It does not count as casualty as such, the maximum Warband size is simply modified.",
                 "glossary": [
                     {"val": "ELITE", "id": "gl_elite"}
                 ]
@@ -1972,7 +1972,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When Charging, a Pit Locust can attack twice due its stinger. Pit Locusts suffer no penalties for fighting without weapons, nor any off-hand weapon penalties for its sting.. All Attacks by a Pit Locust have the Keyword SHRAPNEL, and therefore causes additional +1 BLOOD MARKER.",
+                "content": "When Charging, a Pit Locust can attack twice due its stinger. Pit Locusts suffer no penalties for fighting without weapons, nor any off-hand weapon penalties for its sting. The first attack made by a Pit Locust has the Keyword SHRAPNEL, and therefore causes additional +1 BLOOD MARKER.",
                 "glossary": [
                     {"val": "SHRAPNEL", "id": "gl_shrapnel"},
                     {"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}
@@ -2016,7 +2016,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "At the end of the activation of the Desecrated Saint all enemy models within 12” of it suffer 1 BLOOD MARKER from the light of the Morningstar that the Saint emits.",
+                                "content": "At the end of the activation of the Desecrated Saint all enemy models within 8” of it suffer 1 BLOOD MARKER from the light of the Morningstar that the Saint emits.",
                                 "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"}]
                             }
                         ]
@@ -2038,8 +2038,19 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": " All hostile models within 8” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it.",
+                                "content": " All hostile models within 8” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it. Note: Holy Icon Shields and Armour, Infernal Iron Armour, or similar armour that always grant armour save are not affected by the Aura of Lust.",
                                 "glossary": [ {"val": "BLACK GRAIL", "id": "gl_blackgrail"} ]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Sloth: ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any enemy model within 8” of the Desecrated Saint that suffers a Minor Hit result from Injury Roll treats it as Down instead. This even affects models that normally do not suffer Down results from Minor Hit Injuries (such as models wearing Machine Armour).",
+                                "glossary": []
                             }
                         ]
                     }
