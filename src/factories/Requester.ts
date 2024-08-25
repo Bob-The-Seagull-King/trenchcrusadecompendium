@@ -6,7 +6,7 @@ import {DataResponder} from '../resources/data/util/DataResponder'
  */
 interface IRequest {
     searchtype: string, // Used to decide which request to make
-    searchparam: any // The data of the givn request
+    searchparam: any // The data of the given request
 }
 
 class Requester {

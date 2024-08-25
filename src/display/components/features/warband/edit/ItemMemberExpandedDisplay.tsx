@@ -6,7 +6,7 @@ import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
 import { returnTags } from '../../../../../utility/util';
-import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic } from '../../../../../classes/lists/warbandmanagerstatic';
+import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic, ExportModelDisplayTextTTS } from '../../../../../classes/lists/warbandmanagerstatic';
 
 import { useGlobalState } from './../../../../../utility/globalstate'
 import { getColour } from '../../../../../utility/functions';
@@ -61,6 +61,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
+    const modelExportTTS = ExportModelDisplayTextTTS(member, true, false)
 
     function returnComponentsList(_str : string) {
         const componentsList = returnComponentsWithTag(member, _str)
@@ -259,9 +260,11 @@ const ItemMemberExpandedDisplay = (props: any) => {
                 <div className="row float-end">
                     <div className='col-12 float-end'>
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberexpanded"} panelObj={modelExport}/>
-                        
-                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>   
-                        
+
+                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>
+
+                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmembertts"} panelObj={modelExportTTS}/>
+
                             <Button variant="" onClick={() => closeSelf()}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
                             </Button>
