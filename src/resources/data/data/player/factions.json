@@ -421,6 +421,20 @@
                         ]
                     }
                 ]
+            },
+            {
+                "title": "Concentrated Attack",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When using a FIRETEAM, if a model in the FIRETEAM makes any kind of Attack ACTION (ranged or Melee) an opponent that the other member of their FIRETEAM has already hit with an attack ACTION during the same activation, the cost of a Bloodbath is reduced to 3 BLOOD MARKERS against this opponent, whether the model is standing or Down.",
+                        "glossary": [
+                            {"val": "FIRETEAM", "id": "gl_fireteam"},
+                            {"val": "ACTION", "id": "gl_action"},
+                            {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}
+                        ]
+                    }
+                ]
             }
          ],
         "equipment": [
@@ -431,6 +445,7 @@
             {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Bayonet Lug","Shield Combo"]},
             {"id": "eq_shotgun", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
+            {"id": "eq_heavyshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 2, "restriction": []},

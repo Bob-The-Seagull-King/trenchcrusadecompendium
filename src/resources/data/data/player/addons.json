@@ -1104,8 +1104,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " If the Cleric makes a successful ACTION roll, all friendly models that are within 8” of the Trench Cleric are not affected by FEAR.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
+                "content": "All friendly models that are within 8” of the Trench Priest at the start of their Activation are not affected by FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
             }
         ]
     },

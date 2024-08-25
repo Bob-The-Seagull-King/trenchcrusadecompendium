@@ -280,6 +280,34 @@
                         ]
     },
     {
+        "id": "eq_heavyshotgun",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"}
+                ],
+        "category": "ranged",
+        "name": "Heavy Shotgun",
+        "equip_type": "2-Handed",
+        "range": "12\"",
+        "blurb": "Mostly used by the Heavy Mechanised Infantry, this massive 8 bore shotgun is used to take down extremely powerful and large opponents at short range. It is known as a “Wolf-Killer” in New Antioch as it is the weapon favoured by the soldiery of the Duke to take down the Heretic War Wolf Assault Beasts. Heavy Shotguns use tungsten-orichalcum alloy shot which explains their enormous stopping power at short ranges.",
+        "modifiers": ["+1D to Hit","+2D to Injury At Short Range"],
+        "eventtags": {"action": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Owing to its high accuracy, add +1 DICE to all hit rolls. At Short range they roll Injuries with +2 DICE.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
         "id": "eq_automaticshotgun",
         "type": "Equipment",
         "source": "core",
