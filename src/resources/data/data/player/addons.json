@@ -98,7 +98,7 @@
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18\" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls during a single Activation if all the conditions are met.",
-                            "glossary": [{"val": "", "id": ""}]
+                            "glossary": [{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
                         },
                         {
                             "tags": [{"tag_name": "desc_type", "val": "list"}],
@@ -1115,6 +1115,23 @@
         ]
     },
     {
+        "id": "ab_godiswithus",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "God Is With Us!",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Select one friendly model within 6” of the Priest (including the Priest) and take a RISKY ACTION. If successful, the model immediately gains a BLESSINGS MARKER.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLESSINGS MARKER", "id": "gl_blessingmarker"}]
+            }
+        ]
+    },
+    {
         "id": "ab_aim",
         "type": "Addon",
         "source": "core",
@@ -1386,7 +1403,7 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Heralds suffer no penalties for fighting unarmed in melee and they cause INFECTION MARKERS with their unarmed attacks instead of BLOOD MARKERS. If this attack causes an INFECTION MARKER on any enemy without the Keyword BLACK GRAIL, the Herald can remove one of their own BLOOD MARKERS.",
-                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
             }
         ]
     },
@@ -1402,8 +1419,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Attacks with Keyword GAS have no effect on the model.",
-                "glossary": [{"val": "GAS", "id": "gl_gas"}]
+                "content": "This model does not suffer additional BLOOD MARKERS from attacks with Keyword GAS.",
+                "glossary": [{"val": "GAS", "id": "gl_gas"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
         ]
     },
@@ -1860,7 +1877,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using this GOETIC (1) Ability the Hunter can walk the path between Hell and Creation. As part of its Move (be it Charging, Dashing, Jumping etc) the Hunter can move into contact with any piece of terrain on board, and continue its move from base contact with any other piece of terrain on the board,including on top/inside terrain if legal position exists. The hunter can do this multiple times during its move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. Note that Charging with this power requires the Hunter to see its target when it declares the Charge.",
+                "content": "As part of any movement that the Hunter takes during its Activation (Standard Move, Retreat, Charge, Dash, etc.), it can use a GOETIC (1) power to walk the path between Hell and Creation. The Hunter must be touching a piece of terrain when it uses this power. When it does, it is immediately placed into contact with any other piece of terrain on the battlefield, including on top of or inside terrain, if legal positions exist. Its movement then continues as normal. All usual movement rules persist for this movement (moving into or out of Melee Combat, for example). The Hunter can do this multiple times during its move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. If the Hunter uses this ability during a Charge, it does not need to take the most direct route possible toward its target, but it still selects its target as normal (ie. see the target when declaring a Charge).",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
                 ]
@@ -1882,7 +1899,8 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Once per Turn you can use this GOETIC MAGIC (3) after the Hunter rolls on the Injury Chart to negate the result and any other effects that affect the Hunter caused by the triggering event entirely. Effects from the triggering event, such as BLAST weapons that originally targeted the Hunter, still affect other models as normal.",
                 "glossary": [
-                    {"val": "GOETIC MAGIC", "id": "gl_goetic"}
+                    {"val": "GOETIC MAGIC", "id": "gl_goetic"},
+                    {"val": "BLAST", "id": "gl_blastx"}
                 ]
             }
         ]
@@ -1921,7 +1939,7 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "When a Yoke Fiend is Activated, if there is an enemy model without the Keyword BLACK GRAIL or DEMONIC within 12” that it can see, it must make a Charge against the closest enemy model without the Keyword BLACK GRAIL or DEMONIC as it’s first ACTION. If it begins its Activation Down and the above conditions are true, it must Stand and then Charge. If it begins its Activation in Melee Combat, it ignores this ability.",
                 "glossary": [
-                    {"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"}
+                    {"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"},{"val": "ACTION", "id": "gl_action"}
                 ]
             }
         ]
@@ -1931,7 +1949,6 @@
         "type": "Addon",
         "source": "core",
         "tags": [
-            {"tag_name": "Goetic", "val": "gl_goetic"}
                 ],
         "faction_id": "fc_none",
         "name": "Torturer",
@@ -1939,7 +1956,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Yoke Fiend can make 1 melee attack against any friendly model with 1” as long as they don’t have the keyword DEMONIC.",
+                "content": "The Yoke Fiend can make 1 melee attack against any friendly model with 1” as long as they don’t have the keyword DEMONIC. When doing so, they can only make a single attack.",
                 "glossary": [
                     {"val": "DEMONIC", "id": "gl_demonic"}
                 ]
@@ -1958,7 +1975,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If a Wretch manages to take any enemy ELITE model out of action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle. It does not count as casualty as such, the maximum Warband size is simply modified.",
+                "content": "If a Wretch manages to take any enemy ELITE model Out of Action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle and from your Warband permanently. It does not count as casualty, but your Warband’s total size for this battle is reduced by one for purposes of Morale.",
                 "glossary": [
                     {"val": "ELITE", "id": "gl_elite"}
                 ]
@@ -1977,10 +1994,10 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When Charging, a Pit Locust can attack twice due its stinger. Pit Locusts suffer no penalties for fighting without weapons, nor any off-hand weapon penalties for its sting. The first attack made by a Pit Locust has the Keyword SHRAPNEL, and therefore causes additional +1 BLOOD MARKER.",
+                "content": "When the Pit Locust Makes a Melee Attack, it can make an additional Attack with its stinger if it Charged during this Activation. Pit Locusts suffer no penalties for fighting unarmed, nor do they suffer penalties or restrictions for making Off-Hand Attacks with their stingers. The first Attack made by a Pit Locust has the Keyword SHRAPNEL, and therefore cause an additional BLOOD MARKER.",
                 "glossary": [
                     {"val": "SHRAPNEL", "id": "gl_shrapnel"},
-                    {"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}
+                    {"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
                 ]
             }
         ]
@@ -2032,7 +2049,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All friendly models within 6” of the Desecrated Saint (including the Saint) add +1 DICE to their Melee Characteristic and +1 DICE to their Dash Actions.",
+                                "content": "All friendly models within 8” of the Desecrated Saint (including the Saint) add +1 DICE to their Melee Characteristic and +1 DICE to their Dash Actions.",
                                 "glossary": [ {"val": "+1 DICE", "id": "gl_plusdice"}]
                             }
                         ]
@@ -2043,7 +2060,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": " All hostile models within 8” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it. Note: Holy Icon Shields and Armour, Infernal Iron Armour, or similar armour that always grant armour save are not affected by the Aura of Lust.",
+                                "content": " All hostile models within 6” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it. Note: Holy Icon Shields and Armour, Infernal Iron Armour, or similar armour that always grant armour save are not affected by the Aura of Lust.",
                                 "glossary": [ {"val": "BLACK GRAIL", "id": "gl_blackgrail"} ]
                             }
                         ]

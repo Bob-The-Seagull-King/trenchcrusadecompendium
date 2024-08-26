@@ -1074,11 +1074,11 @@
         "range": null,
         "blurb": "Equipped with close combat weaponry, and steel body armour. Casualties are extremely high in the combat engineer units, but they consider it an honour to fight and die for New Antioch and the Church.",
         "modifiers": null,
-        "eventtags": {"trait": true},
+        "eventtags": {"trait": true, "armour": -2},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All weapons with keyword SHRAPNEL suffer -1 DICE on all Injury rolls against the Combat Engineer, and the SHRAPNEL attacks do not cause the extra BLOOD MARKERS on a model wearing this suit. These effects work even against attacks that ignore armour.",
+                "content": "Grants a -2 modifier to injury rolls made against the Combat Engineer (this is included in the Combat Engineer’s profile). All weapons with keyword SHRAPNEL suffer -1 DICE on all injury rolls against the Combat Engineer and SHRAPNEL attacks do not cause extra BLOOD MARKERS on a model wearing this suit. The effects relating to SHRAPNEL work even against attacks that ignore armour.",
                 "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
         ]
@@ -2984,7 +2984,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "In the beginning of the Activation of the model wearing the Crown, it causes 1 INFECTION MARKER on any enemy model in melee combat with it.",
+                            "content": "In the beginning of the Activation of the model wearing the Crown, it causes 1 INFECTION MARKER on any enemy model in melee combat with it. Despite its name, this item is not Hedgear.",
                             "glossary": [{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
                         }
                     ]
@@ -3532,7 +3532,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Counts as a Trench Club in Melee combat.",
+                        "content": "If a model equipped with an Arquebus has two hands free, it can use it in Melee Combat as if it were a Trench Club.",
                         "glossary": []
                     }
                 ]
@@ -3661,7 +3661,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Roll D6 on the Injury table instead of 2D6. Causes and additional BLOOD MARKER for each Blood Marker it inflicts in combat.",
+                        "content": "If you trigger Bloodbath with this weapon, roll 2d6 instead of 3d6. Roll D6 on the Injury table instead of 2D6. Causes and additional BLOOD MARKER for each Blood Marker it inflicts in combat.",
                         "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
                     }
                 ]
@@ -3743,8 +3743,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Any enemy that is in melee with the model with the Crown of Hellfire suffers 1 BLOOD MARKER as if it was hit by a weapon with the Keyword FIRE at the end of the Activation of the model wearing the crown. Any equipment, abilities etc. that negate FIRE Keyword BLOOD MARKERs also nullify this damage.",
-                                        "glossary": [{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
+                                        "content": "When this model ends its Activation, each enemy model in Melee Combat with it suffers a BLOOD MARKER. Any effect or ability that negates BLOOD MARKERS from the Keyword FIRE negates this BLOOD MARKER.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
                                     }
                                 ]
                             }

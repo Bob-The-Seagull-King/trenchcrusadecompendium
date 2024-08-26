@@ -239,10 +239,10 @@
         "name": "Fireteam",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without the opponent getting their turn in between. Note that if the Activation of either member of the Fireteam forcefully ends (due a failed RISKY ACTION for example), it ends both Activations. Note that Mercenaries cannot be part of a FIRETEAM.",
+            "content": "This model is part of a Fireteam consisting of two models. All models that are part of the same Fireteam can be activated at the same time without the opponent getting their turn in between. They can take their ACTIONS in any order they wish, switching between the two models. Note that if the Activation of either member of the Fireteam forcefully ends (due a failed RISKY ACTION for example), it ends both Activations. Allies cannot be part of a Fireteam.",
             "subcontent":   [],
             "glossary": [
-                {"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                {"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "ACTIONS", "id": "gl_action"}]
         }]
     },
     {

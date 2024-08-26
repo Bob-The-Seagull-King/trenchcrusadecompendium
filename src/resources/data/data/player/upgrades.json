@@ -553,8 +553,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Every ACTION taken by a model without Keyword BLACK GRAIL within 8” of a Herald is considered a RISKY ACTION. Does not affect non-ACTION rolls such as Charge Distance rolls.",
-                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                            "content": "Every ACTION taken by a model without Keyword BLACK GRAIL within 8” of a Herald is considered a RISKY ACTION. Note: This does not affect non-ACTION rolls such as Charge distance rolls, nor does it affect ACTIONS that do not require a roll on the Action Success Chart.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTIONS", "id": "gl_action"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
     },
@@ -625,7 +625,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This Model can be equipped with one Weapon or suit of armour from Trench Pilgrim, New Antioch of Sultanate Warband Armouries. You must pay the cost of this item as standard, and if it is lost, it must be purchased again as soon as you have the funds. The model will never willingly trade this item away.",
+                "content": "This Model can be equipped with one Weapon or suit of armour from Trench Pilgrim, New Antioch or Sultanate Warband Armouries. You must pay the cost of this item as standard, and if it is lost, it must be purchased again as soon as you have the funds. The model will never willingly trade this item away.",
                 "glossary": []
             }
                         ]
@@ -664,7 +664,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "One model in the Warband without the Keyword DEMONIC starts the game with 3 BLOOD MARKERs.",
+                "content": "Before the battle begins, select one model in your Warband without the Keyword DEMONIC. It starts the battle with 3 BLOOD MARKERs.",
                 "glossary": [{"val": "DEMONIC", "id": "gl_demonic"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
             }
                         ]
@@ -703,7 +703,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Warband with this model never has to make Morale tests as long as this model is part of the Warband.",
+                "content": "The Warband with this model automatically succeeds when it has to make Morale tests as long as this model is on the battlefield.",
                 "glossary": []
             }
                         ]
@@ -711,12 +711,12 @@
     {
         "id": "up_goetic_iwillnotkneel",
         "type": "Upgrade",
-        "name": "Too Proud To Kneel",
+        "name": "Too Proud To Fall",
         "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using this GOETIC (2) spell allows the model to negate a Down state or ignore any Injury, attack or power that would have caused the model to fall Down. This must be done immediately after when the Down result is sustained by the model with this Spell.",
+                "content": "Using this GOETIC (2) spell allows the model to negate a Down state or ignore any Injury, attack or power that would have caused the model to fall Down.",
                 "glossary": [{"val": "GOETIC", "id": "gl_goetic"}]
             }
                         ]
@@ -742,7 +742,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When this model takes an ACTION or causes an Injury, it can choose to wait until after the roll is made to modify it with BLOOD/BLESSING MARKERS. If it chooses to do so, the opponent commits whether or not they will apply BLOOD/BLESSING MARKERS and how many. Then, the model rolls an unmodified roll, typically 2d6. After seeing the result, the model may choose to apply BLOOD/BLESSING MARKERS, including to trigger BLOODBATH. Roll additional dice so that the dice roll reflects all appropriate bonuses/penalties, including BLOOD/BLESSING MARKERS, any modifiers to the ACTION or to injure that the model might have, etc.",
+                "content": "When this model takes an ACTION or causes an Injury, it can choose to wait until after the roll is made to modify it with BLOOD/BLESSING MARKERS. If it chooses to do so, the opponent commits whether or not they will apply BLOOD/BLESSING MARKERS and how many. Then, the model rolls an unmodified roll, typically 2d6. After seeing the result, the model may choose to apply BLOOD/BLESSING MARKERS, including to trigger Bloodbath. Roll additional dice so that the dice roll reflects all appropriate bonuses/penalties, including BLOOD/BLESSING MARKERS, any modifiers to the ACTION or to injure that the model might have, etc.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD", "id": "gl_bloodmarker"},{"val": "BLESSING", "id": "gl_blessingmarker"}]
             }
                         ]

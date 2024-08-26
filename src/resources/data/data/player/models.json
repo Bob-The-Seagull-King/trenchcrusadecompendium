@@ -1663,6 +1663,10 @@
         "abilities":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_godiswithus"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_onwardchristiansoldiers"
             }
         ]
@@ -1678,7 +1682,7 @@
         "promotion": 0,
         "movement": [6],
         "ranged": [2],
-        "melee": [2],
+        "melee": [-1],
         "armour": [0],
         "base": [25],
         "faction_id": "fc_newantioch",
@@ -1908,7 +1912,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Heavy Armour. This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +15 Gold Ducats.",
+                "content": "Mechanised Heavy Infantry always wear Light Machine Armour which counts as Reinforced Armour (32mm Base). This is reflected in the cost and profile above. This can be upgraded into Machine Armour (despite not being ELITE and LIMIT: 1) for +10 ducats (40mm base).",
                 "glossary": [{"val": "ELITE", "id": "gl_elite"}]
             },
             {
@@ -1979,7 +1983,7 @@
         "movement": [6],
         "ranged": [0],
         "melee": [0],
-        "armour": [-1],
+        "armour": [0],
         "base": [25],
         "faction_id": "fc_newantioch",
         "team":"heaven",
@@ -2111,7 +2115,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
                 "glossary": []
             }
             ],
@@ -2486,7 +2490,7 @@
                 ],
         "promotion": 2,
         "movement": [6],
-        "ranged": [0],
+        "ranged": [],
         "melee": [-1],
         "armour": [0],
         "base": [25],
@@ -2604,7 +2608,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION and suffers no off-hand penalties in melee.",
+                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION and suffers no off-hand penalties in melee. The Amalgam cannot benefit from Shield Combo",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
             ],
@@ -3398,7 +3402,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Desecrated Saint is encased in nigh-impregnable Cocytus armour reflected on the profile above. The Desecrated Saint has three functional arms. They can carry three melee weapons, one of which can be a 2-handed weapon. All of its arms can attack with no penalty in Melee. The Desecrated Saint can be equipped with any melee weapons from the Court Armoury list",
+                "content": "The Desecrated Saint is encased in nigh-impregnable Cocytus armour reflected on the profile above. This armour cannot be removed or lost. The Desecrated Saint has three functional arms. They can carry up to three three melee weapons, only one of which can be a 2-handed weapon. When the Desecrated Saint Makes a Melee Attack, it can make an Attack ACTION with each arm and it does not suffer Off-Hand penalties. The Desecrated Saint can be equipped with any melee weapons from the Court Armoury list",
                 "glossary": []
             }
             ],

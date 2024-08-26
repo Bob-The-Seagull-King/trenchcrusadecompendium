@@ -410,14 +410,13 @@
         ],
         "rules": [
             {
-                "title": "Fireteam",
+                "title": "New Antioch Fireteams",
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "This model is part of a Fireteam. All models that are part of the same Fireteam can be activated at the same time without the opponent getting their turn in between. Note that if the Activation of either member of the Fireteam forcefully ends (due a failed RISKY ACTION for example), it ends both Activations.",
+                        "content": "You can form up to two Fire Teams from models in the warband (not Allies or Mercenaries). Each Fireteam consists of two models. These models gain the Keyword FIRETEAM:",
                         "glossary": [
-                            {"val": "FIRETEAM", "id": "gl_fireteam"},
-                            {"val": "RISKY ACTION", "id": "gl_riskyaction"}
+                            {"val": "FIRETEAM", "id": "gl_fireteam"}
                         ]
                     }
                 ]
@@ -444,10 +443,10 @@
             {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_automaticpistol", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Bayonet Lug","Shield Combo"]},
-            {"id": "eq_shotgun", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
+            {"id": "eq_shotgun", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo","Bayonet Lug"]},
             {"id": "eq_heavyshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
-            {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
-            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo","Bayonet Lug"]},
+            {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_grenades", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_incendiarygrenades", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
@@ -456,11 +455,12 @@
             {"id": "eq_heavyflamethrower", "cost": 55, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_satchelcharge", "cost": 15, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "", "val": "One per Model"}]},
             {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_polearm", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_greatmaul", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_misericordia", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_combatmedic"}]},
             {"id": "eq_greataxe", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_engineerbodyarmour", "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_combatengineer"}]},
@@ -472,7 +472,7 @@
             {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_medikit", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_musicalinstrument", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "antikeyword", "val": "Elite"}]},
-            {"id": "eq_martyrdompills", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_martyrdompills", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_troopflag", "cost": 1, "cost_id": "glory", "limit": 1, "restriction": []},
             {"id": "eq_binoculars", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": [{"type": "purchase", "val": "explore"}]},
@@ -487,17 +487,18 @@
             {"id": "eq_resurrectionengine", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_ducalwingedarmour", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_greatbannerofnewantioch", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
-            {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 4, "restriction": []}
+            {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 4, "restriction": []},
+            {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []}
         ],
         "models": [
             {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
-            {"id": "md_trenchcleric", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
             {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "upgrades": [{"id": "up_trenchmole", "cost": 10, "cost_id": "ducats"}]},
             {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": []},
-            {"id": "md_combatengineer", "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel","eq_engineerbodyarmour"], "upgrades": []},
+            {"id": "md_combatengineer", "cost": 80, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel","eq_engineerbodyarmour"], "upgrades": []},
             {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]},
-            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"], "upgrades": []},
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit","eq_gasmask","eq_standardarmour"], "upgrades": []},
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": []},
@@ -585,13 +586,13 @@
             {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_musket", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Bayonet Lug"]},
             {"id": "eq_infestedrifle", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Bayonet Lug"]},
-            {"id": "eq_corruptionbelcher", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_putridshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo"]},
-            {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_corruptionbelcher", "cost": 30, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_putridshotgun", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [], "features":["Shield Combo","Bayonet Lug"]},
+            {"id": "eq_gasgrenades", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_parasitegrenade", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_visceracannon", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": []},
+            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_polearm", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_plagueknight"}], "features":["Shield Combo"]},
@@ -606,7 +607,7 @@
             {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_unholytrinket", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
-            {"id": "eq_troopflag", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": []},
+            {"id": "eq_troopflag", "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_fieldshrine", "cost": 2, "cost_id": "glory", "limit": 0, "restriction": []},
             {"id": "eq_cupoffilth", "cost": 2, "cost_id": "glory", "limit": 2, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_locustspitter", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
@@ -623,7 +624,7 @@
             {"id": "md_houndoftheblackgrail", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": [{"id": "up_houndinfection", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_grailthrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_flythrall", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
-            {"id": "md_heraldofbeelzebub", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": [{"id": "up_maddeningbuzz", "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_heraldofbeelzebub", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": [{"id": "up_maddeningbuzz", "cost": 10, "cost_id": "ducats", "limit" : 1}]},
             {"id": "md_amalgam", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_tenderizermaul"], "upgrades": []}
         ]
@@ -867,7 +868,7 @@
          ],
         "equipment": [
             {"id": "eq_blunderbuss", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
-            {"id": "eq_arquebus", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": [], "features" : []},
+            {"id": "eq_arquebus", "cost": 8, "cost_id": "ducats", "limit": 0, "restriction": [], "features" : []},
             {"id": "eq_ophidianrifle", "cost": 25, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_pistol", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_shotgun", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
@@ -878,14 +879,13 @@
             {"id": "eq_heavyflamethrower", "cost": 55, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_tormentorchain", "cost": 3, "cost_id": "glory", "limit": 2, "restriction": []},
             {"id": "eq_trenchknife", "cost": 1, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": [], "features": ["Shield Combo"]},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_polearm", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_greatmaul", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_greataxe", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_tortureinstrument", "cost": 8, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_headtaker", "cost": 20, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_headtaker", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_hellblade", "cost": 15, "cost_id": "ducats", "limit": 3, "restriction": []},
             {"id": "eq_malebranchesword", "cost": 45, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_standardarmour", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
@@ -894,7 +894,7 @@
             {"id": "eq_infernalarmour", "cost":  50, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_combathelmet", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_gasmask", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},            
+            {"id": "eq_shovel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_yokefiend"},{"type": "model", "val": "md_wretched"}]},            
             {"id": "eq_unholytrinket", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_unholyrelic", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_incendiarybullets", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
@@ -949,7 +949,7 @@
             {"id": "md_yokefiend", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_wretched", "cost": 20, "cost_id": "ducats", "limit_min": "Must be outnumbered by DEMONIC models", "limit_max": "Must be outnumbered by DEMONIC models", "equipment": [], "upgrades": []},
             {"id": "md_pitlocust", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": []},
-            {"id": "md_desecratedsaint", "cost": 150, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []}
+            {"id": "md_desecratedsaint", "cost": 145, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
     }
 ]
