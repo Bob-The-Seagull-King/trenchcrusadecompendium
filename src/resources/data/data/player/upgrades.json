@@ -241,7 +241,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Homunculi can Fly as explained in the rules and gains a movement speed of 8”.",
+                "content": "The Homunculus gains a new movement mode: 8”/Flying.",
                 "glossary": []
             }
             ]
@@ -267,8 +267,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Homunculi does not suffer additional BLOOD MARKERs with any damage with keyword GAS or FIRE",
-                "glossary": [{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"}]
+                "content": "Attacks made against the Homunculus that have the Keywords FIRE and/or GAS suffer a -1 DICE penalty to injure it. Also the Homunculus does not suffer additional BLOOD MARKERS from attacks with Keywords FIRE and/or GAS.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"}]
             }
             ]
     },
@@ -293,7 +293,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Homunculi gains the Keyword FIRETEAM along with 1 model of your choice in the Warband.",
+                "content": "The Homunculus gains the Keyword FIRETEAM along with one model of your choice in the Warband. The other model can only form a Fireteam with this Homunculi, not with any other models.",
                 "glossary": [{"val": "FIRETEAM", "id": "gl_fireteam"}]
             }
             ]
@@ -306,7 +306,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Homunculi can buy and wield any weapon allowed in the Iron Sultanate warband list for any non-ELITE warrior or limited to a specific Troop type. They can also carry a Trench Shield. This Formula cannot be combined with the Alchemical Formula Wings. This will apply to human hands Alchemic Formula as well.",
+                "content": "The Homunculus can buy and wield any weapon allowed in the Iron Sultanate warband or House of Wisdom list, although they cannot select ELITE only items, grenades or items limited to specific units (such as Assassins). They can also carry a Trench Shield or a Fire Shield. This will apply to the Additional Arms Formula as well. This Formula cannot be combined with the Alchemical Formula Wings.",
                 "glossary": [{"val": "ELITE", "id": "gl_elite"}]
             }
             ]
@@ -345,8 +345,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Homunculi can perform an additional attack ACTION in Melee or Ranged combat without any penalty. It has 3 hands to carry weapons if combined with Human Hands. In this case the Homunculi can make up to 2 Ranged Attack ACTIONs (if it has sufficient weapons and number of hands to carry them), and up 3 Melee Attack ACTIONs (if armed with 3 1-handed weapons), or 1 Melee Attack ACTION with 2-handed weapon and 1 Melee Attack ACTION with 1-handed weapon.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                "content": "The Homunculus can perform an additional attack ACTION in Melee or Ranged combat without any penalty. Therefore, if making attacks with three melee weapons, only a single weapon would need to be declared as an Off-Hand weapon (suffering the appropriate penalties). It has three hands to carry weapons if combined with Human Hands and may equip weapons and a shield in any combination, as long as it has hands free to do so. In this case the Homunculi can make up to two Ranged Attack ACTIONS (if it has sufficient weapons and number of hands to carry them) and up to three Melee Attack ACTIONS (if armed with three one-handed weapons), or one Melee Attack ACTION with a two-handed weapon and one Melee Attack ACTION with a one-handed weapon.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "ACTIONS", "id": "gl_action"}]
             }
             ]
     },
@@ -371,7 +371,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Enemies suffer -1 DICE to their Melee attacks. Does not affect enemies with the keyword BLACK GRAIL or isn’t a Sniper Priest.",
+                "content": "Enemies suffer -1 DICE to hit the Homunculus in Melee. Does not affect Sniper Priests or enemies with the keyword BLACK GRAIL. Cannot be combined with Hawk Eyes without Two Heads.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
             }
             ]
@@ -384,7 +384,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The eyesight of the Homunculus is based that of a predatory Bird. It can add +1 DICE to its Ranged Attack characteristic.",
+                "content": "The eyesight of the Homunculus is based on that of a predatory bird. It can add +1 DICE to its Ranged Attack characteristic. Cannot be combined with Hypnotic Eyes without Two Heads.",
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
             ]
@@ -410,7 +410,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This Formula greatly enhances the intelligence of the Homunculus. It can now buy and use Equipment from the Sultanate Warband Equipment list as long as it is not limited to ELITE models.",
+                "content": "This Formula greatly enhances the intelligence of the Homunculus and makes it painfully aware of its artificial existence. It can now buy and use Equipment from the Sultanate Warband Armoury as long as it is not limited to ELITE models. Note that one helmet protects a Homunculus with two heads normally and the Two Heads Formula does not allow the purchase of two different kinds of headgear.",
                 "glossary": [{"val": "ELITE", "id": "gl_elite"}]
             }
             ]
@@ -436,8 +436,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to 2 BLOOD MARKERs or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to two BLOOD MARKERS or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing. This training and these tools are an improvement upon the standard Medi-Kit and therefore a model with this Secret cannot carry a Medi-Kit.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
             }
             ]
     },
@@ -449,7 +449,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Alchemist has studied long and hard the sciences of cartography and Geometry. In the beginning of each battle up to 2 models (besides any Alchemists) In the Warband gain the Keyword INFILTRATOR as long as they are on 32mm or a smaller base. In addition, the Warband may re-roll one Exploration dice in the Exploration phase if you wish. The second result stands.",
+                "content": "The Alchemist has studied long and hard the sciences of cartography and Geometry. At the beginning of each battle, immediately before any models are deployed, up to two models in your Warband gain the Keyword INFILTRATOR. This ability cannot affect an Alchemist or a model with a base larger than 32mm. In addition, the Warband may re-roll one Exploration dice in the Exploration phase if you wish. The second result stands.",
                 "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
             }
             ]

@@ -656,7 +656,7 @@
         "equip_type": "1-Handed",
         "range": "Melee",
         "blurb": "Terrifying blades blessed by the hand of a greater devil, these knives are used in Heretic rituals to sacrifice captives to the dark powers of Hell. They simply need to touch their opponents to cause indescribable pain and even the slightest wound often proves fatal from the agony alone. They are risky even to their wielders, as the merest scratch wounds friend and a foe alike.",
-        "modifiers": ["+2 on Injury Results"],
+        "modifiers": ["+2D on Injury Results"],
         "eventtags": {"action": true},
         "description":  [
                             {
@@ -1203,7 +1203,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "The suit counts as Heavy Armour, helmet and gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in Cover, and within 12” of the wearer and the charging model has a viable path to the wearer. If the wearer of the armour is already in melee combat, this power has no effect.",
+                                        "content": "The suit counts as Reinforced Armour, a helmet and gas mask. When an enemy declares a charge, they must charge the model wearing this armour if it is visible, not in Cover and within 12” of the wearer, and the charging model could reach this model without climbing, leaping or crossing dangerous terrain. If the wearer of the armour is already in melee combat, this power has no effect.",
                                         "glossary": []
                                     }
                                 ]
@@ -1242,7 +1242,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Consumable", "val": "gl_consumable"}
+            {"tag_name": "Consumable", "val": "gl_consumable"},
+            {"tag_name": "Heavy", "val": "gl_heavy"}
                 ],
         "category": "equipment",
         "name": "Golden Calf Altar",
@@ -1445,7 +1446,7 @@
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
                             "content": "Ignores armour modifiers and rolls injuries with +1 DICE. If it hits the enemy, the wielder suffers +1 BLOOD MARKER as well.",
-                            "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
                         }
                     ]
                 }
@@ -1855,7 +1856,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Owing to its high accuracy and lethal shot, Punt Gun adds +1 DICE to all rolls to hit and to Injury rolls. You can overcharge it with a shot, giving the weapon BLAST 3” radius. If you do this, the Shooting ACTION with the Punt Gun always ends the shooter’s Activation and causes 1 BLOOD MARKER on the shooter. If a model carrying it does not have Keyword STRONG, another model must be in base contact with the shooter before it can make a Ranged Attack ACTION with the Punt Gun.",
+                            "content": "Owing to its high accuracy and lethal shot, Punt Guns add +1 DICE to all rolls to hit and to injury rolls. Before a model shoots with the Punt Gun, you can overcharge it with shot, giving the weapon a BLAST 3\" radius. If you do this, the Shooting ACTION with the Punt Gun always ends the shooter’s Activation and causes one BLOOD MARKER on the shooter. A model cannot Make a Ranged Attack with the Punt Gun unless it is either STRONG or another friendly model is in base contact with it.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "STRONG", "id": "gl_strong"}]
                         }
                     ]
@@ -1931,7 +1932,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Heavy", "val": "gl_heavy"}
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "MURAD Bombard",
@@ -1947,7 +1949,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the landing 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bombard suffer a Down result due the booming shockwave, but do not take any BLOOD MARKERS or other effects from this attack.",
+                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bombard suffer a Down result due the booming shockwave, but do not incur any BLOOD MARKERS or other effects from this attack.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -2170,7 +2172,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "After the deployment, a model with the Wind Amulet may move up to 3” in any direction, though this move may not take them into melee combat or from the battlefield.",
+                            "content": "After deployment, a model with the Wind Amulet may move up to 3” in any direction, though this move may not take them into melee combat or from the battlefield. You cannot use the Wind Amulet and Shovel effects simultaneously.",
                             "glossary": []
                         }
                     ]
@@ -2240,7 +2242,7 @@
             {"tag_name": "Critical", "val" : "gl_critical"}
                 ],
         "category": "ranged",
-        "name": "Bow of Alumat",
+        "name": "Bow of Alamut",
         "equip_type": "2-Handed",
         "range": "60\"",
         "blurb": "This terrifying double-stringed bow shoots its deadly barbs through both time and space. Its arrows can reach impossible  distances and pass through armour by flickering through time. It leaves behind a temporal slipstream that the Assassin can travel through in an eyeblink. Made from wood taken from trees planted in the skulls of ancient assassins in the Garden of Alamut so that they might  absorb mystic powers of their former owners, these bows are some of the greatest treasures of the Old Man of the Mountain for it is said that only six now remain in his secret armouries.",
@@ -2253,8 +2255,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Ignores Armour. If the Assassin hits a model and causes at least one BLOOD MARKER, the Assassin can instantly move into Melee range with the target as if the Assassin just charged the model, and can therefore use Melee ACTIONS as if they charged the enemy. Note that if the bow takes the target Out of Action, no BLOOD MARKERS are caused and the move cannot be made. Temporal Assassin ability cannot be used with the Bow of Alamut.",
-                            "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                            "content": "Ignores Armour. If the Assassin hits a model and causes at least one BLOOD MARKER, the Assassin may instantly place itself into Melee Combat with that model, if there is a legal space that the Assassin could occupy within 1” of the model, regardless of the distance to the target or any interposing models/obstacles. The Assassin is considered to have charged that model, although it does not count as a Charge ACTION and therefore the Assassin can take a Move ACTION at a later point in the turn, if it hasn’t already. Note that if the bow takes the target Out of Action, no BLOOD MARKERS are inflicted and this movement cannot be made.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]
                 }
@@ -3337,7 +3339,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Gives the model consuming the Elixir Keyword TOUGH for the duration of a single battle.",
+                        "content": "Gives the model consuming the Elixir Keyword TOUGH for the duration of a single battle. It cannot be given to Lions of Jabir, Brazen Bulls or Homunculi.",
                         "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
                     }
                 ]

@@ -120,7 +120,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All models in the Warband ignore movement penalties for any terrain, though they cannot move through any objects/terrain.",
+                                "content": "All models in the Warband ignore movement penalties caused by Difficult Terrain, though they cannot move through any objects/terrain. Dangerous terrain still affects them as normal.",
                                 "glossary":  []
                             }
 
@@ -132,8 +132,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All models in the Trench Ghost Warband are immune to damage from any source that has the Keyword GAS.",
-                                "glossary":  [{"val": "GAS", "id": "gl_gas"}]
+                                "content": "All models in the Trench Ghost Warband do not suffer additional BLOOD MARKERS from attacks with the Keyword GAS.",
+                                "glossary":  [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"}]
                             }
 
                         ]
@@ -238,7 +238,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, you can select one Weapon, suit of armour or piece of equipment type from New Antioch and from Sultanate Equipment lists each. You can acquire this gear exactly as the warband they come from. Any of these items in question must not be already available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign.",
+                                "content": "Many merchants, traders and moneylenders within the Faithful nations are followers of Mammon and secretly supply the Knights of Avarice with their wares. When creating the warband, select one weapon, suit of armour or other piece of equipment from the New Antioch Armoury and one such item from the Iron Sultanate Armoury. You can acquire this gear exactly as the warband they come from. Any of these items in question must not already be available to the Heretic Warband. All the same limitations of the original lists apply, so there is little point in taking an Assassin’s Dagger (for example) since it can be only used by Assassins. These two selected additions are available to your warband throughout the campaign.",
                                 "glossary":  []
                             }
 
@@ -352,7 +352,7 @@
         "removed_equip": ["eq_machinegun","eq_antitankhammer"],
         "removed_model": ["md_castigator","md_trenchpilgrim"],
         "equipment": [
-            {"id": "eq_antitankhammer", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": []},
+            {"id": "eq_antitankhammer", "cost": 35, "cost_id": "ducats", "limit": 2, "restriction": []},
             {"id": "eq_holyiconshield", "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_holyiconarmour", "cost": 30, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"}]}
         ],
@@ -611,7 +611,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Each Alchemist in your Warband can opt to buy one weapon from the Armoury of either New Antioch or Trench Pilgrims. You can acquire these weapons exactly as the warband they come from. Any of these items in question must not be already available to the Iron Sultanate Warband. All the same limitations of the original lists apply. They can be given to any model in your warband. If lost, they must be bought again.",
+                            "content": "When you create this warband, choose two weapons. These weapons must be found in either the Armouries of New Antioch or the Trench Pilgrims. These weapons must not already be present in the Iron Sultanate Armoury. Your Warband may acquire one of each of these weapons, following all the same limitations and costs of the original lists. Only one weapon can be picked from this list. If lost in battle, it can be repurchased by paying the indicated cost.",
                             "glossary":  []
                         }
 
@@ -631,59 +631,24 @@
                                 "content": "",
                                 "subcontent":  [
                                     {
-                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                        "content": "Medicine (15 ducats):",
-                                        "subcontent":  [
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "This Alchemist is a student of Ibn Sina’s School of Medicine. The model is equipped with tools for healing from the House of Wisdom. The Alchemist can take an ACTION with +1 DICE to remove up to 2 BLOOD MARKERs or a single INFECTION MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
-                                                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectinomarker"}]
-                                            }
-                                        ]
+                                        "tags": [{"tag_name": "desc_type", "val": "upgradeclick"}],
+                                        "content": "up_alchemistsecretsmedicine"
                                     },
                                     {
-                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                        "content": "Cartography and Geometry (20 ducats):",
-                                        "subcontent":  [
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "The Alchemist has studied long and hard the sciences of cartography and Geometry. In the beginning of each battle up to 2 models (besides any Alchemists) In the Warband gain the Keyword INFILTRATOR as long as they are on 32mm or a smaller base. In addition, the Warband may re-roll one Exploration dice in the Exploration phase if you wish. The second result stands.",
-                                                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
-                                            }
-                                        ]
+                                        "tags": [{"tag_name": "desc_type", "val": "upgradeclick"}],
+                                        "content": "up_alchemistsecretscartographyandgeometry"
                                     },
                                     {
-                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                        "content": "Secrets of Tawkin (20 ducats):",
-                                        "subcontent":  [
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "The Alchemist has bound their Takwin creature to themselves with unbreakable bonds. If the Alchemist is hit while within 1” of their own Homunculi, you can choose to redirect the hit against the Homunculi instead. Determine the injuries exactly as if the weapon just hit the Homunculi",
-                                                "glossary": []
-                                            }
-                                        ]
+                                        "tags": [{"tag_name": "desc_type", "val": "upgradeclick"}],
+                                        "content": "up_alchemistsecretssecretsoftawkin"
                                     },
                                     {
-                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                        "content": "Chemsitry and Alchemy (25 ducats):",
-                                        "subcontent":  [
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "Before the battle starts but after all models (including INFILTRATORs) are deployed, you may place a rectangular elemental obstacle 2” wide and 6” long. It counts both as Difficult Terrain and Dangerous Terrain, and damage it causes has the Keyword FIRE, GAS or SHRAPNEL (chosen by the player at the start of the Battle). It cannot be placed within 6” of any model or on top of any other terrain.",
-                                                "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
-                                            }
-                                        ]
+                                        "tags": [{"tag_name": "desc_type", "val": "upgradeclick"}],
+                                        "content": "up_alchemistsecretschemistryandalchemy"
                                     },
                                     {
-                                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                        "content": "Philosophy, Poetry, and Theology (20 ducats):",
-                                        "subcontent":  [
-                                            {
-                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                                "content": "The Alchemist is well-versed in the hidden truths of the universe and of the Divine and has a calm and clear mind. The Warband gains +1 DICE to all Morale Rolls, cannot become Shaken, and the Alchemist is immune to the effects of the Keyword FEAR.",
-                                                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "FEAR", "id": "gl_fear"}]
-                                            }
-                                        ]
+                                        "tags": [{"tag_name": "desc_type", "val": "upgradeclick"}],
+                                        "content": "up_alchemistsecretsphilosiphypoetryandtheology"
                                     }
                                 ]
                             }
@@ -695,11 +660,11 @@
         ],
         "removed_rules": [],
         "removed_equip": ["eq_alchemistarmour"],
-        "removed_model": ["md_jabireanalchemist","md_lionsofjabir","md_yuzbasicaptain","md_sultanateassassin","md_janissaries","md_homunculus"],
+        "removed_model": ["md_jabireanalchemist","md_lionsofjabir","md_yuzbasicaptain","md_sultanateassassin","md_janissaries","md_homunculus","md_azebs"],
         "equipment": [
            {"id": "eq_alchemistarmour", "cost": 50, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
            {"id": "eq_elixerofalkhidr", "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": []} ,
-           {"id": "eq_fireshield", "cost": 20, "cost_id": "ducats", "limit": 3, "restriction": []}    
+           {"id": "eq_fireshield", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []}    
         ],
         "models" : [
             {"id": "md_kavass", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_kavassmelee", "cost": 5, "cost_id": "ducats"}]},

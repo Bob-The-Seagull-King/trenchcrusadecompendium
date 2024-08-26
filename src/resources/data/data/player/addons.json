@@ -166,8 +166,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "As a RISKY ACTION the Commando can hide if any piece of scenery the model is touching can block line of sight to any direction, even partially. If successful, enemies cannot charge or target the Commando with a ranged attack, though blast radius weapons can still hit them if aimed at a different target and the Commando is within the blast radius. If after hiding the Death Commando moves in any way, charges or shoots, this effect is cancelled and the enemies can target the Commando as standard.",
-                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+                            "content": "As a RISKY ACTION with +1 DICE the Commando can hide if any piece of scenery the model is touching can block line of sight in any direction, even partially. If successful, enemies cannot target the Commando with ranged attacks or Charges. Weapons with the Keyword BLAST affect the Commando as normal if it is in the radius of the weapon. This effect ends if the Commando moves from its exact position in any way, it Makes a Ranged Attack or an enemy model comes within 1.5” of it.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLAST", "id": "gl_blastx"}]
                         }
                         ]
     },
@@ -338,7 +338,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This wicked infernal weapon as BLAST 3” Keyword. Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
+                "content": " This wicked infernal weapon is treated as a one-handed Ranged weapon with the Keyword BLAST 3\". Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
                 "glossary": [{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "BLAST", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
             },
             {
@@ -365,8 +365,8 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Artillery Witches are not affected by FEAR and attacks with the Keyword GAS cannot damage them.",
-                            "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"}]
+                            "content": "Artillery Witches are not affected by FEAR. Additionally, attacks with the Keyword GAS suffer a -1 DICE penalty to injure the Witch and they do not suffer additional BLOOD MARKERS from the Keyword GAS.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                         ]
     },
@@ -382,7 +382,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This wicked infernal weapon as BLAST 3” Keyword. Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
+                "content": "This wicked infernal weapon is treated as a one-handed Ranged weapon with the Keyword BLAST 3\". Specify a 1x1mm point on the battlefield within 36” that you want to target that the Witch can see. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius. ",
                 "glossary": [{"val": "BLAST 3\"", "id": "gl_blastx"},{"val": "BLAST", "id": "gl_blastx"},{"val": "ACTION", "id": "gl_action"},{"val": "ACTION", "id": "gl_action"}]
             },
             {
@@ -549,8 +549,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Unlike other models, Castigator is allowed to attack friendly models within 1”, and can do this without declaring a charge. If the Castigator takes out a friendly model with such an attack, add +1 DICE per model taken Out of Action by the Castigator to the next Morale check your Warband takes, as such an act of Piety inspires the troops.",
-                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                "content": "Unlike other models, the Castigator is allowed to attack friendly models within 1” with Melee Attacks, and can do this without declaring a Charge. Each time the Castigator takes a friendly model Out of Action with a Melee Attack, set a die aside in a pool as the act of piety inspires the troops. The next time your Warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.",
+                "glossary": [{"val": "+DICE", "id": "gl_plusdice"}]
             }
         ]
     },
@@ -629,7 +629,7 @@
         "tags": [
                 ],
         "faction_id": "fc_trenchpilgrim",
-        "name": "Ressurection",
+        "name": "Resurrection",
         "eventtags": {"trait": true},
         "description":  [
             {
@@ -691,7 +691,7 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "At the start of each of their Activations, any Stigmatic can remove 1 BLOOD MARKER (but not an INFECTION MARKER) from themselves, and convert it into a BLESSING MARKER.",
-                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLESSING MARKERS", "id": "gl_blessingmarker"}]
+                "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLESSING MARKER", "id": "gl_blessingmarker"}]
             }
         ]
     },
@@ -725,8 +725,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Anchorite can take a RISKY ACTION with +3 DICE with its Catherine Wheel in Melee combat as an attack. Due to the enormous weight and the skill of the Shrine Anchorite in inflicting maximum pain, the Catherine Wheel rolls on the Injury table with 3D6 (instead of usual 2D6), adding the all three dice together!",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"}]
+                "content": "The Anchorite Shrine treats the Catherine Wheel as a 1-handed melee weapon that grants a +1 DICE bonus to hit (for a total of +3 DICE due to its Melee Characteristic) and has the Keywords RISKY and HEAVY. Due to the enormous weight and the skill of the Anchorite Shrine in inflicting maximum pain, the Catherine Wheel rolls on the Injury Table with 3D6 (instead of usual 2D6), adding all three dice together!",
+                "glossary": [{"val": "+1 DICE", "id": "gl_riskyaction"},{"val": "HEAVY", "id": "gl_heavy"},{"val": "RISKY", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"}]
             }
         ]
     },
@@ -743,8 +743,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Anchorite may use the Bonebreaker Mace in Melee. This attack is a RISKY ACTION and has +1 DICE for rolling to hit, as well as for any Injury rolls it causes.",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                "content": "The Anchorite Shrine treats the Bonebreaker Mace as a one-handed melee weapon with the Keyword RISKY. The Bonebreaker Mace has a +1 DICE bonus to injure. Because the Bonebreaker Mace is wielded alongside the Catherine Wheel, it is treated as an Off-Hand Weapon and suffers penalties accordingly.",
+                "glossary": [{"val": "RISKY", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
     },
@@ -864,8 +864,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin split itself through time. Choose up to two enemy models within the charging distance from the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may Make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation. .",
-                "glossary": []
+                "content": "After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin ‘split’ itself through time if it has not already taken the Make a Melee Attack ACTION this Activation. Choose up to two enemy models within the charging distance from the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may Make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
     },
@@ -917,8 +917,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "During their Activation, an Sapper can take a RISKY ACTION with +1 DICE. If successful, the Sapper is considered to be in Cover until the model moves. This can only be done on the ground.",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                "content": "During their Activation, a Sapper can take a RISKY ACTION with +1 DICE. If successful, the Sapper is considered to be in Cover until the model moves. This ACTION cannot be used if the model is in Melee combat.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
     },
@@ -934,7 +934,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Any Sapper can deploy up to 6\" away from the Sultanate Deployment zone if they can be deployed this way while touching a piece of scenery. This ability cannot be used if the Scenario does not allow the use of INFILTRATORS.",
+                "content": "When the Sapper is set up during standard deployment, it can be placed up to 6” away from its player’s Deployment Zone. If deployed in this way, it must be in contact with a piece of scenery. This ability cannot be used if the Scenario does not allow the use of INFILTRATORS.",
                 "glossary": [{"val": "INFILTRATORS", "id": "gl_infiltrator"}]
             }
         ]
@@ -951,7 +951,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Created through the Jabirean alchemy, the Lions have no vital organs and they must be dismembered in order to kill them. All injury rolls against the Lion are made with -1 DICE.",
+                "content": "Created through the Jabirean alchemy, the creature has no vital organs and they must be dismembered in order to kill them. All injury rolls against the creature are made with -1 DICE.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]
@@ -1019,7 +1019,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Whenever the Brazen Bull is fighting any enemy model on a 32mm or smaller base in melee that is Down, it can make a single additional Melee Attack ACTION any time during its Activation against one Downed opponent. Resolve the attack as if the Brazen Bull was armed with a Trench Club. This attack Ignores armour as the Brazen Bull stomps their enemies into pulp.",
+                "content": "Once during its Activation, the Brazen Bull may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Brazen Bull was armed with a Trench Club. This attack ignores armour as the Brazen Bull stomps their enemies to a pulp.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
@@ -1036,7 +1036,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If the Homunculi goes Out of Action during battle and is deemed to have been killed in the post-battle sequence, do not remove it from your roster. Instead, you can use 1 Glory Point at any time between battles to bring it back to life.",
+                "content": "If the Homunculus goes Out of Action during battle and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can use 40 ducats at any time between battles to bring it back to life with all its weapons and abilities.",
                 "glossary": []
             }
         ]
@@ -1053,7 +1053,12 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You may apply any Alchemical Formulas to your Homunculi, either during its creation or later during any Post-Battle Sequence as long as you pay the price of each Formula. You can never have more than one Alchemic Formula of the same type unless otherwise specified.",
+                "content": "You may buy any of these Alchemical Formulas to your Homunculus, either during its creation or later during any Post-Battle Sequence as long as you pay the price of each Formula. Once bought they are permanent.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You can never have more than one Alchemical Formula of the same type applied into a single Takwin creature unless otherwise specified.",
                 "glossary": []
             }
         ]

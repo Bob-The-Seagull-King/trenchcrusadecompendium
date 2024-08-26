@@ -266,7 +266,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The War Wolf is encased in nigh-impregnable Tartarus armour reflected in the profile above. In Melee combat the War Wolf can use both the Chainsaw Mouth and Shredding Claws (see below) during the same Activation with no additional penalty for the second attack. You cannot buy any other armour, weapons or equipment for the War Wolf."
+                            "content": "You cannot buy additional equipment, weapons or armour for War Wolves. Each War Wolf is encased in a nigh impregnable suit of Tartarus Armour that is reflected in its profile above. Additionally, each War Wolf has a set of Shredding Claws and a vicious Chainsaw Mouth. These pieces of equipment are built-in and cannot be removed or lost in any way. The weapons are detailed below. The War Wolf may make one attack ACTION with each of these weapons in Melee Combat and may make no other attacks during its Activation (so it can make two attacks per Activation)."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -766,7 +766,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Stigmatic Nuns can be equipped with any melee weapons, armour or equipment from the Trench Pilgrim Equipment List. Nuns may only use pistols and semi-automatic pistols as Ranged Weapons."
+                "content": "Stigmatic Nuns can be equipped with any melee weapons, armour or equipment from the Trench Pilgrim Equipment List. The only Ranged Weapons that Nuns can be equipped with are pistols, automatic pistols and war crosses."
             }
             ],
         "abilities":  [
@@ -792,7 +792,7 @@
         "promotion": 2,
         "movement": [6],
         "ranged": [],
-        "melee": [3,1],
+        "melee": [2],
         "armour": [-3],
         "base": [50],
         "faction_id": "fc_trenchpilgrim",
