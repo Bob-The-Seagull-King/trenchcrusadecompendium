@@ -708,39 +708,43 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
     // Add Abilities to array
     for (i = 0; _model.Model.Object.Abilities.length > i; i++) {
         Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Abilities[i].Content } })
-        DescText = '[9926A6][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
-        if (Ability.description.length == 1) {
-            DescText += '\n' + Ability.description[0].content
-        } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
-            DescText += '\n' + Ability.description[0].content
-            for (n = 0; Ability.description[1].subcontent.length > n; n++) {
-                DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
-                DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
-            }
-        } else
-            for (n = 0; Ability.description.length > n; n++) {
-                DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
-            }
-        AbilitiesSet.push(DescText)
+        if (Ability.description != undefined) {
+            DescText = '[9926A6][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+            if (Ability.description.length == 1) {
+                DescText += '\n' + Ability.description[0].content
+            } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
+                DescText += '\n' + Ability.description[0].content
+                for (n = 0; Ability.description[1].subcontent.length > n; n++) {
+                    DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
+                    DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
+                }
+            } else
+                for (n = 0; Ability.description.length > n; n++) {
+                    DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
+                }
+            AbilitiesSet.push(DescText)
+        }
     }
 
     // Add Integrated Equipment to array
     for (i = 1; _model.Model.Object.Equipment.length > i; i++) {
         Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Equipment[i].Content } })
-        DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
-        if (Ability.description.length == 1) {
-            DescText += '\n' + Ability.description[0].content
-        } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
-            DescText += '\n' + Ability.description[0].content
-            for (n = 0; Ability.description[1].subcontent.length > n; n++) {
-                DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
-                DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
-            }
-        } else
-            for (n = 0; Ability.description.length > n; n++) {
-                DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
-            }
-        EquipmentSet.push(DescText)
+        if (Ability.description != undefined) {
+            DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+            if (Ability.description.length == 1) {
+                DescText += '\n' + Ability.description[0].content
+            } else if (Ability.description.length == 2 && Ability.description[1].tags[0].val == 'list') {
+                DescText += '\n' + Ability.description[0].content
+                for (n = 0; Ability.description[1].subcontent.length > n; n++) {
+                    DescText += '\n' + '+ ' + '[u]' + Ability.description[1].subcontent[n].content + '[/u]'
+                    DescText += ' ' + Ability.description[1].subcontent[n].subcontent[0].content
+                }
+            } else
+                for (n = 0; Ability.description.length > n; n++) {
+                    DescText += '\n' + (Ability.description.length == 1 ? '' : '+ ') + Ability.description[n].content
+                }
+            EquipmentSet.push(DescText)
+        }
     }
 
     // Add upgrade text to array
