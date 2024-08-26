@@ -342,7 +342,8 @@
         "tags": [
             {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
             {"tag_name": "Heavy", "val": "gl_heavy"},
-            {"tag_name": "Grenade", "val": "gl_grenade"}
+            {"tag_name": "Grenade", "val": "gl_grenade"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
         "name": "Grenade Launcher",
@@ -602,7 +603,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Polearms take two hands to use and the model armed with it cannot use any shield. Melee attacks made against this model are made with -1 DICE if the attacking model charged this turn.",
+                                        "content": "Melee attacks made against this model are made with -1 DICE if the attacking model charged this turn.",
                                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -806,7 +807,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Takes always one hand to use in both melee and in ranged combat and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. 2-handed Ranged weapons with ‘Shield Combo’ indicator in the Armoury list of the Warband only take 1 hand to use if the model also carries a Trench Shield."
+                                        "content": "Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. For the purposes of wielding a two-handed weapon with the ‘Shield Combo’ indicator, the Trench Shield does not take a hand to wield but still functions as normal."
                                     }
                                 ]
                             }
@@ -981,6 +982,35 @@
                         ]
     },
     {
+        "id": "eq_dumdumbullets",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"},
+            {"tag_name": "Critical", "val": "gl_critical"}
+                ],
+        "category": "equipment",
+        "name": "Dum-Dum Bullets",
+        "equip_type": null,
+        "range": null,
+        "blurb": "These hollow-point bullets are far more likely to cause fatal wounds than standard ammunition.",
+        "modifiers": null,
+        "eventtags": {"category_ranged": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Before the battle begins, a model may use this item to grant a “rifle” or “pistol” weapon that they are equipped with the CRITICAL keyword until the end of the battle.",
+                                        "glossary": [{"val": "CRITICAL", "id": "gl_critical"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
         "id": "eq_incendiarybullets",
         "type": "Equipment",
         "source": "core",
@@ -1029,7 +1059,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "A model equipped with a Shovel always starts the game in Cover if deployed on ground level, even if placed in open terrain. As soon as the model moves, it is no longer in Cover. It also acts exactly as a Trench Club in Melee, except it requires two hands to use."
+                                        "content": "A model equipped with a Shovel always starts the game in Cover if deployed on ground level, even if placed in open terrain. As soon as the model moves, it is no longer in Cover. A model that has Cover in this way retains the benefit of Cover even if the attacking model has an unobstructed view of it. If a model equipped with a Shovel has two hands free, it can use it in Melee Combat as if it were a Trench Club."
                                     }
                                 ]
                             }
@@ -1499,7 +1529,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Grants -1 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour.",
+                            "content": "Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This shield is effective even against weapons and attacks that would normally ignore armour.",
                             "glossary": [{"val": "", "id": ""}]
                         }
                     ]
@@ -1744,7 +1774,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Before the battle begins, a model may use this item. If it does, injuries rolled against it suffer -1 DICE until the end of the battle, and the model is not affected by FEAR.",
+                            "content": "Before the battle begins, a model may use this item. If it does, injuries rolled against it suffer -1 DICE until the end of the battle and the model is not affected by FEAR.",
                             "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "FEAR", "id": "gl_fear"}]
                         }
                     ]
@@ -2341,8 +2371,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer rolls 2D6 during a change and picks the lowest number. Machine armour cannot be combined with any shield.",
-                            "glossary": []
+                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer rolls D3 for a charge extra distance instead of D6. Machine armour cannot be combined with any shield. Models wearing Machine Armour may have a base size of 40mm if you wish. Treats injury results of Down as a Minor Hit. Note that the model wearing a suit of Machine Armour can still suffer Down from other sources (MURAD Bombard, TOUGH, converting Out of Action into Down etc).",
+                            "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
                         }
                     ]
                 }
@@ -2675,8 +2705,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "If the Great Cannon hits a target but does not take it out of action, the target is pushed back by 1D6” directly away from the shooter. If they hit another model or a solid object, they stop.",
-                            "glossary": []
+                            "content": "Add +2 DICE to all Injury rolls and ignores all armour. If this attack hits its target, but does not take it Out of Action, the target is pushed 1d6” directly away from the attacker, stopping if they hit another model or solid piece of terrain.",
+                            "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"}]
                         }
                     ]
                 }
@@ -2821,8 +2851,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "A model with the Horn of Joshua may take a RISKY ACTION with +1D. If successful, select any piece of terrain of up to 8”x8” size within 12” the model can see (a house, 8” woods, a wall etc. This terrain piece is destroyed and it is removed from the table. Any models inside/touching/on top of this terrain must roll immediately on the Injury Chart. If they are not taken Out of Action they are placed on the ground in their previous spots. If the target is not a trench it is not removed from the table, but the models touching it/inside the Trench all roll on the Injury chart on an 8” length of a Trench. This Trench segment is selected by the player.",
-                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1D", "id": "gl_plusdice"}]
+                            "content": "A model with the Horn of Joshua may take a RISKY ACTION with +1 DICE. If successful, select any piece of terrain of up to 8”x8” size within 12” the model can see (a house, 8” woods, a wall etc. This terrain piece is destroyed and it is removed from the table. Any models inside/touching/on top of this terrain must roll immediately on the Injury Chart. If they are not taken Out of Action they are placed on the ground in their previous spots. If the target is a trench it is not removed from the table, but the models touching it/inside the Trench all roll on the Injury chart on an 8” length of a Trench. This Trench segment is selected by the player using the Horn.",
+                            "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
                 }
@@ -2930,8 +2960,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The model loses its existing arms and gains 4 Melee Attack ACTIONS resolved exactly as if it was armed with 4 trench clubs without off-hand penalty. If all of them hit, and the target is on a 32mm or smaller base, it is immediately ripped apart by Beelzebub’s hateful embrace and removed from the game.",
-                            "glossary": []
+                            "content": "The model loses its own arms but gains 4 Melee Attack ACTIONS resolved exactly as if it was armed with 4 trench clubs without off-hand penalty. If all of them hit, and the target is on a 32mm or smaller base, it is immediately taken Out of Action, regardless of any rules it may have (such as the Keyword TOUGH).",
+                            "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "TOUGH", "id": "gl_tough"}]
                         }
                     ]
                 }
@@ -3066,7 +3096,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The weapon ignores penalties from Long Range. Only usable with Bolt Action Rifles, Automatic Rifles, Semi-automatic rifles, Anti-Materiel Rifles and Sniper Rifles.",
+                        "content": "Negates the penalty for Long Range if the model has not moved during this Activation. Only usable with rifles (i.e. weapons which have the Keyword rifle in their name).",
                         "glossary": []
                     }
                 ]
@@ -3148,7 +3178,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Select a Quarter of the tabletop you are playing. All Ranged ATTACKs within this area, and into it and out of if suffer -1 DICE penalty when rolling to hit.",
+                        "content": "At the beginning of the battle, the model equipped with this smoke screen may deploy it. If they do, one quarter of the battlefield becomes covered in a thick layer of smoke. All Ranged ATTACKs that pass through any part of it suffer -1 DICE to hit.",
                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ATTACKs", "id": "gl_action"}]
                     }
                 ]

@@ -693,8 +693,8 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "In melee, when this model is fighting an enemy on a 40mm or bigger base, then they may add 3 highest dice results together instead of 2 when rolling to hit. If they are rolling with any -DICE, this bonus does not apply.",
-                "glossary": [{"val": "-DICE", "id": "gl_minusdice"}]
+                "content": "When this model makes a Melee Attack ACTION against an enemy model on a 40mm or larger base, they roll 3d6 to hit instead of 2d6, totalling the sum.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
     },
@@ -710,7 +710,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Any enemy model in Melee Combat that is Down has to make a successful ACTION to stand up during their Activation.",
+                "content": "Enemy models in Melee Combat with this model cannot automatically Stand at the start of their Activation.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
@@ -727,8 +727,8 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Take a RISKY ACTION: If successful, during this activation the model causes FEAR and if you have any BLOOD MARKERS you may remove one of them.",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                "content": "As a RISKY ACTION, this model causes FEAR until the end of its Activation and may remove a BLOOD MARKER if it has any.",
+                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "FEAR", "id": "gl_fear"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
             }
         ]
     },
@@ -863,7 +863,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This model may buy at the given cost any 1 Weapon or Armour from the New Antioch Equipment list. No other model in the Warband may use this weapon/armour.",
+                "content": "This model may buy at the given cost any 1 Weapon or Armour from the New Antioch Armoury. No other model in the Warband may use this item.",
                 "glossary": []
             }
         ]
@@ -880,7 +880,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Add +1 DICE to the model’s Melee Attack rolls if the model Charged during the same Activation. In addition, the model suffers no penalty for fighting with an off-hand weapon in Melee.",
+                "content": "During Activations that this model has Charged, it gains +1 Dice to hit with Melee Attacks. Additionally, this model ignores any penalties for using an Off-Hand weapon.",
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -897,7 +897,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The model suffers no penalties for ACTIONS when Down, and when attacking enemies that are down in melee this model adds +1 DICE to Melee Attacks and Injury Rolls.",
+                "content": "This model ignores the penalties to ACTION rolls from being Down. Additionally, this model gains +1 DICE to hit and injure Down enemy models with Melee Attacks.",
                 "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -965,7 +965,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Range or Cover does not affect the Ranged Attacks of this model.",
+                "content": "This model ignores the penalties associated with Cover and Long Range.",
                 "glossary": []
             }
         ]
@@ -982,7 +982,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This model can Fly as described in the core rules.",
+                "content": "If this model has an Infantry Movement characteristic, it gains a Fly Movement characteristic with the same value.",
                 "glossary": []
             }
         ]
@@ -1016,7 +1016,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As a RISKY ACTION this model can change places with another model with 8”.",
+                "content": "As a RISKY ACTION, this model can change places with another model within 8”. Both models are removed from the battlefield and then replaced immediately as possible to the other’s location.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
@@ -1033,7 +1033,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Ranged Attacks suffer -1 DICE penalty when targeting this model.",
+                "content": "Ranged Attacks against this model suffer -1 DICE to hit.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]

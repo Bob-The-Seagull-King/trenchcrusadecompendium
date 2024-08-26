@@ -105,7 +105,7 @@
             {"id": "eq_markofcain", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
             {"id": "eq_armourofcobar", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
             {"id": "eq_tormentorchain", "cost": 3, "cost_id": "glory", "limit": 2, "restriction": [{"type": "purchase", "val": "explore"}]},
-            {"id": "eq_executionersaxe", "cost": 5, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_executionersaxe", "cost": 7, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_demonicauragrenade", "cost": 3, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]}
         ],
         "models": [
@@ -221,7 +221,7 @@
             {"id": "eq_rocketpropelledgrenade", "cost": 2, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_holygrenade", "cost": 2, "cost_id": "glory", "limit": 3, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_donkeysjawbone", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
-            {"id": "eq_hornofjoshua", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_hornofjoshua", "cost": 9, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]},
             {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 1, "restriction": []}
         ],
@@ -484,7 +484,7 @@
             {"id": "eq_bookofbattleprayers", "cost": 7, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
             {"id": "eq_promotion", "cost": 6, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
             {"id": "eq_fieldhospital", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
-            {"id": "eq_resurrectionengine", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
+            {"id": "eq_resurrectionengine", "cost": 10, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_ducalwingedarmour", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_greatbannerofnewantioch", "cost": 12, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 4, "restriction": []},
