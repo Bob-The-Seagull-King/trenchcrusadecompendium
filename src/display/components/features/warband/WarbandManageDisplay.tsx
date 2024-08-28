@@ -9,7 +9,7 @@ import { useGlobalState } from '../../../../utility/globalstate'
 import { ExportDisplayText, ExportDisplayTextBasic } from '../../../../classes/lists/warbandmanagerstatic';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
 import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
@@ -18,12 +18,24 @@ import GenericEditComplexListDisplay from './edit/GenericEditComplexListDisplay'
 import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './edit/GenericEditTextBoxDisplay';
 import GenericPopup from '../../../components/generics/GenericPopup';
+import Button from 'react-bootstrap/esm/Button';
 
 const WarbandManageDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
     const Manager : WarbandManager = props.manager;
     const [theme] = useGlobalState('theme');
+
+    const exportData = () => {
+        const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+            JSON.stringify(WarbandItem, null, 4)
+        )}`;
+        const link = document.createElement("a");
+        link.href = jsonString;
+        link.download = WarbandItem.Name + ".json";
+    
+        link.click();
+      };
     
     const navigate = useNavigate();
 
@@ -35,10 +47,10 @@ const WarbandManageDisplay = (props: any) => {
         return (
             <div className="col-12" >
                 <div className="hovermouse iconandtextbox" onClick={() => NavigateBack("tools/warband/")} style={{width:"fit-content"}}>
-                    <FontAwesomeIcon icon={faAngleLeft} className="pageaccestextsmall" style={{paddingTop:"0.25em"}}/>
-                    <h1 className="pageaccestextsmall">
-                        Return
-                    </h1>
+                    
+                    <Button style={{padding:"0em"}} variant="" onClick={() => exportData()}>
+                        <FontAwesomeIcon icon={faDownload} className="colortc" style={{fontSize:"2em",margin:"0em"}}/>
+                    </Button>
                 </div>
             </div>
         )

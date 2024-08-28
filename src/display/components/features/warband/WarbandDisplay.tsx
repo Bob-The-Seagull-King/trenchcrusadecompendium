@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faClone } from '@fortawesome/free-solid-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandDisplay = (props: any) => {
     const WarbandItem: Warband = props.data;
@@ -29,6 +30,17 @@ const WarbandDisplay = (props: any) => {
         parentView.DuplicateWarband(WarbandItem);
         updateHost();
     }
+
+    const exportData = () => {
+        const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
+            JSON.stringify(WarbandItem, null, 4)
+        )}`;
+        const link = document.createElement("a");
+        link.href = jsonString;
+        link.download = WarbandItem.Name + ".json";
+    
+        link.click();
+      };
 
     useEffect(() => {
         const setContentPackWidth = () => {
@@ -61,6 +73,10 @@ const WarbandDisplay = (props: any) => {
                             <Button style={{padding:"0em"}} variant="" onClick={() => copyContentPack()}>
                                 <FontAwesomeIcon icon={faClone} className="" style={{fontSize:"2em",margin:"0em"}}/>
                             </Button>
+                            <div className="vr packvr"></div>
+                            <Button style={{padding:"0em"}} variant="" onClick={() => exportData()}>
+                                <FontAwesomeIcon icon={faDownload} className="" style={{fontSize:"2em",margin:"0em"}}/>
+                            </Button>
                             </span>
                         </span>
                         <span className="packvrbox">
@@ -90,6 +106,12 @@ const WarbandDisplay = (props: any) => {
                                     </span>
                                     <Button style={{padding:"0em"}} variant="" onClick={() => copyContentPack()}>
                                         <FontAwesomeIcon icon={faClone} className="" style={{fontSize:"2em",margin:"0em"}}/>
+                                    </Button>
+                                    <span className="packvrbox">
+                                        <div className="vr packvr"/>
+                                    </span>
+                                    <Button style={{padding:"0em"}} variant="" onClick={() => exportData()}>
+                                        <FontAwesomeIcon icon={faDownload} className="" style={{fontSize:"2em",margin:"0em"}}/>
                                     </Button>
                                     <span className="packvrbox">
                                         <div className="vr packvr"/>
