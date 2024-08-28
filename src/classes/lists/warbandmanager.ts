@@ -860,6 +860,23 @@ class WarbandManager {
     // ----------------------------------- Warband Creator Functions --------------------------
 
     /**
+     * Given a json, attempt to convert it into a Warband and add it to the roster.
+     * @param _content the json string of the warband
+     * @returns String, empty is successfull, otherwise containing error information.
+     */
+    public ConvertJsonToWarband(_content : string) : string {
+        try {
+            const _initWarband = (JSON.parse(_content) as Warband)
+
+            this.WarbandList.push(_initWarband);
+            this.SetStorage();
+            return "";
+        } catch(e) {
+            return "Invalid file format structure"
+        }
+    }
+
+    /**
      * Creates a new Warband
      * @param _name The name for the new warband
      * @param _faction The faction this warband belongs to

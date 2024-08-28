@@ -13,7 +13,7 @@ import { Warband } from '../../../../classes/lists/Warband';
 import WarbandDisplay from '../../../../display/components/features/warband/WarbandDisplay';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPersonMilitaryRifle } from '@fortawesome/free-solid-svg-icons'
+import { faPersonMilitaryRifle, faFileImport } from '@fortawesome/free-solid-svg-icons'
 
 const WarbandListDisplay = (prop: any) => {
     const Manager : WarbandManager = prop.manager;
@@ -63,6 +63,23 @@ const WarbandListDisplay = (prop: any) => {
         
     }
 
+    function readFileOnUpload(uploadedFile: File | undefined): void {
+        const fileReader = new FileReader();
+        fileReader.onloadend = ()=>{
+           try{
+                const Msg: string = Manager.ConvertJsonToWarband((fileReader.result)? fileReader.result.toString() : "");
+                if (Msg != "") {
+                    runToast("Upload Error: " + Msg);
+                }
+                ItemRecall();
+           }catch(e){
+                console.log("**Not valid JSON file!**");
+            }
+        }
+        if( uploadedFile!== undefined)
+           fileReader.readAsText(uploadedFile);
+    }
+
     function ItemRecall() {
         returnstate(Manager.GetWarbands())
         updateKey(_key+1)
@@ -91,6 +108,7 @@ const WarbandListDisplay = (prop: any) => {
             pauseOnHover
             theme="light" 
             />
+            <input id="pack-upload" style={{display:"none"}} type="file" accept=".json" onChange={(e)=>readFileOnUpload(e.target.files? e.target.files[0] : undefined)} />
 
             <div className="row justify-content-center">
                 <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 col-12">
@@ -111,20 +129,28 @@ const WarbandListDisplay = (prop: any) => {
                                              } } >
                                                     <option key="factionoption">[No Faction Selected]</option>
                                                 {Manager.Factions.map((item) => (
-                                                    <option key="factionoption">{item.Name}</option>
+                                                    <option key={"factionoption"+item.Name}>{item.Name}</option>
                                                 ))}
                                             </Form.Select>
                                         </InputGroup>
                                     </div>
-                                    <div className="col-md-4 col-12">
+                                    <div className="col-md-2 col-6">
                                         <div className="generalbuttonbox" style={{width:"100%",alignItems:"center",height:"4em"}}>
                                             <div style={{display:"flex",width:"fit-content",alignItems:"flex-end"}} onClick={() => NewWarband()} className="hovermouse ">
                                                 <FontAwesomeIcon icon={faPersonMilitaryRifle} className="pageaccestext"/>
                                                 <h1 className="pageaccestext" style={{whiteSpace:"nowrap"}}>
-                                                    Create Warband
+                                                    Create
                                                 </h1>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="col-md-2 col-6">
+                                        <label htmlFor="pack-upload" className="generalbuttonbox hovermouse">
+                                            <FontAwesomeIcon icon={faFileImport} className="pageaccestext"/>
+                                            <h1 className="pageaccestext">
+                                                Upload
+                                            </h1>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
