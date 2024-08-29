@@ -542,19 +542,27 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_assassinsdagger"],
+        "removed_equip": ["eq_flamecannon", "eq_muradbombard", "eq_sultanategrandcannon", "eq_titanzulfiqar"],
         "removed_model": ["md_yuzbasicaptain","md_jabireanalchemist","md_lionsofjabir","md_janissaries","md_brazenbull","md_sultanateassassin"],
         "equipment": [
-            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
-            {"id": "eq_bowofalumat", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
-            {"id": "eq_hashashinleaf", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_assassinsdagger", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
+            {"id": "eq_goldenkhanjar",              "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
+            {"id": "eq_bowofalumat",                "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
+            {"id": "eq_hashashinleaf",              "cost": 5,  "cost_id": "ducats", "limit": 0, "restriction": []}
         ],
         "models" : [
-            {"id": "md_sultanateassassin", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationsecretpaths", "cost": 10, "cost_id": "ducats"}]},
-            {"id": "md_sultanatemasterassassin", "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationthunderboltofalumat", "cost": 20, "cost_id": "ducats"},{"id": "up_artofassassinationmirageoftime", "cost": 15, "cost_id": "ducats"},{"id": "up_artofassassinationsecretpaths", "cost": 10, "cost_id": "ducats"}]},
-            {"id": "md_assassinacolyte", "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": [{"id": "up_azebskirmisher", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_dervish", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": []}
+            {"id": "md_sultanatemasterassassin",    "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [
+                {"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},
+                {"id": "up_artofassassinationthunderboltofalumat",  "cost": 20, "cost_id": "ducats"},
+                {"id": "up_artofassassinationmirageoftime",         "cost": 15, "cost_id": "ducats"},
+                {"id": "up_artofassassinationsecretpaths",          "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_sultanateassassin",          "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [
+                {"id": "up_artofassassinationhallucinogendisguise", "cost": 15, "cost_id": "ducats"},
+                {"id": "up_artofassassinationthunderboltofalumat",  "cost": 20, "cost_id": "ducats"},
+                {"id": "up_artofassassinationmirageoftime",         "cost": 15, "cost_id": "ducats"},
+                {"id": "up_artofassassinationsecretpaths",          "cost": 10, "cost_id": "ducats"}]},
+            {"id": "md_assassinacolyte",            "cost": 35, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": [
+                {"id": "up_azebskirmisher",                         "cost": 5,  "cost_id": "ducats"}]},
+            {"id": "md_dervish",                    "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": []}
         ]
     },
     {
@@ -659,19 +667,41 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_alchemistarmour"],
-        "removed_model": ["md_jabireanalchemist","md_lionsofjabir","md_yuzbasicaptain","md_sultanateassassin","md_janissaries","md_homunculus","md_azebs"],
+        "removed_equip": ["eq_alchemistarmour", "eq_assassinsdagger"],
+        "removed_model": ["md_yuzbasicaptain", "md_jabireanalchemist", "md_homunculus", "md_sultanateassassin", "md_azebs", "md_lionsofjabir", "md_janissaries"],
         "equipment": [
-           {"id": "eq_alchemistarmour", "cost": 50, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
-           {"id": "eq_elixerofalkhidr", "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": []} ,
-           {"id": "eq_fireshield", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []}    
+           {"id": "eq_alchemistarmour",     "cost": 50, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
+           {"id": "eq_elixerofalkhidr",     "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": []} ,
+           {"id": "eq_fireshield",          "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": []}    
         ],
         "models" : [
-            {"id": "md_kavass", "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_kavassmelee", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_faris", "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6, "equipment": [], "upgrades": []},
-            {"id": "md_homunculus", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": [], "upgrades": [{"id": "up_homunculuswings", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculuselementalresistance", "cost": 40, "cost_id": "ducats"},{"id": "up_homunculusmassivesize", "cost": 30, "cost_id": "ducats"},{"id": "up_homunculusenslavedmind", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculushumanhands", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusinhumanstrength", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusterrifyingappearance", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusadditionalarm", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculustwoheads", "cost": 5, "cost_id": "ducats"},{"id": "up_homunculushypnoticeyes", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculushawkeyes", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculusstartlingspeed", "cost": 10, "cost_id": "ducats"},{"id": "up_homunculussealofsolomon", "cost": 15, "cost_id": "ducats"},{"id": "up_homunculusgargantuansize", "cost": 20, "cost_id": "ducats"},{"id": "up_homunculusregenerativetissue", "cost": 20, "cost_id": "ducats"}]},
-            {"id": "md_jabireanalchemist", "cost": 55, "cost_id": "ducats", "limit_min": 1, "limit_max": 2, "equipment": [], "upgrades": [{"id": "up_alchemistsecretsmedicine", "cost": 15, "cost_id": "ducats"},{"id": "up_alchemistsecretscartographyandgeometry", "cost":20, "cost_id": "ducats"},{"id": "up_alchemistsecretssecretsoftawkin", "cost": 20, "cost_id": "ducats"},{"id": "up_alchemistsecretschemistryandalchemy", "cost": 25, "cost_id": "ducats"},{"id": "up_alchemistsecretsphilosiphypoetryandtheology", "cost": 20, "cost_id": "ducats"}]},
-            {"id": "md_lionsofjabir", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": []}
+
+            {"id": "md_jabireanalchemist",  "cost": 55, "cost_id": "ducats", "limit_min": 1, "limit_max": 2, "equipment": [], "upgrades": [
+                {"id": "up_alchemistsecretsmedicine",                       "cost": 15, "cost_id": "ducats"},
+                {"id": "up_alchemistsecretscartographyandgeometry",         "cost": 20, "cost_id": "ducats"},
+                {"id": "up_alchemistsecretssecretsoftawkin",                "cost": 20, "cost_id": "ducats"},
+                {"id": "up_alchemistsecretschemistryandalchemy",            "cost": 25, "cost_id": "ducats"},
+                {"id": "up_alchemistsecretsphilosiphypoetryandtheology",    "cost": 20, "cost_id": "ducats"}]},
+            {"id": "md_kavass",             "cost": 25, "cost_id": "ducats", "limit_min": 0, "limit_max": "3 Upgraded, ∞ Un-upgraded", "equipment": [], "upgrades": [
+                {"id": "up_kavassmelee",                    "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_faris",              "cost": 55, "cost_id": "ducats", "limit_min": 0, "limit_max": 6, "equipment": [], "upgrades": []},
+            {"id": "md_homunculus",         "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": "1 per Alchemist", "equipment": [], "upgrades": [
+                {"id": "up_homunculuswings",                "cost": 30, "cost_id": "ducats"},
+                {"id": "up_homunculuselementalresistance",  "cost": 40, "cost_id": "ducats"},
+                {"id": "up_homunculusmassivesize",          "cost": 30, "cost_id": "ducats"},
+                {"id": "up_homunculusenslavedmind",         "cost": 10, "cost_id": "ducats"},
+                {"id": "up_homunculushumanhands",           "cost": 10, "cost_id": "ducats"},
+                {"id": "up_homunculusinhumanstrength",      "cost": 15, "cost_id": "ducats"},
+                {"id": "up_homunculusterrifyingappearance", "cost": 10, "cost_id": "ducats"},
+                {"id": "up_homunculusadditionalarm",        "cost": 15, "cost_id": "ducats"},
+                {"id": "up_homunculustwoheads",             "cost": 5,  "cost_id": "ducats"},
+                {"id": "up_homunculushypnoticeyes",         "cost": 15, "cost_id": "ducats"},
+                {"id": "up_homunculushawkeyes",             "cost": 10, "cost_id": "ducats"},
+                {"id": "up_homunculusstartlingspeed",       "cost": 10, "cost_id": "ducats"},
+                {"id": "up_homunculussealofsolomon",        "cost": 15, "cost_id": "ducats"},
+                {"id": "up_homunculusgargantuansize",       "cost": 20, "cost_id": "ducats"},
+                {"id": "up_homunculusregenerativetissue",   "cost": 30, "cost_id": "ducats"}]},
+            {"id": "md_lionsofjabir",        "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": [], "upgrades": []}
         ]
     },
     {

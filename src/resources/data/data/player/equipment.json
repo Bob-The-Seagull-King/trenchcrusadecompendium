@@ -1102,7 +1102,7 @@
         "name": "Engineer Body Armour",
         "equip_type": null,
         "range": null,
-        "blurb": "Equipped with close combat weaponry, and steel body armour. Casualties are extremely high in the combat engineer units, but they consider it an honour to fight and die for New Antioch and the Church.",
+        "blurb": null,
         "modifiers": null,
         "eventtags": {"trait": true, "armour": -2},
         "description":  [
