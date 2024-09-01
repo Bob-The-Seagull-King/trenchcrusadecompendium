@@ -2003,6 +2003,45 @@
         ]
     },
     {
+        "id": "ab_darkblessing",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Dark Blessing",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": " If a Wretch is taken Out of Action in battle, one of your Model with Keywords HERETIC and ELITE gains 1 BLESSINGS MARKER.",
+                "glossary": [
+                    {"val": "HERETIC", "id": "gl_heretic"},
+                    {"val": "ELITE", "id": "gl_elite"},
+                    {"val": "BLESSINGS MARKER", "id": "gl_blessingmarker"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_chattel",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Chattel",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Wretched can be sold at any time for their full ducat value between battles. Note that their weapons, armour and equipment still only fetch half price.",
+                "glossary": [
+                ]
+            }
+        ]
+    },
+    {
         "id": "ab_demonicaura",
         "type": "Addon",
         "source": "core",

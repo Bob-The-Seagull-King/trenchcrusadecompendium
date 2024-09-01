@@ -3330,6 +3330,66 @@
         ]
     },
     {
+        "id": "md_wretchedheretic",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "promotion": 2,
+        "movement": [6],
+        "ranged": [-1],
+        "melee": [-1],
+        "armour": [0],
+        "base": [25],
+        "team":"hell",
+        "faction_id": "fc_hereticlegion",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Wretched",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Many unfortunate people fall into the hands of the Heretic Warbands, either during one of their many raids or battles, or purchased from the slave markets within their own domains. Some are foolhardy adventurers who travel into the domains of the damned and are caught by their watchful patrols."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Their lot is grim and terrible, as they are worked to death in the factories of Sixty-Six Lords, butchered for meat, or worst of all, sold or offered to the agents of the Court of the Seven-headed Serpent to be used as raw power for Goetic Spells.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Yet one path to freedom exists: they can volunteer to serve in the Legions as the lowest of low, the most disposable of penal troops. For the law of Hell is clear: those who rebel against God can gain their freedom if they are deemed to do sufficiently great deeds. Thus it is no wonder that many Heretic Warbands drive swarms of the Wretched ahead of them to blunt and slow down the enemy assaults.",
+                "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Wretched are branded with cursed flesh-eating tattoos as a safeguard and heavily drugged to degrade and dull their will, while still leaving their aggression intact. Heretic elites discard their lives carelessly, as the sacrifice of their life on battlefield counts as a virtuous deed which will be rewarded by their Patrons.",
+                "glossary": []
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Wretched can be equipped with any melee weapon, armour or equipment from the Heretic Armoury List. None of their weapons, armour or equipment can cost more than 10 ducats each. Every Wretched must be equipped with at least one weapon.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_lawofhell"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_darkblessing"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_chattel"
+            }
+        ]
+    },
+    {
         "id": "md_pitlocust",
         "type": "Model",
         "source": "core",

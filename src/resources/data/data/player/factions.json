@@ -116,6 +116,7 @@
             {"id": "md_anointedheavyinfantry", "cost": 95, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": ["eq_reinforcedarmour","eq_infernalbrandmark"], "upgrades": []},
             {"id": "md_warwolfassaultbeast", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_artillerywitch", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_wretchedheretic", "cost": 25, "cost_id": "ducats", "limit_min": "Must be outnumbered by HERETIC models", "limit_max": "Must be outnumbered by HERETIC models", "equipment": [], "upgrades": []},
             {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_swordaxe","eq_swordaxe"], "upgrades": []},
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
