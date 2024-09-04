@@ -21,7 +21,7 @@ import GenericEditTextDisplay from './GenericEditTextDisplay';
 import GenericEditTextBoxDisplay from './GenericEditTextBoxDisplay';
 import GenericPopup from '../../../../components/generics/GenericPopup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare, faSquareCaretUp, faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/esm/Modal';
 import ItemMemberExpandedDisplay from './ItemMemberExpandedDisplay';
 
@@ -79,6 +79,12 @@ const ItemMemberDisplay = (props: any) => {
         UpdateFunction();
     }
 
+    // Move a unit up or down in the list
+    function SwapUnits(_index : number, _newIndex : number) {
+        Manager.SwapWarbandMembers(WarbandItem, _index, _newIndex);
+        UpdateFunction();
+    }
+
     // Return the basic information of the member
     function returnStats() {
         return (
@@ -90,6 +96,7 @@ const ItemMemberDisplay = (props: any) => {
                         <div className="statbody">
                             <GenericPanel titlename={WarbandMember.Model.Object.Name} d_colour={WarbandMember.Model.Object.Team} d_name={WarbandMember.Model.Object.Name} d_type={""} d_method={() => <ModelDisplay data={WarbandMember.Model.Object}/>}/>      
                         </div>
+                        
                         <div className="verticalspacer"/>
                     </div>
                     <div className="col-md-3 col-6">
@@ -141,8 +148,30 @@ const ItemMemberDisplay = (props: any) => {
                 <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
                     <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'}/>
                     <div className="row float-end">
-                        <div className='col-12 float-end'>
-                            <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em",paddingLeft:"0.5em"}}  onClick={() => handleShow()}/>                        
+                        <div className='col-4'>
+                            <div style={{}}>
+                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) > 0 &&
+                            <FontAwesomeIcon icon={faSquareCaretUp} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)-1)}/>                        
+                            }
+                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) <= 0 &&
+                            <FontAwesomeIcon icon={faSquareCaretUp} className="subcolorgrey" style={{fontSize:"0.75em"}} />                        
+                            }
+                            </div>
+                        </div>
+                        <div className='col-4'>
+                            <div style={{}}>                                
+                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) < (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
+                            <FontAwesomeIcon icon={faSquareCaretDown} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)+1)}/>             
+                            } 
+                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) >= (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
+                                <FontAwesomeIcon icon={faSquareCaretDown} className="subcolorgrey" style={{fontSize:"0.75em"}}  />             
+                            } 
+                            </div>         
+                        </div>                        
+                        <div className='col-4'>
+                            <div style={{}}>
+                            <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShow()}/>          
+                            </div>              
                         </div>
                     </div>
                 </h1>

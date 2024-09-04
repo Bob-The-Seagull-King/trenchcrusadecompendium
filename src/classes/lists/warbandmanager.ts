@@ -1026,6 +1026,15 @@ class WarbandManager {
         _warband.DucatCost = TotalCostDucats(_warband);
         _warband.GloryCost = TotalCostGlory(_warband);
     }
+
+    public SwapWarbandMembers(_warband : Warband, _index : number, _newindex : number) {
+        const MemberArray = _warband.Members.slice();
+        [MemberArray[_index], MemberArray[_newindex]] = [MemberArray[_newindex], MemberArray[_index]]
+
+        _warband.Members = MemberArray;
+
+        this.SetStorage();
+    }
 }
 
 export {WarbandManager}
