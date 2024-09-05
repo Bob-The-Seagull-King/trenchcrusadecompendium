@@ -781,23 +781,21 @@
         "removed_rules": [],
         "removed_equip": [],
         "removed_model": ["md_trenchcleric","md_lieutenant","md_yeoman","md_shocktroopers","md_combatengineer","md_mechanisedheavyinfantry","md_combatmedic","md_wardog","md_guarddog","md_mercydog","md_communicantantitankhunter","md_mendelistammomonk","md_observer"],
-        "equipment": [
-            {"id": "eq_goldenkhanjar", "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]}
-        ],
+        "equipment": [],
         "models" : [
-            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
-            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
-            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_combatengineer", "cost": 80, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel","eq_engineerbodyarmour"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_mechanisedheavyinfantry", "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": [{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"},{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
-            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]}
+            {"id": "md_lieutenant",                 "cost": 70, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_trenchcleric",               "cost": 60, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_yeoman",                     "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"],                                                           "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_shocktroopers",              "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [],                                                                               "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_combatengineer",             "cost": 80, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_shovel","eq_engineerbodyarmour"],                                            "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mechanisedheavyinfantry",    "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"],                                                          "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"},{"id": "up_machinearmour", "cost": 15, "cost_id": "ducats"}]},
+            {"id": "md_combatmedic",                "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit"],                                                 "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_wardog",                     "cost":  1, "cost_id": "glory",  "limit_min": 0, "limit_max": 0, "equipment": [],                                                                               "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_guarddog",                   "cost":  2, "cost_id": "glory",  "limit_min": 0, "limit_max": 0, "equipment": [],                                                                               "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mercydog",                   "cost":  2, "cost_id": "glory",  "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"],                                                                   "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_communicantantitankhunter",  "cost":  5, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"],       "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_mendelistammomonk",          "cost":  3, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"],                                                                   "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_observer",                   "cost":  5, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"],   "upgrades": [{"id": "up_swissguard", "cost": 5, "cost_id": "ducats"}]}
         ]
     }  ,
     {
