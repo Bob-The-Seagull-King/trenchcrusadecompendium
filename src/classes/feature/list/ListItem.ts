@@ -9,6 +9,7 @@ import { IDescriptionItemData } from '../../../classes/DescriptionItem';
 interface IListItem extends ITrenchCrusadeItemData {
    roll_start : number | string,
    roll_end : number | string,
+   scar? : number,
    description: IDescriptionItemData[],
    eventtags : {[_name : string] : any}
 }
@@ -22,6 +23,7 @@ class ListItem extends TrenchCrusadeItem {
     public readonly RollEnd;
     public readonly Description;
     public readonly EventTags;
+    public readonly Scar;
 
     public constructor(data: IListItem)
     {
@@ -30,6 +32,7 @@ class ListItem extends TrenchCrusadeItem {
         this.RollStart = data.roll_start;
         this.RollEnd = data.roll_end;
         this.EventTags = data.eventtags;
+        this.Scar = data.scar ? data.scar : 0;
         
         this.Description = DescriptionFactory(data.description);
     }

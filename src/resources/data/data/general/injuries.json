@@ -9,6 +9,7 @@
         "name": "Dead",
         "roll_start": 11,
         "roll_end": 11,
+        "scar": 3,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -27,6 +28,7 @@
         "name": "Captured",
         "roll_start": 12,
         "roll_end": 12,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -45,6 +47,7 @@
         "name": "Severe Nerve Damage",
         "roll_start": 13,
         "roll_end": 13,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -63,6 +66,7 @@
         "name": "Hand Wound",
         "roll_start": 14,
         "roll_end": 14,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -81,6 +85,7 @@
         "name": "Lost An Eye",
         "roll_start": 15,
         "roll_end": 15,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -99,6 +104,7 @@
         "name": "Check Wound",
         "roll_start": 16,
         "roll_end": 16,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -117,6 +123,7 @@
         "name": "Insomniac",
         "roll_start": 21,
         "roll_end": 21,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -135,6 +142,7 @@
         "name": "Head Wound",
         "roll_start": 22,
         "roll_end": 22,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -153,6 +161,7 @@
         "name": "Shell-shocked",
         "roll_start": 23,
         "roll_end": 23,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -171,6 +180,7 @@
         "name": "Dark Memory",
         "roll_start": 24,
         "roll_end": 24,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -189,6 +199,7 @@
         "name": "Paranoid",
         "roll_start": 25,
         "roll_end": 25,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -207,6 +218,7 @@
         "name": "Lost Arm",
         "roll_start": 26,
         "roll_end": 26,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -225,6 +237,7 @@
         "name": "Leg Wound",
         "roll_start": 31,
         "roll_end": 31,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -243,6 +256,7 @@
         "name": "Expensive Treatment",
         "roll_start": 32,
         "roll_end": 32,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -261,6 +275,7 @@
         "name": "Possessed",
         "roll_start": 33,
         "roll_end": 33,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -279,6 +294,7 @@
         "name": "Muscle Damage",
         "roll_start": 34,
         "roll_end": 34,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -297,6 +313,7 @@
         "name": "Minor Wound",
         "roll_start": 35,
         "roll_end": 35,
+        "scar": 1,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -315,6 +332,7 @@
         "name": "Full Recovery",
         "roll_start": 36,
         "roll_end": 62,
+        "scar": 0,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -333,6 +351,7 @@
         "name": "Hardened",
         "roll_start": 63,
         "roll_end": 63,
+        "scar": 0,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -351,6 +370,7 @@
         "name": "Bitter Lessons",
         "roll_start": 64,
         "roll_end": 64,
+        "scar": 0,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -369,6 +389,7 @@
         "name": "Robbed",
         "roll_start": 65,
         "roll_end": 65,
+        "scar": 0,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -387,6 +408,7 @@
         "name": "Facial Scar",
         "roll_start": 66,
         "roll_end": 66,
+        "scar": 0,
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],

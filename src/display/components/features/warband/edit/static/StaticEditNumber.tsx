@@ -43,7 +43,11 @@ export const EditNumberDataDex : EditNumberDataTable = {
             return 0;
         },
         returnDisplayValue (_manager : WarbandManager, _warband : Warband | null, _member? : WarbandMember | null) {
-            return ( <span>{"Scars : " + ((_member)? _member.Injuries.length : "0") + "/" + ((_member)? _member.Scars : "0")}</span>)
+            let scars = 0
+            for (let i = 0; i < ((_member)? _member.Injuries.length : 0); i++) {
+                scars += (_member)?.Injuries[i].Scar ? (_member)?.Injuries[i].Scar : 0
+            }
+            return ( <span>{"Scars : " + scars + "/" + ((_member)? _member.Scars : "0")}</span>)
         },
         returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_member) {return _member.Elite}
