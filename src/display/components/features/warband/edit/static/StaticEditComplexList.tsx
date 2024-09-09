@@ -54,7 +54,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name  + " (" + _item.Cost + " " + _item.CostID + ")" + ((_item.Limit > 0)? " (Limit " + _item.Limit + ")" : "") : _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -200,7 +200,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name  + " (" + _item.Cost + " " + _item.CostID + ")"  + ((_item.LimitMax > 0)? " (Count " + ((_item.LimitMin === _item.LimitMax)? _item.LimitMin: _item.LimitMin + "-" + _item.LimitMax) + ")" : "") : _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -231,17 +231,6 @@ export const EditListDataDex : EditListDataTable = {
                      ))}
                 </> 
             )
-
-            /**
-             * 
-             * {_item[item].map((var : any) => ( 
-                                <>
-                                <div className="verticalspacerbig"/>
-                                <ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/>
-                                </>}
-                             ))}
-                    
-             */
         },
         returnItemData (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             if ((_filter['Restricted'] === true) && (_warband)) {
@@ -338,7 +327,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name : _item.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={(_item.Object)? _item.Object.ID : _item.ID}>{(_item.Object)? _item.Object.Name  + " (" + _item.Cost + " " + _item.CostID + ")" + ((_item.Limit > 0)? " (Limit " + _item.Limit + ")" : ""): _item.Name}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
@@ -557,7 +546,7 @@ export const EditListDataDex : EditListDataTable = {
         displayOptions (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filters : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             return (
                 <>
-                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option> } 
+                    {(_filters['Restricted'] === true) && <option key={"modeloption"} value={_item.ID}>{_item.Name + " (" + _item.Cost + " " + _item.CostID + ")"+ ((_item.Limit > 0)? " (Limit " + _item.Limit + ")" : "")}</option> } 
                     {(_filters['Restricted'] === false) && <option key={"modeloption"} value={_item.ID}>{_item.Name}</option>}
                 </>
             )
