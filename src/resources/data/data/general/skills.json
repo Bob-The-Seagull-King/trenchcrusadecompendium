@@ -62,7 +62,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This model gains +1 DICE to Hit and Injury rolls if the model is touching a piece of terrain.",
+                "content": "This model gains +1 DICE to Melee Hit and Injury rolls if the model is touching a piece of terrain.",
                 "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
