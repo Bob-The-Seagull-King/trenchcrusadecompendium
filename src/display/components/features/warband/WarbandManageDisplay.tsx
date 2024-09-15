@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
-import WarbandEditBankDisplay from './edit/WarbandEditBankDisplay';
+import { WarbandEditBankDisplay, WarbandEditBankDisplaySimple } from './edit/WarbandEditBankDisplay';
 import GenericEditListDisplay from './edit/GenericEditListDisplay';
 import GenericEditComplexListDisplay from './edit/GenericEditComplexListDisplay';
 import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
@@ -69,7 +69,11 @@ const WarbandManageDisplay = (props: any) => {
                         </div>
                         <div className="row">
                             <div className="verticalspacer"/>
-                            <WarbandEditBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'ducats'}/>
+                            <WarbandEditBankDisplaySimple data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'ducats'}/>
+                        </div>
+                        <div className="row">
+                            <div className="verticalspacer"/>
+                            <WarbandEditBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'paychest'}/>
                         </div>
                         <div className="row">
                             <div className="verticalspacerbig"/>

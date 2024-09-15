@@ -61,8 +61,8 @@ export const EditNumberDataDex : EditNumberDataTable = {
             close();            
         }
     },
-    ducatstotal : {
-        title      : 'Update Total Ducats',
+    ducats : {
+        title: 'Update Total Ducats Threshold',
         returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_warband) { return _warband.DucatTotal }
             return 0;          
@@ -81,7 +81,7 @@ export const EditNumberDataDex : EditNumberDataTable = {
             close()
         }
     },
-    ducatslost : {
+    paychestlost : {
         title      : 'Update Lost Ducats',
         returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_warband) { return _warband.DucatLost }
@@ -96,6 +96,26 @@ export const EditNumberDataDex : EditNumberDataTable = {
         updateNumber (_manager : WarbandManager, _warband : Warband | null, itemName : number, close : any, update: any, _member? : WarbandMember | null) {
             if (_warband) {
                 _warband.DucatLost = itemName;
+                update()
+            }
+            close()
+        }
+    },
+    paychesttotal : {
+        title      : 'Update Ducats in Pay Chest',
+        returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_warband) { return _warband.PayChest }
+            return 0;          
+        },
+        returnDisplayValue (_manager : WarbandManager, _warband : Warband | null, _member? : WarbandMember | null) {
+            return ( <span>{(_warband)? (_warband.PayChest + " Ducats") : "0 Ducats"}</span>)    
+        },
+        returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
+            return true;
+        },
+        updateNumber (_manager : WarbandManager, _warband : Warband | null, itemName : number, close : any, update: any, _member? : WarbandMember | null) {
+            if (_warband) {
+                _warband.PayChest = itemName;
                 update()
             }
             close()
