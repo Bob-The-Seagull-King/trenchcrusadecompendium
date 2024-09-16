@@ -38,7 +38,7 @@ export interface EditListDataTable {[moveid: Lowercase<string>]: EditListType}
 
 export const EditListDataDex : EditListDataTable = {
     warbandequipment: {
-        title      : 'Add To The Armoury',
+        title: 'Add To The Armoury',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_warband) { return _warband.Armoury; }
             return []
@@ -133,6 +133,9 @@ export const EditListDataDex : EditListDataTable = {
         },
         addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
             if (_warband) {
+                if (_cost.type == "ducats") {
+                    _warband.PayChest -= Math.floor(_cost.value)
+                }
                 const Result = _manager.NewEquipmentForWarband(_warband, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
@@ -161,7 +164,9 @@ export const EditListDataDex : EditListDataTable = {
             if (_warband) {
                 if (_item.CostType == "ducats") {
                     _warband.DucatLost += _item.Cost;
-                } else { _warband.GloryLost += _item.Cost; }
+                } else {
+                    _warband.GloryLost += _item.Cost;
+                }
                 _manager.DeleteEquipmentFromWarband(_item, _warband)
                 update()
             }
@@ -169,14 +174,20 @@ export const EditListDataDex : EditListDataTable = {
         sellItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband) {
                 if (_item.CostType == "ducats") {
+                    _warband.PayChest += Math.floor(_item.Cost * 0.5);
                     _warband.DucatLost += Math.floor(_item.Cost * 0.5);
-                } else { _warband.GloryLost += Math.floor(_item.Cost * 0.5) }
+                } else {
+                    _warband.GloryLost += Math.floor(_item.Cost * 0.5)
+                }
                 _manager.DeleteEquipmentFromWarband(_item, _warband)
                 update()
             }
         },
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband) {
+                if (_item.CostType == "ducats") {
+                    _warband.PayChest += Math.floor(_item.Cost);
+                }
                 _manager.DeleteEquipmentFromWarband(_item, _warband)
                 update()
             }
@@ -184,7 +195,7 @@ export const EditListDataDex : EditListDataTable = {
 
     },
     warbandmember: {
-        title      : 'Add New Warrior',
+        title: 'Add New Warrior',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_warband) { return [{"Elite" : _warband.Members.filter(x => x.Elite === true), "Infantry" : _warband.Members.filter(x => x.Elite === false)}]; }
             return []
@@ -270,6 +281,9 @@ export const EditListDataDex : EditListDataTable = {
         },
         addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
             if (_warband) {
+                if (_cost.type == "ducats") {
+                    _warband.PayChest -= Math.floor(_cost.value)
+                }
                 const Result = _manager.NewMember(_warband, "", itemName, _cost.value.toString(), _cost.type);
                 update()
             }
@@ -304,6 +318,7 @@ export const EditListDataDex : EditListDataTable = {
         },
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband) {
+                _warband.PayChest +=  Math.floor(parseInt(GetDucatCost(_item)));
                 _manager.DeleteModelFromWarband(_item, _warband)
                 update()
             }
@@ -405,9 +420,10 @@ export const EditListDataDex : EditListDataTable = {
             } else { return {type: _item.CostID, value: _item.Cost} }
         },
         addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
-            
-            
             if (_warband && _member) {
+                if (_cost.type == "ducats") {
+                    _warband.PayChest -= Math.floor(_cost.value)
+                }
                 const Result = _manager.NewEquipmentForMember(_member, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
@@ -495,8 +511,10 @@ export const EditListDataDex : EditListDataTable = {
         tossItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
                 if (_item.CostType == "ducats") {
-                    _warband.DucatLost += _item.Cost;
-                } else { _warband.GloryLost += _item.Cost; }
+                    _warband.DucatLost += _item.Cost
+                } else {
+                    _warband.GloryLost += _item.Cost
+                }
                 _manager.DeleteEquipmentFromModel(_item, _member, _warband)
                 update()
             }
@@ -504,14 +522,20 @@ export const EditListDataDex : EditListDataTable = {
         sellItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
                 if (_item.CostType == "ducats") {
-                    _warband.DucatLost += Math.floor(_item.Cost * 0.5);
-                } else { _warband.GloryLost += Math.floor(_item.Cost * 0.5) }
+                    _warband.DucatLost += Math.floor(_item.Cost * 0.5)
+                    _warband.PayChest += Math.floor(_item.Cost * 0.5)
+                } else {
+                    _warband.GloryLost += Math.floor(_item.Cost * 0.5)
+                }
                 _manager.DeleteEquipmentFromModel(_item, _member, _warband)
                 update()
             }
         },
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
+                if (_item.CostType == "ducats") {
+                    _warband.PayChest += Math.floor(_item.Cost)
+                }
                 _manager.DeleteEquipmentFromModel(_item, _member, _warband)
                 update()
             }
@@ -519,7 +543,7 @@ export const EditListDataDex : EditListDataTable = {
 
     },
     memberupgrade: {
-        title      : 'Upgrade This Model',
+        title: 'Upgrade This Model',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
             if (_member) { return _member.Upgrades; }
             return []
@@ -622,6 +646,9 @@ export const EditListDataDex : EditListDataTable = {
         },
         addNewItem (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _cost : ItemCost, _member? : WarbandMember | null) {
             if (_warband && _member) {
+                if (_cost.type == "ducats") {
+                    _warband.PayChest -= Math.floor(_cost.value)
+                }
                 const Result = _manager.NewUpgradeForMember(_member, itemName, _cost.value.toString(), _cost.type);
                 update()
             }
@@ -640,8 +667,10 @@ export const EditListDataDex : EditListDataTable = {
         tossItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
                 if (_item.CostType == "ducats") {
-                    _warband.DucatLost += _item.Cost;
-                } else { _warband.GloryLost += _item.Cost; }
+                    _warband.DucatLost += _item.Cost
+                } else {
+                    _warband.GloryLost += _item.Cost
+                }
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }
@@ -649,14 +678,20 @@ export const EditListDataDex : EditListDataTable = {
         sellItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
                 if (_item.CostType == "ducats") {
-                    _warband.DucatLost += Math.floor(_item.Cost * 0.5);
-                } else { _warband.GloryLost += Math.floor(_item.Cost * 0.5) }
+                    _warband.DucatLost += Math.floor(_item.Cost * 0.5)
+                    _warband.PayChest += Math.floor(_item.Cost * 0.5)
+                } else {
+                    _warband.GloryLost += Math.floor(_item.Cost * 0.5)
+                }
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }
         },
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
+                if (_item.CostType == "ducats") {
+                    _warband.PayChest += Math.floor(_item.Cost)
+                }
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }

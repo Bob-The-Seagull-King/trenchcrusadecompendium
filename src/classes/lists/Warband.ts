@@ -25,6 +25,7 @@ interface IWarband {
     ducat_lost: number,
     glory_lost: number,
     ducat_cost: number,
+    paychest: number,
     glory_cost: number
 }
 
@@ -42,6 +43,7 @@ export class Warband {
     public DucatLost;
     public GloryLost;
     public DucatCost;
+    public PayChest;
     public GloryCost;
     public Members;
     public Armoury;
@@ -57,6 +59,7 @@ export class Warband {
         this.GloryTotal = data.glory_total;
         this.DucatLost = data.ducat_lost;
         this.GloryLost = data.glory_lost;
+        this.PayChest = data.paychest;
 
         this.Members = this.WarbandMemberMaker(data.members);
         this.Armoury = this.EquipmentMaker(data.armoury);
@@ -90,7 +93,7 @@ export class Warband {
         }
 
         this.Name = data.name;
-        this.Faction = FactionFactory.CreateFactory( data.faction);
+        this.Faction = FactionFactory.CreateFactory(data.faction);
         this.Image = data.image;
 
         this.Flavour = this.TextMaker(data.flavour);

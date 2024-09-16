@@ -782,7 +782,7 @@ class WarbandManager {
                 const modelList : IListEquipment = {
                     id: modelVal? modelVal.ID : "",
                     cost: parseInt(_cost),
-                    cost_type: _costtype                    
+                    cost_type: _costtype
                 }
 
                 // Create and add Equipment object
@@ -946,6 +946,7 @@ class WarbandManager {
                     ducat_lost : 0,
                     glory_lost : 0,
                     ducat_cost: 0,
+                    paychest: 0,
                     glory_cost: 0
                 }
 

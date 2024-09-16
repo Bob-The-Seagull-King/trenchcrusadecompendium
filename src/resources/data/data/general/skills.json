@@ -127,12 +127,12 @@
         "tags": [
             {"tag_name": "strength", "val": ""}
             ],
-        "name": "Tough as Nails",
+        "name": "Hard as Nails",
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The model ignores the first Down result in each battle.",
-                "glossary": []
+                "content": "The model ignores the first Down result in each battle. If the model is TOUGH, and suffers an Out Of Action result before using Hard as Nails the model takes no damage and is not Down, but the TOUGH no longer applies in the same battle.",
+                "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
             }
         ]
     },

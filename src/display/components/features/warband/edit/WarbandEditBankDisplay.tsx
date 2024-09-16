@@ -15,7 +15,7 @@ const WarbandEditBankDisplay = (props: any) => {
     const type : string = props.type;
 
     return (
-        <>            
+        <>
             <div className="col-lg-2 col-md-2 col-12 align-content-center" style={{   textAlign:"center"}}>
                 <div className="row justify-content-right" style={{height:"fit-content"}}>
                     <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
@@ -33,8 +33,32 @@ const WarbandEditBankDisplay = (props: any) => {
                 <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type+'lost'} updater={UpdateFunction}/>
             </div>
         </>
-
     )
 }
 
-export default WarbandEditBankDisplay;
+const WarbandEditBankDisplaySimple = (props: any) => {
+    const WarbandItem: Warband = props.data;
+    const UpdateFunction = props.updater;
+    const Manager : WarbandManager = props.manager;
+    const type : string = props.type;
+
+    return (
+        <>
+            <div className="col-lg-2 col-md-2 col-12 align-content-center" style={{   textAlign:"center"}}>
+                <div className="row justify-content-right" style={{height:"fit-content"}}>
+                    <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
+                        {capitalizeString(type)}
+                    </div>
+                </div>
+            </div>
+            <div className="col d-block d-md-none">
+                <div className="verticalspacerbig"/>
+            </div>
+            <div className="col-lg-5 col-md-5 col-12">
+                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={type} updater={UpdateFunction}/>
+            </div>
+        </>
+    )
+}
+
+export {WarbandEditBankDisplay, WarbandEditBankDisplaySimple};

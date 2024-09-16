@@ -43,7 +43,7 @@ export function GetDucatCost(_member : WarbandMember) {
 
     return totalCost.toString()
 }
-   
+
 /**
  * Returns the total ducat cost of the warband and
  * all of its members.
@@ -52,19 +52,22 @@ export function GetDucatCost(_member : WarbandMember) {
  * all models, and any lost or sold off.
  */
 export function TotalCostDucats(_band : Warband) {
-    let totalducats = _band.DucatLost;
+    // !!! Don't count lost ducats on total ducats
+    // let totalducats = _band.DucatLost;
+    let totalducats = 0;
     let i = 0;
     
-    for (i = 0; i < _band.Armoury.length ; i++) {
-        if (_band.Armoury[i].CostType == "ducats") { totalducats += _band.Armoury[i].Cost; }
-    }
+    // !!! Dont include the Armoury in the ducat threshold
+    // for (i = 0; i < _band.Armoury.length ; i++) {
+    //     if (_band.Armoury[i].CostType == "ducats") { totalducats += _band.Armoury[i].Cost; }
+    // }
     for (i = 0; i < _band.Members.length ; i++) { 
         totalducats += Number(GetDucatCost(_band.Members[i])) 
     }
 
     return totalducats;
 }
-   
+
 /**
  * Returns the total glory cost of the warband and
  * all of its members.
