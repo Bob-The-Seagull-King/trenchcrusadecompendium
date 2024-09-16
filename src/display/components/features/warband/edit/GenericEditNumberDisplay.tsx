@@ -33,7 +33,9 @@ const GenericEditNumberDisplay = (props: any) => {
     let NewMaxCount = refCount;
 
     function updateNumber(value: number) {
-        NewMaxCount = value;
+        if (!Number.isNaN(value)) {
+            NewMaxCount = value;
+        }
     }
 
     function updateModel() {

@@ -475,6 +475,10 @@ class WarbandManager {
         // Iterate through each known warband
         for (i = 0; i < data.length; i ++) {
 
+            if (data[i].PayChest === undefined) {
+                data[i].PayChest = 0;
+            }
+
             // Update the warband's faction
             const factionid = data[i].Faction.ID;
             let j = 0;
