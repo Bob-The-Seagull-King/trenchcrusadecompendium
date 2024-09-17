@@ -455,14 +455,21 @@ export const EditListDataDex : EditListDataTable = {
                         }
                         if (_item.Restrictions[j].type == "keyword") {
                             HasModel = true;
-                            if ((_member.Model.Object.Tags != undefined) && (_member.Model.Object.Tags != null)){
-                                for (k = 0; k < (_member.Model.Object.Tags? _member.Model.Object.Tags.length : 0); k++) {
-                                    const tag: any = _member.Model.Object.Tags[k]
-                                    if ((tag.tag_name.toUpperCase()) == _item.Restrictions[j].val.toString().toUpperCase()) {
-                                        ModelMatch = true;
+                            if (_item.Restrictions[j].val.toString().toUpperCase() === 'ELITE') {
+                                if (_member.Elite === true) {
+                                    ModelMatch = true;
+                                }
+                            } else {
+                                if ((_member.Model.Object.Tags != undefined) && (_member.Model.Object.Tags != null)){
+                                    for (k = 0; k < (_member.Model.Object.Tags? _member.Model.Object.Tags.length : 0); k++) {
+                                        const tag: any = _member.Model.Object.Tags[k]
+                                        if ((tag.tag_name.toUpperCase()) == _item.Restrictions[j].val.toString().toUpperCase()) {
+                                            ModelMatch = true;
+                                        }
                                     }
                                 }
                             }
+                            
                         }
                         if (_item.Restrictions[j].type == "antikeyword") {
                             HasAntiKeyword = true;
