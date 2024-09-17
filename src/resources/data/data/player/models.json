@@ -2586,7 +2586,8 @@
         "tags": [
             {"tag_name": "blackgrail", "val": "gl_blackgrail"},
             {"tag_name": "fear", "val": "gl_fear"},
-            {"tag_name": "tough", "val": "gl_tough"}
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "strong", "val": "gl_strong"}
                 ],
         "promotion": 2,
         "movement": [6],
@@ -2608,7 +2609,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Equipment list for weapons – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield. It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each counts as a separate ACTION and suffers no off-hand penalties in melee. The Amalgam cannot benefit from Shield Combo",
+                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Armoury and can buy one weapon from New Antioch Armoury or Iron Sultanate Armoury (all the limitations of these lists apply) – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield (representing pieces of Armour it has absorbed). It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each count as a separate ACTION and suffer no off-hand penalties in melee. The Amalgam cannot benefit from Shield Combo.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
             ],

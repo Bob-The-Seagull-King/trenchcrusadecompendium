@@ -1453,8 +1453,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Whenever the Amalgam is fighting any enemy model on a 32mm or smaller base in melee that is Down, it can make a single additional Melee Attack ACTION any time during its Activation against one Downed opponent. Resolve the attack as if the Amalgam was armed with a Trench Club. This attack Ignores armour as the Amalgam stomps their enemies into pulp.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                "content": "Whenever the Amalgam is fighting any enemy model on a 32mm or smaller base in melee that is Down, it can make a single additional Melee Attack ACTION any time during its Activation against one Downed opponent. Resolve the attack as if the Amalgam was armed with a Trench Club. This attack Ignores armour as the Amalgam stomps their enemies into pulp.  If it takes the target Out of Action, the Amalgam can heal 1 BLOOD MARKER it has suffered.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"}]
             }
         ]
     },
