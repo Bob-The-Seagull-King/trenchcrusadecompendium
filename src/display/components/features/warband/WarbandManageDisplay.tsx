@@ -132,7 +132,11 @@ const WarbandManageDisplay = (props: any) => {
                             <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandmember'} updater={UpdateFunction}/> 
                         </div>
                         <div className="col-lg-4 col-md-4 col-12">     
-                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/> 
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator" style={{fontSize:"3em"}}>&#x27E1;</div>
+                            <div className="verticalspacerbig"/>
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandreservemember'} updater={UpdateFunction}/>
                         </div>
                     </div>
 

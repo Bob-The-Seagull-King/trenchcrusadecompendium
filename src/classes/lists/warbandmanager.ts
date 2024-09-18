@@ -673,7 +673,7 @@ class WarbandManager {
      * @param _costtype If the member cost Ducats or Glory
      * @returns A string message, if non-null then something wrong has happened
      */
-    public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
+    public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string, reserve = false){
         let ReturnMsg = "";
         let modelVal : any = null;
         let memberName = "";
@@ -705,7 +705,7 @@ class WarbandManager {
                 const modelList : IListModel = {
                     id: modelVal? modelVal.ID : "",
                     cost: parseInt(_cost),
-                    cost_type: _costtype                    
+                    cost_type: _costtype
                     }
 
                 const _content : IWarbandMember = {
@@ -713,6 +713,7 @@ class WarbandManager {
                     model: modelList,
                     equipment: [],
                     elite: isElite,
+                    reserve: reserve,
                     injuries: [],
                     skills: [],
                     experience: 0,

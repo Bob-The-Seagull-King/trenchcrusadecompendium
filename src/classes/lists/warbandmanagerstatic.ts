@@ -62,7 +62,9 @@ export function TotalCostDucats(_band : Warband) {
     //     if (_band.Armoury[i].CostType == "ducats") { totalducats += _band.Armoury[i].Cost; }
     // }
     for (i = 0; i < _band.Members.length ; i++) { 
-        totalducats += Number(GetDucatCost(_band.Members[i])) 
+        if (_band.Members[i].Reserve != true) {
+            totalducats += Number(GetDucatCost(_band.Members[i]))
+        }
     }
 
     return totalducats;

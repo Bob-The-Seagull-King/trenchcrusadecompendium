@@ -72,6 +72,18 @@ const ItemMemberDisplay = (props: any) => {
         WarbandMember.Elite = true;
         UpdateFunction();
     }
+    
+    // Make the model an infantry unit
+    function storeModel() {
+        WarbandMember.Reserve = true;
+        UpdateFunction();
+    }
+
+    // Make the model an elite unit
+    function fieldModel() {
+        WarbandMember.Reserve = false;
+        UpdateFunction();
+    }
 
     // Create a copy of the model to add to the warband
     function duplicateModel() {
@@ -115,29 +127,64 @@ const ItemMemberDisplay = (props: any) => {
         return (
             <div className="row" key={key}>
 
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
+                {WarbandMember.Reserve != true &&
+                    <div className="col-sm-3 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+
+                {WarbandMember.Reserve == true &&
+                    <div className="col-sm-6 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
+                            </div>
+                        </div>
+                    </div>
+                }
                 
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
+                {WarbandMember.Reserve != true &&
+                    <div className="col-sm-3 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div className="col-lg-4 col-12">
-                    <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className={"subfonttext generalbuttonbox" + ((WarbandMember.Elite == true)? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
-                            <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
+                }
+                {WarbandMember.Reserve != true &&
+                    <div className="col-sm-3 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className={"subfonttext generalbuttonbox" + ((WarbandMember.Elite == true)? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+                {WarbandMember.Reserve != true &&
+                    <div className="col-sm-3 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className={"subfonttext generalbuttonbox" + (WarbandMember.Reserve? " disabledbox" : " hovermouse")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => storeModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Send Model to Reserve</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                {WarbandMember.Reserve == true &&
+                    <div className="col-sm-6 col-12">
+                        <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                            <div className={"subfonttext generalbuttonbox" + (WarbandMember.Reserve? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => fieldModel()}>
+                                <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Field This Model</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
             </div>
         )
     }
@@ -148,26 +195,30 @@ const ItemMemberDisplay = (props: any) => {
                 <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
                     <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'}/>
                     <div className="row float-end">
+                        {WarbandMember.Reserve != true &&
                         <div className='col-4'>
-                            <div style={{}}>
-                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) > 0 &&
-                            <FontAwesomeIcon icon={faSquareCaretUp} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)-1)}/>                        
-                            }
-                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) <= 0 &&
-                            <FontAwesomeIcon icon={faSquareCaretUp} className="subcolorgrey" style={{fontSize:"0.75em"}} />                        
-                            }
-                            </div>
+                                <div style={{}}>
+                                {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) > 0 &&
+                                <FontAwesomeIcon icon={faSquareCaretUp} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)-1)}/>                        
+                                }
+                                {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) <= 0 &&
+                                <FontAwesomeIcon icon={faSquareCaretUp} className="subcolorgrey" style={{fontSize:"0.75em"}} />                        
+                                }
+                                </div>
                         </div>
+                        }
+                        {WarbandMember.Reserve != true &&
                         <div className='col-4'>
                             <div style={{}}>                                
-                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) < (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
-                            <FontAwesomeIcon icon={faSquareCaretDown} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)+1)}/>             
-                            } 
-                            {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) >= (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
-                                <FontAwesomeIcon icon={faSquareCaretDown} className="subcolorgrey" style={{fontSize:"0.75em"}}  />             
-                            } 
-                            </div>         
-                        </div>                        
+                                {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) < (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
+                                <FontAwesomeIcon icon={faSquareCaretDown} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => SwapUnits(WarbandItem.Members.indexOf(WarbandMember), WarbandItem.Members.indexOf(WarbandMember)+1)}/>             
+                                } 
+                                {WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).indexOf(WarbandMember) >= (WarbandItem.Members.filter(item => item.Elite === WarbandMember.Elite).length - 1) &&
+                                    <FontAwesomeIcon icon={faSquareCaretDown} className="subcolorgrey" style={{fontSize:"0.75em"}}  />             
+                                } 
+                                </div>
+                        </div>
+                        }
                         <div className='col-4'>
                             <div style={{}}>
                             <FontAwesomeIcon icon={faUpRightFromSquare} className="hovermouse" style={{fontSize:"0.75em"}}  onClick={() => handleShow()}/>          
