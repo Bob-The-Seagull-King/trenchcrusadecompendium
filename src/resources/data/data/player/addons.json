@@ -2118,5 +2118,56 @@
                 ]
             }
         ]
+    },
+    {
+        "id": "ab_swornsword",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Sworn Sword",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mamluk can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form.",
+                "glossary": [ {"val": "FIRETEAM", "id": "gl_fireteam"}, {"val": "ELITE", "id": "gl_elite"} ]
+            }
+        ]
+    },
+    {
+        "id": "ab_martialprowess",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Martial Prowess",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practise ceaselessly, and thus have few equals. This gives their Jezzails the Keyword ASSAULT as well as Shield Combo ability, and they suffer no penalties for fighting with off-hand weapons in melee. Faris can choose to fight either with Polearm and shield or Sword and Pistol in melee.",
+                "glossary": [ {"val": "ASSAULT", "id": "gl_assault"} ]
+            }
+        ]
+    },
+    {
+        "id": "ab_arabiandestrier",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Arabian Destrier",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Unless the scenario prohibits use of INFILTRATORS you may deploy the Mamluk Faris on any table edge as long as the Mamluk is at least 8” away from any enemy model after INFILTRATORs are deployed. Mamluk can also be deployed in your own deployment zone as standard.",
+                "glossary": [ {"val": "INFILTRATOR", "id": "gl_infiltrator"} ]
+            }
+        ]
     }
 ]

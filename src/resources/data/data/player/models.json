@@ -3485,5 +3485,63 @@
                 "content": "ab_demonicaura"
             }
         ]
+    },
+    {
+        "id": "md_mamlukfaris",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name":"fireteam", "val": "gl_fireteam"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [1],
+        "melee": [1],
+        "armour": [0],
+        "base": [32],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "team":"heaven",
+        "name": "Mamluk Faris",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mamluks are an echo of a bygone age, last members of the warrior-elite that once ruled a great empire in Northern Africa. They suffered grievous losses at the earliest stages of the Great War when the Legions of demon Zalambuer emerged from the Hellgate. The Fatimids led their Mamluk forces in a desperate campaign to reclaim Levant, but of their fate there is no tale. Instead of returning victorious warriors, the slaves of Jahannam rushed through Sinia like an evil wind, razing Alexandria and Cairo to the ground. The remaining Mamluks fought bitterly to protect their homes, but to no avail. Too proud to leave their ancestral homes at the mercy of evil, some of the last Mamluks did not heed the call to migrate beyond the Iron Wall, and instead dispersed throughout the lands they once ruled to fight on -a fight that has never ceased since those dark days."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "To this day the Mamluk knights play a deadly game of ambush and sudden raid on the Aegyptian front against Mammon’s legions, making their living as swords for hire, waging an endless war against the Heretics and composing poets of lamentation in memory of their lost and devastated homelands. Generations of war have hardened the Mamluks into peerless warriors, for parents pass on the secrets of Furūsiyya, the martial skills and ethical conduct of the Arabian Knights to their children."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Too few in numbers to wage open war, the Mamluks instead fight alongside any of the Peoples of the Book, making their living by offering their swords to a highest bidder, as long as such a leader promises to fight the forces of Shaytan. They respect noble character and martial prowess above all, and often bond by sharing their way of the sword with an ally they respect"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Only a few of the famed artificial heavy warhorses of the Mamluks remain, and they are not risked in open combat unless they are used directly to defend the last few hidden abodes the Mamluks still inhabit in the vast deserts that stretch beyond the Nile delta. However, these tireless steeds are used to take the heavy Mamluk warriors into advanced positions where they can disrupt the enemy plans and surprise exposed enemy units"
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mamluk carries a sword, pistol, polearm, and a Jezzail with Alchemical Ammunition. Mamluk wears a helmet, reinforced armour and carries a trench shield.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_swornsword"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_martialprowess"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_arabiandestrier"
+            }
+        ]
     }
 ]
