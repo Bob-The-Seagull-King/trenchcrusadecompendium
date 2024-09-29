@@ -2,6 +2,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../../resources/styles/_icon.scss'
 import React from 'react'
 
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+
 import { Warband } from '../../../../../classes/lists/Warband'
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager'
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember'
@@ -39,19 +42,79 @@ const ItemUpgradeDisplay = (props: any) => {
                 </div>
             </div>
             <div className="col-1" style={{padding:"0.5em"}}>
+                <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Toss"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item without getting any money back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em"}}   onClick={() => TossItem(Manager, WarbandItem, ModelUpgrade, UpdateFunction, WarbandMember)}>
-                    <FontAwesomeIcon icon={faTrash} className="" style={{fontSize:"1em"}}/>
-                </div>
+                                <FontAwesomeIcon icon={faTrash} className="" style={{fontSize:"1em"}}/>
+                                </div>
+                            </OverlayTrigger>
+                        </>
             </div>
             <div className="col-1" style={{padding:"0.5em"}}>
+                <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Sell"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item and gain half of its cost back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em"}}   onClick={() => SellItem(Manager, WarbandItem, ModelUpgrade, UpdateFunction, WarbandMember)}>
-                    <FontAwesomeIcon icon={faCoins} className="" style={{fontSize:"1em"}}/>
-                </div>
+                            <FontAwesomeIcon icon={faCoins} className="" style={{fontSize:"1em"}}/>
+                            </div>
+                            </OverlayTrigger>
+                        </>
             </div>
             <div className="col-1" style={{padding:"0.5em"}}>
+                <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Sell"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item and gain all its cost back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
                 <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em"}}   onClick={() => RefundItem(Manager, WarbandItem, ModelUpgrade, UpdateFunction, WarbandMember)}>
-                    <FontAwesomeIcon icon={faDollarSign} className="" style={{fontSize:"1em"}}/>
-                </div>
+                            <FontAwesomeIcon icon={faDollarSign} className="" style={{fontSize:"1em"}}/>
+                            </div>
+                            </OverlayTrigger>
+                        </>
             </div>
         </div>
     )

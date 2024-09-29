@@ -1,5 +1,9 @@
 
 import React, { useState } from 'react'
+
+
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import { WarbandManager } from "../../../../../../classes/lists/warbandmanager"
 import { Warband } from "../../../../../../classes/lists/Warband"
 import { WarbandMember } from "../../../../../../classes/lists/WarbandMember"
@@ -57,7 +61,27 @@ export const EditItemDataDex : EditItemDataTable = {
                     <div className="col-3 align-content-center">
                         <div className="row justify-content-center">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center",width:"100%"}}  >
+                        <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Toss"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item without getting any money back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
                             <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            </OverlayTrigger>
+                        </>
                         </div>
                         </div>
                     </div>
@@ -101,7 +125,27 @@ export const EditItemDataDex : EditItemDataTable = {
                     <div className="col-3 align-content-center">
                         <div className="row justify-content-center">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center",width:"100%"}}  >
+                        <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Toss"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item without getting any money back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
                             <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            </OverlayTrigger>
+                        </>
                         </div>
                         </div>
                     </div>
@@ -150,7 +194,27 @@ export const EditItemDataDex : EditItemDataTable = {
                     <div className="col-3 align-content-center">
                         <div className="row justify-content-center">
                             <div className="subfonttext" style={{display:"flex",alignItems:"center",width:"100%"}}  >
-                                <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Toss"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item without getting any money back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
+                            <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            </OverlayTrigger>
+                        </>
                             </div>
                         </div>
                     </div>
@@ -198,7 +262,27 @@ export const EditItemDataDex : EditItemDataTable = {
                     <div className="col-3 align-content-center">
                         <div className="row justify-content-center">
                             <div className="subfonttext" style={{display:"flex",alignItems:"center",width:"100%"}}  >
-                                <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            <>
+                            <OverlayTrigger overlay={
+                            <Tooltip style={{ width: "30vw" }} className="overcomeTooltip" id="tooltip">
+                                <div style={{ width: "30vw" }} className='popupBody'>
+                                <div className={'modelStructure borderstyler bordertc'}>
+                                    <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
+                                        {"Toss"}
+                                    </h1>
+                                    
+                                    <div className='modelInternalStructure'>
+                                        <div>
+                                        {"Remove this item without getting any money back"}
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            }>
+                            <FontAwesomeIcon icon={faTrash} className="hovermouse" style={{fontSize:"0.55em"}}  onClick={() => { if (_this.tossItem) {_this.tossItem(_this, _manager, _warband, _item, update, _member)}}}/>
+                            </OverlayTrigger>
+                        </>
                             </div>
                         </div>
                     </div>

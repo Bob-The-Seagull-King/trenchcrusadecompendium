@@ -3638,7 +3638,7 @@
         "name": "Bow Of Lethe",
         "equip_type": "1-Handed",
         "range": "36\"",
-        "blurb": "This terrifying and enormous hand Cannon contains a portal to the foetid swamps and bogs of the Fifth Circle of Hell. Each bullet it fires is enveloped with this awful gas.",
+        "blurb": "This bow is grown by the Hunters of the Left-hand-path out of their own flesh. It can be tipped with a deadly poison made from the blood of the nameless beasts that the Hunters stalk in the wastelands of Hell, or it can shoot one of the Iron bolts of Pandemonium that weigh 9 tons on Earth.",
         "modifiers": ["+2D to Injury", "or", "Ignore Armour"],
         "eventtags": {"action": true},
         "description":  [
