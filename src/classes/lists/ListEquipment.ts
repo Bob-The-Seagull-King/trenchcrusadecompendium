@@ -29,6 +29,16 @@ class ListEquipment {
 
         this.Object = EquipmentFactory.CreateFactory((Requester.MakeRequest({searchtype: "id", searchparam: {type: 'equipment', id: this.ID}})));
     }
+
+    public converttointerface() {
+        const obj_inter : IListEquipment = {
+            id: this.ID,
+            cost: this.Cost,
+            cost_type : this.CostType
+        }
+
+        return obj_inter;
+    }
 }
 
 export {IListEquipment, ListEquipment}

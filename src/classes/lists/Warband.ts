@@ -154,7 +154,48 @@ export class Warband {
         }
 
         return tempList;
-    }    
+    }  
+    
+    public ConvertToInterface() {
+        
+        const equip : IListEquipment[] = []
+        for (let i = 0; i < this.Armoury.length; i++){
+            equip.push(this.Armoury[i].converttointerface())
+        }
+        
+        const members : IWarbandMember[] = []
+        for (let i = 0; i < this.Members.length; i++){
+            members.push(this.Members[i].converttointerface())
+        }
+        
+        const textblock : ITextBlock[] = []
+        for (let i = 0; i < this.Flavour.length; i++){
+            textblock.push(this.Flavour[i].DataObj)
+        }
+
+        const objdata : IWarband = {
+            id: this.ID,
+            ducat_total : this.DucatTotal,
+            glory_total : this.GloryTotal,
+            members : members,
+            armoury : equip,
+            locations : this.Locations,
+            modifiers : this.Modifiers,
+            name: this.Name,
+            faction: this.Faction.ObjData,
+            flavour: textblock,
+            notes: this.Notes,
+            deeds: this.Deeds,
+            image : this.Image,
+            ducat_lost: this.DucatLost,
+            glory_lost: this.GloryLost,
+            ducat_cost: this.DucatCost,
+            paychest: this.PayChest,
+            glory_cost: this.GloryCost
+        }
+
+        return objdata;
+    }
 }
 
 export {IWarband}

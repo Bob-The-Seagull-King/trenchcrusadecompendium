@@ -28,6 +28,16 @@ class ListModel {
         this.CostType = data.cost_type;
 
         this.Object = ModelFactory.CreateModel((Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: this.ID}})));
+    }    
+
+    public converttointerface() {
+        const obj_inter : IListModel = {
+            id: this.ID,
+            cost: this.Cost,
+            cost_type : this.CostType
+        }
+
+        return obj_inter;
     }
 
 }

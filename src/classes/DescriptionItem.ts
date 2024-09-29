@@ -12,10 +12,12 @@ interface ITextBlock {
 class TextBlock {
     public Title;
     public Content;
+    public DataObj;
 
     public constructor(data: ITextBlock) {
         this.Title = data.title;
         this.Content = DescriptionFactory(data.content);
+        this.DataObj = data;
     }
 }
 

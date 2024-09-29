@@ -7,6 +7,7 @@ import { getTagValue } from "../../utility/functions"
 import { AddonFactory } from "../../factories/features/AddonFactory"
 import { PlayerAddon } from "../feature/addons/Addon"
 import { PlayerEquipment } from "../feature/equipment/Equipment"
+import { IWarband } from "./Warband"
 
 /**
  * Interface describing a member of a warband
@@ -115,6 +116,35 @@ class WarbandMember {
         return upgradelist;
     }
 
+    public converttointerface() {
+        const equip : IListEquipment[] = []
+        for (let i = 0; i < this.Equipment.length; i++){
+            equip.push(this.Equipment[i].converttointerface())
+        }
+        const inj : IListItem[] = []
+        for (let i = 0; i < this.Injuries.length; i++){
+            inj.push(this.Injuries[i].ObjData)
+        }
+        const upg : IFactionUpgrade[] = []
+        for (let i = 0; i < this.Upgrades.length; i++){
+            upg.push(this.Upgrades[i].ObjData)
+        }
+
+        const obj_inter : IWarbandMember = {
+            name: this.Name,
+            model: this.Model.converttointerface(),
+            equipment: equip,
+            elite: this.Elite,
+            injuries: inj,
+            skills: this.Skills,
+            experience: this.Experience,
+            scars: this.Scars,
+            notes : this.Notes,
+            upgrades : upg
+        }
+
+        return obj_inter;
+    }
     
 }
 

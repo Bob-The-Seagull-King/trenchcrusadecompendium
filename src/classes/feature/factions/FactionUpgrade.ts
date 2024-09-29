@@ -40,6 +40,7 @@ class FactionUpgrade {
     public Name;
     public Limit;
     public Restrictions : IEquipmentRestriction[];
+    public ObjData;
 
     public constructor(data: IFactionUpgrade) {
         this.ID = data.id;
@@ -57,6 +58,7 @@ class FactionUpgrade {
         }
         const requestdata: IUpgradeData = (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: this.ID}}));
         
+        this.ObjData = data;
         this.Name = requestdata.name;
         this.Description = DescriptionFactory(requestdata.description);
         this.EventTags = requestdata.eventtags;

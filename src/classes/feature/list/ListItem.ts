@@ -24,6 +24,7 @@ class ListItem extends TrenchCrusadeItem {
     public readonly Description;
     public readonly EventTags;
     public readonly Scar;
+    public readonly ObjData;
 
     public constructor(data: IListItem)
     {
@@ -33,6 +34,7 @@ class ListItem extends TrenchCrusadeItem {
         this.RollEnd = data.roll_end;
         this.EventTags = data.eventtags;
         this.Scar = data.scar ? data.scar : 0;
+        this.ObjData = data;
         
         this.Description = DescriptionFactory(data.description);
     }

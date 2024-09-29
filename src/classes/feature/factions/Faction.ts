@@ -35,10 +35,12 @@ class PlayerFaction extends TrenchCrusadeItem {
     public readonly Models : FactionModel[];
     public readonly InterfaceVal;
     public readonly Team;
+    public readonly ObjData;
     
     public constructor(data: IPlayerFaction)
     {
         super(data)
+        this.ObjData = data;
         this.ItemType = ItemType.Faction;
 
         this.InterfaceVal = data
