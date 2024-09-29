@@ -98,7 +98,7 @@ const ItemUpgradeDisplay = (props: any) => {
                                 <div style={{ width: "30vw" }} className='popupBody'>
                                 <div className={'modelStructure borderstyler bordertc'}>
                                     <h1 className={'titleShape titlebody titlestyler backgroundtc'}>
-                                        {"Sell"}
+                                        {"Refund"}
                                     </h1>
                                     
                                     <div className='modelInternalStructure'>
