@@ -1265,6 +1265,18 @@
                             }
 
                         ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Chewa:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Any Shocktroopers or ELITE models in an Abyssinian Warband can be made a member of Chewa, the traditional warrior-elite. This costs +5 ducats per model and can be done after the model has been recruited. These models gain +1 DICE to Melee against enemies that are in Melee Combat with a model other than the Chewa. If this enemy is in Melee Combat with 2+ other models, this bonus is increased to +2 DICE.",
+                                "glossary":  [{"val": "ELITE", "id": "gl_elite"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                            }
+
+                        ]
                     }
                 ]
             } 
