@@ -1115,6 +1115,70 @@
         ]
     },
     {
+        "id": "ab_blessedpsalm",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Blessed Psalm",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As an ACTION, the Warrior removes 1 BLESSING MARKER it has and adds it to any other member of the Warband. This ACTION succeeds automatically.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLESSING MARKER", "id": "gl_blessingmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_ariseandbehealed",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Arise and be Healed!",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Select one friendly model within 3” of the Warrior and take an ACTION. If successful, the target immediately Stands if Down and loses up to 1 BLOOD MARKER or INFECTION MARKER (your choice) it has.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},
+                {"val": "BLOOD MARKER", "id": "gl_bloodmarker"},
+                {"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_holywarriors",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Holy Warriors",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When recruited, this model chooses one of the following actions."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_onwardchristiansoldiers"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_blessedpsalm"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_ariseandbehealed"
+            }
+        ]
+    },
+    {
         "id": "ab_godiswithus",
         "type": "Addon",
         "source": "core",

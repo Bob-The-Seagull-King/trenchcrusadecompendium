@@ -818,7 +818,8 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
-            {"tag_name": "Shrapnel", "val": "gl_shrapnel"}
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
+            {"tag_name": "Headgear", "val": "gl_headgear"}
                 ],
         "category": "equipment",
         "name": "Combat Helmet",
@@ -3801,6 +3802,116 @@
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                         "content": "Grants -2 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_shotel",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Critical", "val": "gl_critical"}
+                ],
+        "category": "melee",
+        "name": "Shotel",
+        "equip_type": "1-Handed",
+        "range": "Melee",
+        "blurb": "Since the days of ancient Axum, the Shotel (or ሽቶል/ሽተል) has been the weapon of choice for the Abyssinian warrior-elite. Its curved blade is designed to reach around an opponent's shield and stab them in vital areas, such as the kidneys or lungs.",
+        "modifiers": ["Ignore Shield"],
+        "eventtags": {"action": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " The Shotel is specifically designed to overcome enemy shields. It ignores the target’s penalty to injury rolls from its Shield, if any. The Holy Icon Shield and similar effects still apply."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_holywateroflalibela",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Consumable", "val": "gl_consumable"}
+                ],
+        "category": "equipment",
+        "name": "Holy Water of Lalibela",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Vials of holy water from the Rock-hewn Churches of Lalibela are carried by the Ethiopian warriors on their campaigns. It has great power over demonic entities and aids in healing",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "This model gains +1 DICE on any ACTION that would remove 1 or more BLOOD MARKERS or INFECTION MARKERS if successful.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_warriorscrown",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Headgear", "val": "gl_headgear"}
+                ],
+        "category": "equipment",
+        "name": "Anfarro (Warrior's Crown)",
+        "equip_type": null,
+        "range": null,
+        "blurb": "An Anfarro is made from a ring of lion's mane hair, held in a filigree gilt metal coronet studded with blue and red gemstones. It is granted by the Emperor to an aristocratic warrior and lion hunter as a token of honour and bravery.",
+        "modifiers": [],
+        "eventtags": {"trait": true, "melee": 1},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "This model’s Melee Characteristic is improved by +1 DICE (as only the best warriors are granted the honour of wearing an Anfarro). This model is also immune to FEAR.",
+                                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "FEAR", "id": "gl_fear"}]
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_tabot",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Tabot",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Made from alabaster, marble or wood from an acacia tree, these are blessed replicas of the Ark of the Covenant. A priest that accompanies the forces of the King of Kings to New Antioch, they will take the holy Tabot with them, wrapped in silk cloth decorated with gold string. Its miraculous powers reward those who perform virtuous deeds on the battlefield.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Each time an ACTION is taken by any model of your Warband that heals 1 or more BLOOD MARKERS or INFECTION MARKERS, the model carrying the Tabot gains 1 BLESSING MARKER.",
+                                        "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"},{"val": "BLESSING MARKER", "id": "gl_blessingmarker"}]
                                     }
                                 ]
                             }

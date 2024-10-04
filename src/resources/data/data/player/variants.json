@@ -1202,6 +1202,101 @@
             {"id": "md_sniperpriest", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
             {"id": "md_lieutenant_fv_kingdomofalbaassaultdetachment", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": []}
         ]
+    },
+    {
+        "id": "fv_expeditionaryforcesofabyssinia",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Expeditionary Forces of Abyssinia",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Most of what was once the ancient realm of Egypt now rests under the Shadow of Hell and the stronghold of the servants of the Prince of Greed who has long dreamed of plundering the whole continent of its riches. Beautiful Alexandria and even mighty Cairo have fallen, their ports serving as anchorage for the Heretic fleet and mustering grounds for Hell's Legions as they strike south and west."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "But thus far, Mammon’s plans to sweep across the northern coast of Africa all the way to Mali and Axum has been frustrated. For this front is every bit as bitterly contested as the European theatre of war. Here the Heretic Legions are opposed by a coalition of Nubia, Numidia and the Solomonic Empire of Abyssinia (more commonly known as the Ethiopian Empire in Africa) that have thrown their lot together to resist the invader. Blood stains the waters of the Nile red as the coalition struggles to contain the grinding offensives of Mammon’s Legion of the Ten Golden Horns. The plan of the Prince of Greed is two-fold: to overcome the holy churches of Lalibela – desecrating and auctioning off the legendary relics within the churches and cathedrals of Axum – and to claim the fabled gold mines of the Queen of Sheba for himself, which he covets beyond any other treasure trove on Earth."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "War has honed the soldiers of Ethiopia into masters of mobile warfare and taking the enemy on in loose formation, a style of fighting well-suited to their rugged country where scarce roads restrict the movements of large armies. Most levies fight armed with rifles, seeking to close in on the enemy to ensure the effectiveness of their volleys, while the Chewa are the warrior-elite, trained in hand-to-hand combat since childhood. They are encouraged to take on lions and other fierce predators as part of their upbringing, and warriors that have taken down a male lion single-handedly have the honour of wearing its mane as a headdress. Their famed warcry “Together! Together!” is often the last thing the invaders hear."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Claiming a direct lineage from the legendary queen of Sheba and King Solomon, the Emperors of Abyssinia are staunch members of the Faithful alliance, and the representative of the African continent in the Sword Congress of Vienna. It is a matter of pride and prestige to the House of Solomon that the tithe to New Antioch is met punctually. So once in seven years the Negarit war drums sound the kitet, the call to arms. The volunteers gather at Axum, the spiritual capital of the nation, where the Ark of the Covenant is said to be kept under the watchful eyes of warrior monks who are born to their role and never leave their post."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "There is never any lack of warriors willing to join the expeditionary force to aid New Antioch. Adventure, unrivalled status given to those who go to serve the Duke and the chance to fight the enemy at their heartlands ensures that the bravest young soldiers compete for the chance to join the expeditionary force."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Before being accepted into the expeditionary force, all volunteers to New Antioch must make a pilgrimage to Abuna Yemata Guh, the chapel that rests on a mountainside at a dizzying height of some 8500 feet. It is the most inaccessible place of worship in the world, and the volunteers must travel to receive the blessing from this shrine in the sky carrying their full military kit and gear. Miraculously, there have been exceedingly few deaths caused by soldiers losing their footing and plummeting to their deaths. Each one of those who have fallen have been found to be a Heretic infiltrator, and their broken and rotting bodies are left unburied as a warning to those traitors who would defile the sanctity of the shrine."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Once the pilgrimage is done, the forces assemble, and are laden with gold, silver, precious stones, icons and holy relics as gifts from the Emperor to the Duke. The warriors of the Emperor march to the hidden ports of the coast that are still free of the enemy. There is no land route for the warriors of Ethiopia to reach the Principality and the Heretic fleet dominates both the Erythraean Sea and the Red Sea, leaving the perilous crossing of the mediterranean as the only viable option."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Thus there is the war on the waves of the Mediterranean as the Faithful fleet clashes with the Heretic dreadnoughts. Ships will be sunk and the gold from the mines of the Queen of Sheba is lost to the sea, but when the songs and drums of the warriors of Solomonic Throne can be heard in the harbour and echoing on the famed walls of New Antioch, the citizens know that the aid has come once more."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Fewer than one in ten of the volunteers ever returns to the rock-hewn Churches of Lalibela to give thanks for their deliverance. The rest give their lives in the brutal battles in No Man’s Land, like countless millions before them. In the eyes of these survivors one can catch a glimpse of the horrors that have scarred them for life."
+            } 
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Weapons of Mobile Warfare:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Your Warband can have a maximum of 3 Ranged Weapons with the Keyword HEAVY. This limitation does not include Satchel Charges.",
+                                "glossary":  [{"val": "HEAVY", "id": "gl_heavy"}]
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": [],
+        "removed_model": ["md_sniperpriest","md_lieutenant","md_trenchcleric","md_shocktroopers","md_yeoman","md_combatmedic","md_mechanisedheavyinfantry"],
+        "equipment": [
+            {"id": "eq_shotel", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "", "val": "Chewa Upgrade"}]},    
+            {"id": "eq_warriorscrown", "cost": 10, "cost_id": "ducats", "limit": 6, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "", "val": "Chewa Upgrade"}]},  
+            {"id": "eq_tabot", "cost": 4, "cost_id": "glory", "limit": 1, "restriction": [{"type": "model", "val": "md_trenchcleric_expiditiaryforces_holywarriors"}]},            
+            {"id": "eq_holywateroflalibela", "cost": 3, "cost_id": "ducats", "limit": 5, "restriction": []}
+        ],
+        "models" : [
+            {"id": "md_lieutenant", "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "autoupgrades": ["up_shortrangemarksmanship"], "upgrades": [
+                {"id": "up_chewa", "cost": 5, "cost_id": "ducats"}
+            ]},
+            {"id": "md_trenchcleric", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": [
+                {"id": "up_chewa", "cost": 5, "cost_id": "ducats"}
+            ]},
+            {"id": "md_trenchcleric_expiditiaryforces_holywarriors", "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": [
+                {"id": "up_chewa", "cost": 5, "cost_id": "ducats"}
+            ]},
+            {"id": "md_shocktroopers", "cost": 45, "cost_id": "ducats", "limit_min": 0, "limit_max": 5, "equipment": [], "upgrades": [
+                {"id": "up_chewa", "cost": 5, "cost_id": "ducats"}
+            ]},
+            {"id": "md_yeoman", "cost": 40, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": ["eq_boltactionrifle"], "autoupgrades": ["up_shortrangemarksmanship"], "upgrades": [
+                {"id": "up_vanguards", "cost": 5, "cost_id": "ducats"}
+            ]},
+            {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_misericordia","eq_medikit","eq_gasmask","eq_standardarmour"], "upgrades": []},
+            {"id": "md_mechanisedheavyinfantry",    "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": []}
+        ]
     }  ,
     {
         "id": "fv_dirgeofthegreathegemon",

@@ -14,7 +14,8 @@ interface IModelFactionList {
     limit_min: number,
     limit_max: number,
     equipment: string[],
-    upgrades: []
+    upgrades: [],
+    autoupgrades? : string[]
 }
 
 /**
@@ -31,6 +32,7 @@ class FactionModel {
     public readonly Object : PlayerModel;
     public readonly Equipment;
     public readonly Upgrades : FactionUpgrade[];
+    public readonly AutoUpgrades : string[];
 
     public constructor(data: IModelFactionList) {
         this.ID = data.id;
@@ -39,6 +41,11 @@ class FactionModel {
         this.LimitMin = data.limit_min;
         this.LimitMax = data.limit_max;
         this.Equipment = data.equipment;
+        if (data.autoupgrades) {
+            this.AutoUpgrades = data.autoupgrades
+        } else {
+            this.AutoUpgrades = []
+        }
         this.Object = ModelFactory.CreateModel((Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: this.ID}})));
         this.Upgrades = this.UpgradeFactory(data.upgrades);
     }

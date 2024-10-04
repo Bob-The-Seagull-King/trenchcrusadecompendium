@@ -483,6 +483,10 @@ export const EditListDataDex : EditListDataTable = {
                                 }
                             }
                         }
+                        if (_item.Restrictions[j].type == "antikeyword") {
+                            HasModel = true;
+                            ModelMatch = true;
+                        }
                     }
 
                     if (HasAntiKeyword) {

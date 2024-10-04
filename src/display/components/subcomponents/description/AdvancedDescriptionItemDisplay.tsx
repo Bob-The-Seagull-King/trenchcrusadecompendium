@@ -135,7 +135,7 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
     function findAddon(id: string) {
         let addon: PlayerAddon | null = null;
 
-        addon = AddonFactory.CreateNewAddon(id)
+        addon = AddonFactory.CreateNewAddon(id, parentItem.Team)
 
         return (
             <GenericDisplay d_colour={parentItem.Team} d_name={addon.Name} d_type={"sub"} d_method={() => <AddonDisplay data={addon} />}/>

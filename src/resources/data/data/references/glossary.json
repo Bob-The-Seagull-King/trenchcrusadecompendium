@@ -437,6 +437,20 @@
         }]
     },
     {
+        "id": "gl_headgear",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "equipment"}
+        ],
+        "name": "Headgear",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+            "content": "A model may only wear one piece of Headgear at a time.",
+            "subcontent":   []
+        }]
+    },
+    {
         "id": "gl_skirmisher",
         "type": "Glossary",
         "source": "core",

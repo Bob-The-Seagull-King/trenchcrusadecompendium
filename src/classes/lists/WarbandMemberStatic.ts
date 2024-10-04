@@ -185,7 +185,7 @@ export function returnComponentsWithinParams(_member : WarbandMember, _tag : str
     for (i = 0; i < desc.length; i ++) {
         if (getTagValue(desc[i].Tags, "desc_type") === 'addon') {
             const strID = desc[i].Content
-            const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
+            const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "", _member.Model.Object.Team);
             if (item.EventTags) {
                 for (j = 0; j < _tag.length; j++) {
                     if (item.EventTags[_tag[j]]) {
@@ -270,7 +270,7 @@ export function returnComponentsWithTag(_member : WarbandMember, _tag : string) 
     for (i = 0; i < desc.length; i ++) {
         if (getTagValue(desc[i].Tags, "desc_type") === 'addon') {
             const strID = desc[i].Content
-            const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "");
+            const item : PlayerAddon = AddonFactory.CreateNewAddon((typeof strID === 'string')? strID : "", _member.Model.Object.Team);
             
             if (item.EventTags) {if (item.EventTags[_tag]) { addons.push(item) }}
         }

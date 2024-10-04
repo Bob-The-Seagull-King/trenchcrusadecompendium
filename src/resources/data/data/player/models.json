@@ -1672,6 +1672,49 @@
         ]
     },
     {
+        "id": "md_trenchcleric_expiditiaryforces_holywarriors",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "elite", "val": "gl_elite"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [1],
+        "melee": [1],
+        "armour": [0],
+        "base": [32],
+        "faction_id": "fc_newantioch",
+        "team":"heaven",
+        "variant_id": "fv_expeditionaryforcesofabyssinia",
+        "eventtags": {},
+        "name": "Holy Warrior",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A holy warrior who looks after the souls of the soldiers in the company. The cleric chants inspiring battle prayers, can perform various miracles such as healing or even smiting the enemy. Cleric often carries a portable shrine on his back to denote his faith in the company’s Patron, be that one of the Saints of their homeland, a mighty Arch-Angel or the Lord himself."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A Holy Warrior can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "glossary": []
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_godiswithus"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_holywarriors"
+            }
+        ]
+    },
+    {
         "id": "md_sniperpriest",
         "type": "Model",
         "source": "core",

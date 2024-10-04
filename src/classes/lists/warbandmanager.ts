@@ -733,6 +733,12 @@ class WarbandManager {
                                 const msg = this.NewEquipmentForMember(ContentNew, _warband.Faction.Models[i].Equipment[j], "0", "ducats")
                             }
                         }
+                        if (_warband.Faction.Models[i].AutoUpgrades != undefined) {
+                            let j = 0
+                            for (j = 0; j < _warband.Faction.Models[i].AutoUpgrades.length; j++) {
+                                const msg = this.NewUpgradeForMember(ContentNew, _warband.Faction.Models[i].AutoUpgrades[j], "0", "ducats")
+                            }
+                        }
                     }
                 }
 

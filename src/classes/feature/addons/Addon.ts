@@ -1,6 +1,7 @@
 import {ITrenchCrusadeItemData, TrenchCrusadeItem} from '../../TrenchCrusadeItem'
 import {ItemType} from '../../Enum'
 import { DescriptionFactory } from '../../../utility/functions'
+import { FactionFactory } from '../../../factories/features/FactionFactory';
 
 /**
  * Data structure for a model's abilities and other addons
@@ -19,13 +20,15 @@ class PlayerAddon extends TrenchCrusadeItem {
     public readonly Faction;
     public readonly Description;
     public readonly EventTags;
+    public readonly Team;
 
-    public constructor(data: IPlayerAddon)
+    public constructor(data: IPlayerAddon, _team : string)
     {
         super(data)
         this.ItemType = ItemType.Addon;
         this.Faction = data.faction_id;
         this.EventTags = data.eventtags
+        this.Team = _team
         this.Description = DescriptionFactory(data.description);
     }
 }

@@ -104,6 +104,45 @@
                         ]
     },
     {
+        "id": "up_vanguards",
+        "type": "Upgrade",
+        "name": "Vanguards",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Unless the scenario prohibits use of the special deployment of INFILTRATORS, you may deploy the Vanguard on any table edge as long as they are at least 8” away from any enemy model after INFILTRATORS are deployed. Vanguard can also be deployed in your own deployment zone as standard.",
+                            "glossary": [{"val": "INFILTRATORS", "id": "gl_infiltrator"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_shortrangemarksmanship",
+        "type": "Upgrade",
+        "name": "Short-Range Marksmanship",
+        "eventtags": {"trait": true, "category_ranged": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Gain +1 DICE to all hit rolls if they are using their ranged weapons at short range (i.e. half or less of their maximum range). This bonus does not apply to GRENADES or weapons with the Keyword HEAVY.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "HEAVY", "id": "gl_heavy"}]
+                        }
+                        ]
+    },
+    {
+        "id": "up_chewa",
+        "type": "Upgrade",
+        "name": "Chewa",
+        "eventtags": {"trait": true, "category_melee" : true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "+1 DICE to Melee against enemies that are in Melee Combat with a model other than the Chewa. If this enemy is in Melee Combat with 2+ other models, this bonus is increased to +2 DICE.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
         "id": "up_infiltratornaval",
         "type": "Upgrade",
         "name": "Infiltrator",
