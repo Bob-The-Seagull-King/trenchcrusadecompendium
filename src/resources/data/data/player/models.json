@@ -612,7 +612,6 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
             {"tag_name": "strong", "val": "gl_strong"},
             {"tag_name": "tough", "val": "gl_tough"}
                 ],
@@ -2904,7 +2903,6 @@
         "type": "Model",
         "source": "core",
         "tags": [
-            {"tag_name":"elite", "val": "gl_elite"}
                 ],
         "promotion": 0,
         "movement": [6],
@@ -2929,7 +2927,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Witchburner is equipped with Heavy Armour, wears a Helmet and carries a War Gavel.",
+                "content": "The Witchburner is equipped with Heavy Armour, wears a Helmet and carries a Gavel of Justice.",
                 "glossary": []
             }
             ],
@@ -2941,6 +2939,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_ceremonialduty"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_dignifiedconduct"
             }
         ]
     },
@@ -3057,6 +3059,9 @@
         "type": "Model",
         "source": "core",
         "tags": [
+            {"tag_name":"tough", "val": "gl_tough"},
+            {"tag_name":"fear", "val": "gl_fear"},
+            {"tag_name":"strong", "val": "gl_strong"}
                 ],
         "promotion": 0,
         "movement": [6],
@@ -3092,7 +3097,19 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_unholyhorror"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_devour"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_vomit"
             }
         ]
     },
@@ -3568,8 +3585,27 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mamluk carries a sword, pistol, polearm, and a Jezzail with Alchemical Ammunition. Mamluk wears a helmet, reinforced armour and carries a trench shield.",
+                "content": "A Mamluk carries a Jezzail with Alchemical Ammunition. They wear a Helmet and Reinforced Armour. In addition, before each battle, you may choose one of the following loadouts from their personal armoury and add it to the model at no cost. When you choose a loadout, you must remove equipment on this model gained from previously selected loadouts.:",
                 "glossary": []
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Polearm and Trench Shield"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Sword and Pistol"
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Two-handed sword (Mamluk ignores the Keyword HEAVY on this weapon)",
+                        "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
+                    }
+                ]
             }
             ],
         "abilities":  [

@@ -50,7 +50,7 @@ export const CollectionDataDex : CollectionDataTable = {
             model.CleanupModels();
             model.CleanupCollection();
             let i = 0;
-            model.dataresults.sort(byPropertiesOf<IPlayerEquipment>(['source', 'equip_type', 'name', 'id']))
+            model.dataresults.sort(byPropertiesOf<IPlayerEquipment>(['source', 'name', 'id']))
             for (i = 0; i < model.dataresults.length; i++) {
                 const modelNew = EquipmentFactory.CreateFactory(model.dataresults[i]);
                 const ItemNew = new ViewTableItem(modelNew, getColour("tc"));

@@ -428,7 +428,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As a RISKY ACTION with +1 DICE, the Warlock can Teleport up to 6” in any direction into a free space it can see, including into melee with an enemy model. If the Warlock is already in Melee with one or more enemies, it may select one opposing model with a base size of 32mm or smaller and take it with it as it teleports and there is room for both models in the space they materialise. It may not teleport out of the battlefield. It may teleport even if it is currently Down, but remains so after the teleportation.",
+                "content": "As a RISKY ACTION with +1 DICE, the Warlock can Teleport up to 6” in any direction into a free space it can see, including into melee with an enemy model.The Warlock may bring a single enemy model that is in Melee Combat with it and has a base size of 32mm or smaller. There must be suitable space for the Warlock (and a possible passenger which must end the teleport in Melee Combat with the Warlock) at its target destination or this teleport automatically fails. It may not teleport out of the battlefield. It may teleport even if it is currently Down, but remains so after the teleportation.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
                         ]
@@ -445,7 +445,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Enemies cannot move out of melee combat if they are engaged in battle with the Goetic Warlock.",
+                "content": "Enemies cannot Retreat from the Goetic Warlock. Additionally, if a model is able to move out of Melee Combat with the Warlock because of a special ability (such as the Assassin’s Dagger), they cannot.",
                 "glossary": []
             }
                         ]
@@ -462,7 +462,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers 1 BLOOD MARKER. If the success is a Critical Success, the target suffers 2 BLOOD MARKERS. It can be used against enemies in melee as well.",
+                "content": "This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers 1 BLOOD MARKER. If the success is a Critical Success, the target suffers 2 BLOOD MARKERS. This ACTION can be used against enemy models in Melee Combat without having to randomise the target.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "2 BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
                         ]
@@ -1636,8 +1636,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Witchburner can select any model with the Keyword HERETIC, BLACK GRAIL or DEMON within 36” (even if hidden or out of sight) and bring the Judgement of Heaven upon them with a Litany of Condemnation. This is a RISKY ACTION. If successful, roll D3 and add this number of BLOOD MARKERS to the target as it bursts into agonising flames. This holy fire even affects units that are immune to FIRE weapons.",
-                "glossary": [{"val": "HERETIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMON", "id": "gl_heretic"},{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
+                "content": "The Witchburner can select any model in the opposing warband within 24” (even if hidden or out of sight) and bring the Judgement of Heaven upon them with a Litany of Condemnation. This is a RISKY ACTION. If successful, the model suffers one BLOOD MARKER (models with the Keyword HERETIC, BLACK GRAIL or DEMONIC suffer two BLOOD MARKERS) as it bursts into celestial flames. This holy fire even affects units that are immune to FIRE weapons.",
+                "glossary": [{"val": "HERETIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMON", "id": "gl_court"},{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
             }
         ]
     },
@@ -1653,8 +1653,24 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " The Witchburner has taken vows to persecute heretics with extreme prejudice. Nothing will stop this holy task. The Witchburner is immune to FEAR. Due to the dignity of their status, a Witchburner will never Dash when moving.",
+                "content": "The Witchburner has taken vows to persecute heretics with extreme prejudice. Nothing will stop this holy task. The Witchburner is immune to FEAR.",
                 "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_dignifiedconduct",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Dignified Conduct",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Due to the dignity of their status, a Witchburner cannot take the DASH action."
             }
         ]
     },
@@ -1670,7 +1686,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When a friendly model within 1” of the Monk is activated, you can declare that the Monk is activated at the same time. You may then use the Monk before taking any action or movement with the model you originally activated.",
+                "content": "When a friendly model within 1” of the Monk is activated, you can declare that the Monk is activated at the same time. You may then use the Monk before taking any action or movement with the model you originally activated. This does not allow you to Activate the Monk more than once per Turn.",
                 "glossary": []
             }
         ]
@@ -1701,8 +1717,8 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All ranged attacks ignore penalties for range.",
-                                "glossary": []
+                                "content": "Whenever this model makes an Attack with a Ranged Weapon, add +1 DICE to hit.",
+                                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                             }
                         ]
                     },
@@ -1712,19 +1728,19 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All ranged attacks add +1 to the result of the injury roll.",
-                                "glossary": []
+                                "content": "Add the Keywords SHRAPNEL and BLAST 2” to every Ranged Weapon this model is equipped with.",
+                                "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "BLAST", "id": "gl_blastx"}]
                             }
                         ]
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                        "content": "Echo of the Word:",
+                        "content": "Echo of His Word:",
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "If the ranged attack hits, the enemy model suffers an additional +1 BLOOD MARKER when rolling for injury.",
-                                "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
+                                "content": "Whenever this model makes an Attack with a Ranged Weapon, add +1 to injury rolls caused by that Attack.",
+                                "glossary": []
                             }
                         ]
                     }
@@ -1762,7 +1778,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " Add -1 DICE to all enemy Ranged and Melee Attacks that target the Observer.",
+                "content": "Attacks that target the Observer suffer -1 DICE to hit.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]
@@ -1779,8 +1795,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If the Observer fails any ACTION you take, you may re-roll the dice if you wish. However, if any of the dice roll a 1, there is psychic backlash and the Observer is knocked Down as per Injury Table result, and their Activation immediately ends.",
-                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                "content": "If the Observer fails an ACTION, you may re-roll the dice. However, if any of the dice you roll gives a result of 1, there is psychic backlash and the Observer suffers a Down result (including any resulting BLOOD MARKERS), and their Activation immediately ends.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
         ]
     },
@@ -1810,18 +1826,53 @@
             {"tag_name": "Risky", "val": "gl_riskyaction"}
                 ],
         "faction_id": "fc_none",
-        "name": "Devour",
+        "name": "Devour The Guilty",
         "eventtags": {"action": true},
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The sin eater attempts to consume any model, friend or a foe, on a 40mm or smaller base. This is a RISKY ACTION. If successful, the model is removed from the table and set aside with any BLESSING/BLOOD MARKERS it may have, and they can do nothing while being digested. Each subsequent time the Sin Eater is activated, the poor creature it has consumed gains 1 BLOOD MARKER. Once the victim inside its belly gains 7th BLOOD MARKERS it automatically goes out of action even if it is TOUGH. If Sin Eater is taken Out of Action the model it was digesting will be placed where the Sin Eater was at a time. Sin Eater may also decide to vomit the victim. This is an ACTION with +4 DICE, and the model is placed in melee range with the Sin Eater by the player of the model and it will be Down. Only one model may be devoured at any given time.",
+                "content": " As a RISKY ACTION, the Sin Eater can attempt to consume a model, friend (in which case the ACTION is not RISKY and is done with +1 DICE) or foe, that is on a 40mm or smaller base and is within 1”. ",
                 "glossary": [
                     {"val": "RISKY ACTION", "id": "gl_riskyaction"},
+                    {"val": "RISKY", "id": "gl_riskyaction"},
+                    {"val": "ACTION", "id": "gl_action"},
+                    {"val": "+1 DICE", "id": "gl_plusdice"}
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If successful, remove the model from the table and set aside any markers that the odel has (BLOOD, INFECTION, BLESSING etc.). While it is devoured the model cannot be targeted by any attack or ability. When Activated, the devoured model may make one melee attack ACTION available to it, but the attack suffers a -3 DICE penalty when rolling to hit. A devoured model counts as being Down for all rules purposes (including Morale) and, if it is still devoured at the end of the battle, it counts as being Out of Action instead.",
+                "glossary": [
                     {"val": "BLESSING", "id": "gl_blessingmarker"},
+                    {"val": "BLOOD", "id": "gl_bloodmarker"},
+                    {"val": "INFECTION", "id": "gl_infectionmarker"},
+                    {"val": "-3 DICE", "id": "gl_minusdice"}
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Whenever the Sin Eater is activated, the devoured model suffers one BLOOD MARKER automatically that cannot be avoided by any means. If the devoured model suffers a BLOOD MARKER in this way when it already has six BLOOD MARKERS, it is immediately taken Out of Action and it is no longer considered devoured. If the Sin Eater is taken Out of Action, the devoured model is placed Down where the Sin Eater was. The Sin Eater can only ever have one consumed model in its belly.",
+                "glossary": [
                     {"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},
-                    {"val": "BLOOD MARKER", "id": "gl_bloodmarker"},
-                    {"val": "TOUGH", "id": "gl_tough"},
+                    {"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ab_vomit",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Vomit",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Sin Eater attempts to purge a model it has devoured as an ACTION with +4 DICE. If successful, the model’s controller places the model within 1” of the Sin Eater. If no suitable space exists, the vomit fails and the model remains devoured. The vomited model is Down. The Sin Eater can only use this ACTION if it has a model devoured.",
+                "glossary": [
                     {"val": "ACTION", "id": "gl_action"},
                     {"val": "+4 DICE", "id": "gl_plusdice"}
                 ]
@@ -2195,7 +2246,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mamluk can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form.",
+                "content": "Mamluk can form a FIRETEAM with any one ELITE model in the Warband they are part of. This FIRETEAM is always in addition to any other FIRETEAM(s) the Warband is allowed to form. If a Mamluk joins a New Antioch FIRETEAM, the model benefits from the Co-ordinated Fireteam special rules.",
                 "glossary": [ {"val": "FIRETEAM", "id": "gl_fireteam"}, {"val": "ELITE", "id": "gl_elite"} ]
             }
         ]
@@ -2212,7 +2263,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practise ceaselessly, and thus have few equals. This gives their Jezzails the Keyword ASSAULT as well as Shield Combo ability, and they suffer no penalties for fighting with off-hand weapons in melee. Faris can choose to fight either with Polearm and shield or Sword and Pistol in melee.",
+                "content": "Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practise ceaselessly, and thus have few equals. This gives their Jezzails the Keyword ASSAULT as well as Shield Combo ability, and they suffer no penalties for fighting with off-hand weapons in melee. Additionally, they suffer no penalties for fighting with off-hand weapons in melee.",
                 "glossary": [ {"val": "ASSAULT", "id": "gl_assault"} ]
             }
         ]
