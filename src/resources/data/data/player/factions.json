@@ -467,7 +467,7 @@
             {"id": "eq_standardarmour",             "cost": 20, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_engineerbodyarmour",         "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_combatengineer"}]},
             {"id": "eq_reinforcedarmour",           "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_mechanisedheavyinfantry"}]},
-            {"id": "eq_machinearmour",              "cost": 55, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
+            {"id": "eq_machinearmour",              "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"}]},
             {"id": "eq_trenchshield",               "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_combathelmet",               "cost":  5, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_gasmask",                    "cost":  5, "cost_id": "ducats", "limit": 0, "restriction": []},

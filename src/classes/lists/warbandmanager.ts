@@ -921,18 +921,18 @@ class WarbandManager {
                 }
 
                 const _reroll : IItemPartial = {
-                    id: "em_lucky",
+                    id: "em_reroll",
                     type: "Location",
+                    eventtags : {},
                     source: "core",
-                    eventtags: {},
                     tags: [
                         {tag_name: "common", val: ""}
                         ],
-                    name: "Lucky",
+                    name: "Reroll",
                     description: [
                         {
                             tags: [{tag_name: "desc_type", val: "desc"}],
-                            content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
+                            content: "Re-roll any Exploration dice once.",
                             glossary: []
                         }
                     ]
