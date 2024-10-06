@@ -68,9 +68,9 @@ const WarbandDisplay = (props: any) => {
                                     {WarbandItem.Campaign}
                                 </h2>
                             }
-                            {WarbandItem.Player != null && WarbandItem.Player != "" &&
+                            {WarbandItem.BattleNo != null &&
                                 <h2 className="packtitleminor">
-                                    {WarbandItem.Player}
+                                    Battle Nº {WarbandItem.BattleNo}
                                 </h2>
                             }
                             <span/>

@@ -81,6 +81,29 @@ export const EditNumberDataDex : EditNumberDataTable = {
             close()
         }
     },
+    battleno : {
+        title: "Update Warband's current battle number",
+        returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_warband) { return _warband.BattleNo }
+            return 0;          
+        },
+        returnDisplayValue (_manager : WarbandManager, _warband : Warband | null, _member? : WarbandMember | null) {
+            const battleno = (_warband?.BattleNo != undefined && _warband?.BattleNo != 0)? _warband?.BattleNo : "-"
+            const MaxFieldStrength = ((_warband?.BattleNo != undefined && _warband?.BattleNo != 0)? _warband?.BattleNo + 9 : "∞") 
+            const CurrentFieldStrength = _warband?.Members.filter(x => x.Reserve !== true).length
+            return ( <span>{(_warband)? (battleno + " (" + CurrentFieldStrength + "/" + MaxFieldStrength + " Units)") : ""}</span>)    
+        },
+        returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
+            return true;
+        },
+        updateNumber (_manager : WarbandManager, _warband : Warband | null, itemName : number, close : any, update: any, _member? : WarbandMember | null) {
+            if (_warband) {
+                _warband.BattleNo = Number(itemName);
+                update()
+            }
+            close()
+        }
+    },
     paychestlost : {
         title      : 'Update Lost Ducats',
         returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {

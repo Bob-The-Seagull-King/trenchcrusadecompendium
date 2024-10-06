@@ -36,6 +36,40 @@ const WarbandEditBankDisplay = (props: any) => {
     )
 }
 
+const WarbandEditDucatAndBattleBankDisplay = (props: any) => {
+    const WarbandItem: Warband = props.data;
+    const UpdateFunction = props.updater;
+    const Manager : WarbandManager = props.manager;
+
+    return (
+        <>
+            <div className="col-md-2 align-content-center" style={{textAlign:"center"}}>
+                <div className="row justify-content-right" style={{height:"fit-content"}}>
+                    <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
+                        Ducats
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-4">
+                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={'ducats'} updater={UpdateFunction}/>
+            </div> 
+            <div className="col d-block d-md-none">
+                <div className="verticalspacerbig"/>
+            </div>
+            <div className="col-md-2 align-content-center" style={{textAlign:"center"}}>
+                <div className="row justify-content-right" style={{height:"fit-content"}}>
+                    <div className="mediumsubfonttext" style={{width:"fit-content",height:"fit-content"}}>
+                        Battle No
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-4">
+                <GenericEditNumberDisplay manager={Manager} warband={WarbandItem} statictype={'battleno'} updater={UpdateFunction}/>
+            </div>
+        </>
+    )
+}
+
 const WarbandEditBankDisplaySimple = (props: any) => {
     const WarbandItem: Warband = props.data;
     const UpdateFunction = props.updater;
@@ -61,4 +95,4 @@ const WarbandEditBankDisplaySimple = (props: any) => {
     )
 }
 
-export {WarbandEditBankDisplay, WarbandEditBankDisplaySimple};
+export {WarbandEditBankDisplay, WarbandEditBankDisplaySimple, WarbandEditDucatAndBattleBankDisplay};

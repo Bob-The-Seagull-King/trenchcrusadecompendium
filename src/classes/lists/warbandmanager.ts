@@ -479,6 +479,10 @@ class WarbandManager {
                 data[i].PayChest = 0;
             }
 
+            if (data[i].BattleNo === undefined) {
+                data[i].BattleNo = 1;
+            }
+
             // Update the warband's faction
             const factionid = data[i].Faction.ID;
             let j = 0;
@@ -956,6 +960,7 @@ class WarbandManager {
                     name: _name.trim(),
                     player: _player.trim(),
                     campaign: _campaign.trim(),
+                    battle_no: 0,
                     faction: factionVal.InterfaceVal,
                     flavour: [],
                     notes: "",
