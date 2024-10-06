@@ -18,7 +18,7 @@ import { IListEquipment, ListEquipment } from './ListEquipment';
 import { IItemPartial } from '../../classes/feature/list/ListGroup';
 import { IListItem, ListItem } from '../../classes/feature/list/ListItem';
 import { FactionUpgrade, IFactionUpgrade, IUpgradeData } from '../../classes/feature/factions/FactionUpgrade';
-import { TotalCostDucats, TotalCostGlory, CalcID } from './warbandmanagerstatic';
+import { GetDucatCost, TotalCostDucats, TotalCostGlory, CalcID } from './warbandmanagerstatic';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -643,6 +643,11 @@ class WarbandManager {
      * @param _member The member to duplicate
      */
     public DuplicateMember(_warband : Warband, _member : WarbandMember) {
+        if (_warband) {
+            if (_member.Model.CostType == "ducats") {
+                _warband.PayChest -= Math.floor(Number(GetDucatCost(_member)))
+            }
+        }
         const NewMember : WarbandMember = JSON.parse(JSON.stringify(_member));
         NewMember.Name = _member.Name + " - Copy"
         _warband.Members.push(NewMember);
@@ -893,7 +898,7 @@ class WarbandManager {
      * @param _faction The faction this warband belongs to
      * @returns A string message, if non-null then something wrong has happened
      */
-    public NewWarband(_name : string, _faction : string) {
+    public NewWarband(_name : string, _faction : string, _campaign: string, _player: string) {
 
         let ReturnMsg = "";
         try {
@@ -949,6 +954,8 @@ class WarbandManager {
                     locations : [],
                     modifiers : [_reroll],
                     name: _name.trim(),
+                    player: _player.trim(),
+                    campaign: _campaign.trim(),
                     faction: factionVal.InterfaceVal,
                     flavour: [],
                     notes: "",

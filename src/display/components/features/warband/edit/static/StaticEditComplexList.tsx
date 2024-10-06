@@ -40,7 +40,7 @@ export const EditListDataDex : EditListDataTable = {
     warbandequipment: {
         title: 'Add To The Armoury',
         returnItemArray (_warband : Warband | null, _member? : WarbandMember | null) {
-            if (_warband) { return _warband.Armoury; }
+            if (_warband) { return [{"Armoury": _warband.Armoury}]; }
             return []
         },
         returnShowSelector (_warband : Warband | null, _member? : WarbandMember | null) {
@@ -73,7 +73,19 @@ export const EditListDataDex : EditListDataTable = {
             return FilterList;
         },
         returnItem (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
-            return ( <ItemEquipDisplay  updater={update} manager={_manager} warband={_warband} data={_item} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/> )
+            return (
+                <>
+                    {Object.keys(_item).map((item) => (
+                        <>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator" style={{fontSize:"3em"}}>{item}</div>
+                            {_item[item].map((_var : any) => (
+                                <ItemEquipDisplay key={_var.ID} updater={update} manager={_manager} warband={_warband} data={_var} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/>
+                            ))}
+                        </>
+                    ))}
+                </>
+            )
         },
         returnItemData (_this : EditListType, _manager : WarbandManager, _warband : Warband | null, _item : any, _filter : {[_name : string] : boolean}, _member? : WarbandMember | null) {
             if ((_filter['Restricted'] === true) && (_warband)) {
@@ -237,7 +249,7 @@ export const EditListDataDex : EditListDataTable = {
                                     <div className="verticalspacerbig"/>
                                     <ItemMemberDisplay updater={update} manager={_manager} warband={_warband} member={_var} tossitem={_this.tossItem} sellitem={_this.sellItem} refunditem={_this.refundItem}/>
                                 </>
-                            ))}                            
+                            ))}
                         </>
                      ))}
                 </> 

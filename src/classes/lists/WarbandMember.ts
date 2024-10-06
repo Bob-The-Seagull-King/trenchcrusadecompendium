@@ -138,6 +138,7 @@ class WarbandMember {
             model: this.Model.converttointerface(),
             equipment: equip,
             elite: this.Elite,
+            reserve: this.Reserve,
             injuries: inj,
             skills: this.Skills,
             experience: this.Experience,

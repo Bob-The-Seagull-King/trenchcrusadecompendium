@@ -128,7 +128,7 @@ const ItemMemberDisplay = (props: any) => {
             <div className="row" key={key}>
 
                 {WarbandMember.Reserve != true &&
-                    <div className="col-sm-3 col-12">
+                    <div className="col-md-3">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
@@ -138,7 +138,7 @@ const ItemMemberDisplay = (props: any) => {
                 }
 
                 {WarbandMember.Reserve == true &&
-                    <div className="col-sm-6 col-12">
+                    <div className="col-md-6">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => duplicateModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Copy Model</div>
@@ -148,7 +148,7 @@ const ItemMemberDisplay = (props: any) => {
                 }
                 
                 {WarbandMember.Reserve != true &&
-                    <div className="col-sm-3 col-12">
+                    <div className="col-md-3 col-12">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote This Model</div>
@@ -157,7 +157,7 @@ const ItemMemberDisplay = (props: any) => {
                     </div>
                 }
                 {WarbandMember.Reserve != true &&
-                    <div className="col-sm-3 col-12">
+                    <div className="col-md-3 col-12">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className={"subfonttext generalbuttonbox" + ((WarbandMember.Elite == true)? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => demoteModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Demote This Model</div>
@@ -166,7 +166,7 @@ const ItemMemberDisplay = (props: any) => {
                     </div>
                 }
                 {WarbandMember.Reserve != true &&
-                    <div className="col-sm-3 col-12">
+                    <div className="col-md-3 col-12">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className={"subfonttext generalbuttonbox" + (WarbandMember.Reserve? " disabledbox" : " hovermouse")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => storeModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Send Model to Reserve</div>
@@ -176,7 +176,7 @@ const ItemMemberDisplay = (props: any) => {
                 }
 
                 {WarbandMember.Reserve == true &&
-                    <div className="col-sm-6 col-12">
+                    <div className="col-md-6 col-12">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
                             <div className={"subfonttext generalbuttonbox" + (WarbandMember.Reserve? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => fieldModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Field This Model</div>
@@ -192,9 +192,11 @@ const ItemMemberDisplay = (props: any) => {
     return (
         <>
             <div className={'modelStructure borderstyler border'+getColour(WarbandMember.Model.Object.Faction)} style={{padding:"0em"}}>
-                <h1 className={'titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
+                <h1 className={'row titleShape titlestyler background'+getColour(WarbandMember.Model.Object.Faction)}>
+                    <div className="col-md-8 col-lg-10">
                     <GenericEditTextDisplay manager={Manager} warband={WarbandItem} member={WarbandMember} statictype={'membername'}/>
-                    <div className="row float-end">
+                    </div>
+                    <div className="col-md-4 col-lg-2 row float-end">
                         {WarbandMember.Reserve != true &&
                         <div className='col-4'>
                                 <div style={{}}>
@@ -231,13 +233,15 @@ const ItemMemberDisplay = (props: any) => {
                     <div>
                         {returnStats()}
                     </div>
-                    <div className="verticalspacer"/>
-                    <div>
-                        <div className="separator">&#x27E1;</div>
-                    </div> 
-                    <div className="verticalspacer"/>
-                    <div className="row">
-                        {returnButtons()}
+                    <div className='d-none d-md-block'>
+                        <div className="verticalspacer"/>
+                        <div>
+                            <div className="separator">&#x27E1;</div>
+                        </div> 
+                        <div className="verticalspacer"/>
+                        <div className="row">
+                            {returnButtons()}
+                        </div>
                     </div>
                 </div>
             </div>

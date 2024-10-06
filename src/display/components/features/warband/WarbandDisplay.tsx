@@ -63,6 +63,16 @@ const WarbandDisplay = (props: any) => {
                             <h1 className="packtitle">
                                 {WarbandItem.Name}
                             </h1>
+                            {WarbandItem.Campaign != null && WarbandItem.Campaign != "" &&
+                                <h2 className="packtitleminor">
+                                    {WarbandItem.Campaign}
+                                </h2>
+                            }
+                            {WarbandItem.Player != null && WarbandItem.Player != "" &&
+                                <h2 className="packtitleminor">
+                                    {WarbandItem.Player}
+                                </h2>
+                            }
                             <span/>
                             <span className="packvrbox">
                             <div className="vr packvr"></div>

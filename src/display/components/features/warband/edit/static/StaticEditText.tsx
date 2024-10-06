@@ -68,6 +68,60 @@ export const EditTextDataDex : EditTextDataTable = {
             close();
         }
     },
+    warbandplayer : {
+        title : 'Update Warband Player',
+        returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_warband) {return _warband.Player}
+            return ""
+        },
+        returnButton (_manager : WarbandManager, _warband : Warband | null, open : any, _member? : WarbandMember | null) {
+            const Warband_Name = (_warband && _warband.Player != null && _warband.Player != "")? _warband.Player : "[No Player Name]"
+
+            return (
+                <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                    <div style={{width:"fit-content"}}>
+                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="d-none d-md-block">{Warband_Name}</div>
+                        <div style={{marginRight:"0.1em",fontSize:"0.7em",lineHeight:"0.75em",textAlign:"center",width:"fit-content"}} className="d-block d-md-none">{Warband_Name}</div>
+                    </div>
+                    <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => open()}/>
+                </div>
+            )
+        },
+        updateText (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _member? : WarbandMember | null) {    
+            if (_warband != null) {
+                _warband.Player = itemName.trim();
+                update()
+            }
+            close();
+        }
+    },
+    warbandcampaign : {
+        title : 'Update Warband Campaign',
+        returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
+            if (_warband) {return _warband.Campaign}
+            return ""
+        },
+        returnButton (_manager : WarbandManager, _warband : Warband | null, open : any, _member? : WarbandMember | null) {
+            const Warband_Name = (_warband && _warband.Campaign != null && _warband.Campaign != "")? _warband.Campaign : "[No Active Campaign]"
+
+            return (
+                <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                    <div style={{width:"fit-content"}}>
+                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="d-none d-md-block">{Warband_Name}</div>
+                        <div style={{marginRight:"0.1em",fontSize:"0.7em",lineHeight:"0.75em",textAlign:"center",width:"fit-content"}} className="d-block d-md-none">{Warband_Name}</div>
+                    </div>
+                    <FontAwesomeIcon icon={faPenToSquare} className="hovermouse" style={{fontSize:"0.5em"}}  onClick={() => open()}/>
+                </div>
+            )
+        },
+        updateText (_manager : WarbandManager, _warband : Warband | null, itemName : string, close : any, update: any, _member? : WarbandMember | null) {    
+            if (_warband != null) {
+                _warband.Campaign = itemName.trim()
+                update()
+            }
+            close();
+        }
+    },
     warbandimage : {
         title : 'Update Warband Image URL',
         returnBaseValue (_warband : Warband | null, _member? : WarbandMember | null) {
@@ -79,7 +133,7 @@ export const EditTextDataDex : EditTextDataTable = {
             
             return (
                 <div className={" hovermouse borderstyler bordertc"} style={{width:"100%", maxHeight: "calc(40vh)"}} onClick={() => open()} >
-                    <Image src={srcVal} fluid />
+                    <Image src={srcVal} style={{width:"100%", maxHeight: "calc(40vh)"}} fluid />
                 </div>
             )
         },
