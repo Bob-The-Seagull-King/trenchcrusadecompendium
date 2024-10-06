@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 import WarbandFactionEditDisplay from './edit/WarbandEditFactionDisplay';
-import { WarbandEditBankDisplay, WarbandEditBankDisplaySimple } from './edit/WarbandEditBankDisplay';
+import { WarbandEditBankDisplay, WarbandEditDucatAndBattleBankDisplay } from './edit/WarbandEditBankDisplay';
 import GenericEditListDisplay from './edit/GenericEditListDisplay';
 import GenericEditComplexListDisplay from './edit/GenericEditComplexListDisplay';
 import GenericEditTextDisplay from './edit/GenericEditTextDisplay';
@@ -69,10 +69,10 @@ const WarbandManageDisplay = (props: any) => {
                         </div>
                         <div className="row">
                             <div className="verticalspacer"/>
-                            <WarbandEditBankDisplaySimple data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'ducats'}/>
+                            <WarbandEditDucatAndBattleBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager}/>
                         </div>
                         <div className="row">
-                            <div className="verticalspacer"/>
+                            <div className="verticalspacerbig"/>
                             <WarbandEditBankDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} type={'paychest'}/>
                         </div>
                         <div className="row">
@@ -99,16 +99,25 @@ const WarbandManageDisplay = (props: any) => {
                     </div>
 
                     <div className="row">
-                        <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandname'} updater={UpdateFunction}/> 
+                        <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandname'} updater={UpdateFunction}/>
                     </div>
 
                     <div className="verticalspacerbig"/>
 
                     <div className="row justify-content-center">
-                        <div className="col-lg-9 col-md-9 col-12">
+                        <div className="col-lg-9 col-12">
                             <div className="row">
                                 <div className="col-12">
                                     <WarbandFactionEditDisplay data={WarbandItem} updater={UpdateFunction} manager={Manager} />
+                                </div>
+                            </div>
+                            <br />
+                            <div className="row">
+                                <div className="col-md-6" style={{marginTop: "0.5em"}}>
+                                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandplayer'} updater={UpdateFunction}/>
+                                </div>
+                                <div className="col-md-6" style={{marginTop: "0.5em"}}>
+                                    <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandcampaign'} updater={UpdateFunction}/>
                                 </div>
                             </div>
                             <div>
@@ -118,7 +127,7 @@ const WarbandManageDisplay = (props: any) => {
                             {ReturnBank()}
                             <div className="verticalspacerbig"/>
                         </div>
-                        <div className="col-lg-3 col-md-3 col-12">
+                        <div className="col-lg-3 col-12">
                             <GenericEditTextDisplay manager={Manager} warband={WarbandItem} statictype={'warbandimage'} updater={UpdateFunction}/> 
                         </div>
                     </div>
@@ -129,10 +138,18 @@ const WarbandManageDisplay = (props: any) => {
 
                     <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-8 col-12">
-                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandmember'} updater={UpdateFunction}/> 
+                            <div className="verticalspacer"/>
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandmember'} updater={UpdateFunction}/>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator" style={{fontSize:"3em"}}>&#x27E1;</div>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-12">     
-                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/> 
+                        <div className="col-lg-4 col-md-4 col-12">
+                            <div className="verticalspacer"/>
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandequipment'} updater={UpdateFunction}/>
+                            <div className="verticalspacerbig"/>
+                            <div className="separator" style={{fontSize:"3em"}}>&#x27E1;</div>
+                            <div className="verticalspacerbig"/>
+                            <GenericEditComplexListDisplay manager={Manager} warband={WarbandItem} statictype={'warbandreservemember'} updater={UpdateFunction}/>
                         </div>
                     </div>
 

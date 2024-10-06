@@ -18,7 +18,7 @@ import { IListEquipment, ListEquipment } from './ListEquipment';
 import { IItemPartial } from '../../classes/feature/list/ListGroup';
 import { IListItem, ListItem } from '../../classes/feature/list/ListItem';
 import { FactionUpgrade, IFactionUpgrade, IUpgradeData } from '../../classes/feature/factions/FactionUpgrade';
-import { TotalCostDucats, TotalCostGlory, CalcID } from './warbandmanagerstatic';
+import { GetDucatCost, TotalCostDucats, TotalCostGlory, CalcID } from './warbandmanagerstatic';
 
 class WarbandManager {
     WarbandList: Warband[] = [];
@@ -479,6 +479,10 @@ class WarbandManager {
                 data[i].PayChest = 0;
             }
 
+            if (data[i].BattleNo === undefined) {
+                data[i].BattleNo = 1;
+            }
+
             // Update the warband's faction
             const factionid = data[i].Faction.ID;
             let j = 0;
@@ -643,6 +647,11 @@ class WarbandManager {
      * @param _member The member to duplicate
      */
     public DuplicateMember(_warband : Warband, _member : WarbandMember) {
+        if (_warband) {
+            if (_member.Model.CostType == "ducats") {
+                _warband.PayChest -= Math.floor(Number(GetDucatCost(_member)))
+            }
+        }
         const NewMember : WarbandMember = JSON.parse(JSON.stringify(_member));
         NewMember.Name = _member.Name + " - Copy"
         _warband.Members.push(NewMember);
@@ -673,7 +682,7 @@ class WarbandManager {
      * @param _costtype If the member cost Ducats or Glory
      * @returns A string message, if non-null then something wrong has happened
      */
-    public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string){
+    public NewMember(_warband : Warband, _name : string, _model : string, _cost : string, _costtype : string, reserve = false){
         let ReturnMsg = "";
         let modelVal : any = null;
         let memberName = "";
@@ -705,7 +714,7 @@ class WarbandManager {
                 const modelList : IListModel = {
                     id: modelVal? modelVal.ID : "",
                     cost: parseInt(_cost),
-                    cost_type: _costtype                    
+                    cost_type: _costtype
                     }
 
                 const _content : IWarbandMember = {
@@ -713,6 +722,7 @@ class WarbandManager {
                     model: modelList,
                     equipment: [],
                     elite: isElite,
+                    reserve: reserve,
                     injuries: [],
                     skills: [],
                     experience: 0,
@@ -892,7 +902,7 @@ class WarbandManager {
      * @param _faction The faction this warband belongs to
      * @returns A string message, if non-null then something wrong has happened
      */
-    public NewWarband(_name : string, _faction : string) {
+    public NewWarband(_name : string, _faction : string, _campaign: string, _player: string) {
 
         let ReturnMsg = "";
         try {
@@ -948,6 +958,9 @@ class WarbandManager {
                     locations : [],
                     modifiers : [_reroll],
                     name: _name.trim(),
+                    player: _player.trim(),
+                    campaign: _campaign.trim(),
+                    battle_no: 0,
                     faction: factionVal.InterfaceVal,
                     flavour: [],
                     notes: "",

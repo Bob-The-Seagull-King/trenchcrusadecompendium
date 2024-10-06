@@ -17,6 +17,9 @@ interface IWarband {
     locations? : IItemPartial[],
     modifiers? : IItemPartial[],
     name: string,
+    player: string,
+    campaign: string,
+    battle_no: number,
     faction: IPlayerFaction,
     flavour: ITextBlock[],
     notes: string,
@@ -36,6 +39,9 @@ interface IWarband {
 export class Warband {
     public ID;
     public Name;
+    public Player;
+    public Campaign;
+    public BattleNo;
     public Faction;
     public Image;
     public DucatTotal;
@@ -93,6 +99,9 @@ export class Warband {
         }
 
         this.Name = data.name;
+        this.Player = data.player;
+        this.Campaign = data.campaign;
+        this.BattleNo = data.battle_no;
         this.Faction = FactionFactory.CreateFactory(data.faction);
         this.Image = data.image;
 
@@ -182,6 +191,9 @@ export class Warband {
             locations : this.Locations,
             modifiers : this.Modifiers,
             name: this.Name,
+            player: this.Player,
+            campaign: this.Campaign,
+            battle_no: this.BattleNo,
             faction: this.Faction.ObjData,
             flavour: textblock,
             notes: this.Notes,

@@ -17,6 +17,7 @@ interface IWarbandMember {
     model: IListModel,
     equipment: IListEquipment[],
     elite: boolean,
+    reserve: boolean,
     injuries: IListItem[],
     skills: IItemPartial[],
     experience: number,
@@ -32,6 +33,7 @@ interface IWarbandMember {
 class WarbandMember {
     public Name;
     public Elite;
+    public Reserve;
     public Model;
     public Equipment;
     public Injuries;
@@ -44,6 +46,7 @@ class WarbandMember {
     public constructor(data: IWarbandMember) {
         this.Name = data.name;
         this.Elite = data.elite;
+        this.Reserve = data.reserve;
         this.Experience = data.experience;
         this.Scars = data.scars;
 
@@ -135,6 +138,7 @@ class WarbandMember {
             model: this.Model.converttointerface(),
             equipment: equip,
             elite: this.Elite,
+            reserve: this.Reserve,
             injuries: inj,
             skills: this.Skills,
             experience: this.Experience,
