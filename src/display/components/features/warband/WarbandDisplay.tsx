@@ -37,7 +37,12 @@ const WarbandDisplay = (props: any) => {
         )}`;
         const link = document.createElement("a");
         link.href = jsonString;
-        link.download = WarbandItem.Name + ".json";
+        link.download = (
+            WarbandItem.Name +
+            (WarbandItem.Player? " - " + WarbandItem.Player : "") +
+            (WarbandItem.Campaign? " - " + WarbandItem.Campaign: "") +
+            (WarbandItem.BattleNo? " - Battle No " + WarbandItem.BattleNo: "") +
+            ".json");
     
         link.click();
       };
@@ -68,7 +73,7 @@ const WarbandDisplay = (props: any) => {
                                     {WarbandItem.Campaign}
                                 </h2>
                             }
-                            {WarbandItem.BattleNo != null &&
+                            {WarbandItem.BattleNo != null && WarbandItem.BattleNo != 0 && WarbandItem.BattleNo != 1 &&
                                 <h2 className="packtitleminor">
                                     Battle Nº {WarbandItem.BattleNo}
                                 </h2>

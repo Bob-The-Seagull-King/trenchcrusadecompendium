@@ -32,7 +32,12 @@ const WarbandManageDisplay = (props: any) => {
         )}`;
         const link = document.createElement("a");
         link.href = jsonString;
-        link.download = WarbandItem.Name + ".json";
+        link.download = (
+            WarbandItem.Name +
+            (WarbandItem.Player? " - " + WarbandItem.Player : "") +
+            (WarbandItem.Campaign? " - " + WarbandItem.Campaign: "") +
+            (WarbandItem.BattleNo? " - Battle No " + WarbandItem.BattleNo: "") +
+            ".json");
     
         link.click();
       };
