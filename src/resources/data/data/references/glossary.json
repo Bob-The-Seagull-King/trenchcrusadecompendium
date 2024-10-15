@@ -324,6 +324,20 @@
         }]
     },
     {
+        "id": "gl_artificial",
+        "type": "Glossary",
+        "source": "core",
+        "tags": [
+            {"tag_name": "category", "val": "model"}
+        ],
+        "name": "Artificial",
+        "description":  [{
+            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The model is not affected by FEAR. Additionally, attacks with the Keyword GAS suffer a -1 DICE penalty to injure the Witch and they do not suffer additional BLOOD MARKERS from the Keyword GAS.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+        }]
+    },
+    {
         "id": "gl_goetic",
         "type": "Glossary",
         "source": "core",

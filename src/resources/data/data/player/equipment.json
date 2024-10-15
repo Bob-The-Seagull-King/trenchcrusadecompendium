@@ -2988,8 +2988,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "If the Witchburner hits an enemy with the Gavel of Justice, the target of the attack automatically sustains Divine Judgement as explained in the Witchburner’s Abilities, even if the attack did no damage otherwise. Thus the Witchburner can potentially cause two Divine Judgements in a single Activation, targeting either the same model or two separate ones.",
-                            "glossary": []
+                            "content": "If the Witchburner hits an enemy with the Gavel of Justice, the target of the attack automatically sustains Divine Judgement as explained in the Witchburner’s Abilities, even if the attack did no damage otherwise. Thus the Witchburner can potentially cause two Divine Judgements in a single Activation, targeting either the same model or two separate ones. This does not count as the Witchburner having used the Divine Judgement ACTION",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
                         }
                     ]
                 }

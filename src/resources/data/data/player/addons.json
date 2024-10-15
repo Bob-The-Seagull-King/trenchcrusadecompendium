@@ -462,7 +462,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers 1 BLOOD MARKER. If the success is a Critical Success, the target suffers 2 BLOOD MARKERS. This ACTION can be used against enemy models in Melee Combat without having to randomise the target.",
+                "content": "This is an ACTION which is modified exactly the same way as a ranged attack, executed against one enemy the Warlock can see within 24”. If successful, the model suffers 1 BLOOD MARKER. If the success is a Critical Success, the target suffers 2 BLOOD MARKERS instead. This ACTION can be used against enemy models in Melee Combat without having to randomise the target.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "2 BLOOD MARKERS", "id": "gl_bloodmarker"}]
             }
                         ]
@@ -1637,7 +1637,7 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "The Witchburner can select any model in the opposing warband within 24” (even if hidden or out of sight) and bring the Judgement of Heaven upon them with a Litany of Condemnation. This is a RISKY ACTION. If successful, the model suffers one BLOOD MARKER (models with the Keyword HERETIC, BLACK GRAIL or DEMONIC suffer two BLOOD MARKERS) as it bursts into celestial flames. This holy fire even affects units that are immune to FIRE weapons.",
-                "glossary": [{"val": "HERETIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMON", "id": "gl_court"},{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
+                "glossary": [{"val": "HERETIC", "id": "gl_heretic"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"},{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"}]
             }
         ]
     },
@@ -1670,7 +1670,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Due to the dignity of their status, a Witchburner cannot take the DASH action."
+                "content": "Due to the dignity of their status, a Witchburner cannot take the dash action."
             }
         ]
     },
@@ -1686,8 +1686,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When a friendly model within 1” of the Monk is activated, you can declare that the Monk is activated at the same time. You may then use the Monk before taking any action or movement with the model you originally activated. This does not allow you to Activate the Monk more than once per Turn.",
-                "glossary": []
+                "content": "When a friendly model within 1” of the Monk is activated, you can declare that the Monk is activated at the same time. You may then use the Monk before taking any ACTION or movement with the model you originally activated. This does not allow you to Activate the Monk more than once per Turn.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
     },
@@ -1704,7 +1704,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Ammo monk can take a RISKY ACTION to provide one friendly model within 1” with one of the following benefits, which lasts for the duration of the target model’s Activation during this Turn:",
+                "content": "As a RISKY ACTION, the Monk can provide a friendly model within 1” of it with one of the following benefits. The chosen benefit lasts until the end of the targeted model’s Activation this Turn:",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             },
             {
@@ -1813,7 +1813,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As a RISKY ACTION, the Observer may command any model on the board, friend or foe, that has not been Activated this Turn. If you succeed on the roll, that model is compelled by the Divine Words and will be activated immediately, and the Observer’s Activation ends.",
+                "content": "As a RISKY ACTION, the Observer may command any model on the board, friend or foe, that has not been Activated this Turn. If successful, that model is compelled by the Divine Words. The Observer’s Activation immediately ends and the target’s Activation begins immediately after.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
@@ -1841,11 +1841,12 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If successful, remove the model from the table and set aside any markers that the odel has (BLOOD, INFECTION, BLESSING etc.). While it is devoured the model cannot be targeted by any attack or ability. When Activated, the devoured model may make one melee attack ACTION available to it, but the attack suffers a -3 DICE penalty when rolling to hit. A devoured model counts as being Down for all rules purposes (including Morale) and, if it is still devoured at the end of the battle, it counts as being Out of Action instead.",
+                "content": "If successful, remove the model from the table and set aside any markers that the model has (BLOOD, INFECTION, BLESSING etc.). While it is devoured the model cannot be targeted by any attack or ability. When Activated, the devoured model may make one melee attack ACTION available to it, but the attack suffers a -3 DICE penalty when rolling to hit. A devoured model counts as being Down for all rules purposes (including Morale) and, if it is still devoured at the end of the battle, it counts as being Out of Action instead.",
                 "glossary": [
                     {"val": "BLESSING", "id": "gl_blessingmarker"},
                     {"val": "BLOOD", "id": "gl_bloodmarker"},
                     {"val": "INFECTION", "id": "gl_infectionmarker"},
+                    {"val": "ACTION", "id": "gl_action"},
                     {"val": "-3 DICE", "id": "gl_minusdice"}
                 ]
             },
@@ -2263,7 +2264,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practise ceaselessly, and thus have few equals. This gives their Jezzails the Keyword ASSAULT as well as Shield Combo ability, and they suffer no penalties for fighting with off-hand weapons in melee. Additionally, they suffer no penalties for fighting with off-hand weapons in melee.",
+                "content": "Mamluks are disciples of Furūsiyya, the Knightly Discipline passed on through generations, they practise ceaselessly, and thus have few equals. This gives their Jezzails the Keyword ASSAULT as well as Shield Combo ability, and they suffer no penalties for fighting with off-hand weapons in melee.",
                 "glossary": [ {"val": "ASSAULT", "id": "gl_assault"} ]
             }
         ]

@@ -372,6 +372,8 @@
         "source": "core",
         "tags": [
             {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "demonic", "val": "gl_demonic"},
+            {"tag_name": "artificial", "val": "gl_artificial"},
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "promotion": 0,
@@ -393,7 +395,7 @@
         ],
         "equipment":  [{
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Warlock wears Heavy Armour. A Warlock counts as being armed with two swords in Melee combat - its arms are deadly weapons in their own right."
+                "content": "The Warlock wears Reinforced Armour. A Warlock counts as being armed with two swords in Melee combat - its arms are deadly weapons in their own right."
             },{
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "You cannot alter their weapons and equipment in any way."
@@ -638,7 +640,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Communicant is armed with an anti-materiel rifle and a helmet. They count as being armed with two Trench clubs in Melee combat - its arms are deadly weapons in their own right. Their flesh is hard as iron, so Communicants are considered to be wearing Standard Armour as noted in their profile."
+                "content": "The Communicant is armed with an anti-materiel rifle and a helmet. They count as being armed with two Trench clubs in Melee combat - its arms are deadly weapons in their own right. Their flesh is hard as iron, so Communicants are considered to be wearing Standard Armour as noted in their profile. You may not alter their weapons and equipment."
             }
             ],
         "abilities":  [
@@ -2913,7 +2915,7 @@
         "faction_id": "fc_none",
         "variant_id": "fv_basic",
         "eventtags": {},
-        "name": "Witchburner General",
+        "name": "Witchburner",
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
@@ -2927,7 +2929,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Witchburner is equipped with Heavy Armour, wears a Helmet and carries a Gavel of Justice.",
+                "content": "The Witchburner is equipped with Reinforced Armour, wears a Helmet and carries a Gavel of Justice. You cannot alter their armour, weapons or equipment in any way.",
                 "glossary": []
             }
             ],
@@ -2979,7 +2981,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Monk has no weapons. They wear a gas mask and carry the Ammunition Sacrament (see below).",
+                "content": "The Monk has no weapons. They wear a gas mask and carry the Ammunition Sacrament (see below). You may not change their armaments in any way.",
                 "glossary": []
             }
             ],
@@ -3002,10 +3004,10 @@
                 ],
         "promotion": 0,
         "movement": [8],
-        "ranged": [],
+        "ranged": [1],
         "melee": [2],
         "armour": [0],
-        "base": [25],
+        "base": [32],
         "faction_id": "fc_none",
         "variant_id": "fv_basic",
         "eventtags": {},
@@ -3031,7 +3033,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Standard Armour, Oculus Helm (counts as Combat Helmet and Gas Mask), Trench Polearm, in-built First Aid Kit.",
+                "content": "Standard Armour, Oculus Helm (counts as Combat Helmet and Gas Mask), Trench Polearm, in-built Medi-Kit. You cannot alter the Observer's weapon and equipment in any way.",
                 "glossary": []
             }
             ],
@@ -3061,7 +3063,8 @@
         "tags": [
             {"tag_name":"tough", "val": "gl_tough"},
             {"tag_name":"fear", "val": "gl_fear"},
-            {"tag_name":"strong", "val": "gl_strong"}
+            {"tag_name":"strong", "val": "gl_strong"},
+            {"tag_name":"heretic", "val": "gl_heretic"}
                 ],
         "promotion": 0,
         "movement": [6],
@@ -3086,7 +3089,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Heavy Armour and 2-handed Tenderizer Maul. You cannot alter Sin Eater’s weapons and equipment in any way.",
+                "content": "The Sin Eater is equipped with Reinforced Armour and a 2-handed Tenderizer Maul. You cannot alter the Sin Eater’s weapons and equipment in any way",
                 "glossary": []
             }
             ],
@@ -3585,7 +3588,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Mamluk carries a Jezzail with Alchemical Ammunition. They wear a Helmet and Reinforced Armour. In addition, before each battle, you may choose one of the following loadouts from their personal armoury and add it to the model at no cost. When you choose a loadout, you must remove equipment on this model gained from previously selected loadouts.:",
+                "content": "A Mamluk carries a Jezzail with Alchemical Ammunition. They wear a Helmet and Reinforced Armour. In addition, before each battle, you may choose one of the following loadouts from their personal armoury:",
                 "glossary": []
             },
             {

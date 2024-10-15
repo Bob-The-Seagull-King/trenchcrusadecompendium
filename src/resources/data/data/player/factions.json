@@ -240,8 +240,8 @@
             {"id": "md_martyrdomdog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_martyrdomdevice", "cost": 35, "cost_id": "ducats"}]},
             {"id": "md_witchburnergeneral", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_combathelmet","eq_wargavel"], "upgrades": []},
             {"id": "md_communicantantitankhunter", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"], "upgrades": []},
-            {"id": "md_mendelistammomonk", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": []},
-            {"id": "md_observer", "cost": 5, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": []},
+            {"id": "md_mendelistammomonk", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": []},
+            {"id": "md_observer", "cost": 3, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": []},
             {"id": "md_combatmedic",                "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_misericordia","eq_medikit","eq_gasmask","eq_standardarmour"], "upgrades": []}
         ]
     },
@@ -508,8 +508,8 @@
             {"id": "md_mercydog",                   "cost":  2, "cost_id": "glory",  "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": []},
             {"id": "md_witchburnergeneral",         "cost":  5, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_combathelmet","eq_wargavel"], "upgrades": []},
             {"id": "md_communicantantitankhunter",  "cost":  5, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_antimaterialrifle","eq_combathelmet","eq_trenchclub","eq_trenchclub"], "upgrades": []},
-            {"id": "md_mendelistammomonk",          "cost":  3, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": []},
-            {"id": "md_observer",                   "cost":  5, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": []},
+            {"id": "md_mendelistammomonk",          "cost":  2, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_gasmask"], "upgrades": []},
+            {"id": "md_observer",                   "cost":  3, "cost_id": "glory",  "limit_min": 0, "limit_max": 1, "equipment": ["eq_standardarmour","eq_combathelmet","eq_gasmask","eq_medikit","eq_polearm"], "upgrades": []},
             {"id": "md_mamlukfaris", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_combathelmet","eq_jezzail","eq_alchemicalammunition"], "upgrades": []}
         ]
     },
@@ -955,7 +955,8 @@
             {"id": "md_wretched", "cost": 20, "cost_id": "ducats", "limit_min": "Must be outnumbered by DEMONIC models", "limit_max": "Must be outnumbered by DEMONIC models", "equipment": [], "upgrades": []},
             {"id": "md_pitlocust", "cost": 90, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": []},
             {"id": "md_desecratedsaint", "cost": 145, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
-            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_swordaxe","eq_swordaxe"], "upgrades": []}
+            {"id": "md_goeticwarlock", "cost": 4, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_swordaxe","eq_swordaxe"], "upgrades": []},
+            {"id": "md_sineater", "cost": 6, "cost_id": "glory", "limit_min": 0, "limit_max": 1, "equipment": ["eq_reinforcedarmour","eq_tenderizermaul"], "upgrades": []}
         ]
     }
 ]
