@@ -632,6 +632,14 @@ export const EditListDataDex : EditListDataTable = {
                         }
                     }
 
+                    if ((_filter['Ranged'] === false) && (_item.Object.Category === 'ranged')) { return false; }     
+                    if ((_filter['Melee'] === false) && (_item.Object.Category === 'melee')) { return false; }     
+                    if ((_filter['Armour'] === false) && (_item.Object.Category === 'armour')) { return false; }     
+                    if ((_filter['Equipment'] === false) && (_item.Object.Category === 'equipment')) { return false; }   
+
+                    if ((_filter['Glory'] === false) && (_item.CostID === 'glory')) { return false; }
+                    if ((_filter['Ducats'] === false) && (_item.CostID === 'ducats')) { return false; }
+
                     if (HasAntiKeyword) {
                         if (HasModel) {
                             return ModelMatch && !AntiKeywordMatch;
