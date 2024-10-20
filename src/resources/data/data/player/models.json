@@ -810,16 +810,8 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Heavy Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace (see below). The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
+                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Refinforced Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace. The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_catherinewheel"
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_bonebreakermace"
             }
             ],
         "abilities":  [
@@ -834,6 +826,14 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_brokenonthewheel"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_catherinewheel"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_bonebreakermace"
             }
         ]
     },
