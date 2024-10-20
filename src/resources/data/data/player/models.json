@@ -794,7 +794,7 @@
         "movement": [6],
         "ranged": [],
         "melee": [2],
-        "armour": [-3],
+        "armour": [-1],
         "base": [50],
         "faction_id": "fc_trenchpilgrim",
         "team":"heaven",
