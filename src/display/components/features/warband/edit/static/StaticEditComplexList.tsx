@@ -127,6 +127,8 @@ export const EditListDataDex : EditListDataTable = {
                             rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "purchase") {
                             rstrctnlst += (ModelEquip.Restrictions[i].val === 'explore')? "Exploration Only" : "";
+                        } else if (ModelEquip.Restrictions[i].type == "antikeyword") {
+                            rstrctnlst += "Not " + ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "model") {
                             rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: ModelEquip.Restrictions[i].val.toString()}})).name
                          } else { rstrctnlst += ModelEquip.Restrictions[i].val.toString() }
@@ -546,6 +548,8 @@ export const EditListDataDex : EditListDataTable = {
                             rstrctnlst += ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "purchase") {
                             rstrctnlst += (ModelEquip.Restrictions[i].val === 'explore')? "Exploration Only" : "";
+                        }else if (ModelEquip.Restrictions[i].type == "antikeyword") {
+                            rstrctnlst += "Not " + ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "model") {
                             rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: ModelEquip.Restrictions[i].val.toString()}})).name
                          } else { rstrctnlst += ModelEquip.Restrictions[i].val.toString() }

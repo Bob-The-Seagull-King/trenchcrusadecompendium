@@ -1179,6 +1179,51 @@
         ]
     },
     {
+        "id": "ab_stronginfaith",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Strong In Faith",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When recruited, this model chooses one of the following actions."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_onwardchristiansoldiers"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_awayserpents"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_ariseandbehealed"
+            }
+        ]
+    },
+    {
+        "id": "ab_awayserpents",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Away, Serpents",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Select any enemy within 12” of the Priest and take a RISKY ACTION (Targeting models on 40mm or larger bases incur -1 DICE penalty to this roll). If successful, the enemy model goes Down immediately, slithering on its belly like a snake.",
+                "glossary":  [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
         "id": "ab_godiswithus",
         "type": "Addon",
         "source": "core",

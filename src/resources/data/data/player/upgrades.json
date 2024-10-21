@@ -52,9 +52,22 @@
         ]
     },
     {
+        "id": "up_supremeblessing",
+        "type": "Upgrade",
+        "name": "Supreme Blessing",
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This model can take further ACTIONS if it fails in an attempted RISKY ACTION. Note that the action fails, but you are allowed to try any other Actions on your profile without losing the Activation.",
+                "glossary":  [{"val": "ACTION", "id": "gl_action"},{"val": "ACTIONS", "id": "gl_action"},{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
+            }
+        ]
+    },
+    {
         "id": "up_trenchpilgrimressurection",
         "type": "Upgrade",
-        "name": "Ressurection",
+        "name": "Resurrection",
         "eventtags": {"trait": true, "melee": 1},
         "description":  [
                         {
@@ -184,7 +197,7 @@
     {
         "id": "up_artofassassinationthunderboltofalumat",
         "type": "Upgrade",
-        "name": "Thunderbolt of Alumat",
+        "name": "Thunderbolt of Alamut",
         "eventtags": {"trait": true, "movement": 2},
         "description":  [
             {
@@ -496,7 +509,7 @@
     {
         "id": "up_alchemistsecretssecretsoftawkin",
         "type": "Upgrade",
-        "name": "Secrets Of Tawkin",
+        "name": "Secrets Of Takwin",
         "eventtags": {"trait": true},
         "description":  [
             {
