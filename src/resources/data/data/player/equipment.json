@@ -60,7 +60,7 @@
         "equip_type": "2-Handed",
         "range": "24\"",
         "blurb": "A marvel of modern engineering, only a few prototypes of this weapon exist. It has a high rate of fire and can be quickly re-loaded",
-        "modifiers": [],
+        "modifiers": ["2 Attacks"],
         "eventtags": {"action": true},
         "description":  [
                         {
@@ -187,8 +187,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": " Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. Gas Grenades hit all models within 3” of a target they hit.",
-                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
+                                        "content": "Gas Grenades ignore all penalties for cover and armour but roll injuries with -1 DICE. They have BLAST 3” – they hit all models within 3” of a target they hit.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLAST", "id": "gl_blastx"}]
                                     }
                                 ]
                             }
@@ -218,7 +218,8 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Incendiary Grenades ignore all penalties for terrain/cover."
+                                        "content": "Incendiary Grenades cause +1 BLOOD MARKER upon a hit due their FIRE Keyword. The incendiary grenades ignore armour on a Critical Hit (12+ to hit).",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
                                     }
                                 ]
                             }
@@ -272,7 +273,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power. Counts as a 1-Handed weapon when wielded with a shield.",
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit and ignore the penalty to hit rolls when attacking at long range. However, injuries are rolled with -1 DICE at long range due to the low penetration power. Counts as a 1-Handed weapon when wielded with a shield.",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -300,7 +301,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Owing to its high accuracy, add +1 DICE to all hit rolls. At Short range they roll Injuries with +2 DICE.",
+                                        "content": "This weapon rolls attacks with +1 DICE and rolls injuries at Short Range with +2 DICE.",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
                                     }
                                 ]
@@ -328,7 +329,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit. However, injuries are rolled with -1 DICE at long range due to its low penetration power.  Counts as a 1-Handed weapon when wielded with a shield.",
+                                        "content": "Owing to its high accuracy, add +1 DICE to all rolls to hit and ignore the penalty to hit rolls when attacking at long range. However, injuries are rolled with -1 DICE at long range due to the low penetration power. Counts as a 1-Handed weapon when wielded with a shield.",
                                         "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -360,6 +361,37 @@
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                                         "content": "Ignores all penalties for cover. This weapon has a blast radius of 3” – all models within this range are hit."
+                                    }
+                                ]
+                            }
+                        ]
+    },
+    {
+        "id": "eq_gasgrenadelauncher",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Gas", "val": "gl_gas"},
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "Grenade", "val": "gl_grenade"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
+                ],
+        "category": "ranged",
+        "name": "Gas Grenade Launcher",
+        "equip_type": "2-Handed",
+        "range": "36\"",
+        "blurb": "Modifications of great siege rifles designed to lob grenades over long distances.",
+        "modifiers": ["Ignore Cover"],
+        "eventtags": {"action": true},
+        "description":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Rule:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Ignore all penalties for cover and armour but roll injuries with -1 DICE. This weapon has BLAST 3” – all models within this range are hit.",
+                                        "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
                             }
@@ -405,7 +437,7 @@
         "equip_type": "2-Handed",
         "range": "8\"",
         "blurb": "A flamethrower is a terrifying weapon capable of projecting great streams of fire and flammable liquids at a distance. It is ideal for clearing bunkers, trenches and other fortifications, killing in a most horrific way. Consequently, it is greatly favoured by the Heretic forces.",
-        "modifiers": ["-1D Injuries"],
+        "modifiers": ["-1D Injuries","Ignore Armour"],
         "eventtags": {"action": true},
         "description":  [
                             {
@@ -434,7 +466,7 @@
         "equip_type": "2-Handed",
         "range": "10\"",
         "blurb": "These massive flamethrowers are normally mounted on armoured vehicles, but those possessing uncanny strength may use them as infantry weapons.",
-        "modifiers": [],
+        "modifiers": ["Ignore Armour"],
         "eventtags": {"action": true},
         "description":  [
                             {
@@ -499,7 +531,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Unarmed models suffer -1 DICE every time you fight unarmed in combat, both to see if the attack hits and when rolling on the Injury Chart. Note that you can never use Unarmed Strike as a second melee attack. These rules simply cover all instances where the model fights unarmed and has no other Melee Actions in their profile.",
+                                        "content": "Models suffer -1 DICE when fighting unarmed, both to see if the attack hits and when rolling on the Injury Chart. Note that you can never fight with unarmed as an Off-Hand weapon to get an additional attack in melee. These rules simply cover all instances where the model fights unarmed and has no other Melee Actions in their profile.",
                                         "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
                                     }
                                 ]
@@ -543,7 +575,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Bayonets can only be attached to weapons indicated in each Warband’s Armoury with ‘Bayonet lug’. They do not count towards the maximum Melee weapons a model can carry."
+                                        "content": "Bayonets can only be attached to weapons fitted with a ‘Bayonet lug’ (indicated in each Warband’s Armoury). They do not count towards the maximum melee weapons a model can carry."
                                     }
                                 ]
                             }
@@ -807,7 +839,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Takes one hand to use in both melee and in ranged combat. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. For the purposes of wielding a two-handed weapon with the ‘Shield Combo’ indicator, the Trench Shield does not take a hand to wield but still functions as normal."
+                                        "content": "Always takes one hand to use in both melee and in ranged combat, and cannot be switched out. Grants -1 to all injury rolls against the model. This bonus stacks with any armour the model wears, unless otherwise indicated. For the purposes of wielding a 2-handed weapon with the ‘Shield Combo’ indicator, the Trench Shield does not take a hand to wield but still functions as normal."
                                     }
                                 ]
                             }
@@ -1337,7 +1369,7 @@
         "equip_type": "1-Handed",
         "range": "12\"/Melee",
         "blurb": "Automatic pistols are symbols of prestige owing to their rarity and cost. They are excellent weapons when storming trenches or fighting in hand-to-hand combat. They boast a high rate of fire, though they can be hard to control even for the best sharpshooters since they usually lack a stock.",
-        "modifiers": ["-1D to Injury"],
+        "modifiers": ["-1D to Injury","2 Attacks"],
         "eventtags": {"action": true},
         "description":  [
             {
@@ -1542,6 +1574,7 @@
         "type": "Equipment",
         "source": "core",
         "tags": [
+        {"tag_name": "Headgear", "val": "gl_headgear"}
                 ],
         "category": "equipment",
         "name": "Iron Capirote",
@@ -1639,7 +1672,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Models with a Medi-kit can take a RISKY ACTION to remove one BLOOD MARKER from any one friendly model (including themselves) within 1” or allow one friendly model (including themselves) who is Down to regain their footing. The model who recovered from Down this way can move at full speed during its next Activation.",
+                            "content": "Models with a Medi-kit can take a RISKY ACTION to remove one BLOOD MARKER from any one friendly model (including themselves) within 1” range or allow one friendly model (including themselves) who is Down to regain their footing.",
                             "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -1720,7 +1753,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Carnyx causes FEAR.",
+                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Carnyx means the model carrying it causes FEAR.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
                         }
                     ]
@@ -1747,7 +1780,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Any friendly models within 8” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Bagpipes renders allies within 8\" immune to FEAR.",
+                            "content": "Any friendly models within 4” of the musician who is not Down can add +1 DICE to their Dash ACTIONS. Musical Instruments take one hand to use at all times as if it were a weapon. In addition, the sound of the Bagpipes renders allies within 8\" immune to FEAR.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "ACTIONS", "id": "gl_action"},{"val": "FEAR", "id": "gl_fear"}]
                         }
                     ]
@@ -1951,7 +1984,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add +1 DICE when making a Ranged Weapon attack with this weapon. If equipped with a Sniper Scope (see Equipment), the Sniper Rifle also ignores the penalty for Long Range, even if it has moved this turn.",
+                            "content": "This weapon rolls attacks with +1 DICE. On a Critical attack roll, this weapon ignores armour. If this model is equipped with a Scope, this weapon ignores the penalty for Long Range.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
@@ -1980,7 +2013,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Choose a point on the battlefield that is visible to the model and within 36” and make a Ranged Attack ACTION. If the roll is unsuccessful, the bomb is off-target and will deviate 1” from your nominated target point for each degree of failure of the Ranged Attack ACTION in a direction determined by your opponent (for example, if you rolled 5, the bomb lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the Bombard suffer a Down result due the booming shockwave, but do not incur any BLOOD MARKERS or other effects from this attack.",
+                            "content": "Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the landing 1x1mm landing spot are hit as the bomb explodes – no roll to hit is needed. If the bomb lands directly on top of any model, roll with 3D6 on the Injury Chart and add the dice together to see what happens! Other models hit by the bombard suffer a Down result due the booming shockwave, but do not incur any BLOOD MARKERS or other effects from this attack.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -2009,7 +2042,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When this weapon is fired, draw an imaginary straight line 1mm wide and 12” long from the Brazen Bull. Every model along the path of the line is hit automatically by this attack – roll for their injuries intermediately. Armour does not protect against the Flame Cannon. Due to the Keyword FIRE, its hits cause an additional +1 BLOOD MARKER. This is applied after rolling for injuries.",
+                            "content": "When shot in ranged combat, draw a straight 12” line that is 1mm wide from the Brazen Bull. All models along the path of the line are  automatically hit – roll for their injuries immediately. Armour does not protect against the Flame Cannon. Due to the Keyword FIRE, its hits cause an additional +1 BLOOD MARKER. This is applied after rolling for injuries.",
                             "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -2095,7 +2128,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Adds +1 to injury rolls (i.e. a roll of 7 on the Injury Chart becomes 8). If the Assassin hits an enemy and causes at least one BLOOD MARKER, the Assassin can move away from combat with the model the Assassin wounded during this Activation without giving the opponent a chance to attack them, as the poison paralyses their enemy momentarily. Assassins can use both normal and Dash moves to do this, though this may not be used for charging.",
+                            "content": "Adds +1 to injury rolls (i.e. a roll of 7 on the Injury Chart becomes 8). If the Assassin hits an enemy and causes at least one BLOOD MARKER, the Assassin can move away from combat during this Activation. Note that this move does not grant enemies free attacks. Assassins can use both normal and Dash move to do this, though this may not be used for charging.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
                         }
                     ]
@@ -2122,8 +2155,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Counts as Heavy Armour and therefore grants a -2 modifier to all injury rolls made against the model wearing it. In addition it makes the Alchemist immune to all damage with the Keywords FIRE and/or GAS",
-                            "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"}]
+                            "content": "Counts as Reinforced Armour and therefore grants a -2 modifier to all injury rolls made against the model wearing it. All attacks with the Keyword FIRE and/or GAS suffer a -1 DICE penalty to injure this model. Additionally, this model does not suffer additional BLOOD MARKERS caused by the Keywords FIRE and/or GAS.",
+                            "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
                         }
                     ]
                 }
@@ -2149,7 +2182,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails, Alaybozan, and Siege Jezzails.",
+                            "content": "Adds +1 DICE to Ranged Attack rolls on the Action Success Chart. Can only be used with Jezzails, Alaybozan, Halberd-Guns and Siege Jezzails.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
@@ -2203,7 +2236,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "After deployment, a model with the Wind Amulet may move up to 3” in any direction, though this move may not take them into melee combat or from the battlefield. You cannot use the Wind Amulet and Shovel effects simultaneously.",
+                            "content": "Once per battle, you may add +3” to the Movement characteristic of this model once during the activation. Declare this when the model is Activated.",
                             "glossary": []
                         }
                     ]
@@ -2258,7 +2291,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Add +1 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 8). A model armed with a Golden Khanjar can make two Attacks instead of one in melee per Melee Attack ACTION. This effect also applies to a Golden Khanjar wielded off-hand. Thus a model armed with Khanjar and additional 1-handed melee weapon can make a total of three Melee attacks during a single Activation.",
+                            "content": "Add +1 to the result of all injuries caused by this weapon (i.e. a roll of 7 on the Injury Chart becomes 8). A model armed with a Golden Khanjar can make two Attacks instead of one in melee per Melee Attack ACTION. This effect also applies to a Golden Khanjar wielded off-hand.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"}]
                         }
                     ]
@@ -2345,7 +2378,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "You can aim the Satchel Charge at any point on the ground as well as against an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the satchel charge lands 2” away, as 7-5=2). The direction is decided by your opponent. The Satchel Charge adds +1 DICE to injury rolls and has a blast radius of 3” hitting all models within this range. Additionally, if the Satchel Charge lands directly on top of a model, it ignores that model’s armour.",
+                            "content": "You can aim the Satchel Charge at either a 1mm x 1mm point on the ground or an enemy model within range. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the Satchel Charge lands 2” away, as 7-5=2). The direction is decided by your opponent. A Satchel Charge adds +1 DICE to injury rolls. Additionally, if the Satchel Charge lands directly on top of a model, it ignores that model’s armour.",
                             "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }
                     ]
@@ -2372,7 +2405,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer rolls D3 for a charge extra distance instead of D6. Machine armour cannot be combined with any shield. Models wearing Machine Armour may have a base size of 40mm if you wish. Treats injury results of Down as a Minor Hit. Note that the model wearing a suit of Machine Armour can still suffer Down from other sources (MURAD Bombard, TOUGH, converting Out of Action into Down etc).",
+                            "content": "Grants a -3 modifier to all injury rolls against the model wearing this armour. Due to its bulk the wearer rolls D3 for a charge extra distance instead of D6. Any Down results on the Injury Chart are converted to Minor Hit. Machine armour cannot be combined with any shield. Models wearing Machine Armour may have a Base Size of 40mm if you wish.",
                             "glossary": [{"val": "TOUGH", "id": "gl_tough"}]
                         }
                     ]
@@ -2399,7 +2432,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Can be placed on the battlefield in your deployment zone. Can be destroyed if any type of attack hits it. Acts as three models for Morale Tests. It has a base size of 40mm.",
+                            "content": " Can be placed on the battlefield in your deployment zone. Acts as three models for Morale Tests. It has a base size of 40mm. Can be destroyed if any type of attack hits it.",
                             "glossary": []
                         }
                     ]
@@ -2453,7 +2486,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from a Plague Blade, they will gain an INFECTION MARKER instead.",
+                            "content": "This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
                         }
                     ]
@@ -2472,7 +2505,7 @@
         "equip_type": "2-Handed",
         "range": "Melee",
         "blurb": "Carrying the viral strain of Beelzebub himself, these weapons are the terror of all mortals. Even the tiniest nick or scratch usually leads to an agonising death and eternal servitude to the Lord of Flies as a ghastly walking corpse.",
-        "modifiers": ["+1D to Injury"],
+        "modifiers": ["+2D to Injury"],
         "eventtags": {"action": true},
         "description":  [
                 {
@@ -2481,8 +2514,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Whenever a model suffers a BLOOD MARKER as a result of an injury caused by a hit from Beelzebub’s Axe, they will gain an INFECTION MARKER instead.",
-                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
+                            "content": "This weapon rolls injuries with +2 DICE. This weapon causes INFECTION MARKERS instead of BLOOD MARKERS.",
+                            "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
                         }
                     ]
                 }
@@ -2538,7 +2571,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When resolving hits from an Infested Rifle, the modifier to injury rolls offered by a model’s armour is reduced by 1. Thus Heavy armour would only offer a -1 modifier to injury rolls, Standard Armour would offer no modifier and so on.",
+                            "content": "Reduces the injury roll penalty from armour and shields by 1. Thus Reinforced Armour only offers a -1 modifier to injury rolls caused by this weapon.",
                             "glossary": []
                         }
                     ]
@@ -2557,7 +2590,7 @@
         "equip_type": "2-Handed",
         "range": "8\"",
         "blurb": "Corruption Belchers spew forth noxious gas and corrosive fumes captured from the Bolgias of the putrid swamps of the seventh layer of Hell.",
-        "modifiers": ["-1D to Injury"],
+        "modifiers": [],
         "eventtags": {"action": true},
         "description":  [
                 {
@@ -2566,7 +2599,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "A Corruption Belcher hits one model within range automatically with its ranged attack ACTION. It ignores Armour. Injuries caused by a Corruption Belcher are rolled with an additional -1 DICE. It also has the Keyword GAS, so it inflicts an additional +1 BLOOD MARKER on enemies it hits.",
+                            "content": "A Corruption Belcher hits one model within range automatically with its ranged attack ACTION. It ignores Armour. It also has the Keyword GAS, so it inflicts an additional +1 BLOOD MARKER on enemies it hits.",
                             "glossary": [{"val": "+1 BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "GAS", "id": "gl_gas"},{"val": "ACTION", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                         }
                     ]
@@ -2594,7 +2627,7 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "When you hit an opponent with the Putrid Shotgun, whenever an injury roll caused by the Putrid Shotgun would indicate the enemy suffering a BLOOD MARKER, they gain an INFECTION MARKER instead. The Putrid Shotgun adds +1 DICE to hit on its Ranged Attacks.",
+                            "content": " This weapon causes INFECTION MARKERS instead of BLOOD MARKERS. The putrid shotgun adds +1 DICE to hit on its ranged attacks.",
                             "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                         }
                     ]
@@ -2640,7 +2673,7 @@
         "category": "ranged",
         "name": "Viscera Cannon",
         "equip_type": "2-Handed",
-        "range": "18\"",
+        "range": "24\"",
         "blurb": "This heavy firearm is the most loathsome and repulsive of all the weapons in the arsenal of the Black Grail - and that is saying something, considering the stiff competition it has. A warrior armed with this pride of Beelzebub inserts its tubes into their own abdomen and then shoots the corrosive contents of their own innards at the enemy. It is operated by a hand crank that first builds pressure inside the user until they are at the point of bursting, and then releases the spray of viscera at their foe. The greater the amount of their own flesh the user releases, the more horrific the damage.",
         "modifiers": ["+2D to Hit"],
         "eventtags": {"action": true},
@@ -3479,7 +3512,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Tormentor Chain suffers no penalties for range or for Cover, and causes no damage except for the BLOOD MARKER it causes due the SHRAPNEL. If the Tormentor Chain hits an opponent on a 32mm or smaller (base and that opponent is not engaged in Melee), then the model is moved into base contact (and into Melee with the wielder and any other eligible model) with the user of the chain, occupying the nearest legal point next to the wielder. No enemy can move away from Melee with a model using the Tormentor Chain.",
+                        "content": "The tormentor chain suffers no penalties for range or for Cover and inflicts no damage except for the BLOOD MARKER it causes due to SHRAPNEL. If the wielder hits a target with this weapon, the target is moved in a straight line directly towards the wielder, ending in the legal space that puts it closest to the wielder. This typically ends with the target and the wielder in base contact and therefore in melee combat. This movement can place the target in melee combat with multiple enemy models. Additionally, no enemy models may retreat when in melee combat with the wielder.",
                         "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
                     }
                 ]
@@ -3621,7 +3654,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Serpent Gun can make two Attack Actions instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other.",
+                        "content": "When this model takes this ranged attack ACTION, it can make up to two attacks with this weapon. These attacks can target separate models, but the targets must be within 6” of each other.",
                         "glossary": []
                     }
                 ]
@@ -3638,7 +3671,7 @@
         "category": "ranged",
         "name": "Bow Of Lethe",
         "equip_type": "1-Handed",
-        "range": "36\"",
+        "range": "24\"",
         "blurb": "This bow is grown by the Hunters of the Left-hand-path out of their own flesh. It can be tipped with a deadly poison made from the blood of the nameless beasts that the Hunters stalk in the wastelands of Hell, or it can shoot one of the Iron bolts of Pandemonium that weigh 9 tons on Earth.",
         "modifiers": ["+2D to Injury", "or", "Ignore Armour"],
         "eventtags": {"action": true},
@@ -3719,7 +3752,7 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Attacks made with this weapon have +2 to injure against targets that have not been Activated this turn.",
+                        "content": "This weapon rolls injuries against models that have not been activated this turn with a flat +2 bonus.",
                         "glossary": []
                     }
                 ]
@@ -3801,7 +3834,7 @@
                                 "subcontent": [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Grants -2 to all Injury Chart rolls against the model wearing this armour. This armour is effective even against weapons and attacks that would normally ignore armour."
+                                        "content": "Injuries against this model are rolled with a flat -2 penalty. This penalty applies against injuries that ignore armour."
                                     }
                                 ]
                             }

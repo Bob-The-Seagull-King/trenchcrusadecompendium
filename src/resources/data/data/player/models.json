@@ -27,7 +27,46 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
+                            "content": "The Heretic Priest can be equipped with any weapon, armour or equipment from the Heretic Legion Armoury."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_puppetmaster"
+                        },{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_tough"
+                        }]
+
+    },{
+        "id": "md_hereticpriest_fv_trenchghosts",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                    {"tag_name": "heretic", "val": "gl_heretic"},
+                    {"tag_name": "elite", "val": "gl_elite"},
+                    {"tag_name": "tough", "val": "gl_tough"},
+                    {"tag_name": "strong", "val": "gl_strong"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [2],
+        "melee": [2],
+        "armour": [0],
+        "base": [32],
+        "faction_id": "fc_hereticlegion",
+        "team":"hell",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Heretic Priest",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Leader of a Heretic warband. These fallen priests perform all kinds of unholy magics, summoning petrifying demons and creatures using their Goetic spells. Often pledged to a demon lord in hell, such as Pazuzu or Guison, the Profane Gospels they recite terrify church forces, causing ears to bleed and eyeballs to burst in their sockets."
+            }
+        ],
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Heretic Priest can be equipped with any weapon, armour or equipment from the Heretic Legion Armoury."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -66,7 +105,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Heretic Priest uses the Heretic Legion weapons and equipment list."
+                            "content": "The Heretic Priest can be equipped with any weapon, armour or equipment from the Heretic Legion Armoury."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -105,7 +144,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Death Commando can be equipped with any melee weapon, armour or equipment from the Heretic Legion Equipment List. The only ranged weapon they can buy is a silenced pistol."
+                            "content": "The Death Commando can be equipped with any melee weapon, armour or equipment from the Heretic Legion Armoury. The only ranged weapons they can buy are silenced pistols, a Tormentor Chain and/or Gas Grenades."
                         }],
         "abilities":  [{
                         "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -160,7 +199,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Chorister uses the Heretic Legion weapons and equipment list."
+                            "content": "The Chorister can be equipped with any weapon, armour or equipment from the Heretic Legion Armoury."
                         }],
         "abilities":  [{
             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -197,7 +236,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Heretic Troopers use the Heretic Legion weapons and equipment list. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 Ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
+                            "content": "Heretic Troopers can be equipped with any weapon, armour or equipment from the Heretic Legion armoury. You can upgrade up to half (rounding down) of your Heretic Troopers into Heretic Legionnaires at the cost of +10 ducats each. You can select to upgrade either the Ranged or Melee characteristic of all your Legionnaires by +1 DICE. All Legionnaires must have the same bonus.",
                             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
                         }],
         "abilities":  []
@@ -230,7 +269,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Anointed are always equipped with a suit of Heavy Armour and Infernal brand mark which are included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list."
+                            "content": "Anointed are always equipped with a suit of Reinforced Armour and Infernal brand mark which are included in the cost. This armour can never be removed. Otherwise they can be equipped with any weapon, armour or equipment from the Heretic Legion Armoury and may purchase a Trench Shield."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -245,7 +284,8 @@
         "tags": [
             {"tag_name": "heretic", "val": "gl_heretic"},
             {"tag_name": "fear", "val": "gl_fear"},
-            {"tag_name": "tough", "val": "gl_tough"}
+            {"tag_name": "tough", "val": "gl_tough"},
+            {"tag_name": "artificial", "val": "gl_artificial"}
                 ],
         "promotion": 1,
         "movement": [8],
@@ -295,7 +335,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": "gl_heretic"}
+            {"tag_name": "heretic", "val": "gl_heretic"},
+            {"tag_name": "artificial", "val": "gl_artificial"}
                 ],
         "promotion": 1,
         "movement": [6],
@@ -316,7 +357,7 @@
         ],
         "equipment":  [{
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons. Otherwise, she can be Equipped from the Standard Heretic Equipment list."
+                            "content": "An Artillery Witch is always equipped with an endless supply of Infernal Bombs (see below) and can carry no other ranged weapons  Otherwise, she can be equipped with any melee weapon, armour or equipment from the Heretic Legion Armoury."
                         }],
         "abilities":  [{
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
@@ -325,6 +366,10 @@
                         {
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
                             "content": "ab_artificiallife"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_levitate"
                         }]
 
     },
@@ -333,7 +378,8 @@
         "type": "Model",
         "source": "core",
         "tags": [
-                    {"tag_name": "heretic", "val": "gl_heretic"}
+                    {"tag_name": "heretic", "val": "gl_heretic"},
+                    {"tag_name": "artificial", "val": "gl_artificial"}
                 ],
         "promotion": 1,
         "movement": [6],
@@ -363,6 +409,10 @@
                         {
                             "tags": [{"tag_name": "desc_type", "val": "addon"}],
                             "content": "ab_artificiallife"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_levitate"
                         }]
 
     },
@@ -722,7 +772,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Iron Capirote. You cannot buy any additional equipment, weapons or armour for Ecclesiastic Prisoners with the exception that up to four may be equipped with a Martyrdom Device (see below) for 35 ducats each. Prisoners fight unarmed in Melee, flailing feebly with their manacled arms. The -1D penalty to Melee combat is included in the profile above."
+                "content": "Ecclesiastic Prisoners are equipped with Iron Capirotes and this equipment cannot be removed, except by being Broken on the Wheel. Prisoners fight unarmed in melee, flailing feebly with their manacled arms. The -1D penalty to melee combat is already included in the profile above. Ecclesiastic Prisoners cannot be equipped with any weapons, armour or equipment from the Trench Pilgrims Armoury. They may be equipped with Martyrdom Devices for 35 ducats (LIMIT: 4, CONSUMABLE)."
             }
             ],
         "abilities":  [
@@ -866,7 +916,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Yüzbaşı can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "content": "Yüzbaşı can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury.",
                 "glossary": []
             }
             ],
@@ -909,7 +959,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Alchemist can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "content": "The Alchemist can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury.",
                 "glossary": []
             }
             ],
@@ -949,7 +999,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Assassin can be equipped with any weapon, armour or equipment from the Iron Sultanate Equipment List.",
+                "content": "The Assassin can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury.",
                 "glossary": []
             }
             ],
@@ -1048,7 +1098,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
+                "content": "Azebs can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury. Any Azebs can be converted to SKIRMISHERS at the cost of +5 ducats per model. Unless engaged in melee, when an enemy model declares a charge against any Skirmisher Azeb, they can immediately move D3” in any direction they wish (except within 1” of any enemy or out of the battlefield). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. This move cannot be taken by a model that is Down.",
                 "glossary": [{"val": "SKIRMISHERS", "id": "gl_skirmisher"}]
             }
             ],
@@ -1136,7 +1186,7 @@
                 ],
         "promotion": 0,
         "movement": [6],
-        "ranged": [0],
+        "ranged": [1],
         "melee": [0],
         "armour": [0],
         "base": [25],
@@ -1154,7 +1204,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Shovel and Tufenjieff anti-personnel mines. Sapper can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "content": "Sappers are equipped with shovels. This equipment can never be removed. They can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury",
                 "glossary": []
             }
             ],
@@ -1205,7 +1255,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury.",
                 "glossary": []
             }
             ],
@@ -1291,7 +1341,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Lions never carry any type of weapons but can wear armour (though no shields!) and can be equipped with Wind Amulets. They do not suffer penalties for fighting unarmed.",
+                "content": "Lions can be equipped with armour (except shields) and Wind Amulets. They cannot be equipped with any other items. They do not suffer penalties for fighting unarmed.",
                 "glossary": []
             }
             ],
@@ -1337,7 +1387,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Janissaries can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List.",
+                "content": "Janissaries can be equipped with any weapon, armour (except Reinforced Armour) and equipment from the Iron Sultanate Equipment List.",
                 "glossary": []
             }
             ],
@@ -1382,7 +1432,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Brazen Bull can be equipped with any weapon, armour and equipment from the Iron Sultanate Equipment List. Due to its vast strength and size it can only use Weapons with the Keyword HEAVY – it will simply crush weapons of normal size by accident.",
+                "content": "A Brazen Bull can be equipped with any weapon, armour and equipment from the Iron Sultanate Armoury. Due to its vast strength and size it can only use weapons with the Keyword HEAVY – it will simply crush weapons of normal size by accident. It can carry up to two Brazen Bull Only weapons.",
                 "glossary": [{"val": "HEAVY", "id": "gl_heavy"}]
             }
             ],
@@ -1504,7 +1554,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1557,7 +1607,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1614,7 +1664,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "The Lieutenant can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1657,7 +1707,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1700,7 +1750,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Holy Warrior can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1743,7 +1793,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Holy Warrior can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Cleric can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1786,7 +1836,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Sniper Priest can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Sniper Priest can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1828,17 +1878,17 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap the Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.",
+                "content": "Each Yeoman is equipped with a Bolt Action Rifle. You can swap this Bolt Action Rifle for another ranged weapon of lower, equal or greater cost. If the cost is greater, yoy must pay the difference in ducats.",
                 "glossary": []
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Yeomen can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "Yeomen can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "At the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles, scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR.",
+                "content": "At the cost of +10 Gold Ducats per model, up to two Yeoman can be upgraded into Trench Moles (up to three in warbands of over 1000 ducats value), scouts who make use of tunnels that criss-cross the No Man’s Land. They gain the Keyword INFILTRATOR.",
                 "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
             }
             ],
@@ -1872,7 +1922,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1914,7 +1964,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "A Shocktrooper can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -1952,7 +2002,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Shovel and Engineer Body Armour (Reflected in cost and profile above). Combat Engineer can be equipped with any weapon or equipment from the New Antioch Equipment List.",
+                "content": "Combat Engineers are equipped with a Shovel and Engineer Body Armour. This equipment and armour can never be removed. A Combat Engineer can be equipped with any weapon or equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -2004,7 +2054,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Mechanised Heavy Infantry can be equipped with any weapon, armour and equipment from the New Antioch Equipment List.",
+                "content": "They can be equipped with any weapon, armour and equipment from the New Antioch Armoury.",
                 "glossary": []
             }
             ],
@@ -2111,6 +2161,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_expertmedic"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_conventconditioning"
             }
         ]
     },
@@ -2202,7 +2256,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (either standard or heavy). In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "A Plague Knight must always wear a suit of armour of some kind. In addition, it can be equipped with any weapon, armour and equipment from the Black Grail Armoury.",
                 "glossary": []
             }
             ],
@@ -2251,7 +2305,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Plague Knight must always be equipped with a suit of armour (not just carry a shield), but it can also be Armour bought with Glory Points. In addition, can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "A Plague Knight must always wear a suit of armour of some kind. In addition, it can be equipped with any weapon, armour and equipment from the Black Grail Armoury.",
                 "glossary": []
             }
             ],
@@ -2360,7 +2414,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Corpse Guard can be equipped with any weapon, armour and equipment from the Black Grail Equipment List.",
+                "content": "Corpse Guard can be equipped with any weapon, armour and equipment from the Black Grail Armoury.",
                 "glossary": []
             }
             ],
@@ -2439,7 +2493,7 @@
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "promotion": 2,
-        "movement": [4],
+        "movement": [5],
         "ranged": [],
         "melee": [-1],
         "armour": [0],
@@ -2529,7 +2583,7 @@
             {"tag_name": "fear", "val": "gl_fear"}
                 ],
         "promotion": 2,
-        "movement": [4],
+        "movement": [5],
         "ranged": [0],
         "melee": [-1],
         "armour": [0],
@@ -2643,7 +2697,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Each Herald may purchase ranged weapons from the Black Grail list but may not wear armour or carry any equipment. They can only attack in melee combat with its proboscis as detailed below.",
+                "content": "Each herald may purchase ranged weapons from the Black Grail Armoury but may not wear armour or carry any equipment. They can only attack in melee combat with its proboscis as detailed below.",
                 "glossary": []
             }
             ],
@@ -2696,7 +2750,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Amalgam has six functional arms. They can carry six one-handed weapons, or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The Amalgam uses the Black Grail Armoury and can buy one weapon from New Antioch Armoury or Iron Sultanate Armoury (all the limitations of these lists apply) – it never carries any other gear except weapons, though one of its arms may carry a single Trench Shield (representing pieces of Armour it has absorbed). It may not carry Grenades. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each count as a separate ACTION and suffer no off-hand penalties in melee. The Amalgam cannot benefit from Shield Combo.",
+                "content": "The amalgam has six functional arms. They can carry six one-handed weapons or three double-handed weapons, or any combination thereof, as long as the six arms can carry them. The amalgam uses the Black Grail Armoury for weapons – it never carries any other gear except weapons, though one of its arms may carry a single trench shield (representing pieces of armour it has absorbed). It may not carry grenades or more than two weapons of the same type. It can execute any ranged and melee attacks with each of the weapons it carries during its Activation. Each count as a separate ACTION and suffer no off-hand penalties in melee. The amalgam cannot benefit from Shield Combo.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
             ],
@@ -3190,7 +3244,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Praetor can be equipped with any weapons, armour and Equipment from the Court Armoury list.",
+                "content": "The Praetor can be equipped with any weapons, armour and Equipment from the Court Armoury list.",
                 "glossary": []
             }
             ],
@@ -3242,7 +3296,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Sorcerer can be equipped with any melee weapons, armour and Equipment from the Court Armoury list.",
+                "content": "The Sorcerer can be equipped with any melee weapon, armour and equipment from the Court Armoury.",
                 "glossary": []
             }
             ],
@@ -3290,7 +3344,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Hunter can be equipped with any melee weapons, armour or equipment from the Court Armoury List. The Hunter always carries the Bow of Lethe (included in the cost) as its ranged weapon, and it cannot swap or lose this weapon. It always takes the use of one of the arms of the Hunter.",
+                "content": "The Hunter can be equipped with any melee weapons, armour (though not Infernal Armour which would disrupt the powers of the Hunter) and equipment from the Court Armoury. The Hunter always carries the Bow of Lethe as its ranged weapon and it cannot swap or lose this weapon. It always takes the use of one of the arms of the Hunter.",
                 "glossary": []
             }
             ],
@@ -3338,7 +3392,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Hell Knights are always equipped with a suit of Infernal Armour which is included in the cost. This armour can never be removed. They use the Heretic Legion Equipment list.",
+                "content": "The Hell Knights are always equipped with a suit of Infernal Iron Armour which is included in their cost. This armour can never be removed. Hell Knights can be equipped with any weapons and equipment from the Court Armoury.",
                 "glossary": []
             }
             ],
@@ -3384,7 +3438,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Yoke Fiends can be equipped with any melee weapon, armour or equipment from the Court Armoury List. They can be equipped with any one ranged weapon that costs 30 ducats or less.",
+                "content": "Yoke fiends can be equipped with any melee weapon, armour and equipment from the Court Armoury. They can be equipped with any one ranged weapon from the Court Armoury that costs 30 ducats or less.",
                 "glossary": []
             }
             ],
@@ -3425,7 +3479,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Wretched can be equipped with any melee weapon, armour or equipment from the Court Armoury List. None of their weapons, armour or equipment can cost more than 10 ducats each. They must be equipped with at least one weapon.",
+                "content": "The wretched can be equipped with any melee weapon, armour and equipment from the Court Armoury. None of their weapons, armour or equipment can cost more than 10 ducats each. They must be equipped with at least one weapon.",
                 "glossary": []
             }
             ],
@@ -3569,7 +3623,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Desecrated Saint is encased in nigh-impregnable Cocytus armour reflected on the profile above. This armour cannot be removed or lost. The Desecrated Saint has three functional arms. They can carry up to three three melee weapons, only one of which can be a 2-handed weapon. When the Desecrated Saint Makes a Melee Attack, it can make an Attack ACTION with each arm and it does not suffer Off-Hand penalties. The Desecrated Saint can be equipped with any melee weapons from the Court Armoury list",
+                "content": "The Desecrated Saint is encased in nigh-impregnable Cocytus Armour reflected on the profile above. This armour cannot be removed or lost. The Desecrated Saint has three functional arms. They can carry up to three melee weapons, only one of which can be a two-handed weapon. When the Desecrated Saint makes a melee attack, it can make an attack ACTION with each arm. It does not suffer Off-Hand penalties. The Desecrated Saint can be equipped with any melee weapons from the Court Armoury.",
                 "glossary": []
             }
             ],

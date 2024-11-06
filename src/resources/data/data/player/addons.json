@@ -12,7 +12,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Select a target model within 12” of the Priest, friend or foe (including the Priest). As a RISKY ACTION you can move the model D6” in any direction, including forcing it to fall down or enter into melee combat with any enemy model, or leave Combat (all the usual rules apply).",
+                            "content": "Select a target model, friend or foe (including the Priest), within 12”. As a RISKY ACTION you can move the model D6” in any one direction, including forcing it to jump/fall down or enter into melee combat with any enemy model (as if it had Charged), or leave Combat  (as if it had Retreated, including granting any enemies within range free attacks).",
                             "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
                         }
                         ]
@@ -46,7 +46,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "A Death Commando can be deployed anywhere on the table that is not in line of sight of any enemy model and is at least 8” away from the nearest enemy model. Deployed after all other models without the Keyword INFILTRATOR.",
+                            "content": " The Death Commando can be placed anywhere on the table out of line of sight of any enemies, but at least 8” away from the closest enemy. Deployed after all other models without the Keyword INFILTRATOR",
                             "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"}]
                         }
                         ]
@@ -97,7 +97,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18\" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls during a single Activation if all the conditions are met.",
+                            "content": "Using the remnants of the lingering power of a fallen Hegemon, any Plague Knight of the Warband can command any Thrall within 18” of it directly. During it’s Activation, a Plague Knight can remove an INFECTION MARKER from any model in play to enable a Thrall within 18\" to use any one of the Actions detailed below. Each Trall can only be affected by Hegemon’s Will once per Turn, but one Plague Knight may issue commands to multiple Thralls (though not multiple times to the same Thrall) during a single Activation if all the conditions are met.",
                             "glossary": [{"val": "INFECTION MARKER", "id": "gl_infectionmarker"}]
                         },
                         {
@@ -166,7 +166,7 @@
         "description":  [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "As a RISKY ACTION with +1 DICE the Commando can hide if any piece of scenery the model is touching can block line of sight in any direction, even partially. If successful, enemies cannot target the Commando with ranged attacks or Charges. Weapons with the Keyword BLAST affect the Commando as normal if it is in the radius of the weapon. This effect ends if the Commando moves from its exact position in any way, it Makes a Ranged Attack or an enemy model comes within 1.5” of it.",
+                            "content": "As a RISKY ACTION with +1 DICE the Commando can hide if any piece of scenery the model is touching can block line of sight in any direction, even partially, regardless of whether an enemy currently has a clear LOS. If successful, enemies cannot target the Commando with ranged attacks or Charges. Weapons with the Keyword BLAST affect the Commando as normal if it is in the radius of  the weapon. This effect ends if the Commando moves from its exact position in any way, it makes a Ranged Attack or an enemy model comes within 1.5” of it.",
                             "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "BLAST", "id": "gl_blastx"}]
                         }
                         ]
@@ -348,7 +348,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE.",
+                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE. The Activation of the Witch ends immediately after using the Infernal Bomb.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
                         ]
@@ -392,7 +392,7 @@
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE.",
+                "content": "Cover, range and higher position do not affect the attacks by the Infernal Bomb. Roll injuries for models in cover/behind intervening terrain with -1 DICE. The Activation of the Witch ends immediately after using the Infernal Bomb.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
                         ]
@@ -412,6 +412,23 @@
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Worldly wealth the target of this curse starts crushing them under its weight. Choose any model the Priest sees within 12” and take a RISKY ACTION. If successful, roll immediately on the Injury Chart for that model and add +1 DICE to the Injury roll for each -1 Armour Modifier the model has (for example if the model has a Trench Shield and standard armour, add +2 DICE to the Injury rolls.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+            }
+                        ]
+    },
+    {
+        "id": "ab_levitate",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_hereticlegion",
+        "name": "Levitate",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Artillery Witch can Climb up without taking an ACTION and does not roll on the Injury Chart when falling.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
                         ]
     },
@@ -480,7 +497,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2 DICE once during each Activation. If the action is successful, all friendly models (Including the Prophet) within 8” of the Prophet can immediately move up to 3” towards the closest enemy model they can see. This move allows them to enter combat as if they charged the enemy.",
+                "content": " The War Prophet blares out holy sermons and dire prophecies at 100 decibels to inspire the faithful. The Prophet can take a RISKY ACTION with +2 DICE once during each Activation. If the action is successful, all friendly models within 8” of the Prophet (including the Prophet) that are not engaged in melee can immediately move up to 3” towards any enemy model they can see by the optimal path that reduces the distance between the moving model and the enemy. This move allows them to enter combat as if they charged the enemy and are considered to have done so until the end of the turn.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+2 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -497,7 +514,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The War Prophet is touched by Heaven and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened.",
+                "content": "The War Prophet is touched by a higher power and the revealed truth allows them a degree of protection against premature death. Once per battle, when the War Prophet is taken Out of Action for any reason, ignore the result as if nothing had happened.",
                 "glossary": []
             }
         ]
@@ -532,7 +549,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " During its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.",
+                "content": "At any point during its Activation, a Castigator may take a RISKY ACTION with +1 DICE. If successful, all friendly models that are Down and within 8” of the Castigator may immediately stand up at no penalty or cost.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -549,7 +566,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Unlike other models, the Castigator is allowed to attack friendly models within 1” with Melee Attacks, and can do this without declaring a Charge. Each time the Castigator takes a friendly model Out of Action with a Melee Attack, set a die aside in a pool as the act of piety inspires the troops. The next time your Warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.",
+                "content": " Unlike other models, a Castigator is allowed to attack friendly models with melee attacks within 1”. They can do this without declaring a charge. Each time the Castigator takes a friendly model Out of Action with a melee attack, set a die aside in a pool as the act of piety inspires the troops. The next time your warband makes a Morale roll, add an amount of +DICE to that roll equal to the amount of dice in the pool and empty it.",
                 "glossary": [{"val": "+DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -600,8 +617,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " If any model with the PILGRIM Keyword within 1” of the Communicant is hit, you can choose to redirect the hit against the Communicant instead. Determine the effects of the Attack or Ranged Attack as if it had targeted this model.",
-                "glossary": [{"val": "PILGRIM", "id": "gl_pilgrim"}]
+                "content": " If any model with the PILGRIM Keyword within 1” of the Communicant is hit by a ranged or melee weapon (excluding BLAST weapons), you can choose to redirect the hit against the Communicant instead. Determine the injuries exactly as if the weapon just hit the Communicant.",
+                "glossary": [{"val": "PILGRIM", "id": "gl_pilgrim"},{"val": "BLAST", "id": "gl_blastx"}]
             }
         ]
     },
@@ -617,7 +634,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " If any model with the BLACK GRAIL Keyword within 1” of the Guard is hit, you can choose to redirect the hit against the Guard instead. Determine the effects of the Attack or Ranged Attack as if it had targeted this model.",
+                "content": "If any BLACK GRAIL model within 1” of the Corpse Guard is hit by a ranged or melee weapon (excluding BLAST weapons), you can choose to redirect the hit against the Corpse Guard instead. Determine the injuries exactly as if the weapon just hit the Corpse Guard.",
                 "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"}]
             }
         ]
@@ -634,12 +651,12 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " When a Trench Pilgrim dies, you may elect to re-buy them as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 Gold Ducats after battle. When hit, any attacks against a Martyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE.",
+                "content": "When a Trench Pilgrim dies, you may elect to re-buy them after the battle as a Martyr-Penitent resurrected by a Meta-Christ for a cost of 45 ducats. When hit, any attacks against a  artyr-Penitent add -1 DICE when rolling on the Injury Table. Their Melee bonus is increased to +1 DICE.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Pilgrims resurrected as Martyr-Penitents retain all their possessions they had when they died.",
+                "content": "Martyr-Penitents retain any possessions they had before dying and being resurrected.",
                 "glossary": []
             }
         ]
@@ -725,7 +742,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Anchorite Shrine treats the Catherine Wheel as a 1-handed melee weapon that grants a +1 DICE bonus to hit (for a total of +3 DICE due to its Melee Characteristic) and has the Keywords RISKY and HEAVY. Due to the enormous weight and the skill of the Anchorite Shrine in inflicting maximum pain, the Catherine Wheel rolls on the Injury Table with 3D6 (instead of usual 2D6), adding all three dice together!",
+                "content": "The Anchorite Shrine treats the Catherine Wheel as a one-handed melee weapon with the Keywords RISKY and HEAVY that grants a +1 DICE bonus to hit (for a total of +3 DICE due to its Melee Characteristic). Because of the enormous weight and the skill of the Anchorite Shrine in inflicting maximum pain, the Catherine Wheel rolls on the Injury Chart with 3D6 (instead of usual 2D6), adding all three dice together!",
                 "glossary": [{"val": "+1 DICE", "id": "gl_riskyaction"},{"val": "HEAVY", "id": "gl_heavy"},{"val": "RISKY", "id": "gl_riskyaction"},{"val": "+3 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -777,7 +794,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Before the start of the battle, one Trench Pilgrim or Ecclesiastic Prisoner may voluntarily be broken on the wheel to show their piety and devotion (Remove all weapons, armour and equipment from the victim and use/store them as you wish). The Shrine Anchorite will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. Any attacks against the Anchorite are then taken by the volunteer instead of the Anchorite (using the Armour of the volunteer) until the volunteer has been taken Out of Action. Down result against the volunteer does not affect the Anchorite movement. Note that they are otherwise treated as a single model and share any BLOOD MARKERs from any source. A volunteer cannot make any ACTIONs or gain move -for obvious reasons. At the end of the battle, even if the Volunteer would have survived, the model dies and is removed from your Warband.",
+                "content": " Before the start of the battle, one Trench Pilgrim or Ecclesiastic Prisoner may voluntarily be broken on the wheel to show their piety and devotion (permanently remove all weapons, armour and equipment from the victim and use/store them as you wish). The Anchorite Shrine will then shatter the bones of the volunteer and carry the broken victim to the battle on its Wheel. As long as the volunteer is not taken Out of Action, any Attacks against the Anchorite are redirected to the volunteer. The volunteer cannot be independently targeted by any abilities or attacks (including BLAST weapons). For all rules purposes and attack effects (such as forced movement), the two models are treated as a single model, including sharing BLOOD, INFECTION and BLESSING MARKERS. Treat Down results against the volunteer as a Minor Hit. The volunteer cannot take any ACTIONS, be Activated separately or move – for obvious reasons. At the end of the battle, even if the volunteer may have survived, the model dies and is removed from your warband.",
                 "glossary": [{"val": "ACTIONs", "id": "gl_action"},{"val": "BLOOD MARKERs", "id": "gl_bloodmarker"}]
             }
         ]
@@ -795,7 +812,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This is a RISKY ACTION. If successful, Roll on an Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection.",
+                "content": "This is a RISKY ACTION. If successful, Roll on an Injury Chart against one enemy model within 3” of the Prophet. Armour offers no protection against this attack.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
@@ -847,7 +864,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If any type of attack (melee, ranged, mine etc.) misses an Assassin, the Assassin may slip into a moment in the future. The Assassin can move into any unoccupied space within 6”, though the Assassin cannot be moved within 1” of any enemy model or leave the battlefield. If moving out of Melee, enemies do not get free attacks.",
+                "content": "If any type of attack (melee, ranged, mine etc.) misses the Assassin, they may slip into a moment in the future. The Assassin can move into any unoccupied space within 6”, though they cannot be moved within 1” of any enemy model or leave the gaming table. If moving out of melee this way, enemies do not get free attacks.",
                 "glossary": []
             }
         ]
@@ -864,7 +881,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin ‘split’ itself through time if it has not already taken the Make a Melee Attack ACTION this Activation. Choose up to two enemy models within the charging distance from the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may Make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation.",
+                "content": "After the Assassin makes a Charge Roll, but before it moves toward its target, you may instead choose to have the Assassin split itself through time if it has not already taken a Melee Attack ACTION this Activation. Choose up to two enemy models within the charging distance of the Assassin. Then, place the Assassin into base contact with each enemy model, one after the other. It may make a Melee Attack against each one with a single melee weapon that it is equipped with. After the attacks (and any resulting effects) have been resolved, place the Assassin at either location. The Assassin cannot make any further melee attacks during this Activation.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]
@@ -899,7 +916,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As a RISKY ACTION the Sapper can disable any mine they move in contact with. If they fail, the mine blows and causes damage as specified in the rules.",
+                "content": "As a RISKY ACTION the Sapper can disable any mine (see Scenarios) they move in contact with. If they fail, the mine blows causing damage as per the rules.",
                 "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"}]
             }
         ]
@@ -934,7 +951,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When the Sapper is set up during standard deployment, it can be placed up to 6” away from its player’s Deployment Zone. If deployed in this way, it must be in contact with a piece of scenery. This ability cannot be used if the Scenario does not allow the use of INFILTRATORS.",
+                "content": "When the Sapper is set up during standard deployment, it can be placed up to 6” away from its player’s Deployment Zone. If deployed in this way, it must be in contact with a piece of scenery. This ability cannot be used if playing a scenario that does not allow the use of INFILTRATORS.",
                 "glossary": [{"val": "INFILTRATORS", "id": "gl_infiltrator"}]
             }
         ]
@@ -985,7 +1002,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Lions of Jabir may take any Dash ACTION or jump/climb/ Diving Charge ACTION with bonus +1 DICE.",
+                "content": "Lions of Jabir may take any Dash/Jump/Climb/Diving Charge ACTION with a +1 DICE bonus.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
@@ -1036,7 +1053,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If the Homunculus goes Out of Action during battle and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can use 40 ducats at any time between battles to bring it back to life with all its weapons and abilities.",
+                "content": "If the Homunculus is taken Out of Action during battle, and is deemed to have been killed in the post-battle sequence, you do not have to remove it from your roster. Instead, you can spend 40 ducats at any time between battles to bring it back to life with all of its weapons and abilities.",
                 "glossary": []
             }
         ]
@@ -1075,7 +1092,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The ritual Dance of the Dervishes is hypnotic to witness, and it is as graceful as it is deadly. All Ranged attacks against Dervishes suffer -1 DICE penalty. Dervishes do not suffer the normal -1 DICE to hit for fighting with a second melee weapon in off-hand.",
+                "content": "The ritual Dance of the Dervishes is hypnotic to witness, and it is as graceful as it is deadly. All Ranged attacks against Dervishes suffer -1 DICE penalty. Dervishes do not suffer the normal -1 DICE to hit for fighting with an Off-Hand weapon.",
                 "glossary": [{"val": "-1 DICE", "id": "gl_minusdice"}]
             }
         ]
@@ -1092,8 +1109,25 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": " Once per Turn immediately after they are Activated, as an ACTION the Lieutenant can instead force the opponent to activate one of their models that the Lieutenant can select from amongst the models they can see. The Lieutenant can then be Activated later in the same Turn as normal.",
+                "content": "Once per Turn, as an ACTION the Lieutenant can instead force the opponent to activate one of their models that the Lieutenant can select from amongst the models they can see. This ends the Activation of the Lieutenant.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_conventconditioning",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Convent Conditioning",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The medic is immune to FEAR.",
+                "glossary": [{"val": "FEAR", "id": "gl_fear"}]
             }
         ]
     },
@@ -1109,7 +1143,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All friendly models that are within 8” of the Trench Priest at the start of their Activation are not affected by FEAR.",
+                "content": "All friendly models that are within 8” of the Trench Cleric at the start of their Activation are not affected by FEAR.",
                 "glossary": [{"val": "FEAR", "id": "gl_fear"}]
             }
         ]
@@ -1138,7 +1172,7 @@
         "tags": [
                 ],
         "faction_id": "fc_newantioch",
-        "name": "Arise and be Healed!",
+        "name": "Gods Mercy",
         "eventtags": {"action": true},
         "description":  [
             {
@@ -1426,8 +1460,8 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As long as the Lord of Tumours has one free hand (which carries no weapons or a shield), it can make a RISKY ACTION against any non-BLACK GRAIL model it is fighting in melee combat. If successful, the target model gains +D3 INFECTION MARKERS. It can still fight with the other hand as normal.",
-                "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+D3 INFECTION MARKERS", "id": "gl_infectionmarker"}]
+                "content": "As long as the Lord of Tumours has one free hand (which carries no weapons or a shield), it can make an ACTION against any non-BLACK GRAIL model it is fighting in melee combat. If successful, the target model gains +D3 INFECTION MARKERS. It can still fight with the other hand as normal.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "+D3 INFECTION MARKERS", "id": "gl_infectionmarker"}]
             }
         ]
     },
@@ -1460,7 +1494,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If a Corpse Guard’s attack causes a BLOOD MARKER or an INFECTION MARKER on a creature without the Keyword BLACK GRAIL in melee combat, the Corpse Guard can remove one of their own BLOOD MARKERS or INFECTION MARKERS.",
+                "content": "If a Corpse Guard melee attack causes a BLOOD or INFECTION MARKER on a creature without the Keyword BLACK GRAIL, the Corpse Guard can remove one of their own BLOOD or INFECTION MARKERS.",
                 "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKER", "id": "gl_infectionmarker"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"}]
             }
         ]
@@ -1938,7 +1972,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You may buy up to 2 GOETIC Powers or Spells for the Praetor.",
+                "content": "You may buy up to two GOETIC Powers or Spells for the Praetor (or only one if you command a Wrath Warband).",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"}
                 ]
@@ -1958,7 +1992,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You may buy up to 3 GOETIC Powers or Spells for the Sorcerer, and must buy at least 1.",
+                "content": "You may purchase up to three GOETIC Spells or Powers for the Sorcerer and must buy at least one.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"}
                 ]
@@ -1978,7 +2012,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You may buy 1 GOETIC Powers or Spell for the Hell Knight.",
+                "content": "You may buy one GOETIC power/spell for the Hell Knight.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"}
                 ]
@@ -1998,7 +2032,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "GOETIC (1-6) power: Immediately before an Injury Roll is made against the Sorcerer, you may use this Goetic power to deduct 1 from that Injury Roll per BLOOD MARKER used.",
+                "content": "GOETIC (2-6) power: Before an injury roll is made against the Sorcerer, you may use this Goetic power to deduct one from that injury roll per two BLOOD MARKERS used.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
                 ]
@@ -2018,7 +2052,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Using GOETIC MAGIC (1) the Hunter can retreat from combat without any of its opponents getting a chance to make attacks against it",
+                "content": "Using GOETIC (1), the Hunter can retreat from melee combat without any of its opponents getting the chance to make attacks against it.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"}
                 ]
@@ -2038,7 +2072,18 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "As part of any movement that the Hunter takes during its Activation (Standard Move, Retreat, Charge, Dash, etc.), it can use a GOETIC (1) power to walk the path between Hell and Creation. The Hunter must be touching a piece of terrain when it uses this power. When it does, it is immediately placed into contact with any other piece of terrain on the battlefield, including on top of or inside terrain, if legal positions exist. Its movement then continues as normal. All usual movement rules persist for this movement (moving into or out of Melee Combat, for example). The Hunter can do this multiple times during its move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. If the Hunter uses this ability during a Charge, it does not need to take the most direct route possible toward its target, but it still selects its target as normal (ie. see the target when declaring a Charge).",
+                "content": "Once per Activation, as part of any single movement that the Hunter takes during its Activation (Standard Move, Retreat, Charge, Dash etc.), it can use a GOETIC (1) power to walk the path between Hell and Creation. The Hunter must be touching a piece of terrain when it uses this power. When it does, it is immediately placed in contact with any other piece of terrain on the battlefield, including on top of or inside terrain, if legal positions exist. Its movement then continues as normal. All usual movement rules persist for this movement (moving into or out of Melee Combat, for example).",
+                "glossary": [
+                    {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
+                ]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Hunter can do this multiple times during its chosen move, though it has to pay the BLOOD MARKER cost for each such jump between terrain pieces. If the Hunter uses this ability during a Charge, it does not need to take the most direct route possible toward its target, but it still selects its target as normal (i.e. it can see the target when declaring a Charge).",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}
                 ]
@@ -2058,9 +2103,9 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Once per Turn you can use this GOETIC MAGIC (3) after the Hunter rolls on the Injury Chart to negate the result and any other effects that affect the Hunter caused by the triggering event entirely. Effects from the triggering event, such as BLAST weapons that originally targeted the Hunter, still affect other models as normal.",
+                "content": "Once per turn, the Hunter can use this GOETIC (3) after an injury is rolled against it to negate the result (and any other effects caused by the triggering event) entirely. Effects from the triggering event, such as BLAST weapons that originally targeted the Hunter, still affect other models as normal.",
                 "glossary": [
-                    {"val": "GOETIC MAGIC", "id": "gl_goetic"},
+                    {"val": "GOETIC", "id": "gl_goetic"},
                     {"val": "BLAST", "id": "gl_blastx"}
                 ]
             }
@@ -2079,7 +2124,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "This GOETIC (1) power allows a Hellknight to add +1 DICE to any Injury roll their Melee or Ranged attacks cause.",
+                "content": "Before rolling an injury caused by the Hell Knight’s melee or ranged attack, it can use this GOETIC(1) power to roll that injury with +1 DICE. When this power is used on an injury caused by a BLAST weapon, it applies to every injury caused by that attack ACTION.",
                 "glossary": [
                     {"val": "GOETIC", "id": "gl_goetic"},{"val": "+1 DICE", "id": "gl_plusdice"}
                 ]
@@ -2098,7 +2143,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "When a Yoke Fiend is Activated, if there is an enemy model without the Keyword BLACK GRAIL or DEMONIC within 12” that it can see, it must make a Charge against the closest enemy model without the Keyword BLACK GRAIL or DEMONIC as it’s first ACTION. If it begins its Activation Down and the above conditions are true, it must Stand and then Charge. If it begins its Activation in Melee Combat, it ignores this ability.",
+                "content": "When a yoke fiend is Activated, if there is an enemy model without the Keyword BLACK GRAIL or DEMONIC within 12” that it can see, it must make a Charge against the closest enemy model without the Keyword BLACK GRAIL or DEMONIC as its first ACTION. If it begins its Activation Down and the above conditions are true, it must stand and then Charge, unless it cannot stand. If it begins its Activation in melee combat, it ignores this ability.",
                 "glossary": [
                     {"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "DEMONIC", "id": "gl_demonic"},{"val": "ACTION", "id": "gl_action"}
                 ]
@@ -2136,7 +2181,7 @@
         "description":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "If a Wretch manages to take any enemy ELITE model Out of Action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle and from your Warband permanently. It does not count as casualty, but your Warband’s total size for this battle is reduced by one for purposes of Morale.",
+                "content": " If a wretch manages to take any enemy ELITE model Out of Action or performs a Glorious Deed, it gains its freedom and is immediately removed from the battle – and from your warband – permanently. It does not count as casualty, but your warband’s total size for this battle is reduced by one for purposes of Morale.",
                 "glossary": [
                     {"val": "ELITE", "id": "gl_elite"}
                 ]
@@ -2249,7 +2294,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "All friendly models within 8” of the Desecrated Saint (including the Saint) add +1 DICE to their Melee Characteristic and +1 DICE to their Dash Actions.",
+                                "content": "All friendly models within 8” of the Saint (including the Saint) roll melee attacks and to Dash with +1 DICE.",
                                 "glossary": [ {"val": "+1 DICE", "id": "gl_plusdice"}]
                             }
                         ]
@@ -2260,7 +2305,7 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": " All hostile models within 6” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell-dimension that the Saint projects all around it. Note: Holy Icon Shields and Armour, Infernal Iron Armour, or similar armour that always grant armour save are not affected by the Aura of Lust.",
+                                "content": "Enemy models within 6” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL) gain no benefit from any armour they wear, as they are naked before the Serpent Head of Lust in the Hell dimension that the Saint projects all around it. This includes additional effects, such as Machine Armour’s ability to reduce Down results to Minor Hit results, but not penalties or neutral effects (such as the Charging penalty or the base size adjustment). Note: Holy Icon Shields and Armour, Infernal Iron Armour or similar armour that always grant armour save are not affected by the Aura of Lust.",
                                 "glossary": [ {"val": "BLACK GRAIL", "id": "gl_blackgrail"} ]
                             }
                         ]
@@ -2271,8 +2316,19 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Any enemy model within 8” of the Desecrated Saint that suffers a Minor Hit result from Injury Roll treats it as Down instead. This even affects models that normally do not suffer Down results from Minor Hit Injuries (such as models wearing Machine Armour).",
+                                "content": "Enemy models within 8” of the Saint treat Minor Hit results as a Down result instead. This affects models that normally treat Down results as a Minor Hit result (such as models wearing Machine Armour).",
                                 "glossary": []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                        "content": "Aura of Famine (Gluttony): ",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Enemy models within 8” of the Desecrated Saint (unless they have the Keyword BLACK GRAIL or ARTIFICIAL) roll ACTIONS with -1 DICE.",
+                                "glossary": [{"val": "BLACK GRAIL", "id": "gl_blackgrail"},{"val": "ARTIFICIAL", "id": "gl_artificial"},{"val": "ACTIONS", "id": "gl_action"},{"val": "-1 DICE", "id": "gl_minusdice"}]
                             }
                         ]
                     }

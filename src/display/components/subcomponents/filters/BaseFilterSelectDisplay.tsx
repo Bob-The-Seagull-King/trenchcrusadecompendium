@@ -47,7 +47,6 @@ const BaseFilterSelectDisplay = (prop: any) => {
         updatekey(_keyval+1)
     }
     
-    console.log(_activetagfilters);
     // Return result -----------------------------
     return (
         <>

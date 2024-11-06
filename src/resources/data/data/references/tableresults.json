@@ -42,8 +42,8 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Some Ranged and Melee Attacks have additional effects if you roll a Critical Success when determining if they hit.",
-                "glossary": []
+                "content": "Ranged and Melee Attacks add +1 DICE to injury rolls if your result is a Critical Success when determining if they hit.",
+                "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
             }
         ]
     },

@@ -177,7 +177,7 @@
         "name": "Critical",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "When attacking with a weapon with this keyword, add +1 DICE to any injury rolls the weapon causes if you roll a Critical (i.e. 12+) on the Action Success Chart.",
+            "content": "When attacking with a weapon with this keyword, add +2 DICE to any injury rolls the weapon causes if you roll a Critical (i.e. 12+) on the Action Success Chart.",
             "subcontent":   [],
             "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
         }]
@@ -333,7 +333,7 @@
         "name": "Artificial",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The model is not affected by FEAR. Additionally, attacks with the Keyword GAS suffer a -1 DICE penalty to injure the Witch and they do not suffer additional BLOOD MARKERS from the Keyword GAS.",
+                            "content": "This model is not of natural origin but is instead constructed from non-organic elements.",
                             "glossary": [{"val": "FEAR", "id": "gl_fear"},{"val": "GAS", "id": "gl_gas"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
         }]
     },
@@ -474,7 +474,7 @@
         "name": "Skirmisher",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": "Unless engaged in melee, when an enemy model declares a charge against a model with this Keyword, the SKIRMISHER can immediately move D3” in any direction they wish (except within 1” of any enemy). After this manoeuvre, the charging model is moved as normal. This may lead to the charger being unable to enter into Melee. If the SKIRMISHER moves behind another friendly model so it is now in the path and reach of the Charger, then the Charge is redirected to this model.",
+            "content": "When a model with this Keyword is targeted by an enemy’s Charge, it may immediately move D3” in any direction, except into Melee Combat. A Skirmisher may also make this move when a charging enemy model would enter Melee Combat with it during a Charge that is not targeting it. After either of these moves is resolved, the Charge continues as normal toward the original target. These moves can only be taken if the Skirmisher is not in Melee Combat and only one such move may be taken per Charge.",
             "subcontent":   [],
             "glossary": []
         }]
@@ -537,7 +537,7 @@
         "name": "Tough",
         "description":  [{
             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-            "content": " If a TOUGH model would be taken Out Of Action, it is taken Down instead. After a TOUGH model has been taken Down in this way once, it can be taken Out of Action as normal.",
+            "content": "If a TOUGH model would be taken Out Of Action, it is knocked Down instead. After a TOUGH model has been knocked Down in this way once, it can be taken Out of Action as normal.",
             "subcontent":   [],
             "glossary": [
                 ]

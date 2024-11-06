@@ -46,6 +46,15 @@
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                         "content": "At the end of any turn, if at least half of your Warband is Down or Out of Action, roll on the Action Success Chart. If you fail, your Warband flees the battlefield and loses the battle immediately. If both Warbands are required to take this test at the same time, the smaller Warband tests first.",
                         "subcontent": [ ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": ""
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A warband that loses a Morale Test can decide, instead of fleeing, that their warband is Shaken. Actions taken by models in a Shaken warband are considered RISKY ACTIONS. After one turn, the warband recovers to its normal state and is no longer considered Shaken. If it fails a Morale test again (shaken or not), it flees as standard.",
+                        "glossary": [{"val": "RISKY ACTIONS", "id": "gl_riskyaction"}]
                     }
                 ]
             },
@@ -396,7 +405,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "All models in the game can Move when Activated unless otherwise indicated in the rules. Each model can move up to the number of inches indicated in their profile when Activated, though they can move less and not at all if you wish.",
+                "content": "All models in the game can Move when Activated unless otherwise indicated in the rules. Each model can move up to the number of inches indicated in their profile, though they can move less and not at all if you wish. There are a number of general rules that apply to all of the movement that a model takes during its Activation. Certain types of movement, such as Falling or the knockback effect of an Artillery Witch’s Infernal Bomb, are not subject to these rules. Regardless of the type of movement, a model cannot move off the battlefield unless a rule specifically states so.",
                 "glossary": []
             },
             { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
@@ -406,17 +415,27 @@
                 "subcontent": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "You cannot move within 1” of opposing models unless you charge them (see Charging).",
+                        "content": "A model cannot enter Melee Combat (within 1” of enemy models) unless it Charges.",
                         "glossary": []
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "You can move through friendly models as long as your movement allows you to move past them completely.",
+                        "content": "A model cannot leave Melee Combat (within 1” of enemy models) at any point during Movement unless it is Retreating.",
                         "glossary": []
                     },
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "You can never move off the battlefield unless rules specifically state so.",
+                        "content": "A model in Melee Combat cannot otherwise move unless they began their Activation in Melee Combat, take the standard Move ACTION and remain in Melee Combat with every model that they were in Melee Combat with at the start of their Activation.",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model can move through friendly models if it has enough movement to move past them entirely.",
+                        "glossary": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model cannot move off the battlefield unless a rule specifically states so.",
                         "glossary": []
                     }
                 ]
@@ -485,6 +504,16 @@
                                 ]
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "title": "Difficult Terrain",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "This includes rock beds, swamps, barbed wire and so on. Moving through Difficult Terrain costs double the normal movement of the model.",
+                        "glossary": [ ]
                     }
                 ]
             },

@@ -63,7 +63,7 @@ function GetContentPackData(request: IRequest): any {
     
     let i = 0;
     for (i = 0; i < ReturnData.length; i++) {
-        if (ReturnData[i].IsActive) {
+        if (ReturnData[i].IsActive === true) {
             let j = 0;
             for (j = 0; j < ReturnData[i].Files.length; j++) {
                 if (ReturnData[i].Files[j].type == request.searchparam.type) {
