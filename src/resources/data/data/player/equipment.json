@@ -201,7 +201,6 @@
         "tags": [
             {"tag_name": "Assault", "val": "gl_assault"},
             {"tag_name": "Fire", "val": "gl_fire"},
-            {"tag_name": "BLAST 2\"", "val": "gl_blastx"},
             {"tag_name": "Grenade", "val": "gl_grenade"}
                 ],
         "category": "ranged",
@@ -343,7 +342,6 @@
         "tags": [
             {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
             {"tag_name": "Heavy", "val": "gl_heavy"},
-            {"tag_name": "Grenade", "val": "gl_grenade"},
             {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
@@ -373,7 +371,6 @@
         "tags": [
             {"tag_name": "Gas", "val": "gl_gas"},
             {"tag_name": "Heavy", "val": "gl_heavy"},
-            {"tag_name": "Grenade", "val": "gl_grenade"},
             {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
                 ],
         "category": "ranged",
