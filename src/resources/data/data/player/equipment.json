@@ -2681,8 +2681,8 @@
                     "subcontent": [
                         {
                             "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                            "content": "The Viscera Cannon has additional +2 DICE on Ranged Attack rolls as even the slightest splash can kill. If it hits the enemy, roll to injure as normal. After rolling for injuries, you can boost the damage by up to three additional BLOOD MARKERS per hit by taking the same number of BLOOD MARKERS on the shooter itself.",
-                            "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                            "content": "The Viscera Cannon has additional +2 DICE on Ranged Attack rolls as even the slightest splash can kill. If it hits the enemy, roll to injure as normal. After rolling for injuries, you can boost the damage by up to three additional INFECTION MARKERS per hit by taking the same number of BLOOD MARKERS on the shooter itself.",
+                            "glossary": [{"val": "INFECTION MARKERS", "id": "gl_infectionmarker"},{"val": "+2 DICE", "id": "gl_plusdice"}]
                         }
                     ]
                 }
