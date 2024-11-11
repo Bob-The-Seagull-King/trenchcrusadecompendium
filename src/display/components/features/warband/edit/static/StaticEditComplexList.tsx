@@ -131,6 +131,8 @@ export const EditListDataDex : EditListDataTable = {
                             rstrctnlst += "Not " + ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "model") {
                             rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: ModelEquip.Restrictions[i].val.toString()}})).name
+                         } else if (ModelEquip.Restrictions[i].type == "model") {
+                            rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: ModelEquip.Restrictions[i].val.toString()}})).name
                          } else { rstrctnlst += ModelEquip.Restrictions[i].val.toString() }
                     }
                 }
@@ -552,7 +554,9 @@ export const EditListDataDex : EditListDataTable = {
                             rstrctnlst += "Not " + ModelEquip.Restrictions[i].val.toString().toUpperCase();
                         } else if (ModelEquip.Restrictions[i].type == "model") {
                             rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'models', id: ModelEquip.Restrictions[i].val.toString()}})).name
-                         } else { rstrctnlst += ModelEquip.Restrictions[i].val.toString() }
+                         } else if (ModelEquip.Restrictions[i].type == "model") {
+                            rstrctnlst += (Requester.MakeRequest({searchtype: "id", searchparam: {type: 'upgrade', id: ModelEquip.Restrictions[i].val.toString()}})).name
+                         }else { rstrctnlst += ModelEquip.Restrictions[i].val.toString() }
                     }
                 }
 
@@ -600,6 +604,17 @@ export const EditListDataDex : EditListDataTable = {
                                 ModelMatch = true;
                             }
                         }
+                        if (_item.Restrictions[j].type == "upgrade") {
+                            
+                            HasModel = true;
+                            for (let k = 0 ; k < _member.Upgrades.length; k++) {
+                                if (_item.Restrictions[j].val == _member.Upgrades[k].ID) {
+                                    ModelMatch = true;
+                                }
+                            }
+                            
+                        }
+                        
                         if (_item.Restrictions[j].type == "keyword") {
                             HasModel = true;
                             if (_item.Restrictions[j].val.toString().toUpperCase() === 'ELITE') {

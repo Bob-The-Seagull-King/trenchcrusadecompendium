@@ -611,7 +611,7 @@
             {"id": "eq_bayonet", "cost": 2, "cost_id": "ducats", "limit": 0, "restriction": [], "features":["Shield Combo"]},
             {"id": "eq_trenchclub", "cost": 3, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_swordaxe", "cost": 4, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_plagueknight"}], "features":["Shield Combo"]},
+            {"id": "eq_polearm", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_plagueknight"},{"type": "model", "val": "md_executor"},{"type": "model", "val": "md_plagueknight_fv_dirgeofthegreathegemon"}], "features":["Shield Combo"]},
             {"id": "eq_greatmaul", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_greataxe", "cost": 12, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_plagueblade", "cost": 15, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"}]},
