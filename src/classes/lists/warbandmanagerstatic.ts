@@ -913,7 +913,6 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
  * @returns Text string representing the export
  */
 export function ExportModelDisplayShortTextTTS(_model: WarbandMember, _notes: boolean, _inside: boolean) {
-    console.log(JSON.stringify(_model))
 
     // TTS Name row
     const NameRow = '+++ [b]' + _model.Name + '[/b] +++'
