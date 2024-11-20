@@ -566,12 +566,15 @@
             } 
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_flamecannon", "eq_muradbombard", "eq_sultanategrandcannon", "eq_titanzulfiqar"],
+        "removed_equip": ["eq_incendiarygrenades","eq_reinforcedarmour","eq_sniperrifle","eq_assassinsdagger","eq_flamecannon", "eq_muradbombard", "eq_sultanategrandcannon", "eq_titanzulfiqar"],
         "removed_model": ["md_yuzbasicaptain","md_jabireanalchemist","md_lionsofjabir","md_janissaries","md_brazenbull","md_sultanateassassin"],
         "equipment": [
             {"id": "eq_goldenkhanjar",              "cost": 20, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
             {"id": "eq_bowofalumat",                "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
-            {"id": "eq_hashashinleaf",              "cost": 5,  "cost_id": "ducats", "limit": 4, "restriction": []}
+            {"id": "eq_hashashinleaf",              "cost": 5,  "cost_id": "ducats", "limit": 4, "restriction": []},
+            {"id": "eq_assassinsdagger",        "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_sultanateassassin"},{"type": "model", "val": "md_sultanatemasterassassin"}]},
+            {"id": "eq_sniperrifle",            "cost": 35, "cost_id": "ducats", "limit": 2, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_dervish"},{"type": "model", "val": "md_janissaries"}]},
+            {"id": "eq_reinforcedarmour",       "cost": 40, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "model", "val": "md_dervish"},{"type": "model", "val": "md_janissaries"}]}
         ],
         "models" : [
             {"id": "md_sultanatemasterassassin",    "cost": 95, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [
@@ -1196,7 +1199,7 @@
             {"id": "eq_grenadelauncher", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_greataxe", "cost": 7, "cost_id": "ducats", "limit": 0, "restriction": []},
             {"id": "eq_lochaberaxe", "cost": 15, "cost_id": "ducats", "limit": 0, "restriction": []},
-            {"id": "eq_submachinegun", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
+            {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_automaticshotgun", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_machinegun", "cost": 50, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_sniperrifle", "cost": 35, "cost_id": "ducats", "limit": 3, "restriction": []},
@@ -1353,7 +1356,7 @@
         "rules": [
         ],
         "removed_rules": [],
-        "removed_equip": ["eq_blackgrailshield","eq_beelzebubsaxe","eq_plagueblade","eq_putridshotgun"],
+        "removed_equip": ["eq_blackgrailshield","eq_beelzebubsaxe","eq_plagueblade","eq_putridshotgun","eq_visceracannon"],
         "removed_model": ["md_lordoftumours","md_amalgam","md_plagueknight","md_houndoftheblackgrail","md_heraldofbeelzebub","md_grailthrall"],
         "equipment": [
             {"id": "eq_plagueblade", "cost": 15, "cost_id": "ducats", "limit": 3, "restriction": [{"type": "keyword", "val": "Elite"}]},

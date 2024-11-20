@@ -223,7 +223,7 @@
             {"id": "eq_holygrenade", "cost": 2, "cost_id": "glory", "limit": 3, "restriction": [{"type": "purchase", "val": "explore"}]},
             {"id": "eq_donkeysjawbone", "cost": 8, "cost_id": "glory", "limit": 1, "restriction": [{"type": "keyword", "val": "Elite"},{"type": "purchase", "val": "explore"}]},
             {"id": "eq_hornofjoshua", "cost": 9, "cost_id": "glory", "limit": 1, "restriction": [{"type": "purchase", "val": "explore"}]},
-            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral  "}]},
+            {"id": "eq_wargavel", "cost": 0, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_witchburnergeneral"}]},
             {"id": "eq_mountaineerkit", "cost": 3, "cost_id": "ducats", "limit": 1, "restriction": []},
             {"id": "eq_fieldshrine", "cost":  2, "cost_id": "glory",  "limit": 0, "restriction": []}
         ],

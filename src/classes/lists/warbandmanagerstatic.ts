@@ -280,7 +280,7 @@ export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
     // First row + warband header
     const StartingRow = " " + _warband.Name + " | " + _warband.Faction.Name + " "
     const startrowlength = StartingRow.length;
-    returnRow += ("```" + "\n") + ("-".repeat(10)) + StartingRow + ("-".repeat(90-((startrowlength < 90)? startrowlength : 0)));
+    returnRow += ("```" + "\n") + StartingRow;
 
     // ------------------------------- Warband Costs --------------------------------
 
@@ -373,7 +373,7 @@ export function ExportDisplayTextBasic(_warband : Warband, _notes : boolean) {
     // ------------------------------------------------------------------------------
 
     // Add final row and return
-    returnRow += "\n" + "\n" + ("-".repeat(100)) + ("\n" + "```")
+    returnRow += "\n" + "\n" + ("\n" + "```")
 
     return returnRow;
 }
@@ -612,8 +612,8 @@ export function ExportModelDisplayTextBasic(_model : WarbandMember, _notes : boo
     // ------------------------ Generate Text ---------------------------------------
 
     const rowMarkerDiv = (rowMarker - StartingRow.length - 2)/2
-    const FirstRow = ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0)) + " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
-    const LastRow = ("-".repeat(rowMarker))
+    const FirstRow = " " + StartingRow + " " + ("-".repeat((rowMarkerDiv > 0)? rowMarkerDiv : 0))
+    const LastRow = ("")
 
     // Add discord-friendly comment block characters if needed
     let returnString = (_inside? "" : ("```" + ("\n"))  )

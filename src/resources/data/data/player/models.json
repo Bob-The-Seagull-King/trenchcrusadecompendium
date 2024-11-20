@@ -633,11 +633,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The Communicant can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List. They always carry a Communicant Cross (see below)."
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_communicantcross"
+                "content": "The Communicant can be equipped with any weapon, armour and equipment from the Trench Pilgrim Equipment List. They always carry a Communicant Cross."
             }
             ],
         "abilities":  [
@@ -648,6 +644,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_communicantcross"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
