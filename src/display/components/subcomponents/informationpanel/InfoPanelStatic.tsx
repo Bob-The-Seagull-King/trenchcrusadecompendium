@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChess, faCircleInfo, faFileLines, faQuoteLeft } from "@fortawesome/free-solid-svg-icons"
+import { faChess, faCircleInfo, faFileLines, faQuoteLeft, faChessPawn, faChessKing } from "@fortawesome/free-solid-svg-icons"
 import { PlayerFaction } from '../../../../classes/feature/factions/Faction'
 import { returnDescription } from '../../../../utility/util'
 import { Warband } from '../../../../classes/lists/Warband'
@@ -208,7 +208,31 @@ export const PanelDataDex : PanelDataTable = {
         returnButton(open : NoneToNoneFunction) {
             return (
                 <Button style={{padding:"0em"}} variant="" onClick={() => open()}>
-                    <FontAwesomeIcon icon={faChess} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                    <FontAwesomeIcon icon={faChessPawn} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
+                </Button>
+            )
+        },
+        returnModal(_obj : string) {
+            return (
+                <div className="row">
+                    <div className="col-12">
+                        <InputGroup className="tagboxpad" >
+                            <Form.Control as="textarea" aria-label="With textarea" readOnly defaultValue={_obj} placeholder={""} className="formparagraphtext" style={{height:"20em",fontFamily:"'Courier-New', Courier, monospace"}}/>
+                        </InputGroup>
+                    </div>
+                </div>
+            )
+        }
+    },
+    exportmembershorttts: {
+        id : "Faction Lore",
+        returnTitle(_obj : string) {
+            return "Table Top Simulator Formated Short Model Description";
+        },
+        returnButton(open : NoneToNoneFunction) {
+            return (
+                <Button style={{padding:"0em"}} variant="" onClick={() => open()}>
+                    <FontAwesomeIcon icon={faChessKing} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
                 </Button>
             )
         },

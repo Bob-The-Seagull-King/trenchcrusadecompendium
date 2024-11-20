@@ -847,32 +847,22 @@ export const EditListDataDex : EditListDataTable = {
         },
         tossItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
-                if (_item.CostType == "ducats") {
-                    _warband.DucatLost += _item.Cost
-                } else {
-                    _warband.GloryLost += _item.Cost
-                }
+                _warband.DucatLost += _item.Cost
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }
         },
         sellItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
-                if (_item.CostType == "ducats") {
-                    _warband.DucatLost += Math.floor(_item.Cost * 0.5)
-                    _warband.PayChest += Math.floor(_item.Cost * 0.5)
-                } else {
-                    _warband.GloryLost += Math.floor(_item.Cost * 0.5)
-                }
+                _warband.DucatLost += Math.floor(_item.Cost * 0.5)
+                _warband.PayChest += Math.floor(_item.Cost * 0.5)
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }
         },
         refundItem (_manager : WarbandManager, _warband : Warband | null, _item : any, update: any, _member? : WarbandMember | null) {
             if (_warband && _member) {
-                if (_item.CostType == "ducats") {
-                    _warband.PayChest += Math.floor(_item.Cost)
-                }
+                _warband.PayChest += _item.Cost
                 _manager.DeleteUpgradeFromModel(_item, _member, _warband)
                 update()
             }

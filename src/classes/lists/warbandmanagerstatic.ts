@@ -1,6 +1,7 @@
 import { Warband } from "./Warband";
 import { WarbandMember } from "./WarbandMember";
 import { Requester } from "../../factories/Requester";
+import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from './WarbandMemberStatic';
 
 /**
  * Returns as a string the glory cost of a memebr
@@ -691,10 +692,11 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
     }
 
     let StatsRow = ''
-    StatsRow += '[FFC800][b]Mov.[/b] ' + (_model.Model.Object.Movement ? _model.Model.Object.Movement : 0) + '[-] | '
-    StatsRow += '[44BA26][b]Armor[/b] ' + (_model.Model.Object.Armour ? _model.Model.Object.Armour : 0) + '[-] | '
-    StatsRow += '[DB162F][b]Melee[/b] ' + (_model.Model.Object.Melee ? _model.Model.Object.Melee : 0) + '[-] | '
-    StatsRow += '[3185FC][b]Ranged[/b] ' + (_model.Model.Object.Ranged ? _model.Model.Object.Ranged : 0) + '[-]'
+    StatsRow += '[FFC800][b]Mov.[/b] ' + returnModelMovement(_model) + '[-] | '
+    StatsRow += '[44BA26][b]Armor[/b] ' + returnModelArmour(_model) + '[-] | '
+    StatsRow += '[DB162F][b]Melee[/b] ' + returnModelMelee(_model) + '[-] | '
+    StatsRow += '[3185FC][b]Ranged[/b] ' + returnModelRanged(_model) + '[-]'
+    
 
     // ---------------------------- Member Upgrades / Equipment ----------------------
 
@@ -901,6 +903,214 @@ export function ExportModelDisplayTextTTS(_model: WarbandMember, _notes: boolean
 
     return returnString
 }
+
+/**
+ * Takes a model and produces a text representation of it
+ * for use in Tabletop Simulator.
+ * @param _model The model being exported
+ * @param _notes If any additional notes exist
+ * @param _inside If this export is inside a warband export or on its own
+ * @returns Text string representing the export
+ */
+export function ExportModelDisplayShortTextTTS(_model: WarbandMember, _notes: boolean, _inside: boolean) {
+
+    // TTS Name row
+    const NameRow = '+++ [b]' + _model.Name + '[/b] +++'
+
+    // TTS Description Row
+    let StartingRow = '[9926A6][b]' + (_model.Model.Object.Name ? _model.Model.Object.Name : '') + '[/b][-]'
+    let i = 0
+    let n = 0
+
+    if (_model.Model.Object.Tags && _model.Model.Object.Tags.length > 1) {
+        StartingRow += ' ('
+        for (i = 0; _model.Model.Object.Tags && _model.Model.Object.Tags.length > i; i++) {
+            StartingRow += _model.Model.Object.Tags?.[i].tag_name.toUpperCase()
+            if (_model.Model.Object.Tags && _model.Model.Object.Tags.length > i + 1) StartingRow += ', '
+            else StartingRow += ')'
+        }
+    }
+
+    let StatsRow = ''
+    
+
+    // StatsRow += '[FFC800][b]Base[/b] ' + returnModelBase(_model) + '[-] | '
+    // StatsRow += '[FFC800][b]Ducat[/b] ' + GetDucatCost(_model) + '[-] | '
+    // StatsRow += '[FFC800][b]Glory[/b] ' + GetGloryCost(_model) + '[-]\n'
+    StatsRow += '[FFC800][b]Mov.[/b] ' + returnModelMovement(_model) + '[-] | '
+    StatsRow += '[44BA26][b]Armor[/b] ' + returnModelArmour(_model) + '[-]\n'
+    StatsRow += '[DB162F][b]Melee[/b] ' + returnModelMelee(_model) + '[-] | '
+    StatsRow += '[3185FC][b]Ranged[/b] ' + returnModelRanged(_model) + '[-]\n'
+
+    // ---------------------------- Member Upgrades / Equipment ----------------------
+
+    const AbilitiesSet = []
+    const EquipmentSet = []
+    const UpgradeSet = []
+    const ArmourSet = []
+    const RangedSet = []
+    const MeleeSet = []
+    const MiscSet = []
+    let DescText = ''
+    let TempItem
+    let TempDesc
+    let Ability
+
+    // Add Abilities to array
+    for (i = 0; _model.Model.Object.Abilities.length > i; i++) {
+        Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Abilities[i].Content } })
+        if (Ability.description != undefined) {
+            DescText = '[9926A6][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+            AbilitiesSet.push(DescText)
+        }
+    }
+
+    // Add Integrated Equipment to array
+    for (i = 1; _model.Model.Object.Equipment.length > i; i++) {
+        Ability = Requester.MakeRequest({ searchtype: 'id', searchparam: { type: 'addons', id: _model.Model.Object.Equipment[i].Content } })
+        if (Ability.description != undefined) {
+            DescText = '[FFC800][b]' + (Ability.name ? Ability.name : '') + '[/b][-]'
+            EquipmentSet.push(DescText)
+        }
+    }
+
+    // Add upgrade text to array
+    for (i = 0; i < _model.Upgrades.length; i++) {
+        DescText = '[44BA26][b]' + (_model.Upgrades[i].Name ? _model.Upgrades[i].Name : '') + '[/b][-]'
+        UpgradeSet.push(DescText)
+    }
+
+    // Add equipment text to arrays
+    for (i = 0; i < _model.Equipment.length; i++) {
+        DescText = ''
+        TempItem = _model.Equipment[i].Object
+        if (TempItem.Category == 'ranged' || TempItem.Category == 'melee') {
+            DescText += ' (' + (TempItem.EquipType ? TempItem.EquipType : '')
+            DescText += ', ' + (TempItem.Range ? TempItem.Range : '')
+            for (n = 0; n < TempItem.Modifiers.length; n++) {
+                DescText += ', ' + (TempItem.Modifiers[n] ? TempItem.Modifiers[n] : '')
+            }
+            for (n = 0; TempItem.Tags && TempItem.Tags.length > n; n++) {
+                DescText += ', ' + (TempItem.Tags[n].tag_name ? TempItem.Tags[n].tag_name.toUpperCase() : '')
+            }
+            DescText += ')'
+        }
+        if  (TempItem.Category == 'equipment') {
+            if (TempItem.Tags && TempItem.Tags.length > 0) {
+                DescText += ' (' 
+                for (n = 0; TempItem.Tags && TempItem.Tags.length > n; n++) {
+                    if (n>0) DescText += ', '
+                    DescText += TempItem.Tags[n].tag_name ? TempItem.Tags[n].tag_name.toUpperCase() : ''
+                }
+                DescText += ')'
+            }
+        }
+        if (TempItem.Category == 'ranged') {
+            RangedSet.push('[3185FC][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'melee') {
+            MeleeSet.push('[DB162F][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'armour') {
+            ArmourSet.push('[44BA26][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+        if (TempItem.Category == 'equipment') {
+            MiscSet.push('[FFC800][b]' + (TempItem.Name ? TempItem.Name : '') + '[/b][-]' + DescText)
+        }
+    }
+    // ------------------------------------------------------------------------------
+
+    // ------------------------ Generate Text ---------------------------------------
+
+    // Add discord-friendly comment block characters if needed
+    let returnString = ''
+
+    // Starting row
+    returnString += NameRow + '\n' + StartingRow + '\n' + StatsRow + '\n'
+
+    // Add abilities/upgrades/equipment if some exist
+
+
+    if (UpgradeSet.length > 0 || AbilitiesSet.length > 0) {
+        returnString += '\n' + '+++ Abilities & Upgrades +++'
+    }
+    if (UpgradeSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < UpgradeSet.length; i++) {
+            returnString += '\n' + UpgradeSet[i]
+        }
+    }
+    if (AbilitiesSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < AbilitiesSet.length; i++) {
+            returnString += '\n' + AbilitiesSet[i]
+        }
+    }
+    if (_model.Equipment.length > 0) {
+        returnString += '\n' + '+++ Equipment +++'
+    }
+    if (EquipmentSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < EquipmentSet.length; i++) {
+            returnString += '\n' + EquipmentSet[i]
+        }
+    }
+    if (ArmourSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < ArmourSet.length; i++) {
+            returnString += '\n' + ArmourSet[i]
+        }
+    }
+    if (RangedSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < RangedSet.length; i++) {
+            returnString += '\n' + RangedSet[i]
+        }
+    }
+    if (MeleeSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < MeleeSet.length; i++) {
+            returnString += '\n' + MeleeSet[i]
+        }
+    }
+    if (MiscSet.length > 0) {
+        returnString += ''
+        for (i = 0; i < MiscSet.length; i++) {
+            returnString += '\n' + MiscSet[i]
+        }
+    }
+
+    // Add skills if some exist
+    if (_model.Skills.length > 0) {
+        returnString += '\n' + '+++ SKILLS +++'
+        for (i = 0; i < _model.Skills.length; i++) {
+            returnString += '\n' + '[00C2D1]' + _model.Skills[i].name + '[-] '
+        }
+    }
+
+    // Add injuries if some exist
+    if (_model.Injuries.length > 0) {
+        returnString += '\n' + '+++ INJURIES +++'
+
+        for (i = 0; i < _model.Injuries.length; i++) {
+            returnString += '\n' + '[DB162F]' + _model.Injuries[i].Name + '[-] '
+        }
+    }
+
+    // Add notes if requested
+    if (_notes) {
+        if (_model.Notes.trim().length > 0) {
+            returnString += '\n' + '+++ NOTES +++' + '\n' + _model.Notes
+        }
+    }
+
+    // Add final row
+    returnString += ''
+    // ------------------------------------------------------------------------------
+
+    return returnString
+}
+
 
 /**
  * Generates a unique ID to differentiate

@@ -6,7 +6,7 @@ import { Warband } from '../../../../../classes/lists/Warband';
 import { WarbandManager } from '../../../../../classes/lists/warbandmanager';
 import { WarbandMember } from '../../../../../classes/lists/WarbandMember';
 import { returnTags } from '../../../../../utility/util';
-import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic, ExportModelDisplayTextTTS } from '../../../../../classes/lists/warbandmanagerstatic';
+import { GetGloryCost, GetDucatCost, ExportModelDisplayText, ExportModelDisplayTextBasic, ExportModelDisplayTextTTS, ExportModelDisplayShortTextTTS } from '../../../../../classes/lists/warbandmanagerstatic';
 
 import { useGlobalState } from './../../../../../utility/globalstate'
 import { getColour } from '../../../../../utility/functions';
@@ -61,6 +61,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
+    const modelExportShortTTS = ExportModelDisplayShortTextTTS(member, true, false)
     const modelExportTTS = ExportModelDisplayTextTTS(member, true, false)
 
     function returnComponentsList(_str : string) {
@@ -264,6 +265,8 @@ const ItemMemberExpandedDisplay = (props: any) => {
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmemberbasic"} panelObj={modelExportBasic}/>
 
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmembertts"} panelObj={modelExportTTS}/>
+
+                            <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportmembershorttts"} panelObj={modelExportShortTTS}/>
 
                             <Button variant="" onClick={() => closeSelf()}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="setWhite" style={{fontSize:"2em",margin:"0em"}}/>
