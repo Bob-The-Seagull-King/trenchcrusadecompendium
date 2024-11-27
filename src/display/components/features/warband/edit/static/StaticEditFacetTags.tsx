@@ -32,6 +32,7 @@ export const FacetTagsDataDex : FacetTagsDataTable = {
                     taglist.push("tag_" + _item.Tags[i].tag_name);
                 }
             }
+            taglist.push("addonid_" + _item.ID);
             const Items : {[_name : string] : any} = returnComponentsWithinParams(_member, taglist)
             return Items;
         }
@@ -55,6 +56,7 @@ export const FacetTagsDataDex : FacetTagsDataTable = {
                     taglist.push("tag_" + _item.Tags[i].tag_name);
                 }
             }
+            taglist.push("equipid_" + _item.ID);
             const Items : {[_name : string] : any} = returnComponentsWithinParams(_member, taglist)
             return Items;
         }
@@ -70,6 +72,7 @@ export const FacetTagsDataDex : FacetTagsDataTable = {
                     }
                 }
             }
+            taglist.push("upgradeid_" + _item.ID);
             const Items : {[_name : string] : any} = returnComponentsWithinParams(_member, taglist)
             return Items;
         }

@@ -845,7 +845,7 @@
         "ranged": [],
         "melee": [2],
         "armour": [0],
-        "base": [50],
+        "base": [60],
         "faction_id": "fc_trenchpilgrim",
         "team":"heaven",
         "variant_id": "fv_basic",
@@ -876,6 +876,58 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_brokenonthewheel"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_catherinewheel"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_bonebreakermace"
+            }
+        ]
+    },
+    {
+        "id": "md_anchoriteshrine_warpilgramageofstmethodius",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": "gl_pilgrim"},
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"}
+                ],
+        "promotion": 2,
+        "movement": [6],
+        "ranged": [0],
+        "melee": [2],
+        "armour": [0],
+        "base": [60],
+        "faction_id": "fc_trenchpilgrim",
+        "team":"heaven",
+        "variant_id": "fv_warpilgramigeofstmethodius",
+        "eventtags": {},
+        "name": "Anchorite Shrine (War Pilgrimage of St. Methodius)",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "A colossal suit of machine armour fuelled by diesel and faith, the Shrine Anchorite stands as a grim symbol of humanity’s despair. Within its spiked, blood-stained interior, the pilot- monk endures a terrible form of penance, his anguished prayers and chants echoing across the battlefield. This grotesque amalgamation of suffering and devotion instils fear in the heart of the heretic, as the anchorite, a malevolent weapon draped in holy iconography and weeping gore, emerges to unleash a symphony of slaughter, where the wretched union of man and machine heralds the demise of all who oppose the Almighty."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Machine Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace. The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_pilgrimfear"
             },
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],

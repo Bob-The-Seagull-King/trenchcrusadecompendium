@@ -386,6 +386,270 @@
         ]
     },
     {
+        "id": "fv_warpilgramigeofstmethodius",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "trenchpilgrim", "val": ""}
+                ],
+        "faction_id": "fc_trenchpilgrim",
+        "name": "War Pilgramage of St. Methodius",
+        "flavour":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "From the night of fire and blood and poisoned bullets that laid low the monastery of Velehrad in Greater Moravia, emerged a single monk of the Orthodox Order of St. Methodius. Though the rest of the brotherhood perished in the catastrophe as an elite Death Commando squadron made its audacious raid, the sole survivor brought with him the books of the saint and his Orthodox faith out of the utter ruin."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "With the loss of the workshops and monastic libraries of Velehrad, it was believed that the secrets of the Anchorite construction were lost, and the Church no longer wished to pursue their construction due to advances in armour technology elsewhere. But this was in error. The monk, named brother Akakios, still knew the craft."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Akakios fled to the Theocratia of Hellas and founded a new monastery on the slopes of holy Mount Athos. Many monks lived in the monastic communities on the slopes of the mountain and some were attracted to join brother Akakios. Thus Akakios became the first War Prophet of the Order and many lay members joined or became supporters and, eventually, the footsoldiers of the well-equipped and disciplined War Pilgrimages of St. Methodius. No other Pilgrim Progression can match the methodical and technical approach of the footsoldiers of the Order."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In their fortified monastery the learned monks hoard the knowledge (and the audacity) of modifying the sacred designs of St. Methodius. Their Shrine Anchorites are without a peer, and feature many modern weapons and adjustments which allow them to carry modern long-range weaponry. No other warband has such an abundant access to Anchorites or the variety of sophisticated weaponry and equipment."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Following the ancient Orthodox creed, the pilgrims of St. Methodius reject many of the teachings and customs of other Pilgrim Processions. They consider the creation of the Communicants as a dangerous Heresy, and condemn the use of Martyrdom Devices as an affront to God’s commandment against suicide, as well as holding to other beliefs many of the Trench Pilgrims view as an essential part of their crusade against the forces of Inferno. Bitter schisms and arguments with other sects sometimes erupt into violence, and the Church itself accuses the Order of Hetrodoxy of clinging to the outdated Easter Orthodox faith."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                "content": ""
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "However, due to their formidable fortress monasteries upon Mt. Athos and their undeniable zeal on the battlefield, the Princes of the Church turn a blind eye to the affairs of the followers of St. Methodius, as long as they focus all their zeal in the seemingly-impossible task of relieving the city of Trebizond of the long-lost theme of Chaldia. Here, according to the visions of prophet Akakios, the unsullied faith is still practiced and the Salvation of Mankind will be achieved. To this end, the Order sends one War Pilgrimage after another to the front line. Not one has made it within sight of the fabled walls of Trebizond, but this only increases the zeal of the Order and rouses them into ever greater efforts to reach the City of the Hill."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Anchorite Cloister:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "This warband may buy up to two Anchorite Shrines.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Anchorite Armoury:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "This warband may alter the weaponry and equipment of their Anchorites as indicated below. Anchorites of St. Methodius have +0 DICE to their Ranged Characteristic.",
+                                "glossary":  [{"val" : "0 DICE", "id" : "gl_plusdice"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Mortal Sin:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "No Ecclesiastic Prisoner of the Warband may be equipped with a Martyrdom Device, and no member of the Warband can be Broken on the Wheel.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Communicant Heresy:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Pilgrims of St. Methodius oppose the creation of Communicants, and therefore cannot include them in their warbands.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Treasure In Heaven:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Trench Pilgrims of this warband cannot be resurrected as Martyr-Penintents.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Chaste Order:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "While they revere the holy stigmata of the Nuns of the order, the fathers of the monasteries shun the ecstatic revelry of many Trench Pilgrms and insist on modest dress. All Stigmatic Nuns of the Warband must wear Standard Armour.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Gunsmith Monks:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The warband can buy Machine Guns (LIMIT: 2) at a cost of 50 ducats each, Automatic Rifle (LIMIT: 1) for 40 ducats, and a submachine gun (LIMIT: 1) for 30 ducats.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Followers of St. Methodius:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Patron of the Warband is always a Learned Saint.",
+                                "glossary":  []
+                            }
+
+                        ]
+                    }
+                ]
+            } ,
+            {
+                "title": "Anchorite Weapons",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Due to its construction and immense size, any Anchorite of this Warband may use any one of these weapons as a single-handed weapon. Such a weapon replaces the Breaking Wheel of the standard Shrine Anchorite. The Anchorite still retains the use of the Bonebreaker Mace on its other hand if it does this.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_heavyflamethrower"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_antimaterialrifle"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_puntgun"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_trenchmortar"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_autocannon"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_gascenser"
+                            }
+                        ]
+                    }
+                ]
+            } ,
+            {
+                "title": "Special Anchorite Equipment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Each Shrine Anchorite of the War Pilgrimage of St. Methodius can equip up to two of the following equipment pieces.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent":  [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_gasfilter"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_holydieselengine"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_sacredgeometry"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_grandanchorite"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_pistonlegs"
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "equipmentclick"}],
+                                "content": "eq_wrathfulcherubface"
+                            }
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_machinegun","eq_submachinegun"],
+        "removed_model": ["md_anchoriteshrine","md_ecclesiasticprisoner","md_communicant","md_trenchpilgrim","md_stigmaticnun"],
+        "equipment": [
+            {"id": "eq_machinegun", "cost": 50, "cost_id": "ducats", "limit": 2, "restriction": []},
+            {"id": "eq_automaticrifle", "cost": 40, "cost_id": "ducats", "limit": 1, "restriction": [], "features":["Bayonet Lug"]},
+            {"id": "eq_submachinegun", "cost": 30, "cost_id": "ducats", "limit": 1, "restriction": [], "features":["Bayonet Lug","Shield Combo"]},
+            {"id": "eq_heavyflamethrower", "cost": 55, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_antimaterialrifle", "cost": 3, "cost_id": "glory", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_trenchmortar", "cost": 50, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_autocannon", "cost": 65, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_gascenser", "cost": 60, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_gasfilter", "cost": 5, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_holydieselengine", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_sacredgeometry", "cost": 10, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_grandanchorite", "cost": 15, "cost_id": "ducats", "limit": 1, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_pistonlegs", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]},
+            {"id": "eq_wrathfulcherubface", "cost": 10, "cost_id": "ducats", "limit": 0, "restriction": [{"type": "model", "val": "md_anchoriteshrine_warpilgramageofstmethodius"}]}
+        ],
+        "models" : [
+            {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
+            {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_zealotstrengthpilgrim", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_stigmaticnun", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": ["eq_standardarmour"], "upgrades": []},
+            {"id": "md_anchoriteshrine_warpilgramageofstmethodius", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_combathelmet","eq_machinearmour"], "upgrades": []}
+        ]
+    },
+    {
         "id": "fv_cavalcadeofthetenthplague",
         "type": "Variant",
         "source": "core",

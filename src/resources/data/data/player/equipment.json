@@ -3946,5 +3946,254 @@
                                 ]
                             }
                         ]
+    },
+    {
+        "id": "eq_trenchmortar",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"},
+            {"tag_name": "Fire", "val": "gl_fire"}
+                ],
+        "category": "ranged",
+        "name": "Trench Mortar",
+        "equip_type": "2-Handed",
+        "range": "48\"",
+        "blurb": "A trench mortar is a smooth-bore, muzzle-loading weapon with high angles of fire. The shell contains both explosives and deadly Greek Fire.",
+        "modifiers": ["Ignore Cover", "+1D to Injury"],
+        "eventtags": {"action": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Specify a point on the battlefield within 36” (must be in line of sight) that you want to target. Next, take a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less), the bomb lands 1” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bombard shot lands 2” away, as 7-5=2). The direction is decided by your opponent. All models within 3” of the 1x1mm landing spot are hit as the shell explodes – no roll to hit is needed. This weapon has a BLAST radius of 3” – all models within this range are hit. Add +1 DICE to all injury rolls.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLAST", "id": "gl_blastx"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_autocannon",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Heavy", "val": "gl_heavy"}
+                ],
+        "category": "ranged",
+        "name": "Auto Cannon",
+        "equip_type": "2-Handed",
+        "range": "48\"",
+        "blurb": "Autocannons are fully automatic guns that are capable of rapid-firing large-calibre 20 mm shells. Capable of generating extremely rapid firepower, autocannons overheat quickly if used for sustained fire.",
+        "modifiers": ["+1D to Injury","3 Attacks"],
+        "eventtags": {"action": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Machine Guns can make three Attack ACTIONS instead of one. They can target separate models with each attack, as long as all targets are within 6” of each other. After taking all three attacks the Activation of the model is over regardless of any remaining ACTIONS the model might have. Add +1 DICE to all Injury rolls. They can shoot up to 5 times instead of 3 if they take all the attacks as RISKY ACTIONs.",
+                            "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "RISKY ACTIONS", "id": "gl_riskyaction"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_gascenser",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Gas", "val": "gl_gas"},
+            {"tag_name": "BLAST 6\"", "val": "gl_blastx"}
+                ],
+        "category": "ranged",
+        "name": "Gas Censer",
+        "equip_type": "2-Handed",
+        "range": "Special",
+        "blurb": "This swinging Censer is both a lethal chemical weapon as well as an object of veneration to the Pilgrims of the warband.",
+        "modifiers": ["Ignore Armour"],
+        "eventtags": {"action": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Anchorite may make an Injury roll against all models within 6” except the Anchorite itself. Note that all models within range, friend or foe, are hit if the weapon is used. No Line of Sight is needed. The attack has the Keyword GAS and Ignores Armour.",
+                            "glossary": [{"val": "GAS", "id": "gl_gas"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_gasfilter",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Gas Filter",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Anchorite is installed with an holy incense system that cleanses and purifies the air the monk inside the Anchorite breathes.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Negates the extra BLOOD MARKER from attacks with the keyword GAS, and such attacks suffer -1 DICE penalty to all Injury Rolls.",
+                            "glossary": [{"val": "GAS", "id": "gl_gas"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_holydieselengine",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Holy Diesel Engine",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Anchorite is equipped with an advanced diesel engine with an experimental cooling system.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Anchorite can add +2 DICE to its Dash ACTIONS, but it automatically gains 1 BLOOD MARKER if it succeeds in a Dash ACTION.",
+                            "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"},{"val": "ACTION", "id": "gl_action"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_sacredgeometry",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Sacred Geometry",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The monk controlling this Anchorite is well-versed in geometries intended to make the viewer see the world through mathematics, and through this understanding, gain a better understanding of the divine. This allows the Anchorite to target its enemies with far more accuracy.",
+        "modifiers": [],
+        "eventtags": {"trait": true, "ranged" : 1},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "This upgrade increases its Ranged Characteristic to +1 DICE.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_grandanchorite",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Grand Anchorite",
+        "equip_type": null,
+        "range": null,
+        "blurb": "Built to an extraordinary size, the Anchorite Shrine is all but impossible to stop or slow down once it starts moving.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Anchorite Shrine can always move out of melee combat with any enemy without the enemy having a chance to attack it. Additionally, it can move out of melee combat as part of a Standard Move, Charge, or Dash.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_pistonlegs",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Piston Legs",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The feet of the Anchorite Shrine are equipped with special piston engines designed to grind its enemies into a shattered ruin of broken bones and burst flesh.",
+        "modifiers": [],
+        "eventtags": {"action": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Once during its Activation, the Anchorite Shrine may make an extra Melee Attack ACTION against a Downed enemy model on a 32mm or smaller base. Resolve the attack as if the Anchorite Shrine was armed with a Trench Club. This attack Ignores armour as the Anchorite stomps their enemies into pulp.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                        }
+                    ]
+                }
+            ]
+    },
+    {
+        "id": "eq_wrathfulcherubface",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Wrathful Cherub Face",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Anchorite is decorated with an angelic face that is the very image of the wrath of the Lord. All must cower before the face of the LORD.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+                {
+                    "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                    "content": "Rule:",
+                    "subcontent": [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "Downed Enemy models in Melee Combat with this model cannot automatically Stand at the start of their Activation.",
+                            "glossary": []
+                        }
+                    ]
+                }
+            ]
     }
 ]

@@ -16,6 +16,10 @@ import { Requester } from '../../../../factories/Requester'
 import { IFactionUpgrade } from '../../../../classes/feature/factions/FactionUpgrade'
 import GenericPanel from '../../generics/GenericPanel'
 import UpgradeDisplay from '../../features/equipment/UpgradeDisplay'
+import { EquipmentFactory } from '../../../../factories/features/EquipmentFactory'
+import { IPlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
+import EquipmentDisplay from '../../features/equipment/EquipmentDisplay'
+import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
 
 
 const AdvancedDescriptionItemDisplay = (props: any) => {
@@ -104,6 +108,19 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
                     </span>
                 )
             }
+            case "equipmentclick": {
+                return (
+                    <span>
+                        <span className=''>{findEquipment(item.Content?.toString() || "")}</span>
+                        <span>
+                            {item.SubContent?.map((subitem) => (
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                            ))}
+                        </span>
+                        <span>{" "}</span>
+                    </span>
+                )
+            }
             case "gap": {
                 return (
                     <div>
@@ -139,6 +156,15 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
 
         return (
             <GenericDisplay d_colour={parentItem.Team} d_name={addon.Name} d_type={"sub"} d_method={() => <AddonDisplay data={addon} />}/>
+        )
+    }
+
+    function findEquipment(id: string) {
+        const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "equipment", id: id}}) as IPlayerEquipment
+        const addonNew = new PlayerEquipment(addondata)
+
+        return (
+            <GenericPanel titlename={addonNew.Name} d_colour={parentItem.Team} d_name={addonNew.Name} d_type={""} d_method={() => <EquipmentDisplay data={addonNew} />}/>
         )
     }
 
