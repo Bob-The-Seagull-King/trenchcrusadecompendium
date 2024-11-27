@@ -844,7 +844,7 @@
         "movement": [6],
         "ranged": [],
         "melee": [2],
-        "armour": [-1],
+        "armour": [0],
         "base": [50],
         "faction_id": "fc_trenchpilgrim",
         "team":"heaven",
@@ -860,7 +860,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Refinforced Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace. The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
+                "content": "You cannot buy additional equipment, weapons or armour for Shrine Anchorites. Each Anchorite is equipped with Machine Armour, Combat Helmet and a Catherine Wheel and Bonebreaker Mace. The Anchorite may make one attack ACTION with each of these weapons in Melee (So it can make two attacks per Activation).",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
             ],

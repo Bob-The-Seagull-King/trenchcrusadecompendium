@@ -234,7 +234,7 @@
             {"id": "md_trenchpilgrim", "cost": 30, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_trenchpilgrimressurection", "cost": 45, "cost_id": "ducats"},{"id": "up_zealotstrengthpilgrim", "cost": 5, "cost_id": "ducats"}]},
             {"id": "md_ecclesiasticprisoner", "cost": 20, "cost_id": "ducats", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_martyrdomdevice", "cost": 35, "cost_id": "ducats"}]},
             {"id": "md_stigmaticnun", "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 4, "equipment": [], "upgrades": []},
-            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_combathelmet","eq_reinforcedarmour"], "upgrades": []},
+            {"id": "md_anchoriteshrine", "cost": 140, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": ["eq_combathelmet","eq_machinearmour"], "upgrades": []},
             {"id": "md_wardog", "cost": 1, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_guarddog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": []},
             {"id": "md_mercydog", "cost": 2, "cost_id": "glory", "limit_min": 0, "limit_max": 0, "equipment": ["eq_medikit"], "upgrades": []},

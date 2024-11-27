@@ -284,7 +284,7 @@
         "description": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Instead of using melee weapons, this model may use any one missile weapon ACTION in Melee.",
+                "content": "When this model makes a melee attack, it may make a ranged attack ACTION with a ranged weapon instead. This is instead of any melee attack ACTION.",
                 "glossary": [{"val": "ACTION", "id": "gl_action"}]
             }
         ]

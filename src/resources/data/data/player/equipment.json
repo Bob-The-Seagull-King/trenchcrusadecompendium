@@ -2305,7 +2305,7 @@
         "category": "ranged",
         "name": "Bow of Alamut",
         "equip_type": "2-Handed",
-        "range": "60\"",
+        "range": "40\"",
         "blurb": "This terrifying double-stringed bow shoots its deadly barbs through both time and space. Its arrows can reach impossible  distances and pass through armour by flickering through time. It leaves behind a temporal slipstream that the Assassin can travel through in an eyeblink. Made from wood taken from trees planted in the skulls of ancient assassins in the Garden of Alamut so that they might  absorb mystic powers of their former owners, these bows are some of the greatest treasures of the Old Man of the Mountain for it is said that only six now remain in his secret armouries.",
         "modifiers": ["Ignore Armour"],
         "eventtags": {"action": true},
