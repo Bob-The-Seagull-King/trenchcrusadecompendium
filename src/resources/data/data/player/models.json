@@ -493,11 +493,7 @@
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Loudspeakers (see below). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
-            },
-            {
-                "tags": [{"tag_name": "desc_type", "val": "addon"}],
-                "content": "ab_loudspeakers"
+                "content": "Loudspeakers (see abilities). The War Prophet can be equipped with any weapons, armour or equipment from the Trench Pilgrims Equipment List."
             }
             ],
         "abilities":  [
@@ -508,6 +504,10 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "addon"}],
                 "content": "ab_layingonhands"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_loudspeakers"
             }
         ]
     },
@@ -1433,13 +1433,13 @@
         "blurb": [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "The janissaries are the Sultanate’s elite warriors, raised from childhood in the arts of war. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Janissaries excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
+                "content": "The dervishes are the Sultanate’s elite warriors, raised from childhood in the arts of war. Captured during raids upon the desolate northern and eastern marches beyond the Iron Wall, they are subjected to rigorous martial training and indoctrination from an early age. On the battlefield, Dervishes excel at devastating counter-charges, crushing the enemy elite formations and acting as the bodyguard for high-ranking individuals."
             }
         ],
         "equipment":  [
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                "content": "Janissaries can be equipped with any weapon, armour (except Reinforced Armour) and equipment from the Iron Sultanate Equipment List.",
+                "content": "A Dervish can be equipped with any weapon, armour (except Reinforced Armour) and equipment from the Iron Sultanate Equipment List.",
                 "glossary": []
             }
             ],
