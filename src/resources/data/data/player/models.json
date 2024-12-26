@@ -660,6 +660,61 @@
         ]
     },
     {
+        "id": "md_crimsoncommunicant",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": "gl_newantioch"},
+            {"tag_name": "strong", "val": "gl_strong"},
+            {"tag_name": "tough", "val": "gl_tough"}
+                ],
+        "promotion": 0,
+        "movement": [6],
+        "ranged": [-1],
+        "melee": [1],
+        "armour": [0],
+        "base": [40],
+        "faction_id": "fc_newantioch",
+        "team":"heaven",
+        "variant_id": "fv_theredbrigade",
+        "eventtags": {},
+        "name": "Crimson Communicant",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Wracked with an aching sense of loss and despair, the Crimson Communicants find solace to their pain in the company of the grim Red Brigade. Numb to lesser physical sensations, they actively seek grievous wounds on the battlefield to forget their mental anguish."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "As a parting gift when leaving the Mendelist monastery, they are each gifted by the Atonement Bell. Crimson Communicant can channel the sorrow of the Second Meta-Christ through the sound of the bell, causing all to flee in despair."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Communicant can be equipped with any weapon, armour and equipment from the New Antioch Armoury. They always carry an Exorcism Bell."
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strong"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_tough"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_atonementbell"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_strengththroughpain"
+            }
+        ]
+    },
+    {
         "id": "md_communicantantitankhunter",
         "type": "Model",
         "source": "core",
@@ -2863,6 +2918,52 @@
             {
                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"}]
+            }
+            ],
+        "abilities":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                "content": "ab_fourpaws"
+            }
+        ]
+    },
+    {
+        "id": "md_trenchdog",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "promotion": 0,
+        "movement": [8],
+        "ranged": [],
+        "melee": [0],
+        "armour": [0],
+        "base": [25],
+        "faction_id": "fc_newantioch",
+        "variant_id": "fv_theredbrigade",
+        "eventtags": {},
+        "name": "Trench Dog",
+        "team":"heaven",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Red Brigage is famed for the use of war dogs, and no other unit in New Antioch comes close to the fierce loyalty of their hounds. "
+},
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The number of dogs in your warband may not exceed the number of other models. If this happens due casualties, you cannot buy more dogs until this condition is met once more."
+            }
+        ],
+        "equipment":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Dogs never carry any items unless specified otherwise here. Dogs do not suffer penalties for fighting unarmed. In battle they are treated as non-ELITE Troops. War Dogs cannot become ELITE. At an additional cost of +5 ducats any dog gains an ability to form a FIRETEAM with any 1 model in your Warband. You may have up to 2 such FIRETEAMs in addition to the regular 2.",
+                "glossary": [{"val": "ELITE", "id": "gl_elite"},{"val": "FIRETEAM", "id": "gl_fireteam"}]
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "You may buy any dog Grenades at the cost of +5 ducats. While the dogs themselves cannot use these grenades, any other model in the Warband (though not Allies & Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.",
                 "glossary": [{"val": "ELITE", "id": "gl_elite"}]
             }
             ],

@@ -3380,6 +3380,60 @@
         ]
     },
     {
+        "id": "eq_redbanner",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Red Banner",
+        "equip_type": null,
+        "range": null,
+        "blurb": "The Red Brigade carries a patched red standard into battle, made from the blood-soaked cloak of St. Ernest. No soldier of the Brigade will ever leave the battle as long as this holy banner is still flying. When the last survivor of the Brigade is sent back to New Antioch, they take this flag with them.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "This is the only banner the Red Brigade Warband can buy. As long as the model carrying this banner is not taken Out of Action, the Red Brigade will never retreat from combat. If they lose a Morale test, they will become Shaken instead. If the Standard bearer is taken Out of Action, the Warband takes Morale tests as normal.",
+                        "glossary": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "eq_bloodcloak",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+                ],
+        "category": "equipment",
+        "name": "Blood Cloak",
+        "equip_type": null,
+        "range": null,
+        "blurb": "These cloaks are given to the veteran members of the Brigade in recognition for surviving enemy assaults. They make the outline of the warrior hidden in a blood-red haze, and many an enemy charge has been confounded by the crimson mist.",
+        "modifiers": [],
+        "eventtags": {"trait": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Model wearing a Blood Cloak gains the Keyword SKIRMISHER.",
+                        "glossary": [{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id": "eq_elixerofalkhidr",
         "type": "Equipment",
         "source": "core",

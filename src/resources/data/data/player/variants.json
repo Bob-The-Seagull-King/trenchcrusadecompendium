@@ -1581,7 +1581,184 @@
             {"id": "md_combatmedic", "cost": 65, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": ["eq_misericordia","eq_medikit","eq_gasmask","eq_standardarmour"], "upgrades": []},
             {"id": "md_mechanisedheavyinfantry",    "cost": 85, "cost_id": "ducats", "limit_min": 0, "limit_max": 3, "equipment": ["eq_reinforcedarmour"], "upgrades": []}
         ]
-    }  ,
+    } ,
+    {
+        "id": "fv_theredbrigade",
+        "type": "Variant",
+        "source": "core",
+        "tags": [
+            {"tag_name": "newantioch", "val": ""}
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "The Red Brigade",
+        "flavour":  [ 
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Red Brigade is made of volunteers who have lost someone close to them in the battles of the Great War. The unit was founded by St. Ernest, the sole survivor of the second battle of Acre; where he lost his brother Wilhelm to the forces of the Heresiarch Berenguer."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "It is said that when his brother fell in combat Ernest donned the blood-stained helmet of Wilhelm and returned to the fray to kill Heretics until there were no more left to slay. As silence finally fell over the battlefield, Ernest was the sole survivor of either side. Seeing this as an ordained miracle by the Almighty, he gathered the rest of his brother’s bloodied armour and returned to the Principality of New Antioch. There he began recruiting volunteers for his vendetta. As a gifted orator driven by the anguish of his loss, Ernest soon gathered a following of many bereaved soldiers like himself. Thus the first Red Brigade was formed and Ernst led his unofficial warband into the No Man’s Land on a hunt for Heretics, through ambush and deep strikes at the vulnerable enemy supply lines. His bloodsoaked warriors soon began to resemble their leader in appearance which earned the unit its name. Their skill and cunning on the battlefield caught the attention of the throne of New Antioch and the Red Brigade was recognised as an official unit in the ducal armed forces."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Since those times the Red Brigade has been used as the personal special operations force by the Duke of New Antioch. These driven soldiers undertake the most dangerous missions where unsustainable casualties would make it impossible to use the regular units. To join the Red Brigade a soldier has to volunteer, bringing to the recruiting officer a piece of kit tarnished by the blood of fallen comrades as proof of their right to serve as a ‘Blood Pledge’, as the soldiers of the Brigade are known."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "As a unit under the direct command of the Duke, the Red Brigade is granted many privileges while garrisoned within the city, in addition to arms and provisions from the city’s stores. Their barracks are located at the ducal palace, and before the Red Brigade leaves for a mission they dine at the table of the Duke and his closest officers, in a lavish banquet known as the Feast of the Dead Men."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Due to their propensity for hunting high-value targets, the Red Brigade is supplied with warhounds from the kennels of the Duke. These loyal beasts give solace and companionship to the troopers and have been trained to provide the soldiers with grenades in the heat of battle when the Red Brigade strives to take heavily defended enemy strongpoints and trenches. Malinois, wolfhounds and mastiffs are especially popular, and much-loved by the soldiery of the unit."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "On the battlefield the Brigade operates deep behind the enemy lines and takes on missions such as cutting supply lines, strikes aimed to eliminate senior Heretic Commanders, and surprise assaults on elite formations on the march. They even operate in the parts of the No Man’s Land claimed by the Iron Sultanate, much to the chagrin of the Sublime Gate. The Brigade has even struck at the domains of Beelzebub around the cursed city of Ekron. They live off the land; seeking no noble patrons and trusting only in God and the Duke."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Red Brigade are a grim and silent unit, haunted by their losses and long patrols in enemy territory. Often yearning to be reunited with their lost ones; they are willing to accept missions where death is almost certain. This self-destrutive attitude chafes many members of the clergy, who do not condone the existence of the unit, as suicide is a mortal sin. However, the Brigade has proven itself to be so useful to the Duke that the red-armoured troops have seen continuous service for decades."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "After each fray it is the task of the Quartermaster of the Brigade to gather the arms and red armour of the fallen and redistribute it so new recruits will have a real, tangible link to the fallen. But when faced with a battle where the commander of the Brigade sees there is no hope of survival, it is customary to dispatch one of their soldiers back to New Antioch in order to notify the Duke of the unit’s demise. This messenger is chosen by drawing lots and the selected soldier takes the dogtags of the entire unit back to the Home of All Our Hopes, to be hung from the walls of the Chapel of Remembrance; there to join the thousands that have given their lives for the Brigade before."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The last member of the Brigade then asks for a personal audience with the ruling duke or duchess. The traditional greeting in such circumstances by the survivor is as follows: “The Red Brigade has fallen” to which the ruler of New Antioch solemnly answers: “And the Red Brigade will rise anew”."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "CRIMSON COMMUNICANTS"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Communicant creation process is anything but stable. Though the Mendellist order continually experiments to perfect the Chemical Communion formulas, the personality and history of the volunteers who undergo the ritual has just as great an impact on how stable and functional the Communicant that emerges from the Communion Chamber will be."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Only one in three of the Communicants are deemed fit to serve the Church Militant. Others have some fatal flaw or mental or physical deformity that renders them unfit to be released into the world. There are countless of such imperfections: Some are consumed by rage they cannot control, or become catatonic automatons. Others emerge with minds that are child-like and incapable of violence. Quite commonly a failed Communicant is gripped with such an existential dread of their condition that they simply curl into balls of twisted muscle and sinew, screaming and sobbing their anguish in the echoing halls of the Mendellist monasteries."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "Many of such failed Communicants are immured in tombs that know no sound, there to waste away their agonizing years in torment, away from the prying eyes that might incur criticism of the hard-working Mendellist Brotherhood. Yet in some cases, the Abbot of the laboratory-monastery sends a quiet word to New Antioch that a Crimson Communicant has emerged. Soon an officer of the Red Brigade is sent to extend an invitation to the giant to join the Blood Pledges."
+            } ,
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "The Crimson Communicants are created from volunteers who have lost a loved one and now with their senses heightened by the Chemical communion they experiene extraordinary levels of grief and guilt. Though unresponsive to any other stimuli, they feel an instinctive and extraordinary strong connection with the soldiers of the Red Brigade. They follow the Brigade on their doomed missions, as loyal as their hounds, and carry bronze bells that toll over the No Man’s Land."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "In combat they attack anyone who threatens one of the Brigade with startling rage and ferocity. They wear helmets to hide their faces which they shun to reveal, and fight using great mauls to pulverize Heretics or other foes of the Brigade. After each battle they pick up crushed bodies of their enmies and carry them everywhere they go, naming them after the people they lost in their previous life as humans, like gruesome and morbid dolls of a grieving child."
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "content": "As a parting gift when leaving the Mendelist monastery, they are each gifted by the Atonement Bell. Crimson Communicant can channel the sorrow of the Second Meta-Christ through the sound of the bell. Its mournful sound resonates on spiritual as well as physical level, causing all who hear it flee in despair."
+            }
+        ],
+        "rules": [
+            {
+                "title": "Variant Rules",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Wear and Tear:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Red Brigade Warband starts every game with 1 BLOOD MARKER for each 200 full ducats of the total Warband cost. Your opponent can distribute these between your troops, but not can only give 1 BLOOD MARKER per model as long as there are troops with no BLOOD MARKERs left. Max BLOOD MARKERs per model is 2.",
+                                "glossary":  [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "No Retreat:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "No member of this Warband can ever leave melee combat voluntarily, except Mercy Dogs and those who they drag along them (see below)."
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Glory Hounds:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Soldiers of New Antioch love heroic stories and improbable tall tales. Any dog that is part of the Red Brigade earns 2 Glory Points instead of 1 when they perform any Glorious Deed."
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Remember the Fallen:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "After the battle, instead of taking the Exploration option of Reinforcement Option, the Red Brigade may recover all the weapons, armour and equipment of all the warriors of their own Warband who died in the battle. This does not include Allies & Mercenaries since they are not Blood Pledges."
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Live off the Land:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Most of the time the Red Brigade operates deep within hostile territory. When playing campaigns, the Red Brigade cannot call for Reinforcements if it did so after their last game. Instead they must choose the Exploration or Rememeber the Fallen option."
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Guns Blazing:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "It is the tradition of the Brigade officers to pratice the two-pistol fighting style of St. Ernest. Lieutenant of the Warband can buy Gunslinger Skill for the cost of +5 ducats."
+                            }
+
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Displeasure of the Church:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Only few members of the clergy are willing to serve in the unit due the disregard of their lives they show. Your warband can have a maximum of two such characters, so you can have either 1 Trench Cleric and 1 Sniper Priest, or 2 Sniper Priests but no Trench Cleric."
+                            }
+
+                        ]
+                    }
+                ]
+            } 
+        ],
+        "removed_rules": [],
+        "removed_equip": ["eq_greatbannerofnewantioch"],
+        "removed_model": ["md_lieutenant","md_trenchcleric","md_sniperpriest", "md_wardog", "md_guarddog", "md_mercydog"],
+        "equipment": [
+            {"id": "eq_redbanner",    "cost": 2, "cost_id": "glory",  "limit": 1, "restriction": []},            
+            {"id": "eq_bloodcloak",    "cost": 10, "cost_id": "ducats",  "limit": 4, "restriction": []}
+           
+        ],
+        "models" : [
+            {"id": "md_lieutenant",                 "cost": 70, "cost_id": "ducats", "limit_min": 1, "limit_max": 1, "equipment": [], "upgrades": [{"id": "up_gunslinger", "cost": 5, "cost_id": "ducats"}]},
+            {"id": "md_trenchcleric",               "cost": 60, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_sniperpriest",               "cost": 50, "cost_id": "ducats", "limit_min": 0, "limit_max": 2, "equipment": [], "upgrades": []},
+            {"id": "md_crimsoncommunicant",         "cost": 75, "cost_id": "ducats", "limit_min": 0, "limit_max": 1, "equipment": [], "upgrades": []},
+            {"id": "md_trenchdog",                  "cost":  35, "cost_id": "ducats",  "limit_min": 0, "limit_max": 0, "equipment": [], "upgrades": [{"id": "up_brigadedog_fireteam", "cost": 5, "cost_id": "ducats"},{"id": "up_brigadedog_grenade", "cost": 5, "cost_id": "ducats"},{"id": "up_brigadedog_guarddog", "cost": 5, "cost_id": "ducats", "limit" : 1},{"id": "up_brigadedog_mercydog", "cost": 5, "cost_id": "ducats", "limit" : 2},{"id": "up_brigadedog_attackdog", "cost": 5, "cost_id": "ducats"}]}
+        ]
+    } ,
     {
         "id": "fv_dirgeofthegreathegemon",
         "type": "Variant",

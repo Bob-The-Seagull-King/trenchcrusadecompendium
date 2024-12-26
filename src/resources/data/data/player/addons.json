@@ -1251,9 +1251,43 @@
         "eventtags": {"action": true},
         "description":  [
             {
-                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
                 "content": "Select any enemy within 12” of the Priest and take a RISKY ACTION (Targeting models on 40mm or larger bases incur -1 DICE penalty to this roll). If successful, the enemy model goes Down immediately, slithering on its belly like a snake.",
                 "glossary":  [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_strengththroughpain",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Strength Through Pain",
+        "eventtags": {"trait": true, "category_melee": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Crimson Communicant adds +1 DICE to its Melee characteristics for each 1 BLOOD MARKER it currently has.",
+                "glossary":  [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+        ]
+    },
+    {
+        "id": "ab_atonementbell",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_newantioch",
+        "name": "Atonement Bell",
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This bell always takes the use of one hand of the Communicant in Melee (though not in ranged combat). The Communicant can make an off-hand attack with the Bell. It causes no damage, but any enemy on a 40mm base or smaller hit with an Atonenment Bell can be moved D3 inches from the Communicant into any direction the Communicant chooses. This can break them out of melee combat (allowing free attacks), falling down, into hazardous terrain etc. It cannot be made to move the model into another Melee combat, however.",
+                "glossary":  []
             }
         ]
     },

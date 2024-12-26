@@ -156,6 +156,84 @@
                         ]
     },
     {
+        "id": "up_gunslinger",
+        "type": "Upgrade",
+        "name": "Gunslinger",
+        "eventtags": {"trait" : true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If armed with 2 pistols, this model may shoot both of them during each Activation without a Penalty as Ranged Attack or in Melee. In addition, the model suffers no penalties in melee using a pistol as an off-hand weapon.",
+                "glossary": []
+            }
+                        ]
+    },
+    {
+        "id": "up_brigadedog_fireteam",
+        "type": "Upgrade",
+        "name": "Fireteam",
+        "eventtags": {"trait" : true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "This dog is part of a FIRETEAM",
+                "glossary": [{"val": "FIRETEAM", "id": "gl_fireteam"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_brigadedog_grenade",
+        "type": "Upgrade",
+        "name": "Grenades",
+        "eventtags": {"trait" : true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "While the dogs themselves cannot use these grenades, any other model in the Warband (though not Allies & Mercenaries, or a Combat Medic or other dogs) may use the grenades if they are within 1” of the dog at any point during their Activation.",
+                "glossary": []
+            }
+                        ]
+    },
+    {
+        "id": "up_brigadedog_guarddog",
+        "type": "Upgrade",
+        "name": "Guard Dog",
+        "eventtags": {"trait" : true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These dogs both warn their masters of impending danger and fight fiercely for their company. No infiltrator can be placed within 12” of a Guard Dog, and you can charge any enemy within 4” of this dog even if it is out of sight.",
+                "glossary": [{"val": "infiltrator", "id": "gl_infiltrator"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_brigadedog_mercydog",
+        "type": "Upgrade",
+        "name": "Mercy Dog",
+        "eventtags": {"trait" : true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Mercy dogs carry a Medi-Kit which can be used by any friendly model on themselves within 1” of the dog. Mercy dogs can also drag any model (unless it has a base size of 40mm or greater) within 1” that is Down at ½ speed with them, both with normal movement or when dashing -if this takes the model out of melee combat, this does not trigger a free melee attack ACTION.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+                        ]
+    },
+    {
+        "id": "up_brigadedog_attackdog",
+        "type": "Upgrade",
+        "name": "Attack Dog",
+        "eventtags": {"trait": true, "melee" : 1},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "These ferocious hounds are trained by the brigade to accompany their masters into the fray. They gain +1 DICE bonus to their melee attack ACTIONs.",
+                "glossary": [{"val": "ACTIONs", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+            }
+                        ]
+    },
+    {
         "id": "up_infiltratornaval",
         "type": "Upgrade",
         "name": "Infiltrator",
