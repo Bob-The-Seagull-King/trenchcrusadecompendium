@@ -911,6 +911,53 @@
         ]
     },
     {
+        "id": "cr_fieldartillery",
+        "type": "CampaignRule",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Field Artillery",
+        "description": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "Some scenarios may call for a field artillery weapon placement, according to the specific rules established by each. These weapons can range from turrets, mortars, cannons, and even armored vehicles such as tanks and others. When called for, the scenario may specify which field weapon is present in the battlefield and where it must be placed, or leave it open to the players to decide. See below for the profile of each of these weapons.",
+                "subcontent": [ ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Gun Turret",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A Gun Turret is often represented by a circled G on the scenario map. It can be used by any model, however, it must be set up with an ACTION the first time it will be used. If successful, the model has properly set it up. Place the Gun Turret model on a 25mm base in the location you desire. The Gun Turret can pivot in any direction. Below is the Gun Turret profile:",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "equipmentshow"}],
+                        "content": "eq_field_gunturret"
+                    }
+                ]
+            },
+            {
+                "title": "Mortar",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A Mortar is often represented by a circled M on the scenario map. Mortars cannot be placed in indoors’ areas or completely covered space, such as bunkers, covered hideouts, etc. It can be used by any model, however, it must be set up with an ACTION the first time it will be used. If successful, the model has properly set it up. Place the Mortar model on a 25mm base in the location you desire. The Mortar can pivot in any direction. Below is the Mortar profile:",
+                        "subcontent": [ ]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "equipmentshow"}],
+                        "content": "eq_field_mortar"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id": "cr_exploration",
         "type": "CampaignRule",
         "source": "core",

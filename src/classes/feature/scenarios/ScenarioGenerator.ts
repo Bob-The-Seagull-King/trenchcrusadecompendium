@@ -183,7 +183,8 @@ class ScenarioGenerator {
             tags: [],
             image_url: ChosenDep.image_url,
             name: ChosenScen.name + " | " + ChosenDep.name,
-            rules : FinalRules
+            rules : FinalRules,
+            widerules: []
         };
         const newScenario = new Scenario(IScenario)
 

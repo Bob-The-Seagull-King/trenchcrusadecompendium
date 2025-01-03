@@ -5,7 +5,7 @@ import React from 'react'
 import { getTagValue} from '../../../../utility/functions'
 import {ConvertContentWithGlossary} from '../../../../utility/util'
 import { AdvancedDescription} from '../../../../classes/AdvancedDescription'
-import { PlayerModel } from '../../../../classes/feature/models/Model'
+import { IPlayerModel, PlayerModel } from '../../../../classes/feature/models/Model'
 
 import AddonDisplay from '../../features/addons/AddonDisplay'
 import GenericDisplay from '../../generics/GenericDisplay'
@@ -20,6 +20,10 @@ import { EquipmentFactory } from '../../../../factories/features/EquipmentFactor
 import { IPlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
 import EquipmentDisplay from '../../features/equipment/EquipmentDisplay'
 import { PlayerEquipment } from '../../../../classes/feature/equipment/Equipment'
+import ListGroupDisplay from '../../features/list/ListGroupDisplay'
+import { ListGroup } from '../../../../classes/feature/list/ListGroup'
+import { IListGroup } from '../../../../classes/feature/list/ListGroup'
+import ModelDisplay from '../../features/models/ModelDisplay'
 
 
 const AdvancedDescriptionItemDisplay = (props: any) => {
@@ -30,14 +34,14 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
         switch (getTagValue(item.Tags, "desc_type")) {
             case "effect": {
                 return (
-                    <div>
+                    <span>
                         <span><b>{ConvertContentWithGlossary((item.Glossary), item.Content?.toString() || "")} </b></span>
                         <span>
                             {item.SubContent?.map((subitem) => (
                                <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
                             ))}
                         </span>
-                    </div>
+                    </span>
                 )
             }
             case "list": {
@@ -95,6 +99,32 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
                     </div>
                 )
             }
+            case "model": {
+                return (
+                    <div>
+                        <div className='addonbox'>{findModel(item.Content?.toString() || "")}</div>
+                        <span>
+                            {item.SubContent?.map((subitem) => (
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                            ))}
+                        </span>
+                        <span>{" "}</span>
+                    </div>
+                )
+            }
+            case "table": {
+                return (
+                    <div>
+                        <div className='addonbox'>{findTable(item.Content?.toString() || "")}</div>
+                        <span>
+                            {item.SubContent?.map((subitem) => (
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                            ))}
+                        </span>
+                        <span>{" "}</span>
+                    </div>
+                )
+            }
             case "upgradeclick": {
                 return (
                     <span>
@@ -112,6 +142,19 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
                 return (
                     <span>
                         <span className=''>{findEquipment(item.Content?.toString() || "")}</span>
+                        <span>
+                            {item.SubContent?.map((subitem) => (
+                               <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
+                            ))}
+                        </span>
+                        <span>{" "}</span>
+                    </span>
+                )
+            }
+            case "equipmentshow": {
+                return (
+                    <span>
+                        <span className=''>{findEquipmentShow(item.Content?.toString() || "")}</span>
                         <span>
                             {item.SubContent?.map((subitem) => (
                                <AdvancedDescriptionItemDisplay key="descriptionsubitem" data={subitem} parent={parentItem}/>
@@ -168,11 +211,37 @@ const AdvancedDescriptionItemDisplay = (props: any) => {
         )
     }
 
+    function findEquipmentShow(id: string) {
+        const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "equipment", id: id}}) as IPlayerEquipment
+        const addonNew = new PlayerEquipment(addondata)
+
+        return (
+            <GenericDisplay  d_colour={"tc"} d_name={addonNew.Name} d_type={""}  d_method={() => <EquipmentDisplay data={addonNew} />}/>
+        )
+    }
+
+    function findModel(id: string) {
+        const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "models", id: id}}) as IPlayerModel
+        const addonNew = new PlayerModel(addondata)
+
+        return (
+            <GenericDisplay  d_colour={addonNew.Team} d_name={addonNew.Name} d_type={""} d_method={() => <ModelDisplay data={addonNew}/>}/>
+        )
+    }
+
     function findUpgrade(id: string) {
         const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "upgrade", id: id}}) as IFactionUpgrade
         const addonNew = new FactionUpgrade(addondata)
         return (
             <GenericPanel titlename={addonNew.Name} d_colour={parentItem.Team} d_name={addonNew.Name} d_type={""} d_method={() => <UpgradeDisplay data={addonNew} />}/>
+        )
+    }
+
+    function findTable(id: string) {
+        const addondata = Requester.MakeRequest({searchtype: "id", searchparam: {type: "tablechart", id: id}}) as IListGroup
+        const addonNew = new ListGroup(addondata)
+        return (
+            <GenericDisplay  d_colour={"tc"} d_name={addonNew.Name} d_type={""} d_method={() => <ListGroupDisplay data={addonNew}/>}/>
         )
     }
 

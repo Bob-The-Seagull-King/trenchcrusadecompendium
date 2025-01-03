@@ -8,6 +8,8 @@
                 ],
         "image_url": "https://i.imgur.com/wV2YWtP.png",
         "name": "Relic Hunt",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -245,6 +247,8 @@
                 ],
         "image_url": "https://i.imgur.com/jnuYPxU.png",
         "name": "Trench Warfare",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -517,6 +521,8 @@
                 ],
         "image_url": "https://i.imgur.com/yotmbFt.png",
         "name": "Hold The Line",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -790,6 +796,8 @@
                 ],
         "image_url": "https://i.imgur.com/bD7BOuL.png",
         "name": "Claim No Man's Land",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -1059,6 +1067,8 @@
                 ],
         "image_url": "https://i.imgur.com/M6YmhpL.png",
         "name": "Hunt for Heroes",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -1331,6 +1341,8 @@
                 ],
         "image_url": "https://i.imgur.com/QZBAr40.png",
         "name": "Great War",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -1527,6 +1539,8 @@
                 ],
         "image_url": "https://i.imgur.com/bgrfQn6.png",
         "name": "Supply Raid",
+        "widerules": [
+        ],
         "rules": [
             {
                 "title": "Forces",
@@ -1803,15 +1817,72 @@
         "tags": [
             {"tag_name": "mid_campaign", "val": ""}
                 ],
-        "image_url": "https://i.imgur.com/bgrfQn6.png",
+        "image_url": "https://i.imgur.com/UTKdEEE.png",
         "name": "Storming The Shores",
+        "widerules": [
+            {
+                "title": "Unforseen Events",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "These rules represent the treacherous and often unforeseeable tides of war that can suddenly shift the battle unexpectedly. Starting on the second turn of combat, roll 1D6. On a roll of 1-3, a random event occurs, otherwise the game continues as is until the start of the next turn, when another roll will be required. These events will always occur at the start of the combat turn, before any model Activation (unless stated otherwise).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Upon the occurrence of a random event, roll another 1D6 for the Unforeseen Events chart below to see what exactly is happens and follow the directions. No more than one random encounter will ever take place in a single game, so after a random encounter is rolled, a player no longer needs to roll at the start of a combat turn. The entries below refer to the corresponding number rolled and its respective effects:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "table"}],
+                        "content": "tc_stormingtheshort_unforseenevents",
+                        "subcontent": []
+                    }
+                ]
+            }
+        ],
         "rules": [
+            {
+                "title": "Scenario Overview",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The shoreline of this beach, river, lake, or swamp stands as a vital stronghold, its bunkers, trenches, and heavy emplacements forming an unyielding wall against invasion. Guarding a crucial supply route, the defenders rely on their fortifications and firepower to hold the line with minimal troops, confident in the terrain's advantage. Yet, the attackers have taken note of the thinly stretched defenses, massing their forces in overwhelming numbers to breach the coastal bastion. The horizon brims with movement, the tide of war rolling in to test the strength of the shoreline's iron grip.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The player with the higher number of models is the Attacker. The other deployment zone will be their opponent’s, as the Defender, with half the number of models the Attacker has declared.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Defender starts by deploying their models, and also placing the Gun Turret, or Mortar, where they wish according to the parameters set below. After the Defender has deployed their models, the Attacker deploys theirs.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
             {
                 "title": "Forces",
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Use your full Campaign Warband in this battle. Roll off to see which force is the Attacker and which is the Defender.",
+                        "content": "The player with the higher number of models is the Attacker. The Attacker must declare the size of their warband, up to sixteen models max. If the Attacker has two or fewer ELITES, they must field all of them. The opponent is the Defender, and they can have up to half of the total number of models the Attacker has declared, rounded down. If both warbands have the same number of models, roll a dice to see who the Attacker is and who the Defender is.",
                         "subcontent": []
                     }
                 ]
@@ -1822,6 +1893,972 @@
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
                         "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender places three 8”-long Trench sections in their Deployment Zone. They can be placed as the Defender wishes and can be continuous, however, in the division between each of the three trench sections the Defender must place a bunker model (as indicated by the small Red Markers on the map) of at least 4” by 4”, and up to 3” high, so that models of up to 75mm tall may enter the bunker’s interior.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender must place a Main Structure in the location indicated on the map by a large Red Marker. This structure can be a church, a large bunker, a tower, etc. It must be at least 6” by 6”, and up to 6” high, so that models of up to 150mm tall may enter the building’s interior.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Main Structure and the bunkers are the Objectives of the scenario, hereafter referred to as Objective Buildings, and score Victory Points (VPs).",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender then places three defense works (sandbags, barricades, low wall etc.) each of which counts as a defended obstacle and is at least 4” long horizontally. They are max 1” high. Use the following instructions to deploy these defense works.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                "content": "",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Within 18” of the center of the battlefield (measured to the center).",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "At least 12” away from another defense work (measured from the center).",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Not within or surrounded by Impassable terrain.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender places either a Gun Turret or a Mortar, represented by a circled G and a circled M, respectively, on the scenario map, in any location within the their deployment zone. Once placed, neither of these can be moved during the game. See the Field Artillery rules for the weapons’ profile and specifications.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "Fill the rest of the battlefield with terrain in the usual way, using models such as barricades, ruined buildings, trees, sandbags, etc.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "At the end of the fifth turn, the Attacker rolls 1D6. On a roll of 1-2, the battle ends. Otherwise, the game lasts for six turns.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this scenario, but they cannot be within 8” of any of the Defender’s Objective Buildings.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If one warband is wiped out completely or loses their Morale test, the game ends and the opposing warband wins. Otherwise, keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The players score five VPs for each Objective Building that they have taken control of. The Attacker scores two VPs for each Objective Building they have destroyed.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The players control an Objective Building if the total number of models from their warband that are wholly within that building is higher than the total number of enemy models within 1” of the Objective Building. A model is considered wholly within a building if it is entirely within the edges of the building’s footprint, as agreed by the players.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Attacker destroys an Objective Building if at least one of their ELITE models that is wholly within the building plants an explosive charge. The model can plant the explosive charge with an Action (no roll required), but upon doing so, the Activation of the model ends. In any following turn, if the ELITE model is activated and moves at least 1” outside of the building’s footprint (previously accorded by the players), the Objective Building is immediately destroyed and any other model (friends and foes) that is still wholly within the building must immediately roll on the Injury Chart, ignoring armor. If the ELITE model is taken Out of Action before its next Activation, the explosive charge does not go off.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Calculate VPs at the end of the game for both players and add them together. The player with the higher number of VPs wins, otherwise the game is a draw. However, the following conditions can alter the tides of battle, granting the win regardless of the VPs a player may have accumulated:",
+                        "subcontent": [] 
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the Attacker takes control of the Main Structure Objective Building for two full consecutive turns, they win the game regardless of the VPs the Defender may have.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the Defender takes all of the Attacker’s ELITE models Out of Action, they win the game regardless of the VPs the Attacker may have.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If any of these two victory conditions are met at any point during the game, it is considered a decisive win for the respective player and the game immediately ends.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Glory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "The Shore Is Ours:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "As the Attacker, win the game by taking control of the Main Structure Objective Building for two full consecutive turns. Your last activated model to have entered the Main Structure and that was not taken Out of Action gains the Glory Point.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "The Head Of The Snake:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": " As the Defender, take half of the Attacker’s ELITE models Out of Action (rounded down) with the same model.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Battlefield Legend:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take at least two enemy models Out of Action with the same model during the battle with any ACTIONS the model has, without suffering any BLOOD MARKERS. If the model suffers a BLOOD MARKER but reduces it back to zero, the count resets, and the model is now eligible again to score this deed if they meet the necessary requirements stated above.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Bloodcloud:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take at least three enemy models Out of Action with one of your models using a weapon with the Keyword BLAST.",
+                                        "glossary": [{"val": "BLAST", "id": "gl_blastx"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Cold Blooded Killer:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Use 2+ BLOOD MARKERS on a Melee Attack of one of your models to take an enemy ELITE model Out of Action in a single Activation.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Ghost of Shores:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take an enemy ELITE model Out of Action with one of your models with the Keywords INFILTRATOR or SKIRMISHER.",
+                                        "glossary": [{"val": "INFILTRATOR", "id": "gl_infiltrator"},{"val": "SKIRMISHER", "id": "gl_skirmisher"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If agreed by the players prior to starting the game, you may replace one of the Glory Deeds above for one of the following options:",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Ratcatcher:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Disperse a Swarm of Rats that has taken another model Out of Action, with a model armed with a weapon with the Keyword FIRE.",
+                                        "glossary": [{"val": "FIRE", "id": "gl_fire"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Bloody Beast:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take the Beast Out of Action with a model that has at least 2+ BLOOD MARKERS at the start of its Activation.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+            
+        ]
+    },
+    {
+        "id": "sc_armoredtrain",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "mid_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/222ZWU3.png",
+        "name": "Armored Train",
+        "widerules": [
+        ],
+        "rules": [
+            {
+                "title": "Scenario Overview",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "An armoured train has been derailed. While no reason has been clearly determined, some speculate that this ill-fated transport could have been sent by loyal citizens desperate to support their forces in the front lines. Others say that it was part of a military effort that was ambushed by enemy forces; Or that it could have been contraband intended as a commercial venture by merchants seeking to profit from the demands of war. Truth be told, any other misfortune might have fallen on it. What truly matters is that the train carried supplies vital to keep the engines of war up and running: food, ammunition, medicine, and even relics—holy, and unholy. The loss of its contents has sparked a frenzy, and now warbands from all sides rush to claim what remains. Evidence of a brutal fate lies scattered across the landscape, with barbed wire, scattered shells, and fading blood trails hinting at a crew that vanished without a trace.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off. The winner of the roll-off chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Then place a Gun Turret model, represented by a circled G, on top of the wagon at the center of the map. Once placed, neither of these can be moved during the game. See the Field Artillery rules for the weapons’ profile and specifications.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Both forces can use up to 15 models from their warband.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The battle lasts for six turns.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Table must contain a hill spanning its entire middle section, as indicated on the map. A bridge dividing the hill in half, forming a tunnel that allows access to both sides of the map. And a train with three wagons spread throughout the highest section of the hill.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Both the hill and the bridge should be about 5” high. Models up to 125mm high can pass under the bridge. Parts of each side of the hill must contain patches of barbed wire.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Fill the rest of the battlefield with terrain in the usual way, using models such as guard towers, ruined buildings, etc., placing them at least 1” away from the hill sides.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                        "content": "Setting Up Terrain:",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender places three 8”-long Trench sections in their Deployment Zone. They can be placed as the Defender wishes and can be continuous, however, in the division between each of the three trench sections the Defender must place a bunker model (as indicated by the small Red Markers on the map) of at least 4” by 4”, and up to 3” high, so that models of up to 75mm tall may enter the bunker’s interior.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender must place a Main Structure in the location indicated on the map by a large Red Marker. This structure can be a church, a large bunker, a tower, etc. It must be at least 6” by 6”, and up to 6” high, so that models of up to 150mm tall may enter the building’s interior.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Main Structure and the bunkers are the Objectives of the scenario, hereafter referred to as Objective Buildings, and score Victory Points (VPs).",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "The Defender then places three defense works (sandbags, barricades, low wall etc.) each of which counts as a defended obstacle and is at least 4” long horizontally. They are max 1” high. Use the following instructions to deploy these defense works.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                                "content": "",
+                                "subcontent": []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Setting Up Terrain:",
+                                "subcontent": [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The player with the lower number of models in their force can place one of the following terrain pieces on the table:",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                                        "content": "",
+                                        "subcontent":  [
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Building (a tower, house etc.)",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Piece of Dangerous Terrain (swamp, barbed wire etc.)",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Piece of Difficult Terrain (forest, rocky ground)",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Piece of Impassable terrain (12” river with a bridge or ford, sheer cliffs etc.) Maximum two pieces per battle",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Hill",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "One Fence/wall/other defendable terrain piece (max one per player)",
+                                                "glossary":  []
+                                            },
+                                            {
+                                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                                "content": "6” Section of a Trench",
+                                                "glossary":  []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Each building must be placed at least 8” away from any table edge and at least 6” away from the nearest building terrain piece.",
+                                        "glossary":  []
+                                    },
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "In addition, both players should add six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
+                                        "glossary":  []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Infiltrators",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Infiltrators can be used in this scenario, but must be deployed as normal troops.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Train Wagons",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The derailed train has three wagons. Each wagon is 4” wide (W), 8” long (L), and 5” high (H). The wagons have a set of ladders on both sides, allowing a model to climb on top of a wagon as part of their standard Move. A wagon also provides cover to a model that is in base contact with it.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The train was carrying supply crates, containing precious weapons, materials, and holy relics. The supply crates are spread between the three wagons.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Place three initial markers representing Objectives on the table as indicated on the map. These markers represent an X quantity of supply crates inside a wagon. The wagons are all closed, making it impossible to see the contents inside.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A wagon can be opened from either side by a model within 1”. The model must roll on the Action Success Chart to force open a wagon’s door. BLOOD MARKERS and BLESSING MARKERS can be used to hinder, or aid, this Action.",
+                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "BLESSING MARKERS", "id": "gl_blessingmarker"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Upon opening a wagon, the player must then roll a D3:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Roll Result of 1:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "There is one supply crate inside the wagon; Place one Objective Marker beside the model who opened the wagon to represent the crate, and remove the previous marker from the table;"
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Roll Result of 2:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "There are two supply crates inside the wagon; Place two Objective Markers beside the model who opened the wagon to represent the crates, and remove the previous marker from the table;"
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Roll Result of 3:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "There are three supply crates inside the wagon; Place three Objective Markers beside the model who opened the wagon to represent the crates, and remove the previous marker from the table;"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Supply Crates",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "During the game, any model that ends its move in contact with a marker can Claim it, without the need for a roll, as long as they’re not engaged in melee combat. The model has then in Claimed a crate. A model can end a Claim without the need for a roll at the start of model’s Activation, dropping the crate within 1” of the model, in a direction of the model’s choice. The same model cannot make a new Claim during that Activation. A model can only Claim one crate at a time, and must immediately choose one of the three following options:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Extract Supplies:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The model picks up the crate to start extracting it, without the need for a roll. The crates are HEAVY, and must be held with all hands a model may have. Any weapons a model might be carrying, or is integrated with, will be rendered unusable while the model is extracting the crate. As long as a model is extracting the crate, it cannot Attack, cannot Dash, and any other method of movement (teleportation, Puppet Master, etc.) cannot be used to move the model due the mystical effect of the holy relics inside, other then their standard Move. At the end of its Activation, the model can pass the crate it is extracting to any friendly model within 1” range, as long as neither model is in melee combat with an enemy model. The model receiving the crate is considered to have ended their Activation this turn, if it has not have done so yet. A model extracting a crate can drop it without the need for a roll, or be forced to drop it if engaged in melee combat, dropping the crate within 1” of the model, in a direction of the model owner’s choice. A model can also change its choice to Destroy Supplies (see below) without the need for a roll at any point. If a model extracting a crate moves into contact with any table edge, it has escaped with the crate successfully, and does not return to the table, in which case, remove the Objective Marker representing the extracted supplies from the table, and the model that extracted it."
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Destroy Supplies:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The model that has Claimed a crate, or that is extracting it, can attack it as an ACTION. If successful, the crate is destroyed, in which case, remove the Objective Marker representing the destroyed supplies from the table.",
+                                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                                "content": "Use Supplies:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "As an ACTION, a model that has Claimed a crate can attempt to open it and use the relics inside. If successful, gain a BLESSING MARKER, in which case, remove the Objective Marker representing the used crate from the table.",
+                                        "glossary": [{"val": "ACTION", "id": "gl_action"},{"val": "BLESSING MARKER", "id": "gl_blessingmarker"}]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "An enemy model cannot attack a crate that has been Claimed, or that is being extracted, by another model, but they can attack the model normally.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the model that has Claimed a crate, or is extracting it, is taken Out of Action, the crate is immediately dropped within 3” of the fallen model, in a direction of the enemy’s choice. If it lands in contact with another model, the model can immediately Claim it, except if they’re engaged in melee combat with an enemy model, in which case, the crate must the dropped again in a different direction.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the game ends while a model has a Claimed crate, or is in the process of extracting it, they have failed to either extract it, destroy it, or use it, and so it does not count to the final VPs calculation."
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If one warband is wiped out completely or loses their Morale test, the game ends and the opposing warband wins. Otherwise, keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores 3 VPs for each crate successfully extracted from the map.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores 2 VPs for each crate destroyed during the game.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores 1 VPs for each crate used during the game.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Calculate VPs at the end each turn for both players and the end of the game and add them together. The player with the higher number of VPs wins, otherwise the game is a draw.",
+                        "subcontent": [] 
+                    }
+                ]
+            },
+            {
+                "title": "Glorious Deeds",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Glory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "subcontent": [
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "No Stone Left Unturned:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "The same model successfully opens two wagons.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Not On My Watch:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out an enemy operating the Gun Turret with a ranged attack at Long Range.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Supply Run:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Successfully extract at least two crates from the map. The model that extracts the second crate gets the Glory Point.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Meat-Grinder:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Take out three enemies using the Gun Turret with the same model.",
+                                        "glossary": []
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "King Of The Hill:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Have a model spend at least three consecutive turns on the top of the hill, within 3” of a wagon, and without suffering any BLOOD MARKERS.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+                                    }
+                                ]
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
+                                "content": "Over The Enemy Line:",
+                                "subcontent":  [
+                                    {
+                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                        "content": "Successfully extract a crate through the opposing player’s deployment zone."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+            
+        ]
+    },
+    {
+        "id": "sc_dragonhunt",
+        "type": "Scenario",
+        "source": "core",
+        "tags": [
+            {"tag_name": "end_campaign", "val": ""}
+                ],
+        "image_url": "https://i.imgur.com/HClXCa3.png",
+        "name": "Dragon Hunt",
+        "widerules": [
+            
+            {
+                "title": "The Dragon",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Dragon is activated once per turn. At the end of each of a player’ model Activation, the player must roll a 1D6. On a roll of 5-6, the Dragon is Activated subsequently, before the opponent activates one of their own models. The same player then acts out the Dragon’s actions, as described in its profile. If by the end of the turn, the Dragon hasn’t been activated, it is before the start of the next turn. Below is the Dragon’s profile and special rules:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Dragon is considered both an enemy model, and as Difficult Terrain. When in base contact with it, a warband model can Climb the Dragon, Move through it, beneath it, on it, and start or end its movement beneath it, or on it. Ideally, the Dragon’s model should be big enough to allow for two models on a 60mm base to stand on top of it (or up to four models on a 25mm base). A model that is on top of the Dragon rolls with +1 DICE to Hit it, and +1 DICE to injure it. However, note that all ACTIONS taken by a model on top of the Dragon are considered as RISKY. Additionally, when the Dragon uses its Move, any model on top of its must immediately succeed on a RISKY ACTION. On a fail, the model is forcibly moved 2” in a direction of the opponent’s choice, and is knocked Down. If this movement forces the model to fall from of the Dragon, the model’s owner rolls also must roll on the Injury Chart, as per the rules of Falling.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "RISKY", "id": "gl_riskyaction"},{"val": "ACTIONS", "id": "gl_action"},{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When Activated, the Dragon will Move towards the nearest Peasant model through the fastest route possible. The Dragon cannot Charge as usual. Instead, if its movement takes it into contact with a model it counts as charging and engages that model in melee combat, if that is the Dragon’s intended target. When moving toward a targeted model, if the Dragon comes into base contact with another model that it is not targeting, it does not engage in melee combat with it, even if the model intends to engage it. Instead, the Dragon will run right over them. Any model moved over by the Dragon suffers an Injure. The player acting the Dragon immediately rolls on the Injury Chart with +1 DICE to injure, for any of their models moved over by the the Dragon.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "When attacked by a warband model, the Dragon will seek out the last warband model that attacked it on its next Activation. The Dragon will Move toward the model through the fastest route possible (even through certain impassable terrain pieces, if possible. See below). The Dragon ignores movement penalties and effects caused by Difficult Terrain and Dangerous Terrain. If the last model that attacked the Dragon is on top of it, or if the Dragon cannot reach the model that attacked it in one Activation, on its next Activation, it will shift its focus to either move toward the nearest Peasant model, the last model that attacked it, or to leave the area. If the Dragon attacks a targeted model at the start of its turn, it will then use its Movement to either move toward the nearest Peasant model, or to leave the area. Note that the Dragon does not need to have line of sight of a model to Move toward it.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If there are no more Peasant models present on the table before the end of the game, having either escaped the area (see the Peasant section), or been taken Out of Action, the Dragon will shift its focus to leave the area to continue its rampage elsewhere, using its Movement when Activated to reach the nearest edge of the table. If the Dragon comes into base contact with any of the table’s edges, it successfully leaves the area. See the Victory Conditions section. Note that the Dragon cannot Dash.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Dragon’s limbs function as its weapons. It is armed with its Stomp, it’s Tail Swipe, and its Fire Breath. These are parts of the creature itself and cannot be removed or lost in any way. When the Dragon comes into base contact with a model that is has targeted, it will make two attack ACTIONS with its Stomp, in Melee Combat (so it can make two attacks per Activation with this weapon).",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the Dragon engages in Melee combat with multiple models, it will make one attack ACTION against each model, with its Tail Swipe instead (see below). However, after the Dragon is knocked Down twice, as per its Undying special rule (see below), it loses its tail, meaning that it cannot use its Tail Swipe attack any longer.",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the Dragon’s movement does not get it into Melee range of a model, or if the model moves away from its Melee range, but remains within range to use its Fire Breath, it attacks once with it instead, in Ranged Combat.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "model"}],
+                        "content": "md_dragon"
+                    }
+                ]
+            },
+            {
+                "title": "The Peasants",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The villages surrounding the front-lines have been tainted by all sorts of maladies and misfortune. The war has taken its toll on the peasantry, many of which are contaminated with never seen before afflictions. Hence the main reason why they have not been evacuated from the battlefield. However, their taint has attracted the attention the Dragon. Rescuing them is not an option. They pose a great risk to the troops. So, putting an end to their miserable lives is be the only right thing to do, and order that every warband sent to claim the Dragon’s head has been given to by their higher ups.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "All Peasants are deployed at the start of the game (see the Battlefield section). Each Peasant is activated once per turn. At the end of each of a player’ model Activation, the same player also Activates a Peasant model anywhere on the table that hasn’t been Activated yet. The player then acts out the Peasant’s actions, as described in its profile. The players alternate between Activating the Peasants until all have been Activated in that turn. Below is the Peasant’s profile and special rules:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "gap"}],
+                        "content": "",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "model"}],
+                        "content": "md_dragonspeasant"
+                    }
+                ]
+            }
+        ],
+        "rules": [
+            {
+                "title": "Scenario Overview",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Reports from the front lines tell of a massive entity tearing through the afflicted, plague-ridden villages surrounding No-Man’s Land. Some claim it to be a newborn Larval Beast, a Possessed Tank, others an Angelic gone rogue, and some even say it is an actual Dragon. The descriptions vary, but all agree on its immense size and the trail of destruction and bloodshed it leaves behind. Showing no allegiance, the creature has trampled warbands and strongholds alike, spreading chaos indiscriminately. Hunting down “The Dragon,” as it has been named in the scattered reports, has become a top priority. The warband that claim its head will secure prestige and glory across the theater of war.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Battle Length",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "At the end of the fourth turn, a player rolls 1D6. On a roll of 1-2, the battle ends. Otherwise, the game lasts for five turns.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Victory Conditions",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If one warband is wiped out completely or loses their Morale test, the game ends and the opposing warband wins. Otherwise, keep a running tally of Victory Points for both sides. The players accumulate VPs as follows:",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores four VPs for each time they knock Down the Dragon with one of their warband models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores six VPs for taking the Dragon Out of Action with one of their warband models.",
+                                "glossary":  []
+                            },
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "A player scores two VPs for each Peasant taken Out of Action by one of their warband models. If a Peasant model escapes the area, neither player gains the VPs for that model.",
+                                "glossary":  []
+                            }
+                        ]
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Calculate VPs at the end of the game for both players and add them together. The player with the higher number of VPs wins, otherwise the game is a draw. However, the following condition can bring the game to an immediate end, regardless of the VPs the players may have accumulated:",
+                        "subcontent": [] 
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "list"}],
+                        "content": "",
+                        "subcontent": [
+                            {
+                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                                "content": "If the Dragon successfully leaves the battlefield, neither of the players win the game, regardless of the VPs they may have accumulated up until this point. Take into account only the Glorious Deeds performed, if any, and award no VPs.",
+                                "glossary":  []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Deployment",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players roll-off. The loser of the roll-off chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "Forces",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Both sides use their entire forces.",
+                        "subcontent": []
+                    }
+                ]
+            },
+            {
+                "title": "The Battlefield",
+                "description": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The game is played on a standard-sized Battlefield (we suggest 4’X4’)",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Place a model on a base of at least 120mm, to represent the Dragon, at the center of the table as indicated on the map by the Objective Marker.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Each player then places three models (to a total of six), each on a 25mm base, to represent the Peasants, where they see fit. Note that the Peasants must be placed at least 6” away from another model, at least 8” away from the Dragon, at least 6” away from a player’s deployment zone, and cannot be placed over Impassable terrain, or surrounded by it.",
+                        "subcontent": []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Fill the rest of the battlefield with terrain in the usual way, using models such as guard towers, ruined buildings, etc., placing them at least 1” away from the hill sides.",
                         "subcontent": []
                     },
                     {
@@ -1881,127 +2918,10 @@
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "In addition, both players should take six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
+                                "content": "In addition, both players should add six smaller terrain pieces like boxes, sandbags, bomb craters, wells, fountains etc. anywhere on the table to create cover.",
                                 "glossary":  []
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                "title": "Infiltrators",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Infiltrators can be used in this Scenario, but they cannot be within 8” of any of the Defence Works (see below).",
-                        "subcontent": []
-                    }
-                ]
-            },
-            {
-                "title": "Deployment",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Starting with the Defender, the players take turns to deploy one model at a time. Models must be set up wholly within their own deployment zone.",
-                        "subcontent": []
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If a player runs out of models to set up, the other player sets up all their models afterwards. Once the players have set up their models, deployment ends and the battle begins.",
-                        "subcontent": []
-                    }
-                ]
-            },
-            {
-                "title": "Battle Length",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The Defender chooses which deployment zone will be theirs. The other deployment zone will be their opponent’s.",
-                        "subcontent": []
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The players then take it in turns to deploy one model at a time, starting with the player who has more models in their warband (roll-off if both have the same number of models).",
-                        "subcontent": []
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Models must be set up wholly within their own deployment zone. If a player runs out of models to set up, the other player sets up all their models afterwards. The Defender then deploys three Defence Works (at least 4” long vertically – this could be sandbags, barricades, low wall etc.), each of which counts as a defended obstacle. They must:",
-                        "subcontent": []
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "list"}],
-                        "content": "",
-                        "subcontent": [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Be no more than 1” high.",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Be within 18” of the centre of the battlefield (measured to the centre).",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Be at least 12” from another Defence Work (measured from the centre).",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Not be within or surrounded by impassable terrain.",
-                                "glossary":  []
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "title": "Victory Conditions",
-                "description": [
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "The game ends when one of the following conditions is met:",
-                        "subcontent": []
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "list"}],
-                        "content": "",
-                        "subcontent": [
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "The defender controls all Defence Works at the start of the battle. The Attacker can destroy one of the Defence Works by having more fighters than the defender within 3” of the centre of one of the Defence Works at the end of any Turn. When this happens, remove the terrain piece. Once destroyed, it is permanently claimed by the attacker.",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "At the end of any Turn when all three landmarks are captured by the Attacker.",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "When one Warband loses their Morale Test and retreats.",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "One Warband is completely wiped out.",
-                                "glossary":  []
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                "content": "Battle ends on Turn 4 and the Defender still controls one or more of the Defence Works.",
-                                "glossary":  []
-                            }
-                        ]
-                    },
-                    {
-                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "If you are Playing a Campaign, the Winner gains 5 Victory Points.",
-                        "subcontent": []
                     }
                 ]
             },
@@ -2010,7 +2930,7 @@
                 "description": [
                     {
                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Victory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
+                        "content": "Players score one Glory Point for every model that completes any of the following Glorious Deeds. Glory Points for these can only be gained once - whichever player completes them first gets the Glory Points!",
                         "subcontent": [
                         ]
                     },
@@ -2020,67 +2940,56 @@
                         "subcontent": [
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Feigned Retreat:",
+                                "content": "Dragon Slayer:",
                                 "subcontent":  [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Retreat from Melee Combat and then shoot and hit the enemy you escaped from during the same Activation.",
+                                        "content": "Take the Dragon Out of Action with one of your models using a melee weapon that is on top it. This Deed is worth two Glory Points.",
                                         "glossary": []
                                     }
                                 ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Running the Gauntlet:",
+                                "content": "Genocidal:",
                                 "subcontent":  [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "In single Activation, Dash and Charge an enemy that is within 3” of one of the Defence Works.",
+                                        "content": "Take at least three Peasants Out of Action with the same model.",
                                         "glossary": []
                                     }
                                 ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Last Ditch Effort:",
+                                "content": "Opportunist:",
                                 "subcontent":  [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Take out an enemy with the last Model you Activate during any of your Turns.",
+                                        "content": "Use a Peasant during its Activation to lure the Dragon into moving over an enemy model. Your model whose turn was prior to the Peasant’s gains the Glory Point.",
                                         "glossary": []
                                     }
                                 ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Unto the Breach:",
+                                "content": "Off My Back:",
                                 "subcontent":  [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Take out an enemy in melee who is using one of the Defence Works as a Defended Obstacle.",
+                                        "content": "Make an enemy model that is on top of the Dragon fall due to your action (shooting, melee, Supernatural Power etc).",
                                         "glossary": []
                                     }
                                 ]
                             },
                             {
                                 "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Hold Your Ground:",
+                                "content": "Fire With Fire:",
                                 "subcontent":  [
                                     {
                                         "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Pass a Morale Test.",
-                                        "glossary": []
-                                    }
-                                ]
-                            },
-                            {
-                                "tags": [{"tag_name": "desc_type", "val": "subeffect"}],
-                                "content": "Barrage:",
-                                "subcontent":  [
-                                    {
-                                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
-                                        "content": "Take out an enemy with a weapon that has one of the following Keywords: FIRE, GAS or SHRAPNEL.",
-                                        "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                                        "content": "Inflict 2+ BLOOD MARKERS on the Dragon with the same model, using a weapon with either the Keyword FIRE, GAS, or SHRAPNEL.",
+                                        "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "FIRE", "id": "gl_fire"},{"val": "GAS", "id": "gl_gas"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
                                     }
                                 ]
                             }
@@ -2088,6 +2997,7 @@
                     }
                 ]
             }
+            
         ]
     }
 ]

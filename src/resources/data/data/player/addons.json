@@ -2420,5 +2420,209 @@
                 "glossary": [ {"val": "INFILTRATOR", "id": "gl_infiltrator"} ]
             }
         ]
+    },
+    {
+        "id": "ab_resilient_tough",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Resilient",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast is a massive creature with unnatural vitality and is subject to the rules for TOUGH creatures. Additionally, it’s hide is rough and thick, acting like natural armor. Attacks made against the Beast are made with -1 DICE.",
+                            "glossary": [{"val": "TOUGH", "id": "gl_tough"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_unrelenting",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Unrelenting",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast may take its Dash and any of its Jump ACTIONS with +2 DICE.",
+                            "glossary": [{"val": "ACTIONS", "id": "gl_action"},{"val": "+2 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_terrifyingbeast",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Terrifying",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast is a horrid abomination whose infamous repute has spread across many villages and towns caught in the tides of war. Trench tales speak of the carnage and desolation it leaves on its path, causing unfathomable FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_beast_bite",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Bite",
+        "eventtags": {"action": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast treats its Bite as a melee weapon with that grants a +1 DICE bonus to hit (for total of +3D). Additionally, the attack ignores any armor worn by the target and has a +1 DICE bonus to injure. The Bite does not take any hands to wield.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_beast_claws",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Claws",
+        "eventtags": {"action": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast treats its Claws as two one-handed melee weapons with the Keywords RISKY. The Claws have a +1 DICE bonus to injure. Because the Claws are wielded alongside the Bite, they are both treated as Off-Hand Weapons and suffer penalties accordingly.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"},{"val": "RISKY", "id": "gl_riskyaction"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_stomp",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Stomp",
+        "eventtags": {"action": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon treats its Stomp as a melee weapon that grants a +1 DICE bonus to hit (for total of +4 DICE). Additionally, the attack ignores any armor worn by the target and has a +1 DICE bonus to injure. The Stomp takes one “hand” to wield.",
+                            "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_firebreath",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Fire Breath",
+        "eventtags": {"action": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon treats its Fire Breath as a ranged weapon, with 10” range. It hits up to two models within range automatically with the Attack Action as long as they are within 6” of each other. This attack has the Keyword FIRE, so it causes an additional +1 BLOOD MARKER on enemies it hits, even if no other damage is caused. Additionally, the attack ignores any armor worn by the target. The Fire Breath does not take any hands to wield.",
+                            "glossary": [{"val": "FIRE", "id": "gl_fire"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_tailswipe",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Tail Swipe",
+        "eventtags": {"action": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon treats its Tail Swipe as a melee weapon. This weapon has the same rules as a two-handed hammer but its huge reach means that the Dragon may make one Melee Attack ACTION against each enemy model it is fighting in Melee.",
+                            "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_undying",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Undying",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon is an extremely resilient opponent. If a model would take the Dragon Out of Action, it is knocked Down instead. Every time the Dragon is knocked Down this way, any BLOOD MARKERS it may have are removed. Use a dice to match the corresponding number of times the Dragon has been knocked Down. The Dragon must then be knocked Down in this way two more times (to a total of three) before it can be taken Out of Action. However, not that on its last “life”, the Dragon can only be taken Out of Action then when it accumulates six BLOOD MARKERS. These BLOOD MARKERS can then be used to cause a Blood Bath, or to add +Dice to kill the Dragon.",
+                            "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"},{"val": "+Dice", "id": "gl_plusdice"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_resistant",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Resistant",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "At the start of each of its Activations, the Dragon can remove one BLOOD MARKER from itself, if it has any. Additionally, attacks with the Keyword GAS, FIRE, or SHRAPNEL suffer a -1 DICE penalty to injure the Dragon.",
+                            "glossary": [{"val": "BLOOD MARKER", "id": "gl_bloodmarker"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "GAS", "id": "gl_gas"},{"val": "FIRE", "id": "gl_fire"},{"val": "SHRAPNEL", "id": "gl_shrapnel"}]
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_seigeweapon",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Seige Weapon",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon’s massive size allows it to destroy buildings and other pieces of structures that are up to half of its base size. If what would normally be considered as an impassable terrain piece, that is in the Dragon’s path, and corresponds to the metrics above, when the Dragon moves it will pass over it, crumbling the structure completely. Remove the piece from the board, and the area where it was becomes Difficult Terrain the same size as the building was. Additionally, any model that is wholly within the building’s footprint (previously accorded by the players) when it crumbles must immediately roll on the Injury Chart, ignoring armor.",
+                            "glossary": []
+                        }
+                        ]
+    },
+    {
+        "id": "ab_dragon_terrifying",
+        "type": "Addon",
+        "source": "core",
+        "tags": [
+                ],
+        "faction_id": "fc_none",
+        "name": "Terrifying",
+        "eventtags": {"trait": true},
+        "description":  [
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon instills horror in the minds of those who witness it, causing unfathomable FEAR.",
+                            "glossary": [{"val": "FEAR", "id": "gl_fear"}]
+                        }
+                        ]
     }
 ]

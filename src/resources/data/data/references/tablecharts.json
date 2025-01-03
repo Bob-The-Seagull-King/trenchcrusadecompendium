@@ -1,5 +1,23 @@
 [
     {
+        "id": "tc_stormingtheshort_unforseenevents",
+        "type": "TableChart",
+        "source": "core",
+        "tags": [
+            ],
+        "name": "Unforseen Events",
+        "description": [ ],
+        "listtype": "tableresult",
+        "list_items": [
+            { "id": "tr_unforseenevent_risingfog", "roll_start": 1, "roll_end": 1},
+            { "id": "tr_unforseenevent_stridingmercenary", "roll_start": 2, "roll_end": 2},
+            { "id": "tr_unforseenevent_unearthedrelics", "roll_start": 3, "roll_end": 3},
+            { "id": "tr_unforseenevent_thebeastofnomansland", "roll_start": 4, "roll_end": 4},
+            { "id": "tr_unforseenevent_ratfrenzy", "roll_start": 5, "roll_end": 5},
+            { "id": "tr_unforseenevent_longloststash", "roll_start": 6, "roll_end": 6}
+        ]
+    },
+    {
         "id": "tc_actionsuccess",
         "type": "TableChart",
         "source": "core",

@@ -42,7 +42,7 @@
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .pagecontainer {
@@ -50,14 +50,14 @@
     width: 100%;
     justify-content: space-evenly; 
     grid-template-columns: 55% 45%;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .jobfeaturecontainer {
     display: grid;
     justify-content: space-evenly; 
     grid-template-columns: 50% 50%;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .reliccontainer {
@@ -78,7 +78,7 @@
     display: grid;
     justify-content: space-evenly; 
     grid-template-columns: 20% 40% 40%;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .searchSubContainer {
@@ -113,26 +113,26 @@
     display: grid;
     justify-content: space-evenly; 
     grid-template-columns: 25% 20% 45% 10%;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .gridItem {
-    margin: 0.5em;
+    margin: 0.5rem;
 }
 
 .gridItemPower {
-    margin: 0.5em;
-    min-width: 25em;
+    margin: 0.5rem;
+    min-width: 25rem;
 }
 
 .gridItemRule {
-    margin: 0.5em;
-    min-width: 25em;
-    max-width: 25em;
+    margin: 0.5rem;
+    min-width: 25rem;
+    max-width: 25rem;
 }
 
 .jobitema { 
-    padding:0.5em;
+    padding:0.5rem;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -140,7 +140,7 @@
 }
 
 .jobitemb { 
-    padding:0.5em;
+    padding:0.5rem;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -155,11 +155,11 @@
 
 .gridjoblistItem {
     max-width: 50%;
-    padding: 0.5em;
+    padding: 0.5rem;
 }
 
 .pageitema { 
-    padding:0.5em;
+    padding:0.5rem;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
@@ -167,7 +167,7 @@
 }
 
 .pageitemb { 
-    padding:0.5em;
+    padding:0.5rem;
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -175,12 +175,12 @@
 }
 
 .relicgriditem {
-    margin: 0.5em;
+    margin: 0.5rem;
     justify-self: center;
 }
 
 .modelgriditem {
-    margin: 0.5em;
+    margin: 0.5rem;
     justify-self: center;
 }
 
@@ -190,27 +190,27 @@
 }
 
 .midgriditem {
-    padding-left: 0.4em;
-    padding-right: 0.4em;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     width: 100%;
 }
 
 .levelgriditem {
-    margin-right: 0.5em;
-    margin-top: 1em;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
 }
 
 .searchgridbutton {
-    margin-left: 0.5em;
+    margin-left: 0.5rem;
 }
 
 .searchgridtacticsbutton {
-    margin-top: 1em;
-    padding-bottom:-1em;
-    margin-left: 0.5em;
+    margin-top: 1rem;
+    padding-bottom:-1rem;
+    margin-left: 0.5rem;
 }
 
 .jobgriditem {
     width: 103%;
-    padding: 0em;
+    padding: 0rem;
 }

@@ -4249,5 +4249,114 @@
                     ]
                 }
             ]
+    },
+    {
+        "id": "eq_field_gunturret",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"},
+            {"tag_name": "Critical", "val": "gl_critical"}
+                ],
+        "category": "field",
+        "name": "Gun Turret",
+        "equip_type": "2-Handed",
+        "range": "24\"",
+        "blurb": "",
+        "modifiers": ["3 Attacks", "+1D to Hit", "+1D to Injury"],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Gun Turret can’t be moved. A model that is in base contact with the Gun Turret is considered to be armed with it. Only one model can be armed with the Gun Turret at a time. The model must be able to use Ranged weapons to arm themselves with the Gun Turret. While using the Gun Turret, the model can’t take any other ACTIONS, except Move. If the model moves away from contact with the Gun Turret, or if they’re engaged in melee combat, they’re not armed with the Gun Turret any longer.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Gun Turret can make three Attack Actions instead of one, as RISKY ACTIONS each. A model armed with it can target separate models with each attack, as long as all targets are within 6” of each other. After taking all three attacks, the Activation of the model is over regardless of any remaining ACTIONS the model might have. If they fail any of the RISKY ACTIONS, the Activation of the model is over and the Gun Turret is jammed.",
+                        "glossary": [{"val": "RISKY ACTIONS", "id": "gl_riskyaction"},{"val": "ACTIONS", "id": "gl_action"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "A model can attempt to unjam the Gun Turret with an ACTION, as long as they’re in base contact with it and not engaged in melee combat. If successful, the Gun Turret is no longer jammed.",
+                        "glossary": [{"val": "ACTION", "id": "gl_action"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "After making three attacks, consecutively or not, by the same model or not, the Gun Turret must be reloaded as a RISKY ACTION by a model that is in base contact with it and not engaged in melee combat. If successful, the Gun Turret is reloaded, and the Activation of the model is over regardless of any remaining ACTIONS the model might have. If failed, the Activation of the model is over and the Gun Turret is jammed. Unjamming the Gun Turret, in this case only, will also reload it.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "ACTIONS", "id": "gl_action"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Gun Turret rolls attacks with +1 DICE. It reduces the injury roll penalty from armor and shields by 1. Thus Reinforced Armor only offers a -1 modifier to injury rolls caused by this weapon. It also adds +1 DICE when rolling on the Injury Chart. The model cannot apply any of their own applicable modifiers, if any, when armed with the Gun Turret.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The model armed with the Gun Turret is considerably exposed to enemy fire. Enemies add +1 DICE when rolling on to hit the model with ranged attacks.",
+                        "glossary": [{"val": "+1 DICE", "id": "gl_plusdice"}]
+                    }
+                ]
+            }
+
+        ]
+    },
+    {
+        "id": "eq_field_mortar",
+        "type": "Equipment",
+        "source": "core",
+        "tags": [
+            {"tag_name": "Risky", "val": "gl_riskyaction"},
+            {"tag_name": "Shrapnel", "val": "gl_shrapnel"},
+            {"tag_name": "BLAST 3\"", "val": "gl_blastx"}
+                ],
+        "category": "field",
+        "name": "Mortar",
+        "equip_type": "2-Handed",
+        "range": "6-36\"",
+        "blurb": "",
+        "modifiers": ["1 Attack"],
+        "eventtags": {"action": true},
+        "description":  [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "effect"}],
+                "content": "Rule:",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "The Mortar can’t be moved. A model that is in base contact with the Mortar is considered to be armed with it. Only one model can be armed with the Mortar at a time. The model must be able to use Ranged weapons to arm themselves with the Mortar. While using the Mortar, the model can’t take any other ACTIONS, except Move. If the model moves away from base contact with the Mortar, or if they engage in melee combat with an enemy, it is not using the Mortar any longer. The Mortar can only be used once per turn. The model cannot apply any of their own applicable modifiers, if any, when armed with the Mortar.",
+                        "glossary": [{"val": "ACTIONS", "id": "gl_action"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Attacking with the Mortar is considered as a RISKY ACTION. Specify a 1x1mm point on the battlefield within 36” of the model that is armed with the Mortar and that they can see the location you want to target, or a 1x1mm point within 6” of any one of your warband models that can see the location you want to target. Next, make a Ranged Attack as a RISKY ACTION with the model armed with the Mortar. If attacking a location from the line of sight of an allied model, make the roll with -1 DICE. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the model’s Activation is over and the Mortar misfires, landing 3” away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 4, the bomb lands 15” away, as 7-4=3, and 5x3=15). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius.",
+                        "glossary": [{"val": "RISKY ACTION", "id": "gl_riskyaction"},{"val": "-1 DICE", "id": "gl_minusdice"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "If the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the projectile roll on the Injury Chart as standard. Any model hit, but not taken Out of Action, by this attack is blown D3” directly away from the point of impact (roll for each model separately), stopping if they hit other models/buildings/objects. This attack has the Keyword SHRAPNEL and therefore causes an additional +1 BLOOD MARKER. Cover, range and higher position do not affect this attack.",
+                        "glossary": [{"val": "SHRAPNEL", "id": "gl_shrapnel"},{"val": "BLOOD MARKER", "id": "gl_bloodmarker"}]
+                    },
+                    { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "Roll injuries for models that would benefit from Cover from the perspective of the BLAST point with -1 DICE. The Activation of the model ends immediately after using the Mortar, regardless of any remaining ACTIONS the model might have.",
+                        "glossary": [{"val": "BLAST", "id": "gl_blastx"},{"val": "-1 DICE", "id": "gl_minusdice"},{"val": "ACTIONS", "id": "gl_action"}]
+                    }
+                ]
+            }
+
+        ]
     }
 ]

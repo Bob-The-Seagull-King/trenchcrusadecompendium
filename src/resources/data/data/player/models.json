@@ -3875,5 +3875,190 @@
                 "content": "ab_arabiandestrier"
             }
         ]
+    },
+    {
+        "id": "md_thebeastofnomansland",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "fear", "val": "gl_fear"},
+            {"tag_name": "tough", "val": "gl_tough"}
+                ],
+        "promotion": 1,
+        "movement": [8],
+        "ranged": [],
+        "melee": [2],
+        "armour": [0],
+        "base": [120,80],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "The Beast of No Man's Land",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Beast model can be up to 60mm tall, placed on a base of 120x80mm. It is armed only with its vicious Claws and devastating Bite. These are natural parts of the creature itself and cannot be removed or lost in any way."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Beast will seek out the nearest model with the most BLOOD MARKERS, driven by its bloodthirsty frenzy. The Beast will Charge the model through the fastest route, and will Climb, Jump Over Gaps, Between Ledges of Unequal Heights, and Down (as long as the height won’t cause an Injury to it) to get at a warband model.",
+                "glossary": [{"val": "BLOOD MARKERS", "id": "gl_bloodmarker"}]
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "However, note that it will not move through Dangerous terrain if it can be avoided. The Beast does not need to have line of sight of a model to Charge it. If the beast cannot Charge a model, it will just Move toward the nearest one."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "When the Beast reaches a model, it will make one attack ACTION with each of its Claws, and one attack ACTION with its Bite, all in Melee Combat (so it can make three attacks per Activation). If the Beast Charges more than one model, it will split its attacks amongst the opponents.",
+                "glossary": [{"val": "ACTION", "id": "gl_action"}]
+            }
+        ],
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Beast wields its BITE and CLAWS, seen below."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_resilient_tough"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_unrelenting"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_terrifyingbeast"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_beast_bite"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_beast_claws"
+                        }]
+
+    },
+    {
+        "id": "md_dragonspeasant",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+                ],
+        "promotion": 1,
+        "movement": [6],
+        "ranged": [],
+        "melee": [],
+        "armour": [0],
+        "base": [25],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Peasant",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Peasant has no attacks, equipment, or abilities. They can only Move, as per their normal Movement, and cannot Dash. When Activated, a Peasant will always try to move as far away as possible from the Dragon, toward one of the table’s edges. In this path, they should also try to keep as much distance as possible from any warband model. However, note that the Peasant will not Move into Dangerous Terrain, and will also try to avoid Difficult Terrain, if possible."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "If a Peasant comes into base contact with any of the table’s edges, it successfully leaves the area. Remove the corresponding Peasant model from the board."
+            },
+            { "tags": [{"tag_name": "desc_type", "val": "gap"}], "content": "" },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The afflicted peasantry’s feeble nature makes them vulnerable in any confrontation. Attacks made against a Peasant are made with +2 DICE to Hit and +2 DICE to injure.",
+                "glossary": [{"val": "+2 DICE", "id": "gl_plusdice"}]
+            }
+        ],
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Peasant is equipped with nothing."
+                        }],
+        "abilities":  []
+
+    },
+    {
+        "id": "md_dragon",
+        "type": "Model",
+        "source": "core",
+        "tags": [
+            {"tag_name": "fear", "val": "gl_fear"}
+                ],
+        "promotion": 1,
+        "movement": [10],
+        "ranged": [3],
+        "melee": [3],
+        "armour": [3],
+        "base": [120],
+        "faction_id": "fc_none",
+        "variant_id": "fv_basic",
+        "eventtags": {},
+        "name": "Dragon",
+        "blurb": [
+            {
+                "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                "content": "The Dragon’s model must be placed on a base of at least 120mm, and can go up to a 300mm base. You can use a Larval Beast to proxy the model, or a Possessed Tank, or even an actual Dragon model. The larger the model is the better, however, the less Movement it also has, according to the following metrics:"
+            },
+            {
+                "tags": [{"tag_name": "desc_type", "val": "list"}],
+                "content": "",
+                "subcontent": [
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "On a 120mm to 200mm base = Movement: 10”;",
+                        "glossary":  []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "On a 210mm to 250mm base = Movement: 9”;",
+                        "glossary":  []
+                    },
+                    {
+                        "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                        "content": "On a 260mm to 300mm base = Movement: 8”;",
+                        "glossary":  []
+                    }
+                ]
+            }
+        ],
+        "equipment":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "desc"}],
+                            "content": "The Dragon is equipped with STOMP, FIRE BREATH, and TAIL SWIPE (see below)."
+                        }],
+        "abilities":  [{
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_stomp"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_firebreath"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_tailswipe"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_undying"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_resistant"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_seigeweapon"
+                        },
+                        {
+                            "tags": [{"tag_name": "desc_type", "val": "addon"}],
+                            "content": "ab_dragon_terrifying"
+                        }]
+
     }
 ]
