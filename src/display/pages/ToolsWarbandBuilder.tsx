@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../resources/styles/_icon.scss'
-import React, { useState } from 'react'
+import React, { useState, Component } from 'react'
+import { ErrorBoundary } from "react-error-boundary";
 
 import { WarbandManager } from '../../classes/lists/warbandmanager';
 import { Warband } from '../../classes/lists/Warband';
@@ -48,8 +49,10 @@ const ToolsWarbandBuilder = (prop: any) => {
         <div className="container" style={{width:"100%"}}>
             {_currentWarband != null &&
                 <div>
-                    <WarbandManageDisplay key={_keyval} data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
-                </div>
+                    <ErrorBoundary fallback={<div>The Warband Has Been Corrupted</div>}>
+                        <WarbandManageDisplay key={_keyval} data={_currentWarband} updater={UpdateWarband} manager={Manager}/>
+                    </ErrorBoundary>
+                    </div>
             }
             {_currentWarband == null &&
                 <WarbandListDisplay manager={Manager} updater={UpdateWarband}/>

@@ -30,6 +30,7 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
+    "react-error-boundary": "^5.0.0",
     "react-hooks-global-state": "^2.1.0",
     "react-html-parser": "^2.0.2",
     "react-html-replace": "^0.1.6",

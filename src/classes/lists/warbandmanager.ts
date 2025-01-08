@@ -475,158 +475,163 @@ class WarbandManager {
         // Iterate through each known warband
         for (i = 0; i < data.length; i ++) {
 
-            if (data[i].PayChest === undefined) {
-                data[i].PayChest = 0;
-            }
+            try {
 
-            if (data[i].BattleNo === undefined) {
-                data[i].BattleNo = 1;
-            }
-
-            // Update the warband's faction
-            const factionid = data[i].Faction.ID;
-            let j = 0;
-            for (j = 0; j < this.Factions.length; j ++) {
-                if (this.Factions[j].ID == factionid) {
-                    data[i].Faction = this.Factions[j];
-                    break;
+                if (data[i].PayChest === undefined) {
+                    data[i].PayChest = 0;
                 }
-            }
 
-            // Update modifiers and locations
-            if (!data[i].Locations) {
-                data[i].Locations = []
-            }
-            if (!data[i].Modifiers) {
-                
-                const _reroll : IItemPartial = {
-                    id: "em_lucky",
-                    type: "Location",
-                    source: "core",
-                    eventtags: {},
-                    tags: [
-                        {tag_name: "common", val: ""}
-                        ],
-                    name: "Lucky",
-                    description: [
-                        {
-                            tags: [{tag_name: "desc_type", val: "desc"}],
-                            content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
-                            glossary: []
-                        }
-                    ]
+                if (data[i].BattleNo === undefined) {
+                    data[i].BattleNo = 1;
                 }
-                data[i].Modifiers = [_reroll]
-            }
 
-            // Update model information
-            for (j = 0; j < data[i].Members.length; j++) {
-                if (data[i].Members[j].Scars == undefined) {
-                    data[i].Members[j].Scars = 3;
-                }
-                const modelid = data[i].Members[j].Model.ID;
-                let k = 0;
-                let modelval = null;
-                for (k = 0; k < this.Models.length; k++) {
-                    if (this.Models[k].ID == modelid) {
-                        modelval = this.Models[k]
+                // Update the warband's faction
+                const factionid = data[i].Faction.ID;
+                let j = 0;
+                for (j = 0; j < this.Factions.length; j ++) {
+                    if (this.Factions[j].ID == factionid) {
+                        data[i].Faction = this.Factions[j];
                         break;
                     }
                 }
-                if (modelval != null) {
-                    data[i].Members[j].Model.Object = modelval;
-                } else {
-                    this.DeleteModelFromWarband(data[i].Members[j], data[i]);
+
+                // Update modifiers and locations
+                if (!data[i].Locations) {
+                    data[i].Locations = []
                 }
-                let l = 0;
-                for (l = 0; l < data[i].Members[j].Equipment.length; l++) {
+                if (!data[i].Modifiers) {
+                    
+                    const _reroll : IItemPartial = {
+                        id: "em_lucky",
+                        type: "Location",
+                        source: "core",
+                        eventtags: {},
+                        tags: [
+                            {tag_name: "common", val: ""}
+                            ],
+                        name: "Lucky",
+                        description: [
+                            {
+                                tags: [{tag_name: "desc_type", val: "desc"}],
+                                content: "Roll an extra Exploration Die that is paired with one of your other dice. After you roll, choose one die in the pair to keep and one die in the pair to discard.",
+                                glossary: []
+                            }
+                        ]
+                    }
+                    data[i].Modifiers = [_reroll]
+                }
+
+                // Update model information
+                for (j = 0; j < data[i].Members.length; j++) {
+                    if (data[i].Members[j].Scars == undefined) {
+                        data[i].Members[j].Scars = 3;
+                    }
+                    const modelid = data[i].Members[j].Model.ID;
+                    let k = 0;
+                    let modelval = null;
+                    for (k = 0; k < this.Models.length; k++) {
+                        if (this.Models[k].ID == modelid) {
+                            modelval = this.Models[k]
+                            break;
+                        }
+                    }
+                    if (modelval != null) {
+                        data[i].Members[j].Model.Object = modelval;
+                    } else {
+                        this.DeleteModelFromWarband(data[i].Members[j], data[i]);
+                    }
+                    let l = 0;
+                    for (l = 0; l < data[i].Members[j].Equipment.length; l++) {
+                        for (k = 0; k < this.Equipment.length; k++) {
+                            if (this.Equipment[k].ID == data[i].Members[j].Equipment[l].ID) {
+                                data[i].Members[j].Equipment[l].Object = this.Equipment[k];
+                                break;
+                            }
+                        }
+                    }
+                    for (l = 0; l < data[i].Members[j].Skills.length; l++) {
+                        for (k = 0; k < this.Skills.length; k++) {
+                            if (this.Skills[k].id == data[i].Members[j].Skills[l].id) {
+                                data[i].Members[j].Skills[l] = this.Skills[k];
+                                break;
+                            }
+                        }
+                    }
+                    for (l = 0; l < data[i].Members[j].Injuries.length; l++) {
+                        for (k = 0; k < this.Injuries.length; k++) {
+                            if (this.Injuries[k].ID == data[i].Members[j].Injuries[l].ID) {
+                                data[i].Members[j].Injuries[l] = this.Injuries[k];
+                                break;
+                            }
+                        }
+                    }
+                    for (l = 0; l < data[i].Members[j].Upgrades.length; l++) {
+                        for (k = 0; k < this.Upgrades.length; k++) {
+                            if (this.Upgrades[k].ID == data[i].Members[j].Upgrades[l].ID) {
+                                data[i].Members[j].Upgrades[l].Name = this.Upgrades[k].Name;
+                                data[i].Members[j].Upgrades[l].Description = this.Upgrades[k].Description;
+                                data[i].Members[j].Upgrades[l].EventTags = this.Upgrades[k].EventTags;
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                // Update equipment information
+                for (j = 0; j < data[i].Armoury.length; j++) {
+                    const modelid = data[i].Armoury[j].Object.ID;
+                    let k = 0;
+                    let modelval = null;
                     for (k = 0; k < this.Equipment.length; k++) {
-                        if (this.Equipment[k].ID == data[i].Members[j].Equipment[l].ID) {
-                            data[i].Members[j].Equipment[l].Object = this.Equipment[k];
+                        if (this.Equipment[k].ID == modelid) {
+                            modelval = this.Equipment[k]
                             break;
                         }
                     }
+                    if (modelval != null) {
+                        data[i].Armoury[j].Object = modelval;
+                    } else {
+                        this.DeleteEquipmentFromWarband(data[i].Armoury[j], data[i]);
+                    }
                 }
-                for (l = 0; l < data[i].Members[j].Skills.length; l++) {
-                    for (k = 0; k < this.Skills.length; k++) {
-                        if (this.Skills[k].id == data[i].Members[j].Skills[l].id) {
-                            data[i].Members[j].Skills[l] = this.Skills[k];
+
+                // Update equipment information
+                for (j = 0; j < data[i].Locations.length; j++) {
+                    const modelid = data[i].Locations[j].id;
+                    let k = 0;
+                    let modelval = null;
+                    for (k = 0; k < this.Locations.length; k++) {
+                        if (this.Locations[k].id == modelid) {
+                            modelval = this.Locations[k]
                             break;
                         }
                     }
+                    if (modelval != null) {
+                        data[i].Locations[j] = modelval;
+                    }
                 }
-                for (l = 0; l < data[i].Members[j].Injuries.length; l++) {
-                    for (k = 0; k < this.Injuries.length; k++) {
-                        if (this.Injuries[k].ID == data[i].Members[j].Injuries[l].ID) {
-                            data[i].Members[j].Injuries[l] = this.Injuries[k];
+
+                // Update equipment information
+                for (j = 0; j < data[i].Modifiers.length; j++) {
+                    const modelid = data[i].Modifiers[j].id;
+                    let k = 0;
+                    let modelval = null;
+                    for (k = 0; k < this.Modifiers.length; k++) {
+                        if (this.Modifiers[k].id == modelid) {
+                            modelval = this.Modifiers[k]
                             break;
                         }
                     }
-                }
-                for (l = 0; l < data[i].Members[j].Upgrades.length; l++) {
-                    for (k = 0; k < this.Upgrades.length; k++) {
-                        if (this.Upgrades[k].ID == data[i].Members[j].Upgrades[l].ID) {
-                            data[i].Members[j].Upgrades[l].Name = this.Upgrades[k].Name;
-                            data[i].Members[j].Upgrades[l].Description = this.Upgrades[k].Description;
-                            data[i].Members[j].Upgrades[l].EventTags = this.Upgrades[k].EventTags;
-                            break;
-                        }
+                    if (modelval != null) {
+                        data[i].Modifiers[j] = modelval;
                     }
                 }
-            }
 
-            // Update equipment information
-            for (j = 0; j < data[i].Armoury.length; j++) {
-                const modelid = data[i].Armoury[j].Object.ID;
-                let k = 0;
-                let modelval = null;
-                for (k = 0; k < this.Equipment.length; k++) {
-                    if (this.Equipment[k].ID == modelid) {
-                        modelval = this.Equipment[k]
-                        break;
-                    }
-                }
-                if (modelval != null) {
-                    data[i].Armoury[j].Object = modelval;
-                } else {
-                    this.DeleteEquipmentFromWarband(data[i].Armoury[j], data[i]);
-                }
+                // Add updated warband to new list
+                listofbands.push(data[i]);
+            } catch (e) {
+                console.log("Corrupted Warband");
             }
-
-            // Update equipment information
-            for (j = 0; j < data[i].Locations.length; j++) {
-                const modelid = data[i].Locations[j].id;
-                let k = 0;
-                let modelval = null;
-                for (k = 0; k < this.Locations.length; k++) {
-                    if (this.Locations[k].id == modelid) {
-                        modelval = this.Locations[k]
-                        break;
-                    }
-                }
-                if (modelval != null) {
-                    data[i].Locations[j] = modelval;
-                }
-            }
-
-            // Update equipment information
-            for (j = 0; j < data[i].Modifiers.length; j++) {
-                const modelid = data[i].Modifiers[j].id;
-                let k = 0;
-                let modelval = null;
-                for (k = 0; k < this.Modifiers.length; k++) {
-                    if (this.Modifiers[k].id == modelid) {
-                        modelval = this.Modifiers[k]
-                        break;
-                    }
-                }
-                if (modelval != null) {
-                    data[i].Modifiers[j] = modelval;
-                }
-            }
-
-            // Add updated warband to new list
-            listofbands.push(data[i]);
         }
 
         return listofbands;

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../../resources/styles/_icon.scss'
 import React, { useState, useRef } from 'react'
+import { ErrorBoundary } from "react-error-boundary";
 
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -198,7 +199,9 @@ const WarbandListDisplay = (prop: any) => {
                                 }
                                 {_allwarbands.map((item: Warband) => (
                                     <div className="col p-0" key={"packdisplay"+item.ID}>
-                                        <WarbandDisplay data={item} parent={Manager} statefunction={ItemRecall} updater={UpdaterMethod}/>
+                                        <ErrorBoundary fallback={<div>The Warband Has Been Corrupted</div>}>
+                                            <WarbandDisplay data={item} parent={Manager} statefunction={ItemRecall} updater={UpdaterMethod}/>
+                                        </ErrorBoundary>
                                     </div>
                                 ))}
                         </div>   
