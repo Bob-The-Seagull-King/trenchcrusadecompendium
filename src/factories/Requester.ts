@@ -11,6 +11,16 @@ interface IRequest {
 
 class Requester {
 
+    
+    public static GetLanguage() {
+        const language = localStorage.getItem('language');
+        if (language != null) {
+            return language
+        } else {
+            return 'ln_english'
+        }
+    }
+
     /**
      * Send a request to a DataResponder and returns the result
      * @param request The IRequest being sent to the Requester
@@ -18,8 +28,9 @@ class Requester {
      */
     public static MakeRequest(request: IRequest) {
         request.searchparam.data = GetContentPackData(request)
+        const lan = Requester.GetLanguage();
         try {
-            return DataResponder.GetResponse(request.searchparam, request.searchtype)
+            return DataResponder.GetResponse(request.searchparam, request.searchtype, lan)
         } catch (e) {
             return []
         }
