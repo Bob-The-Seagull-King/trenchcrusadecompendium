@@ -1,1 +1,4 @@
 
+[submodule "src/resources/trenchcrusadedata"]
+	path = src/resources/trenchcrusadedata
+	url = https://github.com/Bob-The-Seagull-King/trenchcrusadedata.git
