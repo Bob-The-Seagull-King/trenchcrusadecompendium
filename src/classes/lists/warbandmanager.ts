@@ -337,9 +337,14 @@ class WarbandManager {
     public DeletePack(_pack : Warband) {
         let i = 0;
         for (i = 0; i < this.WarbandList.length; i++) {
-            if (_pack == this.WarbandList[i]) {
-                this.WarbandList.splice(i, 1);
-                break;
+            try {
+
+                if (_pack == this.WarbandList[i]) {
+                    this.WarbandList.splice(i, 1);
+                    break;
+                }
+            } catch (e) {
+                console.log("ERROR")
             }
         }
         this.SetStorage();
@@ -361,8 +366,12 @@ class WarbandManager {
     public GetWarbandByName(_name : string) {
         let i = 0;
         for (i=0; i < this.WarbandList.length ; i++) {
-            if (this.WarbandList[i].Name.trim() == _name) {
-                return this.WarbandList[i]
+            try {
+                if (this.WarbandList[i].Name.trim() == _name) {
+                    return this.WarbandList[i]
+                }
+            } catch (e) {
+                console.log("ERROR")
             }
         }
         return null;
@@ -668,11 +677,15 @@ class WarbandManager {
      * @param _warband The warband to copy
      */
     public DuplicateWarband(_warband : Warband) {
-        const NewMember : Warband = JSON.parse(JSON.stringify(_warband));
-        NewMember.Name = _warband.Name + " - Copy"
-        NewMember.ID = CalcID(_warband.Name + " - Copy");
-        
-        this.WarbandList.push(NewMember);
+        try {
+            const NewMember : Warband = JSON.parse(JSON.stringify(_warband));
+            NewMember.Name = _warband.Name + " - Copy"
+            NewMember.ID = CalcID(_warband.Name + " - Copy");
+            
+            this.WarbandList.push(NewMember);
+        } catch (e) {
+            console.log("ERROR")
+        }
         this.SetStorage();
     }
     
@@ -920,8 +933,12 @@ class WarbandManager {
             // Complains if another warband shares the same name
             let i = 0;
             for (i = 0; i < this.WarbandList.length ; i++ ) {
-                if (this.WarbandList[i].Name.trim() == _name.trim()) {
-                    ReturnMsg = "Two Warbands cant share the same name.";
+                try {
+                    if (this.WarbandList[i].Name.trim() == _name.trim()) {
+                        ReturnMsg = "Two Warbands cant share the same name.";
+                    }
+                } catch (e) {
+                    console.log("ERROR")
                 }
             }
 
