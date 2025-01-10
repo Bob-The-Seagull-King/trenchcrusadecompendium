@@ -19,7 +19,7 @@
 
 
 .modelStructure {
-    border-radius: 0em 0em 0.4em 0.4em;
+    border-radius: 0rem 0rem 0.4rem 0.4rem;
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
     width: 100%;
     text-align: justify;
@@ -41,14 +41,14 @@
 }
 
 .modelInternalStructure {
-    padding: 1em;
-    font-size: 0.85em;
+    padding: 1rem;
+    font-size: 0.85rem;
     color: var(--colour_basic_text);
 }
 
 .emptyboxStructure {
     width: 100%;
-    border-radius: 0.25em;
+    border-radius: 0.25rem;
     padding:20%;
     padding-top: 35%;
     padding-bottom: 35%;
@@ -64,14 +64,14 @@
 } 
 
 .roundBody {
-    border-radius: 0.25em;
+    border-radius: 0.25rem;
 }
 
 .filterboxStructure {
     border-style: solid !important;
     border-width: 2px !important;
     border-color: var(--colour_tc_main) !important;
-    border-radius: 0em 0em 0em 0em !important;
+    border-radius: 0rem 0rem 0rem 0rem !important;
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
     width: 100%;
     text-align: justify;
@@ -83,17 +83,17 @@
 }
 
 .filterobjectdisplay {
-    margin: 0.25em;
+    margin: 0.25rem;
     border-style: solid !important;
     border-width: 2px !important;
-    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem !important;
     box-shadow: 0 0 3px 0px var(--colour_grey_main);
     text-align: justify;
     color: var(--colour_white);
     font-weight: 600 ;
-    padding: 0.1em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     border-color: var(--colour_grey_main) !important;
     background-color: var(--colour_grey_main);
 
@@ -103,17 +103,17 @@
 }
 
 .filterobjectdisplaypositive {
-    margin: 0.25em;
+    margin: 0.25rem;
     border-style: solid !important;
     border-width: 2px !important;
-    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem !important;
     box-shadow: 0 0 3px 0px var(--colour_grey_main);
     text-align: justify;
     color: var(--colour_white);
     font-weight: 600 ;
-    padding: 0.1em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     border-color: var(--colour_green_secondary) !important;
     background-color: var(--colour_green_secondary);
 
@@ -123,17 +123,17 @@
 }
 
 .filterobjectdisplaynegative {
-    margin: 0.25em;
+    margin: 0.25rem;
     border-style: solid !important;
     border-width: 2px !important;
-    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem !important;
     box-shadow: 0 0 3px 0px var(--colour_grey_main);
     text-align: justify;
     color: var(--colour_white);
     font-weight: 600 ;
-    padding: 0.1em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     border-color: var(--colour_red_secondary) !important;
     background-color: var(--colour_red_secondary);
 
@@ -143,21 +143,21 @@
 }
 
 .filtertextinput {
-    border-radius: 0.4em;
+    border-radius: 0.4rem;
 }
 
 .filterobjectdisplaypositive {
-    margin: 0.25em;
+    margin: 0.25rem;
     border-style: solid !important;
     border-width: 2px !important;
-    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem !important;
     box-shadow: 0 0 3px 0px var(--colour_grey_main);
     text-align: justify;
     color: var(--colour_white);
     font-weight: 600 ;
-    padding: 0.1em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     border-color: var(--colour_green_secondary) !important;
     background-color: var(--colour_green_secondary);
 
@@ -169,16 +169,16 @@
 .filterclosebutton {
     border-style: solid !important;
     border-width: 2px !important;
-    border-radius: 0.4em 0.4em 0.4em 0.4em !important;
+    border-radius: 0.4rem 0.4rem 0.4rem 0.4rem !important;
     box-shadow: 0 0 3px 0px var(--colour_grey_main);
     text-align: justify;
     color: var(--colour_white);
     font-weight: 600 ;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     width: fit-content;
-    padding: 0.1em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding: 0.1rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     border-color: var(--colour_grey_main) !important;
     background-color: var(--colour_grey_main);
 
@@ -228,17 +228,17 @@
 }
 
 .floatingButton {
-    margin: 1em;
-    padding: 0.5em;
-    border-radius: 0.5em;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     width: fit-content;
 }
 
 .dropdownClean {
     background: none !important;
     border: none !important;
-    margin: 0em !important;
-    padding: 0em !important;
+    margin: 0rem !important;
+    padding: 0rem !important;
 }
 
 .topbarCompendiumBase {
@@ -263,9 +263,9 @@
     justify-content: center;
     display: flex; /* make element size relative to content */
     align-items: center;
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
-    padding: 0.5em;
+    padding: 0.5rem;
 
     &:hover {
         box-shadow: 0 0 10px 2px var(--colour_grey_main);
@@ -276,12 +276,12 @@
     justify-content: center;
     display: flex; /* make element size relative to content */
     align-items: center;
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
     height: 100%;
     width: fit-content;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     &:hover {
         box-shadow: 0 0 10px 2px var(--colour_grey_main);
@@ -322,13 +322,13 @@
     justify-content: center;
     display: flex; /* make element size relative to content */
     align-items: center;
-    border-radius: 0.1em;
+    border-radius: 0.1rem;
     color: var(--colour_tc_main);
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
     height: 100%;
     width: fit-content;
-    padding: 0.25em;
-    font-size: 1.15em;
+    padding: 0.25rem;
+    font-size: 1.15rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 300;
 
@@ -341,12 +341,12 @@
     justify-content: center;
     display: flex; /* make element size relative to content */
     align-items: center;
-    border-radius: 0.2em;
+    border-radius: 0.2rem;
     box-shadow: 0 0 5px 1px var(--colour_grey_main);
     height: 100%;
     width: fit-content;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .contentpackcontainer {
@@ -355,25 +355,25 @@
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
-    border-radius: 0em;
+    border-radius: 0rem;
     width: 100%;
     position: relative;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .contentpacksmallcontainer {
     align-items: center;
     align-content: center;
-    border-radius: 0em;
+    border-radius: 0rem;
     width: 100%;
     position: relative;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .smallcontentpackrow {
@@ -409,8 +409,8 @@
 
 .packvr {
     color: var(--colour_tc_main);
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     width: fit-content;
 }
 
@@ -429,7 +429,7 @@
     color: var(--colour_tc_main);
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   
   .squaredThree label:after {
@@ -438,7 +438,7 @@
   
   .squaredThree input[type=checkbox] {
     border: 2px solid var(--colour_tc_main);
-    border-radius: 0em;
+    border-radius: 0rem;
   }
   
   .squaredThree input[type=checkbox]:checked + label:after {
@@ -447,7 +447,7 @@
 
   .squaredThree input[type=radio] {
     border: 2px solid var(--colour_tc_main);
-    border-radius: 0em;
+    border-radius: 0rem;
   }
   
   .squaredThree input[type=radio]:checked + label:after {

@@ -34,10 +34,10 @@ const ListItemDisplay = (props: any) => {
                         {returnRoll()}
                     </div>
                 </div>
-                <div className='col-lg-3 col-md-3 col-sm-3 col-xs-3'>
+                <div className='col-lg-2 col-md-2 col-sm-2 col-xs-3'>
                     <div className="tablename">{ModelObject.Name}</div>
                 </div>
-                <div className='col-lg-7 col-md-7 col-sm-7 col-xs-6'>
+                <div className='col-lg-8 col-md-8 col-sm-8 col-xs-6'>
                     {returnDescription(ModelObject, ModelObject.Description)}
                 </div>
             </div>

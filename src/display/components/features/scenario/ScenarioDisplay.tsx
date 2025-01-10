@@ -14,9 +14,29 @@ const ScenarioDisplay = (props: any) => {
     function returnRules() {
         return (
             <>
-                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 2}} >
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 2}} >
+                <Masonry gutter="20px">
+                    {ModelObject.Rules.map((item) => (
+                        
+                        <div key={"flavourFaction"+(item.Title? item.Title : "")}>
+                            <div>
+                                <div className="separator">{item.Title}</div>
+                            </div> 
+                            <div>
+                                {item.Description.map((descitem) => (
+                                    <div key={"flavourFaction"+(descitem.Content? descitem.Content : "")}>
+                                        <AdvancedDescriptionItemDisplay data={descitem} parent={ModelObject}/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                                    
+                    ))}
+                </Masonry>
+            </ResponsiveMasonry>
+                <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 768: 1}} >
                     <Masonry gutter="20px">
-                        {ModelObject.Rules.map((item) => (
+                        {ModelObject.WideRules.map((item) => (
                             
                             <div key={"flavourFaction"+(item.Title? item.Title : "")}>
                                 <div>

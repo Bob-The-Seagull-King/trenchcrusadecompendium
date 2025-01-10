@@ -9,6 +9,7 @@ interface IScenario extends ITrenchCrusadeItemData {
     name: string,
     image_url: string,
     rules: IFactionRuleset[]
+    widerules: IFactionRuleset[]
 }
 
 /**
@@ -20,6 +21,7 @@ class Scenario extends TrenchCrusadeItem {
     public readonly Name;
     public readonly ImageUrl;
     public readonly Rules;
+    public readonly WideRules;
     
     /**
      * Assigns parameters and creates a series of description
@@ -34,6 +36,7 @@ class Scenario extends TrenchCrusadeItem {
         this.Name = data.name;
         this.ImageUrl = data.image_url
         this.Rules = this.RulesetFactory(data.rules);
+        this.WideRules = this.RulesetFactory(data.widerules);
     }
 
     /**
