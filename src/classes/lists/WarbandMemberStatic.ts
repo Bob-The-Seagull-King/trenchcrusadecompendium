@@ -82,6 +82,33 @@ export function returnModelRanged(_member : WarbandMember) {
     return str;
 }
 
+export function returnModelPromotion(_member : WarbandMember) {
+    let str = 3;
+    let i = 0;
+    
+    const BaseCopy  = [_member.Model.Object.Promotion];
+    str = promotionvalueswitch(BaseCopy[0])
+
+    const PromotionSet = setValuesToTag(_member, [str], 'promotion')
+    for (i = 0; i < PromotionSet.length; i++) {
+        if ((PromotionSet[i] > str)) {
+            str = PromotionSet[i]
+        }
+    }
+    
+    return promotionvalueswitch(str);
+}
+
+export function promotionvalueswitch(value : number) {
+    if (value == 0) {
+        return 2;
+    }
+    if (value == 2) {
+        return 0;
+    }
+    return value;
+}
+
 export function addValuesToTag(_member : WarbandMember, _array : number[], _tag : string) {
     let i = 0;
     let j = 0;
@@ -281,11 +308,10 @@ export function returnComponentsWithTag(_member : WarbandMember, _tag : string) 
         if (_member.Upgrades[i].EventTags) {
         if (_member.Upgrades[i].EventTags[_tag]) { upgrades.push(_member.Upgrades[i]) }}
     }
-
     const equipment = []
     for (i = 0; i < _member.Equipment.length; i ++) {
         if (_member.Equipment[i].Object.EventTags) {
-        if (_member.Equipment[i].Object.EventTags[_tag]) {
+        if (_member.Equipment[i].Object.EventTags[_tag] != null) {
             equipment.push(_member.Equipment[i].Object) }
         }
     }

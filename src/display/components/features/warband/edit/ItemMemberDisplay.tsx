@@ -24,6 +24,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpRightFromSquare, faSquareCaretUp, faSquareCaretDown } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/esm/Modal';
 import ItemMemberExpandedDisplay from './ItemMemberExpandedDisplay';
+import { returnModelPromotion } from '../../../../../classes/lists/WarbandMemberStatic';
 
 const ItemMemberDisplay = (props: any) => {
     const WarbandItem: Warband = props.warband;
@@ -50,6 +51,7 @@ const ItemMemberDisplay = (props: any) => {
 
     const ducatcost = GetDucatCost(WarbandMember);
     const glorycost = GetGloryCost(WarbandMember)
+    const memberPromotion = returnModelPromotion(WarbandMember);
 
     const [show, setShow] = useState(false);
     const [key, setkey] = useState(0);
@@ -150,7 +152,7 @@ const ItemMemberDisplay = (props: any) => {
                 {WarbandMember.Reserve != true &&
                     <div className="col-md-3 col-6 mt-md-0 mt-2">
                         <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                            <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (WarbandMember.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
+                            <div className={"subfonttext generalbuttonbox" + ((((WarbandMember.Elite == false) && (memberPromotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
                                 <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote Model</div>
                             </div>
                         </div>

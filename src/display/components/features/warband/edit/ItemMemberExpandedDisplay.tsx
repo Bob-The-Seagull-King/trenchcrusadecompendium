@@ -27,7 +27,7 @@ import GenericDisplay from '../../../../components/generics/GenericDisplay';
 import EquipmentDisplay from '../../equipment/EquipmentDisplay';
 import UpgradeDisplay from '../../equipment/UpgradeDisplay';
 import AddonDisplay from '../../addons/AddonDisplay';
-import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag } from '../../../../../classes/lists/WarbandMemberStatic';
+import { returnModelBase, returnModelArmour, returnModelMovement, returnModelMelee, returnModelRanged, returnComponentsWithTag, returnModelPromotion } from '../../../../../classes/lists/WarbandMemberStatic';
 import PartialItemDisplay from '../../partialitem/PartialItemDisplay';
 import FullItemDisplay from '../../list/FullItemDisplay';
 import ItemMemberFacetTags from './ItemMemberFacetTags';
@@ -58,6 +58,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
     const memberMovement = returnModelMovement(member);
     const memberMelee = returnModelMelee(member);
     const memberRanged = returnModelRanged(member);
+    const memberPromotion = returnModelPromotion(member);
 
     const modelExport = ExportModelDisplayText(member, true, false)
     const modelExportBasic = ExportModelDisplayTextBasic(member, true, false)
@@ -233,7 +234,7 @@ const ItemMemberExpandedDisplay = (props: any) => {
 
                 <div className="col-lg-2 col-12">
                     <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
-                        <div className={"subfonttext generalbuttonbox" + ((((member.Elite == false) && (member.Model.Object.Promotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
+                        <div className={"subfonttext generalbuttonbox" + ((((member.Elite == false) && (memberPromotion !== 2)) )? " hovermouse" : " disabledbox")} style={{display:"flex",alignItems:"center",fontSize:"0.5em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={() => promoteModel()}>
                             <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Promote Model</div>
                         </div>
                     </div>
