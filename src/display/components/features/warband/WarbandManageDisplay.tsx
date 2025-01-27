@@ -90,6 +90,14 @@ const WarbandManageDisplay = (props: any) => {
         )
     }
 
+    function openInNewTab(href : string) {
+        Object.assign(document.createElement('a'), {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          href: href,
+        }).click();
+      }
+
     const modelExport = ExportDisplayText(WarbandItem, true)
     const modelExportBasic = ExportDisplayTextBasic(WarbandItem, true)
 
@@ -187,6 +195,21 @@ const WarbandManageDisplay = (props: any) => {
                         </div>
                         <div className="col">
                             <GenericPopup d_colour={'tc'} d_type={''} panelname={"exportwarbandexpanded"} panelObj={modelExportBasic}/>
+                        </div>
+                        
+                    </div>
+                    
+                    <div className="verticalspacerbig"/>
+
+                    <div className="row row-cols-md-1 row-cols-1">                    
+                        <div className='col-12 float-end'>                            
+                            <div className="col">
+                                <div className="subfonttext" style={{display:"flex",alignItems:"center"}}>
+                                    <div className="subfonttext hovermouse generalbuttonbox" style={{display:"flex",alignItems:"center",fontSize:"1em",width:"100%",padding:"0.5em",margin:"0em"}}   onClick={()=>window.open('https://www.trenchscribe.com/','_blank', 'rel=noopener noreferrer')}>
+                                        <div style={{marginRight:"0.5em",textAlign:"center",width:"fit-content"}} className="">Open Trench Scribe (Physical Printout)</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
