@@ -30,18 +30,22 @@ class WarbandManager {
     Modifiers: IItemPartial[] = [];
     Injuries: ListItem[] = [];
     Upgrades : FactionUpgrade[] = [];
+    Initialised = false;
 
-    constructor() {
-        const ReturnData = GrabWarband();
-        this.FindFactions();
-        this.FindModels();
-        this.FindEquipment();
-        this.FindSkills();
-        this.FindLocations();
-        this.FindModifiers();
-        this.FindInjuries();
-        this.FindUpgrades();
-        this.WarbandList = this.UpdateWarbands(ReturnData);
+    public Initialiser() {
+        if (this.Initialised == false) {
+            this.Initialised = true;
+            const ReturnData = GrabWarband();
+            this.FindFactions();
+            this.FindModels();
+            this.FindEquipment();
+            this.FindSkills();
+            this.FindLocations();
+            this.FindModifiers();
+            this.FindInjuries();
+            this.FindUpgrades();
+            this.WarbandList = this.UpdateWarbands(ReturnData);
+        }
     }
 
     // ----------------------------------- Load Manager Data -----------------------------------

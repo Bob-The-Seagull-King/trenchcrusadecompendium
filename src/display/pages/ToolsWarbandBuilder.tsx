@@ -11,6 +11,7 @@ import WarbandManageDisplay from '../../display/components/features/warband/Warb
 
 const ToolsWarbandBuilder = (prop: any) => {
     const Manager : WarbandManager = prop.manager;
+    Manager.Initialiser();
     
     const [_currentWarband, returnWarband] = useState(grabWarbandFromURL);
 
