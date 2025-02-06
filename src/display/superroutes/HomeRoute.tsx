@@ -9,7 +9,7 @@ import logo from '../../resources/images/trenchcrusade_logo.png'
 import ReactDOM from 'react-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMap, faShapes } from '@fortawesome/free-solid-svg-icons'
+import { faCoins, faCross, faMap, faShapes } from '@fortawesome/free-solid-svg-icons'
 import { faPersonRifle } from '@fortawesome/free-solid-svg-icons'
 import { faFileLines } from '@fortawesome/free-solid-svg-icons'
 import { faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
@@ -163,6 +163,27 @@ const HomeRoute: React.FC = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="row">
+                        <div className="separator"><h3 >External Links</h3></div>
+                    </div>
+                    <div className="row row-cols-lg-2 row-cols-md-2 row-cols-sx-1 row-cols-xs-1 row-cols-1 form-group">
+                            <div className="col mb-2">
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={()=>window.open('https://www.trenchcrusade.com/','_blank', 'rel=noopener noreferrer')}>
+                                    <FontAwesomeIcon icon={faCross} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        OFFICIAL WEBSITE
+                                    </h1>
+                                </div>
+                            </div>
+                            <div className="col mb-2">
+                                <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={()=>window.open('https://www.patreon.com/bobtheseagullking/','_blank', 'rel=noopener noreferrer')}>
+                                    <FontAwesomeIcon icon={faCoins} className="pageaccestext"/>
+                                    <h1 className="pageaccestext">
+                                        SUPPORT THE APP
+                                    </h1>
+                                </div>
+                            </div>
                     </div>
                     <br/>
                     <div className="row">
