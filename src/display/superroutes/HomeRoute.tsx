@@ -164,7 +164,6 @@ const HomeRoute: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <br/><div className='row'><div className='col'><br/></div></div>
                     <div className="row">
                         <div className="separator"><h3 >External Links</h3></div>
                     </div>
@@ -181,11 +180,12 @@ const HomeRoute: React.FC = () => {
                                 <div className="pageaccessbox borderstyler subbordertc hovermouse" onClick={()=>window.open('https://www.patreon.com/bobtheseagullking/','_blank', 'rel=noopener noreferrer')}>
                                     <FontAwesomeIcon icon={faCoins} className="pageaccestext"/>
                                     <h1 className="pageaccestext">
-                                        SUPPORT THE COMPENDIUM
+                                        SUPPORT THE APP
                                     </h1>
                                 </div>
                             </div>
                     </div>
+                    <br/>
                     <div className="row">
                         <div className="separator"></div>
                     </div>
