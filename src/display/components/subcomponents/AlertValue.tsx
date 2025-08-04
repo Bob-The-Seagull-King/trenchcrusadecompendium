@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import '../../../resources/styles/_icon.scss'
-import React, {useState } from 'react'
+import React, {useState, useEffect } from 'react'
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import logo from '../../../resources/images/companion_logo.png'
@@ -12,16 +12,20 @@ const AlertDismissible = (props: any) => {
 
   function close() {
     setShow(false)
-    props.func();
   }
   function open() {
     setShow(true)
-    props.func();
   }
+
+  
+    
+  useEffect(() => {
+   props.func()
+}, [show])
 
   return (
     <>
-    <Alert show={show} variant="warning" className="shadow-lg p-4 mb-4 rounded">
+    <Alert show={show} variant="warning" className="shadow-lg p-4 mb-4 rounded floatingButton">
       <Alert.Heading className="d-flex align-items-center">
         <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
         Something New Available!
@@ -58,7 +62,7 @@ const AlertDismissible = (props: any) => {
     {!show && (
       
       <div className={"floatingButton backgroundtc"}>
-      <Button variant="" onClick={() => open()} className="shadow">
+      <Button variant="" onClick={() => open()} style={{color:"white"}} className="shadow">
         <FontAwesomeIcon icon={faTriangleExclamation} />
         Discover the Update!
       </Button>
