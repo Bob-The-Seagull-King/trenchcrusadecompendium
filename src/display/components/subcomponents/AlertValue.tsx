@@ -15,7 +15,7 @@ function AlertDismissible() {
       <Alert show={show} variant="warning">
         <Alert.Heading>Something New Is Here!</Alert.Heading>
         <p>
-          After months of development the new and improved tool for Trench Crusade is here, the Trench Companion! With a new and improved UI, highly advanced warband builder, and the ability to access warbands across multiple devices, you're not going to want to miss out!
+          After months of development the new and improved tool for Trench Crusade is here, the Trench Companion! With a new and improved UI, highly advanced warband builder, and the ability to access warbands across multiple devices, you&apos;re not going to want to miss out!
         </p>
         <p>
           We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
