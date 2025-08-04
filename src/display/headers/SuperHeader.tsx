@@ -19,6 +19,7 @@ const SuperHeader: React.FC = () => {
     }
 
     const [stateheight, setHeight] = useState(0);
+    const [keyvar, setkeyvar] = useState(0);
     const ref = useRef<HTMLDivElement>(null);
     const location = useLocation();
     
@@ -31,7 +32,7 @@ const SuperHeader: React.FC = () => {
         window.addEventListener("load", setNavHeight, false);
         window.addEventListener("resize", setNavHeight, false);
         setNavHeight();
-    }, [location])
+    }, [location, keyvar])
 
     // Return result -----------------------------
     return (
@@ -46,7 +47,7 @@ const SuperHeader: React.FC = () => {
                 <Route path={ROUTES.HOME_ROUTE} element={<MenuHeader/>} />
             </Routes>
             
-            <AlertValue />
+            <AlertValue func={() => setkeyvar(keyvar + 1)}/>
         </div>
         <div style={{height:stateheight}} className="backgroundOffWhite"/>
         </div>

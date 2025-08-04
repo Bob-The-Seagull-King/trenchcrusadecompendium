@@ -7,12 +7,21 @@ import logo from '../../../resources/images/companion_logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons'
 
-function AlertDismissible() {
+const AlertDismissible = (props: any) => {
   const [show, setShow] = useState(true);
+
+  function close() {
+    setShow(false)
+    props.func();
+  }
+  function open() {
+    setShow(true)
+    props.func();
+  }
 
   return (
     <>
-    <Alert show={show} variant="info" className="shadow-lg p-4 mb-4 bg-white rounded">
+    <Alert show={show} variant="warning" className="shadow-lg p-4 mb-4 rounded">
       <Alert.Heading className="d-flex align-items-center">
         <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
         Something New Available!
@@ -37,7 +46,7 @@ function AlertDismissible() {
         <hr />
 
       <div className="d-flex justify-content-between align-items-center">
-        <Button onClick={() => setShow(false)} variant="outline-danger" className="me-2">
+        <Button onClick={() => close()} variant="outline-danger" className="me-2">
           Close
         </Button>
         <Button onClick={() => window.open("https://trench-companion.com/", '_blank')} variant="success" className="shadow">
@@ -49,7 +58,7 @@ function AlertDismissible() {
     {!show && (
       
       <div className={"floatingButton backgroundtc"}>
-      <Button variant="info" onClick={() => setShow(true)} className="shadow">
+      <Button variant="" onClick={() => open()} className="shadow">
         <FontAwesomeIcon icon={faTriangleExclamation} />
         Discover the Update!
       </Button>
