@@ -25,6 +25,7 @@ const AlertDismissible = (props: any) => {
 
   return (
     <>
+    {show && 
     <Alert show={show} variant="warning" className="shadow-lg p-4 mb-4 rounded floatingButton">
       <Alert.Heading className="d-flex align-items-center">
         <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
@@ -58,6 +59,7 @@ const AlertDismissible = (props: any) => {
         </Button>
       </div>
     </Alert>
+    }
     
     {!show && (
       
