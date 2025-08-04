@@ -22,7 +22,6 @@ function AlertDismissible() {
         <p>
           We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
         </p>
-        <
         <hr />
         <div className="d-flex justify-content-end">
           <Button onClick={() => setShow(false)} variant="outline-error">
