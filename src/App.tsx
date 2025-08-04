@@ -11,6 +11,7 @@ import HomeRoute from './display/superroutes/HomeRoute'
 import ToolsRoute from './display/superroutes/ToolsRoute'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { ROUTES } from './resources/routes-constants'
+import AlertValue from './display/components/subcomponents/AlertValue'
 
 const App: React.FC = () => {
 
@@ -34,6 +35,7 @@ const App: React.FC = () => {
     return (
         <div data-theme={theme}>
             <link rel="canonical" href="http://trench-companion.com/" />
+            <AlertValue />
             <Provider store={store} >
                 <PersistGate loading={null} persistor={persistor}>      
                     <Router>
