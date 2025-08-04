@@ -31,7 +31,7 @@ const AlertDismissible = (props: any) => {
         <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
         Something New Available!
       </Alert.Heading>
-
+      <hr />
         <img 
           src={logo} 
           alt="Trench Companion Logo"
