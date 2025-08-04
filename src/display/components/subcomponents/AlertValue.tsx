@@ -12,29 +12,50 @@ function AlertDismissible() {
 
   return (
     <>
-      <Alert show={show} variant="warning">
-        <Alert.Heading>Something New Is Here!</Alert.Heading>
-        
-        <img src={logo} style={{maxWidth:"100%"}} onClick={() =>  window.open("https://trench-companion.com/", '_blank')}  />
-        <p>
-          After months of development the new and improved tool for Trench Crusade is here, the Trench Companion! With a new and improved UI, highly advanced warband builder, and the ability to access warbands across multiple devices, you&apos;re not going to want to miss out!
-        </p>
-        <p>
-          We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
-        </p>
-        <hr />
-        <div className="d-flex justify-content-end">
-          <Button onClick={() => setShow(false)} variant="outline-error">
-            Close me
-          </Button>
-          <Button onClick={() =>  window.open("https://trench-companion.com/", '_blank')} variant="outline-success">
-            Go There Now!
-          </Button>
-        </div>
-      </Alert>
+    <Alert show={show} variant="info" className="shadow-lg p-4 mb-4 bg-white rounded">
+      <Alert.Heading className="d-flex align-items-center">
+        <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
+        Something New Available!
+      </Alert.Heading>
 
-      {!show && <Button variant="warning" onClick={() => setShow(true)}><FontAwesomeIcon icon={faTriangleExclamation} /></Button>}
-    </>
+        <img 
+          src={logo} 
+          alt="Trench Companion Logo"
+          className="img-fluid mb-3" 
+          style={{cursor: "pointer", borderRadius: "10px"}}
+          onClick={() => window.open("https://trench-companion.com/", '_blank')} 
+        />
+
+        <p className="text-secondary mb-4">
+        After months of development the new and improved tool for Trench Crusade is here, the Trench Companion! With a new and improved UI, highly advanced warband builder, and the ability to access warbands across multiple devices, you&apos;re not going to want to miss out!
+        </p>
+        
+        <p className="text-secondary">
+        We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
+        </p>
+
+        <hr />
+
+      <div className="d-flex justify-content-between align-items-center">
+        <Button onClick={() => setShow(false)} variant="outline-danger" className="me-2">
+          Close
+        </Button>
+        <Button onClick={() => window.open("https://trench-companion.com/", '_blank')} variant="success" className="shadow">
+          Explore Now!
+        </Button>
+      </div>
+    </Alert>
+    
+    {!show && (
+      
+      <div className={"floatingButton backgroundtc"}>
+      <Button variant="info" onClick={() => setShow(true)} className="shadow">
+        <FontAwesomeIcon icon={faTriangleExclamation} />
+        Discover the Update!
+      </Button>
+      </div>
+    )}
+  </>
   );
 }
 
