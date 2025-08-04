@@ -22,6 +22,7 @@ const PlayerTacticsHeader = (prop: any) => {
     return (
         <>
         <div className='topbarCompendiumBase topbarCompendiumStructure hstack gap-3' style={{justifyContent:"center"}}>
+        <link rel="canonical" href="http://trench-companion.com/" />
             <span style={{paddingLeft:"0em"}}/>
             <h1 className='headertext'>Trench Crusade</h1>
             <p className='headersubtext'>v1.6.31a</p>

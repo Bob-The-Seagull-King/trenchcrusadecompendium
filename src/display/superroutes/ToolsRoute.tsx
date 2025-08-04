@@ -31,6 +31,7 @@ const ToolsRoute: React.FC<IControllerProp> = (prop) => {
     return (
         
         <div className="backgroundBaseColour" data-theme={theme}>
+            <link rel="canonical" href="http://trench-companion.com/" />
         <Routes>
             <Route path={ROUTES.TOOLS_CONTENT_UPLOAD_ROUTE} element={<ToolsContentManager manager={prop.controller.ContentManager}/>} />
             <Route path={ROUTES.TOOLS_WARBAND_BUILDER_ROUTE} element={<ToolsWarbandBuilder manager={prop.controller.ListManager}/>} />

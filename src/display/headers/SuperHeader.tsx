@@ -37,6 +37,7 @@ const SuperHeader: React.FC = () => {
         <>
         
         <div data-theme={theme}>
+        <link rel="canonical" href="http://trench-companion.com/" />
         <div id="topbarbody" ref={ref} className="topbarStructure">
             <Routes>
                 <Route path={ROUTES.COMPENDIUM_ROUTE} element={<PlayerTacticsHeader/>} />

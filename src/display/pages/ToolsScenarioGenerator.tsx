@@ -25,7 +25,7 @@ const ToolsScenarioGenerator = (prop: any) => {
     // Return result -----------------------------
     return (
         <div className="container" style={{width:"100%"}}>
-            
+            <link rel="canonical" href="http://trench-companion.com/" />
             <div className="row row-cols-lg-1 row-cols-1">
                 
                 <div className="col">

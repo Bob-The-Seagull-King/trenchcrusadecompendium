@@ -27,6 +27,7 @@ const CompendiumRoute: React.FC<IControllerProp> = (prop) => {
     // Return result -----------------------------
     return (
         <div className="backgroundBaseColour" data-theme={theme}>
+            <link rel="canonical" href="http://trench-companion.com/" />
         <Routes>
         <Route path={ROUTES.COMPENDIUM_ABILITY_ROUTE} element={<CompendiumBaseDisplay controller={prop.controller.ModelsCollectionController}/>} />
         <Route path={ROUTES.COMPENDIUM_EQUIPMENT_ROUTE} element={<CompendiumBaseDisplay controller={prop.controller.EquipmentCollectionController}/>} />

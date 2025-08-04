@@ -41,6 +41,7 @@ const HomeRoute: React.FC = () => {
     // Return result -----------------------------
     return (
         <div className="backgroundBaseColour" data-theme={theme}>
+            <link rel="canonical" href="http://trench-companion.com/" />
         <div>
             <div className="row justify-content-center m-0 p-0">
                 <div className="col-lg-7 col-md-12 col-sm-12 col-xs-12 col-12">

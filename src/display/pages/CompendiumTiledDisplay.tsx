@@ -26,6 +26,7 @@ const CompendiumTiledDisplay = (prop: any) => {
         
     return (
         <div className="container">
+            <link rel="canonical" href="http://trench-companion.com/" />
             <div className="row">
                 {/* Display the selected models, if any */}
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">

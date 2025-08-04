@@ -73,6 +73,7 @@ const ToolsContentManager = (prop: any) => {
             pauseOnHover
             theme="light"
             />
+            <link rel="canonical" href="http://trench-companion.com/" />
             <input id="pack-upload" style={{display:"none"}} type="file" accept=".json" onChange={(e)=>readFileOnUpload(e.target.files? e.target.files[0] : undefined)} />
                        
             <div className="row justify-content-center">

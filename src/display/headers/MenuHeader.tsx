@@ -11,6 +11,7 @@ const MenuHeader = () => {
     return (
         <>
         <div className={"floatingButton backgroundtc"}>
+        <link rel="canonical" href="http://trench-companion.com/" />
             <PalleteSwap/>
         </div>
         </>

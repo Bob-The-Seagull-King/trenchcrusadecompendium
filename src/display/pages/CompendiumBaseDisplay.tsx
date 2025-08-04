@@ -57,6 +57,7 @@ const CompendiumBaseDisplay = (prop: any) => {
     // Return result -----------------------------
     return (
         <div className="container">
+            <link rel="canonical" href="http://trench-companion.com/" />
             <div className="row">
                 {/* Display the filters and abilities which match the filters, if any. */}
                 <div className={"col-lg-" + (12-DisplayPage.width) + " col-md-" + (12-DisplayPage.width) + " col-sm-12 col-xs-12 col-12 my-0 py-0"}>

@@ -28,6 +28,7 @@ const CompendiumStrictListDisplay = (prop: any) => {
     // Return result -----------------------------
     return (
         <div className="container">
+            <link rel="canonical" href="http://trench-companion.com/" />
             <div className="row">
                 {/* Display the filters and models which match the filters, if any. */}
                 {/* Display the selected models, if any */}

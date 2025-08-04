@@ -48,6 +48,7 @@ const ToolsWarbandBuilder = (prop: any) => {
     // Return result -----------------------------
     return (
         <div className="container" style={{width:"100%"}}>
+            <link rel="canonical" href="http://trench-companion.com/" />
             {_currentWarband != null &&
                 <div>
                     <ErrorBoundary fallback={<div>The Warband Has Been Corrupted</div>}>
