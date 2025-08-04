@@ -8,6 +8,7 @@ import { useGlobalState } from './../../utility/globalstate'
 
 import PlayerTacticsHeader from './PlayerTacticsHeader'
 import MenuHeader from './MenuHeader'
+import AlertValue from '../components/subcomponents/AlertValue'
 
 const SuperHeader: React.FC = () => {
 
@@ -44,6 +45,8 @@ const SuperHeader: React.FC = () => {
                 <Route path={ROUTES.TOOLS_ROUTE} element={<PlayerTacticsHeader/>} />
                 <Route path={ROUTES.HOME_ROUTE} element={<MenuHeader/>} />
             </Routes>
+            
+            <AlertValue />
         </div>
         <div style={{height:stateheight}} className="backgroundOffWhite"/>
         </div>

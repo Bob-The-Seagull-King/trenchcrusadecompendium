@@ -35,7 +35,6 @@ const App: React.FC = () => {
     return (
         <div data-theme={theme}>
             <link rel="canonical" href="http://trench-companion.com/" />
-            <AlertValue />
             <Provider store={store} >
                 <PersistGate loading={null} persistor={persistor}>      
                     <Router>
