@@ -31,7 +31,17 @@ const AlertDismissible = (props: any) => {
         <FontAwesomeIcon icon={faTriangleExclamation} className="me-2" />
         Something New Available!
       </Alert.Heading>
+      
       <hr />
+
+      <div className="d-flex justify-content-between align-items-center">
+        <Button onClick={() => window.open("https://trench-companion.com/", '_blank')} variant="success" className="shadow">
+          Explore Now!
+        </Button>
+      </div>
+
+      <hr />
+      
         <img 
           src={logo} 
           alt="Trench Companion Logo"
@@ -47,17 +57,14 @@ const AlertDismissible = (props: any) => {
         <p className="text-secondary">
         We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
         </p>
+        <hr/>
 
-        <hr />
+        <div className="d-flex justify-content-between align-items-center">
+  <Button onClick={() => close()} variant="outline-danger" className="me-2">
+    Close
+  </Button>
+</div>
 
-      <div className="d-flex justify-content-between align-items-center">
-        <Button onClick={() => close()} variant="outline-danger" className="me-2">
-          Close
-        </Button>
-        <Button onClick={() => window.open("https://trench-companion.com/", '_blank')} variant="success" className="shadow">
-          Explore Now!
-        </Button>
-      </div>
     </Alert>
     }
     
