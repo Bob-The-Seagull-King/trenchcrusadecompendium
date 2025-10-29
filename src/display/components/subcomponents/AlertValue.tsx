@@ -50,7 +50,7 @@ const AlertDismissible = (props: any) => {
           onClick={() => window.open("https://trench-companion.com/", '_blank')} 
         />
 
-        <p className="text-secondary mb-4">
+        <p className="text-secondary mb-4"> 
         After months of development the new and improved tool for Trench Crusade is here, the Trench Companion! With a new and improved UI, highly advanced warband builder, and the ability to access warbands across multiple devices, you&apos;re not going to want to miss out!
         </p>
         
