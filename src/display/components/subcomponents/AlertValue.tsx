@@ -55,7 +55,7 @@ const AlertDismissible = (props: any) => {
         </p>
         
         <p className="text-secondary">
-        We will keep the Trench Compendium up until October 31st (the spookiest time of year), at which point this site will automatically redirect you to the Trench Companion.
+        We are no longer maintaining and updating this site. The Compendium will continue to remain up until we have fully implimented our homebrew functionality of the Companion some time end of 2025/start of 2026.
         </p>
         <hr/>
 
